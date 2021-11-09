@@ -1,0 +1,981 @@
+{
+    "type": "GameplayOptionsPanel", "name": "modcube6",
+    "fields": {
+        "priority": 9003,
+        "rect": "$OptionsPanelRect",
+        "anchor": { "x": 0.5 },
+        "applySettingsImmediately": false,
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "ScrollBarBackground",
+            "fields": {
+                "rect": "$OptionsScrollBarBackgroundRect",
+                "anchor": { "x": 1.0 },
+                "filename": "PauseMenu\\VerticalScroll",
+            },
+            "children": [
+                {
+                    "type": "ScrollControllerWidget", "name": "ScrollController",
+                    "fields": {
+                        "rect": "$OptionsScrollBarRect",
+                        "anchor": { "x": 1.0 },
+                        "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                        "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                        "barFilepath": "PauseMenu\\VerticalIndicator",
+                        "viewName": "ScrollView",
+                        "wheelScrollSound": "cursor_scroll_hd",
+                        "buttonScrollSound": "cursor_scroll_hd",
+                    }
+                },
+            ]
+        },
+        {
+            "type": "ScrollViewWidget", "name": "ScrollView",
+            "fields": {
+                "fitToParent": true,
+                "scrollControllerName": "ScrollController",
+            },
+            "children": [
+                {
+                    "type": "TableWidget", "name": "OptionsTable",
+                    "fields": {
+                        "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
+                        "rowHeight": "$OptionsTableRowHeight",
+                    },
+                    "children": [
+                        {
+                            "type": "TableRowWidget", "name": "rerolling",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "rerolling",
+                                    "fields": {
+                                        "text": "Rerolling Recipes",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider",
+                                            }
+                                        },
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "-Magic Item + 1 Perfect Gem (Any) -> Re-rolled Magic Item (item level 99)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "text/style": { "pointSize": "$MediumFontSize" },
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "-Rare Item + 1 Perfect Skull + 1 Jewel -> Re-rolled Rare Item (item level 99)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ScreenResolution",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "?" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetScreenResolution",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "text/style": { "pointSize": "$MediumFontSize" },
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuScreenResolutionTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        }
+                                    },
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "-Unique Weapon + Gheed's Fortune + 3 Perfect Gems (Any) -> Re-rolled Unique Weapon",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "DLSS",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Off", "@Auto", "@Quality", "@Balanced", "@Performance", "@UltraPerformance" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetDLSSMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "text/style": { "pointSize": "$MediumFontSize" },
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@DLSSTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        }
+                                    },
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "-Unique Armor + Gheed's Fortune + 3 Perfect Gems (Any) -> Re-rolled Unique Armor",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ResolutionScale",
+                                    "fields": {
+                                        "rect": "$OptionsSliderRect",
+                                        "focusIndicatorPadding": "$OptionsSliderFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsSliderFocusIndicatorFilename",
+                                        "isHorizontal": true,
+                                        "indicatorFilepath": "PauseMenu\\HorizontalIndicator",
+                                        "background": "$SettingsSliderBackground",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetResolutionScale",
+                                        "leftButton": "$SettingsSliderLeftButtonFields",
+                                        "rightButton": "$SettingsSliderRightButtonFields",
+                                        "valueText": "$SettingsSliderValueFields",
+                                        "tooltipString": "@OptionsMenuResolutionScaleTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        },
+                                        "increment": 1,
+                                    }
+                                },
+                            ]
+                        },
+                         {
+                            "type": "TableRowWidget", "name": "upgrade",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrade",
+                                    "fields": {
+                                        "text": "-Unique Ring + Gheed's Fortune + 3 Perfect Gems (Any) -> Re-rolled Unique Ring",
+                                        "style": "$StyleSettingsText"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "disabled", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider",
+                                            }
+                                        },
+                                    ]
+                                },
+                            ]
+                          },
+                        {
+                            "type": "TableRowWidget", "name": "Row Upgrade",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrade",
+                                    "fields": {
+                                        "text": "-Unique Amulet + Gheed's Fortune + 3 Perfect Gems (Any) -> Re-rolled Unique Amulet",
+                                        "style": "$StyleSettingsText"
+                                    }                              
+                                },
+                                {
+                                    "type": "disabeld", "name": "GammaCalibration",
+                                    "fields": {
+                                        "filename": "FrontEnd/HD/Final/FrontEnd_ButtonSmall",
+                                        "textString": "@CalibrationText",
+                                        "onClickMessage": "OptionsPanelMessage:OpenCalibrationPanel",
+                                        "textColor": "$LightButtonTextColor",
+                                        "text/style" : "$StyleFEButtonText",
+                                        "tooltipString": "@OptionsMenuGammaTooltip",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "sound": "cursor_select",
+                                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonSmall_Hover",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        },
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "-Normal/Superior Class Specific Item |Staff|Wand|Scepter Low Rune (El - Dol) -> Re-rolled class skill automod item",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ScreenSpaceCalibration",
+                                    "fields": {
+                                        "filename": "FrontEnd/HD/Final/FrontEnd_ButtonSmall",
+                                        "textString": "@CalibrationText",
+                                        "onClickMessage": "PanelManager:OpenPanel:ScreenSpaceCalibrationPanel",
+                                        "textColor": "$LightButtonTextColor",
+                                        "text/style" : "$StyleFEButtonText",
+                                        "tooltipString": "@OptionsMenuScreenSpaceTooltip",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "sound": "cursor_select",
+                                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonSmall_Hover",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        },
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "Equipment Crafting Recipes",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "VSync",
+                                    "fields": {
+                                        "rect": "$OptionsToggleRect",
+                                        "sound": "cursor_menu_select_hd",
+                                        "focusIndicatorPadding": "$OptionsToggleFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsToggleFocusIndicatorFilename",
+                                        "filename": "Lobby\\CreateGame\\CreateGame_AdvancedCheckbox",
+                                        "focusIndicatorOffset": { "x": 0, "y": -4 },
+                                        "untoggledFrame": 0,
+                                        "untoggledPressedFrame": 1,
+                                        "untoggledHoveredFrame": 3,
+                                        "untoggledDisabledFrame": 2,
+                                        "toggledFrame": 4,
+                                        "toggledPressedFrame": 5,
+                                        "toggledHoveredFrame": 6,
+                                        "onClickMessage": "OptionsPanelMessage:SetVSync",
+                                        "tooltipString": "@OptionsMenuVerticalSyncTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        },
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "Jewelry ",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "FramerateCap",
+                                    "fields": {
+                                        "rect": "$OptionsSliderRect",
+                                        "focusIndicatorPadding": "$OptionsSliderFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsSliderFocusIndicatorFilename",
+                                        "isHorizontal": true,
+                                        "indicatorFilepath": "PauseMenu\\HorizontalIndicator",
+                                        "background": "$SettingsSliderBackground",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetFramerateCap",
+                                        "leftButton": "$SettingsSliderLeftButtonFields",
+                                        "rightButton": "$SettingsSliderRightButtonFields",
+                                        "valueText": "$SettingsSliderValueFields",
+                                        "tooltipString": "@OptionsMenuFramerateCapTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        },
+                                        "increment": 1,
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "-Magic Amulet + 6 Perfect Gems (1 of each type) -> Chromatic Amulet (Buffed compared to Vanilla)",
+                                        "style": "$StyleSettingsText"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "disabled", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider",
+                                            }
+                                        },
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "-Magic Ring + 1 Perfect Ruby + 1 Exploding Potion -> Garnet Ring",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "GraphicPresets",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [  "Low", "Medium", "High", "VeryHigh", "Custom" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetGraphicPresets",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@GraphicPresetsTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "upgrading",
+                                    "fields": {
+                                        "text": "-Magic Ring + 1 Perfect Sapphire + 1 Thawing Potion -> Cobalt Ring",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "TextureQuality",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [  "Low", "Medium", "High", "VeryHigh" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetTextureQuality",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuTextureQualityTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "-Magic Ring + 1 Perfect Topaz + 1 Rejuvenation Potion -> Coral Ring",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "TextureAnisotropy",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Anisotropy1", "Anisotropy2", "Anisotropy4", "Anisotropy8", "Anisotropy16" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetTextureAnisotropy",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuAnisotropicFilteringTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "-Magic Ring + 1 Perfect Emerald + 1 Antidote Potion -> Jade Ring",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "AmbientOcclusionQuality",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Off", "Low", "Medium", "High", "VeryHigh" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetAmbientOcclusionQuality",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuAmbientOcclusionQualityTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "Hit Power",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "CharacterDetail",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Low", "Medium", "High", "VeryHigh" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetCharacterDetail",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuCharacterDetailTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "-Magic Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "EnvironmentDetail",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Low", "Medium", "High", "VeryHigh" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetEnvironmentDetail",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuEnvironmentDetailTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "-Magic Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "TransparencyQuality",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "High", "VeryHigh", "Ultra" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetTransparencyQuality",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuTransparencyQualityTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "-Magic Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ShadowQuality",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Low", "Medium", "High", "VeryHigh" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetShadowQuality",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuShadowQualityTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row up",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "up",
+                                    "fields": {
+                                        "text": "-Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "AntiAliasing",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Off", "FXAA", "SMAA1x", "SMAAT2x" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetAntiAliasing",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuAntiAliasingTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row sockets",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "sockets",
+                                    "fields": {
+                                        "text": "-Magic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "DynamicResolutionScaling",
+                                    "fields": {
+                                        "rect": "$OptionsToggleRect",
+                                        "sound": "cursor_menu_select_hd",
+                                        "focusIndicatorPadding": "$OptionsToggleFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsToggleFocusIndicatorFilename",
+                                        "filename": "Lobby\\CreateGame\\CreateGame_AdvancedCheckbox",
+                                        "focusIndicatorOffset": { "x": 0, "y": -4 },
+                                        "untoggledFrame": 0,
+                                        "untoggledPressedFrame": 1,
+                                        "untoggledHoveredFrame": 3,
+                                        "untoggledDisabledFrame": 2,
+                                        "toggledFrame": 4,
+                                        "toggledPressedFrame": 5,
+                                        "toggledHoveredFrame": 6,
+                                        "onClickMessage": "OptionsPanelMessage:SetDynamicResolutionScaling",
+                                        "disabledTooltipString": "@MPBetaDisabled",
+                                        "tooltipString": "@OptionsMenuDynamicResolutionScalingTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row sockets",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "sockets",
+                                    "fields": {
+                                        "text": "-Magic Body + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "FramerateTarget",
+                                    "fields": {
+                                        "rect": "$OptionsSliderRect",
+                                        "focusIndicatorPadding": "$OptionsSliderFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsSliderFocusIndicatorFilename",
+                                        "isHorizontal": true,
+                                        "indicatorFilepath": "PauseMenu\\HorizontalIndicator",
+                                        "background": "$SettingsSliderBackground",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetFramerateTarget",
+                                        "leftButton": "$SettingsSliderLeftButtonFields",
+                                        "rightButton": "$SettingsSliderRightButtonFields",
+                                        "valueText": "$SettingsSliderValueFields",
+                                        "tooltipString": "@MinimumFramerateTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" }
+                                            },
+                                            "showAfterDelay": true
+                                        },
+                                        "increment": 1,
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row sockets",
+                            "children": [
+                                {
+                                    "type": "", "name": "sockets",
+                                    "fields": {
+                                        "text": "-Magic Amulet + 1 Jewel + Thul Rune + 1 Perfect Sapphire -> Hit Power Amulet",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "VfxLightingQuality",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Low", "Medium", "High", "Ultra" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetVfxLightingQuality",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuVFXLightingQualityTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row Sockets",
+                            "children": [
+                                {
+                                    "type": "", "name": "Legacy Sockets",
+                                    "fields": {
+                                        "text": "-Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Sapphire -> Hit Power Ring",
+                                        "style": "$StyleSettingsText"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "disabled", "name": "Divider",
+                                            "fields": {
+                                                "rect": "",
+                                                "filename": "PauseMenu\\Divider",
+                                            }
+                                        },
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row Sockets",
+                            "children": [
+                                {
+                                    "type": "", "name": "Sockets",
+                                    "fields": {
+                                        "text": "-Magic Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Resolution",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "OptionsMenuLegacyGameResolution640x480", "OptionsMenuLegacyGameResolution800x600" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetResolution",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuLegacyGameResolutionTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row sockets",
+                            "children": [
+                                {
+                                    "type": "", "name": "sockets",
+                                    "fields": {
+                                        "text": "-Unique Items (Weapon, Helm, Chest armor, Shield) + Io + Lum + Ko + Fal -> Unique Item with 1 socket",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "LightingQuality",
+                                    "fields": {
+                                        "rect": "$OptionsCarouselRect",
+                                        "focusIndicatorPadding": "$OptionsCarouselFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
+                                        "states": [ "Low", "Medium", "High" ],
+                                        "fontType": "8ptE",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetLightingQuality",
+                                        "style": "$StyleSettingsCarousel",
+                                        "enabledColor" : "$CarouselEnabledColor",
+                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "tooltipString": "@OptionsMenuLegacyLightingQualityTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row sockets",
+                            "children": [
+                                {
+                                    "type": "", "name": "sockets",
+                                    "fields": {
+                                        "text": "-Crafted Items (Weapon, Helm, Chest Armor, Shield) + Amn + Sol + Shael + Dol -> Crafted Item with 1 Socket",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disable", "name": "BlendedShadows",
+                                    "fields": {
+                                        "rect": "$OptionsToggleRect",
+                                        "sound": "cursor_menu_select_hd",
+                                        "focusIndicatorPadding": "$OptionsToggleFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsToggleFocusIndicatorFilename",
+                                        "focusIndicatorOffset": { "x": 0, "y": -4 },
+                                        "filename": "Lobby\\CreateGame\\CreateGame_AdvancedCheckbox",
+                                        "untoggledFrame": 0,
+                                        "untoggledPressedFrame": 1,
+                                        "untoggledHoveredFrame": 3,
+                                        "untoggledDisabledFrame": 2,
+                                        "toggledFrame": 4,
+                                        "toggledPressedFrame": 5,
+                                        "toggledHoveredFrame": 6,
+                                        "onClickMessage": "OptionsPanelMessage:SetBlendedShadows",
+                                        "tooltipString": "@OptionsMenuLegacyBlendedShadowsTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row socket",
+                            "children": [
+                                {
+                                    "type": "", "name": "socket",
+                                    "fields": {
+                                        "text": "-Unsocketing | 1 Hel Rune + 1 Socketed Item -> Clear Sockets on Item and Destroy Socketed Items ",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disable", "name": "Perspective",
+                                    "fields": {
+                                        "rect": "$OptionsToggleRect",
+                                        "sound": "cursor_menu_select_hd",
+                                        "focusIndicatorPadding": "$OptionsToggleFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsToggleFocusIndicatorFilename",
+                                        "filename": "Lobby\\CreateGame\\CreateGame_AdvancedCheckbox",
+                                        "focusIndicatorOffset": { "x": 0, "y": -4 },
+                                        "untoggledFrame": 0,
+                                        "untoggledPressedFrame": 1,
+                                        "untoggledHoveredFrame": 3,
+                                        "untoggledDisabledFrame": 2,
+                                        "toggledFrame": 4,
+                                        "toggledPressedFrame": 5,
+                                        "toggledHoveredFrame": 6,
+                                        "onClickMessage": "OptionsPanelMessage:SetPerspective",
+                                        "tooltipString": "@OptionsMenuLegacyPerspectiveModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true,
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "", "name": "Row disable",
+                            "children": [
+                                {
+                                    "type": "", "name": "disable",
+                                    "fields": {
+                                        "text": "-Unsocketing | 1 Hel Rune + 1 Ohm Rune or higher + 1 Socketed Item -> Clear Sockets on Item without Destroying Socketed Items",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disable", "name": "Contrast",
+                                    "fields": {
+                                        "rect": "$OptionsSliderRect",
+                                        "focusIndicatorPadding": "$OptionsSliderFocusIndicatorPadding",
+                                        "focusIndicatorFilename": "$OptionsSliderFocusIndicatorFilename",
+                                        "isHorizontal": true,
+                                        "indicatorFilepath": "PauseMenu\\HorizontalIndicator",
+                                        "background": "$SettingsSliderBackground",
+                                        "onUpdateMessage": "OptionsPanelMessage:SetContrast",
+                                        "leftButton": "$SettingsSliderLeftButtonFields",
+                                        "rightButton": "$SettingsSliderRightButtonFields",
+                                        "valueText": "$SettingsSliderValueFields",
+                                        "tooltipString": "@OptionsMenuLegacyContrastTooltip",
+                                        "tooltipStyle": {
+                                            "fontStyle": {
+                                                "options": { "newlineHandling": "standard" },
+                                            },
+                                            "showAfterDelay": true,
+                                        },
+                                        "increment": 1,
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Spacer",
+                        },
+                    ]
+                }
+            ]
+        },
+    ]
+}

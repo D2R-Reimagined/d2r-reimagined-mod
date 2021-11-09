@@ -1,0 +1,72 @@
+{
+    "type": "BankPanel", "name": "BankOriginalLayout",
+    "fields": {
+        "priority": 5,
+        "rect": { "x": -320, "y": -240, "width": 320, "height": 432 },
+        "anchor": "$LeftPanelAnchor",
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+            "fields": {
+                "rect": { "width": 320, "height": 432 }
+            },
+        },
+        {
+            "type": "GridImageWidget", "name": "background",
+            "fields": {
+                "filename": "PANEL\\bank",
+                "frames": 4,
+                "rows": 2,
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_max",
+            "fields": {
+                "rect": { "x": 78, "y": 245 },
+                "style": {
+                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 }
+                }
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_amount",
+            "fields": {
+                "rect": { "x": 165, "y": 220 },
+                "style": {
+                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 }
+                }
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "gold_withdraw",
+            "fields": {
+                "rect": { "x": 75, "y": 218 },
+                "filename": "PANEL\\goldcoinbtn",
+                "tooltipString": "@strGoldWithdraw",
+                "onClickMessage": "BankPanelMessage:Withdraw",
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "close",
+            "fields": {
+                "rect": { "x": 275, "y": 383 },
+                "filename": "PANEL\\buysellbtn",
+                "normalFrame": 10,
+                "pressedFrame": 11,
+                "tooltipString": "@strClose",
+                "tooltipOffset": { "x": 0, "y": -3 },
+                "onClickMessage": "BankPanelMessage:Close",
+            },
+        },
+        {
+            "type": "InventoryGridWidget", "name": "grid",
+            "fields": {
+                "rect": { "x": 74, "y": 273 },
+                "cellCount": { "x": 16, "y": 13 },
+                "cellSize": "$ItemCellSize",
+                "gemSocketFilename": "PANEL\\gemsocket",
+            },
+        },
+    ]
+}

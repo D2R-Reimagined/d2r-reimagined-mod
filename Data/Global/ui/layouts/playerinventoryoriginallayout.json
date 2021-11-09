@@ -1,0 +1,181 @@
+{
+    "type": "PlayerInventoryPanel", "name": "PlayerInventoryOriginalLayout",
+    "fields": {
+        "rect": { "x": 0, "y": -240, "width": 320, "height": 432 },
+        "anchor": "$RightPanelAnchor",
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+            "fields": {
+                "rect": { "width": 1320, "height": 2432 }
+            },
+        },
+        {
+            "type": "GridImageWidget", "name": "background",
+            "fields": {
+                "filename": "PANEL\\invchar",
+                "frame": 4,
+                "frames": 4,
+                "rows": 2,
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_amount",
+            "fields": {
+                "rect": { "x": 108, "y": 392 },
+                "style": {
+                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 }
+                }
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "gold_button",
+            "fields": {
+                "rect": { "x": 84, "y": 391 },
+                "filename": "PANEL\\goldcoinbtn",
+                "tooltipString": "@strGoldDrop",
+                "onClickMessage": "PlayerInventoryPanelMessage:DropGold",
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "close",
+            "fields": {
+                "rect": { "x": 18, "y": 384 },
+                "filename": "PANEL\\buysellbtn",
+                "normalFrame": 10,
+                "pressedFrame": 11,
+                "tooltipString": "@strClose",
+                "tooltipOffset": { "x": 0, "y": -3 },
+                "onClickMessage": "PlayerInventoryPanelMessage:Close",
+            },
+        },
+        {
+            "type": "InventoryGridWidget", "name": "grid",
+            "fields": {
+                "rect": { "x": 19, "y": 255 },
+                "cellCount": { "x": 10, "y": 8 },
+                "cellSize": "$ItemCellSize",
+                "gemSocketFilename": "PANEL\\gemsocket",
+            },
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_head",
+            "fields": {
+                "rect": { "x": 135, "y": 8, "width": 54, "height": 51 },
+                "cellSize": "$ItemCellSize",
+                "location": "head",
+                "gemSocketFilename": "PANEL\\gemsocket",
+                "backgroundFilename": "PANEL\\inv_helm_glove",
+                "backgroundFrame": 1,
+                "backgroundOffset": { "x": 0, "y": -3 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_neck",
+            "fields": {
+                "rect": { "x": 209, "y": 35, "width": 23, "height": 24 },
+                "cellSize": "$ItemCellSize",
+                "location": "neck",
+                "backgroundFilename": "PANEL\\inv_ring_amulet",
+                "backgroundOffset": { "x": 0, "y": -1 },
+                "itemOffset": { "x": 0, "y": -2 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_torso",
+            "fields": {
+                "rect": { "x": 133, "y": 77, "width": 56, "height": 82 },
+                "cellSize": "$ItemCellSize",
+                "location": "torso",
+                "gemSocketFilename": "PANEL\\gemsocket",
+                "backgroundFilename": "PANEL\\inv_armor",
+                "backgroundOffset": { "x": 2, "y": -2 },
+                "itemOffset": { "x": 3, "y": 0 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_right_arm",
+            "fields": {
+                "rect": { "x": 20, "y": 47, "width": 55, "height": 112 },
+                "cellSize": "$ItemCellSize",
+                "location": "right_arm",
+                "gemSocketFilename": "PANEL\\gemsocket",
+                "backgroundFilename": "PANEL\\inv_weapons",
+                "backgroundFrame": 0,
+                "backgroundOffset": { "x": 0, "y": 1 },
+                "swappedOffset": { "x": 4, "y": -4 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_left_arm",
+            "fields": {
+                "rect": { "x": 251, "y": 47, "width": 55, "height": 112 },
+                "cellSize": "$ItemCellSize",
+                "location": "left_arm",
+                "gemSocketFilename": "PANEL\\gemsocket",
+                "backgroundFilename": "PANEL\\inv_weapons",
+                "backgroundFrame": 0,
+                "backgroundOffset": { "x": 0, "y": 1 },
+                "swappedOffset": { "x": 4, "y": -4 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_right_hand",
+            "fields": {
+                "rect": { "x": 95, "y": 180, "width": 23, "height": 24 },
+                "cellSize": "$ItemCellSize",
+                "location": "right_hand",
+                "backgroundFilename": "PANEL\\inv_ring_amulet",
+                "backgroundFrame": 1,
+                "backgroundOffset": { "x": 0, "y": -1 },
+                "itemOffset": { "x": 0, "y": -2 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_left_hand",
+            "fields": {
+                "rect": { "x": 209, "y": 180, "width": 23, "height": 24 },
+                "cellSize": "$ItemCellSize",
+                "location": "left_hand",
+                "backgroundFilename": "PANEL\\inv_ring_amulet",
+                "backgroundFrame": 1,
+                "backgroundOffset": { "x": 0, "y": -1 },
+                "itemOffset": { "x": 0, "y": -2 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_belt",
+            "fields": {
+                "rect": { "x": 136, "y": 179, "width": 52, "height": 25 },
+                "cellSize": "$ItemCellSize",
+                "location": "belt",
+                "backgroundFilename": "PANEL\\inv_belt",
+                "backgroundOffset": { "x": 0, "y": -1 },
+                "itemOffset": { "x": 2, "y": -2 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_feet",
+            "fields": {
+                "rect": { "x": 252, "y": 182, "width": 54, "height": 52 },
+                "cellSize": "$ItemCellSize",
+                "location": "feet",
+                "backgroundFilename": "PANEL\\inv_boots",
+                "backgroundOffset": { "x": -1, "y": -4 },
+                "itemOffset": { "x": 2, "y": -4 },
+            }
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_gloves",
+            "fields": {
+                "rect": { "x": 21, "y": 181, "width": 54, "height": 53 },
+                "cellSize": "$ItemCellSize",
+                "location": "gloves",
+                "backgroundFilename": "PANEL\\inv_helm_glove",
+                "backgroundOffset": { "x": -1, "y": -2 },
+                "itemOffset": { "x": 0, "y": -2 },
+            }
+        },
+    ]
+}

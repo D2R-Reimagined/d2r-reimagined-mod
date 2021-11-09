@@ -1,0 +1,224 @@
+{
+    "type": "PausePanel", "name": "PauseLayout",
+    "fields": {
+        "priority": 9001,
+        "fitToParent": true,
+        "defaultWidget": "ReturnToGame",
+        "onlineLogoWidgetPosition": { "y": 140 }
+    },
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "TransparentBG",
+            "fields": {
+                "fitToScreen": true,
+                "color": [ 0.0, 0.0, 0.0, 0.5 ]
+            },
+            "children": [
+                {
+                    "type": "ClickCatcherWidget", "name": "catcher",
+                    "fields": {
+                        "fitToParent": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Widget", "name": "LogoWidget",
+            "fields": {
+                "anchor": { "x": 0.5 }
+            },
+            "children": [
+                {
+                    "type": "AnimatedImageWidget", "name": "FullGlow",
+                    "fields": {
+                        "rect": { "x": -303, "y": 171 },
+                        "filename": "LogoAnimation/FullGlow_PC",
+                        "fps": 20
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "Logo",
+                    "fields": {
+                        "rect": { "x": -292, "y": 141 },
+                        "filename": "LogoAnimation/LogoAnimation",
+                        "fps": 20
+                    }
+                },
+                {
+                    "type": "ImageWidget", "name": "ResurrectedText",
+                    "fields": {
+                        "rect": { "x": -239, "y": 473 },
+                        "filename": "LogoAnimation/ResurrectedText"
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "fields": {
+                        "rect": { "x": -129, "y": 511 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TextBoxWidget", "name": "PauseText",
+            "fields": {
+                "anchor": { "x": 0.5 },
+                "rect": { "y": 628 },
+                "text": "D2R Reimagined",
+                "style": {
+                    "fontColor": "$PanelTitleColor",
+                    "pointSize": "$XExtraLargeFontSize",
+                    "alignment": { "h": "center", "v": "center" }
+                }
+            }
+        },
+        {
+            "type": "TableWidget", "name": "PauseTable",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": -329, "y": -340 },
+                "columns": [ { "width": 658, "alignment": { "h": "center", "v": "center" } } ],
+                "rowHeight": 140,
+                "generateFocusLinks": true
+            },
+            "children": [
+                {
+                    "type": "TableRowWidget", "name": "Row Options",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Settings",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "@OptionsHD",
+                                "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Row Save and Exit Game",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Exit",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "@SaveAndExit",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PausePanelMessage:ExitGame",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "cursor_select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Row Return to Game",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "ReturnToGame",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "@ReturnToGame",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PausePanelMessage:Close",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+
+                },
+                {
+                    "type": "TableRowWidget", "name": "Runes Sockets Upgrading",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Runes Sockets Upgrading",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "Horadric Cube Recipes",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PanelManager:OpenPanel:modcube",
+                                "textColor": "$FontColorGoldYellow",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Crafting",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Crafting",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "Crafting Recipes",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PanelManager:OpenPanel:modcuberecipes",
+                                "textColor": "$FontColorOrange",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Balancing",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Balancing",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "Character Balancing",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PanelManager:OpenPanel:characterbalancing",
+                                "textColor": "$FontColorRed",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ImageWidget", "name": "AgeDescriptorImage",
+            "fields": {
+                "rect": { "x": 40, "y": 80 },
+                "filename": "PauseMenu\\descriptor-18"
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "ViolenceDescriptorImage",
+            "fields": {
+                "rect": { "x": 280, "y": 80 },
+                "filename": "PauseMenu\\descriptor-violence"
+            }
+        }
+    ]
+}

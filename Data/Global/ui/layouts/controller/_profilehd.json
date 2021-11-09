@@ -1,0 +1,96 @@
+{
+    // Base (parent) profile.
+    "basedOn": "HD",
+
+    // Anchor points.
+    "LeftPanelAnchor": { "x": 0.5, "y": 0.397 },
+    "RightPanelAnchor": { "x": 0.5, "y": 0.397 },
+    // In-game panel rects.
+    "LeftPanelRect": { "x": 200, "y": -707, "width": 1093, "height": 1611 },
+    "RightPanelRect": { "x": -1293, "y": -707, "width": 1093, "height": 1611 },
+    "PanelClickCatcherRect": { "x": 0, "y": 45, "width": 1093, "height": 1495 },
+    "ButtonLegendRect": { "x": 0, "y": 1659, "width": 1164, "height": 106 },
+    "SinglePanelTabRect": { "x": 108, "y": 4, "width": 1616, "height": 121},
+    "PanelTabPadding": { "x": 0, "y": 0 },
+    "ScrollSpeechWidth": 900,
+    "ScrollSpeechBorderWidth": 990,
+    "ScrollSpeechOffset": -500, // This is negative and half of the width; Used as the horizontal offset.
+
+    // Speech scroll speed
+    "ScrollSpeechSpeed": -0.675,
+
+    // temporary until all panels on console are converted
+    "ConsoleLeftPanelRect": { "x": -1366, "y": -582, "width": 1305, "height": 1421 },
+    "ConsoleRightPanelRect": { "x": -8, "y": -608, "width": 1408, "height": 1486 },
+    "ConsoleCenterPanelRect": { "x": -896, "y": -585, "width": 1793, "height": 1416 },
+    "PanelTitleRect": { "x": 115, "y": 168, "width": 943, "height": 97 },
+    "HalfPanelLeftTabButtonPromptPosition": { "x": -42, "y": -2 },
+    "HalfPanelRightTabButtonPromptPosition": { "x": 1135, "y": -2 },
+
+    // Standard Styles.
+    "StylePartyPanelSmallHeading": {
+        "fontColor": "$FontColorGoldYellow",
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "newlineHandling": "standard", "pipeCharacterBehavior" : "handle" },
+        "spacing": { "leading": 1.0 },
+        "dropShadow": "$DefaultDropShadow"
+    },
+    "StylePartyPanelGameInfo": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "newlineHandling": "standard", "pipeCharacterBehavior" : "handle" },
+        "spacing": { "leading": 1.0 },
+    },
+    "StyleTitleBlock": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "spacing": "$ReducedSpacing",
+    },
+    "StyleWeaponSwapTabs": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$MediumLargeFontSize",
+        "alignment": { "h": "center", "v": "center" },
+    },
+    "StyleSkillTreeTabs" :
+    {
+        "options": { "lineWrap": true },
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "fontColor": "$FontColorWhite",
+        "spacing": {"leading":0.9, "kerning":0.95}
+    },
+
+    // HirablesPanel
+    "SecondSetIconOffset": { "x": 175 },
+
+    // SidePanel
+    "LeftHingeSprite": "",
+    "RightHingeSprite": "",
+    "LeftSideSprite": "",
+    "RightSideSprite": "",
+
+    // Skills
+    "SkillHotkeyTextStyle": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "center" },
+        "options": { "hideOverflow": true },
+        "spacing": { "kerning": 0.7 },
+    },
+    "SkillHotkeyTextRect": { "x": 66, "y": 116 },
+
+    // Handheld resized stuff
+    "ControllerOverlayRect": { "x": -1440, "y": 100, "width": 2880, "height": 1763 },
+    "QuestLogPanelOriginalRect": { "x": -890, "y": -583, "width": 1795, "height": 1415, },
+    "CharacterStatsPanelRect": { "x": -1373, "y": -583, "width": 2740, "height": 1416 },
+    "PauseLayoutRect": { "x": -896, "y":273 },
+    "QuestLogSpeechPanelRect": { "x": 180, "y": 993, "width": 1442, "height": 378 },
+    "SettingsPanelRect": { "y": 5 },
+    "OptionsPanelRect": { "x": -865, "y": 400, "width": 1730, "height": 1284 },
+    "MessageLogPanelRect": { "x": -887, "y": 280, "width": 1771, "height": 1400 },
+    "UISwitcherRect": { "x": -1440, "y": 100, "width": 2800, "height": 1600 },
+    "AdvancedStatsPanelRect": { "x": -1386, "y": -237 },
+}
