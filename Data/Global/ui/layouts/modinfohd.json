@@ -1,5 +1,5 @@
 {
-    "type": "SettingsPanel", "name": "modcuberecipes",
+    "type": "SettingsPanel", "name": "modinfo",
     "fields": {
         "priority": 9002,
         "fitToParent": true
@@ -45,7 +45,7 @@
                                 "rect": { "x": 1868, "y": 8 },
                                 "filename": "PANEL\\closebtn_4x",
                                 "hoveredFrame": 3,
-                                "onClickMessage": "PanelManager:ClosePanel:modcuberecipes",
+                                "onClickMessage": "PanelManager:ClosePanel:modinfo",
                                 "tooltipString": "@strClose",
                                 "sound": "cursor_close_window_hd",
                                 "acceptsEscKeyEverywhere": true,
@@ -87,7 +87,7 @@
                     "fontColor": "$FontColorWhite",
                     "spacing": { "leading":0.9, "kerning":0.95 }
                 },
-                "textStrings": ["TODO", "TODO", "TODO", "TODO", "TODO", "TODO", " TODO"],
+                "textStrings": ["Crafting", "TODO", "TODO", "TODO", "TODO", "TODO", " TODO"],
                 "tabMessages": [
                     "SettingsPanelMessage:CheckChanges:modcube6",
                     "SettingsPanelMessage:CheckChanges:modcube7",
@@ -120,7 +120,7 @@
                             "type": "ButtonWidget", "name": "Close",
                             "fields": {
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-                                "onClickMessage": "PanelManager:ClosePanel:modcuberecipes",
+                                "onClickMessage": "PanelManager:ClosePanel:modinfo",
                                 "textString": "Close",
                                 "hoveredFrame": 3,
                                 "text/style" : "$StyleFEButtonText",

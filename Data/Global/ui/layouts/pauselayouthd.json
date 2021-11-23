@@ -145,6 +145,26 @@
 
                 },
                 {
+                    "type": "TableRowWidget", "name": "Mod Info",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Mod Info",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "Mod Info",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PanelManager:OpenPanel:modinfo",
+                                "textColor": "$FontColorOrange",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                },
+                {
                     "type": "TableRowWidget", "name": "Runes Sockets Upgrading",
                     "children": [
                         {
@@ -156,26 +176,6 @@
                                 "pressLabelOffset": [ 0, 0 ],
                                 "onClickMessage": "PanelManager:OpenPanel:modcube",
                                 "textColor": "$FontColorGoldYellow",
-                                "text/style": "$StyleFEButtonText",
-                                "acceptsReturnKey": true,
-                                "focusOnMouseOver": true,
-                                "sound": "select"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "TableRowWidget", "name": "Crafting",
-                    "children": [
-                        {
-                            "type": "ButtonWidget", "name": "Crafting",
-                            "fields": {
-                                "filename": "PauseMenu\\PauseButton",
-                                "hoveredFrame": 3,
-                                "textString": "Crafting Recipes",
-                                "pressLabelOffset": [ 0, 0 ],
-                                "onClickMessage": "PanelManager:OpenPanel:modcuberecipes",
-                                "textColor": "$FontColorOrange",
                                 "text/style": "$StyleFEButtonText",
                                 "acceptsReturnKey": true,
                                 "focusOnMouseOver": true,
