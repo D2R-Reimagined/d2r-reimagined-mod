@@ -1,0 +1,532 @@
+{
+    // Named globals.
+    "INT_MAX": 2147483647,
+
+    // Anchor points.
+    "LeftPanelAnchor": { "x": 0.0, "y": 0.397 },
+    "RightPanelAnchor": { "x": 1.0, "y": 0.397 },
+    // In-game panel rects.
+    "LeftPanelRect": { "x": 236, "y": -651, "width": 1162, "height": 1507 },
+    "RightPanelRect": { "x": -1394, "y": -651, "width": 1162, "height": 1507 },
+    "PanelClickCatcherRect": { "x": 0, "y": -200, "width": 1162, "height": 1507 },
+    "InGamePanelTitleRect" : { "x": 91, "y": 64, "width": 972, "height": 71 },
+    "ScrollSpeechWidth": 700,
+    "ScrollSpeechBorderWidth": 800,
+    "ScrollSpeechOffset": -400, // This is negative and half of the width; Used as the horizontal offset.
+    "QuestLogScrollingSpeechParentRect": { "x": 198, "y": 1015, "width": 770, "height": 254 },
+
+    // Lobby panel rects.
+    "LobbyAnchor": {"x": 0.5},
+    "LeftLobbyRect": {"x": -1677, "y": 25},
+    "LeftLobbyRectNarrow": {"x": -1306},
+
+    "RightLobbyRect": {"x": 371, "y": 27},
+    "RightLobbySubPanelRect": {"x": 452, "y": 210},
+
+    "RightLobbyRectNarrow": {"x": 0},
+    "RightLobbySubPanelRectNarrow": { "x": 79, "y": 184},
+
+    // Speech scroll speed
+    "ScrollSpeechSpeed": -0.575,
+
+    // Colors.
+    "FontColorWhite": { "r": 240, "g": 240, "b": 240, "a": 255 },
+    "FontColorVeryLightGray": { "r": 240, "g": 240, "b": 240, "a": 255 },
+    "FontColorBlack": { "r": 0, "g": 0, "b": 0, "a": 255 },
+    "FontColorRed": { "r": 252, "g": 70, "b": 70, "a": 255 },
+    "FontColorGreen": { "r": 0, "g": 252, "b": 0, "a": 255 },
+    "FontColorBlue": { "r": 110, "g": 110, "b": 255, "a": 255 },
+    "FontColorLightGold": { "r": 255, "g": 246, "b": 227, "a": 255 }, // usage: button text, setting text labels
+    "FontColorGoldYellow" : { "r": 199, "g": 179, "b": 119, "a": 255 }, //Usage example: panel and option subtitles
+    "FontColorCurrencyGold" : {"r": 209, "g": 195, "b": 120, "a": 255}, // Usage Example: Gold text
+    "FontColorGold": "$FontColorGoldYellow",
+    "FontColorDarkGold": { "r": 120, "g": 98, "b": 47, "a": 255 },
+    "FontColorBeige" : { "r": 204, "g": 195, "b": 176, "a": 255 },
+    "FontColorGray": { "r": 99, "g": 99, "b": 99, "a": 255 },
+    "FontColorGrey": "$FontColorGray",
+    "FontColorOrange": { "r": 255, "g": 168, "b": 0, "a": 255 },
+    "FontColorDarkGreen": { "r": 0, "g": 128, "b": 0, "a": 255 },
+    "FontColorYellow": { "r": 255, "g": 255, "b": 100, "a": 255 },
+    "FontColorLightPurple": { "r": 192, "g": 128, "b": 242, "a": 255 },
+    "FontColorLightTeal": { "r": 124, "g": 221, "b": 204, "a": 255 },
+    "FontColorLightRed": { "r": 255, "g": 148, "b": 148, "a": 255 },
+    "FontColorLightYellow": { "r": 255, "g": 235, "b": 164, "a": 255 },
+    "FontColorLightBlue": { "r": 175, "g": 183, "b": 255, "a": 255 },
+    "FontColorLightGray": { "r": 148, "g": 148, "b": 148, "a": 255 },
+    "FontColorDarkGrayBlue":  { "r": 125, "g": 141, "b": 144, "a": 255 },
+    "FontColorDarkGrayGold" : { "r": 173, "g": 168, "b": 148, "a": 255 }, // Usage example: attribute points to spend
+    "FontColorTransparent": { "r": 0, "g": 0, "b": 0, "a": 0 },
+    "FontColorPartyOrange": { "r": 196, "g": 129, "b": 0, "a": 255 },
+    "FontColorPartyGreen": {"r": 79, "g": 194, "b": 56, "a": 255 },
+
+    // Text color presets
+    "CarouselEnabledColor": "$FontColorLightGold",
+    "CarouselDisabledColor": "$FontColorGray",
+    "LightButtonTextColor" : "$FontColorLightGold",
+    "PanelTitleColor": "$FontColorGoldYellow",
+    "ModalDescriptionTextColor": "$FontColorLightGold",
+    "DarkButtonTextColor" : "$FontColorDarkGrayBlue",
+    "PanelNoteTextColor" : "$FontColorDarkGrayGold",
+    "GoldCurrencyTextColor": "$FontColorCurrencyGold",
+    "DescriptionTextColor": "$FontColorWhite",
+    "DescriptionTitleColor": "$FontColorWhite",
+    "TabsActiveTextColor": "$FontColorVeryLightGray",
+    "TabsInactiveTextColor": "$FontColorDarkGrayBlue",
+    "TabsActiveTextColorInGame" : "$FontColorVeryLightGray",
+    "CharacterListDetailsColor": "$FontColorGoldYellow",  //{ "r": 215, "g": 186, "b": 124, "a": 255 },
+    "TooltipBorderColor": [ 0.266, 0.266, 0.266, 1.0 ],
+
+    // Font sizes.
+    "HugeFontSize": 66,
+    "XExtraLargeFontSize": 56, // Usage Example: "play / continue" button
+    "ExtraLargeFontSize": 42,
+    "XLargeFontSize": 40,
+    "LargeFontSize": 38, // Usage: Primary Front End buttons ("Continue", "Single Player")
+    "XMediumLargeFontSize": 34, // Usage: Player name
+    "MediumLargeFontSize": 32, // Usage: Front end button ribbon buttons (CAPS), front end character select tabs
+    "XMediumFontSize": 28, // Usage:Secondary Action Center Buttons, Character list title and level text
+    "MediumFontSize": 26, // Usage : Settings field text
+    "SmallFontSize": 22,
+    "TooltipFontSize": 36,
+    "CinematicsFontSize": 32,
+    "AddFriendModalFontSize": 26, // Usage: AddFriendModal needs to be the same size in all profiles to support IME
+
+    // K&M LV-mode in-game panels are just scaled up, thus we need
+    // versions of fonts which can be used in panels.
+    "XMediumPanelFontSize": "$XMediumFontSize",
+    "MediumPanelFontSize": "$MediumFontSize",
+    "SmallPanelFontSize": "$SmallFontSize",
+
+    // Kerning
+    "DefaultSpacing" : { "kerning": 1.0 },
+    "ReducedSpacing" : { "kerning": 0.94 },
+    "MinimumSpacing" : { "kerning": 0.88 },
+
+    // Recoloring.
+    "EmptyColorRange": {
+        "hue": [ 0.0, 0.0 ],
+        "saturation": [ 0.0, 0.0 ],
+        "value": [ 0.0, 0.0 ]
+    },
+
+    // Standard Styles.
+    "StyleCharacterModeSelectTitle":
+    {
+        "fontColor": "$FontColorGoldYellow",
+        "pointSize": "$MediumLargeFontSize",
+        "options": { "lineWrap": true },
+        "alignment": { "h": "left", "v": "center" },
+        "dropShadow": "$DefaultDropShadow"
+    },
+    "StyleCharacterModeSelectDescription":
+    {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$MediumFontSize",
+        "fontFace": "Formal",
+        "options": { "lineWrap": true },
+        "alignment": { "h": "left", "v": "top" },
+        "dropShadow": "$DefaultDropShadow"
+    },
+    "StylePartyPanelSmallHeading": {
+        "fontColor": "$FontColorGoldYellow",
+        "pointSize": "$SmallPanelFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "newlineHandling": "standard", "pipeCharacterBehavior" : "handle" },
+        "spacing": { "leading": 1.0 },
+        "dropShadow": "$DefaultDropShadow"
+    },
+    "StylePartyPanelGameInfo": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$SmallPanelFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "newlineHandling": "standard", "pipeCharacterBehavior" : "handle" },
+        "spacing": { "leading": 1.0 },
+    },
+    "StyleButtonLegend": {
+        "fontColor": "$FontColorLightGray",
+        "pointSize": "$MediumFontSize",
+        "spacing": { "leading": 1.2, "kerning": 0.95 }
+    },
+    "StyleModalDialogTitle":
+    {
+        "fontColor": "$FontColorWhite",
+        "alignment": { "h": "center" },
+        "options": { "lineWrap": true, "newlineHandling": "standard" },
+        "pointSize": "$MediumLargeFontSize",
+        "spacing": "$ReducedSpacing"
+    },
+    "StyleModalDialogDescription":
+    {
+        "fontColor": "$ModalDescriptionTextColor",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "lineWrap": true, "newlineHandling": "standard" },
+        "pointSize": "$MediumFontSize",
+        "spacing": "$ReducedSpacing"
+    },
+    "StyleFEButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$MediumLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+    },
+    "StyleCinematicsButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$CinematicsFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": { "kerning": 0.915 },
+    },
+    "StyleFEMultiLineButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$MediumLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "lineWrap": true, "newlineHandling": "standard" },
+    },
+    "StyleTitleBlock": {
+        "fontColor": "$PanelTitleColor",
+        "pointSize": "$ExtraLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": { "h": "center", "v": "center" },
+        "spacing": "$ReducedSpacing",
+    },
+    "StyleGoldAmount": {
+        "fontColor": "$FontColorCurrencyGold",
+        "pointSize": "$XMediumLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": { "h": "left", "v": "center" },
+    },
+    "StyleWeaponSwapTabs": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$MediumLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": { "h": "center", "v": "center" },
+    },
+    "StyleSkillTreeTabs" :
+    {
+        "options": { "lineWrap": true },
+        "pointSize": "$SmallPanelFontSize",
+        "alignment": { "h": "center", "v": "center" },
+        "fontColor": "$FontColorWhite"
+    },
+    "StyleSettingsTitle": {
+        "fontColor": "$FontColorGoldYellow",
+        "pointSize": "$XLargeFontSize",
+        "alignment": { "h": "left", "v": "center" },
+    },
+    "StyleSettingsSubtitle": {
+        "fontColor": "$FontColorDarkGold",
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "left", "v": "center" },
+    },
+    "StyleSettingsText": {
+        "fontColor": "$FontColorLightGold",
+        "pointSize": "$MediumFontSize",
+        "spacing" : "$ReducedSpacing",
+        "alignment": { "h": "left", "v": "center" },
+        "options": { "lineWrap": true },
+    },
+    "StyleSettingsCarousel": {
+        "pointSize": "$MediumFontSize",
+        "spacing" : "$ReducedSpacing",
+        "alignment": { "h": "center", "v": "center" },
+    },
+    "StyleSettingsNumeric": {
+        "fontFace": "Exocet",
+        "pointSize": "$MediumFontSize",
+        "fontColor": "$FontColorWhite",
+        "alignment": { "h": "center", "v": "center" },
+    },
+    "StyleScrollingSpeech": {
+        "fontFace": "Formal",
+        "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "left" },
+        "options": { "newlineHandling": "standard", "lineWrap": true },
+    },
+    "StyleNotification": {
+        "fontFace": "Exocet",
+        "pointSize": "$MediumFontSize",
+        "fontColor": "$FontColorWhite",
+        "alignment": { "h": "center", "v": "center" },
+        "options": { "newlineHandling": "standard", "lineWrap": true },
+        "spacing": { "leading": 1.5 },
+    },
+    "StyleVictoryText": {
+        "fontColor": "$FontColorDarkGold",
+        "alignment": { "h": "center", "v": "center" },
+        "pointSize": 96,
+        "options": { "newlineHandling": "standard" },
+        "dropShadow": {
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
+            "offset": { "x": 8, "y": 8 },
+        },
+    },
+    "StyleNPCDialogueSize": "$MediumFontSize",
+
+    "DefaultDropShadow": {
+        "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+        "offset": { "x": 3, "y": 3 },
+    },
+
+    "TooltipStyle": {
+        "fontStyle": {
+            "fontColor": "$FontColorWhite",
+            "pointSize": "$TooltipFontSize",
+            "alignment": { "h": "center", "v": "center" },
+            "options": { "pipeCharacterBehavior": "handle", "newlineHandling": "reversed" },
+        },
+        "padding": [ 20, 12, 20, 12 ],
+        "inGameTargetPadding": [ 7, 1, 7, 1 ],
+        "drawBorder": false,
+        "centeredOnAnchor": true,
+        "hp": 0,
+        "backgroundColor": [ 0, 0, 0, 0.75 ],
+        // This color is used for in-game tooltip label backgrounds
+        "inGameBackgroundColor": [ 0, 0, 0, 0.6 ],
+        // This color is used for the show items selected label background
+        "inGameShowItemsSelectedBackgroundColor": [ 0, 0.25, 0.5, 1.0 ],
+        "substringColor": "$FontColorLightGray",
+        "healthColor": [ 0.31, 0, 0, 1.0 ],
+        "borderColor": "$TooltipBorderColor",
+        "DefaultColor": "$FontColorWhite",
+        "QuestColor": "$FontColorGoldYellow",
+        "RareColor": "$FontColorYellow",
+        "CraftedColor": "$FontColorOrange",
+        "TemperedColor": "$FontColorDarkGreen",
+        "MagicColor": "$FontColorBlue",
+        "SetColor": "$FontColorGreen",
+        "UniqueColor": "$FontColorGoldYellow",
+        "SocketedColor": "$FontColorGrey",
+        "EtherealColor": "$FontColorGrey",
+        "HealthPotionColor": "$FontColorRed",
+        "ManaPotionColor": "$FontColorBlue",
+        "RejuvPotionColor": "$FontColorLightPurple",
+        "GoldColor": "$FontColorWhite",
+        "RuneColor": "$FontColorOrange",
+        "EventItemsColor": "$FontColorOrange",
+    },
+
+    "SkillIconFilenames": [
+        "Spells/amazon/AmSkillicon",
+        "Spells/Sorceress/SoSkillicon",
+        "Spells/Necromancer/NeSkillicon",
+        "Spells/paladin/PaSkillicon",
+        "Spells/Barbarian/BaSkillicon",
+        "Spells/Druid/DrSkillicon",
+        "Spells/Assassin/AsSkillicon",
+        "Spells/SubMenu/Skillicon"
+    ],
+
+    // HirablesPanel
+    "SecondSetIconOffset": { "x": 175 },
+
+    // SidePanel
+    "LeftSideSprite": "PANEL\\Docking_Bar\\SidePanel_L_Blank",
+    "LeftSideRect": { },
+    "LeftSideRectImbuePanel": { "x": -236, "y": -205 },
+    "LeftSideRectHireMenu": { "x": -236, "y": -204 },
+    "LeftSideCatcherRect": { "x": 0, "y": 0, "width": 954, "height": 2160 },
+    "LeftHingeRect": { "x": -236, "y": 630 },
+    "LeftHingeSprite": "PANEL\\Docking_Bar\\SidePanel_Hinge_L_Blank",
+    "RightSideSprite": "PANEL\\Docking_Bar\\SidePanel_R_Blank",
+    "RightSideRect": { "x": -732 },
+    "RightSideCatcherRect": { "x": -732, "y": 0, "width": 954, "height": 2160 },
+    "RightHingeRect": { "x": 1076, "y": 630 },
+    "RightHingeSprite": "PANEL\\Docking_Bar\\SidePanel_Hinge_R_Blank",
+
+    // Inventory
+    "ItemCellSize": { "x": 98, "y": 98 },
+
+    // Settings
+    "OptionsPanelWidth": 1730,
+    "OptionsPanelHeight": 1284,
+    "OptionsPanelRect": { "x": -865, "y": 400, "width": "$OptionsPanelWidth", "height": "$OptionsPanelHeight" },
+    "OptionsScrollBarRect": { "x": -31, "y": 29, "width": 26, "height": 1208 },
+    "OptionsScrollBarBackgroundRect": { "x": -20, "y": 0 },
+    "OptionsTableColumn1": { "width": 1000, "alignment": { "h": "fit", "v": "fit" } },
+    "OptionsTableColumn2": { "width": 700, "alignment": { "h": "center", "v": "center" } },
+    "OptionsTableRowHeight": 100,
+    "OptionsCarouselRect": { "width": 596, "height": 72 },
+    "OptionsCarouselFocusIndicatorPadding": { "left": 5, "right": 5 },
+    "OptionsDropDownRect": { "width": 625, "height": 56 },
+    "OptionsDropDownBackgroundRect": { "x": 0, "y": 0, "width": 625, "height": 56 },
+    "OptionsDropDownLeftCapOffset": { "x": 0, "y": 0 },
+    "OptionsDropDownRightCapOffset": { "x": 0, "y": 0 },
+    "OptionsNumericContainerRect": { "x": -5, "y": -22 },
+    "OptionsNumericRect": { "x": -20, "width": 60, "height": 44 },
+    "OptionsSliderRect": { "width": 480, "height": 72 },
+    "CalibrationTableColumn1": { "width": 700, "alignment": { "h": "fit", "v": "fit" } },
+    "OptionsSliderValueRect": { "x": -159, "y": 17, "width": 70, "height": 40 },
+
+    // Options hover indicators
+    "OptionsSliderFocusIndicatorFilename": "Controller/HoverImages/Slider_Hover",
+    "OptionsDropDownFocusIndicatorFilename": "Controller/HoverImages/DropDown_Hover",
+    "OptionsToggleFocusIndicatorFilename": "Controller/HoverImages/CheckBox_Hover",
+    "OptionsNumInputFocusIndicatorFilename": "Controller/HoverImages/NumericInput_Hover",
+    "OptionsCarouselFocusIndicatorFilename": "Controller/HoverImages/Carousel_Hover",
+    "OptionsNumInputFocusIndicatorOffset": {"x": -15, "y": -1},
+
+    "OptionsSliderFocusIndicatorPadding": { "left": 3, "right": 3 },
+    "OptionsDividerRect": { "x": 0, "y": 90 },
+    "OptionsToggleRect": { "width": 70, "height": 70 },
+    "OptionsToggleFocusIndicatorPadding": { "left": 5, "right": 5 },
+
+    "SettingsSliderBackground": {
+        "rect": { "x": -310, "y": -30 },
+        "anchor": { "x": 0.5, "y": 0.5 },
+        "filename": "PauseMenu\\HorizontalScroll",
+    },
+
+    "SettingsSliderLeftButtonFields": {
+        "rect": { "x": -60, "y": 14 },
+        "filename": "PauseMenu\\LeftArrow",
+        "hoveredFrame": 3,
+    },
+
+    "SettingsSliderRightButtonFields": {
+        "rect": { "x": 482, "y": 14 },
+        "filename": "PauseMenu\\RightArrow",
+        "hoveredFrame": 3,
+    },
+
+    "SettingsSliderValueFields": {
+        "rect": "$OptionsSliderValueRect",
+        "style": "$StyleSettingsNumeric",
+        "style": {
+            "alignment": { "h": "right" },
+        },
+    },
+
+    "SettingsSliderTooltipRect": { "x": -75, "y": 2, "width": 624, "height": 66 },
+
+    "SettingsNumericBackgroundRect": { "x": -40, "y": -10 },
+    "SettingsNumericBackgroundImage": "Lobby/CreateGame/NumberCounterSlot",
+    "SettingsNumericUpButtonFields": {
+        "rect": { "x": 69, "y": -5 },
+        "repeatDelayMS": 100,
+        "filename": "FrontEnd/HD/Final/FrontEnd_ScrollUpBtn",
+        "onClickMessage": "NumericInputTextBoxWidgetMessage:ScrollUp",
+        "hoveredFrame": 3,
+        "disabledFrame": 2,
+        "disabledTint": { "a": 1.0 }
+    },
+    "SettingsNumericDownButtonFields": {
+        "rect": { "x": 69, "y": 22 },
+        "repeatDelayMS": 100,
+        "filename": "FrontEnd/HD/Final/FrontEnd_ScrollDownBtn",
+        "onClickMessage": "NumericInputTextBoxWidgetMessage:ScrollDown",
+        "hoveredFrame": 3,
+        "disabledFrame": 2,
+        "disabledTint": { "a": 1.0 }
+    },
+
+    // Skills
+    "SkillHotkeyTextStyle": {
+        "fontColor": "$FontColorLightGold",
+        "dropShadow": {
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+            "offset": { "x": 4, "y": 4 },
+        },
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "center" },
+        "options": { "hideOverflow": true },
+    },
+    "SkillHotkeyTextRect": { "x": 40, "y": 3, "width": 128 },
+    "SkillQuantityTextStyle": {
+        "fontColor": "$FontColorBlue",
+        "dropShadow": {
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+            "offset": { "x": 4, "y": 4 },
+        },
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "left" },
+        "options": { "hideOverflow": true },
+    },
+    "SkillQuantityTextRect": { "x": 6, "y": 85 },
+    "SkillQuantityTextRectController": { "x": 6, "y": 6 },
+
+    // Cutscenes
+    "SubtitleConfiguration": {
+        "anchor": { "x": 0.5, "y": 0.8 },
+        "style": {
+            "pointSize": "$XExtraLargeFontSize",
+            "options": { "newlineHandling": "standard" },
+            "alignment": { "h": "center", "v": "center" },
+            "highlight": {
+                "endIndex": "$INT_MAX", // longer than any chunk of subtitle text
+                "backgroundColor": { "r": 0, "g": 0, "b": 0, "a": 127 }
+            },
+        },
+    },
+    "HoldToSkipTextConfiguration": {
+        "anchor": { "x": 0.9, "y": 0.1 },
+        "style": {
+            "pointSize": "$ExtraLargeFontSize",
+            "alignment": { "h": "right", "v": "bottom" },
+        },
+        "text": "@MoviePlaybackHoldToSkip",
+    },
+    "HoldToSkipDurationMilliseconds": 500,
+    "HoldToSkipTextTimeoutMilliseconds": 5000,
+
+    // Account Linking
+    "AccountLinkingTileRect": { "x": -875, "y": 561, "width": 1750, "height": 930 },
+    "AccountLinkingDescriptionRect": { "x": 50 , "y": 180, "width": 1650, "height": 160 },
+    "AccountLinkingUserCodeRect": { "x": 50 , "y": 390, "width": 1650, "height": 215 },
+    "AccountLinkingUrlRect": { "x": 50 , "y": 625, "width": 1650, "height": 110 },
+    "AccountLinkingOkButtonRect": { "x": -266, "y": 1330 },
+
+    //Switch handheld resized panels
+    "SettingsPanelAnchorRect": { "x": -975, "y": -953, "width": 1950, "height": 1763 },
+    "SettingsPanelBackgroundRect": { "x": -896, "y": 270, "width": "$OptionsPanelWidth", "height": "$OptionsPanelHeight" },
+    "SettingsPanelTabsRect": { "x": -865, "y": 282, "width": "$OptionsPanelWidth", "height": 121 },
+
+    //Tutorial Tooltips
+    "TutorialTooltipIntroRect" : { "x": 175, "y": 351, "width": 900, "height": 1150 },
+    "TutorialTooltipLocalRect" : { "x": 175, "y": 451, "width": 900, "height": 970 },
+    "TutorialTooltipTabsRect" : { "x": 175, "y": 351, "width": 900, "height": 575 },
+    "TutorialTooltipCreateNewRect" : { "x": 475, "y": 951, "width": 900, "height": 700 },
+    "TutorialTooltipDeleteRect" : { "x": 475, "y": 1351, "width": 900, "height": 575 },
+    "TutorialTooltipConvertRect" : { "x": 475, "y": 751, "width": 900, "height": 970 },
+
+    "TutorialTooltipChatRect" : { "x": 175, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipChatArrowRect" : { "x": -1075, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipCreateGameRect": { "x": -275, "y": 451, "width": 900, "height": 575 },
+    "TutorialTooltipGameName": { "x": -575, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipJoinGame": { "x": 275, "y": 451, "width": 900, "height": 575 },
+    "TutorialTooltipLadder": { "x": 275, "y": 451, "width": 900, "height": 970 },
+
+    "TutorialTooltipConsoleIntroRect": { "x": -675, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipConsoleTabsRect": { "x": -675, "y": 751, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleOnlineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
+    "TutorialTooltipConsoleOfflineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
+    "TutorialTooltipConsoleSoloRect": { "x": 275, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleMultiRect": { "x": -1375, "y": 451, "width": 900, "height": 700 },
+
+    "TooltipConfirmSmall": { "x": 200, "y": 250 },
+    "TooltipDismissSmall": { "x": 200, "y": 400 },
+    "TooltipConfirmMed": { "x": 200, "y": 375 },
+    "TooltipDismissMed": { "x": 200, "y": 525 },
+    "TooltipConfirmLarge": { "x": 200, "y": 660 },
+    "TooltipDismissLarge": { "x": 200, "y": 820 },
+    "TooltipConfirmXL": { "x": 200, "y": 820 },
+    "TooltipDismissXL": { "x": 200, "y": 970 },
+
+    //Lobby Tooltips
+    "ChatRect": { "x": -1620, "y" : 190 },
+    "ChatNarrowRect": { "x": -1250, "y" : 165 },
+    "ChatArrowRect": { "x": -603, "y": 110 },
+    "ChatArrowNarrowRect": { "x": -232, "y": 90 },
+    "CreateGameRect": { "x": 440, "y": 105 },
+    "CreateGameNarrowRect": { "x": 70, "y": 80 },
+    "GameNameRect": { "x": 785, "y": 1235 },
+    "GameNameNarrowRect": { "x": 415, "y": 1205 },
+    "JoinGameRect": { "x": 825, "y": 105 },
+    "JoinGameNarrowRect": { "x": 455, "y": 80 },
+    "LadderRect": { "x": 1210, "y": 105 },
+    "LadderNarrowRect": { "x": 840, "y": 80 },
+}
