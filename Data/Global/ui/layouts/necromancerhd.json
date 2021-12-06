@@ -137,7 +137,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Golems can now be summoned independently. Meaning you can have 1 of each golem without replacing another golem.",
+                                        "text": "Golems can now be summoned independently. Meaning you can have 1 (depending on level) of each golem without replacing another golem.",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -170,7 +170,40 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "All golems have max spawn of 1 until level 10. Level 10 and after you can summon a max of 2 golems.",
+                                        "text": "All golems have max spawn of 1 until level 20. Level 20 and after you can summon a max of 2 golems.",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+							{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Skeletons, Blood Golems, and Clay Golems have 25% splash damage. They've received a 20% damage nerf to compensate.",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
