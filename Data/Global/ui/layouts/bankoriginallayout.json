@@ -3,22 +3,22 @@
     "fields": {
         "priority": 5,
         "rect": { "x": -320, "y": -240, "width": 320, "height": 432 },
-        "anchor": "$LeftPanelAnchor",
+        "anchor": "$LeftPanelAnchor"
     },
     "children": [
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
             "fields": {
                 "rect": { "width": 320, "height": 432 }
-            },
+            }
         },
         {
             "type": "GridImageWidget", "name": "background",
             "fields": {
                 "filename": "PANEL\\bank",
                 "frames": 4,
-                "rows": 2,
-            },
+                "rows": 2
+            }
         },
         {
             "type": "TextBoxWidget", "name": "gold_max",
@@ -44,8 +44,8 @@
                 "rect": { "x": 75, "y": 218 },
                 "filename": "PANEL\\goldcoinbtn",
                 "tooltipString": "@strGoldWithdraw",
-                "onClickMessage": "BankPanelMessage:Withdraw",
-            },
+                "onClickMessage": "BankPanelMessage:Withdraw"
+            }
         },
         {
             "type": "ButtonWidget", "name": "close",
@@ -56,7 +56,7 @@
                 "pressedFrame": 11,
                 "tooltipString": "@strClose",
                 "tooltipOffset": { "x": 0, "y": -3 },
-                "onClickMessage": "BankPanelMessage:Close",
+                "onClickMessage": "BankPanelMessage:Close"
             },
         },
         {
@@ -65,8 +65,8 @@
                 "rect": { "x": 74, "y": 273 },
                 "cellCount": { "x": 16, "y": 13 },
                 "cellSize": "$ItemCellSize",
-                "gemSocketFilename": "PANEL\\gemsocket",
-            },
-        },
+                "gemSocketFilename": "PANEL\\gemsocket"
+            }
+        }
     ]
 }
