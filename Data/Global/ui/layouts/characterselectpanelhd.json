@@ -1,0 +1,290 @@
+{
+    "type": "CharacterSelectPanel", "name": "CharacterSelectPanel",
+    "fields": {
+        "priority": 1,
+        "anchor": { "x": 1.0 },
+        "hardcoreCharacterNameColor": "$FontColorRed",
+        "deadHardcoreTint": { "r": 1.0, "g": 0.3, "b": 0.3, "a": 1.0 },
+        "noTitleCharacterNamePosition": { "x": 25, "y": 68 },
+        "noTitleCharacterLevelClassPosition": { "x": 25, "y": 120 },
+        "shiftStatusIconPosition1": { "x": 545, "y": 0 },
+        "shiftStatusIconPosition2": { "x": 490, "y": 0 }
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "Background",
+            "fields": {
+                "rect": { "x": -801, "y": 0 },
+                "filename": "FrontEnd\\HD\\Final\\FrontEnd_RightPanel"
+            },
+            "children": [
+                {
+                    "type": "ListWidget", "name": "CharacterList",
+                    "fields": {
+                        "rect": { "x": 77, "y": 140, "width": 613, "height": 1650 },
+                        "scrollControllerName": "ScrollBar",
+                        "selectorName": "Selection",
+                        "direction": "vertical",
+                        "itemSelectionMessage": "CharacterSelect:SelectCharacter",
+                        "selectionChangedSound": "cursor_movement_hd"
+                    },
+                    "children": [
+                        {
+                            "type": "ListItemWidget", "name": "CharacterTemplate",
+                            "fields": {
+                                "rect": { "x": 0, "y": 0, "width": 612, "height": 184 },
+                                "focusIndicatorFilename": "Controller/HoverImages/CharacterListSelection_Hover",
+                                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                                "navigation": {
+                                    "left": { "panelBoundary": true }
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "ImageWidget", "name": "Background",
+                                    "fields": {
+                                        "rect": { "x": 0, "y": 0 },
+                                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_CharacterTile"
+                                    }
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "LadderIcon",
+                                    "fields": {
+                                        "rect": { "x": 431, "y": 0 },
+                                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_LadderIconSmall"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "LadderIconTooltip",
+                                            "fields": {
+                                                "fitToParent": true,
+                                                "tooltipString": "@CharacterSelectPanelLadderCharacter"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "ClassicIcon",
+                                    "fields": {
+                                        "rect": { "x": 545, "y": 0 },
+                                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ClassicIconSmall"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "ClassicIconTooltip",
+                                            "fields": {
+                                                "fitToParent": true,
+                                                "tooltipString": "@CharacterSelectPanelPreExpansionCharacter"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "HardcoreIcon",
+                                    "fields": {
+                                        "rect": { "x": 488, "y": 0 },
+                                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_HardcoreIconSmall"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "HardcoreIconTooltip",
+                                            "fields": {
+                                                "fitToParent": true,
+                                                "tooltipString": "@strHardcore"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TextBoxWidget", "name": "Title",
+                                    "fields": {
+                                        "rect": { "x": 16, "y": 11, "width": 400, "height": 42 },
+                                        "fontType": "16pt",
+                                        "style": {
+                                            "fontColor": "$CharacterListDetailsColor",
+                                            "alignment": {"h": "left", "v": "center"},
+                                            "pointSize": "$XMediumFontSize",
+                                            "spacing": "$ReducedSpacing",
+                                            "dropShadow": "$DefaultDropShadow"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "TextBoxWidget", "name": "Name",
+                                    "fields": {
+                                        "rect": { "x": 15, "y": 68, "width": 560, "height": 55 },
+                                        "style": {
+                                            "fontColor": "$LightButtonTextColor",
+                                            "alignment": {"h": "left", "v": "center"},
+                                            "pointSize": "$XMediumLargeFontSize",
+                                            "spacing": "$ReducedSpacing",
+                                            "dropShadow": "$DefaultDropShadow"
+                                        },
+                                        "useAltStyleIfDoesntFit": true,
+                                        "altStyle": {
+                                            "alignment": {"h": "left", "v": "center"},
+                                            "fontColor": "$LightButtonTextColor",
+                                            "pointSize": "$SmallFontSize",
+                                            "spacing": "$MinimumSpacing",
+                                            "dropShadow": "$DefaultDropShadow"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "TextBoxWidget", "name": "Level&Class",
+                                    "fields": {
+                                        "rect": { "x": 15, "y": 120, "width": 400 },
+                                        "style": {
+                                            "fontColor": "$CharacterListDetailsColor",
+                                            "pointSize": "$XMediumFontSize",
+                                            "spacing": "$ReducedSpacing",
+                                            "dropShadow": "$DefaultDropShadow"
+                                        }
+                                    }
+                                }
+
+                            ]
+                        },
+                        {
+                            "type": "ImageWidget", "name": "Selection",
+                            "fields": {
+                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Selector"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "ImageWidget", "name": "BackgroundCover",
+                    "fields": {
+                        "rect": { "x": -75, "y": 40 }
+                    },
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "CreateCharacter",
+                            "fields": {
+                                "rect": { "x": 240, "y": 1775 },
+                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                                "textString": "@strLaunchCharSelectNewX",
+                                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
+                                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                                "onClickMessage": "FrontEndNavigation:ToCharacterCreate",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "hoveredFrame": 3,
+                                "disabledFrame": 2
+                            },
+                            "children": [
+                                {
+                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
+                                    "fields": {
+                                        "anchor": { "x": 0.5, "y": 1.0 },
+                                        "text": {
+                                            "style": "$StyleButtonLegend"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ButtonWidget", "name": "DeleteCharacter",
+                            "fields": {
+                                "rect": { "x": 315, "y": 1940 },
+                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Delete",
+                                "tooltipString": "@strDelete",
+                                "onClickMessage": "CharacterSelect:ShowDeleteCharacterModal",
+                                "hoveredFrame": 2,
+                                "disabledFrame": 3
+                            },
+                            "children": [
+                                {
+                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
+                                    "fields": {
+                                        "anchor": { "x": 0.5, "y": 1.0 },
+                                        "text": {
+                                            "style": "$StyleButtonLegend"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ButtonWidget", "name": "ConvertCharacter",
+                            "fields": {
+                                "rect": { "x": 539, "y": 1940 },
+                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Convert",
+                                "tooltipString": "@CharacterSelectPanelConvertCharacter",
+                                "disabledTooltipString": "@CharacterSelectPanelConvertCharacter",
+                                "onClickMessage": "CharacterSelect:ShowConvertCharacterModal",
+                                "hoveredFrame": 2,
+                                "disabledFrame": 3
+                            },
+                            "children": [
+                                {
+                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
+                                    "fields": {
+                                        "anchor": { "x": 0.5, "y": 1.0 },
+                                        "text": {
+                                            "style": "$StyleButtonLegend"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TabBarWidget", "name": "Tabs",
+                            "fields": {
+                                "rect": { "x": 145, "y": 29 },
+                                "tabCount": 2,
+                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Tabs",
+                                "inactiveFrames": [ 1, 1 ],
+                                "activeFrames": [ 0, 0 ],
+                                "disabledFrames": [ 2, -1 ],
+                                "textStrings": [ "@OnlineButton", "@Offline" ],
+                                "textStyle": { "pointSize": "$MediumLargeFontSize" },
+                                "activeTextColor": "$TabsActiveTextColor",
+                                "inactiveTextColor": "$TabsInactiveTextColor",
+                                "disabledTextColor": "$FontColorGray",
+                                "tabSize": { "x": 332, "y": 71 },
+                                "tabPadding": { "x": -1, "y": 0 },
+                                "onSwitchTabMessage": "CharacterSelect:SelectTab",
+                                "automaticallyPositionIndicators": true
+                            }
+                        },
+                        {
+                            "type": "ImageWidget", "name": "ScrollBarBackground",
+                            "fields": {
+                                "rect": { "x": 765, "y": 101 },
+                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Scrollbar"
+                            },
+                            "children": [
+                                {
+                                    "type": "ScrollControllerWidget", "name": "ScrollBar",
+                                    "fields": {
+                                        "rect": { "x": 5, "y": 31, "width": 24, "height": 1590 },
+                                        "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                                        "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                                        "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
+                                        "viewName": "CharacterList"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TextBoxWidget", "name": "D2RReimaginedModInfo",
+                            "fields": {
+                                "rect": { "x": 140, "y": 2055, "width": 400 },
+                                "text":"D2R Reimagined v1.12.0",
+                                "style": {
+                                    "fontColor": "$CharacterListDetailsColor",
+                                    "pointSize": "$XMediumFontSize",
+                                    "spacing": "$ReducedSpacing",
+                                    "dropShadow": "$DefaultDropShadow"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

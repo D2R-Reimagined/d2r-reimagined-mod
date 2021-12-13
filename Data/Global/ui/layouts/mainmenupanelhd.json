@@ -1,0 +1,355 @@
+{
+    "type": "MainMenuHDPanel", "name": "MainMenuPanel",
+    "fields": {
+        "fitToParent": true,
+        "defaultWidget": "QuickPlayButton",
+        "onlinePlayButtonPosition": { "x": -624, "y": 2500 },
+        "offlinePlayButtonPosition": { "x": -380, "y": 1900 },
+        "playerClassScale": [
+            { "playerClass": "Assassin", "scale": 1.12 },
+            { "playerClass": "Amazon", "scale": 1.05 },
+            { "playerClass": "Druid", "scale": 0.97 },
+            { "playerClass": "Sorceress", "scale": 1.11 }
+        ],
+        "deadHardcoreTint": { "r": 1.0, "g": 0.3, "b": 0.3, "a": 1.0 }
+    },
+    "children": [
+        {
+            "type": "Camera3DWidget", "name": "Act1Camera",
+            "fields": {
+                "yawDegrees": -90,
+                "pitchDegrees": -1,
+                "fovDegrees": 42,
+                "position": [ 50, 4, 483 ],
+                "activateOnMessage": "CharacterSelect:SelectAct:Act1",
+                "activateOnOpened": true,
+                "frustumBoundsMin": [ -300.0, -2.0, 430.0 ],
+                "frustumBoundsMax": [ 60.0, 60.0, 550.0 ],
+                "playerBoundsMin": [ 30.0, 0.0, 475.0 ],
+                "playerBoundsMax": [ 40.0, 10.0, 490.0 ],
+                "enableOutdoorShadow": true,
+                "overrideFrustumBoundsOnActivate": true,
+                "visDataPath": "data/hd/env/vis/ui_frontend_act1_vignette.json",
+                "iblDataPath": "data/hd/env/ibl/act3_IW_over29_CUBEMAP.ibls"
+            }
+        },
+        {
+            "type": "Camera3DWidget", "name": "Act2Camera",
+            "fields": {
+                "yawDegrees": -90,
+                "pitchDegrees": -1.0,
+                "fovDegrees": 42,
+                "position": [ 80, 4, 110 ],
+                "activateOnMessage": "CharacterSelect:SelectAct:Act2",
+                "frustumBoundsMin": [ -60.0, 0.0, 60.0 ],
+                "frustumBoundsMax": [ 70.0, 10.0, 120.2 ],
+                "playerBoundsMin": [ 60.0, 0.0, 105.0 ],
+                "playerBoundsMax": [ 75.0, 10.0, 115.0 ],
+                "enableOutdoorShadow": true,
+                "overrideFrustumBoundsOnActivate": true,
+                "visDataPath": "data/hd/env/vis/ui_frontend_act2_vignette.json",
+                "iblDataPath": "data/hd/env/ibl/act3_IW_over29_CUBEMAP.ibls"
+            }
+        },
+        {
+            "type": "Camera3DWidget", "name": "Act3Camera",
+            "fields": {
+                "yawDegrees": -90,
+                "pitchDegrees": -1.0,
+                "fovDegrees": 42,
+                "position": [ 23, 4, -313.5 ],
+                "activateOnMessage": "CharacterSelect:SelectAct:Act3",
+                "frustumBoundsMin": [ -200.0, 0.0, -250 ],
+                "frustumBoundsMax": [ 60.0, 20.0, -350 ],
+                "playerBoundsMin": [ 0.0, 0.0, -307 ],
+                "playerBoundsMax": [ 17.0, 10.0, -320 ],
+                "enableOutdoorShadow": true,
+                "overrideFrustumBoundsOnActivate": true,
+                "visDataPath": "data/hd/env/vis/ui_frontend_act3_vignette.json",
+                "iblDataPath": "data/hd/env/ibl/act3_IW_over29_CUBEMAP.ibls"
+            }
+        },
+        {
+            "type": "Camera3DWidget", "name": "Act4Camera",
+            "fields": {
+                "yawDegrees": -90,
+                "pitchDegrees": -1.0,
+                "fovDegrees": 42,
+                "position": [ 30, 4, -789 ],
+                "activateOnMessage": "CharacterSelect:SelectAct:Act4",
+                "frustumBoundsMin": [ -100.0, 0.0, -700.0 ],
+                "frustumBoundsMax": [ 60.0, 50.0, -850.0 ],
+                "playerBoundsMin": [ 0.0, 0.0, -780.0 ],
+                "playerBoundsMax": [ 30.0, 15.0, -800.0],
+                "enableOutdoorShadow": true,
+                "overrideFrustumBoundsOnActivate": true,
+                "visDataPath": "data/hd/env/vis/ui_frontend_act4_vignette.json",
+                "iblDataPath": "data/hd/env/ibl/act3_IW_over29_CUBEMAP.ibls"
+            }
+        },
+        {
+            "type": "Camera3DWidget", "name": "Act5Camera",
+            "fields": {
+                "yawDegrees": -90,
+                "pitchDegrees": -1.0,
+                "fovDegrees": 42,
+                "position": [ 34, 4, -1258.5 ],
+                "activateOnMessage": "CharacterSelect:SelectAct:Act5",
+                "frustumBoundsMin": [ -60.0, -15.0, -1200.0 ],
+                "frustumBoundsMax": [ 30.0, 30.0, -1280.0 ],
+                "playerBoundsMin": [ 10.0, -2.0, -1250.0 ],
+                "playerBoundsMax": [ 30.0, 10.0, -1270.0 ],
+                "enableOutdoorShadow": true,
+                "overrideFrustumBoundsOnActivate": true,
+                "visDataPath": "data/hd/env/vis/ui_frontend_act5_vignette.json",
+                "iblDataPath": "data/hd/env/ibl/act3_IW_over29_CUBEMAP.ibls"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadAmazon",
+            "fields": {
+                "playerClass": "Amazon",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadSorceress",
+            "fields": {
+                "playerClass": "Sorceress",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadNecromancer",
+            "fields": {
+                "playerClass": "Necromancer",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadPaladin",
+            "fields": {
+                "playerClass": "Paladin",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadBarbarian",
+            "fields": {
+                "playerClass": "Barbarian",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadDruid",
+            "fields": {
+                "playerClass": "Druid",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "PreloadAssassin",
+            "fields": {
+                "playerClass": "Assassin",
+                "animation": "FrontendNeutral",
+                "animationSpeed": 0,
+                "captureInView": "$INT_MAX"
+            }
+        },
+
+        {
+            "type": "PlayerLoaderWidget", "name": "Player",
+            "fields": {
+                "position": [ 56.0, 0.18, 109.0 ],
+                "yawDegrees": 65,
+                "animation": "FrontendNeutral"
+            }
+        },
+        {
+            "type": "PlayerMoverWidget", "name": "Act1Player",
+            "fields": {
+                "position": [ 36, 0.5, 483.0 ],
+                "yawDegrees": 75,
+                "activateOnMessage": "CharacterSelect:SelectAct:Act1"
+            }
+        },
+        {
+            "type": "PlayerMoverWidget", "name": "Act2Player",
+            "fields": {
+                "position": [ 66, 0.5, 110.0 ],
+                "yawDegrees": 75,
+                "activateOnMessage": "CharacterSelect:SelectAct:Act2"
+            }
+        },
+        {
+            "type": "PlayerMoverWidget", "name": "Act3Player",
+            "fields": {
+                "position": [ 9, 0.5, -313.5 ],
+                "yawDegrees": 75,
+                "activateOnMessage": "CharacterSelect:SelectAct:Act3"
+            }
+        },
+        {
+            "type": "PlayerMoverWidget", "name": "Act4Player",
+            "fields": {
+                "position": [ 16, 0.5, -789 ],
+                "yawDegrees": 75,
+                "activateOnMessage": "CharacterSelect:SelectAct:Act4"
+            }
+        },
+        {
+            "type": "PlayerMoverWidget", "name": "Act5Player",
+            "fields": {
+                "position": [ 20.0, 0.5, -1258.5 ],
+                "yawDegrees": 75,
+                "activateOnMessage": "CharacterSelect:SelectAct:Act5"
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "OnlinePlaySettingsButton",
+            "fields": {
+                "anchor": { "x": 0.5 },
+                "rect": { "x": -366, "y": 2500 },
+                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Cog",
+                "focusIndicatorFilename": "Controller/HoverImages/OnlineGameplay_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "tooltipString": "@GameCreationHD",
+                "onClickMessage": "PanelManager:OpenPanel:OnlineGameSettingsPanel",
+                "hoveredFrame": 2,
+                "disabledFrame": 3,
+                "disabledTint": { "a": 1.0 },
+                "navigation": {
+                    "up": { "name": "QuickPlayButton" }
+                }
+            }
+		},
+		{
+			"type": "TextBoxWidget", "name": "ModTitle",
+			"fields": {
+                "anchor": {"x": 0.5 },
+				"rect": { "x": 400, "y": 50 },
+				"text": "D2R Reimagined",
+				"style": {
+					"fontColor": "$FontColorGoldYellow",
+					"pointSize": "$ExtraLargeFontSize",
+					"alignment": { "h": "right", "v": "top" }
+				}
+			}
+		},
+		{
+			"type": "TextBoxWidget", "name": "ModVersion",
+			"fields": {
+                "anchor": {"x": 0.5 },
+				"rect": { "x": 1090, "y": 110 },
+				"text": "",
+				"style": {
+					"fontColor": "$FontColorGoldYellow",
+					"pointSize": "$SmallFontSize",
+					"alignment": { "h": "right", "v": "top" }
+				}
+			}
+		},
+        {
+            "type": "disabled", "name": "ModInfo",
+            "fields": {
+                "anchor": { "x": 0.5 },
+                "rect": { "x": 800, "y": 255 },
+                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall_r",
+                "textString": "ModInfo",
+                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonSmall_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "onClickMessage": "PanelManager:OpenPanel:modinfo",
+                "text/style": "$StyleFEButtonText",
+                "pointSize": "$NormalFontSize",
+				"textColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "disabledTint": { "a": 1.0 },
+                "sound": "cursor_launch_game_hd",
+                "navigation": {
+                    "down": { "name": "OnlinePlaySettingsButton" },
+                    "left": { "panelBoundary": true },
+                    "right": { "name": "SecondaryContextButton" }
+                }
+            }
+        },
+        {
+            "type": "disabled", "name": "Divider2",
+            "fields": {
+            "anchor": {"x": 0.5},
+			"rect": { "x": 770, "y": 240 },
+			"filename": "FrontEnd/HD/Final/FrontEnd_Divider" }
+        },
+        {
+            "type": "disabled", "name": "Divider3",
+            "fields": {
+            "anchor": {"x": 0.5},
+			"rect": { "x": 770, "y": 440 },
+			"filename": "FrontEnd/HD/Final/FrontEnd_Divider" }
+        },
+        {
+            "type": "ButtonWidget", "name": "QuickPlayButton",
+            "fields": {
+                "anchor": { "x": 0.5 },
+                "rect": { "x": -710, "y": 1865 },
+                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonLarge",
+                "textString": "@PlayTab",
+                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonLarge_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "onClickMessage": "MainMenuHD:Play",
+                "text/style": "$StyleFEButtonText",
+                "pointSize": "$ExtraLargeFontSize",
+				"textColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "disabledTint": { "a": 1.0 },
+                "sound": "cursor_launch_game_hd",
+                "navigation": {
+                    "down": { "name": "OnlinePlaySettingsButton" },
+                    "left": { "panelBoundary": true },
+                    "right": { "name": "SecondaryContextButton" }
+                }
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "Divider",
+            "fields": {
+            "anchor": {"x": 0.5},
+			"rect": { "x": 770, "y": 145 },
+			"filename": "FrontEnd/HD/Final/FrontEnd_Divider" }
+        },
+        {
+            "type": "ButtonWidget", "name": "SecondaryContextButton",
+            "fields": {
+                "anchor": {"x": 0.5 },
+                "rect": { "x": 17, "y": 2500 },
+                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonLarge",
+                "onClickMessage": "",
+                "text/style": "$StyleFEButtonText",
+                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonLarge_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "pointSize": "$ExtraLargeFontSize",
+                "textColor": "$LightButtonTextColor",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "disabledTint": {"a": 1.0 },
+                "navigation": {
+                    "left": { "name": "QuickPlayButton" },
+                    "right": { "panelBoundary": true }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,222 @@
+{
+    "type": "VideoOptionsPanel", "name": "runesandgemsinfo",
+    "fields": {
+        "priority": 9003,
+        "rect": "$OptionsPanelRect",
+        "anchor": { "x": 0.5 },
+        "applySettingsImmediately": false
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "ScrollBarBackground",
+            "fields": {
+                "rect": "$OptionsScrollBarBackgroundRect",
+                "anchor": { "x": 1.0 },
+                "filename": "PauseMenu\\VerticalScroll"
+            },
+            "children": [
+                {
+                    "type": "ScrollControllerWidget", "name": "ScrollController",
+                    "fields": {
+                        "rect": "$OptionsScrollBarRect",
+                        "anchor": { "x": 1.0 },
+                        "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                        "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                        "barFilepath": "PauseMenu\\VerticalIndicator",
+                        "viewName": "ScrollView",
+                        "wheelScrollSound": "cursor_scroll_hd",
+                        "buttonScrollSound": "cursor_scroll_hd"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "ScrollViewWidget", "name": "ScrollView",
+            "fields": {
+                "fitToParent": true,
+                "scrollControllerName": "ScrollController"
+            },
+            "children": [
+                {
+                    "type": "TableWidget", "name": "OptionsTable",
+                    "fields": {
+                        "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
+                        "rowHeight": "$OptionsTableRowHeight"
+                    },
+                    "children": [
+                        {
+                            "type": "TableRowWidget", "name": "Rune Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Rune Upgrading",
+                                    "fields": {
+                                        "text": "Rune Upgrading / Downgrading",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Runes",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Runes",
+                                    "fields": {
+                                        "text": "2 of any rune for next tier (No gems needed)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Runes",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Runes",
+                                    "fields": {
+                                        "text": "1 of any rune by itself will downgrade the rune by 1 tier",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ScreenResolution",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "?" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetScreenResolution",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuScreenResolutionTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Gem Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Gem Upgrading",
+                                    "fields": {
+                                        "text": "Gem Upgrading",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Gem Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Gem Upgrading",
+                                    "fields": {
+                                        "text": "2 of Any Gem Will Upgrade it to the next Tier",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ScreenSpaceCalibration",
+                                    "fields": {
+                                        "filename": "FrontEnd/HD/Final/FrontEnd_ButtonSmall",
+                                        "textString": "@CalibrationText",
+                                        "onClickMessage": "PanelManager:OpenPanel:ScreenSpaceCalibrationPanel",
+                                        "textColor": "$LightButtonTextColor",
+                                        "text/style" : "$StyleFEButtonText",
+                                        "tooltipString": "@OptionsMenuScreenSpaceTooltip",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "sound": "cursor_select",
+                                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonSmall_Hover",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Gem Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Gem Upgrading",
+                                    "fields": {
+                                        "text": "1 of Any Gem -> 1 of the Gem 1 Tier Lower (YES ONE)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "ScreenSpaceCalibration",
+                                    "fields": {
+                                        "filename": "FrontEnd/HD/Final/FrontEnd_ButtonSmall",
+                                        "textString": "@CalibrationText",
+                                        "onClickMessage": "PanelManager:OpenPanel:ScreenSpaceCalibrationPanel",
+                                        "textColor": "$LightButtonTextColor",
+                                        "text/style" : "$StyleFEButtonText",
+                                        "tooltipString": "@OptionsMenuScreenSpaceTooltip",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "sound": "cursor_select",
+                                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonSmall_Hover",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
