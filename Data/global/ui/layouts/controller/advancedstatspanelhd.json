@@ -1,0 +1,144 @@
+{
+    "basedOn": "AdvancedStatsPanelHD.json",
+    "type": "AdvancedStatsPanel", "name": "AdvancedStatsPanel",
+    "fields": {
+        "rect": "$AdvancedStatsPanelRect",
+        "defaultWidget": "ScrollBar",
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "Background",
+            "fields": {
+                "filename": "Blank",
+                "rect": { "x": 12, "y": -346 },
+            }
+        },
+        // Character Info
+        /*
+        {
+            "type": "TextBoxWidget", "name": "CharacterName",
+            "fields": {
+                "rect": { "x": 265, "y": -386, "width": 2200, "height": 200 },
+                "style": {
+                    "alignment": { "h": "left", "v": "bottom" },
+                    "pointSize": "$HugeFontSize",
+                    "dropShadow": "$DefaultDropShadow",
+                },
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "FullClassInfo",
+            "fields": {
+                "rect": { "x": 272, "y": -134, "width": 2200, "height": 80 },
+                "style": {
+                    "alignment": { "h": "left", "v": "center" },
+                    "pointSize": "$LargeFontSize",
+                    "dropShadow": "$DefaultDropShadow",
+                },
+            }
+        },
+        // Experience
+        {
+            "type": "ProgressBarWidget", "name": "XpProgress",
+            "fields": {
+                "rect": { "x": 288, "y": -164, "width": 2201, "height": 25 },
+                "filename": "Controller/Panel/CharacterSheet/V2/ExpBar",
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "CombinedXP",
+            "fields": {
+                "rect": { "x": 276, "y": -134, "width": 2200, "height": 80 },
+                "style": {
+                    "pointSize": "$LargeFontSize",
+                    "alignment": { "h": "right", "v": "center" },
+                    "dropShadow": "$DefaultDropShadow",
+                },
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "Divider",
+            "fields": {
+                "rect": { "x": 69, "y": 120 },
+                "filename": "Controller\\Panel\\AdvancedCharacterSheet\\AdvancedCharacterSheet_Divider"
+            }
+        },
+        */
+        {
+            "type": "ClickCatcherWidget", "name": "ClickCatcher",
+            "fields": {
+                "rect": {"width": 875, "height": 1500}
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "ScrollBackground",
+            "fields": {
+                "rect": {"x": 1725, "y": 193},
+                "filename": "Controller\\Panel\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollBar"
+            }
+        },
+        {
+            "type": "ScrollControllerWidget", "name": "ScrollBar",
+            "fields": { 
+                "rect": { "x": 1725, "y": 202, "width": 36, "height": 954 },
+                "upArrowFilepath": "",
+                "downArrowFilepath": "",
+                "barFilepath": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollIndicator",
+                "viewName": "ListContainer",
+                "buttonScrollAmount": 90,
+                "focusIndicatorVisible": false,
+            }
+        },
+       /* {
+            "type": "TextBoxWidget", "name": "Title",
+            "fields": {
+                "text": "@AdvancedStats",
+                "rect": { "x": 71, "y": 31, "width": 640, "height": 85 },
+                "style": {
+                    "fontColor": "$FontColorGold",
+                    "pointSize": "$LargeFontSize",
+                    "alignment": { "h": "left", "v": "center" },
+                },
+            }
+        },
+        */
+        {
+            "type": "ListWidget", "name": "ListContainer",
+            "fields": {
+                "rect": { "x": 1061, "y": 20, "width": 670, "height": 1255},
+                "direction": "vertical",
+                "scrollControllerName": "ScrollBar",
+            },
+            "children": [
+                {
+                    "type": "ListItemWidget", "name": "OptionTemplate",
+                    "fields": {
+                        "rect": { "x": 0, "y": 10, "width": 670, "height": 60 }
+                    },
+                    "children": [
+                        {
+                            "type": "NineTileImageWidget", "name": "TextContainer",
+                            "fields": {
+                                "rect": { "x": 5, "y": 0, "width": 2563, "height": 104 },
+                                "filename": "Blank",
+                                "tileScale": 1.0
+                            }
+                        },
+                        {
+                          "type": "TextBoxWidget", "name": "StatText",
+                            "fields": {
+                                "rect": { "x": 20, "y": 0, "width": 630, "height": 50 },
+                                "style": {
+                                    "fontColor": "$FontColorGold",
+                                    "pointSize": "$MediumFontSize",
+                                    "alignment": { "h": "center", "v": "center" },
+                                    "options": { "lineWrap": true }
+                                }
+                            }
+                        },
+                    ]
+                }
+            ]
+        },
+    ]
+}

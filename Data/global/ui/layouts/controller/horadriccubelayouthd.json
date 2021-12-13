@@ -1,0 +1,56 @@
+{
+    "basedOn": "HoradricCubeLayoutHD.json",
+    "type": "HoradricCubePanel", "name": "HoradricCubeLayout",
+    "fields": {
+        "rect": "$ConsoleLeftPanelRect",
+        "defaultWidget": "grid",
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+            "fields": {
+                "rect": [ 0, 0, 0, 0 ],
+                "fitToParent": true
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "background",
+            "fields": {
+                "rect": { "x": -300, "y": 100 },
+                "filename": "Controller/Panel/HoradricCube/V2/HoradricCubeBG_Edit",
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "convert",
+            "fields": {
+                "rect": { "x": 450, "y": 1510 },
+                "filename": "PANEL\\Horadric_Cube\\TransmuteButton",
+                "hoveredFrame": 2,
+                "focusIndicatorFilename": "Controller/HoverImages/Transmute_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                    "up": { "name": "grid" },
+                },
+            },
+        },
+        {
+            "type": "InventoryGridWidget", "name": "grid",
+            "fields": {
+                "rect": { "x": -270, "y": 120 },
+                "cellCount": { "x": 16, "y": 13 },
+                "gemSocketFilename": "PANEL/gemsocket",
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                    "down": { "name": "convert" },
+                },
+            },
+        },
+        {
+            "type": "AnimatedImageWidget", "name": "flourish",
+            "fields": {
+                "rect": { "x":251, "y": 115 },
+            },
+        },
+    ]
+}

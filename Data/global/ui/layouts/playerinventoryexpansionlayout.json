@@ -1,0 +1,85 @@
+{
+    "basedOn": "PlayerInventoryOriginalLayout.json",
+    "type": "PlayerInventoryPanel", "name": "PlayerInventoryExpansionLayout",
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+        },
+        {
+            "type": "GridImageWidget", "name": "background",
+            "fields": {
+                "filename": "PANEL\\invchar6",
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "background_right_arm",
+            "fields": {
+                "rect": { "x": 15, "y": 22 },
+                "filename": "PANEL\\invchar6Tab",
+                "frame": 1,
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "background_left_arm",
+            "fields": {
+                "rect": { "x": 246, "y": 22 },
+                "filename": "PANEL\\invchar6Tab",
+                "frame": 0,
+            },
+        },
+        {
+            "type": "FocusableWidget", "name": "weaponswap_right_arm",
+            "fields": {
+                "rect": { "x": 20, "y": 23, "width": 56, "height": 24 },
+            },
+        },
+        {
+            "type": "FocusableWidget", "name": "weaponswap_left_arm",
+            "fields": {
+                "rect": { "x": 251, "y": 23, "width": 56, "height": 24 },
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_amount",
+        },
+        {
+            "type": "ButtonWidget", "name": "gold_button",
+        },
+        {
+            "type": "ButtonWidget", "name": "close",
+        },
+        {
+            "type": "InventoryGridWidget", "name": "grid",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_head",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_neck",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_torso",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_right_arm",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_left_arm",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_right_hand",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_left_hand",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_belt",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_feet",
+        },
+        {
+            "type": "InventorySlotWidget", "name": "slot_gloves",
+        },
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "basedOn": "BankOriginalLayoutHD.json",
+    "type": "BankPanel", "name": "BankOriginalLayout",
+    "fields": {
+        "priority": 0,
+        "rect": "$ConsoleLeftPanelRect",
+        "defaultWidget": "grid",
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+        },
+        {
+            "type": "ImageWidget", "name": "background",
+            "fields": {
+                "rect": { "x": -325, "y": 160 },
+                "filename": "Controller/Panel/Stash/V2/StashPanelBG_Edit",
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_max",
+            "fields": {
+                "rect": { "x": 314, "y": 1722, "width": 393, "height": 50 },
+                "style": "$StyleButtonLegend",
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_amount",
+            "fields": {
+                "rect": { "x": 389, "y": 1627, "width": 242, "height": 59 },
+                "style": "$StyleGoldAmount",
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "gold_withdraw",
+            "fields": {
+                "rect": { "x": 328, "y": 1624, "width":314, "height": 59 },
+                "filename": "PANEL/Inventory/Button",
+                "focusIndicatorFilename": "Controller/HoverImages/GoldButton_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                    "up": { "name": "grid" },
+                },
+            },
+        },
+        {
+            "type": "InventoryGridWidget", "name": "grid",
+            "fields": {
+                "rect": { "x": -295, "y": 273 },
+                "gemSocketFilename": "PANEL/gemsocket",
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                    "down": { "name": "gold_withdraw" },
+                },
+            },
+        },
+    ]
+}
