@@ -77,3 +77,16 @@ pxma	Physical Damage Max (Skill Only)
 pnms	Physical Damage Min (Skill Only) (256ths)
 pxms	Physical Damage Max (Skill Only) (256ths)
 mael	Elemental Damage Mastery
+mapi	Throwing Pierce Mastery
+manc	Throwing No Consume Mastery
+par9	The Param9 field value
+pa10	The Param10 field value
+pa11	The Param11 field value
+pa12	The Param12 field value
+ln91	par9 + (lvl - 1) * pa10
+dm91	((110 * lvl) * (pa10 - par9)) / (100 * (lvl + 6)) + par9
+ln21	pa11 + (lvl - 1) * pa12
+dm21	((110 * lvl) * (pa12 - pa11)) / (100 * (lvl + 6)) + pa11
+clc5	The calc5 field value
+clc6	The calc6 field value
+pst6	The passivecalc6 field value

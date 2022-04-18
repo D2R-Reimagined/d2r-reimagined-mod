@@ -45,6 +45,7 @@
                 "rect": { "x": 481, "y": 113, "width": 196, "height": 196 },
                 "cellSize": "$ItemCellSize",
                 "location": "head",
+                "gemSocketFilename": "PANEL\\gemsocket",
                 "backgroundFilename": "PANEL\\Inventory\\Inventory_Paperdoll_HeadArmor",
                 "isHireable": true,
             }
@@ -55,6 +56,7 @@
                 "rect": { "x": 483, "y": 348, "width": 196, "height": 294 },
                 "cellSize": "$ItemCellSize",
                 "location": "torso",
+                "gemSocketFilename": "PANEL\\gemsocket",
                 "backgroundFilename": "PANEL\\Inventory\\Inventory_Paperdoll_ChestArmor",
                 "isHireable": true,
             }
@@ -158,7 +160,7 @@
                     "fontFace": "Formal",
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         {
@@ -169,7 +171,7 @@
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         // Level
@@ -183,7 +185,7 @@
                     "pointSize": "$XMediumFontSize",
                     "dropShadow": "$DefaultDropShadow",
                     "alignment": { "h": "left" }
-                },
+                }
             }
         },
         // Experience
@@ -197,40 +199,40 @@
                 "hitMargin": { "top": 15, "bottom": 15 }
             }
         },
-       /* {
-            "type": "TextBoxWidget", "name": "NextLevelXP",
-            "fields": {
-                "rect": { "x": 789, "y": 912, "width": 250, "height": 50 },
-                "style": {
-                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$MediumFontSize",
-                    "alignment": { "h": "left", "v": "center" }
-                },
-            }
-        },
-        {
-            "type": "TextBoxWidget", "name": "ConnectorWord",
-            "fields": {
-                "rect": { "x": 748, "y": 912, "height": 50 },
-                "text": "@ItemStats1j",
-                "style": {
-                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$MediumFontSize",
-                    "alignment": { "h": "center", "v": "center" }
-                },
-            }
-        },
-        {
-            "type": "TextBoxWidget", "name": "CurrentXP",
-            "fields": {
-                "rect": { "x": 467, "y": 912, "width": 250, "height": 50 },
-                "style": {
-                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$MediumFontSize",
-                    "alignment": { "h": "right", "v": "center" }
-                },
-            }
-        },*/
+        /* {
+             "type": "TextBoxWidget", "name": "NextLevelXP",
+             "fields": {
+                 "rect": { "x": 789, "y": 912, "width": 250, "height": 50 },
+                 "style": {
+                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                     "pointSize": "$MediumPanelFontSize",
+                     "alignment": { "h": "left", "v": "center" }
+                 },
+             }
+         },
+         {
+             "type": "TextBoxWidget", "name": "ConnectorWord",
+             "fields": {
+                 "rect": { "x": 748, "y": 912, "height": 50 },
+                 "text": "@ItemStats1j",
+                 "style": {
+                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                     "pointSize": "$MediumPanelFontSize",
+                     "alignment": { "h": "center", "v": "center" }
+                 },
+             }
+         },
+         {
+             "type": "TextBoxWidget", "name": "CurrentXP",
+             "fields": {
+                 "rect": { "x": 467, "y": 912, "width": 250, "height": 50 },
+                 "style": {
+                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                     "pointSize": "$MediumPanelFontSize",
+                     "alignment": { "h": "right", "v": "center" }
+                 },
+             }
+         },*/
         // Base stats
         {
             "type": "TextBoxWidget", "name": "StrengthTitle",
@@ -243,7 +245,7 @@
                     "fontFace": "Formal",
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         {
@@ -254,7 +256,7 @@
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         {
@@ -267,7 +269,7 @@
                     "fontFace": "Formal",
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         {
@@ -278,7 +280,7 @@
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         {
@@ -291,19 +293,49 @@
                     "fontFace": "Formal",
                     "pointSize": "$SmallFontSize",
                     "alignment": { "h": "center", "v": "center" }
-                },
+                }
             }
         },
         {
-            "type": "TextBoxWidget", "name": "DamageStat",
+            "type": "Widget", "name": "Damage",
             "fields": {
-                "rect": { "x": 361, "y": 1269, "width": 187, "height": 59 },
-                "style": {
-                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
-                    "alignment": { "h": "center", "v": "center" }
+                "rect": { "x": 361, "y": 1269, "width": 187, "height": 59 }
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "DamageStat",
+                    "fields": {
+                        "rect": { "x": 0, "y": 0, "width": 237, "height": 59 },
+                        "style": {
+                            "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                            "pointSize": "$SmallPanelFontSize",
+                            "alignment": { "h": "center", "v": "center" }
+                        }
+                    }
                 },
-            }
+                {
+                    "type": "TextBoxWidget", "name": "DamageStatTop",
+                    "fields": {
+                        "rect": { "x": 0, "y": 0, "width": 237, "height": 59 },
+                        "style": {
+                            "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                            "pointSize": "$SmallPanelFontSize",
+                            "alignment": { "h": "center", "v": "top" }
+                        }
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "DamageStatBottom",
+                    "fields": {
+                        "rect": { "x": 0, "y": -1, "width": 237, "height": 59 },
+                        "style": {
+                            "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                            "pointSize": "$SmallPanelFontSize",
+                            "alignment": { "h": "center", "v": "bottom" }
+                        }
+                    }
+                },
+            ]
         },
         {
             "type": "TextBoxWidget", "name": "ArmorClassTitle",
@@ -432,7 +464,9 @@
             "fields": {
                 "rect": { "x": 1104, "y": 713 },
                 "filename": "PANEL\\Character_Sheet\\AdvancedStatsButton",
+                "hoveredFrame": 3,
                 "onClickMessage": "HirelingInventoryPanelMessage:ToggleAdvancedStats",
+                "pressLabelOffset": { "x": 0, "y": 2 },
                 "tooltipString": "@AdvancedStats"
             },
         },

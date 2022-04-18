@@ -165,7 +165,7 @@ skill_staminapercent	162		1	13																				1			maxstamina																
 skill_passive_staminapercent	163		1	12																				1			maxstamina																								0
 skill_concentration	164		1	12																																															0
 skill_enchant	165		1	12																																															0
-skill_pierce	166		1	12																																															0
+skill_pierce	166		1	12	16																																														0
 skill_conviction	167		1	12																																															0
 skill_chillingarmor	168		1	12																																															0
 skill_frenzy	169		1	12																																															0
@@ -184,8 +184,8 @@ fade	181	1		7														14	0	3																															0
 armor_override_percent	182	1	1	8														14	0																																0
 unused183	183																	14	0																																0
 unused184	184																	14	0																																0
-unused185	185																	14	0																																0
-unused186	186																	14	0																																0
+bonus_mindamage	185		1	12																8	0											1																			0
+bonus_maxdamage	186		1	12																8	0											1																			0
 unused187	187																	14	0																																0
 item_addskill_tab	188		1	3	6						1				11042	768		10	0	3	0	16															151	14		StrSklTabItem1	StrSklTabItem1										0
 unused189	189																	10	0																																0
@@ -204,9 +204,9 @@ item_skillongethit	201		1	7	16						1			2	190	256		21	0	7	0	16											damaged
 unused202	202																	21	0																																0
 unused203	203																	21	0																																0
 item_charged_skill	204		1	30							1			3	401	256		30	0	16	0	16															1	24		ModStre10d	ModStre10d										0
-unused205	205		1	30										3	401	256		30	0																																0
-unused206	206		1	30										3	401	256		30	0																																0
-unused207	207		1	30										3	401	256		30	0																																0
+item_noconsume	205		1	7											106	256				7	0											1					4	19		ModStr6j	ModStr6j									2	0
+passive_mastery_noconsume	206		1	9	16															8	0																														0
+passive_mastery_replenish_oncrit	206		1	9	16															8	0																														0
 unused208	208		1	30										3	401	256		30	0																																0
 unused209	209		1	30										3	401	256		30	0																																0
 unused210	210		1	30										3	401	256		30	0																																0
@@ -377,3 +377,4 @@ stacked_gem_emerald	374		0	16								1	0	0	1	0		8	0	8	0																56	19	0	S
 stacked_gem_skull	375		0	16								1	0	0	1	0		8	0	8	0																56	19	0	StackedGemSkull	StackedGemSkull										0
 stacked_gem_ruby	376		0	16								1	0	0	1	0		8	0	8	0																56	19	0	StackedGemRuby	StackedGemRuby										0
 heal_afterhit	377		1	7							1				30	101		3	0	7	0												domeleedamage	28	domissiledamage	28	16	1	1	healperhit	healperhit										0
+extra_bonespears	378		1	5										0		0		5	0	5	0																299	3	2	extraspear	extraspear										0
