@@ -61,6 +61,9 @@ Wirt's Leg + Tome of Town Portal -> Portal to The Secret Cow Level	1			0	28				2
 3 Ort Runes -> Thul Rune	1			100					2	"r09,qty=2"							r10																																																																																							0
 3 Perfect Gems (Any) + 1 Magic Item -> Re-rolled Magic Item	1			100					4	"any,mag"	"gem4,qty=3"						"usetype,mag"			100																																																																																				0
 3 Perfect Gems stack (Any) + 1 Magic Item -> Re-rolled Magic Item	1			100					4	"any,mag"	"gemy,qty=3"						"usetype,mag"			100																																																																																				0
+3 Perfect Gems stack (Any) + 1 Magic Item -> Re-rolled Magic Item	1			100	15	70	3		2	gemy	"cm3,mag"						useitem			100	item-qty	100		-3	-3																					"cm3,mag"		100																																																								0
+3 Perfect Gems stack (Any) + 1 Magic Item -> Re-rolled Magic Item	1			100	15	70	3		2	gemy	"cm2,mag"						useitem			100	item-qty	100		-3	-3																					"cm2,mag"		100																																																								0
+3 Perfect Gems stack (Any) + 1 Magic Item -> Re-rolled Magic Item	1			100	15	70	3		2	gemy	"cm1,mag"						useitem			100	item-qty	100		-3	-3																					"cm1,mag"		100																																																								0
 6 Perfect Skulls + 1 Rare Item -> 1 Low Quality Rare Item	1			0					7	"any,rar"	"skz,qty=6"						"usetype,rar"		40	40																																																																																				0
 1 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> 1 High Quality Rare Item	1			0					3	"any,rar"	skz	The Stone of Jordan					"usetype,rar"		66	66																																																																																				0
 3 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> Add 1 Socket to Rare Item	1			0					5	"any,rar,nos"	"skz,qty=3"	The Stone of Jordan					"useitem,sock=1"																																																																																							0
@@ -202,6 +205,8 @@ Rune2 downgrade	1			100					1	r02							r01																																					
 3 socket punch - rare shield	1			100					4	"shld,rar"	"jew,qty=3"						useitem				sock			3	3																																																																															0
 3 socket punch - unique body armor	1			100					4	"tors,uni"	"jew,qty=3"						useitem				sock			3	3																																																																															0
 3 socket punch - set body armor	1			100					4	"tors,set"	"jew,qty=3"						useitem				sock			3	3																																																																															0
+3 socket punch - unique helm	1			100					4	"helm,uni"	"jew,qty=3"						useitem				sock			3	3																																																																															0
+3 socket punch - set helm	1			100					4	"helm,set"	"jew,qty=3"						useitem				sock			3	3																																																																															0
 4 socket punch - normal body armor	1			100					5	"tors,nor"	"jew,qty=4"						useitem				sock			4	4																																																																															0
 4 socket punch - normal helm	1			100					5	"helm,nor"	"jew,qty=4"						useitem				sock			4	4																																																																															0
 4 socket punch - normal shield	1			100					5	"shld,nor"	"jew,qty=4"						useitem				sock			4	4																																																																															0
@@ -211,6 +216,10 @@ Rune2 downgrade	1			100					1	r02							r01																																					
 4 socket punch - rare body armor	1			100					5	"tors,rar"	"jew,qty=4"						useitem				sock			4	4																																																																															0
 4 socket punch - rare helm	1			100					5	"helm,rar"	"jew,qty=4"						useitem				sock			4	4																																																																															0
 4 socket punch - rare shield	1			100					5	"shld,rar"	"jew,qty=4"						useitem				sock			4	4																																																																															0
+4 socket punch - unique body armor	1			100					5	"tors,uni"	"jew,qty=4"						useitem				sock			4	4																																																																															0
+4 socket punch - set body armor	1			100					5	"tors,set"	"jew,qty=4"						useitem				sock			4	4																																																																															0
+4 socket punch - unique helm	1			100					5	"helm,uni"	"jew,qty=4"						useitem				sock			4	4																																																																															0
+4 socket punch - set helm	1			100					5	"helm,set"	"jew,qty=4"						useitem				sock			4	4																																																																															0
 5 socket punch - normal body armor	1			100					6	"tors,nor"	"jew,qty=5"						useitem				sock			5	5																																																																															0
 5 socket punch - magic body armor	1			100					6	"tors,mag"	"jew,qty=5"						useitem				sock			5	5																																																																															0
 5 socket punch - rare body armor	1			100					6	"tors, rar"	"jew,qty=5"						useitem				sock			5	5																																																																															0
@@ -224,9 +233,13 @@ Rune2 downgrade	1			100					1	r02							r01																																					
 5 socket punch - normal weapon	1			100					6	"weap,nor"	"jew,qty=5"						useitem				sock			5	5																																																																															0
 5 socket punch - magic weapon	1			100					6	"weap,mag"	"jew,qty=5"						useitem				sock			5	5																																																																															0
 5 socket punch - rare weapon	1			100					6	"weap,rar"	"jew,qty=5"						useitem				sock			5	5																																																																															0
+5 socket punch - unique weapon	1			100					6	"weap,uni"	"jew,qty=5"						useitem				sock			5	5																																																																															0
+5 socket punch - set weapon	1			100					6	"weap,set"	"jew,qty=5"						useitem				sock			5	5																																																																															0
 6 socket punch - normal weapon	1			100					7	"weap,nor"	"jew,qty=6"						useitem				sock			6	6																																																																															0
 6 socket punch - magic weapon	1			100					7	"weap,mag"	"jew,qty=6"						useitem				sock			6	6																																																																															0
 6 socket punch - rare weapon	1			100					7	"weap,rar"	"jew,qty=6"						useitem				sock			6	6																																																																															0
+6 socket punch - unique weapon	1			100					7	"weap,uni"	"jew,qty=6"						useitem				sock			6	6																																																																															0
+6 socket punch - set weapon	1			100					7	"weap,set"	"jew,qty=6"						useitem				sock			6	6																																																																															0
 3 chipped gems + 1 magic weapon -> socketed, magic weapon	1			0					4	"weap,mag"	"gem0,qty=3"						"usetype,mag"	25		50	sock			1	2																																																																															0
 Replenish Unique Arrows	1			100					2	Replenishing Quiver	hpot						"useitem,rep,qty=500"		100		rep-quant	100	100																																																																																	0
 Replenishing Quiver	1			100					3	"aqv,any"	gsv	r03					Replenishing Quiver		100		rep-quant	100	100																																																																																	0
