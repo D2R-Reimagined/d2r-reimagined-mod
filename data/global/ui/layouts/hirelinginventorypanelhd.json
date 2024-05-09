@@ -3,11 +3,35 @@
     "fields": {
         "rect": "$LeftPanelRect",
         "anchor": "$LeftPanelAnchor",
-        "bowBackgroundFilename": "PANEL\\Hireling\\HireablePanel\\Hireables_Paperdoll_Bow",
-        "spearBackgroundFilename": "PANEL\\Hireling\\HireablePanel\\Hireables_Paperdoll_Spear",
-        "longswordBackgroundFilename": "PANEL\\Hireling\\HireablePanel\\Hireables_Paperdoll_LongSword",
-        "shieldBackgroundFilename": "PANEL\\Hireling\\HireablePanel\\Hireables_Paperdoll_Shield",
-        "twoHandSwordBackgroundFilename": "PANEL\\Hireling\\HireablePanel\\Hireables_Paperdoll_2HSword"
+        "slotBackgroundFilename": "PANEL\\Hireling\\HireablePanel\\Hireables_Paperdoll",
+        // limited to 20 overrides
+        "slotBackgroundOverrides": [
+            {
+                "monsterClass": 271,
+                "rightBackgroundFrame": 0,
+                "leftBackgroundFrame": 0
+            },
+            {
+                "monsterClass": 338,
+                "rightBackgroundFrame": 1,
+                "leftBackgroundFrame": 1
+            },
+            {
+                "monsterClass": 359,
+                "rightBackgroundFrame": 2,
+                "leftBackgroundFrame": 3
+            },
+            {
+                "monsterClass": 560,
+                "rightBackgroundFrame": 4,
+                "leftBackgroundFrame": 4
+            },
+            {
+                "monsterClass": 561,
+                "rightBackgroundFrame": 2,
+                "leftBackgroundFrame": 2
+            }
+        ]
     },
     "children": [
         {
@@ -158,7 +182,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -169,7 +193,7 @@
                 "rect": { "x": 361, "y": 1020, "width": 187, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -182,7 +206,7 @@
                 "text": "@strchrlvl",
                 "style": {
                     "fontColor": "$FontColorWhite",
-                    "pointSize": "$XMediumFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "dropShadow": "$DefaultDropShadow",
                     "alignment": { "h": "left" }
                 }
@@ -192,47 +216,47 @@
         {
             "type": "ExpBarWidget", "name": "XpProgress",
             "fields": {
-                "rect": { "x": 139, "y": 913, "width": 888, "height": 10 } ,
+                "rect": { "x": 139, "y": 937, "width": 888, "height": 10 } ,
                 "filename": "PANEL\\Hireling\\Hireling_ExpBar",
                 "frame": 0,
                 "isHireling": true,
                 "hitMargin": { "top": 15, "bottom": 15 }
             }
         },
-        /* {
+        {
              "type": "TextBoxWidget", "name": "NextLevelXP",
              "fields": {
-                 "rect": { "x": 789, "y": 912, "width": 250, "height": 50 },
+                 "rect": { "x": 839, "y": 937, "width": 250, "height": 50 },
                  "style": {
                      "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                     "pointSize": "$MediumPanelFontSize",
+                     "pointSize": "$SmallPanelFontSize",
                      "alignment": { "h": "left", "v": "center" }
-                 },
+                 }
              }
          },
          {
              "type": "TextBoxWidget", "name": "ConnectorWord",
              "fields": {
-                 "rect": { "x": 748, "y": 912, "height": 50 },
+                 "rect": { "x": 798, "y": 937, "height": 50 },
                  "text": "@ItemStats1j",
                  "style": {
                      "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                     "pointSize": "$MediumPanelFontSize",
+                     "pointSize": "$SmallPanelFontSize",
                      "alignment": { "h": "center", "v": "center" }
-                 },
+                 }
              }
          },
          {
              "type": "TextBoxWidget", "name": "CurrentXP",
              "fields": {
-                 "rect": { "x": 467, "y": 912, "width": 250, "height": 50 },
+                 "rect": { "x": 517, "y": 937, "width": 250, "height": 50 },
                  "style": {
                      "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                     "pointSize": "$MediumPanelFontSize",
+                     "pointSize": "$SmallPanelFontSize",
                      "alignment": { "h": "right", "v": "center" }
-                 },
+                 }
              }
-         },*/
+         },
         // Base stats
         {
             "type": "TextBoxWidget", "name": "StrengthTitle",
@@ -243,7 +267,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -254,7 +278,7 @@
                 "rect": { "x": 361, "y": 1102, "width": 187, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -267,7 +291,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -278,7 +302,7 @@
                 "rect": { "x": 361, "y": 1186, "width": 187, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -291,7 +315,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -345,7 +369,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -356,7 +380,7 @@
                 "rect": { "x": 361, "y": 1353, "width": 187, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -370,7 +394,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -381,7 +405,7 @@
                 "rect": { "x": 938, "y": 1103, "width": 113, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -394,7 +418,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -405,7 +429,7 @@
                 "rect": { "x": 938, "y": 1184, "width": 113, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -418,7 +442,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -429,7 +453,7 @@
                 "rect": { "x": 938, "y": 1269, "width": 113, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -442,7 +466,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -453,7 +477,7 @@
                 "rect": { "x": 938, "y": 1351, "width": 113, "height": 59 },
                 "style": {
                     "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
