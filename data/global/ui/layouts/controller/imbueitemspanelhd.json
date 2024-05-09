@@ -1,0 +1,77 @@
+{
+    "basedOn": "ImbueItemsPanelHD.json",
+    "type": "ImbueItemsPanel", "name": "ImbueItemsPanel",
+    "fields": {
+        "rect": "$ConsoleLeftPanelRect",
+        "defaultWidget": "ItemDropRegion",
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "ClickCatcher",
+            "fields": {
+                "rect": "$PanelClickCatcherRect"
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "Background",
+            "fields": {
+                "filename": "",
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "UpgradeModeBackground",
+            "fields": {
+                "filename": "Controller/panel/ImbueItem/V2/ImbueItem_Center",
+                "rect": { "x": 265, "y": 268 }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "TopText",
+            "fields": {
+                "rect": { "x": 295, "y":295, "width": 700, "height": 133 },
+                "style": {
+                    "fontColor": "$DescriptionTextColor",
+                    "pointSize": "$MediumFontSize",
+                    "spacing": "$ReducedSpacing",
+                    "alignment": { "h": "center", "v": "center" }
+                },
+            }
+        },
+        {
+            "type": "ImbueSocketWidget", "name": "ItemDropRegion",
+            "fields": {
+                "rect": { "x": 490, "y": 491, "width": 312, "height": 425 },
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                },
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "AcceptModeButton",
+            "fields": {
+                "rect": { "x": 587, "y": 992 },
+                "filename": "PANEL\\Horadric_Cube\\TransmuteButton",
+                "hoveredFrame": 2,
+                "focusIndicatorFilename": "Controller/HoverImages/Transmute_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "tooltipString": "@KeyAccept",
+                "onClickMessage": "ImbueItemPanelMessage:Confirm",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "ConfirmWithText",
+            "fields": {
+                "filename": "FrontEnd/HD/Final/FrontEnd_ButtonMed",
+                "hoveredFrame": 3,
+                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
+                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "rect": { "x": 410, "y": 989 },
+                "textString": "@Upgrade",
+                "pointSize": "$MediumLargeFontSize",
+                "textColor" : "$LightButtonTextColor",
+                "text/style" : "$StyleFEButtonText",
+                "onClickMessage": "ImbueItemPanelMessage:Confirm",
+            }
+        },
+    ]
+}

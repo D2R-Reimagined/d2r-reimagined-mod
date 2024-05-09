@@ -1,7 +1,6 @@
 {
     "basedOn": "Controller/BankOriginalLayoutHD.json",
     "type": "BankPanel", "name": "BankExpansionLayout",
-    "priority": -2,
     "children": [
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
@@ -9,62 +8,121 @@
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "rect": { "x": -325, "y": 160 },
-                "filename": "Controller/Panel/Stash/V2/StashPanelBG_Edit"
+                "filename": "PANEL\\Stash\\StashPanel_BG",
             },
         },
         {
-            "type": "TextBoxWidget", "name": "gold_max",
-            "fields": {
-                "rect": { "x": 314, "y": 1722, "width": 393, "height": 50 },
-            },
+            "type": "ImageWidget", "name": "LeftHinge",
         },
         {
             "type": "TextBoxWidget", "name": "gold_amount",
             "fields": {
-                "rect": { "x": 389, "y": 1627, "width": 250, "height": 59 },
-                "style": "$StyleGoldAmount",
+                "rect": { "x": 482, "y": 1305 },
             },
         },
         {
             "type": "ButtonWidget", "name": "gold_withdraw",
             "fields": {
-                "rect": { "x": 328, "y": 1624, "width": 304, "height": 59 },
-                "focusIndicatorFilename": "Controller/HoverImages/GoldButton_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "rect": { "x": 427, "y": 1304 },
             },
+        },
+        // To Recipes panel
+        {
+            "type": "ButtonWidget", "name": "Recipes",
+            "fields": {
+                "rect": { "x": 1108, "y": 711 },
+                "filename": "PANEL\\Character_Sheet\\AdvancedStatsButton",
+                "hoveredFrame": 3,
+                "onClickMessage": "PanelManager:TogglePanel:RecipesPanel",
+                "pressLabelOffset": { "x": 0, "y": 2 },
+                "tooltipString": "Recipes"
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "close",
         },
         {
             "type": "InventoryGridWidget", "name": "grid",
             "fields": {
-                "rect": { "x": -295, "y": 273 },
-                "cellCount": { "x": 16, "y": 13 },
+                "rect": { "x": 91, "y": 235 },
+                "cellCount": { "x": 10, "y": 10 },
             },
         },
         {
             "type": "TabBarWidget", "name": "BankTabs",
             "fields": {
-                "rect": { "x": -30, "y": 60 },
+                "rect": { "x": 82, "y": 164 },
                 "tabCount": 4,
-                "filename": "Controller/Panel/Stash/V2/StashTabs",
-                "inactiveFrames": [ 1, 1, 1, 1 ],
-                "activeFrames": [ 0, 0, 0, 0 ],
-                "textStrings": [ "@personal", "@shared", "@shared", "@shared" ],
-                "textStyle": { "pointSize": "$MediumFontSize" },
+                "filename": "PANEL\\stash\\Stash_Tabs",
+                "inactiveFrames": [ 0, 0, 0, 0 ],
+                "activeFrames": [ 1, 1, 1, 1],
+                "disabledFrames": [-1, 0, 0, 0],
+                "textStrings": [ "@personal", "@shared", "@shared", "@shared"],
+                "textStyle": { "pointSize": "$SmallPanelFontSize" },
                 "focusIndicatorFilename": "Controller/HoverImages/StashTab_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": -3 },
+                "focusIndicatorOffset": { "x": 0, "y": -6 },
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
-                "tabSize": { "x": 269, "y": 120 },
-                "tabPadding": "$PanelTabPadding",
+                "tabSize": { "x": 249, "y": 75 },
+                "tabPadding": { "x": 0, "y": 0 },
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab",
-                "tabLeftIndicatorPosition": "$HalfPanelLeftTabButtonPromptPosition",
-                "tabRightIndicatorPosition": "$HalfPanelRightTabButtonPromptPosition",
+                "tabLeftIndicatorPosition": { "x": -42, "y": -2 },
+                "tabRightIndicatorPosition": { "x": 1035, "y": -2 },
                 "focusOnMouseOver": true,
             }
         },
         {
-            "type": "TextBoxWidget", "name": "DisabledInfo",
+            "type": "TabBarWidget", "name": "PreviousLadderSeasonBankTabs",
+            "fields": {
+                "rect": { "x": 82, "y": 164 },
+                "tabCount": 3,
+                "filename": "PANEL\\stash\\Stash_Tabs",
+                "inactiveFrames": [ 3, 3, 3 ],
+                "activeFrames": [ 2, 2, 2 ],
+                "disabledFrames": [ 3, 3, 3 ],
+                "textStrings": [ "@shared", "@shared", "@shared"],
+                "textStyle": { "pointSize": "$SmallPanelFontSize" },
+                "activeTextColor": "$TabsActiveTextColor",
+                "inactiveTextColor": "$TabsInactiveTextColor",
+                "tabSize": { "x": 249, "y": 75 },
+                "tabPadding": { "x": 0, "y": 0 },
+                "onSwitchTabMessage": "BankPanelMessage:SelectTab",
+            }
+        },
+        {
+            "type": "Widget", "name": "PreviousSeasonToggleDisplay",
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "ShowPreviousLadderText",
+                    "fields": {
+                        "text": "@oldStash",
+                        "rect": { "x": 950, "y": 93 },
+                        "style": {
+                            "fontColor": "$PanelTitleColor",
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "v": "center", "h": "right" },
+                            "spacing" : "$MinimumSpacing",
+                            "dropShadow": "$DefaultDropShadow"
+                        }
+                    }
+                },
+                {
+                    "type": "ToggleButtonWidget", "name": "ShowPreviousLadderSeasonToggle",
+                    "fields": {
+                        "rect": { "x": 958, "y": 65 },
+                        "filename": "Lobby\\CreateGame\\CreateGame_AdvancedCheckbox",
+                        "untoggledFrame": 0,
+                        "untoggledPressedFrame": 1,
+                        "untoggledHoveredFrame": 3,
+                        "untoggledDisabledFrame": 2,
+                        "toggledFrame": 4,
+                        "toggledPressedFrame": 5,
+                        "toggledHoveredFrame": 6,
+                        "onClickMessage": "BankPanelMessage:TogglePreviousSeasonTabs",
+                        "tooltipString": "@SharedStashPreviousSeasonToggleTooltip",
+                    }
+                }
+            ]
         }
     ]
 }

@@ -6,7 +6,7 @@
     "LeftPanelAnchor": { "x": 0.5, "y": 0.397 },
     "RightPanelAnchor": { "x": 0.5, "y": 0.397 },
     // In-game panel rects.
-    "LeftPanelRect": { "x": 200, "y": -707, "width": 1093, "height": 1611 },
+    "LeftPanelRect": { "x": -1473, "y": -683, "width": 1093, "height": 1611 },
     "RightPanelRect": { "x": -1293, "y": -707, "width": 1093, "height": 1611 },
     "PanelClickCatcherRect": { "x": 0, "y": 45, "width": 1093, "height": 1495 },
     "ButtonLegendRect": { "x": 0, "y": 1659, "width": 1164, "height": 106 },
@@ -14,15 +14,14 @@
     "PanelTabPadding": { "x": 0, "y": 0 },
     "ScrollSpeechWidth": 900,
     "ScrollSpeechBorderWidth": 990,
-    "ScrollSpeechOffset": -500, // This is negative and half of the width; Used as the horizontal offset.
-
+    "ScrollSpeechOffset": -500,
     // Speech scroll speed
     "ScrollSpeechSpeed": -0.675,
 
     // temporary until all panels on console are converted
-    "ConsoleLeftPanelRect": { "x": -1366, "y": -582, "width": 1305, "height": 1421 },
-    "ConsoleRightPanelRect": { "x": -8, "y": -608, "width": 1408, "height": 1486 },
-    "ConsoleCenterPanelRect": { "x": -896, "y": -585, "width": 1793, "height": 1416 },
+    "ConsoleLeftPanelRect": { "x": -1473, "y": -683, "width": 1305, "height": 1421 },
+    "ConsoleRightPanelRect": { "x": -8, "y": -683, "width": 1408, "height": 1486 },
+    "ConsoleCenterPanelRect": { "x": -896, "y": -683, "width": 0, "height": 0 },
     "PanelTitleRect": { "x": 115, "y": 168, "width": 943, "height": 97 },
     "HalfPanelLeftTabButtonPromptPosition": { "x": -42, "y": -2 },
     "HalfPanelRightTabButtonPromptPosition": { "x": 1135, "y": -2 },
@@ -63,9 +62,6 @@
         "spacing": {"leading":0.9, "kerning":0.95}
     },
 
-    // HirablesPanel
-    "SecondSetIconOffset": { "x": 175 },
-
     // SidePanel
     "LeftHingeSprite": "",
     "RightHingeSprite": "",
@@ -82,15 +78,55 @@
     },
     "SkillHotkeyTextRect": { "x": 66, "y": 116 },
 
+    "MonsterTextStyle": {
+        "fontColor": "$FontColorDarkGrayGold",
+        "pointSize": 40,
+        "alignment": { "h": "left" },
+        "dropShadow": {
+            "shadowColor": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 255
+            },
+            "offset": {
+                "x": 4,
+                "y": 4
+            }
+        }
+    },
+
     // Handheld resized stuff
-    "ControllerOverlayRect": { "x": -1440, "y": 100, "width": 2880, "height": 1763 },
-    "QuestLogPanelOriginalRect": { "x": -890, "y": -583, "width": 1795, "height": 1415, },
-    "CharacterStatsPanelRect": { "x": -1373, "y": -583, "width": 2740, "height": 1416 },
-    "PauseLayoutRect": { "x": -896, "y":273 },
-    "QuestLogSpeechPanelRect": { "x": 180, "y": 993, "width": 1442, "height": 378 },
+    "ControllerOverlayRect": { "x": -1040, "y": 100, "width": 2880, "height": 1763 },
+    "QuestLogPanelOriginalRect": { "x": -1673, "y": -683, "width": 1000, "height": 1416 }, //shifted like charstats
+    "CharacterStatsPanelRect": { "x": -1673, "y": -683, "width": 2740, "height": 1416 }, //shifted up for regular stats panel
+    "PauseLayoutRect": { "x": -896, "y":150 }, //changed scooched up
+    "QuestLogSpeechPanelRect": { "x": 120, "y": 993, "width": 1000, "height": 254 }, //smaller to fit in better ui
     "SettingsPanelRect": { "y": 5 },
     "OptionsPanelRect": { "x": -865, "y": 400, "width": 1730, "height": 1284 },
     "MessageLogPanelRect": { "x": -887, "y": 280, "width": 1771, "height": 1400 },
-    "UISwitcherRect": { "x": -1440, "y": 100, "width": 2800, "height": 1600 },
-    "AdvancedStatsPanelRect": { "x": -1386, "y": -237 },
+    "UISwitcherRect": { "x": -1152, "y": 0, "width": 1800, "height": 1600, "scale":0.8}, //changes the position of the LR button prompts on the top panel switcher thingy in pause menu
+    "AdvancedStatsPanelRect": { "x": -550, "y": -683 }, //scooch it over
 }
+
+
+//_profilehd.json - extensive
+//hudpanelhd.json - extensive
+//characterstatspanel - copy from regular, adjust position in profilehd
+//questlogpanelexpansionhd.json - copy from regular maybe adjust values
+//questlogpaneloriginalhd.json - copy from regular maybe adjust values
+//questlogspeechpanelhd.json - adjust values
+//controlleroverlayhd.json - many changes, top tab, button legend
+//advancedstatspanelhd.json - copy from regular, adjust pos in profilehd
+//playerinventoryexpansionlayouthd - copy from regular
+//playerinventoryoriginallayouthd - copy from regular, change rect
+//horadriccubelayouthd - literally just copy paste all the stuff from your cube mod.
+//skilltreepanelhd.json - extensive changes, also new sprites for consolecenterpanel and skilltreeextra
+//hirelinginventorypanel.json - copy paste from regular
+//bankoriginallayouthd.json - copy most except for some stuff at the top
+//bankexpansionlayouthd.json - copy most except for top, gotta add in the tab indicator positions in banktabs
+//hudmonsterhealthhd.json - in controller, extensive changes
+//hudmonsterhealthhd.json - in controller/pc, just change font size
+//imbueitemspanelhd.json - delete bg image
+//waypointspaneloriginalhd.json - copy paste in, get the button prompts sorted
+//waypointspanelexpansionhd.json - copy paste in.

@@ -1,0 +1,51 @@
+{
+    "basedOn": "Controller/HUDMonsterHealthHD.json",
+    "type": "MonsterHealthPanel",
+    "name": "HUDMonsterHealth",
+    "children": [
+        {
+            "type": "Widget", "name": "ScreenAnchored",
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "Name"
+                },
+                {
+                    "type": "TextBoxWidget", "name": "Unique"
+                },
+                {
+                    "type": "TextBoxWidget", "name": "Additional"
+                }
+            ]
+        },
+        {
+            "type": "Widget", "name": "TargetAttached",
+            "children": [
+                {
+                    "type": "GrowableImageWidget", "name": "UniqueMonsterBackground",
+                    "children": [
+                        {
+                            "type": "ImageWidget",
+                            "name": "BottomCap"
+                        }
+                    ]
+                },
+                {
+                    "type": "GrowableImageWidget", "name": "NormalMonsterBackground"
+                },
+                {
+                    "type": "HealthBarWidget", "name": "Health",
+                    "children": [
+                        {
+                            "type": "TextBoxWidget", "name": "Name",
+                            "fields": {
+                                "style": {
+                                    "pointSize": "$MediumFontSize"
+                                }
+                            }
+                        },
+                    ]
+                },
+            ]
+        }
+    ]
+}
