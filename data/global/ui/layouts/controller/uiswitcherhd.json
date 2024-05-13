@@ -1,0 +1,50 @@
+{
+    "type": "UISwitcherPanel", "name": "UISwitcher",
+    "fields": {
+        // The in-game panels are all 0 priority or higher, so this keeps the overlay underneath them.
+        "priority": -1,
+        "panels": [ "party", "quest_log", "character", "inventory", "pause", "skills_tree", "hireling_inventory" ],
+        "interruptablePanels": [ "stash", "horadric_cube", "vendor", "imbue", "trade", "waypoints", "scroll_of_inifuss" ],
+        "rememberLastPanel": false,
+        "fitToParent": true,
+    },
+    "children": [
+        {
+            "type": "Widget", "name": "Anchor",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 0.0 },
+                "rect": "$UISwitcherRect",
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "CycleLeftIndicator",
+                    "fields": {
+                        "rect": { "x":-8, "y": 42 },
+                        "text": "\uE027",
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "CycleRightIndicator",
+                    "fields": {
+                        "rect": { "x": 2793, "y": 42 },
+                        "text": "\uE028",
+                    }
+                },
+            ]
+        },
+        {
+            "type": "ImageWidget", "name": "AgeDescriptorImage",
+            "fields": {
+                "rect": { "x": 22, "y": 58 },
+                "filename": "PauseMenu\\descriptor-18",
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "ViolenceDescriptorImage",
+            "fields": {
+                "rect": { "x": 24, "y": 314 },
+                "filename": "PauseMenu\\descriptor-violence",
+            }
+        },
+    ]
+}

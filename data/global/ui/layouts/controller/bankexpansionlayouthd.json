@@ -1,70 +1,97 @@
 {
-    "basedOn": "Controller/BankOriginalLayoutHD.json",
     "type": "BankPanel", "name": "BankExpansionLayout",
-    "priority": -2,
+    "fields": {
+        "priority": 0,
+        "anchor": "$LeftPanelAnchor",
+        "rect": { "x": -1920, "y": -502, "width": 0, "height": 0 },
+    },
     "children": [
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
+            "fields": {
+                "rect": "$PanelClickCatcherRect"
+            },
         },
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "rect": { "x": -325, "y": 160 },
-                "filename": "Controller/Panel/Stash/V2/StashPanelBG_Edit"
-            },
+                "filename": "PANEL\\Stash\\StashPanel_BG2",
+                "rect": { "x": 0, "y": -210 }
+            }
         },
         {
-            "type": "TextBoxWidget", "name": "gold_max",
+            "type": "ImageWidget", "name": "LeftHinge",
             "fields": {
-                "rect": { "x": 314, "y": 1722, "width": 393, "height": 50 },
-            },
+                "rect": "$LeftHingeRect",
+                "filename": "$LeftHingeSprite"
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "title",
+            "fields": {
+                "rect": { "x": 877, "y": -112 },
+                "style": "$StyleTitleBlock",
+                "text": "@stash"
+            }
         },
         {
             "type": "TextBoxWidget", "name": "gold_amount",
             "fields": {
-                "rect": { "x": 389, "y": 1627, "width": 250, "height": 59 },
-                "style": "$StyleGoldAmount",
-            },
+                "rect": { "x": 775, "y": 1380 },
+                "style": "$StyleGoldAmount"
+            }
         },
         {
             "type": "ButtonWidget", "name": "gold_withdraw",
             "fields": {
-                "rect": { "x": 328, "y": 1624, "width": 304, "height": 59 },
-                "focusIndicatorFilename": "Controller/HoverImages/GoldButton_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                "rect": { "x": 715, "y": 1382 },
+                "filename": "PANEL\\GoldButton",
+                "hoveredFrame": 3,
+                "tooltipString": "@strGoldWithdraw",
+                "onClickMessage": "BankPanelMessage:Withdraw"
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "close",
+            "fields": {
+                "rect": { "x": 1675, "y": -210 },
+                "filename": "PANEL\\closebtn_4x",
+                "hoveredFrame": 3,
+                "tooltipString": "@strClose",
+                "sound": "cursor_close_window_hd",
+                "onClickMessage": "BankPanelMessage:Close",
             },
+            
         },
         {
             "type": "InventoryGridWidget", "name": "grid",
             "fields": {
-                "rect": { "x": -295, "y": 273 },
+                "rect": { "x": 91, "y": 25 },
                 "cellCount": { "x": 16, "y": 13 },
-            },
+                "cellSize": "$ItemCellSize",
+                "gemSocketFilename": "PANEL\\gemsocket"
+            }
         },
         {
             "type": "TabBarWidget", "name": "BankTabs",
             "fields": {
-                "rect": { "x": -30, "y": 60 },
-                "tabCount": 4,
-                "filename": "Controller/Panel/Stash/V2/StashTabs",
-                "inactiveFrames": [ 1, 1, 1, 1 ],
-                "activeFrames": [ 0, 0, 0, 0 ],
-                "textStrings": [ "@personal", "@shared", "@shared", "@shared" ],
-                "textStyle": { "pointSize": "$MediumFontSize" },
-                "focusIndicatorFilename": "Controller/HoverImages/StashTab_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": -3 },
+                "rect": { "x": 82, "y": -46 },
+                "tabCount": 6,
+                "filename": "PANEL\\stash\\Stash_Tabs2",
+                "inactiveFrames": [ 0, 0, 0, 0 ],
+                "activeFrames": [ 1, 1, 1, 1 ],
+                "disabledFrames": [0, 0, 0, 0 ],
+                "textStrings": [ "@personal", "@shared", "@shared", "@shared"],
+                "textStyle": { "pointSize": "$SmallPanelFontSize" },
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
-                "tabSize": { "x": 269, "y": 120 },
-                "tabPadding": "$PanelTabPadding",
+                "tabSize": { "x": 249, "y": 75 },
+                "tabPadding": { "x": 18, "y": 0 },
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab",
-                "tabLeftIndicatorPosition": "$HalfPanelLeftTabButtonPromptPosition",
-                "tabRightIndicatorPosition": "$HalfPanelRightTabButtonPromptPosition",
+                "tabLeftIndicatorPosition": { "x": -42, "y": -2 },
+                "tabRightIndicatorPosition": { "x": 1135, "y": -2 },
                 "focusOnMouseOver": true,
             }
-        },
-        {
-            "type": "TextBoxWidget", "name": "DisabledInfo",
         }
     ]
 }
