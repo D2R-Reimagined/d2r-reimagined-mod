@@ -1,0 +1,127 @@
+{
+    "type": "MonsterHealthPanel", "name": "HUDMonsterHealth",
+    "fields": {
+        "priority": -100,
+        "anchor": { "x": 0.5 },
+        "rect": { "y": 80}
+    },
+    "children": [
+        {
+            "type": "Widget", "name": "ScreenAnchored",
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "Name",
+                    "fields": {
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center" },
+                            "options": { "pipeCharacterBehavior": "handle" }
+                        }
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "Unique",
+                    "fields": {
+                        "rect": { "y": 50 },
+                        "style": {
+                            "pointSize": "$SmallFontSize",
+                            "alignment": { "h": "center" },
+                            "options": { "pipeCharacterBehavior": "handle" }
+                        }
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "Additional",
+                    "fields": {
+                        "rect": { "y": 120 },
+                        "style": {
+                            "pointSize": "$SmallFontSize",
+                            "alignment": { "h": "center" },
+                            "options": { "pipeCharacterBehavior": "handle" }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Widget", "name": "TargetAttached",
+            "children": [
+                {
+                    "type": "GrowableImageWidget", "name": "UniqueMonsterBackground",
+                    "rect": { "x": -500, "y": -26 },
+                    "fields": {
+                        "filename": "",
+                        "leftCap/filename": "",
+                        "rightCap/filename": "",
+                        "leftCapOffset": { "x": 0, "y": 0 },
+                        "rightCapOffset": { "x": 0, "y": 0 },
+                        "placeCapsOutsideRect": true
+                    },
+                    "children": [
+                        {
+                            "type": "ImageWidget", "name": "BottomCap",
+                            "fields": {
+                                "anchor": { "x": 0.5, "y": 1 },
+                                "rect": { "x": -60 },
+                                "filename": ""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "GrowableImageWidget", "name": "NormalMonsterBackground",
+                    "rect": { "x": -500, "y": -26 },
+                    "fields": {
+                        "filename": "",
+                        "leftCap/filename": "",
+                        "rightCap/filename": "",
+                        "leftCapOffset": { "x": 0, "y": 0 },
+                        "rightCapOffset": { "x": 0, "y": 0 },
+                        "placeCapsOutsideRect": true
+                    }
+                },
+
+                //the only healthbar that does anything?
+                {
+                    "type": "HealthBarWidget", "name": "Health",
+                    "fields": {
+                        "rect": { "x": 0, "y": -60, "scale": 1.0},
+                        "filename": "Controller/HUD/MonsterHealth/monsterhealth_console",
+                        "transparency": 1,
+                        "backgroundTransparency": 0.8,
+                        "criticalHealthPercent": 0,
+                        "warningHealthPercent": 0,
+                        "drawWhenEmpty": true
+                    },
+                    "children": [
+                        {
+                            "type": "TextBoxWidget", "name": "Name",
+                            "fields": {
+                                "rect": { "x": -40, "y": -25, "width":500 },
+                                "style": "$MonsterTextStyle",
+
+                            }
+                        },
+                    ]
+                },
+            ]
+        }
+    ]
+}
+
+
+
+
+                                    //"pointSize": "$MediumFontSize",
+                                    //"alignment": { "h": "left", "v": "top" },
+                                    //"options": { "pipeCharacterBehavior": "handle" },
+
+                                    //"highlight": {
+                                        //"endIndex": "$INT_MAX",
+                                        //"backgroundColor": {
+                                            //"r": 0,
+                                            //"g": 0,
+                                            //"b": 0,
+                                            //"a": 127
+                                        //}
+                                    //}

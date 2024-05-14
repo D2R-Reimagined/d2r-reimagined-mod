@@ -1,0 +1,93 @@
+{
+    "basedOn": "PauseLayoutHD.json",
+    "type": "PausePanel", "name": "PauseLayout",
+    "fields": {
+        "anchor": { "x": 0.5 },
+        "rect": "$PauseLayoutRect",
+        "fitToParent": false
+    },
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "EscapeOptionsBG",
+            "fields": {
+                "rect": { "x": 525, "y": 385, "width": 735, "height": 660 },
+                "color": [ 0.05, 0.05, 0.05, 0.7 ],
+                "borderColor": [ 0.80, 0.73, 0.51, 0.4 ],
+                "drawBorder": true
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "MessageLog",
+            "fields": {
+                "rect": { "x": 564, "y": 428},
+                "anchor": { "x": 0.5, "y":0.5 },
+                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
+                "textString": "@minipanelmessage",
+                "onClickMessage": "PanelManager:OpenPanel:MessageLogPanel",
+                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
+                "focusIndicatorOffset": { "x": -3, "y": 0 },
+                "pointSize": "$MediumLargeFontSize",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleFEButtonText",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "sound": "cursor_select",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Settings",
+            "fields": {
+                "rect": { "x": 564, "y": 578},
+                "anchor": { "x": 0.5, "y":0.5 },
+                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
+                "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
+                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
+                "focusIndicatorOffset": { "x": -3, "y": 0 },
+                "pointSize": "$MediumLargeFontSize",
+                "textString": "@OptionsHD",
+                "pointSize": "$MediumLargeFontSize",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleFEButtonText",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "sound": "cursor_select",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Help",
+            "fields": {
+                "rect": { "x": 564, "y": 728 },
+                "anchor": { "x": 0.5 },
+                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
+                "textString": "@minipanelHelp",
+                "onClickMessage": "PausePanelMessage:OpenHelp",
+                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
+                "focusIndicatorOffset": { "x": -3, "y": 0 },
+                "pointSize": "$MediumLargeFontSize",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleFEButtonText",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "sound": "cursor_select",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Exit",
+            "fields": {
+                "rect": { "x": 564, "y": 878 },
+                "anchor": { "x": 0.5 },
+                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
+                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
+                "focusIndicatorOffset": { "x": -3, "y": 0 },
+                "textString": "@SaveAndExit",
+                "onClickMessage": "PausePanelMessage:ExitGame",
+                "pointSize": "$MediumLargeFontSize",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleFEButtonText",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "sound": "cursor_select",
+            }
+        },
+    ]
+}

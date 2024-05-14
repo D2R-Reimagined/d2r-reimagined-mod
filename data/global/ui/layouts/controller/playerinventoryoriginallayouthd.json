@@ -2,8 +2,13 @@
     "basedOn": "PlayerInventoryOriginalLayoutHD.json",
     "type": "PlayerInventoryPanel", "name": "PlayerInventoryOriginalLayout",
     "fields": {
-        "rect": "$ConsoleRightPanelRect",
-        "defaultWidget": "grid",
+        "anchor": {"x":0.50},
+        "rect": {
+            "x": 0,
+            "y": -740,
+            "width": 0,
+            "height": 0
+        },
     },
     "children": [
         {
@@ -16,11 +21,12 @@
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "anchor": { "x": 0.5, "y": 0.5 },
-                "rect":{"x":-508, "y":-700},
+                "anchor": { "x": 0, "y": 0 },
+                "rect":{"x":198, "y":38},
                 "filename": "Controller/Panel/InventoryPanel/V2/InventoryBG_Edit",
             },
         },
+
         {
             "type": "TextBoxWidget", "name": "gold_amount",
             "fields": {
