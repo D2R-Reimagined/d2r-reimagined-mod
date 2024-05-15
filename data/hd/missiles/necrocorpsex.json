@@ -1,0 +1,227 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "corpse_explode_guts",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 2622674882,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 4010310920,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.5,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/overlays/common/suicide_death/suicide_death.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },  
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 4010310920,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/objects/characters/exploding_cow/vfx_exploding_cow_bloodsquib.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },             
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 4010310920,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/overseer1/death/overseer_deathBurst.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },       
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 3477933179,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx1",
+                    "filename": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "PhysicsBodyDefinitionComponent",
+                    "name": "entity_vfx1_PhysicsBodyDefinition",
+                    "bodytype": "kinematic",
+                    "fixturedefs": [
+                        {
+                            "type": "PhysicsFixtureDefinition",
+                            "name": "entity_vfx1_PhysicsBodyDefinition_fixturedefs_0",
+                            "shapetype": {
+                                "type": "PhysicsSphereDefinition",
+                                "name": "entity_vfx1_PhysicsBodyDefinition_fixturedefs_0_shapetype",
+                                "center": {
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 0.0
+                                },
+                                "radius": 0.5
+                            },
+                            "friction": 0.6,
+                            "restitution": 0.0,
+                            "rollingresistance": 0.2,
+                            "impulsefactor": 1.0,
+                            "explosionfactor": 1.0,
+                            "explosionliftfactor": 1.0,
+                            "windfactor": 0.0,
+                            "dragfactor": 0.0,
+                            "liftfactor": 1.0,
+                            "density": 37.5,
+                            "boneindex": -1
+                        }
+                    ],
+                    "filter": "missile",
+                    "allowTransition": true,
+                    "removeOnDeath": true,
+                    "lineardamping": 0.0,
+                    "angulardamping": 0.0,
+                    "gravityscale": 1.0
+                }
+            ]
+        }
+    ]
+}

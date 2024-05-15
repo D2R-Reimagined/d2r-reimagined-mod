@@ -1,0 +1,881 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "SoundChannels",
+    "name": "soundchannels",
+    "channels": [
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_0",
+            "id": "master",
+            "volume": 0.944,
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_1",
+            "id": "music",
+            "volume": 1.0,
+            "parentid": "master",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "eq",
+                    "name": "channel_1_nodes_1",
+                    "parameters": {
+                        "type": "eq_params",
+                        "name": "channel_1_nodes_1_parameters",
+                        "center": 0.0,
+                        "bandwidth": 0.0,
+                        "gain": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_2",
+            "id": "sfx",
+            "volume": 0.445449352,
+            "parentid": "master",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3",
+            "id": "sfx/eax",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "reverb",
+                    "name": "channel_3_nodes_0"
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s",
+            "id": "sfx/eax/monster_neutral_hd",
+            "volume": 0.561231,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "eq",
+                    "name": "channel_3_s_nodes_1",
+                    "parameters": {
+                        "type": "eq_params",
+                        "name": "channel_3_s_nodes_1_parameters",
+                        "center": 0.0,
+                        "bandwidth": 0.0,
+                        "gain": 0.0
+                    }
+                },
+                {
+                    "type": "highpass",
+                    "name": "channel_3_s_nodes_2",
+                    "parameters": {
+                        "type": "pass_params",
+                        "name": "channel_3_s_nodes_2_parameters",
+                        "cutoff": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_4",
+            "id": "vo",
+            "volume": 0.5,
+            "parentid": "master",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_4_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_4_nodes_0_parameters",
+                        "threshold": 0.0,
+                        "attack": 200.0,
+                        "release": 20.0,
+                        "gainmakeup": 6.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_5",
+            "id": "music/event_hd",
+            "volume": 0.7937005,
+            "parentid": "music",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_6",
+            "id": "music/ui_hd",
+            "volume": 1.0,
+            "parentid": "music",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_7",
+            "id": "sfx/combat",
+            "volume": 1.0,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_8",
+            "id": "sfx/combat/explosion_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_9",
+            "id": "sfx/combat/impacts_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_10",
+            "id": "sfx/combat/player_hd",
+            "volume": 0.707106769,
+            "parentid": "sfx/combat",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_11",
+            "id": "sfx/combat/weapon_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_12",
+            "id": "sfx/lfe-events",
+            "volume": 1.0,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13",
+            "id": "sfx/ambient",
+            "volume": 1.0,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_13_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_13_nodes_0_parameters",
+                        "threshold": 0.0,
+                        "attack": 0.0,
+                        "release": 0.0,
+                        "gainmakeup": 3.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s",
+            "id": "sfx/ambient/foley",
+            "volume": 1.0,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_14",
+            "id": "sfx/ambient/event-3d_hd",
+            "volume": 0.8908987,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "lowpass",
+                    "name": "channel_14_nodes_0",
+                    "parameters": {
+                        "type": "pass_params",
+                        "name": "channel_14_nodes_0_parameters",
+                        "cutoff": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_15",
+            "id": "sfx/ambient/scene-2d_hd",
+            "volume": 0.7937005,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_15_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_15_nodes_0_parameters",
+                        "threshold": 0.0,
+                        "attack": 100.0,
+                        "release": 300.0,
+                        "gainmakeup": 21.0
+                    }
+                },
+                {
+                    "type": "lowpass",
+                    "name": "channel_15_nodes_1",
+                    "parameters": {
+                        "type": "pass_params",
+                        "name": "channel_15_nodes_1_parameters",
+                        "cutoff": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_16",
+            "id": "sfx/ambient/footsteps_hd",
+            "volume": 0.707106769,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_16_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_16_nodes_0_parameters",
+                        "threshold": -20.0,
+                        "attack": 200.0,
+                        "release": 500.0,
+                        "gainmakeup": 7.5
+                    }
+                },
+                {
+                    "type": "eq",
+                    "name": "channel_16_nodes_1",
+                    "parameters": {
+                        "type": "eq_params",
+                        "name": "channel_16_nodes_1_parameters",
+                        "center": 4000.0,
+                        "bandwidth": 5.0,
+                        "gain": 0.45
+                    }
+                },
+                {
+                    "type": "eq",
+                    "name": "channel_16_nodes_2",
+                    "parameters": {
+                        "type": "eq_params",
+                        "name": "channel_16_nodes_2_parameters",
+                        "center": 100.0,
+                        "bandwidth": 3.0,
+                        "gain": 0.5
+                    }
+                },
+                {
+                    "type": "highpass",
+                    "name": "channel_16_nodes_3",
+                    "parameters": {
+                        "type": "pass_params",
+                        "name": "channel_16_nodes_3_parameters",
+                        "cutoff": 40.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_17",
+            "id": "sfx/ambient/environment-objects_hd",
+            "volume": 0.445449352,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_17_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_17_nodes_0_parameters",
+                        "threshold": -18.0,
+                        "attack": 150.0,
+                        "release": 20.0,
+                        "gainmakeup": 6.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_18",
+            "id": "sfx/gameplay-events_hd",
+            "volume": 0.629960537,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_19",
+            "id": "sfx/quest_hd",
+            "volume": 0.629960537,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_20",
+            "id": "sfx/cursor-ui_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_21",
+            "id": "sfx/items_hd",
+            "volume": 0.7,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_22",
+            "id": "sfx/monster_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_23",
+            "id": "sfx/act-boss_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_24",
+            "id": "sfx/player-skills_hd",
+            "volume": 0.6,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_25",
+            "id": "sfx/npc_hd",
+            "volume": 1.0,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_26",
+            "id": "sfx/player-intro-selection_hd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31",
+            "id": "vo/eax",
+            "volume": 1.0,
+            "parentid": "vo",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "reverb",
+                    "name": "channel_31_nodes_0"
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_28",
+            "id": "vo/eax/player-dialog_hd",
+            "volume": 0.7937005,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_29",
+            "id": "vo/eax/boss-dialog_hd",
+            "volume": 0.353553385,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_30",
+            "id": "vo/eax/dialog_hd",
+            "volume": 1.0,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31",
+            "id": "vo/eax",
+            "volume": 1.0,
+            "parentid": "vo",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "reverb",
+                    "name": "channel_31_nodes_0"
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s",
+            "id": "vo/eax/player-gethit_hd",
+            "volume": 0.4,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "footsteps-player",
+            "id": "sfx/ambient/footsteps-player",
+            "volume": 0.749153554,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "footsteps-player_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "footsteps-player_nodes_0_parameters",
+                        "threshold": 0.0,
+                        "attack": 0.0,
+                        "release": 20.0,
+                        "gainmakeup": 2.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_1_s",
+            "id": "music/event_sd",
+            "volume": 0.47193715,
+            "parentid": "music",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_1_s001",
+            "id": "music/ui_sd",
+            "volume": 1.0,
+            "parentid": "music",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_1_s002",
+            "id": "music_hd",
+            "volume": 0.7937005,
+            "parentid": "music",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_1_s003",
+            "id": "music_sd",
+            "volume": 0.47193715,
+            "parentid": "music",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s002",
+            "id": "sfx/ambient/shrines_sd",
+            "volume": 0.5,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s003",
+            "id": "sfx/ambient/scene-2d_sd",
+            "volume": 0.7937005,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_13_s003_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_13_s003_nodes_0_parameters",
+                        "threshold": 0.0,
+                        "attack": 0.0,
+                        "release": 0.0,
+                        "gainmakeup": 8.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s004",
+            "id": "sfx/ambient/footsteps_sd",
+            "volume": 0.707106769,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s005",
+            "id": "sfx/ambient/event-3d_sd",
+            "volume": 0.594603539,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s006",
+            "id": "sfx/ambient/environment-objects_sd",
+            "volume": 0.353553385,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_13_s006_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_13_s006_nodes_0_parameters",
+                        "threshold": -12.0,
+                        "attack": 150.0,
+                        "release": 50.0,
+                        "gainmakeup": 6.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_2_s",
+            "id": "sfx/cursor-ui_sd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s001",
+            "id": "sfx/act-boss_sd",
+            "volume": 0.5,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s002",
+            "id": "sfx/eax/monster_neutral_sd",
+            "volume": 0.5,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s003",
+            "id": "sfx/gameplay-events_sd",
+            "volume": 0.629960537,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s004",
+            "id": "sfx/items_sd",
+            "volume": 1.0,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s005",
+            "id": "sfx/monster_sd",
+            "volume": 0.47193715,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s006",
+            "id": "sfx/npc_sd",
+            "volume": 1.0,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s007",
+            "id": "sfx/player-skills_sd",
+            "volume": 0.396850258,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s008",
+            "id": "sfx/quest_sd",
+            "volume": 0.629960537,
+            "parentid": "sfx/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_2_s001",
+            "id": "sfx/player-intro-selection_sd",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s001",
+            "id": "vo/eax/boss-dialog_sd",
+            "volume": 0.5,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s002",
+            "id": "vo/eax/dialog_sd",
+            "volume": 1.0,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s003",
+            "id": "vo/eax/player-dialog_sd",
+            "volume": 0.7937005,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s004",
+            "id": "vo/eax/player-gethit_sd",
+            "volume": 0.5,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_7_s001",
+            "id": "sfx/combat/explosion_sd",
+            "volume": 0.707106769,
+            "parentid": "sfx/combat",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_7_s002",
+            "id": "sfx/combat/impacts_sd",
+            "volume": 0.5,
+            "parentid": "sfx/combat",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_7_s003",
+            "id": "sfx/combat/player_sd",
+            "volume": 0.707106769,
+            "parentid": "sfx/combat",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_7_s004",
+            "id": "sfx/combat/weapon_sd",
+            "volume": 0.396850258,
+            "parentid": "sfx/combat",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_7_s",
+            "id": "sfx/combat/gore_hd",
+            "volume": 0.7937005,
+            "parentid": "sfx/combat",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_0_s",
+            "id": "cinematics",
+            "volume": 1.0,
+            "parentid": "master",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s001",
+            "id": "sfx/ambient/shrines_hd",
+            "volume": 0.5,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_13_s007",
+            "id": "sfx/ambient/rain_hd",
+            "volume": 1.0,
+            "parentid": "sfx/ambient",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "lowpass",
+                    "name": "channel_13_s007_nodes_0",
+                    "parameters": {
+                        "type": "pass_params",
+                        "name": "channel_13_s007_nodes_0_parameters",
+                        "cutoff": 0.0
+                    }
+                },
+                {
+                    "type": "highpass",
+                    "name": "channel_13_s007_nodes_1",
+                    "parameters": {
+                        "type": "pass_params",
+                        "name": "channel_13_s007_nodes_1_parameters",
+                        "cutoff": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s005",
+            "id": "vo/eax/boss-dialog_human_hd",
+            "volume": 1.0,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_3_s009",
+            "id": "sfx/eax/player-skills_shouts",
+            "volume": 1.0,
+            "parentid": "sfx",
+            "comment": "",
+            "nodes": []
+        },
+        {
+            "type": "SoundChannelDefinition",
+            "name": "channel_31_s006",
+            "id": "vo/eax/player-dialog-shout_hd",
+            "volume": 1.0,
+            "parentid": "vo/eax",
+            "comment": "",
+            "nodes": [
+                {
+                    "type": "compressor",
+                    "name": "channel_31_s006_nodes_0",
+                    "parameters": {
+                        "type": "compressor_params",
+                        "name": "channel_31_s006_nodes_0_parameters",
+                        "threshold": 0.0,
+                        "attack": 0.0,
+                        "release": 0.0,
+                        "gainmakeup": 2.0
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,188 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/wakeofdestruction/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/wakeofdestruction/skeleton/wakeofdestruction.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/infernosentry/textures/infernosentry_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/infernosentry/textures/infernosentry_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/infernosentry/textures/infernosentry_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/wakeofdestruction/wakeofdestruction_state_machine.json"
+            },
+            {
+                "path": "data/hd/missiles/ground_fire_small.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/wakeofdestruction/wakeofdestruction_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "wakeofdestruction",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3350965737,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/wakeofdestruction/wakeofdestruction_state_machine.json",
+                    "doNotInheritRotation": true,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/wakeofdestruction/skeleton/wakeofdestruction.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/wakeofdestruction/wakeofdestruction_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/ground_fire_small.json"
+                        }
+                    ],
+                    "overlays": [],
+                    "minions": []
+                },
+                {
+                    "type": "AimLayersComponent",
+                    "name": "entity_root_AimLayers",
+                    "aimLayers": [
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_0",
+                            "layerName": "Turret_Yaw",
+                            "yawAnimationState": "Additive_Aim",
+                            "yawOutOfRangeBehavior": 0,
+                            "yawAngleOffset": -45.0,
+                            "pitchAnimationState": "",
+                            "pitchOutOfRangeBehavior": 0,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 5.0,
+                            "aimTarget": 4
+                        }
+                    ]
+                },
+                {
+                    "type": "LookAtAnimationControlComponent",
+                    "name": "entity_root_LookAtAnimationControl",
+                    "controlOverrides": [],
+                    "aimLayerName": "Turret_Yaw",
+                    "blendInTime": 0.25,
+                    "blendOutTime": 0.25
+                },
+                {
+                    "type": "OverrideModelTransparencyComponent",
+                    "name": "entity_root_OverrideModelTransparency",
+                    "transMode": 2
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 4223066786,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/wakeofdestruction/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_torso_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 0.8,
+                        "y": 0.8,
+                        "z": 0.8
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 786798775534,
+            "components": [
+              {
+                "type": "VfxDefinitionComponent",
+                "name": "entity_root_VfxDefinition",
+                "filename": "data/hd/vfx/particles/objects/vfx_only/client_smoke_1/vfx_client_smoke_1.particles",
+                "hardKillOnDestroy": false
+              }
+            ]
+        }
+    ]
+}
