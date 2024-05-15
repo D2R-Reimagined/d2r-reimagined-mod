@@ -1,0 +1,915 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_attack2.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_death.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_skill1.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/character/enemy/sandmaggot1/fx_sandmaggot1_dirtpile_opaque.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/FX_Mesh_EnergyShield.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/fluid/T_FX_fluid_blood_decal_atlas_2x2_N.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_AlphaRemapLinear_HardtoSoft.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "AnimationTimelines",
+    "name": "AnimationTimelines",
+    "timelines": {
+        "attack1": {
+            "type": "AnimationTimeline",
+            "name": "attack1",
+            "duration": 0.6666667,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "attack1_Weapon_track_event_01",
+                    "eventTimestamp": 0.166666687,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "attack1_Weapon_track_eventParams_category001",
+                            "value": 2,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "attack1_Weapon_track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "attack1_MonsterAttack_track_event_01",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "attack1_MonsterAttack_track_eventParams_category001",
+                            "value": 3,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "attack1_MonsterAttack_track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                }
+            ]
+        },
+        "attack2": {
+            "type": "AnimationTimeline",
+            "name": "attack2",
+            "duration": 0.4333334,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "attack2_Weapon_track_event_01",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "attack2_Weapon_track_eventParams_category001",
+                            "value": 2,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "attack2_Weapon_track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "attack2_MonsterAttack_track_event_01",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "attack2_MonsterAttack_track_eventParams_category001",
+                            "value": 3,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "attack2_MonsterAttack_track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                }
+            ]
+        },
+        "dead": {
+            "type": "AnimationTimeline",
+            "name": "dead",
+            "duration": 0.3333333,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_meshRenderLayer001",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_visible001",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item001",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_meshRenderLayer001",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_visible001",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                }
+            ]
+        },
+        "death": {
+            "type": "AnimationTimeline",
+            "name": "death",
+            "duration": 1.166667,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/character/enemy/regurgitator1/Death/vfx_regurgitator_death_ichor.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "body",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/character/enemy/frogdemon1/frog_demon_death.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "body",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },                    
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_death.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "body",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },                
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item002",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_name002",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_name003",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf003",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments003",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item003",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_name002",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_name003",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf003",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments003",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item",
+                    "eventTimestamp": 0.06666668,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id001",
+                            "value": "bodyfall_light_short_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit001",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                }
+            ]
+        },
+        "skill1": {
+            "type": "AnimationTimeline",
+            "name": "skill1",
+            "duration": 0.6333334,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item001",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToEntity001",
+                            "value": false,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_boneName001",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName004",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset004",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset004",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.3,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_subMeshName001",
+                            "value": "SandMaggotShape1",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialGroupIndex001",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialProperty001",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_startValue001",
+                            "value": 1.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_endValue001",
+                            "value": 0.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_easingFunction001",
+                            "value": 3,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                }
+            ]
+        },
+        "skill2": {
+            "type": "AnimationTimeline",
+            "name": "skill2",
+            "duration": 0.6333334,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item001",
+                    "eventTimestamp": 0.2,
+                    "duration": 0.5,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_subMeshName003",
+                            "value": "SandMaggotShape1",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialGroupIndex003",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialProperty003",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_startValue003",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_endValue003",
+                            "value": 1.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_easingFunction003",
+                            "value": 3,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item002",
+                    "eventTimestamp": 0.2666667,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_attachToEntity001",
+                            "value": false,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_boneName001",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                }
+            ]
+        },
+        "walk": {
+            "type": "AnimationTimeline",
+            "name": "walk",
+            "duration": 1.6,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item001",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id005",
+                            "value": "light_walk_dirt_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit005",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume005",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item002",
+                    "eventTimestamp": 0.333333373,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id003",
+                            "value": "light_walk_dirt_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit003",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume003",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item003",
+                    "eventTimestamp": 0.76666677,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id004",
+                            "value": "light_walk_dirt_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit004",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume004",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item005",
+                    "eventTimestamp": 1.10000014,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id006",
+                            "value": "light_walk_dirt_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit006",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume006",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item006",
+                    "eventTimestamp": 0.5333334,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id007",
+                            "value": "light_walk_dirt_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit007",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume007",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item007",
+                    "eventTimestamp": 1.33333349,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id008",
+                            "value": "light_walk_dirt_hd1",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit008",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume008",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

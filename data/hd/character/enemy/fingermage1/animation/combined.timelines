@@ -1,0 +1,1662 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/fingermage1/fingermage_death.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/fingermage1/fingermage_deathDebris.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/fingermage1/fingermage_deathpuddle.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_skill1_blastbeam.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/lit_mesh/bits/bits04.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/decal/T_FX_blood_pool_decal_03_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/mask/T_FX_soft_glowcard.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/mask/T_FX_trailgradient_fromleft_mask_02.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "AnimationTimelines",
+    "name": "AnimationTimelines",
+    "timelines": {
+        "attack1": {
+            "type": "AnimationTimeline",
+            "name": "attack1",
+            "duration": 1.0,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "attack1_Weapon_track_event_01",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "attack1_Weapon_track_eventParams_category001",
+                            "value": 2,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "attack1_Weapon_track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "attack1_MonsterAttack_track_event_01",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "attack1_MonsterAttack_track_eventParams_category001",
+                            "value": 3,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "attack1_MonsterAttack_track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item",
+                    "eventTimestamp": 0.13333334,
+                    "duration": 0.1,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_sourceBoneName001",
+                            "value": "L_upperSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_targetBoneName001",
+                            "value": "L_upper_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item001",
+                    "eventTimestamp": 0.3,
+                    "duration": 0.1,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_sourceBoneName001",
+                            "value": "L_midSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_targetBoneName001",
+                            "value": "L_mid_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item002",
+                    "eventTimestamp": 0.4666667,
+                    "duration": 0.1,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_sourceBoneName001",
+                            "value": "L_lowerSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_targetBoneName001",
+                            "value": "L_low_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item003",
+                    "eventTimestamp": 0.200000018,
+                    "duration": 0.1,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_sourceBoneName001",
+                            "value": "R_upperSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_targetBoneName001",
+                            "value": "R_upper_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item004",
+                    "eventTimestamp": 0.400000036,
+                    "duration": 0.1,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_sourceBoneName001",
+                            "value": "R_midSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_targetBoneName001",
+                            "value": "R_mid_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item005",
+                    "eventTimestamp": 0.6,
+                    "duration": 0.1,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Attack1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_sourceBoneName001",
+                            "value": "R_lowerSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_targetBoneName001",
+                            "value": "R_low_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                }
+            ]
+        },
+        "dead": {
+            "type": "AnimationTimeline",
+            "name": "dead",
+            "duration": 0.3333333,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_meshRenderLayer001",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_visible001",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item001",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_meshRenderLayer001",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_visible001",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                }
+            ]
+        },
+        "death": {
+            "type": "AnimationTimeline",
+            "name": "death",
+            "duration": 1.233333,
+            "timeStep": 0.03333334,
+            "animationEvents": [               
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.100000009,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/character/enemy/vilemother1/Skill1/vfx_vilemother_skill1_blood.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "pelvis",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 160.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },     
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.100000009,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/character/enemy/vilemother1/Skill1/vfx_vilemother_skill1_blood.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "pelvis",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 180.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },                              
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.100000009,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/character/enemy/bloodlord1/vfx_bloodLord1_death.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "chest",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },            
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.3,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": -1.5,
+                                "z": -3.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },                      
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.03333334,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/fingermage_death.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_boneName001",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item001",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/fingermage_deathDebris.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_boneName001",
+                            "value": "chest",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item001",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track001_eventParams_materialSetName001",
+                            "value": "body_mesh_burned",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track001_eventParams_subMeshName001",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item001",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.3,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_subMeshName001",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_materialGroupIndex001",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_materialProperty001",
+                            "value": 1,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_startValue001",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_endValue001",
+                            "value": 1.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_easingFunction001",
+                            "value": 3,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                },
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item002",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track002_eventParams_materialSetName001",
+                            "value": "claws_mesh_burned",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track002_eventParams_subMeshName001",
+                            "value": "materialset_claws_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item002",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.3,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track002_eventParams_subMeshName001",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track002_eventParams_materialGroupIndex001",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track002_eventParams_materialProperty001",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track002_eventParams_startValue001",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track002_eventParams_endValue001",
+                            "value": 1.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track002_eventParams_easingFunction001",
+                            "value": 3,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                },
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item",
+                    "eventTimestamp": 0.07,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track_eventParams_materialSetName001",
+                            "value": "body_mesh_dead",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track_eventParams_subMeshName001",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item",
+                    "eventTimestamp": 0.07,
+                    "duration": 1.13333356,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_subMeshName001",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialGroupIndex001",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialProperty001",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_startValue001",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_endValue001",
+                            "value": 1.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_easingFunction001",
+                            "value": 3,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                },
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item003",
+                    "eventTimestamp": 0.07,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track003_eventParams_materialSetName001",
+                            "value": "claws_mesh_dead",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track003_eventParams_subMeshName001",
+                            "value": "materialset_claws_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item003",
+                    "eventTimestamp": 0.07,
+                    "duration": 1.13333356,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track003_eventParams_subMeshName001",
+                            "value": "materialset_claws_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track003_eventParams_materialGroupIndex001",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track003_eventParams_materialProperty001",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track003_eventParams_startValue001",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track003_eventParams_endValue001",
+                            "value": 1.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track003_eventParams_easingFunction001",
+                            "value": 3,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                },
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item004",
+                    "eventTimestamp": 0.07,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track004_eventParams_materialSetName001",
+                            "value": "head_mesh_dead",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track004_eventParams_subMeshName001",
+                            "value": "materialset_head_mesh_deadShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item002",
+                    "eventTimestamp": 0.5666668,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_meshRenderLayer003",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_visible003",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf003",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments003",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item003",
+                    "eventTimestamp": 0.5333334,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_meshRenderLayer003",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_visible003",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf003",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments003",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item002",
+                    "eventTimestamp": 0.50000006,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/fingermage_deathpuddle.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_boneName001",
+                            "value": "chest",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track001_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                }
+            ]
+        },
+        "neutral": {
+            "type": "AnimationTimeline",
+            "name": "neutral",
+            "duration": 1.333333,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item005",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track_eventParams_materialSetName003",
+                            "value": "default",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track_eventParams_subMeshName003",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "SwitchSubMeshMaterialSet",
+                    "name": "SwitchSubMeshMaterialSet_Item006",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SubMeshMaterialSetMaterialNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track001_eventParams_materialSetName003",
+                            "value": "default",
+                            "parameterName": "materialSetName"
+                        },
+                        {
+                            "type": "SubMeshMaterialSetSubMeshNameParameter",
+                            "name": "SwitchSubMeshMaterialSet_Track001_eventParams_subMeshName003",
+                            "value": "materialset_claws_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetMeshLayerVisibility",
+                    "name": "SetMeshLayerVisibility_Item",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetMeshLayerVisibility_Track_eventParams_visibleLayers001",
+                            "value": 9,
+                            "parameterName": "visibleLayers"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item004",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.01,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_subMeshName003",
+                            "value": "materialset_body_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialGroupIndex003",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_materialProperty003",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_startValue003",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_endValue003",
+                            "value": 0.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track_eventParams_easingFunction003",
+                            "value": 0,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateMaterialProperty",
+                    "name": "AnimateMaterialProperty_Item005",
+                    "eventTimestamp": 0.05,
+                    "duration": 0.01,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "MaterialPropertySubMeshNameParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_subMeshName003",
+                            "value": "materialset_claws_mesh_dead_burnedShape",
+                            "parameterName": "subMeshName"
+                        },
+                        {
+                            "type": "MaterialPropertyMaterialGroupIndexParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_materialGroupIndex003",
+                            "value": 0,
+                            "parameterName": "materialGroupIndex"
+                        },
+                        {
+                            "type": "MaterialPropertyParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_materialProperty003",
+                            "value": 0,
+                            "parameterName": "materialProperty"
+                        },
+                        {
+                            "type": "MaterialPropertyStartValueParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_startValue003",
+                            "value": 0.0,
+                            "parameterName": "startValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEndValueParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_endValue003",
+                            "value": 0.0,
+                            "parameterName": "endValue"
+                        },
+                        {
+                            "type": "MaterialPropertyEasingFunctionParameter",
+                            "name": "AnimateMaterialProperty_Track001_eventParams_easingFunction003",
+                            "value": 0,
+                            "parameterName": "easingFunction"
+                        }
+                    ]
+                }
+            ]
+        },
+        "skill1": {
+            "type": "AnimationTimeline",
+            "name": "skill1",
+            "duration": 1.733333,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item007",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_filename003",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_attachToEntity003",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_sourceBoneName003",
+                            "value": "L_upperSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_targetBoneName003",
+                            "value": "R_mid_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track_eventParams_hardKillOnTimeout003",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item008",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_filename003",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_attachToEntity003",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_sourceBoneName003",
+                            "value": "L_midSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_targetBoneName003",
+                            "value": "L_mid_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track001_eventParams_hardKillOnTimeout003",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item009",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_filename003",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_attachToEntity003",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_sourceBoneName003",
+                            "value": "L_lowerSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_targetBoneName003",
+                            "value": "L_low_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track002_eventParams_hardKillOnTimeout003",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item010",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_filename003",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_attachToEntity003",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_sourceBoneName003",
+                            "value": "R_upperSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_targetBoneName003",
+                            "value": "R_upper_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track003_eventParams_hardKillOnTimeout003",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item011",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_filename003",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_attachToEntity003",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_sourceBoneName003",
+                            "value": "R_midSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_targetBoneName003",
+                            "value": "R_mid_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track004_eventParams_hardKillOnTimeout003",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item012",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_filename003",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_Skill1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_attachToEntity003",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_sourceBoneName003",
+                            "value": "R_lowerSideFinger_Wrist_END",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_targetBoneName003",
+                            "value": "R_mid_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track005_eventParams_hardKillOnTimeout003",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFXConnected",
+                    "name": "SpawnVFXConnected_Item006",
+                    "eventTimestamp": 0.3333,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track006_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/fingermage1/FingerMage_skill1_blastbeam.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track006_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track006_eventParams_sourceBoneName001",
+                            "value": "R_mid_target",
+                            "parameterName": "sourceBoneName"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track006_eventParams_targetBoneName001",
+                            "value": "L_upper_target",
+                            "parameterName": "targetBoneName"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFXConnected_Track006_eventParams_hardKillOnTimeout001",
+                            "value": true,
+                            "parameterName": "hardKillOnTimeout"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

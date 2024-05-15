@@ -1,0 +1,1056 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/suicideminion1/Death/vfx_suicideminion_death.particles"
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/decal/T_FX_blood_pool_decal_organic_02_ORM.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "AnimationTimelines",
+    "name": "AnimationTimelines",
+    "timelines": {
+        "dead": {
+            "type": "AnimationTimeline",
+            "name": "dead",
+            "duration": 2.0,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_meshRenderLayer001",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_visible001",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item001",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_meshRenderLayer001",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_visible001",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item002",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_meshRenderLayer001",
+                            "value": 2,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_visible001",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                }
+            ]
+        },
+        "death": {
+            "type": "AnimationTimeline",
+            "name": "death",
+            "duration": 2.0,
+            "timeStep": 0.03333334,
+            "animationEvents": [           
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item006",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_name002",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_name003",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf003",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments003",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item007",
+                    "eventTimestamp": 0.300000042,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_name002",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_name003",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf003",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments003",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item008",
+                    "eventTimestamp": 0.300000042,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_name002",
+                            "value": 2,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_name003",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToSelf004",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToAttachments004",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundById",
+                    "name": "PlaySoundById_Item",
+                    "eventTimestamp": 1.00000012,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundIdAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_id001",
+                            "value": "bodyfall_light_hd_6",
+                            "parameterName": "id"
+                        },
+                        {
+                            "type": "UseEntityHUnitAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_useEntityHUnit001",
+                            "value": true,
+                            "parameterName": "useEntityHUnit"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundById_Track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item003",
+                    "eventTimestamp": 0.300000042,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_meshRenderLayer001",
+                            "value": 4,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_visible001",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item004",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_name004",
+                            "value": 2,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_name005",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToSelf002",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToAttachments002",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item005",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_meshRenderLayer002",
+                            "value": 4,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_visible002",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToSelf002",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToAttachments002",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/suicideminion1/Death/vfx_suicideminion_death.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_boneName001",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item",
+                    "eventTimestamp": 0.1,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name004",
+                            "value": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion1.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name005",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name006",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                },
+                {
+                    "type": "SpawnVFX",
+                    "name": "SpawnVFX_Item002",
+                    "eventTimestamp": 0.9,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "VFXSourceAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_filename001",
+                            "value": "data/hd/vfx/particles/character/enemy/clawviper1/death/vfx_clawviper_bloodpool.particles",
+                            "parameterName": "filename"
+                        },
+                        {
+                            "type": "AttachToEntityAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_attachToEntity001",
+                            "value": true,
+                            "parameterName": "attachToEntity"
+                        },
+                        {
+                            "type": "BoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_boneName001",
+                            "value": "root",
+                            "parameterName": "boneName"
+                        },
+                        {
+                            "type": "OrientationBoneNameAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_orientationBoneName001",
+                            "value": "",
+                            "parameterName": "orientationBoneName"
+                        },
+                        {
+                            "type": "TranslationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_translationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 2.5
+                            },
+                            "parameterName": "translationOffset"
+                        },
+                        {
+                            "type": "RotationOffsetAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_rotationOffset001",
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "parameterName": "rotationOffset"
+                        },
+                        {
+                            "type": "HardKillVFXAnimationEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_hardKillOnTimeout001",
+                            "value": false,
+                            "parameterName": "hardKillOnTimeout"
+                        },
+                        {
+                            "type": "AttachToDeadBodyEventParameter",
+                            "name": "SpawnVFX_Track002_eventParams_attachToDeadBody001",
+                            "value": true,
+                            "parameterName": "attachToDeadBody"
+                        }
+                    ]
+                }     
+            ]
+        },
+        "neutral": {
+            "type": "AnimationTimeline",
+            "name": "neutral",
+            "duration": 1.1,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item009",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_meshRenderLayer003",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_visible003",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf005",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments005",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item010",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_meshRenderLayer003",
+                            "value": 4,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_visible003",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf005",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments005",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item011",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_meshRenderLayer003",
+                            "value": 2,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_visible003",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToSelf006",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToAttachments006",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item012",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_meshRenderLayer004",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_visible004",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToSelf004",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToAttachments004",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                }
+            ]
+        },
+        "skill1": {
+            "type": "AnimationTimeline",
+            "name": "skill1",
+            "duration": 1.6,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item013",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_name006",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_name007",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf007",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments007",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item015",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_name006",
+                            "value": 2,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_name007",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf007",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments007",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item014",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_name008",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_name009",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToSelf008",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToAttachments008",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item016",
+                    "eventTimestamp": 0.0,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_meshRenderLayer006",
+                            "value": 4,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_visible006",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToSelf006",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToAttachments006",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item017",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track004_eventParams_meshRenderLayer001",
+                            "value": 1,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track004_eventParams_visible001",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track004_eventParams_applyToSelf001",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track004_eventParams_applyToAttachments001",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                }
+            ]
+        },
+        "walk": {
+            "type": "AnimationTimeline",
+            "name": "walk",
+            "duration": 0.6666667,
+            "timeStep": 0.03333334,
+            "animationEvents": [
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "PlaySoundByCategory_Item",
+                    "eventTimestamp": 0.100000016,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "PlaySoundByCategory_Track_eventParams_category001",
+                            "value": 1,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundByCategory_Track_eventParams_volume001",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "PlaySoundByCategory",
+                    "name": "PlaySoundByCategory_Item001",
+                    "eventTimestamp": 0.300000042,
+                    "duration": 0.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SoundCategoryAnimationEventParameter",
+                            "name": "PlaySoundByCategory_Track_eventParams_category002",
+                            "value": 1,
+                            "parameterName": "category"
+                        },
+                        {
+                            "type": "VolumeAnimationEventParameter",
+                            "name": "PlaySoundByCategory_Track_eventParams_volume002",
+                            "value": -1,
+                            "parameterName": "volume"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item018",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_meshRenderLayer005",
+                            "value": 8,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_visible005",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToSelf009",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track_eventParams_applyToAttachments009",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item019",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_meshRenderLayer005",
+                            "value": 16,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_visible005",
+                            "value": false,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToSelf009",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track001_eventParams_applyToAttachments009",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item020",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_meshRenderLayer005",
+                            "value": 4,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_visible005",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToSelf010",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track002_eventParams_applyToAttachments010",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                },
+                {
+                    "type": "SetSingleMeshLayerVisibility",
+                    "name": "SetSingleMeshLayerVisibility_Item021",
+                    "eventTimestamp": 0.0,
+                    "duration": -1.0,
+                    "isCritical": false,
+                    "eventParams": [
+                        {
+                            "type": "SingleMeshLayerAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_meshRenderLayer008",
+                            "value": 2,
+                            "parameterName": "meshRenderLayer"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityAnimationEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_visible008",
+                            "value": true,
+                            "parameterName": "visible"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToSelfEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToSelf008",
+                            "value": true,
+                            "parameterName": "applyToSelf"
+                        },
+                        {
+                            "type": "SingleMeshLayerVisibilityApplyToAttachmentsEventParameter",
+                            "name": "SetSingleMeshLayerVisibility_Track003_eventParams_applyToAttachments008",
+                            "value": false,
+                            "parameterName": "applyToAttachments"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/overlays/monster/undeadhorrordeath/vfx_undead_horror_death.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_fire_cylinder.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_AlphaRemapCurve_blinkfix.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "OverlayDefinition",
+    "name": "undeadhorrordeath",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 1440396409,
+            "components": []
+        },
+        {
+            "type": "Entity",
+            "name": "vfx_entity",
+            "id": 804924103,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "vfx_entity_VfxDefinition",
+                    "filename": "",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "vfx_entity_TransformDefinition",
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}

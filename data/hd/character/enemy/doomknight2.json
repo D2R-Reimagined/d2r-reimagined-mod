@@ -1,0 +1,788 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_col.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_fir.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_pos.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_unh.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/doomknight2/head_col.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/head_hod.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/head_hrn.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/special3_col.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/special3_fir.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/special3_pos.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/special3_unh.model"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight2/torso.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/character/enemy/skmage/FX_mesh_skmage_r_wrist.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_polarDisc.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/doomknight2/skeleton/doomknight2.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_Hair_new_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_head_col_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_head_col_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_head_col_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_head_hod_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_head_hod_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight_head_hod_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Armor_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Armor_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Armor_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Armor_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Body_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Body_SSS.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Cloth_halfcape_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Cloths_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/doomknight1/textures/doomknight1_Cloths_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/common/FX_T_bone_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_linearGradient_horizontal_inverted.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_portal_gradient_03_variant.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/mask/T_FX_CircleSoft_Mask_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/doomknight2/doomknight2_state_machine.json"
+            },
+            {
+                "path": "data/hd/items/weapon/mace/_monsters/oblivion_knight_smc_mace.json"
+            },
+            {
+                "path": "data/hd/items/weapon/sword/_monsters/oblivion_knight_sword_01_flc.json"
+            },
+            {
+                "path": "data/hd/items/weapon/sword/_monsters/oblivion_knight_sword_02_lsd.json"
+            },
+            {
+                "path": "data/hd/items/weapon/sword/_monsters/oblivion_knight_sword_03_bsd.json"
+            },
+            {
+                "path": "data/hd/missiles/bone_spirit.json"
+            },
+            {
+                "path": "data/hd/missiles/bone_spirit_explode.json"
+            },
+            {
+                "path": "data/hd/missiles/skull_poison.json"
+            },
+            {
+                "path": "data/hd/overlays/necro/bonearmor_back.json"
+            },
+            {
+                "path": "data/hd/overlays/necro/bonearmor_cast.json"
+            },
+            {
+                "path": "data/hd/overlays/necro/bonearmor_front.json"
+            },
+            {
+                "path": "data/hd/overlays/necro/bonearmor_null_1.json"
+            },
+            {
+                "path": "data/hd/overlays/necro/bonearmor_null_2.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/doomknight2/doomknight2_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "doomknight2",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 167638153,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/doomknight2/doomknight2_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/doomknight2/skeleton/doomknight2.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/doomknight2/doomknight2_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/bone_spirit_explode.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry2",
+                            "filename": "data/hd/missiles/bone_spirit.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry3",
+                            "filename": "data/hd/missiles/skull_poison.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/necro/bonearmor_cast.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry2",
+                            "filename": "data/hd/overlays/necro/bonearmor_front.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry3",
+                            "filename": "data/hd/overlays/necro/bonearmor_null_1.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry4",
+                            "filename": "data/hd/overlays/necro/bonearmor_null_2.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry5",
+                            "filename": "data/hd/overlays/necro/bonearmor_back.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {
+                        "type": "AttackVFXTable",
+                        "name": "AttackSuccess_Blood",
+                        "rules": [
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Blood_rules_0",
+                                "acceptedHitClasses": 828,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash.particles",
+                                "soundId": "player_impact_gore_blood_hd2"
+                            },
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Blood_rules_1",
+                                "acceptedHitClasses": 7362,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point.particles",
+                                "soundId": "player_impact_gore_blood_hd2"
+                            }
+                        ],
+                        "defaultVfxFile": "",
+                        "defaultSoundId": "player_impact_gore_blood_hd2"
+                    },
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 7.0,
+                            "animationName": "Walk"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_VV",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_VV_footIKSetup_0",
+                                "footBoneName": "R_Foot",
+                                "kneeBoneName": "R_Calf",
+                                "hipBoneName": "R_Thigh",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_VV_footIKSetup_1",
+                                "footBoneName": "L_Foot",
+                                "kneeBoneName": "L_Calf",
+                                "hipBoneName": "L_Thigh",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 3831920076,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/doomknight2/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_head_col",
+            "id": 3349023446,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_head_col",
+                    "part": "head",
+                    "variant": "col"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_head_col",
+                    "filename": "data/hd/character/enemy/doomknight2/head_col.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_head_hod",
+            "id": 4221124494,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_head_hod",
+                    "part": "head",
+                    "variant": "hod"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_head_hod",
+                    "filename": "data/hd/character/enemy/doomknight2/head_hod.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_head_hrn",
+            "id": 781480775,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_head_hrn",
+                    "part": "head",
+                    "variant": "hrn"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_head_hrn",
+                    "filename": "data/hd/character/enemy/doomknight2/head_hrn.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_lhand_flc",
+            "id": 2185959820,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_lhand_flc",
+                    "part": "lhand",
+                    "variant": "flc"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_lhand_flc_UnitAttachment",
+                    "filename": "data/hd/items/weapon/sword/_monsters/oblivion_knight_sword_01_flc.json",
+                    "overrideBoneName": "",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_lhand_flc_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.2,
+                            "y": 0.9,
+                            "z": 1.2
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "lhand",
+                    "variant": "flc"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_lhand_lsd",
+            "id": 3041283652,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_lhand_lsd",
+                    "part": "lhand",
+                    "variant": "lsd"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_lhand_lsd_UnitAttachment",
+                    "filename": "data/hd/items/weapon/sword/_monsters/oblivion_knight_sword_02_lsd.json",
+                    "overrideBoneName": "",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_lhand_lsd_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.1,
+                            "y": 1.1,
+                            "z": 1.1
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "lhand",
+                    "variant": "lsd"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_lhand_bsd",
+            "id": 1313924563,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_lhand_bsd",
+                    "part": "lhand",
+                    "variant": "bsd"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_lhand_bsd_UnitAttachment",
+                    "filename": "data/hd/items/weapon/sword/_monsters/oblivion_knight_sword_03_bsd.json",
+                    "overrideBoneName": "",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_lhand_bsd_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.2,
+                            "y": 1.2,
+                            "z": 1.2
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "lhand",
+                    "variant": "bsd"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_lhand_smc",
+            "id": 3573727185,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_lhand_smc",
+                    "part": "lhand",
+                    "variant": "smc"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_lhand_smc_UnitAttachment",
+                    "filename": "data/hd/items/weapon/mace/_monsters/oblivion_knight_smc_mace.json",
+                    "overrideBoneName": "",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_lhand_smc_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.2,
+                            "y": 1.2,
+                            "z": 1.2
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "lhand",
+                    "variant": "smc"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_special3_pos",
+            "id": 2427441031,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_special3_pos",
+                    "part": "special3",
+                    "variant": "pos"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_special3_pos",
+                    "filename": "data/hd/character/enemy/doomknight2/special3_pos.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_special3_pos_EntityAttachmentDefinition",
+                    "targetbone": "R_weapon_attach"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_special3_pos_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_pos.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_special3_fir",
+            "id": 1572117199,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_special3_fir",
+                    "part": "special3",
+                    "variant": "fir"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_special3_fir",
+                    "filename": "data/hd/character/enemy/doomknight2/special3_fir.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_special3_fir_EntityAttachmentDefinition",
+                    "targetbone": "R_weapon_attach"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_special3_fir_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_fir.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_special3_col",
+            "id": 699950614,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_special3_col",
+                    "part": "special3",
+                    "variant": "col"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_special3_col",
+                    "filename": "data/hd/character/enemy/doomknight2/special3_col.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_special3_col_EntityAttachmentDefinition",
+                    "targetbone": "R_weapon_attach"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_special3_col_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_col.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_special3_unh",
+            "id": 2959753236,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_special3_unh",
+                    "part": "special3",
+                    "variant": "unh"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_special3_unh",
+                    "filename": "data/hd/character/enemy/doomknight2/special3_unh.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_special3_unh_EntityAttachmentDefinition",
+                    "targetbone": "R_weapon_attach"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_special3_unh_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/doomknight2/vfx_doomknight2_ambient_unh.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        }
+    ]
+}
