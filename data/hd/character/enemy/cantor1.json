@@ -1,0 +1,357 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/cantor1/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/cantor1/skeleton/cantor1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_cloud_threshold.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Body_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Body_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Body_SSS.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Fur_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Fur_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Fur_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Fur_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Hair_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Head_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Head_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Head_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Head_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Head_SSS.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Outfit_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Outfit_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Outfit_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cantor1/textures/Zakarum_Priest_Outfit_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/noise/T_FX_Noise_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/cantor1/cantor1_state_machine.json"
+            },
+            {
+                "path": "data/hd/overlays/amazon/receiving.json"
+            },
+            {
+                "path": "data/hd/overlays/common/healing.json"
+            },
+            {
+                "path": "data/hd/overlays/sorceress/ice_cast_2.json"
+            },
+            {
+                "path": "data/hd/overlays/sorceress/light_cast_1.json"
+            },
+            {
+                "path": "data/hd/overlays/sorceress/teleport.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/cantor1/cantor1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "cantor1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 92996423,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/cantor1/cantor1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/cantor1/skeleton/cantor1.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/cantor1/cantor1_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/sorceress/teleport.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry2",
+                            "filename": "data/hd/overlays/sorceress/ice_cast_2.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry3",
+                            "filename": "data/hd/overlays/amazon/receiving.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry4",
+                            "filename": "data/hd/overlays/sorceress/light_cast_1.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry5",
+                            "filename": "data/hd/overlays/common/healing.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_Outsource",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_0",
+                                "footBoneName": "R_leg_03_bind_jnt",
+                                "kneeBoneName": "R_leg_02_bind_jnt",
+                                "hipBoneName": "R_leg_01_bind_jnt",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_1",
+                                "footBoneName": "L_leg_03_bind_jnt",
+                                "kneeBoneName": "L_leg_02_bind_jnt",
+                                "hipBoneName": "L_leg_01_bind_jnt",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_root_DeadAnimationSpeedOverride",
+                    "speed": 1.0
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_corpse",
+            "id": 975097727,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+					"type": "TransformDefinitionComponent",
+					"name": "entity_root_TransformDefinition",
+					"position": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": -0.55
+					},
+					"orientation": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"w": 1.0
+					},
+					"scale": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"inheritOnlyPosition": false
+				},
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/env/model/global/prop/act3/travincal/act3_travincal_gore/gore02.model",
+                    "visibleLayers": 64,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_corpse",
+            "id": 975097727,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+					"type": "TransformDefinitionComponent",
+					"name": "entity_root_TransformDefinition",
+					"position": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": -3.05
+					},
+					"orientation": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"w": 1.0
+					},
+					"scale": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					},
+					"inheritOnlyPosition": false
+				},
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/env/model/global/prop/act3/travincal/act3_travincal_gore/gore03.model",
+                    "visibleLayers": 64,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 965097727,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/cantor1/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}

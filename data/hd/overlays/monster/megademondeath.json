@@ -1,0 +1,66 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": ""
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_flame_gradient_03.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "OverlayDefinition",
+    "name": "megademondeath",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4275955162,
+            "components": []
+        },
+        {
+            "type": "Entity",
+            "name": "vfx_entity",
+            "id": 3983439842,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "vfx_entity_VfxDefinition",
+                    "filename": "",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "vfx_entity_TransformDefinition",
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}

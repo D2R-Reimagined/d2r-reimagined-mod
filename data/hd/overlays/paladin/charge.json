@@ -1,0 +1,39 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/overlays/assassin/shadowwarriorappear/shadow_warrior_appear.particles"
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/mask/FX_T_RayMaskCircular_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "OverlayDefinition",
+    "name": "shadowwarriordeath",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 1277062057,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_root_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/overlays/assassin/shadowwarriorappear/shadow_warrior_appear.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}

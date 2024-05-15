@@ -14,43 +14,36 @@
             "type": "DamageIndicatorWidget", "name": "TransparentBG",
             "fields": {
                 "fitToScreen": true,
-                "baseColor": [ 0.0, 0.0, 0.0, 0.7 ],
+                "baseColor": [ 0.0, 0.0, 0.0, 0.0 ],
                 "damageColor": [ 0.3, 0.0, 0.0, 0.7 ],
                 "animationLengthSeconds": 0.75,
             },
-            "children": [
-                {
-                    "type": "ClickCatcherWidget", "name": "BGClickCatcher",
-                    "fields": {
-                        "fitToParent": true
-                    }
-                }
-            ]
+
         },
         {
             "type": "Widget", "name": "Anchor",
             "fields": {
-                "anchor": { "x": 0.5, "y": 0.0 },
-                "rect": "$ControllerOverlayRect",
+                "anchor": { "x": 0.5, "y": -0.5 },
+                "rect": {"x":-1920, "y":1080, "width": 3840, "height": 2160 }
             },
             "children": [
 				{
 					"type": "ControllerCursorBoundsWidget", "name": "ControllerCursorBounds",
 					"fields": {
-						"rect": { "x": -300, "y": -100, "width": 3240, "height": 2060 },
+						"fitToParent": true,
 					},
 				},
                 {
                     "type": "ImageWidget", "name": "Background",
                     "fields": {
-                        "rect": { "x": -325, "y": -90 },
-                        "filename": "Controller/Panel/MainPanelBG_Edit",
+                        "rect": { "x": 0, "y": 0 },
+                        "filename": "",
                     },
                 },
                 {
                     "type": "TabBarWidget", "name": "Tabs",
                     "fields": {
-                        "rect": { "x": 0, "y": 0, "width": 2880, "height": 103 },
+                        "rect": { "x": 0, "y": 0, "width": 2880, "height": 120 },
                         "tabCount": 8,
                         "inactiveTextColor": "$FontColorVeryLightGray",
                         "activeTextColor": "$FontColorVeryLightGray",
@@ -65,14 +58,14 @@
                     "type": "Widget", "name": "TopTabsContainer",
                     "fields": {
                         "anchor": { "x": 0.5, "y": 0.0 },
-                        "rect": { "x": -1440, "y": 0, "width": 2880, "height": 1763 },
+                        "rect": { "x": -1152, "y": 0, "width": 2880, "height": 1763, "scale":0.8},
                     },
                     "children": [
                         {
                             "type": "ImageWidget", "name": "TabsEndcapLeft",
                             "fields": {
                                 "rect": { "x": 60, "y": 7 },
-                                "filename": "Controller/Panel/Top_Tabs_EndCap_Left",
+                                "filename": "",
                             },
                         },
                         {
@@ -80,13 +73,13 @@
                             "fields": {
                                 "anchor": {"x":1.0, "y":0.0},
                                 "rect": { "x": -87, "y": 7 },
-                                "filename": "Controller/Panel/Top_Tabs_EndCap_Right",
+                                "filename": "",
                             },
                         },
                         {
                             "type": "TabBarWidget", "name": "UISwitcherTabs",
                             "fields": {
-                                "rect": { "x": 75, "y": 12, "width": 2730, "height": 90 },
+                                "rect": { "x": 75, "y": 0, "width": 2730, "height": 90},
                                 "tabCount": 8,
                                 "filename": [ "Controller/Panel/Controller_Top_Tab_7Tabs", "Controller/Panel/Controller_Top_Tab_6Tabs", "Controller/Panel/Controller_Top_Tab_5Tabs" ],
                                 "inactiveFrames": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -107,7 +100,7 @@
                                 "enableControllerTabSwitching": false,
                                 "focusOnMouseOver": true,
                                 "notificationIconTemplate": {
-                                    "rect": { "x": -65, "y": -18 },
+                                    "rect": { "x": -65, "y": 0 },
                                     "anchor": { "x": 1, "y": 0 },
                                     "filename": "Controller/Panel/TabNotificationIcon",
                                 },
@@ -116,14 +109,27 @@
                      ]
                 },
                 {
-                    "type": "ButtonLegendWidget", "name": "Legend",
+                    "type": "RectangleWidget", "name": "legendBG",
                     "fields": {
-                        "rect": { "x": 0, "y": 1941, "width": 2880, "height": 103 },
-                        "text": { "style": "$StyleButtonLegend" },
-                        "fontColor": "$FontColorRed"
+                        "anchor":{"x":0.5, "y":0},
+                        "rect":{ "x": -1000, "y": 87, "width": 2000, "height": 60},
+                        "color": [ 0.05, 0.05, 0.05, 0.7 ],
+                        "borderColor": [ 0.80, 0.73, 0.51, 0.4 ],
+                        "drawBorder": true,
                     },
+                    "children":[
+                        {
+                            "type": "ButtonLegendWidget", "name": "Legend",
+                            "fields": {
+                                "rect": { "x": 0, "y": 0, "width": 2000, "height": 60 },
+                                "text": { "style": "$StyleButtonLegend" },
+                            },
+                        }
+                    ]
                 },
             ]
         },
     ]
 }
+
+
