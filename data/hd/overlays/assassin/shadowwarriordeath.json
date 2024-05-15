@@ -1,0 +1,39 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/overlays/monster/dopllezon_appear/doppelzon_appear_overlay.particles"
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/mask/vfx_thin_smoke_mask_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "OverlayDefinition",
+    "name": "dopllezon_appear",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 2752324295,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx",
+                    "filename": "data/hd/vfx/particles/overlays/monster/dopllezon_appear/doppelzon_appear_overlay.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}
