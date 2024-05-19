@@ -1,0 +1,58 @@
+{
+	"dependencies": {
+		"particles": [
+			{
+				"path": "data/hd/vfx/particles/overlays/common/progressive_lightning_3/vfx_progressive_lightning_3.particles"
+			}
+		],
+		"models": [],
+		"skeletons": [],
+		"animations": [],
+		"textures": [],
+		"physics": [],
+		"json": [],
+		"variantdata": [],
+		"objecteffects": [],
+		"other": []
+	},
+	"type": "OverlayDefinition",
+	"name": "progressive_lightning_3",
+	"entities": [
+		{
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 2217683865,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx",
+                    "filename": "data/hd/vfx/particles/overlays/common/progressive_lightning_3/vfx_progressive_lightning_3.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        },
+		{
+			"type": "Entity",
+			"name": "entity_root",
+			"id": 3339063977,
+			"components": [
+				{
+					"type": "VfxDefinitionComponent",
+					"name": "component_vfx",
+					"filename": "data/hd/vfx/particles/charge_icons/claw3.particles",
+					"hardKillOnDestroy": true
+				},
+				{
+					"type": "TransformDefinitionComponent",
+					"name": "entity_root_TransformDefinition",
+					"position": {
+						"x": 156.9,
+						"y": 100.15,
+						"z": 146.1
+					},
+					"inheritOnlyPosition": true
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,58 @@
+{
+	"dependencies": {
+		"particles": [
+			{
+				"path": "data/hd/vfx/particles/overlays/common/progressive_damage_2/vfx_progressive_damage_2.particles"
+			}
+		],
+		"models": [],
+		"skeletons": [],
+		"animations": [],
+		"textures": [],
+		"physics": [],
+		"json": [],
+		"variantdata": [],
+		"objecteffects": [],
+		"other": []
+	},
+	"type": "OverlayDefinition",
+	"name": "progressive_damage_2",
+	"entities": [
+		{
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 304314862,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx",
+                    "filename": "data/hd/vfx/particles/overlays/common/progressive_damage_2/vfx_progressive_damage_2.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        },
+		{
+			"type": "Entity",
+			"name": "entity_root",
+			"id": 1174273717,
+			"components": [
+				{
+					"type": "VfxDefinitionComponent",
+					"name": "component_vfx",
+					"filename": "data/hd/vfx/particles/charge_icons/tiger2.particles",
+					"hardKillOnDestroy": true
+				},
+				{
+					"type": "TransformDefinitionComponent",
+					"name": "entity_root_TransformDefinition",
+					"position": {
+						"x": 160.7,
+						"y": 100.15,
+						"z": 142.3
+					},
+					"inheritOnlyPosition": true
+				}
+			]
+		}
+	]
+}
