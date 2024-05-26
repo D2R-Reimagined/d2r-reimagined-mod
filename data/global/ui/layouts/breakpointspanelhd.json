@@ -1,0 +1,698 @@
+{
+    "type": "GameplayOptionsPanel", "name": "BreakpointsPanel",
+    "fields": {
+        "rect": { "x": 2272, "y": -651 },
+        "anchor": "$LeftPanelAnchor",
+        "defaultWidget": "ScrollController"
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "Background",
+            "fields": {
+                "rect": { "x": 0, "y": 0 },
+                "filename": "\\PANEL\\Options\\breakpointsbg",
+                "frame": 0
+            }
+        },
+        {
+            "type": "ClickCatcherWidget", "name": "catcher",
+            "fields": {
+                "rect": {"width": 1200, "height": 1500 }
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "ScrollBarBackground",
+            "fields": {
+                "rect": {"x": 1100, "y": 150 },
+                "filename": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollBar"
+            },
+            "children": [
+                {
+                    "type": "ScrollControllerWidget", "name": "ScrollController",
+                    "fields": {
+                        "rect": { "x": 0, "y": 10, "width": 36, "height": 1233 },
+                        "upArrowFilepath": "",
+                        "downArrowFilepath": "",
+                        "barFilepath": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollIndicator",
+                        "viewName": "ScrollView"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TextBoxWidget", "name": "Title",
+            "fields": {
+                "text": "Breakpoints",
+                "rect": { "x": 260, "y": 50, "width": 665, "height": 85 },
+                "style": "$StyleTitleBlock"
+            }
+        },
+        {
+            "type": "ScrollViewWidget", "name": "ScrollView",
+            "fields": {
+                "rect": { "x": 50, "y": 140, "width": 1050, "height": 1300 },
+                "scrollControllerName": "ScrollController"
+            },
+            "children": [
+                {
+                    "type": "TableWidget", "name": "OptionsTable",
+                    "fields": {
+                        "columns": [ "$OptionsTableColumn1" ],
+                        "rowHeight": 70
+                    },
+                    "children": [
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Sorceress",
+                                    "fields": {
+                                        "text": "Sorceress:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                               {
+                                    "type": "TextBoxWidget", "name": "SorceressFCR",
+                                    "fields": {
+                                        "text": "FCR %: 9/20/37/63/105/200",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SorceressFCRlight",
+                                    "fields": {
+                                        "text": "FCR Light %: 7/15/23/35/52/78/117/194",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SorceressFHR",
+                                    "fields": {
+                                        "text": "FHR %: 5/9/14/20/30/42/60/86/142/280/1480",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SorceressFBR",
+                                    "fields": {
+                                        "text": "FBR %: 7/15/27/48/86/200/4680",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Paladin",
+                                    "fields": {
+                                        "text": "Paladin:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "PaladinFCR",
+                                    "fields": {
+                                        "text": "FCR %: 9/18/30/48/75/125",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "PaladinFHR",
+                                    "fields": {
+                                        "text": "FHR %: 7/15/27/48/86/200/4680",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "PaladinFBR",
+                                    "fields": {
+                                        "text": "FBR %: 13/32/86/600",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "PaladinFBRhs",
+                                    "fields": {
+                                        "text": "FBR Holy Shield %: 86",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Amazon",
+                                    "fields": {
+                                        "text": "Amazon:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AmazonFCR",
+                                    "fields": {
+                                        "text": "FCR %: 7/14/22/32/48/68/99/152",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AmazonFHR",
+                                    "fields": {
+                                        "text": "FHR %: 6/13/20/32/52/86/174/600",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AmazonFBR",
+                                    "fields": {
+                                        "text": "FBR %: 13/32/86/600",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AmazonFBRone",
+                                    "fields": {
+                                        "text": "FBR Hit by 1-Hand %: 4/6/11/15/23/29/40/56/80/120/200/480",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Assassin",
+                                    "fields": {
+                                        "text": "Assassin:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AssassinFCR",
+                                    "fields": {
+                                        "text": "FCR %: 8/16/27/42/65/102/174",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AssassinFHR",
+                                    "fields": {
+                                        "text": "FHR %: 7/15/27/48/86/200/4680",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "AssassinFBR",
+                                    "fields": {
+                                        "text": "FBR %: 13/32/86/600",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Barbarian",
+                                    "fields": {
+                                        "text": "Barbarian:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "BarbarianFCR",
+                                    "fields": {
+                                        "text": "FCR %: 9/20/37/63/105/200",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "BarbarianFHR",
+                                    "fields": {
+                                        "text": "FHR %: 7/15/27/48/86/200/4680",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "BarbarianFBR",
+                                    "fields": {
+                                        "text": "FBR %: 9/20/42/86/280",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Necromancer",
+                                    "fields": {
+                                        "text": "Necromancer:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "NecromancerFCR",
+                                    "fields": {
+                                        "text": "FCR %: 9/18/30/48/75/125",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "NecromancerFCRvamp",
+                                    "fields": {
+                                        "text": "FCR Vampire %: 6/11/18/24/35/48/65/86/120/180",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "NecromancerFHR",
+                                    "fields": {
+                                        "text": "FHR %: 5/10/16/26/39/56/86/152/377",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "NecromancerFBR",
+                                    "fields": {
+                                        "text": "FBR %: 6/13/20/32/52/86/174/600",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Druid",
+                                    "fields": {
+                                        "text": "Druid:",
+                                        "style": {
+                                            "fontColor": "$FontColorGold",
+                                            "pointSize": "$MediumFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFCR",
+                                    "fields": {
+                                        "text": "FCR %: 4/10/19/30/46/68/99/163",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFCRbear",
+                                    "fields": {
+                                        "text": "FCR Bear %: 7/15/26/40/63/99/163",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFCRwolf",
+                                    "fields": {
+                                        "text": "FCR Wolf %: 6/14/26/40/60/95/157",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFHR",
+                                    "fields": {
+                                        "text": "FHR %: 5/10/16/26/39/56/86/152/377",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFHRone",
+                                    "fields": {
+                                        "text": "FHR Hit by 1-hand %: 3/7/13/19/29/42/63/99/174/456",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFHRbear",
+                                    "fields": {
+                                        "text": "FHR Bear %: 5/10/16/24/37/54/86/152/360",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFHRwolf",
+                                    "fields": {
+                                        "text": "FHR Wolf %: 9/20/42/86/280",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFBR",
+                                    "fields": {
+                                        "text": "FBR %: 6/13/20/32/52/86/174/600",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFBRbear",
+                                    "fields": {
+                                        "text": "FBR Bear %: 5/10/16/27/40/65/109/223",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Breakpoint Row",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "DruidFBRwolf",
+                                    "fields": {
+                                        "text": "FBR Wolf %: 7/15/27/48/86/200",
+                                        "rect": { "x": 40 },
+                                        "style": {
+                                            "fontColor": "$FontColorWhite",
+                                            "pointSize": "$SmallFontSize"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },            
+        {
+            "type": "ButtonWidget", "name": "CloseButton",
+            "fields": {
+                "rect": { "x": 1100, "y": 10 },
+                "filename": "PANEL\\closebtn_4x",
+                "hoveredFrame": 3,
+                "onClickMessage": "PanelManager:ClosePanel:BreakpointsPanel",
+                "tooltipString": "@strClose",
+                "sound": "cursor_close_window_hd",
+                "acceptsEscKeyEverywhere": true
+            }
+        }
+    ]
+}

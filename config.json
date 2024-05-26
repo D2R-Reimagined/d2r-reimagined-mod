@@ -1,0 +1,197 @@
+{
+  "workspace": "data/global/excel",
+  "legacy": false,
+  "fallback": "",
+  "logAppend": false,
+  "log": "output.txt",
+  "iveConsideredDonating": false,
+  "rules": {
+    "Basic/NoDuplicateExcel": {
+      "action": "warn"
+    },
+    "Basic/LinkedExcel": {
+      "action": "warn"
+    },
+    "Basic/StringCheck": {
+      "action": "warn"
+    },
+    "Basic/NumericBounds": {
+      "action": "warn"
+    },
+    "Cube/ValidInputs": {
+      "action": "warn"
+    },
+    "Cube/ValidOutputs": {
+      "action": "warn"
+    },
+    "Cube/ValidOp": {
+      "action": "warn"
+    },
+    "Items/ValidSockets": {
+      "action": "warn"
+    },
+    "Items/NoIllegalGambling": {
+      "action": "warn"
+    },
+    "Items/ValidStatParameters": {
+      "action": "warn"
+    },
+    "Level/ValidWarp": {
+      "action": "warn"
+    },
+    "Level/ValidWPs": {
+      "action": "warn"
+    },
+    "Monsters/ValidChains": {
+      "action": "warn"
+    },
+    "Skills/EqualSkills": {
+      "action": "warn"
+    },
+    "String/NoUntranslated": {
+      "action": "ignore"
+    },
+    "TC/ValidTreasure": {
+      "action": "warn"
+    },
+    "TC/ValidNegativePicks": {
+      "action": "warn"
+    },
+    "TC/ValidProbs": {
+      "action": "warn"
+    }
+  },
+  "generateDocs": false,
+  "docOptions": {
+    "title": "My Mod Documentation",
+    "language": "enUS",
+    "filterPages": [],
+    "localizedStrings": {
+      "pageNames": {
+        "main": "Main",
+        "runeword": "Runewords",
+        "uniques": "Unique Items",
+        "sets": "Set Items",
+        "magic": "Magic Prefixes/Suffixes",
+        "cube": "Cube Recipes",
+        "armor": "Armor",
+        "weapons": "Weapons",
+        "gems": "Gems",
+        "misc": "Misc Items"
+      },
+      "hiddenItemProperties": {},
+      "subPageNames": {
+        "magicPrefixes": "Magic Prefixes",
+        "magicSuffixes": "Magic Suffixes",
+        "fullSetBonus": "Full Set Bonuses",
+        "partialSetBonus": "Partial Set Bonuses",
+        "setItems": "Set Items"
+      },
+      "cubeInputQualifiers": {
+        "qty": "%s x %d",
+        "low": "Low Quality %s",
+        "nor": "Normal %s",
+        "hiq": "Superior %s",
+        "mag": "Magic %s",
+        "set": "Set %s",
+        "rar": "Rare %s",
+        "uni": "Unique %s",
+        "crf": "Crafted %s",
+        "tmp": "Tempered %s",
+        "nos": "Non-Socketed %s",
+        "sock": "Socketed %s",
+        "sockN": "%s with %d sockets",
+        "noe": "Non-Ethereal %s",
+        "eth": "Ethereal %s",
+        "bas": "Basic (Non-Exceptional, Non-Elite) %s",
+        "exc": "Exceptional %s",
+        "eli": "Elite %s",
+        "nru": "%s, non-runeworded",
+        "any": "Any Item"
+      },
+      "cubeHardcodedOutputs": {
+        "Cow Portal": "Portal to %s",
+        "Pandemonium Portal": "Portal to Pandemonium Sub-Level",
+        "Pandemonium Finale Portal": "Portal to Uber Tristram",
+        "Red Portal": "Portal to %s"
+      },
+      "cubeOutputQualifiers": {
+        "useitem": "The same item",
+        "usetype": "The same item, rerolled",
+        "low": "%s, Low Quality",
+        "nor": "%s, Normal Quality",
+        "hiq": "%s, Superior Quality",
+        "mag": "%s, Magic Quality",
+        "set": "%s, Set Quality",
+        "rar": "%s, Rare Quality",
+        "uni": "%s, Unique Quality",
+        "crf": "%s, Crafted",
+        "tmp": "%s, Tempered",
+        "eth": "%s, Ethereal",
+        "sockN": "%s, with %d sockets",
+        "mod": "These extra properties are added:",
+        "modNoList": "The item's properties are preserved",
+        "uns": "Socketed items are destroyed",
+        "rem": "Socketed items are removed (and not destroyed)",
+        "reg": "Properties are regenerated",
+        "exc": "%s, Exceptional",
+        "eli": "%s, Elite",
+        "rep": "The item is repaired",
+        "rch": "The item is recharged",
+        "percentChance": "%d%% chance: %s",
+        "lvl": "Item Level: %d",
+        "plvl": "Item Level: +%d%% of Player Level",
+        "ilvl": "Item Level: +%d%% of Item Level",
+        "pre": "%pre %item",
+        "suf": "%item %suf"
+      },
+      "cubeOps": [
+        "Invalid",
+        "%value < Current Day of Month < %param",
+        "Current Day of Week is not %datevalue",
+        "Player Stat '%paramstat' > %value",
+        "Player Stat '%paramstat' < %value",
+        "Player Stat '%paramstat' is not %value",
+        "Player Stat '%paramstat' is %value",
+        "Base Player Stat '%paramstat' > %value",
+        "Base Player Stat '%paramstat' < %value",
+        "Base Player Stat '%paramstat' is not %value",
+        "Base Player Stat '%paramstat' is %value",
+        "Added Player Stat '%paramstat' > %value",
+        "Added Player Stat '%paramstat' < %value",
+        "Added Player Stat '%paramstat' is not %value",
+        "Added Player Stat '%paramstat' is %value",
+        "First Input's '%paramstat' > %value",
+        "First Input's '%paramstat' < %value",
+        "First Input's '%paramstat' is not %value",
+        "First Input's '%paramstat' is %value",
+        "First Input's Base '%paramstat' > %value",
+        "First Input's Base '%paramstat' < %value",
+        "First Input's Base '%paramstat' is not %value",
+        "First Input's Base '%paramstat' is %value",
+        "First Input's Added '%paramstat' > %value",
+        "First Input's Added '%paramstat' < %value",
+        "First Input's Added '%paramstat' is not %value",
+        "First Input's Added '%paramstat' is %value",
+        "First Input's Mod Class is not %value",
+        "Special"
+      ],
+      "cubeDaysOfWeek": [
+        "None",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "other": {
+        "setNItems": "(%d items)",
+        "setSpecificItem": "(only if %s is equipped)",
+        "setFull": "(Full set)",
+        "potentialSockets": "%d potential sockets"
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+	"dependencies": {
+		"particles": [
+			{
+				"path": "data/hd/vfx/particles/overlays/common/progressive_other_3/vfx_progressive_other_3.particles"
+			}
+		],
+		"models": [],
+		"skeletons": [],
+		"animations": [],
+		"textures": [],
+		"physics": [],
+		"json": [],
+		"variantdata": [],
+		"objecteffects": [],
+		"other": []
+	},
+	"type": "OverlayDefinition",
+	"name": "progressive_other_3",
+	"entities": [
+		{
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 201238954,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx",
+                    "filename": "data/hd/vfx/particles/overlays/common/progressive_other_3/vfx_progressive_other_3.particles",
+                    "hardKillOnDestroy": true
+                }
+            ]
+        },
+		{
+			"type": "Entity",
+			"name": "entity_root",
+			"id": 1018592639,
+			"components": [
+				{
+					"type": "VfxDefinitionComponent",
+					"name": "component_vfx",
+					"filename": "data/hd/vfx/particles/charge_icons/phnx3.particles",
+					"hardKillOnDestroy": true
+				},
+				{
+					"type": "TransformDefinitionComponent",
+					"name": "entity_root_TransformDefinition",
+					"position": {
+						"x": 155.0,
+						"y": 100.15,
+						"z": 148.0
+					},
+					"inheritOnlyPosition": true
+				}
+			]
+		}
+	]
+}
