@@ -387,7 +387,7 @@ Cranebeak	383	100	1			1		71	63	7mp	war spike		3	5000	dgry			invmpiu				dmg%		240
 Nord's Tenderizer	384	100	1			1		76	68	7cl	truncheon		3	5000				invclbu				dmg%		270	330	freeze		2	4	swing2		25	25	charged	Blizzard	12	16	att%		150	180	abs-cold%		5	15	dmg-cold	125	205	455																						0
 Earthshifter	385	100	1			1		77	69	7gm	thunder maul		3	5000								dmg%		250	300	hit-skill	Eruption	25	14	crush		33	33	swing2		10	10	charged	Volcano	30	14	skilltab	17	7	7	cast2		10	10																						0
 Wraithflight	386	100	1			1		84	76	7gl	ghost glaive		3	5000	dblu	dblu						dmg%		150	190	rep-quant	40			lifesteal		9	13	mana-kill		15	15	ethereal		1	1																														0
-Bonehew	387	100	1			1		72	64	7o7	ogre axe		3	5000	bwht	bwht						dmg%		270	320	swing2		30	30	charged	Corpse Explosion	30	14	hit-skill	Bone Spear	50	25	noheal		1	1	sock		2	4	extra_spears		1	1																						0
+Bonehew	387	100	1			1		72	64	7o7	ogre axe		3	5000	bwht	bwht						dmg%		270	320	swing2		30	30	charged	Corpse Explosion	30	14	hit-skill	Bone Spear	50	25	noheal		1	1	sock		2	4	extra_bonespears		1	1																						0
 Ondal's Wisdom	388	100	1			1		74	66	6cs	elder staff		3	5000				invcstu				cast2		45	45	enr		40	50	allskills		2	4	ac		450	550	addxp		5	5	red-mag		5	8																										0
 The Reedeemer	389	100	1			1		80	72	7sc	mighty scepter		3	5000								dmg%		250	300	dmg-demon		200	250	pal		2	2	ease		-60	-60	skill	Redemption	2	4	skill	Holy Bolt	2	4	light		3	3	reduce-ac		33	33	dmg		60	120														0
 Headhunter's Glory	390	100	1			1		83	75	ush	troll nest		3	5000				invbshu				ac		320	420	ac-miss		300	350	res-pois		30	40	sock		1	3	res-fire		20	30	heal-kill		5	7																										0
@@ -1371,9 +1371,9 @@ Diamond Facet	1366	100	1			1		67	67	jew	jewel		3	5000		whit						res-all		12	15	
 Adamantine Facet	1367	100	1			1		71	71	jew	jewel		3	5000								red-dmg%		5	7	red-dmg		8	12	red-mag		8	10	ac%		25	35																																		0
 Star Facet	1368	100	1			1		76	76	jew	jewel		3	5000								dmg%		40	40	swing1		15	15	dmg-max		15	15																																						0
 Heaven Facet	1369	100	1			1		85	85	jew	jewel		3	5000								allskills		1	1	hp%		5	5	mana%		5	5																																						0
-t1 Splash Charm	1370	100	1			1	1	1	1	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splash	proc_SplashDamage	100	1	dmg2%		-40	-40																																										0
-t2 Splash Charm	1371	100	0			1		1	1	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splash	proc_SplashDamage	100	1	dmg2%		-40	-40																																										0
-t3 Splash Charm	1372	100	0			1	1	1	1	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splash	proc_SplashDamage	100	1	dmg2%		-30	-30																																										0
+t1 Splash Charm	1370	100	1			1	1	1	1	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splash	proc_SplashDamage	100	1	dmg2%		-45	-40																																										0
+t2 Splash Charm	1371	100	0			1	1	10	3	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splash	proc_SplashDamage	100	1	dmg2%		-40	-37																																										0
+t3 Splash Charm	1372	100	0			1	1	20	12	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashtwo	proc_SplashDamage_Two	100	1	dmg2%		-35	-35																																										0
 Keychain	1373	100	1			1		1	1	sto	Keychain Storage		1	1			flpmph	invsto1	item_key		item_key	stacked/terror-key		1	1	stacked/hate-key		1	1	stacked/destruction-key		1	1																																						0
 Terror Key Grabber	1374	100	1			1	1	1	1	stt	Terror Key Grabber		1	1			flpgsv	invgsva	item_monsterguts		item_monsterguts																																																		0
 Hate Key Grabber	1375	100	1			1	1	1	1	stt	Hate Key Grabber		1	1			flpgsv	invgsva	item_monsterguts		item_monsterguts																																																		0
@@ -1415,3 +1415,9 @@ Chipped Diamond Grabber	1410	0	1			1	1	1	1	stt	Chipped Diamond Grabber		1	1					
 Chipped Emerald Grabber	1411	0	1			1	1	1	1	stt	Chipped Emerald Grabber		1	1																																																									0
 Chipped Skull Grabber	1412	0	1			1	1	1	1	stt	Chipped Skull Grabber		1	1																																																									0
 Chipped Ruby Grabber	1413	0	1			1	1	1	1	stt	Chipped Ruby Grabber		1	1																																																									0
+t4 Splash Charm	1414	100	0			1	1	1	24	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashtwo	proc_SplashDamage_Two	100	1	dmg2%		-30	-33																																										0
+t5 Splash Charm	1415	100	0			1	1	1	30	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashtwo	proc_SplashDamage_Two	100	1	dmg2%		-25	-30																																										0
+t6 Splash Charm	1416	100	0			1	1	1	45	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashthree	proc_SplashDamage_Three	100	1	dmg2%		-20	-27																																										0
+t7 Splash Charm	1417	100	0			1	1	1	60	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashthree	proc_SplashDamage_Three	100	1	dmg2%		-15	-25																																										0
+t8 Splash Charm	1418	100	0			1	1	1	75	cm4	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashthree	proc_SplashDamage_Three	100	1	dmg2%		-10	-23																																										0
+t9 Splash Charm	1419	100	1			1	1	1	90	cm5	charm	1	1	1			flpmss	invmss	item_gem	12	item_gem	splashfour	proc_SplashDamage_Four	100	1	dmg2%		-5	-20																																										0
