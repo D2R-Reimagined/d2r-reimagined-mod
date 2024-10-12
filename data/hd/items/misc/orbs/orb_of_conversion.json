@@ -7,7 +7,7 @@
         ],
         "models": [
             {
-                "path": "data/hd/items/misc/rune/jah_rune/jah_rune.model"
+                "path": "data/hd/items/misc/orbs/orb_of_conversion/orb_of_conversion.model"
             }
         ],
         "skeletons": [
@@ -18,19 +18,19 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/rune/jah_rune/misc_jah_rune_ALB.texture"
+                "path": "data/hd/items/misc/body_part/spleen/spleen_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/rune/jah_rune/misc_jah_rune_NRM.texture"
+                "path": "data/hd/items/misc/body_part/spleen/spleen_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/rune/jah_rune/misc_jah_rune_ORM.texture"
+                "path": "data/hd/items/misc/body_part/spleen/spleen_ORM.texture"
             }
         ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_sw.json"
+                "path": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json"
             }
         ],
         "variantdata": [],
@@ -38,17 +38,17 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "jah_rune",
+    "name": "orb_of_conversion",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1088227843,
+            "id": 3362269685,
             "components": [
                 {
                     "type": "UnitRootComponent",
                     "name": "component_root",
-                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_sw.json",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
                         "x": 0.0,
@@ -70,15 +70,15 @@
                     "type": "TransformDefinitionComponent",
                     "name": "entity_root_TransformDefinition",
                     "position": {
-                        "x": -1.0,
-                        "y": 0.0,
-                        "z": -0.9
+                        "x": 0.0,
+                        "y": -0.7,
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
-                        "y": 0.0,
+                        "y": -0.95105654,
                         "z": 0.0,
-                        "w": 1.0
+                        "w": 0.309017
                     },
                     "scale": {
                         "x": 1.0,
@@ -92,12 +92,12 @@
         {
             "type": "Entity",
             "name": "entity_model",
-            "id": 1685241322,
+            "id": 464378974,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_jah_rune",
-                    "filename": "data/hd/items/misc/rune/jah_rune/jah_rune.model",
+                    "name": "component_model_soul",
+                    "filename": "data/hd/items/misc/orbs/orb_of_conversion/orb_of_conversion.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
