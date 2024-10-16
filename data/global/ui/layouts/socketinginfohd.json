@@ -45,7 +45,7 @@
                     },
                     "children": [
                         {
-                            "type": "TableRowWidget", "name": "Socketing",
+                            "type": "TableRowWidget", "name": "Row JewelPunching Title",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Socketing",
@@ -66,12 +66,78 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Socketing",
+                            "type": "TableRowWidget", "name": "Row JewelPunching",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Socketing",
                                     "fields": {
-                                        "text": "Any item + jewels for the number of sockets you want -> Item with number of sockets equal to number of jewels",
+                                        "text": "White/Magic item + Magic Jewel(s) = Socketed item equal to the number of Jewels",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row JewelPunching",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "Rare/Set item + Rare Jewel(s) = Socketed item equal to the number of Jewels",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row JewelPunching",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "Unique item + Unique Jewel(s) = Socketed item equal to the number of Jewels",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -99,13 +165,20 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Socketing",
+                            "type": "TableRowWidget", "name": "Row JewelPunching",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Socketing",
                                     "fields": {
-                                        "text": "WARNING: If an item does not support the number of jewels you put in it will use the highest number of sockets it does support",
-                                        "style": "$StyleSettingsText"
+                                        "text": "WARNING: If an item does not support the number of Jewels you put in, it will use the highest number of sockets it does support",
+                                        "style":{
+											"pointSize": "$SmallFontSize",
+											"spacing": "$ReducedSpacing",
+											"fontColor": "$FontColorRed",
+											"dropshadow": "$DefaultDropShadow",
+											"alignment": {"h": "left", "v": "top"},
+											"options": { "lineWrap": true, "newlineHandling": "standard" },
+										}
                                     }
                                 },
                                 {
@@ -130,7 +203,101 @@
                                     }
                                 }
                             ]
-                        }
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row Orb of Socketing Title",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "Socketing (Orb of Socketing)",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Orb of Socketing",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "any Armor/Shield/Weapon + Orb of Socketing = Socketed item of 1-6 sockets",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row Orb of Socketing",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "NOTE: If an item does not support the number of sockets rolled, it will use the highest number of sockets it does support",
+                                        "style":{
+											"pointSize": "$SmallFontSize",
+											"spacing": "$ReducedSpacing",
+											"fontColor": "$FontColorRed",
+											"dropshadow": "$DefaultDropShadow",
+											"alignment": {"h": "left", "v": "top"},
+											"options": { "lineWrap": true, "newlineHandling": "standard" },
+										}
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
                     ]
                 }
             ]
