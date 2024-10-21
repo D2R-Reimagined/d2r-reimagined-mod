@@ -1,5 +1,6 @@
 {
-    "type": "GameplayOptionsPanel", "name": "barbarian",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "characterbalancing_barbarian",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
@@ -44,13 +45,14 @@
                         "rowHeight": "$OptionsTableRowHeight"
                     },
                     "children": [
-                        {
+/* >>> WARCRIES TITLE >>> */                        
+						{
                             "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Skill Changes",
+                                        "text": "Warcries",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -65,211 +67,14 @@
                                 }
                             ]
                         },
-                        {
+/* >>> WARCRIES CHANGES BELOW >>> */
+						{
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Grim Ward becomes Deadly Treasures, which gives passive bonuses to MF and GF. 50% +25%/level Gold Find and 25% +10%/lvl Magic Find.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "War Cry's two synergies are now Battle Orders and Battle Cry, both giving +10% damage synergy.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "All masteries removed and remade.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Melee Mastery (Level 1) gives bonus damage, crit chance, and AR to all melee weapons.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Thrown Weapon Mastery (Level 1) gives bonus damage crit chance, pierce, and AR to thrown weapons.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Increased Stamina becomes Shield Mastery, which gives faster block rate and increased chance to block.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Frenzy's Increased Stamina synergy removed. It's duration now increases per Frenzy level.",
+                                        "text": "Grim Ward becomes Deadly Treasures, which gives passive bonuses to MF and GF. 50% +25%/level Gold Find and 25% +10%/lvl Magic Find",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -302,7 +107,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Increased Speed no longer has a pre-requisite.",
+                                        "text": "War Cry's two synergies are now Battle Orders and Battle Cry, both giving +10% damage synergy",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -329,112 +134,37 @@
                                 }
                             ]
                         },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+/* <<< WARCRIES CHANGES OVER <<< */
+/* >>> COMBAT MASTERIES TILTE >>> */
+						{
+                            "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Double Swing has moved to Level 1. The synergies are now Double Throw and Frenzy.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
+                                        "text": "Combat Masteries",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         },
-                        {
+/* >>> COMBAT MASTERIES CHANGES BELOW >>> */
+						{
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Stun duration scaling increase, removed duration synergy.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Double Throw added Frenzy as synergy with an 8% damage boost.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Leap and Leap Attack gain additional leap speed synergy from Leap. Leap speed is now shown in the tooltip.",
+                                        "text": "All masteries removed and remade",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -467,7 +197,361 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Leap Attack area damage gains +10% damage synergy from Whirlwind as well, in addition to Leap.",
+                                        "text": "Melee Mastery (Level 1) gives bonus damage, crit chance, and AR to all melee weapons",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Thrown Weapon Mastery (Level 1) gives bonus damage crit chance, pierce, and AR to thrown weapons",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Increased Stamina becomes Shield Mastery, which gives faster block rate and increased chance to block",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Increased Speed no longer has a pre-requisite",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+/* <<< COMBAT MASTERIES CHANGES OVER <<< */
+/* >>> COMBAT SKILLS TITLE >>> */
+						{
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Combat Skills",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+/* >>> COMBAT SKILLS CHANGES BELOW >>> */
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Double Swing has moved to Level 1. The synergies are now Double Throw and Frenzy",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Frenzy's duration synergy changed to itself",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Frenzy now synergizes with Double Swing (15% damage per level) and Double Throw (1% Magic Damage Conversion per level)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Stun duration scaling increase, removed duration synergy",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        }, 
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Concentrate no longer has a Battle Orders Synergy. Bash synergy increased to 15%",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Leap and Leap Attack gain additional leap speed synergy from Leap. Their speed is now shown in the tooltip",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Leap Attack area damage gains +10% damage synergy from Whirlwind, in addition to Leap",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -500,7 +584,42 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Leap Attack now has synergies with Leap and Whirlwind, which give 10% increased damage.",
+                                        "text": "Leap Attack now has synergies with Leap and Whirlwind, which give 10% increased damage",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        
+                        
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Whirlwind now synergizes with Leap attack and Concentrate, which give +4% per level",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -533,106 +652,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Concentrate no longer has a Battle Orders Synergy. Bash synergy increased to 15%.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Frenzy now synergizes with Double Swing (15% damage per level) and Double Throw (1% Magic Damage Conversion per level).",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Whirlwind now synergizes with Leap attack and Concentrate, which give +4% per level.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Berserk's synergies have been changed to Bash and Concentrate.",
+                                        "text": "Berserk's synergies have been changed to Bash and Concentrate",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -659,7 +679,7 @@
                                 }
                             ]
                         }
-
+/* <<< COMBAT SKILLS CHANGES OVER <<< */
                     ]
                 }
             ]
