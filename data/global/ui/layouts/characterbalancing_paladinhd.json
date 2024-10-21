@@ -1,5 +1,6 @@
 {
-    "type": "GameplayOptionsPanel", "name": "paladin",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "characterbalancing_paladin",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
@@ -44,13 +45,14 @@
                         "rowHeight": "$OptionsTableRowHeight"
                     },
                     "children": [
-                        {
+/* >>> COMBAT SKILLS TITLE >>> */                         
+						{
                             "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Skill Changes",
+                                        "text": "Combat Skills",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -65,6 +67,7 @@
                                 }
                             ]
                         },
+/* >>> COMBAT SKILLS CHANGES BELOW >>> */ 
                         {
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
@@ -98,6 +101,7 @@
                                 }
                             ]
                         }
+/* <<< COMBAT SKILL CHANGES OVER <<< */ 
                     ]
                 }
             ]
