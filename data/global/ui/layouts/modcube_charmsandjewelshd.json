@@ -1,5 +1,6 @@
 {
-    "type": "GameplayOptionsPanel", "name": "barbarian",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "modcube_charmsandjewels",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
@@ -45,12 +46,13 @@
                     },
                     "children": [
                         {
-                            "type": "TableRowWidget", "name": "Upgrading",
+                            "type": "TableRowWidget", "name": "Charms",
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+/* >>> CHARM REROLLING TITLE >>> */                                  
+								{
+                                    "type": "TextBoxWidget", "name": "Charms",
                                     "fields": {
-                                        "text": "Skill Changes",
+                                        "text": "Charm Rerolling",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -65,13 +67,14 @@
                                 }
                             ]
                         },
+/* >>> CHARM REROLLING INFO BELOW >>> */  
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget", "name": "Row charms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "Charms",
                                     "fields": {
-                                        "text": "Grim Ward becomes Deadly Treasures, which gives passive bonuses to MF and GF. 50% +25%/level Gold Find and 25% +10%/lvl Magic Find.",
+                                        "text": "Any 3 Magic Small Charms = Rerolled Small Charm (at 100% Character Level)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -99,12 +102,12 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget", "name": "Row charms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "Charms",
                                     "fields": {
-                                        "text": "War Cry's two synergies are now Battle Orders and Battle Cry, both giving +10% damage synergy.",
+                                        "text": "Any 3 Magic Large Charms = Rerolled Large Charm (at 100% Character Level)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -132,12 +135,69 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget", "name": "Row charms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "Charms",
                                     "fields": {
-                                        "text": "All masteries removed and remade.",
+                                        "text": "Any 3 Magic Grand Charms = Rerolled Grand Charm (at 100% Character Level)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+/* <<< CHARM REROLLING INFO OVER <<< */  
+/* >>> JEWEL REROLLING & UPGRADING TITLE >>> */  
+                        {
+                            "type": "TableRowWidget", "name": "Jewels",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Jewels",
+                                    "fields": {
+                                        "text": "Jewel Rerolling & Upgrading",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+/* >>> JEWEL REROLLING & UPGRADING INFO BELOW >>> */  
+                        {
+                            "type": "TableRowWidget", "name": "Row Jewels",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Jewels",
+                                    "fields": {
+                                        "text": "Any 3 Magic Jewels = Rerolled Magic Jewel (at 100% Character Level)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -165,111 +225,12 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget", "name": "Row Jewels",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "Jewels",
                                     "fields": {
-                                        "text": "Melee Mastery (Level 1) gives bonus damage, crit chance, and AR to all melee weapons.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Thrown Weapon Mastery (Level 1) gives bonus damage crit chance, pierce, and AR to thrown weapons.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Increased Stamina becomes Shield Mastery, which gives faster block rate and increased chance to block.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Frenzy's Increased Stamina synergy removed. It's duration now increases per Frenzy level.",
+                                        "text": "Any 3 Rare Jewels = Rerolled Rare Jewel (at 100% Character Level)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -297,144 +258,12 @@
                             ]
                         },
 						{
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget", "name": "Row Jewel Upgrade",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "Socketing",
                                     "fields": {
-                                        "text": "Increased Speed no longer has a pre-requisite.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Double Swing has moved to Level 1. The synergies are now Double Throw and Frenzy.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Stun duration scaling increase, removed duration synergy.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Double Throw added Frenzy as synergy with an 8% damage boost.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Leap and Leap Attack gain additional leap speed synergy from Leap. Leap speed is now shown in the tooltip.",
+                                        "text": "9 Magic Jewels = Rare Jewel",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -462,12 +291,12 @@
                             ]
                         },
 						{
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget", "name": "Row Jewel Upgrade",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "Socketing",
                                     "fields": {
-                                        "text": "Leap Attack area damage gains +10% damage synergy from Whirlwind as well, in addition to Leap.",
+                                        "text": "9 Rare Jewels = Unique Jewel", 
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -494,13 +323,37 @@
                                 }
                             ]
                         },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+/* <<< JEWEL REROLLING & UPGRADING INFO OVER <<< */  
+/* >>> SPLASH CHARM UPGRADE PATH TITLE >>> */  
+						{
+                            "type": "TableRowWidget", "name": "Splash Charm Upgrade",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "Leap Attack now has synergies with Leap and Whirlwind, which give 10% increased damage.",
+                                        "text": "Melee Splash Charm Upgrade Path",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+/* >>> SPLASH CHARM UPGRADE PATH INFO BELOW >>> */  
+                        {
+                            "type": "TableRowWidget", "name": "Row1 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T1 Splash Charm + any Chipped Gem = T2 Splash Charm (req.Lvl 3)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -527,13 +380,13 @@
                                 }
                             ]
                         },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+						{
+                            "type": "TableRowWidget", "name": "Row2 SplashCharms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "Concentrate no longer has a Battle Orders Synergy. Bash synergy increased to 15%.",
+                                        "text": "T2 Splash Charm + El Rune + any Flawed Gem = T3 Splash Charm (req.Lvl 11)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -560,13 +413,13 @@
                                 }
                             ]
                         },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+						{
+                            "type": "TableRowWidget", "name": "Row3 SplashCharms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "Frenzy now synergizes with Double Swing (15% damage per level) and Double Throw (1% Magic Damage Conversion per level).",
+                                        "text": "T3 Splash Charm + Ort Rune + any Flawless Gem = T4 Splash Charm (req.Lvl 21)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -593,13 +446,13 @@
                                 }
                             ]
                         },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+						{
+                            "type": "TableRowWidget", "name": "Row4 SplashCharms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "Whirlwind now synergizes with Leap attack and Concentrate, which give +4% per level.",
+                                        "text": "T4 Splash Charm + Shael Rune + 2 any Perfect Gem + Magic Jewel = T5 Splash Charm (req.Lvl 29)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -626,13 +479,13 @@
                                 }
                             ]
                         },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+						{
+                            "type": "TableRowWidget", "name": "Row5 SplashCharms",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "Berserk's synergies have been changed to Bash and Concentrate.",
+                                        "text": "T5 Splash Charm + Io Rune + 3 any Perfect Gem + 2 Magic Jewels = T6 Splash Charm (req.Lvl 35)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -658,8 +511,107 @@
                                     }
                                 }
                             ]
-                        }
-
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row6 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T6 Splash Charm + Fal Rune + Eld Rune + 4 any Perfect Gem + 3 Magic Jewels = T7 Splash Charm (req.Lvl 41)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row7 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T7 Splash Charm + Pul Rune + Nef Rune + 5 any Perfect Gem + 4 Magic Jewels = T8 Splash Charm (req.Lvl 45)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row8 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T8 Splash Charm + Mal Rune + Eth Rune + 6 Perfect Topaz + 6 Perfect Skulls + Rare Jewel + Magic Small Charm = T9 Splash Charm (req.Lvl 49) [Not available yet]",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+/* <<< SPLASH CHARM UPGRADE PATH INFO OVER <<< */                   
                     ]
                 }
             ]

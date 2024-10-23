@@ -1,5 +1,6 @@
 {
-    "type": "SettingsPanel", "name": "modcube",
+	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "SettingsPanel", "name": "modinfo_aa",
     "fields": {
         "priority": 9002,
         "fitToParent": true
@@ -35,7 +36,7 @@
                             "type": "TextBoxWidget", "name": "Title",
                             "fields": {
                                 "rect": { "x": 0, "y": 45, "width": 1950, "height": 103 },
-                                "text": "D2R Reimagined Cube Recipes",
+                                "text": "D2R Reimagined Mod Information",
                                 "style": "$StyleTitleBlock"
                             }
                         },
@@ -45,7 +46,7 @@
                                 "rect": { "x": 1868, "y": 8 },
                                 "filename": "PANEL\\closebtn_4x",
                                 "hoveredFrame": 3,
-                                "onClickMessage": "PanelManager:ClosePanel:modcube",
+                                "onClickMessage": "PanelManager:ClosePanel:modinfo_aa",
                                 "tooltipString": "@strClose",
                                 "sound": "cursor_close_window_hd",
                                 "acceptsEscKeyEverywhere": true,
@@ -69,14 +70,14 @@
             "fields": {
                 "rect": "$SettingsPanelTabsRect",
                 "anchor": { "x": 0.5 },
-                "tabCount": 6,
-                "tabSize": { "x": 276, "y": 121 },
+                "tabCount": 7,
+                "tabSize": { "x": 250, "y": 121 },
                 "tabPadding": { "x": 2, "y": 0 },
                 "unavailableTabsLeaveGaps": false,
                 "tabSizingMethod": "fixedCenter",
                 "filename": "Controller/Panel/Stash/V2/StashTabs",
-                "inactiveFrames": [ 1, 1, 1, 1, 1, 1],
-                "activeFrames": [ 0, 0, 0, 0, 0, 0],
+                "inactiveFrames": [ 1, 1, 1, 1, 1, 1, 1],
+                "activeFrames": [ 1, 0, 0, 0, 0, 0, 0],
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "tabTextOffset": { "x": 0, "y": -4 },
@@ -85,16 +86,17 @@
                     "pointSize": "$MediumFontSize",
                     "alignment": { "h": "center", "v": "center" },
                     "fontColor": "$FontColorWhite",
-                    "spacing": {"leading":0.9, "kerning":0.95}
+                    "spacing": { "leading":0.9, "kerning":0.95 }
                 },
-                "textStrings": [ "Runes & Gems", "Socketing", "Charms & Jewels", "Rings & Amulets", "Type Changing", "Stacking Gems"],
+                "textStrings": ["General Information", "TBD", "TBD", "TBD", "TBD", "TBD", " TBD"],
                 "tabMessages": [
-                    "SettingsPanelMessage:CheckChanges:runesandgemsinfo",
-                    "SettingsPanelMessage:CheckChanges:socketinginfo",
-                    "SettingsPanelMessage:CheckChanges:charmsandjewels",
-                    "SettingsPanelMessage:CheckChanges:ringsandamulets",
-                    "SettingsPanelMessage:CheckChanges:typechanging",
-                    "SettingsPanelMessage:CheckChanges:stackinggemsandrunes"
+                    "SettingsPanelMessage:CheckChanges:modinfo_generalinformation",
+                    "SettingsPanelMessage:CheckChanges:modinfo_tab2",
+                    "SettingsPanelMessage:CheckChanges:modinfo_tab3",
+                    "SettingsPanelMessage:CheckChanges:modinfo_tab4",
+                    "SettingsPanelMessage:CheckChanges:modinfo_tab5",
+                    "SettingsPanelMessage:CheckChanges:modinfo_tab6",
+                    "SettingsPanelMessage:CheckChanges:modinfo_tab7"
                 ]
             }
         },
@@ -119,7 +121,7 @@
                             "type": "ButtonWidget", "name": "Close",
                             "fields": {
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-                                "onClickMessage": "PanelManager:ClosePanel:modcube",
+                                "onClickMessage": "PanelManager:ClosePanel:modinfo_aa",
                                 "textString": "Close",
                                 "hoveredFrame": 3,
                                 "text/style" : "$StyleFEButtonText",

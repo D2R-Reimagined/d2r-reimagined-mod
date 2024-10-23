@@ -1,5 +1,6 @@
 {
-    "type": "SettingsPanel", "name": "modcube",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "SettingsPanel", "name": "modcube_aa",
     "fields": {
         "priority": 9002,
         "fitToParent": true
@@ -45,7 +46,7 @@
                                 "rect": { "x": 1868, "y": 8 },
                                 "filename": "PANEL\\closebtn_4x",
                                 "hoveredFrame": 3,
-                                "onClickMessage": "PanelManager:ClosePanel:modcube",
+                                "onClickMessage": "PanelManager:ClosePanel:modcube_aa",
                                 "tooltipString": "@strClose",
                                 "sound": "cursor_close_window_hd",
                                 "acceptsEscKeyEverywhere": true,
@@ -76,7 +77,7 @@
                 "tabSizingMethod": "fixedCenter",
                 "filename": "Controller/Panel/Stash/V2/StashTabs",
                 "inactiveFrames": [ 1, 1, 1, 1, 1, 1],
-                "activeFrames": [ 0, 0, 0, 0, 0, 0],
+                "activeFrames": [ 1, 0, 0, 0, 0, 0],
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "tabTextOffset": { "x": 0, "y": -4 },
@@ -87,14 +88,14 @@
                     "fontColor": "$FontColorWhite",
                     "spacing": {"leading":0.9, "kerning":0.95}
                 },
-                "textStrings": [ "Runes & Gems", "Socketing", "Charms & Jewels", "Rings & Amulets", "Type Changing", "Stacking Gems"],
+                "textStrings": [ "Runes & Gems", "Socketing", "Charms & Jewels", "Rings & Amulets", "Type Changing & Corruption", "Stacking Gems, Runes & Keys"],
                 "tabMessages": [
-                    "SettingsPanelMessage:CheckChanges:runesandgemsinfo",
-                    "SettingsPanelMessage:CheckChanges:socketinginfo",
-                    "SettingsPanelMessage:CheckChanges:charmsandjewels",
-                    "SettingsPanelMessage:CheckChanges:ringsandamulets",
-                    "SettingsPanelMessage:CheckChanges:typechanging",
-                    "SettingsPanelMessage:CheckChanges:stackinggemsandrunes"
+                    "SettingsPanelMessage:CheckChanges:modcube_runesandgemsinfo",
+                    "SettingsPanelMessage:CheckChanges:modcube_socketinginfo",
+                    "SettingsPanelMessage:CheckChanges:modcube_charmsandjewels",
+                    "SettingsPanelMessage:CheckChanges:modcube_ringsandamulets",
+                    "SettingsPanelMessage:CheckChanges:modcube_typechanging",
+                    "SettingsPanelMessage:CheckChanges:modcube_stackinggemsandrunes"
                 ]
             }
         },
@@ -119,7 +120,7 @@
                             "type": "ButtonWidget", "name": "Close",
                             "fields": {
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-                                "onClickMessage": "PanelManager:ClosePanel:modcube",
+                                "onClickMessage": "PanelManager:ClosePanel:modcube_aa",
                                 "textString": "Close",
                                 "hoveredFrame": 3,
                                 "text/style" : "$StyleFEButtonText",

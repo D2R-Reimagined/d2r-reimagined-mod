@@ -1,5 +1,6 @@
 {
-    "type": "GameplayOptionsPanel", "name": "paladin",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "characterbalancing_sorceress",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
@@ -37,7 +38,8 @@
                 "scrollControllerName": "ScrollController"
             },
             "children": [
-                {
+/* >>> COLD SPELLS TITLE >>> */                 
+				{
                     "type": "TableWidget", "name": "OptionsTable",
                     "fields": {
                         "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
@@ -50,7 +52,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Skill Changes",
+                                        "text": "Cold Spells",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -65,13 +67,14 @@
                                 }
                             ]
                         },
+/* >>> COLD SPELLS CHANGES BELOW >>> */ 
                         {
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Holy Bolt and Fist of the Heavens can now damage all enemies.",
+                                        "text": "Frozen Orb casting delay has been slightly decreased",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -98,6 +101,7 @@
                                 }
                             ]
                         }
+/* <<< COLD SPELLS CHANGES OVER <<< */ 
                     ]
                 }
             ]

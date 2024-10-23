@@ -1,5 +1,6 @@
 {
-    "type": "GameplayOptionsPanel", "name": "paladin",
+	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "characterbalancing_amazon",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
@@ -44,13 +45,14 @@
                         "rowHeight": "$OptionsTableRowHeight"
                     },
                     "children": [
-                        {
+/* >>> BOW AND CROSSBOW TITLE >>> */                      
+					  {
                             "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Skill Changes",
+                                        "text": "Bow and Crossbow",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -65,13 +67,14 @@
                                 }
                             ]
                         },
+/* >>> BOW AND CROSSBOW CHANGES BELOW >>> */   
                         {
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Holy Bolt and Fist of the Heavens can now damage all enemies.",
+                                        "text": "Bow and Crossbow skills no longer use quantity of quivers",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -98,6 +101,7 @@
                                 }
                             ]
                         }
+/* <<< BOW AND CROSSBOW CHANGES OVER <<< */   
                     ]
                 }
             ]
