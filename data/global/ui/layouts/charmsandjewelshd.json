@@ -170,7 +170,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Jewels",
                                     "fields": {
-                                        "text": "Jewel Rerolling",
+                                        "text": "Jewel Rerolling & Upgrading",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -250,7 +250,359 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row Jewels",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Jewels",
+                                    "fields": {
+                                        "text": "Any 3 Unique Jewels = Rerolled Unique Jewel (at 100% Character Level)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row Jewel Upgrade",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "9x Magic Jewels = Rare Jewel",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row Jewel Upgrade",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Socketing",
+                                    "fields": {
+                                        "text": "9x Rare Jewels = Unique Jewel", 
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Splash Charm Upgrade",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "Melee Splash Charm Upgrade Path",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row1 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T1 Splash Charm + any Chipped Gem = T2 Splash Charm (req.Lvl 6)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row2 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T2 Splash Charm + El Rune + any Flawed Gem = T3 Splash Charm (req.Lvl 18)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row3 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T3 Splash Charm + Ort Rune + any Flawless Gem = T4 Splash Charm (req.Lvl 24)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row4 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T4 Splash Charm + Shael Rune + 2 any Perfect Gem + Magic Jewel = T5 Splash Charm (req.Lvl 32)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row5 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T5 Splash Charm + Io Rune + 3 any Perfect Gem + 2 Magic Jewels = T6 Splash Charm (req.Lvl 40)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row6 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T6 Splash Charm + Fal Rune + Eld Rune + 4 any Perfect Gem + 3 Magic Jewels = T7 Splash Charm (req.Lvl 48)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row7 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T7 Splash Charm + Pul Rune + Nef Rune + 5 any Perfect Gem + 4 Magic Jewels + 1 Rare Jewel + 1 Magic Small Charm = T8 Splash Charm (req.Lvl 56)",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
                         }
+                        
                     ]
                 }
             ]
