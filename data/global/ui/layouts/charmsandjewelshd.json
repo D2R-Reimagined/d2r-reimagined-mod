@@ -377,7 +377,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T1 Splash Charm + any Chipped Gem = T2 Splash Charm (req.Lvl 6)",
+                                        "text": "T1 Splash Charm + any Chipped Gem = T2 Splash Charm (req.Lvl 3)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -410,7 +410,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T2 Splash Charm + El Rune + any Flawed Gem = T3 Splash Charm (req.Lvl 18)",
+                                        "text": "T2 Splash Charm + El Rune + any Flawed Gem = T3 Splash Charm (req.Lvl 11)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -443,7 +443,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T3 Splash Charm + Ort Rune + any Flawless Gem = T4 Splash Charm (req.Lvl 24)",
+                                        "text": "T3 Splash Charm + Ort Rune + any Flawless Gem = T4 Splash Charm (req.Lvl 21)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -476,7 +476,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T4 Splash Charm + Shael Rune + 2 any Perfect Gem + Magic Jewel = T5 Splash Charm (req.Lvl 32)",
+                                        "text": "T4 Splash Charm + Shael Rune + 2 any Perfect Gem + Magic Jewel = T5 Splash Charm (req.Lvl 29)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -509,7 +509,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T5 Splash Charm + Io Rune + 3 any Perfect Gem + 2 Magic Jewels = T6 Splash Charm (req.Lvl 40)",
+                                        "text": "T5 Splash Charm + Io Rune + 3 any Perfect Gem + 2 Magic Jewels = T6 Splash Charm (req.Lvl 35)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -542,7 +542,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T6 Splash Charm + Fal Rune + Eld Rune + 4 any Perfect Gem + 3 Magic Jewels = T7 Splash Charm (req.Lvl 48)",
+                                        "text": "T6 Splash Charm + Fal Rune + Eld Rune + 4 any Perfect Gem + 3 Magic Jewels = T7 Splash Charm (req.Lvl 41)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -575,7 +575,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "SplashCharms",
                                     "fields": {
-                                        "text": "T7 Splash Charm + Pul Rune + Nef Rune + 5 any Perfect Gem + 4 Magic Jewels + 1 Rare Jewel + 1 Magic Small Charm = T8 Splash Charm (req.Lvl 56)",
+                                        "text": "T7 Splash Charm + Pul Rune + Nef Rune + 5 any Perfect Gem + 4 Magic Jewels = T8 Splash Charm (req.Lvl 45)",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
@@ -601,7 +601,40 @@
                                     }
                                 }
                             ]
-                        }
+                        },
+						{
+                            "type": "TableRowWidget", "name": "Row8 SplashCharms",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "SplashCharms",
+                                    "fields": {
+                                        "text": "T8 Splash Charm + Mal Rune + Eth Rune + 6 Perfect Topaz + 6 Perfect Skulls + Rare Jewel + Magic Small Charm = T9 Splash Charm (req.Lvl 49) [Not available yet]",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                },
+                                {
+                                    "type": "disabled", "name": "Runes",
+                                    "fields": {
+                                        "rect": "$OptionsDropDownRect",
+                                        "background/rect": "$OptionsDropDownBackgroundRect",
+                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
+                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
+                                        "pressedFrame": 1,
+                                        "disabledFrame": 2,
+                                        "hoveredFrame": 3,
+                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
+                                        "states": [ "@Windowed", "@Fullscreen" ],
+                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
+                                        "text/style": "$StyleSettingsCarousel",
+                                        "textColor": "$FontColorLightGold",
+                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
+                                        "tooltipStyle": {
+                                            "showAfterDelay": true
+                                        }
+                                    }
+                                }
+                            ]
+                        },
                         
                     ]
                 }
