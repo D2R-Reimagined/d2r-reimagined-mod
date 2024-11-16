@@ -700,6 +700,28 @@ CONVERT WEAPON - El-Rune & Hel-Rune & any weapon = Weapon Normal	1				100					3	
 CONVERT WEAPON - Eld-Rune & Chipped-Gem (Any) & Low Quality Weapon = Normal Weapon	1				100					3	weap,low	r02	gem0					usetype,nor																																																																																							0
 CONVERT WEAPON - Spear (Any) & Arrows = Javelins	1				0					2	spea	aqv						jav,nor																																																																																							0
 CONVERT WEAPON - Diamond (Any) & Kris & Staff & Belt = Savage Polearm Magic	1				0					4	kri	gemd	staf	belt				pole,mag,pre=191	50		60																																																																																				0
+CORRUPTION ORB STACK - Corruption Orb = Corruption Orb Stack	1				100					1	ka3,qty=1							1ka,qty=1																																																																																							0
+CORRUPTION ORB STACK - Corruption Orb Stack + Corruption Orb	1				100					2	1ka	ka3,qty=1						useitem				item-qty	100		1	1																																																																															0
+CORRUPTION ORB STACK - Corruption Orb Stack + 2 Corruption Orb	1				100					3	1ka	ka3,qty=2						useitem				item-qty	100		2	2																																																																															0
+CORRUPTION ORB STACK - Corruption Orb Stack + 3 Corruption Orb	1				100					4	1ka	ka3,qty=3						useitem				item-qty	100		3	3																																																																															0
+CORRUPTION ORB STACK - Corruption Orb Stack + 4 Corruption Orb	1				100					5	1ka	ka3,qty=4						useitem				item-qty	100		4	4																																																																															0
+CORRUPTION ORB STACK - Corruption Orb Stack + 5 Corruption Orb	1				100					6	1ka	ka3,qty=5						useitem				item-qty	100		5	5																																																																															0
+CORRUPTION ORB UNSTACK - Corruption Orb Stack = Corruption Orb	1				100	18	70	1		1	1ka							ka3																																																																																							0
+CORRUPTION ORB UNSTACK - Corruption Orb Stack - 1 = Corruption Orb	1				100	15	70	1		1	1ka							useitem				item-qty	100		-1	-1																					ka3,qty=1																																																										0
+ORB OF SOCKETING STACK - Orb of Socketing = Orb of Socketing Stack	1				100					1	oos,qty=1							1os,qty=1																																																																																							0
+ORB OF SOCKETING STACK - Orb of Socketing Stack + Orb of Socketing	1				100					2	1os	oos,qty=1						useitem				item-qty	100		1	1																																																																															0
+ORB OF SOCKETING STACK - Orb of Socketing Stack + 2 Orb of Socketing	1				100					3	1os	oos,qty=2						useitem				item-qty	100		2	2																																																																															0
+ORB OF SOCKETING STACK - Orb of Socketing Stack + 3 Orb of Socketing	1				100					4	1os	oos,qty=3						useitem				item-qty	100		3	3																																																																															0
+ORB OF SOCKETING STACK - Orb of Socketing Stack + 4 Orb of Socketing	1				100					5	1os	oos,qty=4						useitem				item-qty	100		4	4																																																																															0
+ORB OF SOCKETING STACK - Orb of Socketing Stack + 5 Orb of Socketing	1				100					6	1os	oos,qty=5						useitem				item-qty	100		5	5																																																																															0
+ORB OF SOCKETING UNSTACK - Orb of Socketing Stack = Orb of Socketing	1				100	18	70	1		1	1os							oos																																																																																							0
+ORB OF SOCKETING UNSTACK - Orb of Socketing Stack - 1 = Orb of Socketing	1				100	15	70	1		1	1os							useitem				item-qty	100		-1	-1																					oos,qty=1																																																										0
+ORB OF CONVERSION STACK - Orb of Conversion = Orb of Conversion Stack	1				100					1	ooc,qty=1							1oc,qty=1																																																																																							0
+ORB OF CONVERSION STACK - Orb of Conversion Stack + Orb of Conversion	1				100					2	1oc	ooc,qty=1						useitem				item-qty	100		1	1																																																																															0
+ORB OF CONVERSION STACK - Orb of Conversion Stack + 2 Orb of Conversion	1				100					3	1oc	ooc,qty=2						useitem				item-qty	100		2	2																																																																															0
+ORB OF CONVERSION STACK - Orb of Conversion Stack + 3 Orb of Conversion	1				100					4	1oc	ooc,qty=3						useitem				item-qty	100		3	3																																																																															0
+ORB OF CONVERSION UNSTACK - Orb of Conversion Stack = Orb of Conversion	1				100	18	70	1		1	1oc							ooc																																																																																							0
+ORB OF CONVERSION UNSTACK - Orb of Conversion Stack - 1 = Orb of Conversion	1				100	15	70	1		1	1oc							useitem				item-qty	100		-1	-1																					ooc,qty=1																																																										0
 GEM UPGRADE - 2 Chipped-Amethysts = Flawed-Amethyst	1				0					2	gcv,qty=2							gfv																																																																																							0
 GEM UPGRADE - 2 Flawed-Amethysts = Amethyst	1				0					2	gfv,qty=2							gsv																																																																																							0
 GEM UPGRADE - 2 Amethysts = Flawless-Amethyst	1				0					2	gsv,qty=2							gzv																																																																																							0
