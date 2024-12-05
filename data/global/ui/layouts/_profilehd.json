@@ -429,24 +429,34 @@
     "SkillHotkeyTextStyle": {
         "fontColor": "$FontColorLightGold",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
-            "offset": { "x": 25, "y": 8 }
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
+            "offset": { "x": 4, "y": 4 }
         },
         "pointSize": "$MediumFontSize",
-        "alignment": { "h": "center" },
-        "options": { "hideOverflow": true }
+        "alignment": { "h": "right" }
     },
-    "SkillHotkeyTextRect": { "x": 90, "y": 12, "width": 320 },
+    "SkillHotkeyTextAltStyle": {
+        "fontColor": "$FontColorLightGold",
+        "dropShadow": {
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
+            "offset": { "x": 4, "y": 4 }
+        },
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "right" },
+        "options": { "lineWrap": true },
+        "spacing": "$MinimumSpacing"
+    },
     "SkillQuantityTextStyle": {
         "fontColor": "$FontColorBlue",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
             "offset": { "x": 4, "y": 4 }
         },
         "pointSize": "$MediumFontSize",
         "alignment": { "h": "left" },
         "options": { "hideOverflow": true }
     },
+    "SkillHotkeyTextRect": { "x": -4, "y": 5, "width": 124, "height": 114 },
     "SkillQuantityTextRect": { "x": 6, "y": 85 },
     "SkillQuantityTextRectController": { "x": 6, "y": 6 },
 
