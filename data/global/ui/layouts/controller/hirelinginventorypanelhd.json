@@ -86,6 +86,17 @@
             }
         },
         {
+            "type": "InventorySlotWidget", "name": "slot_left_hand",
+            "fields": {
+                "rect": { "x": 345, "y": 691, "width": 98, "height": 98 },
+                "cellSize": "$ItemCellSize",
+                "location": "left_hand",
+                "gemSocketFilename": "PANEL\\gemsocket",
+                "backgroundFilename": "PANEL\\Inventory\\Inventory_Paperdoll_Ring",
+                "isHireable": false
+            }
+        },
+        {
             "type": "InventorySlotWidget", "name": "slot_gloves",
             "fields": {
                 "rect": { "x": 108, "y": 591, "width": 196, "height": 196 },
@@ -260,39 +271,39 @@
         {
             "type": "Widget", "name": "Damage",
             "fields": {
-                "rect": { "x": 361, "y": 1183, "width": 270, "height": 65 },
+                "rect": { "x": 361, "y": 1269, "width": 270, "height": 65 }
             },
             "children": [
                 {
                     "type": "TextBoxWidget", "name": "DamageStat",
                     "fields": {
-                        "rect": { "x": 0, "y": 0, "width": 270, "height": 65 },
+                        "rect": { "x": -84, "y": 0, "width": 270, "height": 65 },
                         "style": {
                             "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                             "pointSize": "$MediumFontSize",
-                            "alignment": { "h": "center", "v": "center" }
+                            "alignment": { "h": "right", "v": "center" }
                         }
                     }
                 },
                 {
                     "type": "TextBoxWidget", "name": "DamageStatTop",
                     "fields": {
-                        "rect": { "x": 0, "y": -5, "width": 270, "height": 65 },
+                        "rect": { "x": -84, "y": -5, "width": 270, "height": 65 },
                         "style": {
                             "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                             "pointSize": "$SmallFontSize",
-                            "alignment": { "h": "center", "v": "top" }
+                            "alignment": { "h": "right", "v": "top" }
                         }
                     }
                 },
                 {
                     "type": "TextBoxWidget", "name": "DamageStatBottom",
                     "fields": {
-                        "rect": { "x": 0, "y": -5, "width": 270, "height": 65 },
+                        "rect": { "x": -84, "y": -5, "width": 270, "height": 65 },
                         "style": {
                             "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                             "pointSize": "$SmallFontSize",
-                            "alignment": { "h": "center", "v": "bottom" }
+                            "alignment": { "h": "right", "v": "bottom" }
                         }
                     }
                 }
