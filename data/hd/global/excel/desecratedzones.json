@@ -26,7 +26,7 @@
             },
             "default_hell": {
                 "bound_incl_min": 70,
-                "bound_incl_max": 96,
+                "bound_incl_max": 99,
                 "boost_level": 2,
                 "difficulty_scale": 1,
                 "boost_experience_percent": 25
@@ -52,50 +52,8 @@
             ],
             "zones": [
                 {
-                    /* Burial Grounds, Crypt, and Mausoleum */
+                    /* Act 1 */
                     "id": 1,
-                    /* You can have a MAX of 20 desecrated levels at a time */
-                    "levels": [
-                        {
-                            /* Burial Grounds */
-                            "level_id": 17,
-                            /* Cold Plains */
-                            "waypoint_level_id": 3
-                            /*
-                                The ability to override the defaults on a per-level basis exists.
-                                You can also only include the fields you want to modify.
-                                Leave the following commented out lines in as an example:
-                                "normal": {
-                                    "bound_incl_min": 1,
-                                    "bound_incl_max": 40,
-                                    "boost_level": 2,
-                                    "difficulty_scale": 1,
-                                    "boost_experience_percent": 25
-                                },
-                                "nightmare": {
-                                    "boost_level": 2,
-                                    "difficulty_scale": 1,
-                                    "boost_experience_percent": 25
-                                },
-                                "hell": {
-                                    "bound_incl_min": 66,
-                                    "bound_incl_max": 95,
-                                }
-                                */
-                        },
-                        {
-                            /* The Crypt */
-                            "level_id": 18
-                        },
-                        {
-                            /* Mausoleum */
-                            "level_id": 19
-                        }
-                    ]
-                },
-                {
-                    /* Cathedral and Catacombs */
-                    "id": 2,
                     "levels": [
                         {
                             /* Cathedral */
@@ -118,69 +76,15 @@
                         {
                             /* Catacombs Level 4 */
                             "level_id": 37
-                        }
-                    ]
-                },
-                {
-                    /* Cold Plains and Cave */
-                    "id": 3,
-                    "levels": [
-                        {
-                            /* Cold Plains */
-                            "level_id": 3,
-                            /* Cold Plains */
-                            "waypoint_level_id": 3
-                        },
-                        {
-                            /* Cave Level 1 */
-                            "level_id": 9
-                        },
-                        {
-                            /* Cave Level 2 */
-                            "level_id": 13
-                        }
-                    ]
-                },
-                {
-                    /* Dark Wood and Underground Passage */
-                    "id": 4,
-                    "levels": [
-                        {
-                            /* Dark Wood */
-                            "level_id": 5,
-                            /* Dark Wood */
-                            "waypoint_level_id": 5
-                        },
+                        },                       
                         {
                             /* Underground Passage Level 1 */
                             "level_id": 10
                         },
                         {
-                            /* Underground Passage Level 2  */
-                            "level_id": 14
-                        }
-                    ]
-                },
-                {
-                    /* Blood Moor and Den of Evil */
-                    "id": 5,
-                    "levels": [
-                        {
-                            /* Blood Moor */
-                            "level_id": 2,
-                            /* Rogue Encampment */
-                            "waypoint_level_id": 1
-                        },
-                        {
                             /* Den of Evil */
                             "level_id": 8
-                        }
-                    ]
-                },
-                {
-                    /* Jail and Barracks */
-                    "id": 6,
-                    "levels": [
+                        },
                         {
                             /* Barracks */
                             "level_id": 28,
@@ -198,60 +102,14 @@
                         {
                             /* Jail Level 3 */
                             "level_id": 31
-                        }
-                    ]
-                },
-                {
-                    /* Moo Moo Farm */
-                    "id": 7,
-                    "levels": [
-                        {
-                            /* Moo Moo Farm */
-                            "level_id": 39,
-                            /* Rogue Encampment */
-                            "waypoint_level_id": 1
-                        }
-                    ]
-                },
-                {
-                    /* Stony Field */
-                    "id": 8,
-                    "levels": [
+                        },
                         {
                             /* Stony Field */
                             "level_id": 4,
                             /* Stony Field */
                             "waypoint_level_id": 4
-                        }
-                    ]
-                },
-                {
-                    /* Black Marsh and the Hole */
-                    "id": 9,
-                    "levels": [
-                        {
-                            /* Black Marsh */
-                            "level_id": 6,
-                            /* Black Marsh */
-                            "waypoint_level_id": 6
                         },
                         {
-                            /* Hole Level 1 */
-                            "level_id": 11
-                        },
-                        {
-                            /* Hole Level 2 */
-                            "level_id": 15
-                        }
-                    ]
-                },
-                {
-                    /* Forgotten Tower */
-                    "id": 10,
-                    "levels": [
-                        {
-                            /* Forgotten Tower */
-                            "level_id": 20,
                             /* Black Marsh */
                             "waypoint_level_id": 6
                         },
@@ -274,18 +132,14 @@
                         {
                             /* Tower Cellar Level 5 */
                             "level_id": 25
-                        }
-                    ]
-                },
-                {
-                    /* Pit */
-                    "id": 11,
-                    "levels": [
+                        },
+                        {
+                            /* Tristram */
+                            "level_id": 38
+                        },
                         {
                             /*  Pit Level 1 */
-                            "level_id": 12,
-                            /* Outer Cloister */
-                            "waypoint_level_id": 27
+                            "level_id": 12
                         },
                         {
                             /* Pit Level 2 */
@@ -294,20 +148,8 @@
                     ]
                 },
                 {
-                    /* Tristram */
-                    "id": 12,
-                    "levels": [
-                        {
-                            /* Tristram */
-                            "level_id": 38,
-                            /* Stony Field */
-                            "waypoint_level_id": 4
-                        }
-                    ]
-                },
-                {
-                    /* Lut Gholein Sewers */
-                    "id": 13,
+                    /* Act 2 */
+                    "id": 2,
                     "levels": [
                         {
                             /* Sewers Level 1 */
@@ -318,39 +160,11 @@
                         {
                             /* Sewers Level 2 */
                             "level_id": 48
-                            /* Sewers Level 2 */
-                            /*waypoint_level_id: 48*/
                         },
                         {
                             /* Sewers Level 3 */
                             "level_id": 49
-                        }
-                    ]
-                },
-                {
-                    /* Stony Tomb and Rocky Waste */
-                    "id": 14,
-                    "levels": [
-                        {
-                            /* Rocky Waste */
-                            "level_id": 41,
-                            /* Lut Gholein */
-                            "waypoint_level_id": 40
                         },
-                        {
-                            /* Stony Tomb Level 1 */
-                            "level_id": 55
-                        },
-                        {
-                            /* Stony Tomb Level 2 */
-                            "level_id": 59
-                        }
-                    ]
-                },
-                {
-                    /* Dry Hills and Halls of the Dead */
-                    "id": 15,
-                    "levels": [
                         {
                             /* Dry Hills */
                             "level_id": 42,
@@ -368,34 +182,12 @@
                         {
                             /* Halls of the Dead Level 3 */
                             "level_id": 60
-                        }
-                    ]
-                },
-                {
-                    /* Far Oasis */
-                    "id": 16,
-                    "levels": [
-                        {
-                            /* Far Oasis */
-                            "level_id": 43,
-                            /* Far Oasis */
-                            "waypoint_level_id": 43
-                        }
-                    ]
-                },
-                {
-                    /* Lost City, Valley of Snakes, and Claw Viper temple */
-                    "id": 17,
-                    "levels": [
+                        },
                         {
                             /* Lost City */
                             "level_id": 44,
                             /* Lost City */
                             "waypoint_level_id": 44
-                        },
-                        {
-                            /* Valley of Snakes */
-                            "level_id": 45
                         },
                         {
                             /* Claw Viper Temple Level 1 */
@@ -404,25 +196,7 @@
                         {
                             /* Claw Viper Temple Level 2 */
                             "level_id": 61
-                        }
-                    ]
-                },
-                {
-                    /* Ancient Tunnels */
-                    "id": 18,
-                    "levels": [
-                        {
-                            /* Ancient Tunnels */
-                            "level_id": 65,
-                            /* Lost City */
-                            "waypoint_level_id": 44
-                        }
-                    ]
-                },
-                {
-                    /* Tal Rasha's Tombs */
-                    "id": 19,
-                    "levels": [
+                        },
                         {
                             /* Tal Rasha's Tomb */
                             "level_id": 66,
@@ -456,13 +230,7 @@
                         {
                             /* Tal Rasha's Chamber */
                             "level_id": 73
-                        }
-                    ]
-                },
-                {
-                    /* Arcane Sanctuary */
-                    "id": 20,
-                    "levels": [
+                        },
                         {
                             /* Arcane Sanctuary */
                             "level_id": 74,
@@ -472,36 +240,8 @@
                     ]
                 },
                 {
-                    /* Spider Forest and Spider Cavern */
-                    "id": 21,
-                    "levels": [
-                        {
-                            /* Spider Forest */
-                            "level_id": 76,
-                            /* Spider Forest */
-                            "waypoint_level_id": 76
-                        },
-                        {
-                            /* Spider Cavern */
-                            "level_id": 85
-                        }
-                    ]
-                },
-                {
-                    /* Great Marsh */
-                    "id": 22,
-                    "levels": [
-                        {
-                            /* Great Marsh */
-                            "level_id": 77,
-                            /* Great Marsh */
-                            "waypoint_level_id": 77
-                        }
-                    ]
-                },
-                {
-                    /* Flayer Jungle and Flayer Dungeon */
-                    "id": 23,
+                    /* Act 3 */
+                    "id": 3,
                     "levels": [
                         {
                             /* Flayer Jungle */
@@ -518,16 +258,6 @@
                             "level_id": 89
                         },
                         {
-                            /* Flayer Dungeon Level 3 */
-                            "level_id": 91
-                        }
-                    ]
-                },
-                {
-                    /* Kurast Bazaar and Temples */
-                    "id": 24,
-                    "levels": [
-                        {
                             /* Kurast Bazaar */
                             "level_id": 80,
                             /* Kurast Bazaar */
@@ -540,25 +270,41 @@
                         {
                             /* Disused Fane */
                             "level_id": 95
-                        }
-                    ]
-                },
-                {
-                    /* Travincal */
-                    "id": 25,
-                    "levels": [
+                        },
+                        {
+                            /* Lower Kurast */
+                            "level_id": 79
+                        },
+                        {
+                            /* Upper Kurast */
+                            "level_id": 81
+                        },
+                        {
+                            /* Sewers Level 1 */
+                            "level_id": 92
+                        },
+                        {
+                            /* Forgotten Reliquary */
+                            "level_id": 96
+                        },
+                        {
+                            /* Forgotten Temple */
+                            "level_id": 97 
+                        },
+                        {
+                            /* Ruined Fane */
+                            "level_id": 98 
+                        },
+                        {
+                            /* Disused Reliquary */
+                            "level_id": 99
+                        },
                         {
                             /* Travincal */
                             "level_id": 83,
                             /* Travincal */
                             "waypoint_level_id": 83
-                        }
-                    ]
-                },
-                {
-                    /* Durance of Hate */
-                    "id": 26,
-                    "levels": [
+                        },
                         {
                             /* Durance of Hate Level 1 */
                             "level_id": 100
@@ -576,8 +322,8 @@
                     ]
                 },
                 {
-                    /* Outer Steppes and Plains of Despair */
-                    "id": 27,
+                    /* Act 4 */
+                    "id": 4,
                     "levels": [
                         {
                             /* Outer Steppes */
@@ -588,13 +334,7 @@
                         {
                             /* Plains of Despair */
                             "level_id": 105
-                        }
-                    ]
-                },
-                {
-                    /* City of the Damned and River of Flame */
-                    "id": 28,
-                    "levels": [
+                        },
                         {
                             /* City of the Damned */
                             "level_id": 106,
@@ -604,24 +344,24 @@
                         {
                             /* River of Flame */
                             "level_id": 107
-                        }
-                    ]
-                },
-                {
-                    /* Chaos Sanctuary */
-                    "id": 29,
-                    "levels": [
+                        },
                         {
                             /* Chaos Sanctuary */
                             "level_id": 108,
                             /* River of Flame */
                             "waypoint_level_id": 107
+                        },
+                        {
+                            /* Moo Moo Farm */
+                            "level_id": 39,
+                            /* Rogue Encampment */
+                            "waypoint_level_id": 1
                         }
                     ]
                 },
                 {
-                    /* Bloody Foothills, Frigid Highlands, and Abbadon */
-                    "id": 30,
+                    /* Act 5 */
+                    "id": 5,
                     "levels": [
                         {
                             /* Bloody Foothills */
@@ -636,13 +376,7 @@
                         {
                             /* Abbadon */
                             "level_id": 125
-                        }
-                    ]
-                },
-                {
-                    /* Arreat Plateau  and Pit of Acheron */
-                    "id": 31,
-                    "levels": [
+                        },
                         {
                             /* Arreat Plateau */
                             "level_id": 112,
@@ -652,13 +386,7 @@
                         {
                             /* Pit of Acheron */
                             "level_id": 126
-                        }
-                    ]
-                },
-                {
-                    /* Crystalline Passage and Frozen River */
-                    "id": 32,
-                    "levels": [
+                        },
                         {
                             /* Crystalline Passage */
                             "level_id": 113,
@@ -668,13 +396,7 @@
                         {
                             /* Frozen River */
                             "level_id": 114
-                        }
-                    ]
-                },
-                {
-                    /* Nihlathak's Temple and Halls */
-                    "id": 33,
-                    "levels": [
+                        },
                         {
                             /* Nihlathak's Temple */
                             "level_id": 121,
@@ -692,29 +414,13 @@
                         {
                             /* Halls of Vaught */
                             "level_id": 124
-                        }
-                    ]
-                },
-                {
-                    /* Glacial Trail and Drifter Cavern */
-                    "id": 34,
-                    "levels": [
+                        },
                         {
                             /* Glacial Trail */
                             "level_id": 115,
                             /* Glacial Trail */
                             "waypoint_level_id": 115
                         },
-                        {
-                            /* Drifter Cavern */
-                            "level_id": 116
-                        }
-                    ]
-                },
-                {
-                    /* Ancient's Way and Icy Cellar */
-                    "id": 35,
-                    "levels": [
                         {
                             /* Ancient's Way */
                             "level_id": 118,
@@ -724,13 +430,7 @@
                         {
                             /* Icy Cellar */
                             "level_id": 119
-                        }
-                    ]
-                },
-                {
-                    /* Worldstone Keep, Throne of Destruction, and Worldstone Chamber */
-                    "id": 36,
-                    "levels": [
+                        },
                         {
                             /* Worldstone Keep Level 1 */
                             "level_id": 128
