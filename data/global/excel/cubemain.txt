@@ -677,7 +677,7 @@ RECYCLE ITEM - 3 Set Rings + ID Tome = Rare Jewel	1				100	17	70	1		4	ibk	rin,se
 RECYCLE ITEM - 3 Unique Amulets + ID Tome = Rare Jewel	1				100	17	70	1		4	ibk	amu,uni,qty=3						jew,rar		100																											ibk,qty=100																																																										0
 RECYCLE ITEM - 3 Set Amulets + ID Tome = Rare Jewel	1				100	17	70	1		4	ibk	amu,set,qty=3						jew,rar		100																											ibk,qty=100																																																										0
 CONVERT ARMOR - 1 El-Rune & 1 Chipped-Gem (Any) & 1 Low Quality Armor = Normal Armor	1				100					3	armo,low	r01	gem0					usetype,nor																																																																																							0
-CONVERT ARMOR - El-Rune & Hel-Rune & any armor = Armor Normal	1				100					3	armo,any	r01	r15					usetype,nor	90		99																																																																																				0
+CONVERT ARMOR - El-Rune & Hel-Rune & any armor = Armor Normal	1				100					3	armo,any	r01	r15					usetype,nor			100																																																																																				0
 CONVERT ARMOR - 2 Unique Jewel & Ohm-Rune = forces Armor ethereal	1				100					4	armo,any	jew,uni,qty=2	r27					useitem		100		ethereal	100		1	1																																																																															0
 CONVERT ITEM - Identity Scroll = Splash Charm	0				100					1	isc							cm4																																																																																							0
 CONVERT ITEM - 2 Arrows = Bolts	1				0					2	aqv,qty=2							cqv																																																																																							0
@@ -697,7 +697,7 @@ CONVERT POTION - Healing Potions (Any) & 3 Mana Potions (Any) & 1 Chipped-Gem (A
 CONVERT POTION - Strangling Gas Potion & Healing Potion (Any) = Antidote Potion	1				0					2	gpl	hpot						yps																																																																																							0
 CONVERT SHIELD - 2 Unique Jewel & Ohm-Rune = forces Shield ethereal	1				100					4	shld,any	jew,uni,qty=2	r27					useitem		100		ethereal	100		1	1																																																																															0
 CONVERT WEAPON - 2 Unique Jewel & Ohm-Rune = forces Weapon ethereal	1				100					4	weap,any	jew,uni,qty=2	r27					useitem		100		ethereal	100		1	1																																																																															0
-CONVERT WEAPON - El-Rune & Hel-Rune & any weapon = Weapon Normal	1				100					3	weap,any	r01	r15					usetype,nor	90		99																																																																																				0
+CONVERT WEAPON - El-Rune & Hel-Rune & any weapon = Weapon Normal	1				100					3	weap,any	r01	r15					usetype,nor			100																																																																																				0
 CONVERT WEAPON - Eld-Rune & Chipped-Gem (Any) & Low Quality Weapon = Normal Weapon	1				100					3	weap,low	r02	gem0					usetype,nor																																																																																							0
 CONVERT WEAPON - Spear (Any) & Arrows = Javelins	1				0					2	spea	aqv						jav,nor																																																																																							0
 CONVERT WEAPON - Diamond (Any) & Kris & Staff & Belt = Savage Polearm Magic	1				0					4	kri	gemd	staf	belt				pole,mag,pre=191	50		60																																																																																				0
@@ -1105,10 +1105,6 @@ REPAIR ETHEREAL - Weapon Any & 2 Jewel Unique & Pul = Repaired eth Weapon	1				1
 REPAIR ETHEREAL - Armor Any & 2 Jewel Unique & Pul = Repaired eth Armor	1				100					4	armo,any,eth	jew,uni,qty=2	r21					useitem,rep,dur=255		100																																																																																					0
 REPAIR ETHEREAL - Shield Any & 2 Jewel Unique & Pul = Repaired eth Shield	1				100					4	shld,any,eth	jew,uni,qty=2	r21					useitem,rep,dur=255		100																																																																																					0
 REROLL ITEM - Item Magic & 3 Perfect-Gems (Any)= Re-rolled Magic Item	1				100					4	any,mag	gem4,qty=3						usetype,mag			100																																																																																				0
-REROLL ITEM - Item Magic & 3 Perfect-Gems stack (Any) = Re-rolled Magic Item	1				100					4	any,mag	gemy,qty=3						usetype,mag			100																																																																																				0
-REROLL ITEM - Item Magic & 3 Perfect-Gems stack (Any) = Re-rolled Magic Item	1				100	15	70	3		2	gemy	cm3,mag						useitem			100	item-qty	100		-3	-3																					cm3,mag		100																																																								0
-REROLL ITEM - Item Magic & 3 Perfect-Gems stack (Any) = Re-rolled Magic Item	1				100	15	70	3		2	gemy	cm2,mag						useitem			100	item-qty	100		-3	-3																					cm2,mag		100																																																								0
-REROLL ITEM - Item Magic & 3 Perfect-Gems stack (Any) = Re-rolled Magic Item	1				100	15	70	3		2	gemy	cm1,mag						useitem			100	item-qty	100		-3	-3																					cm1,mag		100																																																								0
 REROLL ITEM - Item Rare & 6 Perfect-Skulls = Low Quality Rare Item	1				0					7	any,rar	skz,qty=6						usetype,rar		40	40																																																																																				0
 REROLL JEWEL - 3 Jewels Magic = Reroll Jewel Magic	1				100					3	jew,mag,qty=3							jew,mag		100																																																																																					0
 REROLL JEWEL - 3 Jewels Rare = Reroll Jewel Rare	1				100					3	jew,rar,qty=3							jew,rar		100																																																																																					0
