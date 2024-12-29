@@ -2,8 +2,8 @@
     "type": "BankPanel", "name": "BankOriginalLayout",
     "fields": {
         "priority": 0,
-        "anchor": {"x":0, "y":0},
-        "rect": {"x":0, "y":0},
+        "anchor": "$LeftPanelAnchor",
+        "rect": { "x": -1535, "y": -502, "width": 0, "height": 0 },
     },
     "children": [
         {
@@ -44,7 +44,7 @@
         {
             "type": "ButtonWidget", "name": "gold_withdraw",
             "fields": {
-                "rect": { "x": 717, "y": 1383 },
+                "rect": { "x": 707, "y": 1373 },
                 "filename": "PANEL\\GoldButton",
                 "hoveredFrame": 3,
                 "tooltipString": "@strGoldWithdraw",
