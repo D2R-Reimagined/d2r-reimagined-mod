@@ -88,7 +88,7 @@ try {
 jsonPath = '../data/local/lng/strings/item-runes.json';
 file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
 json = JSON.parse(file);
-startingIndex = 52000;
+startingIndex = 53500;
 try {
     // Process each object in the array
     json = json.map(obj => {
@@ -115,7 +115,7 @@ try {
 jsonPath = '../data/local/lng/strings/levels.json';
 file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
 json = JSON.parse(file);
-startingIndex = 52500;
+startingIndex = 54000;
 try {
     // Process each object in the array
     json = json.map(obj => {
@@ -142,7 +142,7 @@ try {
 jsonPath = '../data/local/lng/strings/monsters.json';
 file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
 json = JSON.parse(file);
-startingIndex = 53000;
+startingIndex = 55000;
 try {
     // Process each object in the array
     json = json.map(obj => {
@@ -169,7 +169,7 @@ try {
 jsonPath = '../data/local/lng/strings/skills.json';
 file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
 json = JSON.parse(file);
-startingIndex = 54000;
+startingIndex = 56000;
 try {
     // Process each object in the array
     json = json.map(obj => {
@@ -196,7 +196,7 @@ try {
 jsonPath = '../data/local/lng/strings/ui.json';
 file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
 json = JSON.parse(file);
-startingIndex = 55000;
+startingIndex = 57000;
 try {
     // Process each object in the array
     json = json.map(obj => {
