@@ -1,9 +1,13 @@
 {
   "dependencies": {
-    "particles": [],
+    "particles": [
+      {
+          "path": "data/hd/vfx/particles/overlays/object/horadric_light/fx_horadric_light.particles"
+      }
+    ],
     "models": [
       {
-        "path": "data/hd/items/misc/quest/orbofsocketing/soul.model"
+        "path": "data/hd/items/misc/body_part/soul/soul.model"
       }
     ],
     "skeletons": [
@@ -34,7 +38,7 @@
     "other": []
   },
   "type": "UnitDefinition",
-  "name": "orbofsocketing",
+  "name": "soul",
   "entities": [
     {
       "type": "Entity",
@@ -93,7 +97,7 @@
         {
           "type": "ModelDefinitionComponent",
           "name": "component_model_soul",
-          "filename": "data/hd/items/misc/quest/orbofsocketing/soul.model",
+          "filename": "data/hd/items/misc/body_part/soul/soul.model",
           "visibleLayers": 1,
           "lightMask": 19,
           "shadowMask": 3,
