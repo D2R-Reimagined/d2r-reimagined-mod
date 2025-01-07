@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+let skipUntil = 30000;
 /**
  * Item Modifiers
  */
@@ -10,9 +11,7 @@ let startingIndex = 48000; //Replace with whatever u want to start at;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -38,9 +37,7 @@ startingIndex = 49000;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -65,9 +62,7 @@ startingIndex = 50000;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -92,9 +87,7 @@ startingIndex = 53500;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -119,9 +112,7 @@ startingIndex = 54000;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -146,9 +137,7 @@ startingIndex = 55000;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -173,9 +162,7 @@ startingIndex = 56000;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -200,9 +187,7 @@ startingIndex = 57000;
 try {
     // Process each object in the array
     json = json.map(obj => {
-        obj.id = startingIndex;
-        startingIndex++;
-        return obj;
+        return fillInIds(obj);
     });
 
     // Overwrite the file with the modified JSON
@@ -215,4 +200,14 @@ try {
     });
 } catch (parseError) {
     console.error("Error parsing JSON:", parseError);
+}
+
+
+function fillInIds(obj) {
+    if (obj.id < skipUntil) {
+        return obj;
+    }
+    obj.id = startingIndex;
+    startingIndex++;
+    return obj;
 }
