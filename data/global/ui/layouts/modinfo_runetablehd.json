@@ -1,0 +1,2047 @@
+	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+    {
+        "type": "GameplayOptionsPanel", "name": "modinfo_runetable",
+        "fields": {
+            "priority": 9003,
+            "rect": "$OptionsPanelRect",
+            "anchor": { "x": 0.5 },
+            "applySettingsImmediately": false
+        },
+        "children": [
+            {
+                "type": "ImageWidget", "name": "ScrollBarBackground",
+                "fields": {
+                    "rect": "$OptionsScrollBarBackgroundRect",
+                    "anchor": { "x": 1.0 },
+                    "filename": "PauseMenu\\VerticalScroll"
+                },
+                "children": [
+                    {
+                        "type": "ScrollControllerWidget", "name": "ScrollController",
+                        "fields": {
+                            "rect": "$OptionsScrollBarRect",
+                            "anchor": { "x": 1.0 },
+                            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                            "barFilepath": "PauseMenu\\VerticalIndicator",
+                            "viewName": "ScrollView",
+                            "wheelScrollSound": "cursor_scroll_hd",
+                            "buttonScrollSound": "cursor_scroll_hd"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "ScrollViewWidget", "name": "ScrollView",
+                "fields": {
+                    "fitToParent": true,
+                    "scrollControllerName": "ScrollController"
+                },
+                "children": [
+                    {
+                        "type": "TableWidget", "name": "OptionsTable",
+                        "fields": {
+                            "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
+                            "rowHeight": "$OptionsTableRowHeight"
+                        },
+                        "children": [
+                            {
+                                "type": "TableRowWidget", "name": "Upgrading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Upgrading",
+                                        "fields": {
+                                            "text": "Rune Table",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget", "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Name",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "Lvl",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Weapon",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Armor/Helm",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "Shield",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "El (1)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 100, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "11",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+50 AR & +1 Light Radius",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+15 Defense & +1 Light Radius",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+15 Defense & +1 Light Radius",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Eld (2)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "11",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+75% Dmg-Undead & +50 AR Vs. Undead",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Lowers Stamina drain by 15%",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+7% Chance Block",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Tir (3)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "13",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+2 Mana Per Kill",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+2 Mana Per Kill",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+2 Mana Per Kill",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Nef (4)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "13",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Knockback",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+30 Defense Vs. Missile",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+30 Defense Vs. Missile",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Eth (5)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "15",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "-25% Target Defense",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+15% Mana Regen",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+15% Mana Regen",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ith (6)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "15",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+9 Max Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "15% Dmg to Mana",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "15% Dmg to Mana",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Tal (7)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "17",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+75 Poison Dmg / 5s",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+30% Poison Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+35% Poison Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ral (8)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "19",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+5-30 Fire Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+30% Fire Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+35% Fire Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ort (9)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "21",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+1-50 Lightning Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+30% Lightning Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+35% Lightning Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Thul (10)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "23",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+3-14 Cold Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+30% Cold Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+35% Cold Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Amn (11)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "25",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+7% Life Stolen Per Hit",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+14 Thorns Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+14 Thorns Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Sol (12)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "27",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+9 Min Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Dmg Reduced By 7",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "Dmg Reduced By 7",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Shael (13)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "29",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+20% Increased Attack Speed",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+20% Faster Hit Recovery",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+20% Faster Block Rate",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Dol (14)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "31",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+25% Hit Causes Monster To Flee",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+7 Replenish Life",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+7 Replenish Life",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Hel (15)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "-",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "-20% Requirements",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "-15% Requirements",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "-15% Requirements",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Io (16)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "35",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+10 Vitality",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+10 Vitality",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+10 Vitality",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Lum (17)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "37",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+10 Energy",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+10 Energy",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+10 Energy",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ko (18)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "39",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+10 Dexterity",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+10 Dexterity",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+10 Dexterity",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Fal (19)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "41",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+10 Strength",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+10 Strength",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+10 Strength",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Lem (20)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "43",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+75% Extra Gold From Monsters",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+50% Extra Gold From Monsters",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+50% Extra Gold From Monsters",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Pul (21)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "45",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+75% Dmg-Demons & +100 AR Vs. Demons",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+30% Enhanced Defense",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+30% Enhanced Defense",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Um (22)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "47",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+25% Open Wounds",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+15% All Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+22% All Resist ",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Mal (23)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "49",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Prevent Monster Heal",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Magic Dmg Reduced By 7",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "Magic Dmg Reduced By 7",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ist (24)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "51",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+30% Magic Find",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+25% Magic Find",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+25% Magic Find",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Gul (25)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "53",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+20% AR",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5% Max Poison Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+5% Max Poison Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Vex (26)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "55",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+7% Mana Stolen Per Hit",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5% Max Fire Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+5% Max Fire Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ohm (27)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "57",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+50% Enhanced Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5% Max Cold Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+5% Max Cold Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Lo (28)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "59",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+20% Deadly Strike",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5% Max Lightning Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+5% Max Lightning Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Sur (29)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "61",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Hit Blinds Target",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5% Max Mana",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+50 Mana",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Ber (30)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "63",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+20% Crushing Blow",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Dmg Reduced by 8%",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "Dmg Reduced by 8%",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Jah (31)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "65",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Ignore Target's Defense",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5% Max Life",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+50 Life",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Cham (32)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "67",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Freeze Target +3",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Cannot Be Frozen",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "Cannot Be Frozen",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Zod (33)",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Req Lvl",
+                                        "fields": {
+                                            "text": "69",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":120,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "Indestructible",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "Indestructible",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "Indestructible",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    
