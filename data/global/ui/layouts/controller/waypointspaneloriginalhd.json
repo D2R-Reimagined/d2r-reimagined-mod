@@ -4,8 +4,8 @@
         "buttonOffset": 140,
         "rect": "$ConsoleCenterPanelRect",
         "selectableFontColor": "$FontColorGoldYellow",
-        "defaultFontColor": { "r": 105, "g": 105, "b": 105, "a": 255 },
-        "terrorZoneFontColor": { "r": 135, "g": 82, "b": 161, "a": 255 }
+        "currentFontColor": "$FontColorBlue",
+        "terrorZoneFontColor": { "r": 200, "g": 175, "b": 250, "a": 255 }
     },
     "children": [
         {
@@ -27,14 +27,14 @@
             "fields": {
                 "rect": "$LeftHingeRect",
                 "filename": "$LeftHingeSprite"
-            },
+            }
         },
         {
             "type": "TextBoxWidget", "name": "WaypointsTitle",
             "fields": {
                 "rect": "$InGamePanelTitleRect",
                 "text": "@Waypoint",
-                "style": "$StyleTitleBlock",
+                "style": "$StyleTitleBlock"
             }
         },
         {
@@ -54,7 +54,7 @@
                 "onSwitchTabMessage": "Waypoints:SelectTab",
                 "focusOnMouseOver": true,
                 "tabLeftIndicatorPosition": { "x": -46, "y": -1 },
-                "tabRightIndicatorPosition": { "x": 870, "y": -1 },
+                "tabRightIndicatorPosition": { "x": 870, "y": -1 }
             }
         },
         // waypoint button templates
@@ -75,11 +75,11 @@
                         {
                             "type": "ImageWidget", "name": "TerrorZone",
                             "fields": {
-                        				"rect": { "x": 47, "y": 28 },
+                        				"rect": { "x": 31, "y": 31 },
                         				"filename": "PANEL\\Waypoints\\terror_zone_icon",
                         				"visible": false
                         		}
-                        },
+                        }
                     ]
                 },
                 {
@@ -106,8 +106,8 @@
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
-                "onClickMessage": "Waypoints:CloseWaypointPanel",
-            },
-        },
+                "onClickMessage": "Waypoints:CloseWaypointPanel"
+            }
+        }
     ]
 }
