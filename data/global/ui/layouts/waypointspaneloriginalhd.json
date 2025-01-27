@@ -6,7 +6,8 @@
         "buttonOffset": 123,
         "selectableFontColor": "$FontColorGoldYellow",
         "selectableFrames": [ 0, 1 ],
-        "currentFontColor": "$FontColorBlue"
+        "currentFontColor": "$FontColorBlue",
+        "terrorZoneFontColor": { "r": 200, "g": 175, "b": 250, "a": 255 }
     },
     "children": [
         {
@@ -67,7 +68,17 @@
                         "pointSize": "$MediumPanelFontSize",
                         "textColor": "$FontColorLightGray",
                         "text/rect": { "x": 210 }
-                    }
+                    },
+                    "children": [
+                        {
+                            "type": "ImageWidget", "name": "TerrorZone",
+                            "fields": {
+                        				"rect": { "x": 31, "y": 31 },
+                        				"filename": "PANEL\\Waypoints\\terror_zone_icon",
+                        				"visible": false
+                        		}
+                        }
+                    ]
                 },
                 {
                     "type": "ImageWidget", "name": "SelectableButton",
