@@ -1,0 +1,157 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/items/misc/torch/vfx_item_misc_torch_flame.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/items/misc/beacon/beacon/beacon.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_fireballVertPaint.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/items/misc/beacon/beacon/misc_beacon_ALB.texture"
+            },
+            {
+                "path": "data/hd/items/misc/beacon/beacon/misc_beacon_NRM.texture"
+            },
+            {
+                "path": "data/hd/items/misc/beacon/beacon/misc_beacon_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/mask/T_FX_RoundBottomTightGradient01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/items/dropped_items/dropped_items_torch.json"
+            }
+        ],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "obsidian_beacon",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 51560835,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_torch.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.78,
+                        "y": 0.0,
+                        "z": 0.2
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": -0.21643962,
+                        "z": 0.0,
+                        "w": 0.976296
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "torch_flame",
+            "id": 2789581209,
+            "components": [
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "torch_flame_EntityAttachmentDefinition",
+                    "targetbone": "translate"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "new_entity_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/items/misc/torch/vfx_item_misc_torch_flame.particles",
+                    "hardKillOnDestroy": true
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "torch_flame_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 2.25,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_model",
+            "id": 1926656998,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torch",
+                    "filename": "data/hd/items/misc/torch/torch/torch.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}
