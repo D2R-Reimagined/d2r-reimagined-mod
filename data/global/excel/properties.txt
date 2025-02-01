@@ -240,7 +240,7 @@ skill-rand	1	+# to [Skill] ([Class] only)	12	item_singleskill																			
 fade	1		17	fade																												Min #	Max #	Visuals Only	0
 levelreq	1	Required Level: #	1	item_levelreq																												Min #	Max #		0
 ethereal	1	Ethereal	23																													1	1		0
-oskill	1	+# to [Skill]	22	item_nonclassskill																											Skill	Min #	Max #		0
+oskill	1	+# to [Skill]	22	item_nonclassskill			22	item_nonclassskill_display																							Skill	Min #	Max #		0
 state	1		24	state																											State	1	1	Applies a State on the unit	0
 randclassskill	1	+# to [Class] Skill Levels	36	item_addclassskills		3																										Min Class ID	Max Class ID	val1 = # of Skill levels	0
 str%	1		1	item_strength_percent																															0
@@ -364,6 +364,7 @@ pierce-immunity-magic	1	Monster Magic Immunity is Sundered	1	item_pierce_magic_i
 prop_mon_move	1	+#% Faster Run/Walk	1	velocitypercent																												Min %	Max %		0
 charm-property	1	Charm Weight: #	1	charm_weight																												Min #	Max #		0
 stacked/gem	1	# Gems	17	stacked_gem																														Used to determined stack size of gems in storage	0
+oskill_hide	1	+# to [Skill]	22	item_nonclassskill																												Min #	Max #		0
 ravensetwolf	1	+ Max Ravens, - Max Wolves	1	ravensetwolf																												1	1	Increased Max Ravens, decreased Max Wolves	0
 ravendmg	1	+50% Increase Raven Dmg	1	ravendmg																												1	1	+50% to Raven DMG	0
 ravenhits	1	increases max raven hits	1	ravenhits																												1	10	increases max raven hits	0
