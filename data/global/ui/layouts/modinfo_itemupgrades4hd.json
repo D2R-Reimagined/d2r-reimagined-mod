@@ -1,6 +1,6 @@
 {
-	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
-	"type": "GameplayOptionsPanel", "name": "modinfo_generalinformation",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "modinfo_itemupgrades",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
@@ -45,14 +45,13 @@
                         "rowHeight": "$OptionsTableRowHeight"
                     },
                     "children": [
-/* >>> WEBSITE TITLE >>> */
                         {
                             "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Official Website and Wiki",
+                                        "text": "Item Upgrades Info",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -67,33 +66,16 @@
                                 }
                             ]
                         },
-/* >>> WEBSITE LINK BELOW >>> */
                         {
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "www.d2r-reimagined.com",
+                                        "text": "Items can be upgraded with additional stats via cube recipes. A full list of recipes on wiki below",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
-                            ]
-                        },
-						{
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "wiki.d2r-reimagined.com",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
                             ]
                         },
                         {
@@ -102,12 +84,10 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "Consult the git repo or discord for the full Patch Notes and list of changes",
+                                        "text": "wiki.d2r-reimagined.com/en/Items/ItemUpgrades",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -116,12 +96,10 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "https://github.com/D2R-Reimagined/d2r-reimagined-mod/releases",
+                                        "text": "The amount of times you can upgrade an item are limited by item type:",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -130,23 +108,19 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "Discord link found on website home page",
+                                        "text": "2x on rings/amulets, 3x for helms/belts/boots, and 5x for weapons/shields/chest",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
-/* <<< WEBSITE LINK OVER <<< */
-/* >>> GENERAL CHANGES TITLE >>> */
                         {
                             "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "General Changes",
+                                        "text": "Useful Early Game Recipes",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -161,19 +135,16 @@
                                 }
                             ]
                         },
-/* >>> GENERAL CHANGES BELOW >>> */
                         {
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "Max level is 100, 99 for Mercenaries",
+                                        "text": "ring/glove/belt/helm & Topaz & Magic Jewel = +7% Magic Find  & +10% Gold Find",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -182,12 +153,10 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "Level Curve and Difficulty Scaling adjusted for Hell Difficulty",
+                                        "text": "chest/weapon & Topaz & Magic Jewel = +15% Magic Find  & +30% Gold Find",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -196,12 +165,10 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "There are a lot of new recipes to craft, upgrade, and uptier. Hold onto your jewels and check website/wiki.",
+                                        "text": "ring/glove/belt/helm & Diamond & Magic Jewel = +2 All Resistances",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -210,12 +177,10 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "This includes 9 magic jewels -> 1 rare, and 9 rare jewels -> 1 unique jewel                            ",
+                                        "text": "chest & Diamond & Magic Jewel = +3 All Resistances",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -224,12 +189,10 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "The Splash Charm (Collin's Lesser Might) is obtained by killing Corpsefire (Den of Evil) on Normal difficulty. This enables splash damage for many melee skills while slightly lowering damage",
+                                        "text": "ring/belt/glove/chest/boots/helm & Ruby & Magic Jewel = +HP & +HP/kill (varies by item type)",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
                         {
@@ -238,23 +201,55 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "The Splash Charm can also be upgraded to decrease the damage penality. Check the wiki.",
+                                        "text": "Weapon & Ruby & Magic Jewel = +75 Attack Rating",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                                
                             ]
                         },
-/* <<< GENERAL CHANGES OVER <<< */
-/* >>> KNOWN BUGS TITLE >>> */
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Weapon & Sapphire & Magic Jewel = +10% Increased Cast Rate",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Weapon & Emerald & Magic Jewel = +10% Increased Attack Speed",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Weapon & Skull & Magic Jewel = +2% Mana Steal & +2% Life Steal",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
                         {
                             "type": "TableRowWidget", "name": "Upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "Known Bugs",
+                                        "text": "Early Amulet Upgrade Recipes",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -269,55 +264,16 @@
                                 }
                             ]
                         },
-/* >>> KNOWN BUGS LIST BELOW >>> */
                         {
                             "type": "TableRowWidget", "name": "Row upgrading",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-										
-                                        "text": "Andariel and The Hell Forge Quest reward still drop vanilla gems. Cube them with the gem bag",
+                                        "text": "Amulet & Sapphire & Magic Jewel = +2 Random Sorceress Skills",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-                            ]
-                        },
-/* >>> NOT A BUG TILTE >>> */
-                        {
-                            "type": "TableRowWidget", "name": "Upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Not A Bug",
-                                        "style": "$StyleSettingsTitle"
-                                    },
-                                    "children": [
-                                        {
-                                            "type": "ImageWidget", "name": "Divider",
-                                            "fields": {
-                                                "rect": "$OptionsDividerRect",
-                                                "filename": "PauseMenu\\Divider"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-/* >>> NOT A BUG LIST BELOW >>> */
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-
-                                        "text": "Skills with no Class restrictions (Oskills) granted by items are limited to +3 if used by a Class it belongs to. It is hard coded",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-
                             ]
                         },
                         {
@@ -326,15 +282,73 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-
-                                        "text": "Paladins take damage when using necromancy",
+                                        "text": "Amulet & Ruby & Magic Jewel = +2 Random Barbarian Skills",
                                         "style": "$StyleSettingsText"
                                     }
                                 }
-
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Amulet & Topaz & Magic Jewel = +2 Random Assassin Skills",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Amulet & Emerald & Magic Jewel = +2 Random Druid Skills",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Amulet & Skull & Magic Jewel = +2 Random Necromancer Skill",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Amulet & Amethyst & Magic Jewel = +2 Random Amazon Skills",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Amulet & Diamond & Magic Jewel = +2 Random Paladin Skills",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
                             ]
                         }
-/* <<< NOT A BUG LIST OVER <<< */
+
                     ]
                 }
             ]
