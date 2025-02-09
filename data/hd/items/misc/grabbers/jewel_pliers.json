@@ -1,0 +1,109 @@
+{
+  "dependencies": {
+    "particles": [
+    ],
+    "models": [
+      {
+        "path": "data/hd/items/misc/grabbers/jewel_pliers/jewel_pliers.model"
+      }
+    ],
+    "skeletons": [
+      {
+        "path": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+      }
+    ],
+    "animations": [],
+    "textures": [
+      {
+        "path": "data/hd/items/misc/grabbers/jewel_pliers/jewel_pliers_alb.texture"
+      },
+      {
+        "path": "data/hd/items/misc/grabber/jewel_pliers/jewel_pliers_nrm.texture"
+      },
+      {
+        "path": "data/hd/items/misc/grabber/jewel_pliers/jewel_pliers_orm.texture"
+      }
+    ],
+    "physics": [],
+    "json": [
+      {
+        "path": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json"
+      }
+    ],
+    "variantdata": [],
+    "objecteffects": [],
+    "other": []
+  },
+  "type": "UnitDefinition",
+  "name": "jewel_pliers",
+  "entities": [
+    {
+      "type": "Entity",
+      "name": "entity_root",
+      "id": 2337633402,
+      "components": [
+        {
+          "type": "UnitRootComponent",
+          "name": "component_root",
+          "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json",
+          "doNotInheritRotation": false,
+          "rotationOverride": {
+            "x": 0.0,
+            "y": 0.3826834,
+            "z": 0.0,
+            "w": 0.9238795
+          },
+          "doNotUseHDHeight": false,
+          "hideAllMeshWhenInOpenedMode": false,
+          "onCreateEventName": "",
+          "animations": []
+        },
+        {
+          "type": "SkeletonDefinitionComponent",
+          "name": "component_skeleton",
+          "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+        },
+        {
+          "type": "TransformDefinitionComponent",
+          "name": "entity_root_TransformDefinition",
+          "position": {
+            "x": 0.2,
+            "y": 0.0,
+            "z": 0.4
+          },
+          "orientation": {
+            "x": 0.0,
+            "y": 0.8571673,
+            "z": 0.0,
+            "w": 0.5150381
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "inheritOnlyPosition": false
+        }
+      ]
+    },
+    {
+      "type": "Entity",
+      "name": "entity_model",
+      "id": 4288480363,
+      "components": [
+        {
+          "type": "ModelDefinitionComponent",
+          "name": "component_model_mephisto_key",
+          "filename": "data/hd/items/misc/key/mephisto_key/mephisto_key.model",
+          "visibleLayers": 1,
+          "lightMask": 19,
+          "shadowMask": 3,
+          "ghostShadows": false,
+          "floorModel": false,
+          "terrainBlendEnableYUpBlend": false,
+          "terrainBlendMode": 1
+        }
+      ]
+    }
+  ]
+}
