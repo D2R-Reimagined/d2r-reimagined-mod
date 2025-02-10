@@ -79,87 +79,71 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "The amount of times you can upgrade an item are limited by item type:",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 300
                                 }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Upgrades are limited by item type:\n2x for rings & amulets\n3x for helms, belts & boots\n5x for weapons, shields &chest\n10x for 2handers\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "2x on rings/amulets",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 300
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "3x for helms/belts/boots",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "WARNING:\nWhen upgrading set items remove all other set items from your char/put in shared stash\n\nFailing to do so will apply the upgrade to the set bonus and will only be effective when set bonuses are active\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "5x for weapons/shields/chest",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "10x for 2handers",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "WARNING: When upgrading set items remove all other set items from your char/put in shared stash",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Failing to do so will apply the upgrade to the set bonus and will only be effective when set bonuses are active.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -205,123 +189,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Topaz = +12% Magic Find & +25% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 450
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Diamond = +5 All Resistances",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Amulet & Topaz = +12% Magic Find & +25% Gold Find\nAmulet & Diamond = +5 All Resistances\nAmulet & Sapphire =  +25 Mana & +4 Mana / Kill\nAmulet & Sapphire & Magic Jewel = +2 Random Sorceress Skills\nAmulet & Ruby & Magic Jewel = +2 Random Barbarian Skills\nAmulet & Topaz & Magic Jewel = +2 Random Assassin Skills\nAmulet & Emerald & Magic Jewel = +2 Random Druid Skills\nAmulet & Skull & Magic Jewel = +2 Random Necromancer Skill\nAmulet & Amethyst & Magic Jewel = +2 Random Amazon Skills\nAmulet & Diamond & Magic Jewel = +2 Random Paladin Skills\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Sapphire =  +25 Mana & +4 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Sapphire & Magic Jewel = +2 Random Sorceress Skills",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Ruby & Magic Jewel = +2 Random Barbarian Skills",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Topaz & Magic Jewel = +2 Random Assassin Skills",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Emerald & Magic Jewel = +2 Random Druid Skills",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Skull & Magic Jewel = +2 Random Necromancer Skill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Amethyst & Magic Jewel = +2 Random Amazon Skills",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Amulet & Diamond & Magic Jewel = +2 Random Paladin Skills",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -346,51 +244,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Ring & Topaz & Magic Jewel = +10% Magic Find  & +20% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Ring & Ruby & Magic Jewel = +20 HP & +2 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Ring & Topaz & Magic Jewel = +10% Magic Find  & +20% Gold Find\nRing & Ruby & Magic Jewel = +20 HP & +2 Life / Kill\nRing & Sapphire & Magic Jewel = +20 Mana & +2 Mana / Kill\nRing & Diamond & Magic Jewel = +5 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Ring & Sapphire & Magic Jewel = +20 Mana & +2 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Ring & Diamond & Magic Jewel = +5 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -415,51 +299,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Belt & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Belt & Ruby & Magic Jewel = +15 HP & +2 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Belt & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nBelt & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nBelt & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nBelt & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Belt & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Belt & Diamond & Magic Jewel = +2 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -484,63 +354,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Boots & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 280
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Boots & Ruby & Magic Jewel = +15 HP & +2 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Boots & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nBoots & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nBoots & Sapphire & Magic Jewel =  +15 Mana & +2 Mana / Kill\nBoots & Nef Rune & Magic Jewel = +5% Faster Run/Walk\nBoots & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Boots & Sapphire & Magic Jewel =  +15 Mana & +2 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Boots & Nef Rune & Magic Jewel = +5% Faster Run/Walk",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Boots & Diamond & Magic Jewel = +2 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -565,51 +409,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Gloves & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Gloves & Ruby & Magic Jewel = +15 HP & +2 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Gloves & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nGloves & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nGloves & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nGloves & Diamond & Magic Jewel =  +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Gloves & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Gloves & Diamond & Magic Jewel =  +2 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -634,51 +464,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Helms & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Helms & Ruby & Magic Jewel = +15 HP & +2 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Helms & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nHelms & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nHelms & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nHelms & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Helms & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Helms & Diamond & Magic Jewel = +2 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -703,51 +519,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Shield & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Shield & Ruby & Magic Jewel = +15 HP & +2 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Shield & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nShield & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nShield & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nShield & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Shield & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Shield & Diamond & Magic Jewel = +2 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -772,51 +574,37 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Armor & Topaz & Magic Jewel = +15% Magic Find & +30% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Armor & Ruby & Magic Jewel = +15 HP & +4 Life / Kill",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Armor & Topaz & Magic Jewel = +15% Magic Find & +30% Gold Find\nArmor & Ruby & Magic Jewel = +15 HP & +4 Life / Kill\nArmor & Sapphire & Magic Jewel = +15 Mana & +4 Mana / Kill\nArmor & Diamond & Magic Jewel = +3 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Armor & Sapphire & Magic Jewel = +15 Mana & +4 Mana / Kill",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Armor & Diamond & Magic Jewel = +3 All Resistances",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         },
                         {
@@ -841,78 +629,39 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Weapon & Topaz & Magic Jewel = +15% Magic Find  & +30% Gold Find",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 300
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Weapon & Ruby & Magic Jewel = +75 Attack Rating",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Weapon & Topaz & Magic Jewel = +15% Magic Find  & +30% Gold Find\nWeapon & Ruby & Magic Jewel = +75 Attack Rating\nWeapon & Sapphire & Magic Jewel = +10% Increased Cast Rate\nWeapon & Emerald & Magic Jewel = +10% Increased Attack Speed\nWeapon & Skull & Magic Jewel = +2% Mana Steal & +2% Life Steal\nWeapon & Sol-Rune & Magic Jewel = +6 Min Damage & +10 Max Damage\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Weapon & Sapphire & Magic Jewel = +10% Increased Cast Rate",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Weapon & Emerald & Magic Jewel = +10% Increased Attack Speed",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Weapon & Skull & Magic Jewel = +2% Mana Steal & +2% Life Steal",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-                                        "text": "Weapon & Sol-Rune & Magic Jewel = +6 Min Damage & +10 Max Damage",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
+                              }
                             ]
                         }
-                        
                     ]
                 }
             ]
