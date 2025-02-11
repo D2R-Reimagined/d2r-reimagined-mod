@@ -69,59 +69,37 @@
                         },
 /* >>> WEBSITE LINK BELOW >>> */
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "www.d2r-reimagined.com",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 350
                                 }
-                                
-                            ]
-                        },
-						{
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "wiki.d2r-reimagined.com",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "www.d2r-reimagined.com\n\nwiki.d2r-reimagined.com\n\nFull patch notes can be found on the wiki or discord\n\nDiscord link found on website home page\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "Full patch notes can be found on the wiki or discord",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "Discord link found on website home page",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
+                              }
                             ]
                         },
 /* <<< WEBSITE LINK OVER <<< */
@@ -149,87 +127,37 @@
                         },
 /* >>> GENERAL CHANGES BELOW >>> */
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "Max level is 100, 99 for Mercenaries",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 800
                                 }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "Level Curve and Difficulty Scaling adjusted for Hell Difficulty",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Max level is 100, 99 for Mercenaries\n\nLevel Curve and Difficulty Scaling adjusted for Hell Difficulty\n\nThere are a lot of new recipes to craft, upgrade, and uptier. Hold onto your jewels and check website/wiki.\n\nReworked Jewelry reroll recipes to yield the same item type used in the recipe, and increased ring to 100% plvl\n\nThe Splash Charm (Collin's Lesser Might) is obtained by killing Corpsefire (Den of Evil) on Normal difficulty. This enables splash damage for many melee skills while slightly lowering damage\n\nThe Splash Charm can also be upgraded to decrease the damage penality. Check the wiki.\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "There are a lot of new recipes to craft, upgrade, and uptier. Hold onto your jewels and check website/wiki.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "This includes 9 magic jewels -> 1 rare, and 9 rare jewels -> 1 unique jewel                            ",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "The Splash Charm (Collin's Lesser Might) is obtained by killing Corpsefire (Den of Evil) on Normal difficulty. This enables splash damage for many melee skills while slightly lowering damage",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "The Splash Charm can also be upgraded to decrease the damage penality. Check the wiki.",
-                                        "style": "$StyleSettingsText"
-                                    }
-                                }
-                                
+                              }
                             ]
                         },
 /* <<< GENERAL CHANGES OVER <<< */
@@ -257,16 +185,37 @@
                         },
 /* >>> KNOWN BUGS LIST BELOW >>> */
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-										
-                                        "text": "Andariel and The Hell Forge Quest reward still drop vanilla gems. Cube them with the gem bag",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 150
                                 }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Andariel and The Hell Forge Quest reward still drop vanilla gems. Cube them with the gem bag\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
                             ]
                         },
 /* >>> NOT A BUG TILTE >>> */
@@ -293,31 +242,37 @@
                         },
 /* >>> NOT A BUG LIST BELOW >>> */
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
-                            "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-
-                                        "text": "Skills with no Class restrictions (Oskills) granted by items are limited to +3 if used by a Class it belongs to. It is hard coded",
-                                        "style": "$StyleSettingsText"
-                                    }
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
                                 }
-
-                            ]
-                        },
-                        {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            },
                             "children": [
-                                {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
-                                    "fields": {
-
-                                        "text": "Paladins take damage when using necromancy",
-                                        "style": "$StyleSettingsText"
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Skills with no Class restrictions (Oskills) granted by items are limited to +3 if used by a Class it belongs to. It is hard coded\n\nPaladins take damage when using necromancy\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
                                     }
+                                   }
                                 }
-
+                              }
                             ]
                         }
 /* <<< NOT A BUG LIST OVER <<< */
