@@ -1,0 +1,670 @@
+{
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "modinfo_itemupgrades",
+    "fields": {
+        "priority": 9003,
+        "rect": "$OptionsPanelRect",
+        "anchor": { "x": 0.5 },
+        "applySettingsImmediately": false
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "ScrollBarBackground",
+            "fields": {
+                "rect": "$OptionsScrollBarBackgroundRect",
+                "anchor": { "x": 1.0 },
+                "filename": "PauseMenu\\VerticalScroll"
+            },
+            "children": [
+                {
+                    "type": "ScrollControllerWidget", "name": "ScrollController",
+                    "fields": {
+                        "rect": "$OptionsScrollBarRect",
+                        "anchor": { "x": 1.0 },
+                        "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                        "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                        "barFilepath": "PauseMenu\\VerticalIndicator",
+                        "viewName": "ScrollView",
+                        "wheelScrollSound": "cursor_scroll_hd",
+                        "buttonScrollSound": "cursor_scroll_hd"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "ScrollViewWidget", "name": "ScrollView",
+            "fields": {
+                "fitToParent": true,
+                "scrollControllerName": "ScrollController"
+            },
+            "children": [
+                {
+                    "type": "TableWidget", "name": "OptionsTable",
+                    "fields": {
+                        "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
+                        "rowHeight": "$OptionsTableRowHeight"
+                    },
+                    "children": [
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Item Upgrades Info",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Items can be upgraded with additional stats via cube recipes. A comprehensive list can be found on the Wiki",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 300
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Upgrades are limited by item type:\n2x for rings & amulets\n3x for helms, belts, gloves & boots\n5x for 1H weapons, shields & chest\n10x for 2H Weapons\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 300
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "!!WARNING!!:\nWhen upgrading set items remove all other set items from your char/put in shared stash\n\nFailing to do so will apply the upgrade to the set bonus and will only be effective when set bonuses are active\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Useful Early Game Recipes",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Amulets",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 550
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Amulet & Topaz = +12% Magic Find & +25% Gold Find\nAmulet & Diamond & Magic Jewel & Tir-Rune = +5 All Resistances\nAmulet & Sapphire =  +25 Mana & +4 Mana / Kill\nAmulet & Ruby = +25 Life & +4 Life / Kill\nAmulet & Sapphire & Magic Jewel = +2 Random Sorceress Skills\nAmulet & Ruby & Magic Jewel = +2 Random Barbarian Skills\nAmulet & Topaz & Magic Jewel = +2 Random Assassin Skills\nAmulet & Emerald & Magic Jewel = +2 Random Druid Skills\nAmulet & Skull & Magic Jewel = +2 Random Necromancer Skill\nAmulet & Amethyst & Magic Jewel = +2 Random Amazon Skills\nAmulet & Diamond & Magic Jewel = +2 Random Paladin Skills\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Rings",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 350
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Ring & Topaz & Magic Jewel = +10% Magic Find  & +20% Gold Find\nRing & Ruby & Magic Jewel = +20 HP & +2 Life / Kill\nRing & Sapphire & Magic Jewel = +20 Mana & +2 Mana / Kill\nRing & Ruby & Tir-Rune = +10 Fire Resistance\nRing & Sapphire & Tir-Rune = +10 Cold Resistance\nRing & Topaz & Tir-Rune = +10 Lightning Resistance\nRing & Emerald & Tir-Rune = +10 Poison Resistance\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Belts",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Belt & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nBelt & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nBelt & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nBelt & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Boots",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 280
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Boots & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nBoots & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nBoots & Sapphire & Magic Jewel =  +15 Mana & +2 Mana / Kill\nBoots & Nef Rune & Magic Jewel = +5% Faster Run/Walk\nBoots & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Gloves",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Gloves & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nGloves & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nGloves & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nGloves & Diamond & Magic Jewel =  +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Helms",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Helms & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nHelms & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nHelms & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nHelms & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Shields",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 250
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Shield & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nShield & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nShield & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nShield & Diamond & Magic Jewel = +2 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Chest",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 300
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Chest & Topaz & Magic Jewel = +15% Magic Find & +30% Gold Find\nChest & Ruby & Magic Jewel = +15 HP & +4 Life / Kill\nChest & Sapphire & Magic Jewel = +15 Mana & +4 Mana / Kill\nChest & Diamond & Magic Jewel = +3 All Resistances\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Weapons",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 350
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Weapon & Topaz & Magic Jewel = +15% Magic Find  & +30% Gold Find\nWeapon & Ruby & Magic Jewel = +75 Attack Rating\nWeapon & Sapphire & Magic Jewel = +10% Increased Cast Rate\nWeapon & Emerald & Magic Jewel = +10% Increased Attack Speed\nWeapon & Skull & Magic Jewel = +2% Mana Steal & +2% Life Steal\nWeapon & Sol-Rune & Magic Jewel = +6 Min Damage & +10 Max Damage\n",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

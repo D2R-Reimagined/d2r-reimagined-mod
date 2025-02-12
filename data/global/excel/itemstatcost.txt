@@ -90,8 +90,8 @@ item_reducedprices	87			8											18957	203		3	0	7	0																8	19		Modi
 item_doubleherbduration	88		1	2														1	0	1	0																														0
 item_lightradius	89		1	5							1				15	51		4	4	4	4																6	19		ModStr3f	ModStr3f									2	0
 item_lightcolor	90		1	24							1				155	0		5	0	24	0																														0
-item_req_percent	91		1	8											26	-34		8	100	8	100																0	19		ModStr3h	ModStr3h										0
-item_levelreq	92		1															8	20	8	6																0	19		ItemStats2p	ItemStats2p										0
+item_req_percent	91		1	8											26	-34		8	100	8	100																2	19		ModStr3h	ModStr3h										0
+item_levelreq	92		1															8	20	8	6																2	19		ItemStats2p	ItemStats2p										0
 item_fasterattackrate	93	1	1	9											1042	156		7	20	7	20											1					145	19		ModStr4m	ModStr4m									2	0
 item_levelreqpct	94																	7	20	7	64			13			item_levelreq																								0
 lastblockframe	95																	6	20																																0
@@ -180,7 +180,7 @@ conversion_maxhp	177			16																																															0
 unit_dooverlay	178			16																																															0
 attack_vs_montype	179			9	10										19	14		3	0	9		10										1					108	22		ModitemAttratvsM	ModitemAttratvsM										0
 damage_vs_montype	180			9	10										27	17		3	0	9		10										1					106	22		Moditemdamvsm	Moditemdamvsm										0
-fade	181	1		7														14	0	3																															0
+fade	181	1		7														14	0	3																	1	19		fadeDescription	fadeDescription										0
 armor_override_percent	182	1	1	8														14	0																																0
 lasthitreactframe	183																	14	0																																0
 create_season	184																	14	0																																0
@@ -203,7 +203,7 @@ item_charge_noconsume	200			7											106	256				7	0																159	19		Mo
 item_skillongethit	201		1	7	16						1			2	190	256		21	0	7	0	16											damagedinmelee	21	damagedbymissile	21	160	15		ItemExpansiveChanc2	ItemExpansiveChanc2									2	0
 modifierlist_castid	202																																																		0
 unused203	203																	21	0																																0
-item_charged_skill	204		1	30							1			3	401	256		30	0	16	0	16															2	24		ModStre10d	ModStre10d										0
+item_charged_skill	204		1	30							1			3	401	256		30	0	16	0	16															3	24		ModStre10d	ModStre10d										0
 item_noconsume	205		1	7											106	256				7	0											1					4	19		ModStr6j	ModStr6j									2	0
 passive_mastery_noconsume	206		1	9	16															8	0																														0
 passive_mastery_replenish_oncrit	206		1	9	16															8	0																														0
@@ -251,9 +251,9 @@ item_openwounds_perlevel	248		1	6											181	128		6	0	6	0			2	3	level	item_op
 item_kick_damage_perlevel	249		1	6											104	128		6	0	6	0			2	3	level	item_kickdamage					1					120	19		ModStr5e	ModStr5e	increaseswithplaylevelX									0
 item_deadlystrike_perlevel	250		1	6											118	512		6	0	6	0			2	3	level	item_deadlystrike					1					84	19		ModStr5q	ModStr5q	increaseswithplaylevelX								2	0
 item_find_gems_perlevel	251		1																																																0
-item_replenish_durability	252		1	6											1024	1		5	0	6	0																2	11		ModStre9t	ModStre9t										0
-item_replenish_quantity	253		1	6											1024	1		5	0	6	0																3	19		ModStre9v	ModStre9v										0
-item_extra_stack	254		1												99	10		8	0	8	0																4	19		ModStre9i	ModStre9i										0
+item_replenish_durability	252		1	6											1024	1		5	0	6	0																3	11		ModStre9t	ModStre9t										0
+item_replenish_quantity	253		1	6											1024	1		5	0	6	0																4	19		ModStre9v	ModStre9v										0
+item_extra_stack	254		1												99	10		8	0	8	0																5	19		ModStre9i	ModStre9i										0
 item_find_item	255		1																																																0
 item_slash_damage	256		1																													1																			0
 item_slash_damage_percent	257		1																													1																			0
