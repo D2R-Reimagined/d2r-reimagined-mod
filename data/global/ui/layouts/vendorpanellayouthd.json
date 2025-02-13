@@ -8,6 +8,13 @@
     },
     "children": [
         {
+            "type": "TimerWidget", "name": "timer",
+            "fields": {
+                "time": 0,
+                "message": "DialogMessage:ListItemClicked"
+            }
+        },
+        {
             "type": "ClickCatcherWidget", "name": "click_catcher",
             "fields": {
                 "rect": "$PanelClickCatcherRect"
