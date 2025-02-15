@@ -1,9 +1,10 @@
 {
   "dependencies": {
-    "particles": [],
+    "particles": [
+    ],
     "models": [
       {
-        "path": "data/hd/items/misc/body_part/soul/soul.model"
+        "path": "data/hd/items/misc/grabbers/jewel_pliers/jewel_pliers.model"
       }
     ],
     "skeletons": [
@@ -14,19 +15,19 @@
     "animations": [],
     "textures": [
       {
-        "path": "data/hd/items/misc/body_part/spleen/spleen_ALB.texture"
+        "path": "data/hd/items/misc/grabbers/jewel_pliers/jewel_pliers_alb.texture"
       },
       {
-        "path": "data/hd/items/misc/body_part/spleen/spleen_NRM.texture"
+        "path": "data/hd/items/misc/grabber/jewel_pliers/jewel_pliers_nrm.texture"
       },
       {
-        "path": "data/hd/items/misc/body_part/spleen/spleen_ORM.texture"
+        "path": "data/hd/items/misc/grabber/jewel_pliers/jewel_pliers_orm.texture"
       }
     ],
     "physics": [],
     "json": [
       {
-        "path": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json"
+        "path": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json"
       }
     ],
     "variantdata": [],
@@ -34,17 +35,17 @@
     "other": []
   },
   "type": "UnitDefinition",
-  "name": "soul",
+  "name": "jewel_pliers",
   "entities": [
     {
       "type": "Entity",
       "name": "entity_root",
-      "id": 3362269685,
+      "id": 2337633402,
       "components": [
         {
           "type": "UnitRootComponent",
           "name": "component_root",
-          "state_machine_filename": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json",
+          "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json",
           "doNotInheritRotation": false,
           "rotationOverride": {
             "x": 0.0,
@@ -66,15 +67,15 @@
           "type": "TransformDefinitionComponent",
           "name": "entity_root_TransformDefinition",
           "position": {
-            "x": 0.0,
-            "y": -0.7,
-            "z": 0.0
+            "x": 0.2,
+            "y": 0.0,
+            "z": 0.4
           },
           "orientation": {
             "x": 0.0,
-            "y": -0.95105654,
+            "y": 0.8571673,
             "z": 0.0,
-            "w": 0.309017
+            "w": 0.5150381
           },
           "scale": {
             "x": 1.0,
@@ -88,12 +89,12 @@
     {
       "type": "Entity",
       "name": "entity_model",
-      "id": 464378974,
+      "id": 4288480363,
       "components": [
         {
           "type": "ModelDefinitionComponent",
-          "name": "component_model_soul",
-          "filename": "data/hd/items/misc/body_part/soul/soul.model",
+          "name": "component_model_mephisto_key",
+          "filename": "data/hd/items/misc/key/mephisto_key/mephisto_key.model",
           "visibleLayers": 1,
           "lightMask": 19,
           "shadowMask": 3,
