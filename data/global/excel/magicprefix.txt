@@ -617,8 +617,8 @@ Charged1	Dim Vision	100	1	1	6	24	6		nec	6	1	44	charged	71	25	1										ring	cir
 Charged1	Dim Vision	100	1	1	18		20		nec	6	1	44	charged	71	25	12										ring	circ	head	weap									0	0
 Charged1	Weaken	100	1	1	6	24	6		nec	6	1	44	charged	72	25	1										weap	glov	head										0	0
 Charged1	Weaken	100	1	1	24		24		nec	6	1	44	charged	72	25	18										glov	weap	head										0	0
-Charged1	Poison Dagger	100	1	1	6	24	6		nec	6	1	44	charged	73	20	1										weap	head	glov	ring	circ								0	0
-Charged1	Poison Dagger	100	1	1	21		24		nec	6	1	44	charged	73	20	18										glov	ring	circ	weap	head								0	0
+Charged1	Poison Dagger	100	1	1	6	24	6		nec	6	1	44	charged	73	20	1										knif	head	glov	ring	circ								0	0
+Charged1	Poison Dagger	100	1	1	21		24		nec	6	1	44	charged	73	20	18										glov	ring	circ	knif	head								0	0
 Charged1	Corpse Explosion	100	1	1	6	24	6		nec	6	1	44	charged	74	150	1										weap	head											0	0
 Charged1	Corpse Explosion	100	1	1	40		45		nec	6	1	44	charged	74	150	15										weap	head											0	0
 Charged1	Clay Golem	100	1	1	6	24	6		nec	6	1	44	charged	75	20	1										amul	circ	head	weap									0	0
@@ -683,8 +683,8 @@ Charged1	Taunt	100	1	1	6	24	6		bar	6	1	44	charged	137	65	1										phlm	mele			
 Charged1	Taunt	100	1	1	18	51	18		bar	6	1	44	charged	137	65	12										phlm	mele											0	0
 Charged1	Shout	100	1	1	6	24	6		bar	6	1	44	charged	138	25	3										phlm	mele											0	0
 Charged1	Shout	100	1	1	40		45		bar	6	1	44	charged	138	25	20										phlm	mele											0	0
-Charged1	Tectonic Slam	100	1	1	12	30	12		bar	12	1	44	charged	139	55	1										phlm	mele						staf	wand	orb			0	0
-Charged1	Tectonic Slam	100	1	1	24	50	24		bar	12	1	44	charged	139	55	12										mele	phlm											0	0
+Charged1	Tectonic Slam	100	1	1	12	30	12		bar	12	1	44	charged	139	55	1										phlm	slam						staf	wand	orb			0	0
+Charged1	Tectonic Slam	100	1	1	24	50	24		bar	12	1	44	charged	139	55	12										slam	phlm											0	0
 Charged1	Find Item	100	1	1	12	30	12		bar	12	1	44	charged	142	300	1										phlm	mele											0	0
 Charged1	Find Item	100	1	1	50		55		bar	12	1	44	charged	142	300	21										phlm	mele											0	0
 Charged1	Cocentrate	100	1	1	18	36	18		bar	18	1	44	charged	144	300	1										phlm	mele											0	0
@@ -802,21 +802,21 @@ Exhilirating	Regenerate Mana #%	100	1	0	55		52				6	134	regen-mana		20	20							
 Energized	Regenerate Mana #%	100	1	0	40		40				3	134	regen-mana		5	5	regen		5	5						scha												0	0
 Thrilling	Regenerate Mana #%	100	1	0	50		50				2	134	regen-mana		5	10	regen		5	10						scha												0	0
 Breathtaking	Regenerate Mana #%	100	1	0	60		60				1	134	regen-mana		10	20	regen		10	20						scha												0	0
-Refreshing	+# to Mana after each Kill	100	1	0	14	70	10				24	134	mana-kill		3	3										scha												0	0
-Recharging	+# to Mana after each Kill	100	1	0	37		27				12	134	mana-kill		6	6										scha												0	0
-Rejuvinating	+# to Mana after each Kill	100	1	0	55		52				6	134	mana-kill		10	10										scha												0	0
-Leeching	+# Life after each Kill	100	1	0	14	70	10				24	134	heal-kill		3	3										scha												0	0
-Parasitic	+# Life after each Kill	100	1	0	37		27				12	134	heal-kill		6	6										scha												0	0
-Bloodsucking	+# Life after each Kill	100	1	0	55		52				6	134	heal-kill		10	10										scha												0	0
-Consuming	+# to Mana after each Kill	100	1	0	40		40				3	134	mana-kill		3	3	heal-kill		3	3						scha												0	0
-Overflowing	+# to Mana after each Kill	100	1	0	50		50				2	134	mana-kill		4	6	heal-kill		4	6						scha												0	0
-Overwhelming	+# to Mana after each Kill	100	1	0	60		60				1	134	mana-kill		5	10	heal-kill		5	10						scha												0	0
-Fiendish	Life gained after each hit	100	1	0	14	70	10				24	134	healperhit		3	3										scha												0	0
-Malignant	Life gained after each hit	100	1	0	37		27				12	134	healperhit		6	6										scha												0	0
-Vampiric	Life gained after each hit	100	1	0	55		52				6	134	healperhit		10	10										scha												0	0
-Hector	+# to Mana after each Kill	100	1	0	61		61				3	134	mana-kill		3	3	heal-kill		3	3	healperhit		3	3		scha												0	0
-Achilles	+# to Mana after each Kill	100	1	0	71		71				2	134	mana-kill		6	6	heal-kill		4	6	healperhit		4	6		scha												0	0
-Hercules	+# to Mana after each Kill	100	1	0	81		81				1	134	mana-kill		10	10	heal-kill		5	10	healperhit		5	10		scha												0	0
+Refreshing	+# to Mana after each Kill	100	1	0	14	70	10				24	134	mana-kill		1	1										scha												0	0
+Recharging	+# to Mana after each Kill	100	1	0	37		27				12	134	mana-kill		2	2										scha												0	0
+Rejuvinating	+# to Mana after each Kill	100	1	0	55		52				6	134	mana-kill		3	3										scha												0	0
+Leeching	+# Life after each Kill	100	1	0	14	70	10				24	134	heal-kill		1	1										scha												0	0
+Parasitic	+# Life after each Kill	100	1	0	37		27				12	134	heal-kill		2	2										scha												0	0
+Bloodsucking	+# Life after each Kill	100	1	0	55		52				6	134	heal-kill		3	3										scha												0	0
+Consuming	+# to Mana after each Kill	100	1	0	40		40				3	134	mana-kill		1	1	heal-kill		1	1						scha												0	0
+Overflowing	+# to Mana after each Kill	100	1	0	50		50				2	134	mana-kill		1	2	heal-kill		1	2						scha												0	0
+Overwhelming	+# to Mana after each Kill	100	1	0	60		60				1	134	mana-kill		2	3	heal-kill		2	3						scha												0	0
+Fiendish	Life gained after each hit	100	1	0	14	70	10				24	134	healperhit		1	1										scha												0	0
+Malignant	Life gained after each hit	100	1	0	37		27				12	134	healperhit		2	2										scha												0	0
+Vampiric	Life gained after each hit	100	1	0	55		52				6	134	healperhit		3	3										scha												0	0
+Hector	+# to Mana after each Kill	100	1	0	61		61				3	134	mana-kill		1	1	heal-kill		1	1	healperhit		1	1		scha												0	0
+Achilles	+# to Mana after each Kill	100	1	0	71		71				2	134	mana-kill		2	2	heal-kill		2	2	healperhit		2	2		scha												0	0
+Hercules	+# to Mana after each Kill	100	1	0	81		81				1	134	mana-kill		3	3	heal-kill		3	3	healperhit		3	3		scha												0	0
 Warm	Fire Resist +#%	100	1	0	14	70	10				24	133	res-fire		5	5										scha												0	0
 Temperate	Fire Resist +#%	100	1	0	37		27				12	133	res-fire		7	7										scha												0	0
 Summery	Fire Resist +#%	100	1	0	55		52				6	133	res-fire		10	10										scha												0	0
@@ -829,9 +829,9 @@ Freezing	Cold Resist +#%	100	1	0	55		52				6	133	res-cold		10	10										scha		
 Poison	Poison Resist +#%	100	1	0	14	70	10				24	133	res-pois		5	5										scha												0	0
 Toxic	Poison Resist +#%	100	1	0	37		27				12	133	res-pois		7	7										scha												0	0
 Venom	Poison Resist +#%	100	1	0	55		52				6	133	res-pois		10	10										scha												0	0
-Psychic	Magic Resist +#%	100	1	0	14	70	10				24	133	res-mag		5	5										scha												0	0
-Clairvoyant	Magic Resist +#%	100	1	0	37		27				12	133	res-mag		7	7										scha												0	0
-Prophetic	Magic Resist +#%	100	1	0	55		52				6	133	res-mag		10	10										scha												0	0
+Psychic	Magic Resist +#%	100	0	0	14	70	10				24	133	res-mag		5	5										scha												0	0
+Clairvoyant	Magic Resist +#%	100	0	0	37		27				12	133	res-mag		7	7										scha												0	0
+Prophetic	Magic Resist +#%	100	0	0	55		52				6	133	res-mag		10	10										scha												0	0
 Uncontrolled	Fire Resist +#%	100	1	0	40		40				3	133	res-fire		3	5	res-ltng		3	5						scha												0	0
 Fissured	Fire Resist +#%	100	1	0	50		50				2	133	res-fire		4	7	res-ltng		4	7						scha												0	0
 Volcanic	Fire Resist +#%	100	1	0	60		60				1	133	res-fire		5	10	res-ltng		5	10						scha												0	0
@@ -989,9 +989,9 @@ Pestilent	+# to Minimum Poison Damage & +# to Maximum Poison Damage	100	1	1	55		
 Avatar	Adds #-# Fire/Lightning/Cold Damage	100	1	0	45	40	45				6	141	dmg-elem		10	20										lcha												0	0
 Avatar	Adds #-# Fire/Lightning/Cold Damage	100	1	1	65		65				6	141	dmg-elem		20	40										lcha												0	0
 Avatar	Adds #-# Fire/Lightning/Cold Damage	100	1	1	85		85				6	141	dmg-elem		40	60										lcha												0	0
-Hulking	Adds #-# Damage	100	1	0	45	40	45				6	143	dmg-norm		10	20										lcha												0	0
-Hulking	Adds #-# Damage	100	1	1	65		65				6	143	dmg-norm		20	40										lcha												0	0
-Hulking	Adds #-# Damage	100	1	1	85		85				6	143	dmg-norm		40	60										lcha												0	0
+Hulking	Adds #-# Damage	100	0	0	45	40	45				6	143	dmg-norm		10	20										lcha												0	0
+Hulking	Adds #-# Damage	100	0	1	65		65				6	143	dmg-norm		20	40										lcha												0	0
+Hulking	Adds #-# Damage	100	0	1	85		85				6	143	dmg-norm		40	60										lcha												0	0
 Azure	Cold Resist +#%	100	1	0	10	55	10				24	117	res-cold		7	15	dmg-cold		10	15						lcha												0	0
 Lapis	Cold Resist +#%	100	1	0	25		20				12	117	res-cold		16	20	dmg-cold		15	20						lcha												0	0
 Cobalt	Cold Resist +#%	100	1	1	45		40				6	117	res-cold		21	25	dmg-cold		20	25						lcha												0	0
