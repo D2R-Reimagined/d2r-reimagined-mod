@@ -3,7 +3,7 @@ Gold			1					4	"gld,mul=1024"	1																									0
 Gold 1.5x			1					4	"gld,mul=1536"	1																									0
 Gold 2x			1					4	"gld,mul=2048"	1																									0
 Gold 2.5x			1					4	"gld,mul=2560"	1																									0
-Conversion Orb			1					0	1oc	1	1oa	1																							0
+Conversion Orb			1					0	1oc	1	1oa	1																						1	0
 Socket Orb			1					98	1os	1																								1	0
 Corruption Orb			1					98	1ka	1																								1	0
 Shadow Orb			1					400	1oe	1																								1	0
@@ -586,6 +586,11 @@ Act 4 Uitem B	14	29	1	800	800	800	1024	10	Act 4 Equip B	58	Act 4 Good	4									
 Act 5 Uitem A	14	32	1	800	800	800	1024	10	Act 5 Equip A	58	Act 5 Good	4																							0
 Act 5 Uitem B	14	34	1	800	800	800	1024	10	Act 5 Equip B	58	Act 5 Good	4																							0
 Act 5 Uitem C	14	36	1	800	800	800	1024	10	Act 5 Equip C	58	Act 5 Good	4																							0
+Act 1 LT Item	14	9	1	800	800	800	1024	10	Act 1 Equip C	58	Act 1 Good	4																							0
+Act 2 LT Item	14	18	1	800	800	800	1024	10	Act 2 Equip C	58	Act 3 Good	4																							0
+Act 3 LT Item	14	24	1	800	800	800	1024	10	Act 3 Equip C	58	Act 3 Good	4																							0
+Act 4 LT Item	14	29	1	800	800	800	1024	10	Act 4 Equip B	58	Act 4 Good	4																							0
+Act 5 LT Item	14	36	1	800	800	800	1024	10	Act 5 Equip C	58	Act 5 Good	4																							0
 Act 1 (N) Uitem A	14	38	1	800	800	800	1024	10	Act 1 (N) Equip A	58	Act 1 (N) Good	4																							0
 Act 1 (N) Uitem B	14	40	1	800	800	800	1024	10	Act 1 (N) Equip B	58	Act 1 (N) Good	4																							0
 Act 1 (N) Uitem C	14	41	1	800	800	800	1024	10	Act 1 (N) Equip B	58	Act 1 (N) Good	4																							0
@@ -600,6 +605,11 @@ Act 4 (N) Uitem B	14	54	1	800	800	800	1024	10	Act 4 (N) Equip B	58	Act 4 (N) Goo
 Act 5 (N) Uitem A	14	57	1	800	800	800	1024	10	Act 5 (N) Equip A	58	Act 5 (N) Good	4																							0
 Act 5 (N) Uitem B	14	60	1	800	800	800	1024	10	Act 5 (N) Equip B	58	Act 5 (N) Good	4																							0
 Act 5 (N) Uitem C	14	62	1	800	800	800	1024	10	Act 5 (N) Equip C	58	Act 5 (N) Good	4																							0
+Act 1 (N) LT Item	14	41	1	800	800	800	1024	10	Act 1 (N) Equip B	58	Act 1 (N) Good	4																							0
+Act 2 (N) LT Item	14	45	1	800	800	800	1024	10	Act 2 (N) Equip B	58	Act 2 (N) Good	4																							0
+Act 3 (N) LT Item	14	50	1	800	800	800	1024	10	Act 3 (N) Equip B	58	Act 3 (N) Good	4																							0
+Act 4 (N) LT Item	14	54	1	800	800	800	1024	10	Act 4 (N) Equip B	58	Act 4 (N) Good	4																							0
+Act 5 (N) LT Item	14	62	1	800	800	800	1024	10	Act 5 (N) Equip C	58	Act 5 (N) Good	4																							0
 Act 1 (H) Uitem A	14	63	2	800	800	800	1024	10	Act 1 (H) Equip A	48	Act 1 (H) Good	14																							0
 Act 1 (H) Uitem B	14	66	2	800	800	800	1024	10	Act 1 (H) Equip B	48	Act 1 (H) Good	14																							0
 Act 1 (H) Uitem C	14	68	2	800	800	800	1024	10	Act 1 (H) Equip B	48	Act 1 (H) Good	14																							0
@@ -614,34 +624,39 @@ Act 4 (H) Uitem B	14	80	2	800	800	800	1024	10	Act 4 (H) Equip B	48	Act 4 (H) Goo
 Act 5 (H) Uitem A	14	81	2	800	800	800	1024	10	Act 5 (H) Equip A	48	Act 5 (H) Good	14																							0
 Act 5 (H) Uitem B	14	83	2	800	800	800	1024	10	Act 5 (H) Equip B	48	Act 5 (H) Good	14																							0
 Act 5 (H) Uitem C	14	85	2	800	800	800	1024	10	Act 5 (H) Equip C	48	Act 5 (H) Good	14																							0
-Act 1 Unique A	15	0	-3					10	Act 1 Uitem A	2	Act 1 Cpot A	1																							0
-Act 1 Unique B	15	5	-3					10	Act 1 Uitem B	2	Act 1 Cpot B	1																							0
-Act 1 Unique C	15	9	-3					10	Act 1 Uitem C	2	Act 1 Cpot C	1																							0
-Act 2 Unique A	15	12	-3					10	Act 2 Uitem A	2	Act 2 Cpot A	1																							0
-Act 2 Unique B	15	15	-3					10	Act 2 Uitem B	2	Act 2 Cpot B	1																							0
-Act 2 Unique C	15	18	-3					10	Act 2 Uitem C	2	Act 2 Cpot C	1																							0
-Act 3 Unique A	15	20	-3					10	Act 3 Uitem A	2	Act 3 Cpot A	1																							0
-Act 3 Unique B	15	22	-3					10	Act 3 Uitem B	2	Act 3 Cpot B	1																							0
-Act 3 Unique C	15	24	-3					10	Act 3 Uitem C	2	Act 3 Cpot C	1																							0
-Act 4 Unique A	15	26	-3					10	Act 4 Uitem A	2	Act 4 Cpot A	1																							0
-Act 4 Unique B	15	29	-3					10	Act 4 Uitem B	2	Act 4 Cpot B	1																							0
-Act 5 Unique A	15	32	-3					10	Act 5 Uitem A	2	Act 5 Cpot A	1																							0
-Act 5 Unique B	15	34	-3					10	Act 5 Uitem B	2	Act 5 Cpot B	1																							0
-Act 5 Unique C	15	36	-3					10	Act 5 Uitem C	2	Act 5 Cpot C	1																							0
-Act 1 (N) Unique A	15	38	-3					10	Act 1 (N) Uitem A	2	Act 1 (N) Cpot A	1																							0
-Act 1 (N) Unique B	15	40	-3					10	Act 1 (N) Uitem B	2	Act 1 (N) Cpot B	1																							0
-Act 1 (N) Unique C	15	41	-3					10	Act 1 (N) Uitem C	2	Act 1 (N) Cpot C	1																							0
-Act 2 (N) Unique A	15	42	-3					10	Act 2 (N) Uitem A	2	Act 2 (N) Cpot A	1																							0
-Act 2 (N) Unique B	15	44	-3					10	Act 2 (N) Uitem B	2	Act 2 (N) Cpot B	1																							0
-Act 2 (N) Unique C	15	45	-3					10	Act 2 (N) Uitem C	2	Act 2 (N) Cpot C	1																							0
-Act 3 (N) Unique A	15	46	-3					10	Act 3 (N) Uitem A	2	Act 3 (N) Cpot A	1																							0
-Act 3 (N) Unique B	15	48	-3					10	Act 3 (N) Uitem B	2	Act 3 (N) Cpot B	1																							0
-Act 3 (N) Unique C	15	50	-3					10	Act 3 (N) Uitem C	2	Act 3 (N) Cpot C	1																							0
-Act 4 (N) Unique A	15	51	-3					10	Act 4 (N) Uitem A	2	Act 4 (N) Cpot A	1																							0
-Act 4 (N) Unique B	15	54	-3					10	Act 4 (N) Uitem B	2	Act 4 (N) Cpot B	1																							0
-Act 5 (N) Unique A	15	57	-3					10	Act 5 (N) Uitem A	2	Act 5 (N) Cpot A	1																							0
-Act 5 (N) Unique B	15	60	-3					10	Act 5 (N) Uitem B	2	Act 5 (N) Cpot B	1																							0
-Act 5 (N) Unique C	15	62	-3					10	Act 5 (N) Uitem C	2	Act 5 (N) Cpot C	1																							0
+Act 1 (H) LT Item	14	68	1	800	800	800	1024	10	Act 1 (H) Equip B	48	Act 1 (H) Good	14																							0
+Act 2 (H) LT Item	14	72	1	800	800	800	1024	10	Act 2 (H) Equip B	48	Act 2 (H) Good	14																							0
+Act 3 (H) LT Item	14	77	1	800	800	800	1024	10	Act 3 (H) Equip B	48	Act 3 (H) Good	14																							0
+Act 4 (H) LT Item	14	80	1	800	800	800	1024	10	Act 4 (H) Equip B	48	Act 4 (H) Good	14																							0
+Act 5 (H) LT Item	14	85	1	800	800	800	1024	10	Act 5 (H) Equip C	48	Act 5 (H) Good	14																							0
+Act 1 Unique A	15	0	-2					10	Act 1 Uitem A	1	Act 1 Cpot A	1																							0
+Act 1 Unique B	15	5	-2					10	Act 1 Uitem B	1	Act 1 Cpot B	1																							0
+Act 1 Unique C	15	9	-2					10	Act 1 Uitem C	1	Act 1 Cpot C	1																							0
+Act 2 Unique A	15	12	-2					10	Act 2 Uitem A	1	Act 2 Cpot A	1																							0
+Act 2 Unique B	15	15	-2					10	Act 2 Uitem B	1	Act 2 Cpot B	1																							0
+Act 2 Unique C	15	18	-2					10	Act 2 Uitem C	1	Act 2 Cpot C	1																							0
+Act 3 Unique A	15	20	-2					10	Act 3 Uitem A	1	Act 3 Cpot A	1																							0
+Act 3 Unique B	15	22	-2					10	Act 3 Uitem B	1	Act 3 Cpot B	1																							0
+Act 3 Unique C	15	24	-2					10	Act 3 Uitem C	1	Act 3 Cpot C	1																							0
+Act 4 Unique A	15	26	-2					10	Act 4 Uitem A	1	Act 4 Cpot A	1																							0
+Act 4 Unique B	15	29	-2					10	Act 4 Uitem B	1	Act 4 Cpot B	1																							0
+Act 5 Unique A	15	32	-2					10	Act 5 Uitem A	1	Act 5 Cpot A	1																							0
+Act 5 Unique B	15	34	-2					10	Act 5 Uitem B	1	Act 5 Cpot B	1																							0
+Act 5 Unique C	15	36	-2					10	Act 5 Uitem C	1	Act 5 Cpot C	1																							0
+Act 1 (N) Unique A	15	38	-2					10	Act 1 (N) Uitem A	1	Act 1 (N) Cpot A	1																							0
+Act 1 (N) Unique B	15	40	-2					10	Act 1 (N) Uitem B	1	Act 1 (N) Cpot B	1																							0
+Act 1 (N) Unique C	15	41	-2					10	Act 1 (N) Uitem C	1	Act 1 (N) Cpot C	1																							0
+Act 2 (N) Unique A	15	42	-2					10	Act 2 (N) Uitem A	1	Act 2 (N) Cpot A	1																							0
+Act 2 (N) Unique B	15	44	-2					10	Act 2 (N) Uitem B	1	Act 2 (N) Cpot B	1																							0
+Act 2 (N) Unique C	15	45	-2					10	Act 2 (N) Uitem C	1	Act 2 (N) Cpot C	1																							0
+Act 3 (N) Unique A	15	46	-2					10	Act 3 (N) Uitem A	1	Act 3 (N) Cpot A	1																							0
+Act 3 (N) Unique B	15	48	-2					10	Act 3 (N) Uitem B	1	Act 3 (N) Cpot B	1																							0
+Act 3 (N) Unique C	15	50	-2					10	Act 3 (N) Uitem C	1	Act 3 (N) Cpot C	1																							0
+Act 4 (N) Unique A	15	51	-2					10	Act 4 (N) Uitem A	1	Act 4 (N) Cpot A	1																							0
+Act 4 (N) Unique B	15	54	-2					10	Act 4 (N) Uitem B	1	Act 4 (N) Cpot B	1																							0
+Act 5 (N) Unique A	15	57	-2					10	Act 5 (N) Uitem A	1	Act 5 (N) Cpot A	1																							0
+Act 5 (N) Unique B	15	60	-2					10	Act 5 (N) Uitem B	1	Act 5 (N) Cpot B	1																							0
+Act 5 (N) Unique C	15	62	-2					10	Act 5 (N) Uitem C	1	Act 5 (N) Cpot C	1																							0
 Act 1 (H) Unique A	15	63	-3					10	Act 1 (H) Uitem A	2	Act 1 (H) Cpot A	1																							0
 Act 1 (H) Unique B	15	66	-3					10	Act 1 (H) Uitem B	2	Act 1 (H) Cpot B	1																							0
 Act 1 (H) Unique C	15	68	-3					10	Act 1 (H) Uitem C	2	Act 1 (H) Cpot C	1																							0
@@ -1211,6 +1226,16 @@ Act 4 Super Cx	19	32	-3	512	654	972	1024	0	Act 4 Uitem B	2	Act 4 Cpot B	1							
 Act 5 Super Ax	19	34	-3	512	654	972	1024	0	Act 5 Uitem A	2	Act 5 Cpot A	1																							0
 Act 5 Super Bx	19	36	-3	512	654	972	1024	0	Act 5 Uitem B	2	Act 5 Cpot B	1																							0
 Act 5 Super Cx	19	38	-3	512	654	972	1024	0	Act 5 Uitem C	2	Act 5 Cpot C	1																							0
+Act 1 LT	40	9	-3	512	654	972	1024	0	Act 1 LT Item	2	Act 1 Cpot C	1																							0
+Act 2 LT	40	18	-3	512	654	972	1024	0	Act 2 LT Item	2	Act 2 Cpot C	1																							0
+Act 3 LT	40	24	-3	512	654	972	1024	0	Act 3 LT Item	2	Act 3 Cpot C	1																							0
+Act 4 LT	40	32	-3	512	654	972	1024	0	Act 4 LT Item	2	Act 4 Cpot B	1																							0
+Act 5 LT	40	38	-3	512	654	972	1024	0	Act 5 LT Item	2	Act 5 Cpot C	1																							0
+Act 1 Swarm	41	9	-2	512	654	972	1024	0	Act 1 LT Item	1	Act 1 Cpot C	1																							0
+Act 2 Swarm	41	18	-2	512	654	972	1024	0	Act 2 LT Item	1	Act 2 Cpot C	1																							0
+Act 3 Swarm	41	24	-2	512	654	972	1024	0	Act 3 LT Item	1	Act 3 Cpot C	1																							0
+Act 4 Swarm	41	32	-2	512	654	972	1024	0	Act 4 LT Item	1	Act 4 Cpot B	1																							0
+Act 5 Swarm	41	38	-2	512	654	972	1024	0	Act 5 LT Item	1	Act 5 Cpot C	1																							0
 Act 1 (N) Super Ax	19	40	-3	512	654	972	1024	0	Act 1 (N) Uitem A	2	Act 1 (N) Cpot A	1																							0
 Act 1 (N) Super Bx	19	41	-3	512	654	972	1024	0	Act 1 (N) Uitem B	2	Act 1 (N) Cpot B	1																							0
 Act 1 (N) Super Cx	19	42	-3	512	654	972	1024	0	Act 1 (N) Uitem C	2	Act 1 (N) Cpot C	1																							0
@@ -1226,6 +1251,16 @@ Act 4 (N) Super Cx	19	60	-3	512	654	972	1024	0	Act 4 (N) Uitem B	2	Act 4 (N) Cpo
 Act 5 (N) Super Ax	19	62	-3	512	654	972	1024	0	Act 5 (N) Uitem A	2	Act 5 (N) Cpot A	1																							0
 Act 5 (N) Super Bx	19	63	-3	512	654	972	1024	0	Act 5 (N) Uitem B	2	Act 5 (N) Cpot B	1																							0
 Act 5 (N) Super Cx	19	66	-3	512	654	972	1024	0	Act 5 (N) Uitem C	2	Act 5 (N) Cpot C	1																							0
+Act 1 (N) LT	40	42	-3	512	654	972	1024	0	Act 1 (N) LT Item	2	Act 1 (N) Cpot C	1																							0
+Act 2 (N) LT	40	46	-3	512	654	972	1024	0	Act 2 (N) LT Item	2	Act 2 (N) Cpot C	1																							0
+Act 3 (N) LT	40	51	-3	512	654	972	1024	0	Act 3 (N) LT Item	2	Act 3 (N) Cpot C	1																							0
+Act 4 (N) LT	40	60	-3	512	654	972	1024	0	Act 4 (N) LT Item	2	Act 4 (N) Cpot B	1																							0
+Act 5 (N) LT	40	66	-3	512	654	972	1024	0	Act 5 (N) LT Item	2	Act 5 (N) Cpot C	1																							0
+Act 1 (N) Swarm	41	42	-2	512	654	972	1024	0	Act 1 (N) LT Item	1	Act 1 (N) Cpot C	1																							0
+Act 2 (N) Swarm	41	46	-2	512	654	972	1024	0	Act 2 (N) LT Item	1	Act 2 (N) Cpot C	1																							0
+Act 3 (N) Swarm	41	51	-2	512	654	972	1024	0	Act 3 (N) LT Item	1	Act 3 (N) Cpot C	1																							0
+Act 4 (N) Swarm	41	60	-2	512	654	972	1024	0	Act 4 (N) LT Item	1	Act 4 (N) Cpot B	1																							0
+Act 5 (N) Swarm	41	66	-2	512	654	972	1024	0	Act 5 (N) LT Item	1	Act 5 (N) Cpot C	1																							0
 Act 1 (H) Super Ax	19	67	-3	512	654	972	1024	0	Act 1 (H) Uitem A	2	Act 1 (H) Cpot A	1																							0
 Act 1 (H) Super Bx	19	67	-3	512	654	972	1024	0	Act 1 (H) Uitem B	2	Act 1 (H) Cpot B	1																							0
 Act 1 (H) Super Cx	19	68	-3	512	654	972	1024	0	Act 1 (H) Uitem C	2	Act 1 (H) Cpot C	1																							0
@@ -1241,6 +1276,16 @@ Act 4 (H) Super Cx	19	87	-3	512	654	972	1024	0	Act 4 (H) Uitem B	2	Act 4 (H) Cpo
 Act 5 (H) Super Ax	19	90	-3	512	654	972	1024	0	Act 5 (H) Uitem A	2	Act 5 (H) Cpot A	1																							0
 Act 5 (H) Super Bx	19	93	-3	512	654	972	1024	0	Act 5 (H) Uitem B	2	Act 5 (H) Cpot B	1																							0
 Act 5 (H) Super Cx	19	96	-3	512	654	972	1024	0	Act 5 (H) Uitem C	2	Act 5 (H) Cpot C	1																							0
+Act 1 (H) LT	40	68	-3	512	654	972	1024	0	Act 1 (H) LT Item	2	Act 1 (H) Cpot C	1																							0
+Act 2 (H) LT	40	72	-3	512	654	972	1024	0	Act 2 (H) LT Item	2	Act 2 (H) Cpot C	1																							0
+Act 3 (H) LT	40	78	-3	512	654	972	1024	0	Act 3 (H) LT Item	2	Act 3 (H) Cpot C	1																							0
+Act 4 (H) LT	40	87	-3	512	654	972	1024	0	Act 4 (H) LT Item	2	Act 4 (H) Cpot B	1																							0
+Act 5 (H) LT	40	96	-3	512	654	972	1024	0	Act 5 (H) LT Item	2	Act 5 (H) Cpot C	1																							0
+Act 1 (H) Swarm	41	68	-2	512	654	972	1024	0	Act 1 (H) LT Item	1	Act 1 (H) Cpot C	1																							0
+Act 2 (H) Swarm	41	72	-2	512	654	972	1024	0	Act 2 (H) LT Item	1	Act 2 (H) Cpot C	1																							0
+Act 3 (H) Swarm	41	78	-2	512	654	972	1024	0	Act 3 (H) LT Item	1	Act 3 (H) Cpot C	1																							0
+Act 4 (H) Swarm	41	87	-2	512	654	972	1024	0	Act 4 (H) LT Item	1	Act 4 (H) Cpot B	1																							0
+Act 5 (H) Swarm	41	96	-2	512	654	972	1024	0	Act 5 (H) LT Item	1	Act 5 (H) Cpot C	1																							0
 Cow King Item			5					0	Act 1 Uitem C	3	Act 1 Melee B	6																							0
 Cow King Item Desecrated A			5					0	Act 4 Uitem B	3	Act 4 Melee B	6																							0
 Cow King Item Desecrated B			5					0	Act 1 (N) Uitem A	3	Act 1 (N) Melee A	6																							0
@@ -1355,20 +1400,20 @@ Treehead Woodfist (H)			-3					0	Act 1 (H) Super B	2	tws	1																						
 Snapchip			-1					0	Act 5 Super B	1																									0
 Snapchip (N)			-1					0	Act 5 (N) Super B	1																									0
 Snapchip (H)			-2					0	Act 5 (H) Super B	1	scs	1																							0
-Act 1 (N) Champ A Desecrated	36	68	-2					0	Sunder Charms	1	Act 1 (N) Champ A	1																							0
-Act 1 (N) Champ B Desecrated	36	68	-2					0	Sunder Charms	1	Act 1 (N) Champ B	1																							0
-Act 1 (N) Champ C Desecrated	36	68	-2					0	Sunder Charms	1	Act 1 (N) Champ C	1																							0
-Act 2 (N) Champ A Desecrated	36	71	-2					0	Sunder Charms	1	Act 2 (N) Champ A	1																							0
-Act 2 (N) Champ B Desecrated	36	71	-2					0	Sunder Charms	1	Act 2 (N) Champ B	1																							0
-Act 2 (N) Champ C Desecrated	36	71	-2					0	Sunder Charms	1	Act 2 (N) Champ C	1																							0
-Act 3 (N) Champ A Desecrated	36	74	-2					0	Sunder Charms	1	Act 3 (N) Champ A	1																							0
-Act 3 (N) Champ B Desecrated	36	74	-2					0	Sunder Charms	1	Act 3 (N) Champ B	1																							0
-Act 3 (N) Champ C Desecrated	36	74	-2					0	Sunder Charms	1	Act 3 (N) Champ C	1																							0
-Act 4 (N) Champ A Desecrated	36	77	-2					0	Sunder Charms	1	Act 4 (N) Champ A	1																							0
-Act 4 (N) Champ B Desecrated	36	77	-2					0	Sunder Charms	1	Act 4 (N) Champ B	1																							0
-Act 5 (N) Champ A Desecrated	36	77	-2					0	Sunder Charms	1	Act 5 (N) Champ A	1																							0
-Act 5 (N) Champ B Desecrated	36	80	-2					0	Sunder Charms	1	Act 5 (N) Champ B	1																							0
-Act 5 (N) Champ C Desecrated	36	80	-2					0	Sunder Charms	1	Act 5 (N) Champ C	1																							0
+Act 1 (N) Champ A Desecrated	36	68	-3					0	Sunder Charms	1	Act 1 (N) Champ A	1	Socket Orb	1																					0
+Act 1 (N) Champ B Desecrated	36	68	-3					0	Sunder Charms	1	Act 1 (N) Champ B	1	Socket Orb	1																					0
+Act 1 (N) Champ C Desecrated	36	68	-3					0	Sunder Charms	1	Act 1 (N) Champ C	1	Socket Orb	1																					0
+Act 2 (N) Champ A Desecrated	36	71	-3					0	Sunder Charms	1	Act 2 (N) Champ A	1	Socket Orb	1																					0
+Act 2 (N) Champ B Desecrated	36	71	-3					0	Sunder Charms	1	Act 2 (N) Champ B	1	Socket Orb	1																					0
+Act 2 (N) Champ C Desecrated	36	71	-3					0	Sunder Charms	1	Act 2 (N) Champ C	1	Socket Orb	1																					0
+Act 3 (N) Champ A Desecrated	36	74	-3					0	Sunder Charms	1	Act 3 (N) Champ A	1	Socket Orb	1																					0
+Act 3 (N) Champ B Desecrated	36	74	-3					0	Sunder Charms	1	Act 3 (N) Champ B	1	Socket Orb	1																					0
+Act 3 (N) Champ C Desecrated	36	74	-3					0	Sunder Charms	1	Act 3 (N) Champ C	1	Socket Orb	1																					0
+Act 4 (N) Champ A Desecrated	36	77	-3					0	Sunder Charms	1	Act 4 (N) Champ A	1	Socket Orb	1																					0
+Act 4 (N) Champ B Desecrated	36	77	-3					0	Sunder Charms	1	Act 4 (N) Champ B	1	Socket Orb	1																					0
+Act 5 (N) Champ A Desecrated	36	77	-3					0	Sunder Charms	1	Act 5 (N) Champ A	1	Socket Orb	1																					0
+Act 5 (N) Champ B Desecrated	36	80	-3					0	Sunder Charms	1	Act 5 (N) Champ B	1	Socket Orb	1																					0
+Act 5 (N) Champ C Desecrated	36	80	-3					0	Sunder Charms	1	Act 5 (N) Champ C	1	Socket Orb	1																					0
 Act 1 (N) Unique A Desecrated	37	68	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 1 (N) Unique A	1																	0		0
 Act 1 (N) Unique B Desecrated	37	68	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 1 (N) Unique B	1																	0		0
 Act 1 (N) Unique C Desecrated	37	68	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 1 (N) Unique C	1																	0		0
@@ -1413,20 +1458,30 @@ Act 4 (N) Super Cx Desecrated	39	77	-4					0	Sunder Charms	1	Corruption Orb	1	So
 Act 5 (N) Super Ax Desecrated	39	80	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 5 (N) Super Ax	1																	0		0
 Act 5 (N) Super Bx Desecrated	39	80	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 5 (N) Super Bx	1																	0		0
 Act 5 (N) Super Cx Desecrated	39	80	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 5 (N) Super Cx	1																	0		0
-Act 1 (H) Champ A Desecrated	36	81	-2					0	Sunder Charms	1	Act 1 (H) Champ A	1																							0
-Act 1 (H) Champ B Desecrated	36	81	-2					0	Sunder Charms	1	Act 1 (H) Champ B	1																							0
-Act 1 (H) Champ C Desecrated	36	81	-2					0	Sunder Charms	1	Act 1 (H) Champ C	1																							0
-Act 2 (H) Champ A Desecrated	36	83	-2					0	Sunder Charms	1	Act 2 (H) Champ A	1																							0
-Act 2 (H) Champ B Desecrated	36	83	-2					0	Sunder Charms	1	Act 2 (H) Champ B	1																							0
-Act 2 (H) Champ C Desecrated	36	83	-2					0	Sunder Charms	1	Act 2 (H) Champ C	1																							0
-Act 3 (H) Champ A Desecrated	36	85	-2					0	Sunder Charms	1	Act 3 (H) Champ A	1																							0
-Act 3 (H) Champ B Desecrated	36	85	-2					0	Sunder Charms	1	Act 3 (H) Champ B	1																							0
-Act 3 (H) Champ C Desecrated	36	85	-2					0	Sunder Charms	1	Act 3 (H) Champ C	1																							0
-Act 4 (H) Champ A Desecrated	36	87	-2					0	Sunder Charms	1	Act 4 (H) Champ A	1																							0
-Act 4 (H) Champ B Desecrated	36	87	-2					0	Sunder Charms	1	Act 4 (H) Champ B	1																							0
-Act 5 (H) Champ A Desecrated	36	87	-2					0	Sunder Charms	1	Act 5 (H) Champ A	1																							0
-Act 5 (H) Champ B Desecrated	36	90	-2					0	Sunder Charms	1	Act 5 (H) Champ B	1																							0
-Act 5 (H) Champ C Desecrated	36	96	-2					0	Sunder Charms	1	Act 5 (H) Champ C	1																							0
+Act 1 (N) LT Desecrated	42	68	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 1 (N) LT	1																	0		0
+Act 2 (N) LT Desecrated	42	71	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 2 (N) LT	1																	0		0
+Act 3 (N) LT Desecrated	42	74	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 3 (N) LT	1																	0		0
+Act 4 (N) LT Desecrated	42	77	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 4 (N) LT	1																	0		0
+Act 5 (N) LT Desecrated	42	80	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 5 (N) LT	1																	0		0
+Act 1 (N) Swarm Desecrated	43	68	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 1 (N) Swarm	1																	0		0
+Act 2 (N) Swarm Desecrated	43	71	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 2 (N) Swarm	1																	0		0
+Act 3 (N) Swarm Desecrated	43	74	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 3 (N) Swarm	1																	0		0
+Act 4 (N) Swarm Desecrated	43	77	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 4 (N) Swarm	1																	0		0
+Act 5 (N) Swarm Desecrated	43	80	-4					0	Sunder Charms	1	Corruption Orb	1	Socket Orb	1	Act 5 (N) Swarm	1																	0		0
+Act 1 (H) Champ A Desecrated	36	81	-3					0	Sunder Charms	1	Act 1 (H) Champ A	1	Socket Orb	1																					0
+Act 1 (H) Champ B Desecrated	36	81	-3					0	Sunder Charms	1	Act 1 (H) Champ B	1	Socket Orb	1																					0
+Act 1 (H) Champ C Desecrated	36	81	-3					0	Sunder Charms	1	Act 1 (H) Champ C	1	Socket Orb	1																					0
+Act 2 (H) Champ A Desecrated	36	83	-3					0	Sunder Charms	1	Act 2 (H) Champ A	1	Socket Orb	1																					0
+Act 2 (H) Champ B Desecrated	36	83	-3					0	Sunder Charms	1	Act 2 (H) Champ B	1	Socket Orb	1																					0
+Act 2 (H) Champ C Desecrated	36	83	-3					0	Sunder Charms	1	Act 2 (H) Champ C	1	Socket Orb	1																					0
+Act 3 (H) Champ A Desecrated	36	85	-3					0	Sunder Charms	1	Act 3 (H) Champ A	1	Socket Orb	1																					0
+Act 3 (H) Champ B Desecrated	36	85	-3					0	Sunder Charms	1	Act 3 (H) Champ B	1	Socket Orb	1																					0
+Act 3 (H) Champ C Desecrated	36	85	-3					0	Sunder Charms	1	Act 3 (H) Champ C	1	Socket Orb	1																					0
+Act 4 (H) Champ A Desecrated	36	87	-3					0	Sunder Charms	1	Act 4 (H) Champ A	1	Socket Orb	1																					0
+Act 4 (H) Champ B Desecrated	36	87	-3					0	Sunder Charms	1	Act 4 (H) Champ B	1	Socket Orb	1																					0
+Act 5 (H) Champ A Desecrated	36	87	-3					0	Sunder Charms	1	Act 5 (H) Champ A	1	Socket Orb	1																					0
+Act 5 (H) Champ B Desecrated	36	90	-3					0	Sunder Charms	1	Act 5 (H) Champ B	1	Socket Orb	1																					0
+Act 5 (H) Champ C Desecrated	36	96	-3					0	Sunder Charms	1	Act 5 (H) Champ C	1	Socket Orb	1																					0
 Act 1 (H) Unique A Desecrated	37	81	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 1 (H) Unique A	1																	0
 Act 1 (H) Unique B Desecrated	37	81	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 1 (H) Unique B	1																	0
 Act 1 (H) Unique C Desecrated	37	81	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 1 (H) Unique C	1																	0
@@ -1471,4 +1526,14 @@ Act 4 (H) Super Cx Desecrated	39	87	-5					0	Sunder Charms	1	Shadow Orb	1	Corrup
 Act 5 (H) Super Ax Desecrated	39	90	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 5 (H) Super Ax	1																	0
 Act 5 (H) Super Bx Desecrated	39	90	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 5 (H) Super Bx	1																	0
 Act 5 (H) Super Cx Desecrated	39	96	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 5 (H) Super Cx	1																	0
+Act 1 (H) LT Desecrated	42	81	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 1 (H) LT	1																	0
+Act 2 (H) LT Desecrated	42	83	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 2 (H) LT	1																	0
+Act 3 (H) LT Desecrated	42	85	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 3 (H) LT	1																	0
+Act 4 (H) LT Desecrated	42	87	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 4 (H) LT	1																	0
+Act 5 (H) LT Desecrated	42	96	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 5 (H) LT	1																	0
+Act 1 (H) Swarm Desecrated	43	81	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 1 (H) Swarm	1																	0
+Act 2 (H) Swarm Desecrated	43	83	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 2 (H) Swarm	1																	0
+Act 3 (H) Swarm Desecrated	43	85	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 3 (H) Swarm	1																	0
+Act 4 (H) Swarm Desecrated	43	87	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 4 (H) Swarm	1																	0
+Act 5 (H) Swarm Desecrated	43	96	-5					0	Sunder Charms	1	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Act 5 (H) Swarm	1																	0
 Act 1 Super A + t1 Splash Charm		0	-5	800	800	972	1024	0	Act 1 Uitem A	2	Act 1 Cpot A	2	t1 Splash Charm	1																					0
