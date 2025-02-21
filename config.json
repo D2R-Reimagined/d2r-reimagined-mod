@@ -4,7 +4,7 @@
   "fallback": "",
   "logAppend": false,
   "log": "output.txt",
-  "iveConsideredDonating": true,
+  "iveConsideredDonating": false,
   "rules": {
     "Basic/NoDuplicateExcel": {
       "action": "warn"
@@ -19,13 +19,13 @@
       "action": "warn"
     },
     "Cube/ValidInputs": {
-      "action": "ignore"
+      "action": "warn"
     },
     "Cube/ValidOutputs": {
-      "action": "ignore"
+      "action": "warn"
     },
     "Cube/ValidOp": {
-      "action": "ignore"
+      "action": "warn"
     },
     "Items/ValidSockets": {
       "action": "warn"
@@ -43,7 +43,7 @@
       "action": "warn"
     },
     "Monsters/ValidChains": {
-      "action": "ignore"
+      "action": "warn"
     },
     "Skills/EqualSkills": {
       "action": "warn"
