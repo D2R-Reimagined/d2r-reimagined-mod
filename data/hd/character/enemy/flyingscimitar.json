@@ -1,0 +1,151 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/flyingscimitar/vfx_flyingscimitar.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/torso.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/character/enemy/flyingscimitar/FX_Mesh_FlyingScimitar.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/skeleton/flyingscimitar.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/textures/flyingscimitar_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/textures/flyingscimitar_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/textures/flyingscimitar_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/light/T_FX_light_long_glow.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/flyingscimitar_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/flyingscimitar/flyingscimitar_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "flyingscimitar",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 141302929,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/flyingscimitar/flyingscimitar_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "scale": {
+                        "x": 1.8,
+                        "y": 1.8,
+                        "z": 1.8
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/flyingscimitar/skeleton/flyingscimitar.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/flyingscimitar/flyingscimitar_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {},
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1013403977,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/flyingscimitar/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx",
+            "id": 729120364,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/flyingscimitar/vfx_flyingscimitar.particles",
+                    "hardKillOnDestroy": true
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_vfx_EntityAttachmentDefinition",
+                    "targetbone": "spin"
+                }
+            ]
+        }
+    ]
+}
