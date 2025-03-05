@@ -15,7 +15,7 @@
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "filename": "PANEL\\Stash\\StashPanel_BG2",
+                "filename": "controller\\panel\\Stash\\v2\\StashPanelBG_Edit",
                 "rect": { "x": 0, "y": -210 }
             }
         },
@@ -31,7 +31,7 @@
             "fields": {
                 "rect": { "x": 877, "y": -112 },
                 "style": "$StyleTitleBlock",
-                "text": "@stash"
+                "text": ""
             }
         },
         {
@@ -52,7 +52,7 @@
             }
         },
         {
-            "type": "ButtonWidget", "name": "close",
+            "type": "disabled", "name": "close",
             "fields": {
                 "rect": { "x": 1675, "y": -210 },
                 "filename": "PANEL\\closebtn_4x",
