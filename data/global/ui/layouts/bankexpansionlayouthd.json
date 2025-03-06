@@ -48,17 +48,17 @@
             "type": "TabBarWidget", "name": "BankTabs",
             "fields": {
                 "rect": { "x": 82, "y": -46 },
-                "tabCount": 8,
+                "tabCount": 6,
                 "filename": "PANEL\\stash\\Stash_Tabs2",
-                "inactiveFrames": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-                "activeFrames": [ 1, 1, 1, 1, 1, 1, 1, 1 ],
-                "disabledFrames": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
-                "textStrings": [ "@personal", "@shared", "@shared", "@shared", "@shared", "@shared", "@shared", "@shared"],
+                "inactiveFrames": [ 0, 0, 0, 0 ],
+                "activeFrames": [ 1, 1, 1, 1 ],
+                "disabledFrames": [0, 0, 0, 0 ],
+                "textStrings": [ "@personal", "@shared", "@shared", "@shared"],
                 "textStyle": { "pointSize": "$SmallPanelFontSize" },
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
-                "tabSize": { "x": 198, "y": 75 },
-                "tabPadding": { "x": 0, "y": 0 },
+                "tabSize": { "x": 249, "y": 75 },
+                "tabPadding": { "x": 18, "y": 0 },
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab"
             }
         }
