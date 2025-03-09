@@ -7,7 +7,8 @@
         "selectableFontColor": "$FontColorGoldYellow",
         "selectableFrames": [ 0, 1 ],
         "currentFontColor": "$FontColorBlue",
-        "terrorZoneFontColor": { "r": 200, "g": 175, "b": 250, "a": 255 }
+        "defaultFontColor": { "r": 105, "g": 105, "b": 105, "a": 255 },
+        "terrorZoneFontColor": { "r": 135, "g": 82, "b": 161, "a": 255 }
     },
     "children": [
         {
@@ -20,7 +21,7 @@
             "type": "ImageWidget", "name": "Background",
             "fields": {
                 "rect": { "x": 0, "y": 0 },
-                "filename": "PANEL\\Waypoints\\Waypoints_Background",
+                "filename": "PANEL\\Waypoints\\Waypoints_Base",
                 "frame": 0
             }
         },
@@ -29,20 +30,20 @@
             "fields": {
                 "rect": "$LeftHingeRect",
                 "filename": "$LeftHingeSprite"
-            }
+            },
         },
         {
             "type": "TextBoxWidget", "name": "WaypointsTitle",
             "fields": {
-                "rect": { "x": 522, "y": 60 },
-                "text": "Waypoints",
-                "style": "$StyleTitleBlock"
+                "rect": "$InGamePanelTitleRect",
+                "text": "@Waypoint",
+                "style": "$StyleTitleBlock",
             }
         },
         {
             "type": "TabBarWidget", "name": "Tabs",
             "fields": {
-                "rect": { "x": 85, "y": 135 },
+                "rect": { "x": 148, "y": 201 },
                 "tabCount": 4,
                 "filename": "PANEL\\Waypoints\\Waypoints_Tab_Original",
                 "inactiveFrames": [ 1, 1, 1, 1 ],
@@ -53,31 +54,32 @@
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "tabSize": { "x": 215, "y": 70 },
                 "tabPadding": { "x": 0, "y": 0 },
-                "onSwitchTabMessage": "Waypoints:SelectTab"
+                "onSwitchTabMessage": "Waypoints:SelectTab",
             }
         },
+        // waypoint button templates
         {
             "type": "Widget", "name": "Templates",
             "children": [
                 {
                     "type": "ButtonWidget", "name": "UnselectableButtonTemplate",
                     "fields": {
-                        "rect": { "x": 82, "y": 198 },
+                        "rect": { "x": 152, "y": 264 },
                         "filename": "PANEL\\Waypoints\\Waypoints_Button_Disabled",
                         "onClickMessage": "Waypoints:SelectWaypoint",
                         "pointSize": "$MediumPanelFontSize",
                         "textColor": "$FontColorLightGray",
-                        "text/rect": { "x": 210 }
+                        "text/rect": {"x": 210}
                     },
                     "children": [
                         {
                             "type": "ImageWidget", "name": "TerrorZone",
                             "fields": {
-                        				"rect": { "x": 31, "y": 31 },
+                        				"rect": { "x": 47, "y": 28 },
                         				"filename": "PANEL\\Waypoints\\terror_zone_icon",
                         				"visible": false
                         		}
-                        }
+                        },
                     ]
                 },
                 {
@@ -94,16 +96,18 @@
                 }
             ]
         },
+
+
         {
             "type": "ButtonWidget", "name": "CloseButton",
             "fields": {
-                "rect": { "x": 962, "y": 9 },
+                "rect": { "x": 1075, "y": 9 },
                 "filename": "PANEL\\closebtn_4x",
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
-                "onClickMessage": "Waypoints:CloseWaypointPanel"
-            }
-        }
+                "onClickMessage": "Waypoints:CloseWaypointPanel",
+            },
+        },
     ]
 }

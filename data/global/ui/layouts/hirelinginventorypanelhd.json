@@ -57,7 +57,7 @@
         {
             "type": "TextBoxWidget", "name": "Title",
             "fields": {
-                "rect": { "x": 481, "y": -69, "width": 196, "height": 196 },
+                "rect": { "x": 481, "y": -48, "width": 196, "height": 196 },
                 "style": "$StyleTitleBlock",
                 "text": "@MiniPanelHireinv"
             }
@@ -77,7 +77,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_torso",
             "fields": {
-                "rect": { "x": 483, "y": 348, "width": 196, "height": 294 },
+                "rect": { "x": 483, "y": 350, "width": 196, "height": 294 },
                 "cellSize": "$ItemCellSize",
                 "location": "torso",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -88,7 +88,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_right_arm",
             "fields": {
-                "rect": { "x": 110, "y": 156, "width": 196, "height": 392 },
+                "rect": { "x": 108, "y": 154, "width": 196, "height": 392 },
                 "cellSize": "$ItemCellSize",
                 "location": "right_arm",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -99,7 +99,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_left_arm",
             "fields": {
-                "rect": { "x": 863, "y": 156, "width": 196, "height": 392 },
+                "rect": { "x": 861, "y": 154, "width": 196, "height": 392 },
                 "cellSize": "$ItemCellSize",
                 "location": "left_arm",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -121,7 +121,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_right_hand",
             "fields": {
-                "rect": { "x": 720, "y": 691, "width": 98, "height": 98 },
+                "rect": { "x": 720, "y": 689, "width": 98, "height": 98 },
                 "cellSize": "$ItemCellSize",
                 "location": "right_hand",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -132,7 +132,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_left_hand",
             "fields": {
-                "rect": { "x": 345, "y": 691, "width": 98, "height": 98 },
+                "rect": { "x": 345, "y": 689, "width": 98, "height": 98 },
                 "cellSize": "$ItemCellSize",
                 "location": "left_hand",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -165,7 +165,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_neck",
             "fields": {
-                "rect": { "x": 720, "y": 271, "width": 98, "height": 98 },
+                "rect": { "x": 720, "y": 273, "width": 98, "height": 98 },
                 "cellSize": "$ItemCellSize",
                 "location": "neck",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -237,7 +237,7 @@
         {
              "type": "TextBoxWidget", "name": "NextLevelXP",
              "fields": {
-                 "rect": { "x": 839, "y": 937, "width": 250, "height": 50 },
+                 "rect": { "x": 839, "y": 937, "width": 250, "height": 30 },
                  "style": {
                      "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                      "pointSize": "$SmallPanelFontSize",
@@ -248,7 +248,7 @@
          {
              "type": "TextBoxWidget", "name": "ConnectorWord",
              "fields": {
-                 "rect": { "x": 798, "y": 937, "height": 50 },
+                 "rect": { "x": 798, "y": 937, "height": 30 },
                  "text": "@ItemStats1j",
                  "style": {
                      "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
@@ -260,7 +260,7 @@
          {
              "type": "TextBoxWidget", "name": "CurrentXP",
              "fields": {
-                 "rect": { "x": 517, "y": 937, "width": 250, "height": 50 },
+                 "rect": { "x": 517, "y": 937, "width": 250, "height": 30 },
                  "style": {
                      "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
                      "pointSize": "$SmallPanelFontSize",
@@ -497,7 +497,7 @@
         {
             "type": "ButtonWidget", "name": "AdvancedStats",
             "fields": {
-                "rect": { "x": 1104, "y": 713 },
+                "rect": { "x": 1090, "y": 734 },
                 "filename": "PANEL\\Character_Sheet\\AdvancedStatsButton",
                 "hoveredFrame": 3,
                 "onClickMessage": "HirelingInventoryPanelMessage:ToggleAdvancedStats",
