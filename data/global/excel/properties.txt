@@ -240,7 +240,7 @@ skill-rand	1	+# to [Skill] ([Class] only)	12	item_singleskill																			
 fade	1		17	fade																												Min #	Max #	Visuals Only	0
 levelreq	1	Required Level: #	1	item_levelreq																												Min #	Max #		0
 ethereal	1	Ethereal	23																													1	1		0
-oskill	1	+# to [Skill]	22	item_nonclassskill_display			22	item_nonclassskill																							Skill	Min #	Max #		0
+oskill	1	+# to [Skill]	22	item_nonclassskill_display			24	item_nonclassskill																							Skill	Min #	Max #		0
 state	1		24	state																											State	1	1	Applies a State on the unit	0
 randclassskill	1	+# to [Class] Skill Levels	36	item_addclassskills		3																										Min Class ID	Max Class ID	val1 = # of Skill levels	0
 str%	1		1	item_strength_percent																															0
@@ -376,3 +376,14 @@ upgrade/uber	1		17	upgrade_uber																										# Upgrades		0	10	Used t
 ubertorch-property	1	Uber Charm Weight: #	1	torch_weight																												Min #	Max #	May only carry one Torch at a time	0
 uberstone-property	1	Uber Charm Weight: #	1	soulstone_weight																												Min #	Max #	May only carry one Soulstone at a time	0
 tab-rand	1	+# random class skill tab	12	item_addskill_tab																											Level	min Skill #	max Skill #		0
+extra-elem	1	+# % All Elemental Damage	1	passive_fire_mastery			3	passive_ltng_mastery			3	passive_cold_mastery			3	passive_pois_mastery																Min %	Max %		0
+pierce-elem	1	-# % Enemy Elemental Resistances	1	passive_fire_pierce			3	passive_ltng_pierce			3	passive_cold_pierce			3	passive_pois_pierce																Min%	Max %		0
+Dye-White	1		17	Dye_White																															0
+Dye-Black	1		17	Dye_Black																															0
+Dye-Blue	1		17	Dye_Blue																															0
+Dye-Red	1		17	Dye_Red																															0
+Dye-Green	1		17	Dye_Green																															0
+Dye-Yellow	1		17	Dye_Yellow																															0
+Dye-Purple	1		17	Dye_Purple																															0
+Dye-Orange	1		17	Dye_Orange																															0
+Dye-Tracker	1		17	Dye_Tracker																															0
