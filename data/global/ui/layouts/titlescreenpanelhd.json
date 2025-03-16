@@ -1,0 +1,164 @@
+{
+    "type": "TitleScreenHDPanel", "name": "TitleScreenPanel",
+    "fields": {
+        "fitToParent": true,
+    },
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "Background",
+            "fields": {
+                "fitToScreen": true,
+            }
+        },
+        {
+            "type": "MoviePlayerWidget", "name": "MoviePlayer",
+            "fields": {
+                "jukeboxManaged": true,
+                "showCursor": true,
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "InputPrompt",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 1 },
+                "rect": { "x": 0, "y": -430 },
+                "text": "@KeyboardTitleScreenPrompt",
+                "style": {
+                    "alignment": { "h": "center", "v": "center" },
+        	    "fontColor": "$FontColorDarkGrayBlue",
+       	            "pointSize": "$XExtraLargeFontSize",
+                }
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "BlizzLogo",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": -100, "y": 763 },
+                "filename": "SplashScreen//splash_BlizzLogo"
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "Copyright",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 1 },
+                "rect": { "x": 0, "y": -167 },
+                "text": "@CopyrightText",
+                "style": {
+                    "alignment": { "h": "center", "v": "center" },
+                    "fontColor": "$FontColorDarkGrayBlue",
+                    "pointSize": "$SmallFontSize",
+        	    "fontFace": "BlizzardGlobal",
+                }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "LoadingPrompt",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 1 },
+                "rect": { "x": 0, "y": -430 },
+                "text": "@strBNPleaseWait",
+                "style": {
+                    "alignment": { "h": "center", "v": "center" },
+                    "pointSize": "$HugeFontSize",
+                }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "BuildVersionTextBox",
+            "fields": {
+                "anchor": { "x": 0.95, "y": 0.95 },
+                "rect": { "x": 0, "y": -80 },
+                "style": {
+                    "alignment": { "h": "right", "v": "center" },
+                    "pointSize": "$MediumFontSize",
+                    "fontColor": "$FontColorLightGray",
+                }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "EnvironmentSettingsTextBox",
+            "fields": {
+                "anchor": { "x": 0.95, "y": 0.95 },
+                "rect": { "x": 0, "y": -40 },
+                "style": {
+                    "alignment": { "h": "right", "v": "center" },
+                    "pointSize": "$MediumFontSize",
+                    "fontColor": "$FontColorLightGray",
+                }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "BGSAddressTextBox",
+            "fields": {
+                "anchor": { "x": 0.95, "y": 0.95 },
+                "rect": { "x": 0, "y": 0 },
+                "style": {
+                    "alignment": { "h": "right", "v": "center" },
+                    "pointSize": "$MediumFontSize",
+                    "fontColor": "$FontColorLightGray",
+                }
+            }
+        },
+        {
+            "type": "RectangleWidget", "name": "LoadingScreen",
+            "fields": {
+                "fitToScreen": true,
+            },
+            "children": [
+                {
+                    "type": "AnimatedImageWidget", "name": "FullGlow",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -400, "y": -420, "scale": 0.5 },
+                        "filename": "LogoAnimation/FullGlow_PC",
+                        "fps": 20,
+                    },
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "Logo",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -399, "y": -412, "scale": 0.5 },
+                        "filename": "LogoAnimation/LogoAnimation",
+                        "fps": 20,
+                    },
+                },
+                {
+                    "type": "ImageWidget", "name": "ResurrectedText",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -370, "y": -252, "scale": 0.5 },
+                        "filename": "LogoAnimation/ResurrectedText",
+                    },
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -319, "y": -232, "scale": 0.5 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20,
+                    },
+                },
+                {
+                    "type": "ImageWidget", "name": "ReimaginedText",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -370, "y": -220, "scale": 0.5 },
+                        "filename": "LogoAnimation/ReimaginedText",
+                    },
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -319, "y": -200, "scale": 0.5 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20,
+                    }
+                }
+            ]
+        }
+    ]
+}

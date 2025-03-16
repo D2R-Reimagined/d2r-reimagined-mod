@@ -47,32 +47,34 @@
                 {
                     "type": "ImageWidget", "name": "ResurrectedText",
                     "fields": {
-                        "rect": { "x": -239, "y": 473 },
+                        "rect": { "x": -239, "y": 461 },
                         "filename": "LogoAnimation/ResurrectedText"
                     }
                 },
                 {
                     "type": "AnimatedImageWidget", "name": "BottomFlames",
                     "fields": {
-                        "rect": { "x": -129, "y": 511 },
+                        "rect": { "x": -129, "y": 501 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20
+                    }
+                },
+                {
+                    "type": "ImageWidget", "name": "ReimaginedText",
+                    "fields": {
+                        "rect": { "x": -239, "y": 523 },
+                        "filename": "LogoAnimation/ReimaginedText"
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "fields": {
+                        "rect": { "x": -129, "y": 561 },
                         "filename": "LogoAnimation/Logo_BottomFlame",
                         "fps": 20
                     }
                 }
             ]
-        },
-        {
-            "type": "TextBoxWidget", "name": "PauseText",
-            "fields": {
-                "anchor": { "x": 0.5 },
-                "rect": { "y": 628 },
-                "text": "D2R Reimagined",
-                "style": {
-                    "fontColor": "$PanelTitleColor",
-                    "pointSize": "$XExtraLargeFontSize",
-                    "alignment": { "h": "center", "v": "center" }
-                }
-            }
         },
         {
             "type": "TableWidget", "name": "PauseTable",
