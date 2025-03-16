@@ -1,0 +1,309 @@
+{
+    "type": "QuestLogPanel", "name": "QuestLogPanelOriginal",
+    "fields": {
+        "anchor": "$LeftPanelAnchor",
+        "rect": "$LeftPanelRect",
+        "gridColumnPositions": [ 190, 497, 805 ],
+        "gridRowPositions": [ 312, 617 ],
+    },
+    "children": [
+        {
+            "type": "ImageWidget", "name": "Background",
+            "fields": {
+                "filename": "PANEL\\Quest_Log\\QuestLog_BG"
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "LeftHinge",
+            "fields": {
+                "rect": "$LeftHingeRect",
+                "filename": "$LeftHingeSprite"
+            },
+        },
+        {
+            "type": "ClickCatcherWidget", "name": "ClickCatcher",
+            "fields": {
+                "rect": "$PanelClickCatcherRect"
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "Title",
+            "fields": {
+                "rect": "$InGamePanelTitleRect",
+                "style": "$StyleTitleBlock",
+                "text": "@minipanelquest",
+            },
+        },
+        {
+            "type": "TabBarWidget", "name": "Tabs",
+            "fields": {
+                "rect": { "x": 87, "y": 148 },
+                "tabCount": 4,
+                "filename": "PANEL\\Quest_Log\\QuestLogTab_Classic",
+                "inactiveFrames": [ 1, 1, 1, 1 ],
+                "activeFrames": [ 0, 0, 0, 0 ],
+                "textStrings": [ "I", "II", "III", "IV" ],
+                "textStyle": { "pointSize": "$MediumLargeFontSize" },
+                "activeTextColor": "$TabsActiveTextColorInGame",
+                "inactiveTextColor": "$TabsInactiveTextColor",
+                "tabSize": { "x": 253, "y": 70 },
+                "tabPadding": { "x": 1, "y": 0 },
+                "onSwitchTabMessage": "QuestLogPanelMessage:SelectTab",
+            }
+        },
+        {
+            "type": "Widget", "name": "Tab0",
+            "children": [
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest0",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 0 },
+                        "filename": "QuestIcons\\a1q1",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest1",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 0 },
+                        "filename": "QuestIcons\\a1q2",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest3",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 0 },
+                        "filename": "QuestIcons\\a1q3",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest4",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 1 },
+                        "filename": "QuestIcons\\a1q4",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest2",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 1 },
+                        "filename": "QuestIcons\\a1q5",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest5",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 1 },
+                        "filename": "QuestIcons\\a1q6",
+                    },
+                },
+            ]
+        },
+        {
+            "type": "Widget", "name": "Tab1",
+            "children": [
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest6",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 0 },
+                        "filename": "QuestIcons\\a2q1",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest7",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 0 },
+                        "filename": "QuestIcons\\a2q2",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest8",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 0 },
+                        "filename": "QuestIcons\\a2q3",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest9",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 1 },
+                        "filename": "QuestIcons\\a2q4",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest10",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 1 },
+                        "filename": "QuestIcons\\a2q5",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest11",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 1 },
+                        "filename": "QuestIcons\\a2q6",
+                    },
+                    "children": [
+                        {
+                            "type": "ImageWidget", "name": "TalRashaSymbol",
+                            "fields": {
+                                "rect": { "x": -322, "y": 458 },
+                                "filename": "PANEL\\Quest_Log\\TalRashaSymbol"
+                            },
+                        },
+                    ]
+                },
+            ]
+        },
+        {
+            "type": "Widget", "name": "Tab2",
+            "children": [
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest15",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 0 },
+                        "filename": "QuestIcons\\a3q1",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest14",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 0 },
+                        "filename": "QuestIcons\\a3q2",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest13",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 0 },
+                        "filename": "QuestIcons\\a3q3",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest12",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 1 },
+                        "filename": "QuestIcons\\a3q4",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest16",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 1 },
+                        "filename": "QuestIcons\\a3q5",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest17",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 1 },
+                        "filename": "QuestIcons\\a3q6",
+                    },
+                },
+            ]
+        },
+        {
+            "type": "Widget", "name": "Tab3",
+            "children": [
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest18",
+                    "fields": {
+                        "gridPosition": { "x": 0, "y": 0 },
+                        "filename": "QuestIcons\\a4q1",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest19",
+                    "fields": {
+                        "gridPosition": { "x": 1, "y": 0 },
+                        "filename": "QuestIcons\\a4q2",
+                    },
+                },
+                {
+                    "type": "QuestLogButtonWidget", "name": "Quest20",
+                    "fields": {
+                        "gridPosition": { "x": 2, "y": 0 },
+                        "filename": "QuestIcons\\a4q3",
+                    },
+                },
+                {
+                    "type": "ImageWidget",
+                    "fields": {
+                        "rect": { "x": 82, "y": 528 },
+                        "filename": "PANEL\\Quest_Log\\QLPanelCover"
+                    },
+                }
+            ]
+        },
+        {
+            "type": "TextBoxWidget", "name": "ShortDescription",
+            "fields": {
+                "rect": { "x": 279, "y": 890, "width": 600 },
+                "style": {
+                    "pointSize": "$XMediumLargeFontSize",
+                    "alignment": { "h": "center" },
+                    "spacing" : "$MinimumSpacing",
+                    "fontColor": "$DescriptionTitleColor"
+                }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "LongDescription",
+            "fields": {
+                "rect": { "x": 220, "y": 1012, "width": 720, "height": 250 },
+                "style": {
+                    "fontFace": "Formal",
+                    "pointSize": "$MediumPanelFontSize",
+                    "options": { "lineWrap": true },
+                    "spacing":"$ReducedSpacing",
+                    "alignment": { "h": "left" },
+                    "fontColor": "$DescriptionTextColor"
+                }
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Cancel",
+            "fields": {
+                "rect": { "x": 1075, "y": 9 },
+                "filename": "PANEL\\closebtn_4x",
+                "hoveredFrame": 3,
+                "tooltipString": "@strClose",
+                "sound": "cursor_close_window_hd",
+                "onClickMessage": "QuestLogPanelMessage:Close",
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "Speech",
+            "fields": {
+                "rect": { "x": 373, "y": 1282 },
+                "filename": "PANEL\\Quest_Log\\QuestLogDialogueButton",
+                "hoveredFrame": 3,
+                "textString": "@playQuestDialogue",
+                "textColor": "$LightButtonTextColor",
+                "pointSize": "$SmallPanelFontSize",
+                "text/style": "$StyleFEButtonText",
+                "onClickMessage": "QuestLogPanelMessage:PlayDialogue",
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "TemplateGem",
+            "fields": {
+                "rect": { "x": 54, "y": -58 },
+                "filename": "QuestIcons\\QuestGem"
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "TemplateSocket",
+            "fields": {
+                "rect": { "x": -30, "y": -78 },
+                "filename": "QuestIcons\\GoldFrame"
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "TemplateQuestComplete",
+            "fields": {
+                "rect": { "x": -26, "y": -70 },
+                "filename": "QuestIcons\\QuestComplete\\quest_complete",
+            },
+        },
+    ]
+}
