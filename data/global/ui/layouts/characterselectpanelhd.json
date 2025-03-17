@@ -233,19 +233,19 @@
                         {
                             "type": "TabBarWidget", "name": "Tabs",
                             "fields": {
-                                "rect": { "x": 145, "y": 29 },
+                                "rect": { "x": 150, "y": 29 },
                                 "tabCount": 2,
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_Tabs",
                                 "inactiveFrames": [ 1, 1 ],
                                 "activeFrames": [ 0, 0 ],
                                 "disabledFrames": [ 2, -1 ],
-                                "textStrings": [ "@OnlineButton", "@Offline" ],
+                                "textStrings": [ "Disabled", "Reimagined" ],
                                 "textStyle": { "pointSize": "$MediumLargeFontSize" },
-                                "activeTextColor": "$TabsActiveTextColor",
-                                "inactiveTextColor": "$TabsInactiveTextColor",
+                                "activeTextColor": "$FontColorWhite",
+                                "inactiveTextColor": "$FontColorGray",
                                 "disabledTextColor": "$FontColorGray",
-                                "tabSize": { "x": 332, "y": 71 },
-                                "tabPadding": { "x": -1, "y": 0 },
+                                "tabSize": { "x": 320, "y": 71 },
+                                "tabPadding": { "x": 0, "y": 0 },
                                 "onSwitchTabMessage": "CharacterSelect:SelectTab",
                                 "automaticallyPositionIndicators": true
                             }
