@@ -2,9 +2,8 @@
     "type": "MainMenuHDPanel", "name": "MainMenuPanel",
     "fields": {
         "fitToParent": true,
-        "defaultWidget": "QuickPlayButton",
-        "onlinePlayButtonPosition": { "x": -624, "y": 2500 },
-        "offlinePlayButtonPosition": { "x": -380, "y": 1900 },
+        "onlinePlayButtonPosition": { "x": -624, "y": 1865 },
+        "offlinePlayButtonPosition": { "x": -305, "y": 1865 },
         "playerClassScale": [
             { "playerClass": "Assassin", "scale": 1.12 },
             { "playerClass": "Amazon", "scale": 1.05 },
@@ -168,7 +167,6 @@
                 "captureInView": "$INT_MAX"
             }
         },
-
         {
             "type": "PlayerLoaderWidget", "name": "Player",
             "fields": {
@@ -218,88 +216,174 @@
             }
         },
         {
-            "type": "ButtonWidget", "name": "OnlinePlaySettingsButton",
-            "fields": {
-                "anchor": { "x": 0.5 },
-                "rect": { "x": -366, "y": 2500 },
-                "filename": "FrontEnd\\HD\\Final\\FrontEnd_Cog",
-                "focusIndicatorFilename": "Controller/HoverImages/OnlineGameplay_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": 0 },
-                "tooltipString": "@GameCreationHD",
-                "onClickMessage": "PanelManager:OpenPanel:OnlineGameSettingsPanel",
-                "hoveredFrame": 2,
-                "disabledFrame": 3,
-                "disabledTint": { "a": 1.0 },
-                "navigation": {
-                    "up": { "name": "QuickPlayButton" }
-                }
-            }
-		},
-        {
-            "type": "disabled", "name": "Divider2",
-            "fields": {
-            "anchor": {"x": 0.5},
-			"rect": { "x": 770, "y": 240 },
-			"filename": "FrontEnd/HD/Final/FrontEnd_Divider" }
-        },
-        {
-            "type": "disabled", "name": "Divider3",
-            "fields": {
-            "anchor": {"x": 0.5},
-			"rect": { "x": 770, "y": 440 },
-			"filename": "FrontEnd/HD/Final/FrontEnd_Divider" }
-        },
-        {
             "type": "ButtonWidget", "name": "QuickPlayButton",
             "fields": {
                 "anchor": { "x": 0.5 },
-                "rect": { "x": -710, "y": 1865 },
+                "rect": { "x": -1010, "y": 1865 },
                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonLarge",
                 "textString": "@PlayTab",
-                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonLarge_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": 0 },
                 "onClickMessage": "MainMenuHD:Play",
                 "text/style": "$StyleFEButtonText",
                 "pointSize": "$ExtraLargeFontSize",
-				"textColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                "textColor": "$LightButtonTextColor",
                 "hoveredFrame": 3,
                 "disabledFrame": 2,
                 "disabledTint": { "a": 1.0 },
-                "sound": "cursor_launch_game_hd",
-                "navigation": {
-                    "down": { "name": "OnlinePlaySettingsButton" },
-                    "left": { "panelBoundary": true },
-                    "right": { "name": "SecondaryContextButton" }
+                "sound": "cursor_launch_game_hd"
+            },
+            "children": [
+                {
+                    "type": "ButtonWidget", "name": "OnlinePlaySettingsButton",
+                    "fields": {
+                        "anchor": { "x": 0.5, "y": 1.0 },
+                        "rect": { "x": -47, "y": 8 },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_Cog",
+                        "tooltipString": "@GameCreationHD",
+                        "onClickMessage": "PanelManager:OpenPanel:OnlineGameSettingsPanel",
+                        "hoveredFrame": 2,
+                        "disabledFrame": 3,
+                        "disabledTint": { "a": 1.0 }
+                    }
                 }
-            }
+            ] 
         },
         {
             "type": "ImageWidget", "name": "Divider",
             "fields": {
-            "anchor": {"x": 0.5},
-			"rect": { "x": 770, "y": 145 },
-			"filename": "FrontEnd/HD/Final/FrontEnd_Divider" }
+                "anchor": {"x": 0.5},
+                "rect": { "x": -17, "y": 1827 },
+                "filename": "FrontEnd/HD/Final/FrontEnd_Divider"
+            }
         },
         {
             "type": "ButtonWidget", "name": "SecondaryContextButton",
             "fields": {
                 "anchor": {"x": 0.5 },
-                "rect": { "x": 17, "y": 2500 },
+                "rect": { "x": 17, "y": 1865 },
                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonLarge",
-                "onClickMessage": "",
+                "onClickMessage": "FrontEndNavigation:ToLobby",
                 "text/style": "$StyleFEButtonText",
-                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonLarge_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": 0 },
                 "pointSize": "$ExtraLargeFontSize",
                 "textColor": "$LightButtonTextColor",
                 "hoveredFrame": 3,
                 "disabledFrame": 2,
-                "disabledTint": {"a": 1.0 },
-                "navigation": {
-                    "left": { "name": "QuickPlayButton" },
-                    "right": { "panelBoundary": true }
-                }
+                "disabledTint": {"a": 1.0 }
             }
+        },
+        {
+            "type": "RectangleWidget", "name": "PlayerInfoContainer",
+            "fields": {
+                "anchor": {"x": 1.0},
+                "rect": { "x": -1740, "y": 1400, "width": 930, "height": 420 },
+                "color": [ 0.0, 0.0, 0.0, 0.0 ]
+            },
+            "children": [
+            {
+                    "type": "TextBoxWidget", "name": "UsabilityWarning",
+                    "fields": {
+                        "rect": { "x": 0, "y": 0, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "@GameJoinDoesNotMeetRequirements"
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "LevelRequirement",
+                    "fields": {
+                        "rect": { "x": 0, "y": 60, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "You cannot use this character"
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "DifficultyRequirement",
+                    "fields": {
+                        "rect": { "x": 0, "y": 120, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "You cannot use this character"
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "LadderRequirement",
+                    "fields": {
+                        "rect": { "x": 0, "y": 180, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "You cannot use this character"
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "HardcoreRequirement",
+                    "fields": {
+                        "rect": { "x": 0, "y": 240, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "You cannot use this character"
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "ExpansionRequirement",
+                    "fields": {
+                        "rect": { "x": 0, "y": 300, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "You cannot use this character"
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "OnlineRequirement",
+                    "fields": {
+                        "rect": { "x": 0, "y": 360, "width": 841 },
+                        "fontType": "16pt",
+                        "style": {
+                            "pointSize": "$MediumFontSize",
+                            "alignment": { "h": "center", "v": "center" },
+                            "dropShadow": "$DefaultDropShadow",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor" : "$CharacterListDetailsColor"
+                        },
+                        "text": "@GameJoinOnlineCharacter"
+                    }
+                }
+            ]
         }
     ]
 }
