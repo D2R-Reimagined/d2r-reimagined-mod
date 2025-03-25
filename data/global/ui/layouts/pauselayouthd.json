@@ -1,21 +1,31 @@
 {
-    "type": "PausePanel", "name": "PauseLayout",
+    "type": "PausePanel",
+    "name": "PauseLayout",
     "fields": {
         "priority": 9001,
         "fitToParent": true,
         "defaultWidget": "ReturnToGame",
-        "onlineLogoWidgetPosition": { "y": 140 }
+        "onlineLogoWidgetPosition": {
+            "y": 140
+        }
     },
     "children": [
         {
-            "type": "RectangleWidget", "name": "TransparentBG",
+            "type": "RectangleWidget",
+            "name": "TransparentBG",
             "fields": {
                 "fitToScreen": true,
-                "color": [ 0.0, 0.0, 0.0, 0.5 ]
+                "color": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.5
+                ]
             },
             "children": [
                 {
-                    "type": "ClickCatcherWidget", "name": "catcher",
+                    "type": "ClickCatcherWidget",
+                    "name": "catcher",
                     "fields": {
                         "fitToParent": true
                     }
@@ -23,53 +33,80 @@
             ]
         },
         {
-            "type": "Widget", "name": "LogoWidget",
+            "type": "Widget",
+            "name": "LogoWidget",
             "fields": {
-                "anchor": { "x": 0.5 }
+                "anchor": {
+                    "x": 0.5
+                }
             },
             "children": [
                 {
-                    "type": "AnimatedImageWidget", "name": "FullGlow",
+                    "type": "AnimatedImageWidget",
+                    "name": "FullGlow",
                     "fields": {
-                        "rect": { "x": -303, "y": 171 },
+                        "rect": {
+                            "x": -303,
+                            "y": 171
+                        },
                         "filename": "LogoAnimation/FullGlow_PC",
                         "fps": 20
                     }
                 },
                 {
-                    "type": "AnimatedImageWidget", "name": "Logo",
+                    "type": "AnimatedImageWidget",
+                    "name": "Logo",
                     "fields": {
-                        "rect": { "x": -292, "y": 141 },
+                        "rect": {
+                            "x": -292,
+                            "y": 141
+                        },
                         "filename": "LogoAnimation/LogoAnimation",
                         "fps": 20
                     }
                 },
                 {
-                    "type": "ImageWidget", "name": "ResurrectedText",
+                    "type": "ImageWidget",
+                    "name": "ResurrectedText",
                     "fields": {
-                        "rect": { "x": -239, "y": 461 },
+                        "rect": {
+                            "x": -239,
+                            "y": 471
+                        },
                         "filename": "LogoAnimation/ResurrectedText"
                     }
                 },
                 {
-                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "type": "AnimatedImageWidget",
+                    "name": "BottomFlames",
                     "fields": {
-                        "rect": { "x": -129, "y": 501 },
+                        "rect": {
+                            "x": -129,
+                            "y": 521
+                        },
                         "filename": "LogoAnimation/Logo_BottomFlame",
                         "fps": 20
                     }
                 },
                 {
-                    "type": "ImageWidget", "name": "ReimaginedText",
+                    "type": "ImageWidget",
+                    "name": "ReimaginedText",
                     "fields": {
-                        "rect": { "x": -239, "y": 523 },
+                        "rect": {
+                            "x": -239,
+                            "y": 561
+                        },
                         "filename": "LogoAnimation/ReimaginedText"
                     }
                 },
                 {
-                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "type": "AnimatedImageWidget",
+                    "name": "BottomFlames",
                     "fields": {
-                        "rect": { "x": -129, "y": 561 },
+                        "rect": {
+                            "x": -129,
+                            "y": 611
+                        },
                         "filename": "LogoAnimation/Logo_BottomFlame",
                         "fps": 20
                     }
@@ -77,20 +114,37 @@
             ]
         },
         {
-            "type": "TableWidget", "name": "PauseTable",
+            "type": "TableWidget",
+            "name": "PauseTable",
             "fields": {
-                "anchor": { "x": 0.5, "y": 0.5 },
-                "rect": { "x": -329, "y": -340 },
-                "columns": [ { "width": 658, "alignment": { "h": "center", "v": "center" } } ],
+                "anchor": {
+                    "x": 0.5,
+                    "y": 0.5
+                },
+                "rect": {
+                    "x": -329,
+                    "y": -340
+                },
+                "columns": [
+                    {
+                        "width": 658,
+                        "alignment": {
+                            "h": "center",
+                            "v": "center"
+                        }
+                    }
+                ],
                 "rowHeight": 140,
                 "generateFocusLinks": true
             },
             "children": [
                 {
-                    "type": "TableRowWidget", "name": "Row Options",
+                    "type": "TableRowWidget",
+                    "name": "Row Options",
                     "children": [
                         {
-                            "type": "ButtonWidget", "name": "Settings",
+                            "type": "ButtonWidget",
+                            "name": "Settings",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
@@ -106,49 +160,12 @@
                     ]
                 },
                 {
-                    "type": "TableRowWidget", "name": "Row Save and Exit Game",
+                    "type": "TableRowWidget",
+                    "name": "Mod Info",
                     "children": [
                         {
-                            "type": "ButtonWidget", "name": "Exit",
-                            "fields": {
-                                "filename": "PauseMenu\\PauseButton",
-                                "hoveredFrame": 3,
-                                "textString": "@SaveAndExit",
-                                "onClickMessage": "PausePanelMessage:ExitGame",
-                                "textColor": "$LightButtonTextColor",
-                                "text/style": "$StyleFEButtonText",
-                                "acceptsReturnKey": true,
-                                "focusOnMouseOver": true,
-                                "sound": "cursor_select"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "TableRowWidget", "name": "Row Return to Game",
-                    "children": [
-                        {
-                            "type": "ButtonWidget", "name": "ReturnToGame",
-                            "fields": {
-                                "filename": "PauseMenu\\PauseButton",
-                                "hoveredFrame": 3,
-                                "textString": "@ReturnToGame",
-                                "onClickMessage": "PausePanelMessage:Close",
-                                "textColor": "$LightButtonTextColor",
-                                "text/style": "$StyleFEButtonText",
-                                "acceptsReturnKey": true,
-                                "focusOnMouseOver": true,
-                                "sound": "select"
-                            }
-                        }
-                    ]
-
-                },
-                {
-                    "type": "TableRowWidget", "name": "Mod Info",
-                    "children": [
-                        {
-                            "type": "ButtonWidget", "name": "Mod Info",
+                            "type": "ButtonWidget",
+                            "name": "Mod Info",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
@@ -164,10 +181,64 @@
                     ]
                 },
                 {
-                    "type": "TableRowWidget", "name": "Runes Sockets Upgrading",
+                    "type": "TableRowWidget",
+                    "name": "Row Return to Game",
                     "children": [
                         {
-                            "type": "Disabled", "name": "Runes Sockets Upgrading",
+                            "type": "ButtonWidget",
+                            "name": "ReturnToGame",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "@ReturnToGame",
+                                "onClickMessage": "PausePanelMessage:Close",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget",
+                    "name": "Spacer",
+                    "children": [
+                        {
+                            "type": "ButtonWidget",
+                            "name": "Spacer"
+                        }                        
+                    ]
+                },
+                {
+                    "type": "TableRowWidget",
+                    "name": "Row Save and Exit Game",
+                    "children": [
+                        {
+                            "type": "ButtonWidget",
+                            "name": "Exit",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "@SaveAndExit",
+                                "onClickMessage": "PausePanelMessage:ExitGame",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "cursor_select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget",
+                    "name": "Runes Sockets Upgrading",
+                    "children": [
+                        {
+                            "type": "Disabled",
+                            "name": "Runes Sockets Upgrading",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
@@ -183,10 +254,12 @@
                     ]
                 },
                 {
-                    "type": "TableRowWidget", "name": "Balancing",
+                    "type": "TableRowWidget",
+                    "name": "Balancing",
                     "children": [
                         {
-                            "type": "Disabled", "name": "Balancing",
+                            "type": "Disabled",
+                            "name": "Balancing",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
@@ -204,16 +277,24 @@
             ]
         },
         {
-            "type": "ImageWidget", "name": "AgeDescriptorImage",
+            "type": "ImageWidget",
+            "name": "AgeDescriptorImage",
             "fields": {
-                "rect": { "x": 40, "y": 80 },
+                "rect": {
+                    "x": 40,
+                    "y": 80
+                },
                 "filename": "PauseMenu\\descriptor-18"
             }
         },
         {
-            "type": "ImageWidget", "name": "ViolenceDescriptorImage",
+            "type": "ImageWidget",
+            "name": "ViolenceDescriptorImage",
             "fields": {
-                "rect": { "x": 280, "y": 80 },
+                "rect": {
+                    "x": 280,
+                    "y": 80
+                },
                 "filename": "PauseMenu\\descriptor-violence"
             }
         }
