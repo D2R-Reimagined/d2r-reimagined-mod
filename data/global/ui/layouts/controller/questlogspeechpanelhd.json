@@ -1,0 +1,49 @@
+{
+    "basedOn": "QuestLogSpeechPanelHD.json",
+    "type": "QuestLogSpeechPanel", "name": "QuestLogSpeechPanel",
+    "fields": {
+        "fitToParent": true,
+        "drawTint": false,
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "SpeechClickCatcher",
+            "fields": {
+                "fitToParent": true,
+            },
+        },
+        {
+            "type": "Widget", "name": "ScrollingSpeechParent",
+            "fields": {
+                "rect": "$QuestLogSpeechPanelRect",
+            },
+            "children": [
+                {
+                    "type": "ScrollingSpeechWidget", "name": "ScrollSpeechWidget",
+                    "children": [
+                        {
+                            "type": "TextBoxWidget", "name": "ScrollingText",
+                            "fields": {
+                                "rect": { "x": 0, "y": 330, "width": 840, "height": 2000 },
+                                "style": {
+                                    "fontColor": "$DescriptionTextColor",
+                                }
+                            }
+                        },
+                    ]
+                },
+                {
+                    "type": "ImageWidget", "name": "ScrollBarBackground",
+                    "children": [
+                        {
+                            "type": "ScrollControllerWidget", "name": "ScrollController",
+                            "fields":{
+                                "rect": { "x": -584 }
+                            }
+                        },
+                    ]
+                },
+            ]
+        },
+    ]
+}

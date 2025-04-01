@@ -24,7 +24,7 @@
             "type": "Widget", "name": "Anchor",
             "fields": {
                 "anchor": { "x": 0.5, "y": -0.5 },
-                "rect": {"x":-1920, "y":1080, "width": 3840, "height": 2160 }
+                "rect": {"x":-1920, "y":1080, "width": 3840, "height": 1960 }
             },
             "children": [
 				{
@@ -43,10 +43,10 @@
                 {
                     "type": "TabBarWidget", "name": "Tabs",
                     "fields": {
-                        "rect": { "x": 0, "y": 0, "width": 2880, "height": 120 },
+                        "rect": { "x": 475, "y": 0, "width": 2880, "height": 120 },
                         "tabCount": 8,
-                        "inactiveTextColor": "$FontColorVeryLightGray",
-                        "activeTextColor": "$FontColorVeryLightGray",
+                        "inactiveTextColor": "$FontColorGray",
+                        "activeTextColor": "$FontColorGray",
                         "tabPadding": { "x": 0, "y": 0 },
                         "textStyle": { "pointSize": "$LargeFontSize" },
                         "unavailableTabsLeaveGaps": false,
@@ -84,8 +84,8 @@
                                 "filename": [ "Controller/Panel/Controller_Top_Tab_7Tabs", "Controller/Panel/Controller_Top_Tab_6Tabs", "Controller/Panel/Controller_Top_Tab_5Tabs" ],
                                 "inactiveFrames": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
                                 "activeFrames": [ 1, 1, 1, 1, 1, 1, 1, 1 ],
-                                "inactiveTextColor": "$FontColorLightGray",
-                                "activeTextColor": "$FontColorVeryLightGray",
+                                "inactiveTextColor": "$FontColorGray",
+                                "activeTextColor": "$FontColorRed",
                                 "focusIndicatorFilename": ["Controller/HoverImages/ControllerTopTabs_5", "Controller/HoverImages/ControllerTopTabs_6", "Controller/HoverImages/ControllerTopTabs_7"],
                                 "focusIndicatorOffset": { "x": 0, "y": -10 },
                                 "tabPadding": { "x": 0, "y": 0 },
@@ -112,16 +112,16 @@
                     "type": "RectangleWidget", "name": "legendBG",
                     "fields": {
                         "anchor":{"x":0.5, "y":0},
-                        "rect":{ "x": -1000, "y": 87, "width": 2000, "height": 60},
-                        "color": [ 0.05, 0.05, 0.05, 0.7 ],
-                        "borderColor": [ 0.80, 0.73, 0.51, 0.4 ],
+                        "rect":{ "x": -1000, "y": 87, "width": 2000, "height": 100},
+                        "color": [ 0.0, 0.0, 0.0, 0.7 ],
+                        "borderColor": [ 0.5, 0.0, 0.0, 0 ],
                         "drawBorder": true,
                     },
                     "children":[
                         {
                             "type": "ButtonLegendWidget", "name": "Legend",
                             "fields": {
-                                "rect": { "x": 0, "y": 0, "width": 2000, "height": 60 },
+                                "rect": { "x": 0, "y": 0, "width": 2000, "height": 100 },
                                 "text": { "style": "$StyleButtonLegend" },
                             },
                         }

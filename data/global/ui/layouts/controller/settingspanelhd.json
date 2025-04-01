@@ -1,0 +1,80 @@
+{
+    "basedOn": "SettingsPanelHD.json",
+    "type": "SettingsPanel", "name": "SettingsPanel",
+    "fields": {
+        "priority": 9002,
+        "fitToParent": true,
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "catcher",
+        },
+        {
+            "type": "RectangleWidget", "name": "Background",
+            "children": [
+                {
+                    "type": "Widget", "name": "Anchor",
+                    "children": [
+                        {
+                            "type": "ImageWidget", "name": "Background",
+                            "fields": {
+                                 "filename": "\\PANEL\\Options\\FrontEndOptionsBG",
+                            },
+                        },
+                        {
+                            "type": "TextBoxWidget", "name": "Title",
+                            "fields": {
+                                "rect": { "x": 0, "y": 45, "width": 1950, "height": 103 },
+                                "text": "@ControllerPauseMenuTitle",
+                                "style": {
+                                    "fontColor": "$FontColorVeryLightGray",
+                                    "pointSize": "$LargeFontSize",
+                                    "alignment": { "h": "center", "v": "center" },
+                                },
+                            },
+                        },
+                        {
+                            "type": "ButtonLegendWidget", "name": "Legend",
+                            "fields": {
+                                "rect": { "x": 0, "y": 1661, "width": 1950, "height": 103 },
+                                "text": { "style": "$StyleButtonLegend" },
+                                "presets": [
+                                    {
+                                        "action": "back",
+                                        "description": "@Return",
+                                    },
+                                    {
+                                        "action": "option1",
+                                        "description": "@ControllerSettingsAcceptAll",
+                                    },
+                                    {
+                                        "action": "option2",
+                                        "description": "@ControllerSettingsDefault",
+                                    },
+                                ],
+                            },
+                        },
+                    ]
+                },
+            ]
+        },
+        {
+            "type": "ImageWidget", "name": "SettingsBackground",
+            "children": [
+                {
+                    "type": "ControllerCursorBoundsWidget", "name": "ControllerCursorBounds",
+                    "fields": {
+                        "fitToParent": true,
+                    },
+                },
+            ]
+        },
+        {
+            "type": "TabBarWidget", "name": "OptionsTabs",
+            "fields": {
+                "tabLeftIndicatorPosition": { "x": 30, "y": -4 },
+                "tabRightIndicatorPosition": { "x": 1700, "y": -4 },
+            },
+        },
+    ]
+}

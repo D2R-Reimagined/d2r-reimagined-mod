@@ -1,0 +1,81 @@
+{
+    "basedOn": "VendorPanelLayoutHD.json",
+    "type": "VendorPanel", "name": "VendorPanelLayout",
+    "fields": {
+        "rect": "$ConsoleLeftPanelRect",
+        "defaultWidget": "grid",
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+            "fields": {
+                "rect": [ 0, 0, 0, 0 ],
+                "fitToParent": true
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "background",
+            "fields": {
+                "rect": { "x": 71, "y": -77 },
+                "filename": "PANEL\\Vendors\\VendorShop_BG",
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "background_repair",
+            "fields": {
+                "rect": { "x": 71, "y": -77 },
+                "filename": "PANEL\\Vendors\\VendorShop_BG",
+            },
+        },
+        {
+            "type": "InventoryGridWidget", "name": "grid",
+            "fields": {
+                "rect": { "x": 162, "y": 159 },
+                "gemSocketFilename": "PANEL/gemsocket",
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                },
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "gold_icon",
+            "fields": {
+                "rect": { "x": 515, "y": 1239, },
+                "filename": "Controller/Panel/Stash/V2/Button_Small",
+            },
+        },
+        {
+            "type": "TextBoxWidget", "name": "gold_amount",
+            "fields": {
+                "rect": { "x": 567, "y": 1231, "width": 250, "height": 57 },
+                "style": "$StyleGoldAmount",
+            },
+        },
+        {
+            "type": "FocusableWidget", "name": "StashWidget",
+            "fields": {
+                "rect": { "x": 491, "y": 1252, "width": 313, "height": 58 },
+            },
+        },
+        {
+            "type": "TabBarWidget", "name": "tabs",
+            "fields": {
+                "rect": { "x": 151, "y": 85 },
+                "filename": "PANEL\\vendors\\vendor_tabs",
+                "inactiveFrames": [ 0, 0, 0, 0 ], 
+                "activeFrames": [ 1, 1, 1, 1 ],
+                "textStyle": { "pointSize": "$MediumFontSize" },
+                "activeTextColor": "$TabsActiveTextColor",
+                "inactiveTextColor": "$TabsInactiveTextColor",
+                "focusIndicatorFilename": "Controller/HoverImages/StashTab_Hover",
+                "focusIndicatorOffset": { "x": 0, "y": -6 },
+                "unavailableTabsLeaveGaps": false,
+                "tabSize": { "x": 248, "y": 75 },
+                "tabPadding": { "x": 2, "y": 0 },
+                "tabLeftIndicatorPosition": "$HalfPanelLeftTabButtonPromptPosition",
+                "tabRightIndicatorPosition": "$HalfPanelRightTabButtonPromptPosition",
+                "focusOnMouseOver": true,
+            }
+        },
+    ]
+}

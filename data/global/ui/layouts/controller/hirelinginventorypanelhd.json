@@ -16,7 +16,7 @@
         {
             "type": "ClickCatcherWidget",
         },
-        // Background images for inventory slots
+        // Background images for inventory slot
         {
             "type": "InventorySlotWidget", "name": "slot_head",
             "fields": {
@@ -44,7 +44,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_right_arm",
             "fields": {
-                "rect": { "x": 110, "y": 156, "width": 196, "height": 392 },
+                "rect": { "x": 108, "y": 155, "width": 196, "height": 392 },
                 "cellSize": "$ItemCellSize",
                 "location": "right_arm",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -55,7 +55,7 @@
         {
             "type": "InventorySlotWidget", "name": "slot_left_arm",
             "fields": {
-                "rect": { "x": 863, "y": 156, "width": 196, "height": 392 },
+                "rect": { "x": 861, "y": 155, "width": 196, "height": 392 },
                 "cellSize": "$ItemCellSize",
                 "location": "left_arm",
                 "gemSocketFilename": "PANEL\\gemsocket",
@@ -149,7 +149,7 @@
                 "style": {
                     "fontColor":"$FontColorWhite",
                     "fontFace": "Formal",
-                    "pointSize": "$SmallFontSize",
+                    "pointSize": "$SmallPanelFontSize",
                     "alignment": { "h": "center", "v": "center" }
                 },
             }
@@ -169,7 +169,7 @@
         {
             "type": "TextBoxWidget", "name": "HireTypeText",
             "fields": {
-                "rect": { "x": 126, "y": 937, "width": 100, "height": 30 },
+                "rect": { "x": 126, "y": 950, "width": 100, "height": 30 },
                 "style": {
                     "pointSize": "$MediumLargeFontSize",
                     "alignment": { "h": "left", "v": "bottom" }
@@ -180,7 +180,7 @@
         {
             "type": "ExpBarWidget", "name": "XpProgress",
             "fields": {
-                "rect": { "x": 139, "y": 913, "width": 888, "height": 10 },
+                "rect": { "x": 139, "y": 916, "width": 888, "height": 9 },
                 "filename": "Controller/Panel/HirelingInventory/V2/Expbar"
             }
         },

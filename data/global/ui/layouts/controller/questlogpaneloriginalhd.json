@@ -37,7 +37,7 @@
         {
             "type": "TabBarWidget", "name": "Tabs",
             "fields": {
-                "rect": { "x": 75, "y": 148 },
+                "rect": { "x": 87, "y": 148 },
                 "tabCount": 4,
                 "filename": "PANEL\\Quest_Log\\QuestLogTab_Classic",
                 "inactiveFrames": [ 1, 1, 1, 1 ],
@@ -49,6 +49,8 @@
                 "tabSize": { "x": 253, "y": 70 },
                 "tabPadding": { "x": 1, "y": 0 },
                 "onSwitchTabMessage": "QuestLogPanelMessage:SelectTab",
+                "tabLeftIndicatorPosition": { "x": -25, "y": -1 },
+                "tabRightIndicatorPosition": { "x": 1015, "y": -1 },
             }
         },
         {
@@ -249,7 +251,7 @@
         {
             "type": "TextBoxWidget", "name": "LongDescription",
             "fields": {
-                "rect": { "x": 220, "y": 1012, "width": 770, "height": 250 },
+                "rect": { "x": 220, "y": 1012, "width": 720, "height": 250 },
                 "style": {
                     "fontFace": "Formal",
                     "pointSize": "$SmallPanelFontSize",
@@ -269,19 +271,6 @@
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
                 "onClickMessage": "QuestLogPanelMessage:Close",
-            },
-        },
-        {
-            "type": "ButtonWidget", "name": "Speech",
-            "fields": {
-                "rect": { "x": 373, "y": 1282 },
-                "filename": "PANEL\\Quest_Log\\QuestLogDialogueButton",
-                "hoveredFrame": 3,
-                "textString": "@playQuestDialogue",
-                "textColor": "$LightButtonTextColor",
-                "pointSize": "$SmallPanelFontSize",
-                "text/style": "$StyleFEButtonText",
-                "onClickMessage": "QuestLogPanelMessage:PlayDialogue",
             },
         },
         {
