@@ -1,0 +1,5021 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [],
+        "skeletons": [],
+        "animations": [
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/additive_look_left_right.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/attack1.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/attack2.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/dead.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/death.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/Fidget01.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/Fidget04.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/knockback.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/neutral.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/run.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb1/animation/walk.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/additive_look_left_right.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/attack1.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/attack3.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/Fidget01.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/Fidget02.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/knockback.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/neutral.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/run.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5barb2/animation/walk.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/attack1.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/attack2.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/block.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/cast.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/dead.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/death.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/gethit.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/knockback.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/neutral.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/run.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/skill1.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/skill2.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/skill3.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/skill4.animation"
+            },
+            {
+                "path": "data/hd/character/enemy/act5hire1/animation/walk.animation"
+            }
+        ],
+        "textures": [],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "AnimationStateMachine",
+    "name": "act5hire1_statemachine",
+    "unitType": "UNIT_MONSTER",
+    "animations": [
+        {
+            "type": "AnimationItem",
+            "name": "hth_death",
+            "filename": "data/hd/character/player/barbarian/animation/hth_death.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/hth_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_walk",
+            "filename": "data/hd/character/player/barbarian/animation/hth_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_run",
+            "filename": "data/hd/character/player/barbarian/animation/hth_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/hth_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/hth_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/hth_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/hth_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_block",
+            "filename": "data/hd/character/player/barbarian/animation/hth_block.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_cast",
+            "filename": "data/hd/character/player/barbarian/animation/hth_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_throw",
+            "filename": "data/hd/character/player/barbarian/animation/hth_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_kick",
+            "filename": "data/hd/character/player/barbarian/animation/hth_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/hth_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_dead",
+            "filename": "data/hd/character/player/barbarian/animation/hth_dead.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_walk",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_run",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_block",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_block.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_cast",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_throw",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_kick",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_skill2",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_skill2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_walk",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_run",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_cast",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_kick",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_walk",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_run",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_block",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_block.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_cast",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_throw",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_kick",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_walk",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_run",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_cast",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_kick",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/bow_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_walk",
+            "filename": "data/hd/character/player/barbarian/animation/bow_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_run",
+            "filename": "data/hd/character/player/barbarian/animation/bow_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/bow_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/bow_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/bow_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/bow_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_cast",
+            "filename": "data/hd/character/player/barbarian/animation/bow_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_kick",
+            "filename": "data/hd/character/player/barbarian/animation/bow_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/bow_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_walk",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_run",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_cast",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_kick",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/stf_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_walk",
+            "filename": "data/hd/character/player/barbarian/animation/stf_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_run",
+            "filename": "data/hd/character/player/barbarian/animation/stf_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/stf_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/stf_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/stf_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/stf_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/stf_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_cast",
+            "filename": "data/hd/character/player/barbarian/animation/stf_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_kick",
+            "filename": "data/hd/character/player/barbarian/animation/stf_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/stf_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1js_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_walk",
+            "filename": "data/hd/character/player/barbarian/animation/1js_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_run",
+            "filename": "data/hd/character/player/barbarian/animation/1js_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/1js_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/1js_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/1js_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/1js_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/1js_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_cast",
+            "filename": "data/hd/character/player/barbarian/animation/1js_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_throw",
+            "filename": "data/hd/character/player/barbarian/animation/1js_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_kick",
+            "filename": "data/hd/character/player/barbarian/animation/1js_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/1js_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_skill3",
+            "filename": "data/hd/character/player/barbarian/animation/1js_skill3.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_skill4",
+            "filename": "data/hd/character/player/barbarian/animation/1js_skill4.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_walk",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_run",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_cast",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_throw",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_kick",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_skill3",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_skill3.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_skill4",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_skill4.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_walk",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_run",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_cast",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_throw",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_kick",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_skill3",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_skill3.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_skill4",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_skill4.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1st_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_walk",
+            "filename": "data/hd/character/player/barbarian/animation/1st_walk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_run",
+            "filename": "data/hd/character/player/barbarian/animation/1st_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_gethit",
+            "filename": "data/hd/character/player/barbarian/animation/1st_gethit.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_townneutral",
+            "filename": "data/hd/character/player/barbarian/animation/1st_townneutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_townwalk",
+            "filename": "data/hd/character/player/barbarian/animation/1st_townwalk.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_attack1",
+            "filename": "data/hd/character/player/barbarian/animation/1st_attack1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_attack2",
+            "filename": "data/hd/character/player/barbarian/animation/1st_attack2.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_cast",
+            "filename": "data/hd/character/player/barbarian/animation/1st_cast.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_throw",
+            "filename": "data/hd/character/player/barbarian/animation/1st_throw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_kick",
+            "filename": "data/hd/character/player/barbarian/animation/1st_kick.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_skill1",
+            "filename": "data/hd/character/player/barbarian/animation/1st_skill1.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_skill3",
+            "filename": "data/hd/character/player/barbarian/animation/1st_skill3.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_skill4",
+            "filename": "data/hd/character/player/barbarian/animation/1st_skill4.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/hth_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/stf_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1js_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1st_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_doubleswing",
+            "filename": "data/hd/character/player/barbarian/animation/1js_doubleswing.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_doubleswing",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_doubleswing.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_doubleswing",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_doubleswing.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_doubleswing",
+            "filename": "data/hd/character/player/barbarian/animation/1st_doubleswing.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_doublethrow",
+            "filename": "data/hd/character/player/barbarian/animation/1js_doublethrow.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_doublethrow",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_doublethrow.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_doublethrow",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_doublethrow.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_doublethrow",
+            "filename": "data/hd/character/player/barbarian/animation/1st_doublethrow.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/hth_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_leap_rise_fall_land",
+            "filename": "data/hd/character/player/barbarian/animation/hth_leap_rise_fall_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/1js_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/1st_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/stf_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/bow_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_leap_rise_fall_land",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_leap_rise_fall_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_leap_windup",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_leap_windup.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fe_neutral_unselected",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fe_neutral_unselected.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fe_neutral_to_selected",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fe_neutral_to_selected.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fe_neutral_selected",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fe_neutral_selected.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fe_selected_to_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fe_selected_to_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/hth_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/bow_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/stf_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/1js_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/1st_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/hth_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1js_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1st_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_leap_air",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_leap_air.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/stf_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/stf_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/hth_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/hth_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/bow_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/bow_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fe_unselected_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fe_unselected_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_additive_look_left_right",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_additive_look_left_right.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_additive_look_up_down",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_additive_look_up_down.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_additive_aim_up_down",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_additive_aim_up_down.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_additive_shield",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_additive_shield.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/hth_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/bow_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/stf_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/1js_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_knockback",
+            "filename": "data/hd/character/player/barbarian/animation/1st_knockback.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_arctic_blast_start",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_arctic_blast_start.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_arctic_blast_loop",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_arctic_blast_loop.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1js_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1js_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1js_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1js_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1js_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1js_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1js_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/1js_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/1js_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/1js_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/1js_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1js_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1js_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_arctic_blast_start",
+            "filename": "data/hd/character/player/barbarian/animation/1js_arctic_blast_start.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_arctic_blast_loop",
+            "filename": "data/hd/character/player/barbarian/animation/1js_arctic_blast_loop.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1js_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1js_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/1js_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1js_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/bow_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/hth_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/bow_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/stf_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_stop_run",
+            "filename": "data/hd/character/player/barbarian/animation/1st_stop_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/hth_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/bow_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/stf_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_start_run",
+            "filename": "data/hd/character/player/barbarian/animation/1st_start_run.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/hth_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/bow_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/stf_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_stop_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1st_stop_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/hth_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/bow_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/stf_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_start_run_town",
+            "filename": "data/hd/character/player/barbarian/animation/1st_start_run_town.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_180_turn_cw",
+            "filename": "data/hd/character/player/barbarian/animation/1st_180_turn_cw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_180_turn_ccw",
+            "filename": "data/hd/character/player/barbarian/animation/1st_180_turn_ccw.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/1st_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/bow_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/stf_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/hth_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_frontend_neutral",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_frontend_neutral.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/1st_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/1st_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/stf_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/stf_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_leap_air_attack",
+            "filename": "data/hd/character/player/barbarian/animation/stf_leap_air_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_leap_land",
+            "filename": "data/hd/character/player/barbarian/animation/hth_leap_land.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_leap_land_attack",
+            "filename": "data/hd/character/player/barbarian/animation/hth_leap_land_attack.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_arctic_blast_start",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_arctic_blast_start.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_arctic_blast_loop",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_arctic_blast_loop.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_arctic_blast_start",
+            "filename": "data/hd/character/player/barbarian/animation/1st_arctic_blast_start.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_arctic_blast_loop",
+            "filename": "data/hd/character/player/barbarian/animation/1st_arctic_blast_loop.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_inferno_start",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_inferno_start.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_inferno_loop",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_inferno_loop.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fe_unselected_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fe_unselected_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/hth_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/bow_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1st_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/hth_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/bow_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/stf_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_town_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1st_town_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_frontend_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/stf_frontend_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/hth_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/bow_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/stf_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_town_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1st_town_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/hth_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/bow_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/stf_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_frontend_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1st_frontend_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/hth_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/bow_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/stf_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_town_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1st_town_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/hth_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/bow_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/stf_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_frontend_fidget_03",
+            "filename": "data/hd/character/player/barbarian/animation/1st_frontend_fidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/bow_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/stf_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/1st_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/hth_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "bow_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/bow_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/stf_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/1st_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_fidget_01",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_fidget_01.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "xbw_fidget_02",
+            "filename": "data/hd/character/player/barbarian/animation/xbw_fidget_02.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_town_additive_look_left_right",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_town_additive_look_left_right.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_town_additive_look_up_down",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_town_additive_look_up_down.animation"
+        }
+    ],
+    "states": [
+        {
+            "type": "AnimationState",
+            "name": "State_Death",
+            "_name": "Death",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 0,
+            "modeId": 0,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "hth": [
+                    "hth_death"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Neutral",
+            "_name": "Neutral",
+            "audioId": "",
+            "loopCount": 0,
+            "stateId": 1,
+            "modeId": 1,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_neutral"
+                ],
+                "2hs": [
+                    "2hs_neutral"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Walk",
+            "_name": "Walk",
+            "audioId": "",
+            "loopCount": 0,
+            "stateId": 2,
+            "modeId": 100,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_walk"
+                ],
+                "2hs": [
+                    "2hs_walk"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_GetHit",
+            "_name": "GetHit",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 3,
+            "modeId": 3,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_gethit"
+                ],
+                "2hs": [
+                    "2hs_gethit"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Attack1",
+            "_name": "Attack1",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 4,
+            "modeId": 4,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_doubleswing"
+                ],
+                "2hs": [
+                    "2hs_cast"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Attack2",
+            "_name": "Attack2",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 5,
+            "modeId": 5,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_doubleswing"
+                ],
+                "2hs": [
+                    "2hs_attack2"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Block",
+            "_name": "Block",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 6,
+            "modeId": 6,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_block"
+                ],
+                "2hs": [
+                    "2hs_block"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Cast",
+            "_name": "Cast",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 7,
+            "modeId": 7,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_cast"
+                ],
+                "2hs": [
+                    "2hs_cast"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Skill1",
+            "_name": "Skill1",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 8,
+            "modeId": 8,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_doubleswing"
+                ],
+                "2hs": [
+                    "2hs_attack2"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Skill2",
+            "_name": "Skill2",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 9,
+            "modeId": 9,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_doubleswing"
+                ],
+                "2hs": [
+                    "2hs_attack2"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Skill3",
+            "_name": "Skill3",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 10,
+            "modeId": 10,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_doubleswing"
+                ],
+                "2hs": [
+                    "2hs_attack2"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Skill4",
+            "_name": "Skill4",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 11,
+            "modeId": 11,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_doubleswing"
+                ],
+                "2hs": [
+                    "2hs_attack2"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Dead",
+            "_name": "Dead",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 12,
+            "modeId": 12,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "hth": [
+                    "2hs_dead"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Knockback",
+            "_name": "Knockback",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 13,
+            "modeId": 13,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_knockback"
+                ],
+                "2hs": [
+                    "2hs_knockback"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "State_Run",
+            "_name": "Run",
+            "audioId": "",
+            "loopCount": 0,
+            "stateId": 14,
+            "modeId": 100,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_run"
+                ],
+                "2hs": [
+                    "2hs_run"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "AnimationState",
+            "_name": "Fidget01",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 15,
+            "modeId": 100,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_fidget_01"
+                ],
+                "2hs": [
+                    "2hs_fidget_01"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "AnimationState001",
+            "_name": "Fidget02",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 16,
+            "modeId": 100,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_fidget_02"
+                ],
+                "2hs": [
+                    "2hs_fidget_02"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "AnimationState002",
+            "_name": "Fidget03",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 17,
+            "modeId": 100,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_fidget_01"
+                ],
+                "2hs": [
+                    "2hs_fidget_01"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "AnimationState003",
+            "_name": "HeadAimLayer_Yaw",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 18,
+            "modeId": 100,
+            "skillIndex": -1,
+            "stepIndex": 0,
+            "animationBindings": {
+                "1hs": [
+                    "1ss_additive_look_left_right"
+                ],
+                "2hs": [
+                    "1ss_additive_look_left_right"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        }
+    ],
+    "transitions": [
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Death_transitions",
+            "from": 0,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Death_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Neutral_transitions",
+            "from": 1,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_GetHit",
+                    "crossfadeSeconds": 0.1,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Attack1",
+                    "crossfadeSeconds": 0.05,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Attack16",
+                    "crossfadeSeconds": 0.1,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Neutral_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Walk_transitions",
+            "from": 2,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Attack1",
+                    "crossfadeSeconds": 0.1,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Walk_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "GetHit_transitions",
+            "from": 3,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Neutral",
+                    "crossfadeSeconds": 0.05,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "GetHit_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Attack1_transitions",
+            "from": 4,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Neutral",
+                    "crossfadeSeconds": 0.05,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Walk",
+                    "crossfadeSeconds": 0.1,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Attack16",
+                    "crossfadeSeconds": 0.05,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transitions_transition001",
+                    "crossfadeSeconds": 0.1,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transitions_transition002",
+                    "crossfadeSeconds": 0.1,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack1_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Attack16_transitions",
+            "from": 5,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Neutral",
+                    "crossfadeSeconds": 0.1,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Attack1",
+                    "crossfadeSeconds": 0.05,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transitions_transition",
+                    "crossfadeSeconds": 0.05,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Attack16_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Block_transitions",
+            "from": 6,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Block_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Cast_transitions",
+            "from": 7,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Cast_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Skill1_transitions",
+            "from": 8,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill1_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Skill16_transitions",
+            "from": 9,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill16_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Skill17_transitions",
+            "from": 10,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill17_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Skill18_transitions",
+            "from": 11,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Skill18_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Dead_transitions",
+            "from": 12,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Dead_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Knockback_transitions",
+            "from": 13,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transition_to_Run",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Knockback_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "Run_transitions",
+            "from": 14,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Death",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Neutral",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Walk",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_GetHit",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Attack1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Attack16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Block",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Cast",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Skill1",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Skill16",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Skill17",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Skill18",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Dead",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transition_to_Knockback",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transitions_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transitions_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transitions_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transitions_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "Run_transitions_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "AnimationState_transitiongroup",
+            "from": 15,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition004",
+                    "crossfadeSeconds": 0.1,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition005",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition006",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition007",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition008",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition009",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition010",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition011",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition012",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition013",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition014",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition015",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition016",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition017",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState_transitiongroup_transition018",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "AnimationState001_transitiongroup",
+            "from": 16,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition004",
+                    "crossfadeSeconds": 0.1,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition005",
+                    "crossfadeSeconds": 0.1,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition006",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition007",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition008",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition009",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition010",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition011",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition012",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition013",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition014",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition015",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition016",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition017",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState001_transitiongroup_transition018",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "AnimationState002_transitiongroup",
+            "from": 17,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition005",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition006",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition007",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition008",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition009",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition010",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition011",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition012",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition013",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition014",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition015",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition016",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition017",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState002_transitiongroup_transition018",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        },
+        {
+            "type": "AnimationTransitionGroup",
+            "name": "AnimationState003_transitiongroup",
+            "from": 18,
+            "settings": [
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition",
+                    "crossfadeSeconds": 0.2,
+                    "to": 0
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition001",
+                    "crossfadeSeconds": 0.2,
+                    "to": 1
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition002",
+                    "crossfadeSeconds": 0.2,
+                    "to": 2
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition003",
+                    "crossfadeSeconds": 0.2,
+                    "to": 3
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition004",
+                    "crossfadeSeconds": 0.2,
+                    "to": 4
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition005",
+                    "crossfadeSeconds": 0.2,
+                    "to": 5
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition006",
+                    "crossfadeSeconds": 0.2,
+                    "to": 6
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition007",
+                    "crossfadeSeconds": 0.2,
+                    "to": 7
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition008",
+                    "crossfadeSeconds": 0.2,
+                    "to": 8
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition009",
+                    "crossfadeSeconds": 0.2,
+                    "to": 9
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition010",
+                    "crossfadeSeconds": 0.2,
+                    "to": 10
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition011",
+                    "crossfadeSeconds": 0.2,
+                    "to": 11
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition012",
+                    "crossfadeSeconds": 0.2,
+                    "to": 12
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition013",
+                    "crossfadeSeconds": 0.2,
+                    "to": 13
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition014",
+                    "crossfadeSeconds": 0.2,
+                    "to": 14
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition015",
+                    "crossfadeSeconds": 0.2,
+                    "to": 15
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition016",
+                    "crossfadeSeconds": 0.2,
+                    "to": 16
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition017",
+                    "crossfadeSeconds": 0.2,
+                    "to": 17
+                },
+                {
+                    "type": "AnimationTransitionItem",
+                    "name": "AnimationState003_transitiongroup_transition018",
+                    "crossfadeSeconds": 0.2,
+                    "to": 18
+                }
+            ]
+        }
+    ]
+}
