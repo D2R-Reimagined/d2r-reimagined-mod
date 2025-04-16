@@ -24,7 +24,7 @@
             "type": "Widget", "name": "Anchor",
             "fields": {
                 "anchor": { "x": 0.5, "y": -0.5 },
-                "rect": {"x":-1920, "y":1080, "width": 3840, "height": 2160 }
+                "rect": {"x":-1920, "y":1080, "width": 3840, "height": 1960 }
             },
             "children": [
 				{
@@ -43,7 +43,7 @@
                 {
                     "type": "TabBarWidget", "name": "Tabs",
                     "fields": {
-                        "rect": { "x": 0, "y": 0, "width": 2880, "height": 120 },
+                        "rect": { "x": 450, "y": -20, "width": 2880, "height": 120 },
                         "tabCount": 8,
                         "inactiveTextColor": "$FontColorVeryLightGray",
                         "activeTextColor": "$FontColorVeryLightGray",
@@ -112,7 +112,7 @@
                     "type": "RectangleWidget", "name": "legendBG",
                     "fields": {
                         "anchor":{"x":0.5, "y":0},
-                        "rect":{ "x": -1000, "y": 87, "width": 2000, "height": 60},
+                        "rect":{ "x": -1000, "y": 68, "width": 2000, "height": 104},
                         "color": [ 0.05, 0.05, 0.05, 0.7 ],
                         "borderColor": [ 0.80, 0.73, 0.51, 0.4 ],
                         "drawBorder": true,
@@ -121,7 +121,7 @@
                         {
                             "type": "ButtonLegendWidget", "name": "Legend",
                             "fields": {
-                                "rect": { "x": 0, "y": 0, "width": 2000, "height": 60 },
+                                "rect": { "x": 0, "y": 0, "width": 2000, "height": 104 },
                                 "text": { "style": "$StyleButtonLegend" },
                             },
                         }

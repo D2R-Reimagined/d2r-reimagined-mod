@@ -9,14 +9,14 @@
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
             "fields": {
-				"rect": {"y": -210, "width": 1625, "height": 1670 },
+				"rect": {"y": -210, "width": 1750, "height": 1662 },
             }
         },
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
                 "filename": "PANEL\\Horadric_Cube\\HoradricCube_BG2",
-                "rect": { "x": -15,"y": -203 }
+                "rect": { "x": 0,"y": -210 }
             }
         },
         {
@@ -29,7 +29,7 @@
         {
             "type": "TextBoxWidget", "name": "title",
             "fields": {
-                "rect": { "x": 855, "y": -93 },
+                "rect": { "x": 900, "y": -87 },
                 "style": "$StyleTitleBlock",
                 "text": "@box"
             }
@@ -37,7 +37,7 @@
         {
             "type": "ButtonWidget", "name": "convert",
             "fields": {
-                "rect": { "x": 1447, "y": 1315 },
+                "rect": { "x": 1540, "y": 1323 },
                 "filename": "PANEL\\Horadric_Cube\\TransmuteButton",
                 "tooltipString": "@strUiMenu2",
                 "hoveredFrame": 2,
@@ -45,9 +45,9 @@
             }
         },
         {
-            "type": "ButtonWidget", "name": "convert",
+            "type": "ButtonWidget", "name": "convert2",
             "fields": {
-                "rect": { "x": 25, "y": -170 },
+                "rect": { "x": 84, "y": -124 },
                 "filename": "PANEL\\Horadric_Cube\\TransmuteButton",
                 "tooltipString": "@strUiMenu2",
                 "hoveredFrame": 2,
@@ -57,7 +57,7 @@
         {
             "type": "ButtonWidget", "name": "close",
             "fields": {
-                "rect": { "x": 1551, "y": -208 },
+                "rect": { "x": 1669, "y": -200 },
                 "filename": "PANEL\\closebtn_4x",
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
@@ -67,7 +67,7 @@
         {
             "type": "InventoryGridWidget", "name": "grid",
             "fields": {
-                "rect": { "x": 27, "y": -8 },
+                "rect": { "x": 91, "y": 22 },
                 "cellCount": { "x": 16, "y": 13 },
                 "cellSize": "$ItemCellSize",
                 "gemSocketFilename": "PANEL\\gemsocket"
