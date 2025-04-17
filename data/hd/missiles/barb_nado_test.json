@@ -1,0 +1,167 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_back_optimized.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/White.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "barb_nado_test",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4200550864,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "model_entity",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_back_optimized_lod0.model", 
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "model_entity_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 3.0,
+                        "y": 3.0,
+                        "z": 3.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "model_entity",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/vfx/meshes/missiles/tornado/FX_Mesh_boneFrag03.model", 
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "model_entity_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 3.0,
+                        "y": 3.0,
+                        "z": 3.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "model_entity",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_front_optimized_lod0.model", 
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "model_entity_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 3.0,
+                        "y": 3.0,
+                        "z": 3.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}

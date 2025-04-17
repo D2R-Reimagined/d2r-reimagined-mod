@@ -1,0 +1,189 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_back_optimized.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/White.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "barb_nado",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4200550864,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 3.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 6.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 459011156,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_daggers.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 4.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 0.0
+                    },
+                    "scale": {
+                        "x": 2.5,
+                        "y": 2.5,
+                        "z": 2.5
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}
