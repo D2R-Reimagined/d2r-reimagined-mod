@@ -30,13 +30,13 @@
         {
             "type": "TextBoxWidget", "name": "gold_amount",
             "fields": {
-                "rect": { "x": 939, "y": 1633, "width": 257, "height": 48 },
+                "rect": { "x": 269, "y": 1733, "width": 257, "height": 48 },
             }
         },
         {
             "type": "ButtonWidget", "name": "gold_button",
             "fields": {
-                "rect": { "x": 887, "y": 1633, "width": 317, "height": 44 },
+                "rect": { "x": 229, "y": 1733, "width": 317, "height": 44 },
                 "filename": "Controller/Panel/Stash/V2/Button_Small",
                 "focusIndicatorFilename": "Controller/HoverImages/GoldButton_Hover",
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
@@ -51,7 +51,7 @@
         {
             "type": "InventoryGridWidget", "name": "grid",
             "fields": {
-                "rect": { "x": 217, "y": 810},
+                "rect": { "x": 217, "y": 914},
                 "gemSocketFilename": "PANEL/gemsocket",
                 "navigation": {
                     "left": { "panelBoundary": true },
@@ -190,7 +190,7 @@
         {
             "type": "BeltWidget", "name": "Belt",
             "fields": {
-                "rect": { "x": 194, "y": 1606 },
+                "rect": { "x": 455, "y": 804 },
                 "poppedRowFilename": "Controller/Panel/InventoryPanel/V2/belt_popped_row_controller",
                 "poppedCapFilename": "Controller/Panel/InventoryPanel/V2/belt_popped_cap_controller",
                 "cellOffsetInRow": { "x": 0, "y": 5 },
@@ -205,7 +205,7 @@
                 {
                     "type": "TextBoxWidget", "name": "HotkeyLabelTemplate",
                     "fields": {
-                        "rect": { "x": 18, "y": 36, "width": 98, "height": 98 },
+                        "rect": { "x": 18, "y": 8, "width": 98, "height": 98 },
                         "style": {
                             "pointSize": "$MediumFontSize",
                             "alignment": { "h": "center", "v": "bottom" },
