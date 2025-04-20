@@ -155,6 +155,66 @@
                     "type": "EntityAttachmentDefinitionComponent",
                     "name": "entity_vfx_EntityAttachmentDefinition",
                     "targetbone": "spin"
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx",
+            "id": 729120364,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/flyingscimitar/vfx_flyingscimitar.particles",
+                    "hardKillOnDestroy": true
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_vfx_EntityAttachmentDefinition",
+                    "targetbone": "spin"
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": -1.5,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
                 }
             ]
         }
