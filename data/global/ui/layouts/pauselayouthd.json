@@ -70,6 +70,7 @@
                 "style": {
                     "fontColor": "$PanelTitleColor",
                     "pointSize": "$XExtraLargeFontSize",
+                    "dropShadow" :"$DefaultDropShadow",
                     "alignment": { "h": "center", "v": "center" }
                 }
             }
@@ -85,6 +86,26 @@
             },
             "children": [
                 {
+                    "type": "TableRowWidget", "name": "Mod Info",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Mod Info",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "Reimagined Mod Info",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
+                                "textColor": "$FontColorOrange",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
+                            }
+                        }
+                    ]
+                },
+                {
                     "type": "TableRowWidget", "name": "Row Options",
                     "children": [
                         {
@@ -99,26 +120,6 @@
                                 "acceptsReturnKey": true,
                                 "focusOnMouseOver": true,
                                 "sound": "select"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "TableRowWidget", "name": "Row Save and Exit Game",
-                    "children": [
-                        {
-                            "type": "ButtonWidget", "name": "Exit",
-                            "fields": {
-                                "filename": "PauseMenu\\PauseButton",
-                                "hoveredFrame": 3,
-                                "textString": "@SaveAndExit",
-                                "pressLabelOffset": [ 0, 0 ],
-                                "onClickMessage": "PausePanelMessage:ExitGame",
-                                "textColor": "$LightButtonTextColor",
-                                "text/style": "$StyleFEButtonText",
-                                "acceptsReturnKey": true,
-                                "focusOnMouseOver": true,
-                                "sound": "cursor_select"
                             }
                         }
                     ]
@@ -142,24 +143,31 @@
                             }
                         }
                     ]
-
                 },
                 {
-                    "type": "TableRowWidget", "name": "Mod Info",
+                    "type": "TableRowWidget", "name": "Spacer",
                     "children": [
                         {
-                            "type": "ButtonWidget", "name": "Mod Info",
+                            "type": "Disabled", "name": "Spacer",
+                        },
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Row Save and Exit Game",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Exit",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
-                                "textString": "Mod Info",
+                                "textString": "@SaveAndExit",
                                 "pressLabelOffset": [ 0, 0 ],
-                                "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
-                                "textColor": "$FontColorOrange",
+                                "onClickMessage": "PausePanelMessage:ExitGame",
+                                "textColor": "$LightButtonTextColor",
                                 "text/style": "$StyleFEButtonText",
                                 "acceptsReturnKey": true,
                                 "focusOnMouseOver": true,
-                                "sound": "select"
+                                "sound": "cursor_select"
                             }
                         }
                     ]
