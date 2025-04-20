@@ -1,14 +1,11 @@
 {
     "type": "WaypointsPanel", "name": "WaypointsPanelOriginal",
     "fields": {
-        "anchor" : { "x": 1.0, "y": 0.397 },
-        "rect": { "x": -1394, "y": -651, "width": 1162, "height": 1507 },
-        "buttonOffset": 123,
-        "selectableFontColor": "$FontColorCurrencyGold",
-        "selectableFrames": [ 0, 1 ],
+        "buttonOffset": 140,
+        "rect": "$ConsoleCenterPanelRect",
+        "selectableFontColor": "$FontColorGoldYellow",
         "currentFontColor": "$FontColorBlue",
-        "defaultFontColor": "$FontColorLightGray",
-        "terrorZoneFontColor": "$FontColorPurple"
+        "terrorZoneFontColor": { "r": 200, "g": 175, "b": 250, "a": 255 }
     },
     "children": [
         {
@@ -30,14 +27,14 @@
             "fields": {
                 "rect": "$LeftHingeRect",
                 "filename": "$LeftHingeSprite"
-            },
+            }
         },
         {
             "type": "TextBoxWidget", "name": "WaypointsTitle",
             "fields": {
                 "rect": "$InGamePanelTitleRect",
                 "text": "@Waypoint",
-                "style": "$StyleTitleBlock",
+                "style": "$StyleTitleBlock"
             }
         },
         {
@@ -78,11 +75,11 @@
                         {
                             "type": "ImageWidget", "name": "TerrorZone",
                             "fields": {
-                        				"rect": { "x": 47, "y": 28 },
+                        				"rect": { "x": 31, "y": 31 },
                         				"filename": "PANEL\\Waypoints\\terror_zone_icon",
                         				"visible": false
                         		}
-                        },
+                        }
                     ]
                 },
                 {
@@ -109,15 +106,8 @@
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
-                "onClickMessage": "Waypoints:CloseWaypointPanel",
-            },
-        },
-        {
-            "type": "ImageWidget", "name": "Overlay",
-            "fields": {
-                "rect": { "x": 150, "y": 201 },
-                "filename": "PANEL\\Waypoints\\Waypoints_Overlay"
-            },
-        },
+                "onClickMessage": "Waypoints:CloseWaypointPanel"
+            }
+        }
     ]
 }

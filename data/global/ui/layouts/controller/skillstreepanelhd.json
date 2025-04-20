@@ -22,18 +22,18 @@
             "Controller/Panel/Spells/V2/DrSkilltree",
             "Controller/Panel/Spells/V2/AsSkilltree"
         ],
-        "skillRow": [ 182, 371, 563, 753, 941, 1132 ],
-        "skillColumn": [ 262, 601, 938 ], //338, 336
+        "skillRow": [ 179, 368, 560, 750, 939, 1129 ],
+        "skillColumn": [ 255, 593, 929 ], //338, 336
         "skillButtonPadding": { "x": 30, "y": 30 },
         "anchor": {"x":0.5, "y":0},
-        "rect": { "x": 304, "y": 179, "width": 1420, "height": 1420 },
+        "rect": { "x": 300, "y": 175, "width": 1416, "height": 1416 },
         //"rect": "$ConsoleRightPanelRect"
     },
     "children": [
         {
             "type": "ImageWidget", "name": "CommonSkillTreesBackground",
             "fields": {
-                "rect": { "x": 0, "y": 0 },
+                "rect": { "x": 0, "y": 1 },
                 "filename": "Controller/Panel/Spells/V2/CenterPanelBG_SkillTrees"
             },
         },
@@ -42,6 +42,15 @@
             "fields": {
                 "rect": { "x": -474, "y": 1326},
                 "filename": ""
+            },
+        },
+        {
+            "type": "RectangleWidget", "name": "ManaOpaqueBG",
+            "fields": {
+                "rect": { "x": -2, "y": -2, "width": 1416, "height": 1416 },
+                "color": [ 0.05, 0.05, 0.05, 0.0 ],
+                "borderColor": [ 0.80, 0.73, 0.51, 0.4 ],
+                "drawBorder": true
             },
         },
         {
@@ -60,7 +69,7 @@
                 {
                     "type": "ImageWidget", "name": "Background",
                     "fields": {
-                	"rect": {"x": 60, "y": 2},
+                	"rect": {"x": 50, "y": -2},
                         "frame": 0,
                     },
                 },
@@ -79,7 +88,7 @@
                 {
                     "type": "ImageWidget", "name": "Background",
                     "fields": {
-                	"rect": {"x": 61, "y": 2},
+                	"rect": {"x": 50, "y": -2},
                         "frame": 1,
                     },
                 },
@@ -98,7 +107,7 @@
                 {
                     "type": "ImageWidget", "name": "Background",
                     "fields": {
-                	"rect": {"x": 61, "y": 2},
+                	"rect": {"x": 50, "y": -2},
                         "frame": 2,
 
                     },
@@ -120,7 +129,7 @@
                     "type": "ImageWidget", "name": "BackgroundExtra",
                     "fields": {
                         "filename": "Controller/Panel/Spells/V2/SkillTreeExtra",
-                        "rect":{"x":1002, "y": 4}
+                        "rect":{"x":997}
                     },
                 },
                 {
@@ -273,7 +282,7 @@
         {
             "type": "ButtonLegendWidget", "name": "TabLeftIndicator",
             "fields": {
-                "rect": { "x": 50, "y": -15, "width": 0, "height": 162 },
+                "rect": { "x": 55, "y": -15, "width": 0, "height": 162 },
                 "text": { "style": "$StyleButtonLegend" },
                 "presets": [
                     {
