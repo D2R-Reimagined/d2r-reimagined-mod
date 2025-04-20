@@ -23,7 +23,7 @@
         {
             "type": "ImageWidget", "name": "ScrollBarBackground",
             "fields": {
-                "rect": {"x": 1100, "y": 150 },
+                "rect": {"x": 1108, "y": 150 },
                 "filename": "PANEL\\AdvancedCharacterSheet\\AdvancedCharacterSheet_ScrollBar"
             },
             "children": [
@@ -43,14 +43,14 @@
             "type": "TextBoxWidget", "name": "Title",
             "fields": {
                 "text": "Breakpoints",
-                "rect": { "x": 260, "y": 50, "width": 665, "height": 85 },
+                "rect": { "x": 260, "y": 60, "width": 665, "height": 85 },
                 "style": "$StyleTitleBlock"
             }
         },
         {
             "type": "ScrollViewWidget", "name": "ScrollView",
             "fields": {
-                "rect": { "x": 50, "y": 140, "width": 1050, "height": 1300 },
+                "rect": { "x": 70, "y": 150, "width": 1100, "height": 1280 },
                 "scrollControllerName": "ScrollController"
             },
             "children": [
@@ -844,7 +844,7 @@
         {
             "type": "ButtonWidget", "name": "CloseButton",
             "fields": {
-                "rect": { "x": 1100, "y": 10 },
+                "rect": { "x": 1120, "y": 10 },
                 "filename": "PANEL\\closebtn_4x",
                 "hoveredFrame": 3,
                 "onClickMessage": "PanelManager:ClosePanel:BreakpointsPanel",
