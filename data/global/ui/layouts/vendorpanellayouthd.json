@@ -4,47 +4,47 @@
     "fields": {
         "priority": 5,
         "rect": "$LeftPanelRect",
-        "anchor": "$LeftPanelAnchor"
+        "anchor": "$LeftPanelAnchor",
     },
     "children": [
         {
-            "type": "TimerWidget", "name": "timer",
+            "type": "ClickCatcherWidget", "name": "click_catcher",
+            "fields": {
+                "rect": "$PanelClickCatcherRect"
+            },
+        },
+        {
+            "type": "TimerWidget", "name": "PromptDisable",
             "fields": {
                 "time": 0,
                 "message": "DialogMessage:ListItemClicked"
             }
         },
         {
-            "type": "ClickCatcherWidget", "name": "click_catcher",
-            "fields": {
-                "rect": "$PanelClickCatcherRect"
-            }
-        },
-        {
             "type": "ImageWidget", "name": "background",
             "fields": {
                 "filename": "PANEL\\Vendors\\VendorShop_BG"
-            }
+            },
         },
         {
             "type": "ImageWidget", "name": "background_repair",
             "fields": {
-                "filename": "PANEL\\Vendors\\VendorShop_BG"
-            }
+                "filename": "PANEL\\Vendors\\VendorForge_BG"
+            },
         },
         {
             "type": "ImageWidget", "name": "LeftHinge",
             "fields": {
                 "rect": "$LeftHingeRect",
                 "filename": "$LeftHingeSprite"
-            }
+            },
         },
         {
             "type": "TextBoxWidget", "name": "title",
             "fields": {
                 "rect": "$InGamePanelTitleRect",
-                "style": "$StyleTitleBlock"
-            }
+                "style": "$StyleTitleBlock",
+            },
         },
         {
             "type": "TabBarWidget", "name": "tabs",
@@ -59,7 +59,7 @@
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "tabSize": { "x": 249, "y": 75 },
-                "tabPadding": { "x": 0, "y": 0 }
+                "tabPadding": { "x": 0, "y": 0 },
             }
         },
         {
@@ -70,8 +70,8 @@
                 "sound": "pass",
                 "tooltipString": "@NPCRepairItems",
                 "hoveredFrame": 2,
-                "onClickMessage": "VendorPanelMessage:Repair"
-            }
+                "onClickMessage": "VendorPanelMessage:Repair",
+            },
         },
         {
             "type": "ButtonWidget", "name": "button_repair_all",
@@ -81,8 +81,8 @@
                 "hoveredFrame": 2,
                 "sound": "pass",
                 "tooltipString": "@strThisShouldBeIn104",
-                "onClickMessage": "VendorPanelMessage:RepairAll"
-            }
+                "onClickMessage": "VendorPanelMessage:RepairAll",
+            },
         },
         {
             "type": "ButtonWidget", "name": "button_refresh",
@@ -94,8 +94,8 @@
                 "pointSize": "$MediumPanelFontSize",
                 "textColor": { "r": 150, "g": 128, "b": 77, "a": 255 },
                 "onClickMessage": "VendorPanelMessage:RefreshAll",
-                "tooltipString": "@refresh"
-            }
+                "tooltipString": "@refresh",
+            },
         },
         {
             "type": "ButtonWidget", "name": "close",
@@ -105,8 +105,8 @@
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
-                "onClickMessage": "VendorPanelMessage:Close"
-            }
+                "onClickMessage": "VendorPanelMessage:Close",
+            },
         },
         {
             "type": "InventoryGridWidget", "name": "grid",
@@ -114,28 +114,28 @@
                 "rect": { "x": 91, "y": 233 },
                 "cellCount": { "x": 10, "y": 10 },
                 "cellSize": "$ItemCellSize",
-                "gemSocketFilename": "PANEL\\gemsocket"
-            }
+                "gemSocketFilename": "PANEL\\gemsocket",
+            },
         },
         {
             "type": "ImageWidget", "name": "gold_icon",
             "fields": {
                 "rect": { "x": 427, "y": 1304, "width": 57, "height": 57 },
-                "filename": "PANEL\\Coins_Icon"
-            }
+                "filename": "PANEL\\Coins_Icon",
+            },
         },
         {
             "type": "TextBoxWidget", "name": "gold_amount",
             "fields": {
                 "rect": { "x": 487, "y": 1309, "width": 249, "height": 48 },
-                "style": "$StyleGoldAmount"
-            }
+                "style": "$StyleGoldAmount",
+            },
         },
         {
             "type": "FocusableWidget", "name": "StashWidget",
             "fields": {
-                "rect": { "x": 421, "y": 1305, "width": 313, "height": 58 }
-            }
-        }
+                "rect": { "x": 421, "y": 1305, "width": 313, "height": 58 },
+            },
+        },
     ]
 }

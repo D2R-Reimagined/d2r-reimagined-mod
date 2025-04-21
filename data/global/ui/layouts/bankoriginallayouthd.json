@@ -54,7 +54,7 @@
         {
             "type": "ButtonWidget", "name": "close",
             "fields": {
-                "rect": { "x": 1675, "y": -210 },
+                "rect": { "x": 1667, "y": -203 },
                 "filename": "PANEL\\closebtn_4x",
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
@@ -74,18 +74,18 @@
         {
             "type": "TabBarWidget", "name": "BankTabs",
             "fields": {
-                "rect": { "x": 93, "y": -50 },
-                "tabCount": 6,
+                "rect": { "x": 82, "y": -46 },
+                "tabCount": 8,
                 "filename": "PANEL\\stash\\Stash_Tabs2",
-                "inactiveFrames": [ 0, 0, 0, 0 ],
-                "activeFrames": [ 1, 1, 1, 1 ],
-                "disabledFrames": [0, 0, 0, 0 ],
-                "textStrings": [ "@personal", "Classic", "Classic", "Classic"],
+                "inactiveFrames": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
+                "activeFrames": [ 1, 1, 1, 1, 1, 1, 1, 1 ],
+                "disabledFrames": [0, 0, 0, 0, 0, 0, 0, 0 ],
+                "textStrings": [ "@personal", "Classic", "Classic", "Classic", "Classic", "Classic", "Classic", "Classic"],
                 "textStyle": { "pointSize": "$SmallPanelFontSize" },
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
-                "tabSize": { "x": 249, "y": 75 },
-                "tabPadding": { "x": 12, "y": 0 },
+                "tabSize": { "x": 198, "y": 75 },
+                "tabPadding": { "x": 0, "y": 0 },
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab",
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab"
             }

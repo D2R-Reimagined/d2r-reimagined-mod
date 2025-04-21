@@ -35,25 +35,6 @@
             }
         },
         {
-            "type": "ButtonWidget", "name": "Settings",
-            "fields": {
-                "rect": { "x": 564, "y": 578},
-                "anchor": { "x": 0.5, "y":0.5 },
-                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
-                "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
-                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
-                "focusIndicatorOffset": { "x": -3, "y": 0 },
-                "pointSize": "$MediumLargeFontSize",
-                "textString": "@OptionsHD",
-                "pointSize": "$MediumLargeFontSize",
-                "textColor": "$LightButtonTextColor",
-                "text/style": "$StyleFEButtonText",
-                "hoveredFrame": 3,
-                "disabledFrame": 2,
-                "sound": "cursor_select",
-            }
-        },
-        {
             "type": "ButtonWidget", "name": "Help",
             "fields": {
                 "rect": { "x": 564, "y": 728 },
@@ -64,6 +45,24 @@
                 "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "pointSize": "$MediumLargeFontSize",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleFEButtonText",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "sound": "cursor_select",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Settings",
+            "fields": {
+                "rect": { "x": 564, "y": 578},
+                "anchor": { "x": 0.5, "y":0.5 },
+                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
+                "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
+                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
+                "focusIndicatorOffset": { "x": -3, "y": 0 },
+                "pointSize": "$MediumLargeFontSize",
+                "textString": "@OptionsHD",
                 "textColor": "$LightButtonTextColor",
                 "text/style": "$StyleFEButtonText",
                 "hoveredFrame": 3,
