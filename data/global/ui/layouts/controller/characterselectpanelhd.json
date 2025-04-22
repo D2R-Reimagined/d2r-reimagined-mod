@@ -1,0 +1,142 @@
+{
+    "basedOn": "CharacterSelectPanelHD.json",
+    "type": "CharacterSelectPanel", "name": "CharacterSelectPanel",
+    "children": [
+        {
+            "type": "ImageWidget", "name": "Background",
+            "children": [
+                {
+                    "type": "ListWidget", "name": "CharacterList",
+                    "children": [
+                        // character list
+                        {
+                            "type": "ListItemWidget", "name": "CharacterTemplate",
+                            "fields": {
+                                "focusIndicatorFilename": "Controller/HoverImages/CharacterListSelection_Hover",
+                                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                                "navigation": {
+                                    "left": { "panelBoundary": true },
+                                },
+                            },
+                            "children": [
+                                {
+                                    "type": "ImageWidget", "name": "Background",
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "LadderIcon",
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "LadderIconTooltip",
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "ClassicIcon",
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "ClassicIconTooltip",
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "HardcoreIcon",
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "HardcoreIconTooltip",
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TextBoxWidget", "name": "Title",
+                                },
+                                {
+                                    "type": "TextBoxWidget", "name": "Name",
+                                },
+                                {
+                                    "type": "TextBoxWidget", "name": "Level&Class",
+                                },
+                            ]
+                        },
+                        {
+                            "type": "ImageWidget", "name": "Selection",
+                        },
+                    ]
+                },
+                {
+                    "type": "ImageWidget", "name": "BackgroundCover",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "CreateCharacter",
+                            "fields": {
+                                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
+                                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                            },
+                            "children": [
+                                {
+                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
+                                    "fields": {
+                                        "anchor": { "x": 0.5, "y": 1.0 },
+                                        "text": {
+                                            "style": "$StyleButtonLegend",
+                                            "style": {
+                                                "dropShadow": "$DefaultDropShadow"
+                                            },
+                                        },
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "ButtonWidget", "name": "DeleteCharacter",
+                            "children": [
+                                {
+                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
+                                    "fields": {
+                                        "anchor": { "x": 0.5, "y": 1.0 },
+                                        "text": {
+                                            "style": "$StyleButtonLegend",
+                                            "style": {
+                                                "dropShadow": "$DefaultDropShadow"
+                                            },
+                                        },
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "ButtonWidget", "name": "ConvertCharacter",
+                            "children": [
+                                {
+                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
+                                    "fields": {
+                                        "anchor": { "x": 0.5, "y": 1.0 },
+                                        "text": {
+                                            "style": "$StyleButtonLegend",
+                                            "style": {
+                                                "dropShadow": "$DefaultDropShadow"
+                                            },
+                                        },
+                                    }
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TabBarWidget", "name": "Tabs",
+                        },
+                        {
+                            "type": "ImageWidget", "name": "ScrollBarBackground",
+                            "children": [
+                                {
+                                    "type": "ScrollControllerWidget", "name": "ScrollBar",
+                                },
+                            ]
+                        },
+                        {
+                            "type": "TextBoxWidget", "name": "D2RReimaginedModInfo",
+                        }
+                    ]
+                },
+            ]
+        },
+    ]
+}
