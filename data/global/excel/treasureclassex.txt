@@ -1,8 +1,8 @@
 Treasure Class	group	level	Picks	Unique	Set	Rare	Magic	NoDrop	Item1	Prob1	Item2	Prob2	Item3	Prob3	Item4	Prob4	Item5	Prob5	Item6	Prob6	Item7	Prob7	Item8	Prob8	Item9	Prob9	Item10	Prob10	*ItemProbSum	*ItemProbTotal	*TreasureClassDropChance	firstLadderSeason	lastLadderSeason	noAlwaysSpawn	*eol
-Gold			1					4	"gld,mul=1024"	1																									0
-Gold 1.5x			1					4	"gld,mul=1536"	1																									0
-Gold 2x			1					4	"gld,mul=2048"	1																									0
-Gold 2.5x			1					4	"gld,mul=2560"	1																									0
+Gold			1					25	"gld,mul=1024"	1																									0
+Gold 1.5x			1					50	"gld,mul=1536"	1																									0
+Gold 2x			1					75	"gld,mul=2048"	1																									0
+Gold 2.5x			1					100	"gld,mul=2560"	1																									0
 Infusion Orb (Normal)			1					0	ooi	1																								1	0
 Assemblage Orb (Normal)			1					0	ooa	1																								1	0
 Conversion Orb (Normal)			1					0	ooc	1																								1	0
@@ -16,15 +16,10 @@ Shadow Orb			1					800	1oe	1																								1	0
 Jewelry A			1					10	rin	140	amu	80	jew	40	cm1	40	cm2	40	cm3	40	Infusion Orb (Normal)	8	Conversion Orb (Normal)	4	Assemblage Orb (Normal)	4									0
 Jewelry B			1					15	rin	140	amu	80	jew	50	cm1	40	cm2	40	cm3	40	Infusion Orb	12	Conversion Orb	6	Assemblage Orb	6									0
 Jewelry C			1					20	rin	140	amu	80	jew	60	cm3	40	cm2	40	cm1	40	Infusion Orb	16	Conversion Orb	8	Assemblage Orb	8									0
-Chipped Gem			0					0	gcv	1	gcy	1	gcb	1	gcg	1	gcr	1	gcw	1	skc	1													0
-Flawed Gem			0					0	gfv	1	gfy	1	gfb	1	gfg	1	gfr	1	gfw	1	skf	1													0
-Normal Gem			0					0	gsv	1	gsy	1	gsb	1	gsg	1	gsr	1	gsw	1	sku	1													0
-Flawless Gem			0					0	gzv	1	gly	1	glb	1	glg	1	glr	1	glw	1	skl	1													0
-Perfect Gem			0					0	gpv	1	gpy	1	gpb	1	gpg	1	gpr	1	gpw	1	skz	1													0
 Gem			1					0	gmm	1	gmt	1	gms	1	gme	1	gmd	1	gmr	1	gmk	1													0
 Gem Stack			0					0	1am	1	1tp	1	1sa	1	1em	1	1di	1	1rb	1	1sk	1													0
-Ammo			0					0	aqv	0	cqv	0																							0
 Misc			1					20	key	0	tsc	1	isc	1	gps	0	ops	0	gpm	0	opm	0	gpl	0	opl	0	vps	0	yps	0	wms	0			0
+Void			1					99999	key	1																									0
 Potion 1			1					40	hp1	10	hp2	5	mp1	10	mp2	5	rvs	2																	0
 Potion 2			1					60	hp2	10	hp3	5	mp2	10	mp3	5	rvs	2																	0
 Potion 3			1					80	hp3	10	hp4	5	mp3	10	mp4	5	rvs	2																	0
@@ -181,261 +176,261 @@ Act 2 (H) Good	5	72	1					30	Jewelry C	33	Gem	20	Runes 14	14																				
 Act 3 (H) Good	5	78	1					30	Jewelry C	33	Gem	20	Runes 15	14																					0
 Act 4 (H) Good	5	82	1					30	Jewelry C	33	Gem	20	Runes 16	14																					0
 Act 5 (H) Good	5	85	1					30	Jewelry C	33	Gem	20	Runes 17	14																					0
-Act 1 Chest A	6	0	4					20	Act 1 Good	1	Act 1 Equip A	15	Potion 1	5	Gold	15																			0
-Act 1 Chest B	6	5	4					20	Act 1 Good	1	Act 1 Equip B	15	Potion 1	5	Gold	15																			0
-Act 1 Chest C	6	9	4					20	Act 2 Good	2	Act 2 Equip A	20	Potion 2	5	Gold	15																			0
-Act 2 Chest A	6	12	4					20	Act 2 Good	1	Act 2 Equip A	15	Potion 1	5	Gold	15																			0
-Act 2 Chest B	6	15	4					20	Act 2 Good	1	Act 2 Equip B	15	Potion 1	5	Gold	15																			0
-Act 2 Chest C	6	18	4					20	Act 3 Good	2	Act 3 Equip A	20	Potion 2	5	Gold	15																			0
-Act 3 Chest A	6	20	4					20	Act 3 Good	1	Act 3 Equip A	15	Potion 1	5	Gold	15																			0
-Act 3 Chest B	6	22	4					20	Act 3 Good	1	Act 3 Equip B	15	Potion 1	5	Gold	15																			0
-Act 3 Chest C	6	24	4					20	Act 4 Good	2	Act 4 Equip A	20	Potion 2	5	Gold	15																			0
-Act 4 Chest A	6	26	4					20	Act 4 Good	1	Act 4 Equip A	15	Potion 2	5	Gold	15																			0
-Act 4 Chest B	6	28	4					20	Act 4 Good	1	Act 4 Equip B	15	Potion 2	5	Gold	15																			0
-Act 4 Chest C	6	30	4					20	Act 5 Good	2	Act 5 Equip A	20	Potion 3	5	Gold	15																			0
-Act 5 Chest A	6	32	4					20	Act 5 Good	1	Act 5 Equip A	15	Potion 2	5	Gold	15																			0
-Act 5 Chest B	6	34	4					20	Act 5 Good	1	Act 5 Equip B	15	Potion 2	5	Gold	15																			0
-Act 5 Chest C	6	36	4					20	Act 1 (N) Good	2	Act 1 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 1 (N) Chest A	6	38	4					20	Act 1 (N) Good	1	Act 1 (N) Equip A	15	Potion 2	5	Gold	15																			0
-Act 1 (N) Chest B	6	40	4					20	Act 1 (N) Good	1	Act 1 (N) Equip B	15	Potion 2	5	Gold	15																			0
-Act 1 (N) Chest C	6	42	4					20	Act 2 (N) Good	2	Act 2 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 2 (N) Chest A	6	44	4					20	Act 2 (N) Good	1	Act 2 (N) Equip A	15	Potion 2	5	Gold	15																			0
-Act 2 (N) Chest B	6	46	4					20	Act 2 (N) Good	1	Act 2 (N) Equip B	15	Potion 2	5	Gold	15																			0
-Act 2 (N) Chest C	6	48	4					20	Act 3 (N) Good	2	Act 3 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 3 (N) Chest A	6	50	4					20	Act 3 (N) Good	1	Act 3 (N) Equip A	15	Potion 3	5	Gold	15																			0
-Act 3 (N) Chest B	6	52	4					20	Act 3 (N) Good	1	Act 3 (N) Equip B	15	Potion 3	5	Gold	15																			0
-Act 3 (N) Chest C	6	54	4					20	Act 4 (N) Good	2	Act 4 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 4 (N) Chest A	6	56	4					20	Act 4 (N) Good	1	Act 4 (N) Equip A	15	Potion 3	5	Gold	15																			0
-Act 4 (N) Chest B	6	58	4					20	Act 4 (N) Good	1	Act 4 (N) Equip B	15	Potion 3	5	Gold	15																			0
-Act 4 (N) Chest C	6	60	4					20	Act 5 (N) Good	2	Act 5 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 5 (N) Chest A	6	62	4					20	Act 5 (N) Good	1	Act 5 (N) Equip A	15	Potion 3	5	Gold	15																			0
-Act 5 (N) Chest B	6	64	4					20	Act 5 (N) Good	1	Act 5 (N) Equip B	15	Potion 3	5	Gold	15																			0
-Act 5 (N) Chest C	6	66	4					20	Act 1 (H) Good	2	Act 1 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 1 (H) Chest A	6	68	4					20	Act 1 (H) Good	1	Act 1 (H) Equip A	15	Potion 4	5	Gold	15																			0
-Act 1 (H) Chest B	6	70	4					20	Act 1 (H) Good	1	Act 1 (H) Equip B	15	Potion 4	5	Gold	15																			0
-Act 1 (H) Chest C	6	71	4					20	Act 2 (H) Good	2	Act 2 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 2 (H) Chest A	6	72	4					20	Act 2 (H) Good	1	Act 2 (H) Equip A	15	Potion 4	5	Gold	15																			0
-Act 2 (H) Chest B	6	74	4					20	Act 2 (H) Good	1	Act 2 (H) Equip B	15	Potion 4	5	Gold	15																			0
-Act 2 (H) Chest C	6	75	4					20	Act 3 (H) Good	2	Act 3 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 3 (H) Chest A	6	76	4					20	Act 3 (H) Good	1	Act 3 (H) Equip A	15	Potion 4	5	Gold	15																			0
-Act 3 (H) Chest B	6	78	4					20	Act 3 (H) Good	1	Act 3 (H) Equip B	15	Potion 4	5	Gold	15																			0
-Act 3 (H) Chest C	6	79	4					20	Act 4 (H) Good	2	Act 4 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 4 (H) Chest A	6	80	4					20	Act 4 (H) Good	1	Act 4 (H) Equip A	15	Potion 4	5	Gold	15																			0
-Act 4 (H) Chest B	6	81	4					20	Act 4 (H) Good	1	Act 4 (H) Equip B	15	Potion 4	5	Gold	15																			0
-Act 4 (H) Chest C	6	82	4					20	Act 5 (H) Good	2	Act 5 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 5 (H) Chest A	6	83	4					20	Act 5 (H) Good	1	Act 5 (H) Equip A	15	Potion 4	5	Gold	15																			0
-Act 5 (H) Chest B	6	84	4					20	Act 5 (H) Good	1	Act 5 (H) Equip B	15	Potion 4	5	Gold	15																			0
-Act 5 (H) Chest C	6	85	4					20	Act 5 (H) Good	2	Act 5 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 1 H2H A	7	0	1					70	Act 1 Good	2	Act 1 Equip A	20	Potion 1	5	Gold	15																			0
-Act 1 H2H B	7	5	1					70	Act 1 Good	2	Act 1 Equip B	20	Potion 1	5	Gold	15																			0
-Act 1 H2H C	7	9	1					70	Act 1 Good	2	Act 1 Equip C	20	Potion 1	5	Gold	15																			0
-Act 2 H2H A	7	12	1					70	Act 2 Good	2	Act 2 Equip A	20	Potion 1	5	Gold	15																			0
-Act 2 H2H B	7	15	1					70	Act 2 Good	2	Act 2 Equip B	20	Potion 1	5	Gold	15																			0
-Act 2 H2H C	7	18	1					70	Act 3 Good	2	Act 2 Equip C	20	Potion 1	5	Gold	15																			0
-Act 3 H2H A	7	20	1					70	Act 3 Good	2	Act 3 Equip A	20	Potion 1	5	Gold	15																			0
-Act 3 H2H B	7	22	1					70	Act 3 Good	2	Act 3 Equip B	20	Potion 1	5	Gold	15																			0
-Act 3 H2H C	7	24	1					70	Act 3 Good	2	Act 3 Equip C	20	Potion 1	5	Gold	15																			0
-Act 4 H2H A	7	26	1					70	Act 4 Good	2	Act 4 Equip A	20	Potion 2	5	Gold	15																			0
-Act 4 H2H B	7	29	1					70	Act 4 Good	2	Act 4 Equip B	20	Potion 2	5	Gold	15																			0
-Act 5 H2H A	7	32	1					70	Act 5 Good	2	Act 5 Equip A	20	Potion 2	5	Gold	15																			0
-Act 5 H2H B	7	34	1					70	Act 5 Good	2	Act 5 Equip B	20	Potion 2	5	Gold	15																			0
-Act 5 H2H C	7	36	1					70	Act 5 Good	2	Act 5 Equip C	20	Potion 2	5	Gold	15																			0
-Act 1 (N) H2H A	7	38	1					70	Act 1 (N) Good	2	Act 1 (N) Equip A	20	Potion 2	5	Gold	15																			0
-Act 1 (N) H2H B	7	40	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 1 (N) H2H C	7	41	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 2 (N) H2H A	7	42	1					70	Act 2 (N) Good	2	Act 2 (N) Equip A	20	Potion 2	5	Gold	15																			0
-Act 2 (N) H2H B	7	44	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 2 (N) H2H C	7	45	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 3 (N) H2H A	7	46	1					70	Act 3 (N) Good	2	Act 3 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 3 (N) H2H B	7	48	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 3 (N) H2H C	7	50	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 4 (N) H2H A	7	51	1					70	Act 4 (N) Good	2	Act 4 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 4 (N) H2H B	7	54	1					70	Act 4 (N) Good	2	Act 4 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 5 (N) H2H A	7	57	1					70	Act 5 (N) Good	2	Act 5 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 5 (N) H2H B	7	60	1					70	Act 5 (N) Good	2	Act 5 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 5 (N) H2H C	7	62	1					70	Act 5 (N) Good	2	Act 5 (N) Equip C	20	Potion 3	5	Gold	15																			0
-Act 1 (H) H2H A	7	63	1					70	Act 1 (H) Good	2	Act 1 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 1 (H) H2H B	7	66	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 1 (H) H2H C	7	68	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 2 (H) H2H A	7	69	1					70	Act 2 (H) Good	2	Act 2 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 2 (H) H2H B	7	71	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 2 (H) H2H C	7	73	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 3 (H) H2H A	7	74	1					70	Act 3 (H) Good	2	Act 3 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 3 (H) H2H B	7	76	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 3 (H) H2H C	7	77	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 4 (H) H2H A	7	79	1					70	Act 4 (H) Good	2	Act 4 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 4 (H) H2H B	7	80	1					70	Act 4 (H) Good	2	Act 4 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 5 (H) H2H A	7	82	1					70	Act 5 (H) Good	2	Act 5 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 5 (H) H2H B	7	83	1					70	Act 5 (H) Good	2	Act 5 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 5 (H) H2H C	7	85	1					70	Act 5 (H) Good	2	Act 5 (H) Equip C	20	Potion 4	5	Gold	15																			0
-Act 1 Cast A	8	0	1					70	Act 1 Good	2	Act 1 Equip A	20	Potion 1	5	Gold	15																			0
-Act 1 Cast B	8	5	1					70	Act 1 Good	2	Act 1 Equip B	20	Potion 1	5	Gold	15																			0
-Act 1 Cast C	8	9	1					70	Act 1 Good	2	Act 1 Equip C	20	Potion 1	5	Gold	15																			0
-Act 2 Cast A	8	12	1					70	Act 2 Good	2	Act 2 Equip A	20	Potion 1	5	Gold	15																			0
-Act 2 Cast B	8	15	1					70	Act 2 Good	2	Act 2 Equip B	20	Potion 1	5	Gold	15																			0
-Act 2 Cast C	8	18	1					70	Act 3 Good	2	Act 2 Equip C	20	Potion 1	5	Gold	15																			0
-Act 3 Cast A	8	20	1					70	Act 3 Good	2	Act 3 Equip A	20	Potion 1	5	Gold	15																			0
-Act 3 Cast B	8	22	1					70	Act 3 Good	2	Act 3 Equip B	20	Potion 1	5	Gold	15																			0
-Act 3 Cast C	8	24	1					70	Act 3 Good	2	Act 3 Equip C	20	Potion 1	5	Gold	15																			0
-Act 4 Cast A	8	26	1					70	Act 4 Good	2	Act 4 Equip A	20	Potion 2	5	Gold	15																			0
-Act 4 Cast B	8	29	1					70	Act 4 Good	2	Act 4 Equip B	20	Potion 2	5	Gold	15																			0
-Act 5 Cast A	8	32	1					70	Act 5 Good	2	Act 5 Equip A	20	Potion 2	5	Gold	15																			0
-Act 5 Cast B	8	34	1					70	Act 5 Good	2	Act 5 Equip B	20	Potion 2	5	Gold	15																			0
-Act 5 Cast C	8	36	1					70	Act 5 Good	2	Act 5 Equip C	20	Potion 2	5	Gold	15																			0
-Act 1 (N) Cast A	8	38	1					70	Act 1 (N) Good	2	Act 1 (N) Equip A	20	Potion 2	5	Gold	15																			0
-Act 1 (N) Cast B	8	40	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 1 (N) Cast C	8	41	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 2 (N) Cast A	8	42	1					70	Act 2 (N) Good	2	Act 2 (N) Equip A	20	Potion 2	5	Gold	15																			0
-Act 2 (N) Cast B	8	44	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 2 (N) Cast C	8	45	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15																			0
-Act 3 (N) Cast A	8	46	1					70	Act 3 (N) Good	2	Act 3 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 3 (N) Cast B	8	48	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 3 (N) Cast C	8	50	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 4 (N) Cast A	8	51	1					70	Act 4 (N) Good	2	Act 4 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 4 (N) Cast B	8	54	1					70	Act 4 (N) Good	2	Act 4 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 5 (N) Cast A	8	57	1					70	Act 5 (N) Good	2	Act 5 (N) Equip A	20	Potion 3	5	Gold	15																			0
-Act 5 (N) Cast B	8	60	1					70	Act 5 (N) Good	2	Act 5 (N) Equip B	20	Potion 3	5	Gold	15																			0
-Act 5 (N) Cast C	8	62	1					70	Act 5 (N) Good	2	Act 5 (N) Equip C	20	Potion 3	5	Gold	15																			0
-Act 1 (H) Cast A	8	63	1					70	Act 1 (H) Good	2	Act 1 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 1 (H) Cast B	8	66	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 1 (H) Cast C	8	68	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 2 (H) Cast A	8	69	1					70	Act 2 (H) Good	2	Act 2 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 2 (H) Cast B	8	71	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 2 (H) Cast C	8	72	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 3 (H) Cast A	8	74	1					70	Act 3 (H) Good	2	Act 3 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 3 (H) Cast B	8	75	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 3 (H) Cast C	8	77	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 4 (H) Cast A	8	78	1					70	Act 4 (H) Good	2	Act 4 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 4 (H) Cast B	8	80	1					70	Act 4 (H) Good	2	Act 4 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 5 (H) Cast A	8	81	1					70	Act 5 (H) Good	2	Act 5 (H) Equip A	20	Potion 4	5	Gold	15																			0
-Act 5 (H) Cast B	8	83	1					70	Act 5 (H) Good	2	Act 5 (H) Equip B	20	Potion 4	5	Gold	15																			0
-Act 5 (H) Cast C	8	85	1					70	Act 5 (H) Good	2	Act 5 (H) Equip C	20	Potion 4	5	Gold	15																			0
-Act 1 Miss A	9	0	1					60	Act 1 Good	2	Act 1 Equip A	15	Act 1 Bow A	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 1 Miss B	9	5	1					60	Act 1 Good	2	Act 1 Equip B	15	Act 1 Bow B	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 1 Miss C	9	9	1					60	Act 1 Good	2	Act 1 Equip C	15	Act 1 Bow C	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 2 Miss A	9	12	1					60	Act 2 Good	2	Act 2 Equip A	15	Act 2 Bow A	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 2 Miss B	9	15	1					60	Act 2 Good	2	Act 2 Equip B	15	Act 2 Bow B	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 2 Miss C	9	18	1					60	Act 3 Good	2	Act 2 Equip C	15	Act 2 Bow C	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 3 Miss A	9	20	1					60	Act 3 Good	2	Act 3 Equip A	15	Act 3 Bow A	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 3 Miss B	9	22	1					60	Act 3 Good	2	Act 3 Equip B	15	Act 3 Bow B	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 3 Miss C	9	24	1					60	Act 3 Good	2	Act 3 Equip C	15	Act 3 Bow C	10	Potion 1	5	Ammo	0	Gold	10															0
-Act 4 Miss A	9	26	1					60	Act 4 Good	2	Act 4 Equip A	15	Act 4 Bow A	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 4 Miss B	9	29	1					60	Act 4 Good	2	Act 4 Equip B	15	Act 4 Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 5 Miss A	9	32	1					60	Act 5 Good	2	Act 5 Equip A	15	Act 5 Bow A	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 5 Miss B	9	34	1					60	Act 5 Good	2	Act 5 Equip B	15	Act 5 Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 5 Miss C	9	36	1					60	Act 5 Good	2	Act 5 Equip C	15	Act 5 Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 1 (N) Miss A	9	38	1					60	Act 1 (N) Good	2	Act 1 (N) Equip A	15	Act 1 (N) Bow A	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 1 (N) Miss B	9	40	1					60	Act 1 (N) Good	2	Act 1 (N) Equip B	15	Act 1 (N) Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 1 (N) Miss C	9	41	1					60	Act 1 (N) Good	2	Act 1 (N) Equip B	15	Act 1 (N) Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 2 (N) Miss A	9	42	1					60	Act 2 (N) Good	2	Act 2 (N) Equip A	15	Act 2 (N) Bow A	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 2 (N) Miss B	9	44	1					60	Act 2 (N) Good	2	Act 2 (N) Equip B	15	Act 2 (N) Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 2 (N) Miss C	9	45	1					60	Act 2 (N) Good	2	Act 2 (N) Equip B	15	Act 2 (N) Bow B	10	Potion 2	5	Ammo	0	Gold	10															0
-Act 3 (N) Miss A	9	46	1					60	Act 3 (N) Good	2	Act 3 (N) Equip A	15	Act 3 (N) Bow A	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 3 (N) Miss B	9	48	1					60	Act 3 (N) Good	2	Act 3 (N) Equip B	15	Act 3 (N) Bow B	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 3 (N) Miss C	9	50	1					60	Act 3 (N) Good	2	Act 3 (N) Equip B	15	Act 3 (N) Bow B	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 4 (N) Miss A	9	51	1					60	Act 4 (N) Good	2	Act 4 (N) Equip A	15	Act 4 (N) Bow A	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 4 (N) Miss B	9	54	1					60	Act 4 (N) Good	2	Act 4 (N) Equip B	15	Act 4 (N) Bow B	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 5 (N) Miss A	9	57	1					60	Act 5 (N) Good	2	Act 5 (N) Equip A	15	Act 5 (N) Bow A	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 5 (N) Miss B	9	60	1					60	Act 5 (N) Good	2	Act 5 (N) Equip B	15	Act 5 (N) Bow B	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 5 (N) Miss C	9	62	1					60	Act 5 (N) Good	2	Act 5 (N) Equip C	15	Act 5 (N) Bow B	10	Potion 3	5	Ammo	0	Gold	10															0
-Act 1 (H) Miss A	9	63	1					60	Act 1 (H) Good	2	Act 1 (H) Equip A	15	Act 1 (H) Bow A	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 1 (H) Miss B	9	66	1					60	Act 1 (H) Good	2	Act 1 (H) Equip B	15	Act 1 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 1 (H) Miss C	9	68	1					60	Act 1 (H) Good	2	Act 1 (H) Equip B	15	Act 1 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 2 (H) Miss A	9	69	1					60	Act 2 (H) Good	2	Act 2 (H) Equip A	15	Act 2 (H) Bow A	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 2 (H) Miss B	9	71	1					60	Act 2 (H) Good	2	Act 2 (H) Equip B	15	Act 2 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 2 (H) Miss C	9	72	1					60	Act 2 (H) Good	2	Act 2 (H) Equip B	15	Act 2 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 3 (H) Miss A	9	74	1					60	Act 3 (H) Good	2	Act 3 (H) Equip A	15	Act 3 (H) Bow A	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 3 (H) Miss B	9	75	1					60	Act 3 (H) Good	2	Act 3 (H) Equip B	15	Act 3 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 3 (H) Miss C	9	77	1					60	Act 3 (H) Good	2	Act 3 (H) Equip B	15	Act 3 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 4 (H) Miss A	9	78	1					60	Act 4 (H) Good	2	Act 4 (H) Equip A	15	Act 4 (H) Bow A	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 4 (H) Miss B	9	80	1					60	Act 4 (H) Good	2	Act 4 (H) Equip B	15	Act 4 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 5 (H) Miss A	9	81	1					60	Act 5 (H) Good	2	Act 5 (H) Equip A	15	Act 5 (H) Bow A	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 5 (H) Miss B	9	83	1					60	Act 5 (H) Good	2	Act 5 (H) Equip B	15	Act 5 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 5 (H) Miss C	9	85	1					60	Act 5 (H) Good	2	Act 5 (H) Equip C	15	Act 5 (H) Bow B	10	Potion 4	5	Ammo	0	Gold	10															0
-Act 1 Wraith A	10	0	1					50	Act 1 Good	4	Potion 1	25																							0
-Act 1 Wraith B	10	5	1					50	Act 1 Good	4	Potion 1	25																							0
-Act 1 Wraith C	10	9	1					50	Act 1 Good	4	Potion 1	25																							0
-Act 2 Wraith A	10	12	1					50	Act 2 Good	4	Potion 1	25																							0
-Act 2 Wraith B	10	15	1					50	Act 2 Good	4	Potion 1	25																							0
-Act 2 Wraith C	10	18	1					50	Act 3 Good	4	Potion 1	25																							0
-Act 3 Wraith A	10	20	1					50	Act 3 Good	4	Potion 1	25																							0
-Act 3 Wraith B	10	22	1					50	Act 3 Good	4	Potion 1	25																							0
-Act 3 Wraith C	10	24	1					50	Act 3 Good	4	Potion 1	25																							0
-Act 4 Wraith A	10	26	1					50	Act 4 Good	4	Potion 2	25																							0
-Act 4 Wraith B	10	29	1					50	Act 4 Good	4	Potion 2	25																							0
-Act 5 Wraith A	10	32	1					50	Act 5 Good	4	Potion 2	25																							0
-Act 5 Wraith B	10	34	1					50	Act 5 Good	4	Potion 2	25																							0
-Act 5 Wraith C	10	36	1					50	Act 5 Good	4	Potion 2	25																							0
-Act 1 (N) Wraith A	10	38	1					50	Act 1 (N) Good	4	Potion 2	25																							0
-Act 1 (N) Wraith B	10	40	1					50	Act 1 (N) Good	4	Potion 2	25																							0
-Act 1 (N) Wraith C	10	41	1					50	Act 1 (N) Good	4	Potion 2	25																							0
-Act 2 (N) Wraith A	10	42	1					50	Act 2 (N) Good	4	Potion 2	25																							0
-Act 2 (N) Wraith B	10	44	1					50	Act 2 (N) Good	4	Potion 2	25																							0
-Act 2 (N) Wraith C	10	45	1					50	Act 2 (N) Good	4	Potion 2	25																							0
-Act 3 (N) Wraith A	10	46	1					50	Act 3 (N) Good	4	Potion 3	25																							0
-Act 3 (N) Wraith B	10	48	1					50	Act 3 (N) Good	4	Potion 3	25																							0
-Act 3 (N) Wraith C	10	50	1					50	Act 3 (N) Good	4	Potion 3	25																							0
-Act 4 (N) Wraith A	10	51	1					50	Act 4 (N) Good	4	Potion 3	25																							0
-Act 4 (N) Wraith B	10	54	1					50	Act 4 (N) Good	4	Potion 3	25																							0
-Act 5 (N) Wraith A	10	57	1					50	Act 5 (N) Good	4	Potion 3	25																							0
-Act 5 (N) Wraith B	10	60	1					50	Act 5 (N) Good	4	Potion 3	25																							0
-Act 5 (N) Wraith C	10	62	1					50	Act 5 (N) Good	4	Potion 3	25																							0
-Act 1 (H) Wraith A	10	63	1					50	Act 1 (H) Good	4	Potion 4	25																							0
-Act 1 (H) Wraith B	10	66	1					50	Act 1 (H) Good	4	Potion 4	25																							0
-Act 1 (H) Wraith C	10	68	1					50	Act 1 (H) Good	4	Potion 4	25																							0
-Act 2 (H) Wraith A	10	69	1					50	Act 2 (H) Good	4	Potion 4	25																							0
-Act 2 (H) Wraith B	10	71	1					50	Act 2 (H) Good	4	Potion 4	25																							0
-Act 2 (H) Wraith C	10	72	1					50	Act 2 (H) Good	4	Potion 4	25																							0
-Act 3 (H) Wraith A	10	74	1					50	Act 3 (H) Good	4	Potion 4	25																							0
-Act 3 (H) Wraith B	10	75	1					50	Act 3 (H) Good	4	Potion 4	25																							0
-Act 3 (H) Wraith C	10	77	1					50	Act 3 (H) Good	4	Potion 4	25																							0
-Act 4 (H) Wraith A	10	78	1					50	Act 4 (H) Good	4	Potion 4	25																							0
-Act 4 (H) Wraith B	10	80	1					50	Act 4 (H) Good	4	Potion 4	25																							0
-Act 5 (H) Wraith A	10	81	1					50	Act 5 (H) Good	4	Potion 4	25																							0
-Act 5 (H) Wraith B	10	83	1					50	Act 5 (H) Good	4	Potion 4	25																							0
-Act 5 (H) Wraith C	10	85	1					50	Act 5 (H) Good	4	Potion 4	25																							0
-Act 1 Citem A	11	0	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip A	37	Gold 1.5x	30																					0
-Act 1 Citem B	11	5	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip B	37	Gold 1.5x	30																					0
-Act 1 Citem C	11	9	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip C	37	Gold 1.5x	30																					0
-Act 2 Citem A	11	12	1	800	800	800	1024	10	Act 2 Good	3	Act 2 Equip A	37	Gold 1.5x	30																					0
-Act 2 Citem B	11	15	1	800	800	800	1024	10	Act 2 Good	3	Act 2 Equip B	37	Gold 1.5x	30																					0
-Act 2 Citem C	11	18	1	800	800	800	1024	10	Act 3 Good	3	Act 2 Equip C	37	Gold 1.5x	30																					0
-Act 3 Citem A	11	20	1	800	800	800	1024	10	Act 3 Good	3	Act 3 Equip A	37	Gold 1.5x	30																					0
-Act 3 Citem B	11	22	1	800	800	800	1024	10	Act 3 Good	3	Act 3 Equip B	37	Gold 1.5x	30																					0
-Act 3 Citem C	11	24	1	800	800	800	1024	10	Act 3 Good	3	Act 3 Equip C	37	Gold 1.5x	30																					0
-Act 4 Citem A	11	26	1	800	800	800	1024	10	Act 4 Good	3	Act 4 Equip A	37	Gold 1.5x	30																					0
-Act 4 Citem B	11	29	1	800	800	800	1024	10	Act 4 Good	3	Act 4 Equip B	37	Gold 1.5x	30																					0
-Act 5 Citem A	11	32	1	800	800	800	1024	10	Act 5 Good	3	Act 5 Equip A	37	Gold 1.5x	30																					0
-Act 5 Citem B	11	34	1	800	800	800	1024	10	Act 5 Good	3	Act 5 Equip B	37	Gold 1.5x	30																					0
-Act 5 Citem C	11	36	1	800	800	800	1024	10	Act 5 Good	3	Act 5 Equip C	37	Gold 1.5x	30																					0
-Act 1 (N) Citem A	11	38	1	800	800	800	1024	10	Act 1 (N) Good	3	Act 1 (N) Equip A	37	Gold 1.5x	30																					0
-Act 1 (N) Citem B	11	40	1	800	800	800	1024	10	Act 1 (N) Good	3	Act 1 (N) Equip B	37	Gold 1.5x	30																					0
-Act 1 (N) Citem C	11	41	1	800	800	800	1024	10	Act 1 (N) Good	3	Act 1 (N) Equip B	37	Gold 1.5x	30																					0
-Act 2 (N) Citem A	11	42	1	800	800	800	1024	10	Act 2 (N) Good	3	Act 2 (N) Equip A	37	Gold 1.5x	30																					0
-Act 2 (N) Citem B	11	44	1	800	800	800	1024	10	Act 2 (N) Good	3	Act 2 (N) Equip B	37	Gold 1.5x	30																					0
-Act 2 (N) Citem C	11	45	1	800	800	800	1024	10	Act 2 (N) Good	3	Act 2 (N) Equip B	37	Gold 1.5x	30																					0
-Act 3 (N) Citem A	11	46	1	800	800	800	1024	10	Act 3 (N) Good	3	Act 3 (N) Equip A	37	Gold 1.5x	30																					0
-Act 3 (N) Citem B	11	48	1	800	800	800	1024	10	Act 3 (N) Good	3	Act 3 (N) Equip B	37	Gold 1.5x	30																					0
-Act 3 (N) Citem C	11	50	1	800	800	800	1024	10	Act 3 (N) Good	3	Act 3 (N) Equip B	37	Gold 1.5x	30																					0
-Act 4 (N) Citem A	11	51	1	800	800	800	1024	10	Act 4 (N) Good	3	Act 4 (N) Equip A	37	Gold 1.5x	30																					0
-Act 4 (N) Citem B	11	54	1	800	800	800	1024	10	Act 4 (N) Good	3	Act 4 (N) Equip B	37	Gold 1.5x	30																					0
-Act 5 (N) Citem A	11	57	1	800	800	800	1024	10	Act 5 (N) Good	3	Act 5 (N) Equip A	37	Gold 1.5x	30																					0
-Act 5 (N) Citem B	11	60	1	800	800	800	1024	10	Act 5 (N) Good	3	Act 5 (N) Equip B	37	Gold 1.5x	30																					0
-Act 5 (N) Citem C	11	62	1	800	800	800	1024	10	Act 5 (N) Good	3	Act 5 (N) Equip C	37	Gold 1.5x	30																					0
-Act 1 (H) Citem A	11	63	1	800	800	800	1024	10	Act 1 (H) Good	5	Act 1 (H) Equip A	35	Gold 1.5x	30																					0
-Act 1 (H) Citem B	11	66	1	800	800	800	1024	10	Act 1 (H) Good	5	Act 1 (H) Equip B	35	Gold 1.5x	30																					0
-Act 1 (H) Citem C	11	68	1	800	800	800	1024	10	Act 1 (H) Good	5	Act 1 (H) Equip B	35	Gold 1.5x	30																					0
-Act 2 (H) Citem A	11	69	1	800	800	800	1024	10	Act 2 (H) Good	5	Act 2 (H) Equip A	35	Gold 1.5x	30																					0
-Act 2 (H) Citem B	11	71	1	800	800	800	1024	10	Act 2 (H) Good	5	Act 2 (H) Equip B	35	Gold 1.5x	30																					0
-Act 2 (H) Citem C	11	72	1	800	800	800	1024	10	Act 2 (H) Good	5	Act 2 (H) Equip B	35	Gold 1.5x	30																					0
-Act 3 (H) Citem A	11	74	1	800	800	800	1024	10	Act 3 (H) Good	5	Act 3 (H) Equip A	35	Gold 1.5x	30																					0
-Act 3 (H) Citem B	11	75	1	800	800	800	1024	10	Act 3 (H) Good	5	Act 3 (H) Equip B	35	Gold 1.5x	30																					0
-Act 3 (H) Citem C	11	77	1	800	800	800	1024	10	Act 3 (H) Good	5	Act 3 (H) Equip B	35	Gold 1.5x	30																					0
-Act 4 (H) Citem A	11	78	1	800	800	800	1024	10	Act 4 (H) Good	5	Act 4 (H) Equip A	35	Gold 1.5x	30																					0
-Act 4 (H) Citem B	11	80	1	800	800	800	1024	10	Act 4 (H) Good	5	Act 4 (H) Equip B	35	Gold 1.5x	30																					0
-Act 5 (H) Citem A	11	81	1	800	800	800	1024	10	Act 5 (H) Good	5	Act 5 (H) Equip A	35	Gold 1.5x	30																					0
-Act 5 (H) Citem B	11	83	1	800	800	800	1024	10	Act 5 (H) Good	5	Act 5 (H) Equip B	35	Gold 1.5x	30																					0
-Act 5 (H) Citem C	11	85	1	800	800	800	1024	10	Act 5 (H) Good	5	Act 5 (H) Equip C	35	Gold 1.5x	30																					0
+Act 1 Chest A	6	0	4					20	Act 1 Good	1	Act 1 Equip A	15	Potion 1	5	Gold	15	Void	15																	0
+Act 1 Chest B	6	5	4					20	Act 1 Good	1	Act 1 Equip B	15	Potion 1	5	Gold	15	Void	15																	0
+Act 1 Chest C	6	9	4					20	Act 2 Good	2	Act 2 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 Chest A	6	12	4					20	Act 2 Good	1	Act 2 Equip A	15	Potion 1	5	Gold	15	Void	15																	0
+Act 2 Chest B	6	15	4					20	Act 2 Good	1	Act 2 Equip B	15	Potion 1	5	Gold	15	Void	15																	0
+Act 2 Chest C	6	18	4					20	Act 3 Good	2	Act 3 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 3 Chest A	6	20	4					20	Act 3 Good	1	Act 3 Equip A	15	Potion 1	5	Gold	15	Void	15																	0
+Act 3 Chest B	6	22	4					20	Act 3 Good	1	Act 3 Equip B	15	Potion 1	5	Gold	15	Void	15																	0
+Act 3 Chest C	6	24	4					20	Act 4 Good	2	Act 4 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 4 Chest A	6	26	4					20	Act 4 Good	1	Act 4 Equip A	15	Potion 2	5	Gold	15	Void	15																	0
+Act 4 Chest B	6	28	4					20	Act 4 Good	1	Act 4 Equip B	15	Potion 2	5	Gold	15	Void	15																	0
+Act 4 Chest C	6	30	4					20	Act 5 Good	2	Act 5 Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 Chest A	6	32	4					20	Act 5 Good	1	Act 5 Equip A	15	Potion 2	5	Gold	15	Void	15																	0
+Act 5 Chest B	6	34	4					20	Act 5 Good	1	Act 5 Equip B	15	Potion 2	5	Gold	15	Void	15																	0
+Act 5 Chest C	6	36	4					20	Act 1 (N) Good	2	Act 1 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 1 (N) Chest A	6	38	4					20	Act 1 (N) Good	1	Act 1 (N) Equip A	15	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) Chest B	6	40	4					20	Act 1 (N) Good	1	Act 1 (N) Equip B	15	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) Chest C	6	42	4					20	Act 2 (N) Good	2	Act 2 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 2 (N) Chest A	6	44	4					20	Act 2 (N) Good	1	Act 2 (N) Equip A	15	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) Chest B	6	46	4					20	Act 2 (N) Good	1	Act 2 (N) Equip B	15	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) Chest C	6	48	4					20	Act 3 (N) Good	2	Act 3 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) Chest A	6	50	4					20	Act 3 (N) Good	1	Act 3 (N) Equip A	15	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) Chest B	6	52	4					20	Act 3 (N) Good	1	Act 3 (N) Equip B	15	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) Chest C	6	54	4					20	Act 4 (N) Good	2	Act 4 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) Chest A	6	56	4					20	Act 4 (N) Good	1	Act 4 (N) Equip A	15	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) Chest B	6	58	4					20	Act 4 (N) Good	1	Act 4 (N) Equip B	15	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) Chest C	6	60	4					20	Act 5 (N) Good	2	Act 5 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) Chest A	6	62	4					20	Act 5 (N) Good	1	Act 5 (N) Equip A	15	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) Chest B	6	64	4					20	Act 5 (N) Good	1	Act 5 (N) Equip B	15	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) Chest C	6	66	4					20	Act 1 (H) Good	2	Act 1 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) Chest A	6	68	4					20	Act 1 (H) Good	1	Act 1 (H) Equip A	15	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) Chest B	6	70	4					20	Act 1 (H) Good	1	Act 1 (H) Equip B	15	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) Chest C	6	71	4					20	Act 2 (H) Good	2	Act 2 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) Chest A	6	72	4					20	Act 2 (H) Good	1	Act 2 (H) Equip A	15	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) Chest B	6	74	4					20	Act 2 (H) Good	1	Act 2 (H) Equip B	15	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) Chest C	6	75	4					20	Act 3 (H) Good	2	Act 3 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) Chest A	6	76	4					20	Act 3 (H) Good	1	Act 3 (H) Equip A	15	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) Chest B	6	78	4					20	Act 3 (H) Good	1	Act 3 (H) Equip B	15	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) Chest C	6	79	4					20	Act 4 (H) Good	2	Act 4 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) Chest A	6	80	4					20	Act 4 (H) Good	1	Act 4 (H) Equip A	15	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) Chest B	6	81	4					20	Act 4 (H) Good	1	Act 4 (H) Equip B	15	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) Chest C	6	82	4					20	Act 5 (H) Good	2	Act 5 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) Chest A	6	83	4					20	Act 5 (H) Good	1	Act 5 (H) Equip A	15	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) Chest B	6	84	4					20	Act 5 (H) Good	1	Act 5 (H) Equip B	15	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) Chest C	6	85	4					20	Act 5 (H) Good	2	Act 5 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 H2H A	7	0	1					70	Act 1 Good	2	Act 1 Equip A	20	Potion 1	5	Gold	15	Void	15																	0
+Act 1 H2H B	7	5	1					70	Act 1 Good	2	Act 1 Equip B	20	Potion 1	5	Gold	15	Void	15																	0
+Act 1 H2H C	7	9	1					70	Act 1 Good	2	Act 1 Equip C	20	Potion 1	5	Gold	15	Void	15																	0
+Act 2 H2H A	7	12	1					70	Act 2 Good	2	Act 2 Equip A	20	Potion 1	5	Gold	15	Void	15																	0
+Act 2 H2H B	7	15	1					70	Act 2 Good	2	Act 2 Equip B	20	Potion 1	5	Gold	15	Void	15																	0
+Act 2 H2H C	7	18	1					70	Act 3 Good	2	Act 2 Equip C	20	Potion 1	5	Gold	15	Void	15																	0
+Act 3 H2H A	7	20	1					70	Act 3 Good	2	Act 3 Equip A	20	Potion 1	5	Gold	15	Void	15																	0
+Act 3 H2H B	7	22	1					70	Act 3 Good	2	Act 3 Equip B	20	Potion 1	5	Gold	15	Void	15																	0
+Act 3 H2H C	7	24	1					70	Act 3 Good	2	Act 3 Equip C	20	Potion 1	5	Gold	15	Void	15																	0
+Act 4 H2H A	7	26	1					70	Act 4 Good	2	Act 4 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 4 H2H B	7	29	1					70	Act 4 Good	2	Act 4 Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 5 H2H A	7	32	1					70	Act 5 Good	2	Act 5 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 5 H2H B	7	34	1					70	Act 5 Good	2	Act 5 Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 5 H2H C	7	36	1					70	Act 5 Good	2	Act 5 Equip C	20	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) H2H A	7	38	1					70	Act 1 (N) Good	2	Act 1 (N) Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) H2H B	7	40	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) H2H C	7	41	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) H2H A	7	42	1					70	Act 2 (N) Good	2	Act 2 (N) Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) H2H B	7	44	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) H2H C	7	45	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 3 (N) H2H A	7	46	1					70	Act 3 (N) Good	2	Act 3 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) H2H B	7	48	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) H2H C	7	50	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) H2H A	7	51	1					70	Act 4 (N) Good	2	Act 4 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) H2H B	7	54	1					70	Act 4 (N) Good	2	Act 4 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) H2H A	7	57	1					70	Act 5 (N) Good	2	Act 5 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) H2H B	7	60	1					70	Act 5 (N) Good	2	Act 5 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) H2H C	7	62	1					70	Act 5 (N) Good	2	Act 5 (N) Equip C	20	Potion 3	5	Gold	15	Void	15																	0
+Act 1 (H) H2H A	7	63	1					70	Act 1 (H) Good	2	Act 1 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) H2H B	7	66	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) H2H C	7	68	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) H2H A	7	69	1					70	Act 2 (H) Good	2	Act 2 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) H2H B	7	71	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) H2H C	7	73	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) H2H A	7	74	1					70	Act 3 (H) Good	2	Act 3 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) H2H B	7	76	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) H2H C	7	77	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) H2H A	7	79	1					70	Act 4 (H) Good	2	Act 4 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) H2H B	7	80	1					70	Act 4 (H) Good	2	Act 4 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) H2H A	7	82	1					70	Act 5 (H) Good	2	Act 5 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) H2H B	7	83	1					70	Act 5 (H) Good	2	Act 5 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) H2H C	7	85	1					70	Act 5 (H) Good	2	Act 5 (H) Equip C	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 Cast A	8	0	1					70	Act 1 Good	2	Act 1 Equip A	20	Potion 1	5	Gold	15	Void	15																	0
+Act 1 Cast B	8	5	1					70	Act 1 Good	2	Act 1 Equip B	20	Potion 1	5	Gold	15	Void	15																	0
+Act 1 Cast C	8	9	1					70	Act 1 Good	2	Act 1 Equip C	20	Potion 1	5	Gold	15	Void	15																	0
+Act 2 Cast A	8	12	1					70	Act 2 Good	2	Act 2 Equip A	20	Potion 1	5	Gold	15	Void	15																	0
+Act 2 Cast B	8	15	1					70	Act 2 Good	2	Act 2 Equip B	20	Potion 1	5	Gold	15	Void	15																	0
+Act 2 Cast C	8	18	1					70	Act 3 Good	2	Act 2 Equip C	20	Potion 1	5	Gold	15	Void	15																	0
+Act 3 Cast A	8	20	1					70	Act 3 Good	2	Act 3 Equip A	20	Potion 1	5	Gold	15	Void	15																	0
+Act 3 Cast B	8	22	1					70	Act 3 Good	2	Act 3 Equip B	20	Potion 1	5	Gold	15	Void	15																	0
+Act 3 Cast C	8	24	1					70	Act 3 Good	2	Act 3 Equip C	20	Potion 1	5	Gold	15	Void	15																	0
+Act 4 Cast A	8	26	1					70	Act 4 Good	2	Act 4 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 4 Cast B	8	29	1					70	Act 4 Good	2	Act 4 Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 5 Cast A	8	32	1					70	Act 5 Good	2	Act 5 Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 5 Cast B	8	34	1					70	Act 5 Good	2	Act 5 Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 5 Cast C	8	36	1					70	Act 5 Good	2	Act 5 Equip C	20	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) Cast A	8	38	1					70	Act 1 (N) Good	2	Act 1 (N) Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) Cast B	8	40	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 1 (N) Cast C	8	41	1					70	Act 1 (N) Good	2	Act 1 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) Cast A	8	42	1					70	Act 2 (N) Good	2	Act 2 (N) Equip A	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) Cast B	8	44	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 2 (N) Cast C	8	45	1					70	Act 2 (N) Good	2	Act 2 (N) Equip B	20	Potion 2	5	Gold	15	Void	15																	0
+Act 3 (N) Cast A	8	46	1					70	Act 3 (N) Good	2	Act 3 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) Cast B	8	48	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 3 (N) Cast C	8	50	1					70	Act 3 (N) Good	2	Act 3 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) Cast A	8	51	1					70	Act 4 (N) Good	2	Act 4 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 4 (N) Cast B	8	54	1					70	Act 4 (N) Good	2	Act 4 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) Cast A	8	57	1					70	Act 5 (N) Good	2	Act 5 (N) Equip A	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) Cast B	8	60	1					70	Act 5 (N) Good	2	Act 5 (N) Equip B	20	Potion 3	5	Gold	15	Void	15																	0
+Act 5 (N) Cast C	8	62	1					70	Act 5 (N) Good	2	Act 5 (N) Equip C	20	Potion 3	5	Gold	15	Void	15																	0
+Act 1 (H) Cast A	8	63	1					70	Act 1 (H) Good	2	Act 1 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) Cast B	8	66	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 (H) Cast C	8	68	1					70	Act 1 (H) Good	2	Act 1 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) Cast A	8	69	1					70	Act 2 (H) Good	2	Act 2 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) Cast B	8	71	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 2 (H) Cast C	8	72	1					70	Act 2 (H) Good	2	Act 2 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) Cast A	8	74	1					70	Act 3 (H) Good	2	Act 3 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) Cast B	8	75	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 3 (H) Cast C	8	77	1					70	Act 3 (H) Good	2	Act 3 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) Cast A	8	78	1					70	Act 4 (H) Good	2	Act 4 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 4 (H) Cast B	8	80	1					70	Act 4 (H) Good	2	Act 4 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) Cast A	8	81	1					70	Act 5 (H) Good	2	Act 5 (H) Equip A	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) Cast B	8	83	1					70	Act 5 (H) Good	2	Act 5 (H) Equip B	20	Potion 4	5	Gold	15	Void	15																	0
+Act 5 (H) Cast C	8	85	1					70	Act 5 (H) Good	2	Act 5 (H) Equip C	20	Potion 4	5	Gold	15	Void	15																	0
+Act 1 Miss A	9	0	1					60	Act 1 Good	2	Act 1 Equip A	15	Act 1 Bow A	10	Potion 1	5	Gold	10	Void	15															0
+Act 1 Miss B	9	5	1					60	Act 1 Good	2	Act 1 Equip B	15	Act 1 Bow B	10	Potion 1	5	Gold	10	Void	15															0
+Act 1 Miss C	9	9	1					60	Act 1 Good	2	Act 1 Equip C	15	Act 1 Bow C	10	Potion 1	5	Gold	10	Void	15															0
+Act 2 Miss A	9	12	1					60	Act 2 Good	2	Act 2 Equip A	15	Act 2 Bow A	10	Potion 1	5	Gold	10	Void	15															0
+Act 2 Miss B	9	15	1					60	Act 2 Good	2	Act 2 Equip B	15	Act 2 Bow B	10	Potion 1	5	Gold	10	Void	15															0
+Act 2 Miss C	9	18	1					60	Act 3 Good	2	Act 2 Equip C	15	Act 2 Bow C	10	Potion 1	5	Gold	10	Void	15															0
+Act 3 Miss A	9	20	1					60	Act 3 Good	2	Act 3 Equip A	15	Act 3 Bow A	10	Potion 1	5	Gold	10	Void	15															0
+Act 3 Miss B	9	22	1					60	Act 3 Good	2	Act 3 Equip B	15	Act 3 Bow B	10	Potion 1	5	Gold	10	Void	15															0
+Act 3 Miss C	9	24	1					60	Act 3 Good	2	Act 3 Equip C	15	Act 3 Bow C	10	Potion 1	5	Gold	10	Void	15															0
+Act 4 Miss A	9	26	1					60	Act 4 Good	2	Act 4 Equip A	15	Act 4 Bow A	10	Potion 2	5	Gold	10	Void	15															0
+Act 4 Miss B	9	29	1					60	Act 4 Good	2	Act 4 Equip B	15	Act 4 Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 5 Miss A	9	32	1					60	Act 5 Good	2	Act 5 Equip A	15	Act 5 Bow A	10	Potion 2	5	Gold	10	Void	15															0
+Act 5 Miss B	9	34	1					60	Act 5 Good	2	Act 5 Equip B	15	Act 5 Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 5 Miss C	9	36	1					60	Act 5 Good	2	Act 5 Equip C	15	Act 5 Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 1 (N) Miss A	9	38	1					60	Act 1 (N) Good	2	Act 1 (N) Equip A	15	Act 1 (N) Bow A	10	Potion 2	5	Gold	10	Void	15															0
+Act 1 (N) Miss B	9	40	1					60	Act 1 (N) Good	2	Act 1 (N) Equip B	15	Act 1 (N) Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 1 (N) Miss C	9	41	1					60	Act 1 (N) Good	2	Act 1 (N) Equip B	15	Act 1 (N) Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 2 (N) Miss A	9	42	1					60	Act 2 (N) Good	2	Act 2 (N) Equip A	15	Act 2 (N) Bow A	10	Potion 2	5	Gold	10	Void	15															0
+Act 2 (N) Miss B	9	44	1					60	Act 2 (N) Good	2	Act 2 (N) Equip B	15	Act 2 (N) Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 2 (N) Miss C	9	45	1					60	Act 2 (N) Good	2	Act 2 (N) Equip B	15	Act 2 (N) Bow B	10	Potion 2	5	Gold	10	Void	15															0
+Act 3 (N) Miss A	9	46	1					60	Act 3 (N) Good	2	Act 3 (N) Equip A	15	Act 3 (N) Bow A	10	Potion 3	5	Gold	10	Void	15															0
+Act 3 (N) Miss B	9	48	1					60	Act 3 (N) Good	2	Act 3 (N) Equip B	15	Act 3 (N) Bow B	10	Potion 3	5	Gold	10	Void	15															0
+Act 3 (N) Miss C	9	50	1					60	Act 3 (N) Good	2	Act 3 (N) Equip B	15	Act 3 (N) Bow B	10	Potion 3	5	Gold	10	Void	15															0
+Act 4 (N) Miss A	9	51	1					60	Act 4 (N) Good	2	Act 4 (N) Equip A	15	Act 4 (N) Bow A	10	Potion 3	5	Gold	10	Void	15															0
+Act 4 (N) Miss B	9	54	1					60	Act 4 (N) Good	2	Act 4 (N) Equip B	15	Act 4 (N) Bow B	10	Potion 3	5	Gold	10	Void	15															0
+Act 5 (N) Miss A	9	57	1					60	Act 5 (N) Good	2	Act 5 (N) Equip A	15	Act 5 (N) Bow A	10	Potion 3	5	Gold	10	Void	15															0
+Act 5 (N) Miss B	9	60	1					60	Act 5 (N) Good	2	Act 5 (N) Equip B	15	Act 5 (N) Bow B	10	Potion 3	5	Gold	10	Void	15															0
+Act 5 (N) Miss C	9	62	1					60	Act 5 (N) Good	2	Act 5 (N) Equip C	15	Act 5 (N) Bow B	10	Potion 3	5	Gold	10	Void	15															0
+Act 1 (H) Miss A	9	63	1					60	Act 1 (H) Good	2	Act 1 (H) Equip A	15	Act 1 (H) Bow A	10	Potion 4	5	Gold	10	Void	15															0
+Act 1 (H) Miss B	9	66	1					60	Act 1 (H) Good	2	Act 1 (H) Equip B	15	Act 1 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 1 (H) Miss C	9	68	1					60	Act 1 (H) Good	2	Act 1 (H) Equip B	15	Act 1 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 2 (H) Miss A	9	69	1					60	Act 2 (H) Good	2	Act 2 (H) Equip A	15	Act 2 (H) Bow A	10	Potion 4	5	Gold	10	Void	15															0
+Act 2 (H) Miss B	9	71	1					60	Act 2 (H) Good	2	Act 2 (H) Equip B	15	Act 2 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 2 (H) Miss C	9	72	1					60	Act 2 (H) Good	2	Act 2 (H) Equip B	15	Act 2 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 3 (H) Miss A	9	74	1					60	Act 3 (H) Good	2	Act 3 (H) Equip A	15	Act 3 (H) Bow A	10	Potion 4	5	Gold	10	Void	15															0
+Act 3 (H) Miss B	9	75	1					60	Act 3 (H) Good	2	Act 3 (H) Equip B	15	Act 3 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 3 (H) Miss C	9	77	1					60	Act 3 (H) Good	2	Act 3 (H) Equip B	15	Act 3 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 4 (H) Miss A	9	78	1					60	Act 4 (H) Good	2	Act 4 (H) Equip A	15	Act 4 (H) Bow A	10	Potion 4	5	Gold	10	Void	15															0
+Act 4 (H) Miss B	9	80	1					60	Act 4 (H) Good	2	Act 4 (H) Equip B	15	Act 4 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 5 (H) Miss A	9	81	1					60	Act 5 (H) Good	2	Act 5 (H) Equip A	15	Act 5 (H) Bow A	10	Potion 4	5	Gold	10	Void	15															0
+Act 5 (H) Miss B	9	83	1					60	Act 5 (H) Good	2	Act 5 (H) Equip B	15	Act 5 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 5 (H) Miss C	9	85	1					60	Act 5 (H) Good	2	Act 5 (H) Equip C	15	Act 5 (H) Bow B	10	Potion 4	5	Gold	10	Void	15															0
+Act 1 Wraith A	10	0	1					50	Act 1 Good	4	Potion 1	25	Void	4																					0
+Act 1 Wraith B	10	5	1					50	Act 1 Good	4	Potion 1	25	Void	4																					0
+Act 1 Wraith C	10	9	1					50	Act 1 Good	4	Potion 1	25	Void	4																					0
+Act 2 Wraith A	10	12	1					50	Act 2 Good	4	Potion 1	25	Void	4																					0
+Act 2 Wraith B	10	15	1					50	Act 2 Good	4	Potion 1	25	Void	4																					0
+Act 2 Wraith C	10	18	1					50	Act 3 Good	4	Potion 1	25	Void	4																					0
+Act 3 Wraith A	10	20	1					50	Act 3 Good	4	Potion 1	25	Void	4																					0
+Act 3 Wraith B	10	22	1					50	Act 3 Good	4	Potion 1	25	Void	4																					0
+Act 3 Wraith C	10	24	1					50	Act 3 Good	4	Potion 1	25	Void	4																					0
+Act 4 Wraith A	10	26	1					50	Act 4 Good	4	Potion 2	25	Void	4																					0
+Act 4 Wraith B	10	29	1					50	Act 4 Good	4	Potion 2	25	Void	4																					0
+Act 5 Wraith A	10	32	1					50	Act 5 Good	4	Potion 2	25	Void	4																					0
+Act 5 Wraith B	10	34	1					50	Act 5 Good	4	Potion 2	25	Void	4																					0
+Act 5 Wraith C	10	36	1					50	Act 5 Good	4	Potion 2	25	Void	4																					0
+Act 1 (N) Wraith A	10	38	1					50	Act 1 (N) Good	4	Potion 2	25	Void	4																					0
+Act 1 (N) Wraith B	10	40	1					50	Act 1 (N) Good	4	Potion 2	25	Void	4																					0
+Act 1 (N) Wraith C	10	41	1					50	Act 1 (N) Good	4	Potion 2	25	Void	4																					0
+Act 2 (N) Wraith A	10	42	1					50	Act 2 (N) Good	4	Potion 2	25	Void	4																					0
+Act 2 (N) Wraith B	10	44	1					50	Act 2 (N) Good	4	Potion 2	25	Void	4																					0
+Act 2 (N) Wraith C	10	45	1					50	Act 2 (N) Good	4	Potion 2	25	Void	4																					0
+Act 3 (N) Wraith A	10	46	1					50	Act 3 (N) Good	4	Potion 3	25	Void	4																					0
+Act 3 (N) Wraith B	10	48	1					50	Act 3 (N) Good	4	Potion 3	25	Void	4																					0
+Act 3 (N) Wraith C	10	50	1					50	Act 3 (N) Good	4	Potion 3	25	Void	4																					0
+Act 4 (N) Wraith A	10	51	1					50	Act 4 (N) Good	4	Potion 3	25	Void	4																					0
+Act 4 (N) Wraith B	10	54	1					50	Act 4 (N) Good	4	Potion 3	25	Void	4																					0
+Act 5 (N) Wraith A	10	57	1					50	Act 5 (N) Good	4	Potion 3	25	Void	4																					0
+Act 5 (N) Wraith B	10	60	1					50	Act 5 (N) Good	4	Potion 3	25	Void	4																					0
+Act 5 (N) Wraith C	10	62	1					50	Act 5 (N) Good	4	Potion 3	25	Void	4																					0
+Act 1 (H) Wraith A	10	63	1					50	Act 1 (H) Good	4	Potion 4	25	Void	4																					0
+Act 1 (H) Wraith B	10	66	1					50	Act 1 (H) Good	4	Potion 4	25	Void	4																					0
+Act 1 (H) Wraith C	10	68	1					50	Act 1 (H) Good	4	Potion 4	25	Void	4																					0
+Act 2 (H) Wraith A	10	69	1					50	Act 2 (H) Good	4	Potion 4	25	Void	4																					0
+Act 2 (H) Wraith B	10	71	1					50	Act 2 (H) Good	4	Potion 4	25	Void	4																					0
+Act 2 (H) Wraith C	10	72	1					50	Act 2 (H) Good	4	Potion 4	25	Void	4																					0
+Act 3 (H) Wraith A	10	74	1					50	Act 3 (H) Good	4	Potion 4	25	Void	4																					0
+Act 3 (H) Wraith B	10	75	1					50	Act 3 (H) Good	4	Potion 4	25	Void	4																					0
+Act 3 (H) Wraith C	10	77	1					50	Act 3 (H) Good	4	Potion 4	25	Void	4																					0
+Act 4 (H) Wraith A	10	78	1					50	Act 4 (H) Good	4	Potion 4	25	Void	4																					0
+Act 4 (H) Wraith B	10	80	1					50	Act 4 (H) Good	4	Potion 4	25	Void	4																					0
+Act 5 (H) Wraith A	10	81	1					50	Act 5 (H) Good	4	Potion 4	25	Void	4																					0
+Act 5 (H) Wraith B	10	83	1					50	Act 5 (H) Good	4	Potion 4	25	Void	4																					0
+Act 5 (H) Wraith C	10	85	1					50	Act 5 (H) Good	4	Potion 4	25	Void	4																					0
+Act 1 Citem A	11	0	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 1 Citem B	11	5	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 1 Citem C	11	9	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip C	37	Gold 1.5x	30	Void	15																			0
+Act 2 Citem A	11	12	1	800	800	800	1024	10	Act 2 Good	3	Act 2 Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 2 Citem B	11	15	1	800	800	800	1024	10	Act 2 Good	3	Act 2 Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 2 Citem C	11	18	1	800	800	800	1024	10	Act 3 Good	3	Act 2 Equip C	37	Gold 1.5x	30	Void	15																			0
+Act 3 Citem A	11	20	1	800	800	800	1024	10	Act 3 Good	3	Act 3 Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 3 Citem B	11	22	1	800	800	800	1024	10	Act 3 Good	3	Act 3 Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 3 Citem C	11	24	1	800	800	800	1024	10	Act 3 Good	3	Act 3 Equip C	37	Gold 1.5x	30	Void	15																			0
+Act 4 Citem A	11	26	1	800	800	800	1024	10	Act 4 Good	3	Act 4 Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 4 Citem B	11	29	1	800	800	800	1024	10	Act 4 Good	3	Act 4 Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 5 Citem A	11	32	1	800	800	800	1024	10	Act 5 Good	3	Act 5 Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 5 Citem B	11	34	1	800	800	800	1024	10	Act 5 Good	3	Act 5 Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 5 Citem C	11	36	1	800	800	800	1024	10	Act 5 Good	3	Act 5 Equip C	37	Gold 1.5x	30	Void	15																			0
+Act 1 (N) Citem A	11	38	1	800	800	800	1024	10	Act 1 (N) Good	3	Act 1 (N) Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 1 (N) Citem B	11	40	1	800	800	800	1024	10	Act 1 (N) Good	3	Act 1 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 1 (N) Citem C	11	41	1	800	800	800	1024	10	Act 1 (N) Good	3	Act 1 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 2 (N) Citem A	11	42	1	800	800	800	1024	10	Act 2 (N) Good	3	Act 2 (N) Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 2 (N) Citem B	11	44	1	800	800	800	1024	10	Act 2 (N) Good	3	Act 2 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 2 (N) Citem C	11	45	1	800	800	800	1024	10	Act 2 (N) Good	3	Act 2 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 3 (N) Citem A	11	46	1	800	800	800	1024	10	Act 3 (N) Good	3	Act 3 (N) Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 3 (N) Citem B	11	48	1	800	800	800	1024	10	Act 3 (N) Good	3	Act 3 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 3 (N) Citem C	11	50	1	800	800	800	1024	10	Act 3 (N) Good	3	Act 3 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 4 (N) Citem A	11	51	1	800	800	800	1024	10	Act 4 (N) Good	3	Act 4 (N) Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 4 (N) Citem B	11	54	1	800	800	800	1024	10	Act 4 (N) Good	3	Act 4 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 5 (N) Citem A	11	57	1	800	800	800	1024	10	Act 5 (N) Good	3	Act 5 (N) Equip A	37	Gold 1.5x	30	Void	15																			0
+Act 5 (N) Citem B	11	60	1	800	800	800	1024	10	Act 5 (N) Good	3	Act 5 (N) Equip B	37	Gold 1.5x	30	Void	15																			0
+Act 5 (N) Citem C	11	62	1	800	800	800	1024	10	Act 5 (N) Good	3	Act 5 (N) Equip C	37	Gold 1.5x	30	Void	15																			0
+Act 1 (H) Citem A	11	63	1	800	800	800	1024	10	Act 1 (H) Good	5	Act 1 (H) Equip A	35	Gold 1.5x	30	Void	15																			0
+Act 1 (H) Citem B	11	66	1	800	800	800	1024	10	Act 1 (H) Good	5	Act 1 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 1 (H) Citem C	11	68	1	800	800	800	1024	10	Act 1 (H) Good	5	Act 1 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 2 (H) Citem A	11	69	1	800	800	800	1024	10	Act 2 (H) Good	5	Act 2 (H) Equip A	35	Gold 1.5x	30	Void	15																			0
+Act 2 (H) Citem B	11	71	1	800	800	800	1024	10	Act 2 (H) Good	5	Act 2 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 2 (H) Citem C	11	72	1	800	800	800	1024	10	Act 2 (H) Good	5	Act 2 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 3 (H) Citem A	11	74	1	800	800	800	1024	10	Act 3 (H) Good	5	Act 3 (H) Equip A	35	Gold 1.5x	30	Void	15																			0
+Act 3 (H) Citem B	11	75	1	800	800	800	1024	10	Act 3 (H) Good	5	Act 3 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 3 (H) Citem C	11	77	1	800	800	800	1024	10	Act 3 (H) Good	5	Act 3 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 4 (H) Citem A	11	78	1	800	800	800	1024	10	Act 4 (H) Good	5	Act 4 (H) Equip A	35	Gold 1.5x	30	Void	15																			0
+Act 4 (H) Citem B	11	80	1	800	800	800	1024	10	Act 4 (H) Good	5	Act 4 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 5 (H) Citem A	11	81	1	800	800	800	1024	10	Act 5 (H) Good	5	Act 5 (H) Equip A	35	Gold 1.5x	30	Void	15																			0
+Act 5 (H) Citem B	11	83	1	800	800	800	1024	10	Act 5 (H) Good	5	Act 5 (H) Equip B	35	Gold 1.5x	30	Void	15																			0
+Act 5 (H) Citem C	11	85	1	800	800	800	1024	10	Act 5 (H) Good	5	Act 5 (H) Equip C	35	Gold 1.5x	30	Void	15																			0
 Normal Potion	12		2					0	Potion 2	1																									0
 Good Potion	12		2					0	Potion 3	1																									0
 Super Potion	12		2					0	Potion 4	1																									0
@@ -482,63 +477,63 @@ Act 4 (H) Champ B	13	80	-2					10	Act 4 (H) Citem B	1	Super Potion	1												
 Act 5 (H) Champ A	13	81	-2					10	Act 5 (H) Citem A	1	Super Potion	1																							0
 Act 5 (H) Champ B	13	83	-2					10	Act 5 (H) Citem B	1	Super Potion	1																							0
 Act 5 (H) Champ C	13	85	-2					10	Act 5 (H) Citem C	1	Super Potion	1																							0
-Act 1 Uitem A	14	0	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip A	58																							0
-Act 1 Uitem B	14	5	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip B	58																							0
-Act 1 Uitem C	14	9	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip C	58																							0
-Act 2 Uitem A	14	12	1	800	800	800	1024	10	Act 2 Good	4	Act 2 Equip A	58																							0
-Act 2 Uitem B	14	15	1	800	800	800	1024	10	Act 2 Good	4	Act 2 Equip B	58																							0
-Act 2 Uitem C	14	18	1	800	800	800	1024	10	Act 3 Good	4	Act 2 Equip C	58																							0
-Act 3 Uitem A	14	20	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip A	58																							0
-Act 3 Uitem B	14	22	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip B	58																							0
-Act 3 Uitem C	14	24	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip C	58																							0
-Act 4 Uitem A	14	26	1	800	800	800	1024	10	Act 4 Good	4	Act 4 Equip A	58																							0
-Act 4 Uitem B	14	29	1	800	800	800	1024	10	Act 4 Good	4	Act 4 Equip B	58																							0
-Act 5 Uitem A	14	32	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip A	58																							0
-Act 5 Uitem B	14	34	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip B	58																							0
-Act 5 Uitem C	14	36	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip C	58																							0
-Act 1 LT Item	14	9	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip C	58																							0
-Act 2 LT Item	14	18	1	800	800	800	1024	10	Act 3 Good	4	Act 2 Equip C	58																							0
-Act 3 LT Item	14	24	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip C	58																							0
-Act 4 LT Item	14	29	1	800	800	800	1024	10	Act 4 Good	4	Act 4 Equip B	58																							0
-Act 5 LT Item	14	36	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip C	58																							0
-Act 1 (N) Uitem A	14	38	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip A	58																							0
-Act 1 (N) Uitem B	14	40	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip B	58																							0
-Act 1 (N) Uitem C	14	41	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip B	58																							0
-Act 2 (N) Uitem A	14	42	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip A	58																							0
-Act 2 (N) Uitem B	14	44	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip B	58																							0
-Act 2 (N) Uitem C	14	45	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip B	58																							0
-Act 3 (N) Uitem A	14	46	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip A	58																							0
-Act 3 (N) Uitem B	14	48	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip B	58																							0
-Act 3 (N) Uitem C	14	50	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip B	58																							0
-Act 4 (N) Uitem A	14	51	1	800	800	800	1024	10	Act 4 (N) Good	4	Act 4 (N) Equip A	58																							0
-Act 4 (N) Uitem B	14	54	1	800	800	800	1024	10	Act 4 (N) Good	4	Act 4 (N) Equip B	58																							0
-Act 5 (N) Uitem A	14	57	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip A	58																							0
-Act 5 (N) Uitem B	14	60	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip B	58																							0
-Act 5 (N) Uitem C	14	62	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip C	58																							0
-Act 1 (N) LT Item	14	41	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip B	58																							0
-Act 2 (N) LT Item	14	45	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip B	58																							0
-Act 3 (N) LT Item	14	50	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip B	58																							0
-Act 4 (N) LT Item	14	54	1	800	800	800	1024	10	Act 4 (N) Good	4	Act 4 (N) Equip B	58																							0
-Act 5 (N) LT Item	14	62	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip C	58																							0
-Act 1 (H) Uitem A	14	63	2	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip A	54																							0
-Act 1 (H) Uitem B	14	66	2	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip B	54																							0
-Act 1 (H) Uitem C	14	68	2	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip B	54																							0
-Act 2 (H) Uitem A	14	69	2	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip A	54																							0
-Act 2 (H) Uitem B	14	71	2	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip B	54																							0
-Act 2 (H) Uitem C	14	72	2	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip B	54																							0
-Act 3 (H) Uitem A	14	74	2	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip A	54																							0
-Act 3 (H) Uitem B	14	75	2	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip B	54																							0
-Act 3 (H) Uitem C	14	77	2	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip B	54																							0
-Act 4 (H) Uitem A	14	78	2	800	800	800	1024	10	Act 4 (H) Good	8	Act 4 (H) Equip A	54																							0
-Act 4 (H) Uitem B	14	80	2	800	800	800	1024	10	Act 4 (H) Good	8	Act 4 (H) Equip B	54																							0
-Act 5 (H) Uitem A	14	81	2	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip A	54																							0
-Act 5 (H) Uitem B	14	83	2	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip B	54																							0
-Act 5 (H) Uitem C	14	85	2	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip C	54																							0
-Act 1 (H) LT Item	14	68	1	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip B	54																							0
-Act 2 (H) LT Item	14	72	1	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip B	54																							0
-Act 3 (H) LT Item	14	77	1	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip B	54																							0
-Act 4 (H) LT Item	14	80	1	800	800	800	1024	10	Act 4 (H) Good	8	Act 4 (H) Equip B	54																							0
-Act 5 (H) LT Item	14	85	1	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip C	54																							0
+Act 1 Uitem A	14	0	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip A	43	Void	15																					0
+Act 1 Uitem B	14	5	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip B	43	Void	15																					0
+Act 1 Uitem C	14	9	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip C	43	Void	15																					0
+Act 2 Uitem A	14	12	1	800	800	800	1024	10	Act 2 Good	4	Act 2 Equip A	43	Void	15																					0
+Act 2 Uitem B	14	15	1	800	800	800	1024	10	Act 2 Good	4	Act 2 Equip B	43	Void	15																					0
+Act 2 Uitem C	14	18	1	800	800	800	1024	10	Act 3 Good	4	Act 2 Equip C	43	Void	15																					0
+Act 3 Uitem A	14	20	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip A	43	Void	15																					0
+Act 3 Uitem B	14	22	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip B	43	Void	15																					0
+Act 3 Uitem C	14	24	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip C	43	Void	15																					0
+Act 4 Uitem A	14	26	1	800	800	800	1024	10	Act 4 Good	4	Act 4 Equip A	43	Void	15																					0
+Act 4 Uitem B	14	29	1	800	800	800	1024	10	Act 4 Good	4	Act 4 Equip B	43	Void	15																					0
+Act 5 Uitem A	14	32	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip A	43	Void	15																					0
+Act 5 Uitem B	14	34	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip B	43	Void	15																					0
+Act 5 Uitem C	14	36	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip C	43	Void	15																					0
+Act 1 LT Item	14	9	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip C	43	Void	15																					0
+Act 2 LT Item	14	18	1	800	800	800	1024	10	Act 3 Good	4	Act 2 Equip C	43	Void	15																					0
+Act 3 LT Item	14	24	1	800	800	800	1024	10	Act 3 Good	4	Act 3 Equip C	43	Void	15																					0
+Act 4 LT Item	14	29	1	800	800	800	1024	10	Act 4 Good	4	Act 4 Equip B	43	Void	15																					0
+Act 5 LT Item	14	36	1	800	800	800	1024	10	Act 5 Good	4	Act 5 Equip C	43	Void	15																					0
+Act 1 (N) Uitem A	14	38	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip A	43	Void	15																					0
+Act 1 (N) Uitem B	14	40	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip B	43	Void	15																					0
+Act 1 (N) Uitem C	14	41	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip B	43	Void	15																					0
+Act 2 (N) Uitem A	14	42	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip A	43	Void	15																					0
+Act 2 (N) Uitem B	14	44	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip B	43	Void	15																					0
+Act 2 (N) Uitem C	14	45	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip B	43	Void	15																					0
+Act 3 (N) Uitem A	14	46	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip A	43	Void	15																					0
+Act 3 (N) Uitem B	14	48	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip B	43	Void	15																					0
+Act 3 (N) Uitem C	14	50	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip B	43	Void	15																					0
+Act 4 (N) Uitem A	14	51	1	800	800	800	1024	10	Act 4 (N) Good	4	Act 4 (N) Equip A	43	Void	15																					0
+Act 4 (N) Uitem B	14	54	1	800	800	800	1024	10	Act 4 (N) Good	4	Act 4 (N) Equip B	43	Void	15																					0
+Act 5 (N) Uitem A	14	57	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip A	43	Void	15																					0
+Act 5 (N) Uitem B	14	60	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip B	43	Void	15																					0
+Act 5 (N) Uitem C	14	62	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip C	43	Void	15																					0
+Act 1 (N) LT Item	14	41	1	800	800	800	1024	10	Act 1 (N) Good	4	Act 1 (N) Equip B	43	Void	15																					0
+Act 2 (N) LT Item	14	45	1	800	800	800	1024	10	Act 2 (N) Good	4	Act 2 (N) Equip B	43	Void	15																					0
+Act 3 (N) LT Item	14	50	1	800	800	800	1024	10	Act 3 (N) Good	4	Act 3 (N) Equip B	43	Void	15																					0
+Act 4 (N) LT Item	14	54	1	800	800	800	1024	10	Act 4 (N) Good	4	Act 4 (N) Equip B	43	Void	15																					0
+Act 5 (N) LT Item	14	62	1	800	800	800	1024	10	Act 5 (N) Good	4	Act 5 (N) Equip C	43	Void	15																					0
+Act 1 (H) Uitem A	14	63	2	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip A	39	Void	15																					0
+Act 1 (H) Uitem B	14	66	2	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip B	39	Void	15																					0
+Act 1 (H) Uitem C	14	68	2	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip B	39	Void	15																					0
+Act 2 (H) Uitem A	14	69	2	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip A	39	Void	15																					0
+Act 2 (H) Uitem B	14	71	2	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip B	39	Void	15																					0
+Act 2 (H) Uitem C	14	72	2	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip B	39	Void	15																					0
+Act 3 (H) Uitem A	14	74	2	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip A	39	Void	15																					0
+Act 3 (H) Uitem B	14	75	2	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip B	39	Void	15																					0
+Act 3 (H) Uitem C	14	77	2	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip B	39	Void	15																					0
+Act 4 (H) Uitem A	14	78	2	800	800	800	1024	10	Act 4 (H) Good	8	Act 4 (H) Equip A	39	Void	15																					0
+Act 4 (H) Uitem B	14	80	2	800	800	800	1024	10	Act 4 (H) Good	8	Act 4 (H) Equip B	39	Void	15																					0
+Act 5 (H) Uitem A	14	81	2	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip A	39	Void	15																					0
+Act 5 (H) Uitem B	14	83	2	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip B	39	Void	15																					0
+Act 5 (H) Uitem C	14	85	2	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip C	39	Void	15																					0
+Act 1 (H) LT Item	14	68	1	800	800	800	1024	10	Act 1 (H) Good	8	Act 1 (H) Equip B	39	Void	15																					0
+Act 2 (H) LT Item	14	72	1	800	800	800	1024	10	Act 2 (H) Good	8	Act 2 (H) Equip B	39	Void	15																					0
+Act 3 (H) LT Item	14	77	1	800	800	800	1024	10	Act 3 (H) Good	8	Act 3 (H) Equip B	39	Void	15																					0
+Act 4 (H) LT Item	14	80	1	800	800	800	1024	10	Act 4 (H) Good	8	Act 4 (H) Equip B	39	Void	15																					0
+Act 5 (H) LT Item	14	85	1	800	800	800	1024	10	Act 5 (H) Good	8	Act 5 (H) Equip C	39	Void	15																					0
 Act 1 Unique A	15	0	-2					10	Act 1 Uitem A	1	Normal Potion	1																							0
 Act 1 Unique B	15	5	-2					10	Act 1 Uitem B	1	Normal Potion	1																							0
 Act 1 Unique C	15	9	-2					10	Act 1 Uitem C	1	Normal Potion	1																							0
@@ -581,27 +576,27 @@ Act 4 (H) Unique B	15	80	-3					10	Act 4 (H) Uitem B	2	Super Potion	1											
 Act 5 (H) Unique A	15	81	-3					10	Act 5 (H) Uitem A	2	Super Potion	1																							0
 Act 5 (H) Unique B	15	83	-3					10	Act 5 (H) Uitem B	2	Super Potion	1																							0
 Act 5 (H) Unique C	15	85	-3					10	Act 5 (H) Uitem C	2	Super Potion	1																							0
-Quill 1	16	0	1					80	Potion 1	19	Gold	6																							0
-Quill 2	16	4	1					80	Potion 1	19	Gold	6																							0
-Quill 3	16	8	1					80	Act 1 Good	1	Potion 1	6	Gold	19																					0
-Quill 4	16	12	1					80	Act 1 Good	1	Potion 1	6	Gold	19																					0
-Quill 5	16	20	1					80	Act 3 Good	1	Potion 1	6	Gold	19																					0
-Quill 1 (N)	16	32	1					80	Potion 2	19	Gold	6																							0
-Quill 2 (N)	16	35	1					80	Act 1 (N) Good	1	Potion 2	6	Gold	19																					0
-Quill 3 (N)	16	38	1					80	Act 1 (N) Good	1	Potion 2	6	Gold	19																					0
-Quill 4 (N)	16	40	1					80	Act 1 (N) Good	1	Potion 2	6	Gold	19																					0
-Quill 5 (N)	16	46	1					80	Act 3 (N) Good	1	Potion 3	6	Gold	19																					0
-Quill 1 (H)	16	60	1					80	Potion 4	6	Gold	19																							0
-Quill 2 (H)	16	62	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19																					0
-Quill 3 (H)	16	65	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19																					0
-Quill 4 (H)	16	68	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19																					0
-Quill 5 (H)	16	85	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19																					0
-Swarm 1	17	0	1					80	Act 2 Good	1	Potion 1	6	Misc	0																					0
-Swarm 2	17	20	1					80	Act 3 Good	1	Potion 1	6	Misc	0																					0
-Swarm 1 (N)	17	40	1					80	Act 2 (N) Good	1	Potion 2	6	Misc	0																					0
-Swarm 2 (N)	17	46	1					80	Act 3 (N) Good	1	Potion 3	6	Misc	0																					0
-Swarm 1 (H)	17	68	1					80	Act 2 (H) Good	1	Potion 4	6	Misc	0																					0
-Swarm 2 (H)	17	74	1					80	Act 3 (H) Good	1	Potion 4	6	Misc	0																					0
+Quill 1	16	0	1					80	Potion 1	19	Gold	6	Void	15																					0
+Quill 2	16	4	1					80	Potion 1	19	Gold	6	Void	15																					0
+Quill 3	16	8	1					80	Act 1 Good	1	Potion 1	6	Gold	19	Void	15																			0
+Quill 4	16	12	1					80	Act 1 Good	1	Potion 1	6	Gold	19	Void	15																			0
+Quill 5	16	20	1					80	Act 3 Good	1	Potion 1	6	Gold	19	Void	15																			0
+Quill 1 (N)	16	32	1					80	Potion 2	19	Gold	6	Void	15																					0
+Quill 2 (N)	16	35	1					80	Act 1 (N) Good	1	Potion 2	6	Gold	19	Void	15																			0
+Quill 3 (N)	16	38	1					80	Act 1 (N) Good	1	Potion 2	6	Gold	19	Void	15																			0
+Quill 4 (N)	16	40	1					80	Act 1 (N) Good	1	Potion 2	6	Gold	19	Void	15																			0
+Quill 5 (N)	16	46	1					80	Act 3 (N) Good	1	Potion 3	6	Gold	19	Void	15																			0
+Quill 1 (H)	16	60	1					80	Potion 4	6	Gold	19	Void	15																					0
+Quill 2 (H)	16	62	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19	Void	15																			0
+Quill 3 (H)	16	65	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19	Void	15																			0
+Quill 4 (H)	16	68	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19	Void	15																			0
+Quill 5 (H)	16	85	1					80	Act 1 (H) Good	1	Potion 4	6	Gold	19	Void	15																			0
+Swarm 1	17	0	1					80	Act 2 Good	1	Potion 1	6	Void	15																					0
+Swarm 2	17	20	1					80	Act 3 Good	1	Potion 1	6	Void	15																					0
+Swarm 1 (N)	17	40	1					80	Act 2 (N) Good	1	Potion 2	6	Void	15																					0
+Swarm 2 (N)	17	46	1					80	Act 3 (N) Good	1	Potion 3	6	Void	15																					0
+Swarm 1 (H)	17	68	1					80	Act 2 (H) Good	1	Potion 4	6	Void	15																					0
+Swarm 2 (H)	17	74	1					80	Act 3 (H) Good	1	Potion 4	6	Void	15																					0
 Sunder Charms			1					1600	Cold Rupture	1	Flame Rift	1	Crack of the Heavens	1	Rotting Fissure	1	Bone Break	1	Black Cleft	1												2	2	1	0
 Andarielq Item			7					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																					0
 Andarielq Item Desecrated A			7					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																					0
@@ -878,9 +873,9 @@ Griswold (H) Desecrated A	26	87	-5					0	Corruption Orb	1	Shadow Orb	1	Sunder Ch
 Griswold (H) Desecrated B	26	90	-5					0	Corruption Orb	1	Shadow Orb	1	Sunder Charms	1	Pandemonium Keys	1	Griswold Item (H) Desecrated B	1																	0
 Griswold (H) Desecrated C	26	93	-5					0	Corruption Orb	1	Shadow Orb	1	Sunder Charms	1	Pandemonium Keys	1	Griswold Item (H) Desecrated C	1																	0
 Griswold (H) Desecrated D	26	96	-5					0	Corruption Orb	1	Shadow Orb	1	Sunder Charms	1	Pandemonium Keys	1	Griswold Item (H) Desecrated D	1																	0
-Cow			1					90	Act 5 Good	3	Act 5 Equip A	22	Gold	12																					0
-Cow (N)			1					90	Act 5 (N) Good	5	Act 5 (N) Equip A	22	Gold	12																					0
-Cow (H)			1	3	5	7	9	90	Act 5 (H) Good	7	Act 5 (H) Equip B	22	Gold	12																					0
+Cow			1					80	Act 5 Good	3	Act 5 Equip A	22	Gold	12	Void	10																			0
+Cow (N)			1					78	Act 5 (N) Good	5	Act 5 (N) Equip A	22	Gold	12	Void	12																			0
+Cow (H)			1	3	5	7	9	75	Act 5 (H) Good	7	Act 5 (H) Equip B	22	Gold	12	Void	15																			0
 Trapped Soul			1					60	Act 4 Equip A	8	Potion 2	33	Gold	9																					0
 Trapped Soul (N)			1					60	Act 4 (N) Equip A	8	Potion 3	33	Gold	9																					0
 Trapped Soul (H)			1					60	Act 4 (H) Equip A	8	Potion 4	33	Gold	9																					0
