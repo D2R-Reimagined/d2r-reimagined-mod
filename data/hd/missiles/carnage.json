@@ -2,19 +2,19 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/missile_hand_axe/vfx_misslehandaxe.particles"
+                "path": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles"
             }
         ],
         "models": [
             {
-                "path": "data/hd/items/weapon/axe/throwing_axe/throwing_axe.model"
+                "path": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_back_optimized.model"
             }
         ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/weapon/axe/throwing_axe/weapon_throwing_axe_ORM.texture"
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/White.texture"
             }
         ],
         "physics": [],
@@ -24,12 +24,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "missile_hand_axe",
+    "name": "barb_nado",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 715073609,
+            "id": 4200550864,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -51,33 +51,33 @@
         },
         {
             "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 1247517398,
+            "name": "entity_root",
+            "id": 459011156,
             "components": [
                 {
                     "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/missile_hand_axe/vfx_misslehandaxe.particles",
-                    "hardKillOnDestroy": true
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/carnage.particles",
+                    "hardKillOnDestroy": false
                 },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 5.0,
+                        "y": 0.0,
                         "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
                         "y": 0.0,
                         "z": 0.0,
-                        "w": 1.0
+                        "w": 0.0
                     },
                     "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
+                        "x": 2.5,
+                        "y": 2.5,
+                        "z": 2.5
                     },
                     "inheritOnlyPosition": false
                 }

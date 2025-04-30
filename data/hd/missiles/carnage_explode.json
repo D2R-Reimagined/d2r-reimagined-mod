@@ -2,19 +2,19 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles"
+                "path": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion.particles"
             }
         ],
         "models": [
             {
-                "path": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_back_optimized.model"
+                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
             }
         ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/White.texture"
+                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
             }
         ],
         "physics": [],
@@ -24,12 +24,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "barb_nado",
+    "name": "corpse_explode_guts",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 4200550864,
+            "id": 2622674882,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -48,38 +48,72 @@
                     "animations": []
                 }
             ]
-        },
+        },  
         {
             "type": "Entity",
-            "name": "entity_root",
-            "id": 459011156,
+            "name": "entity_vfx1",
+            "id": 4010310920,
             "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/vfx_druid_tornado.particles",
-                    "hardKillOnDestroy": false
-                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 0.0,
+                        "y": 1.0,
                         "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
                         "y": 0.0,
                         "z": 0.0,
-                        "w": 0.0
+                        "w": 1.0
                     },
                     "scale": {
-                        "x": 2.5,
-                        "y": 2.5,
-                        "z": 2.5
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
                     },
                     "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/objects/characters/exploding_cow/vfx_exploding_cow_bloodsquib.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },             
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 4010310920,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/overseer1/death/overseer_deathBurst.particles",
+                    "hardKillOnDestroy": false
                 }
             ]
         }
