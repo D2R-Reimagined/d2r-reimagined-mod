@@ -14,24 +14,17 @@
             }
         },
         {
-            "type": "TimerWidget", "name": "PromptDisable",
-            "fields": {
-                "time": 0,
-                "message": "DialogMessage:ListItemClicked"
-            }
-        },
-        {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "rect": { "x": -2, "y": 100 },
-                "filename": "Controller/Panel/Vendor/V2/VendorShop_BG",
+                "rect": { "x": 71, "y": -77 },
+                "filename": "PANEL\\Vendors\\VendorShop_BG",
             },
         },
         {
             "type": "ImageWidget", "name": "background_repair",
             "fields": {
-                "rect": { "x": -2, "y": 100 },
-                "filename": "Controller/Panel/Vendor/V2/VendorForge_BG",
+                "rect": { "x": 71, "y": -77 },
+                "filename": "PANEL\\Vendors\\VendorShop_BG",
             },
         },
         {
@@ -47,14 +40,14 @@
         {
             "type": "ImageWidget", "name": "gold_icon",
             "fields": {
-                "rect": { "x": 495, "y": 1259, },
+                "rect": { "x": 515, "y": 1239, },
                 "filename": "Controller/Panel/Stash/V2/Button_Small",
             },
         },
         {
             "type": "TextBoxWidget", "name": "gold_amount",
             "fields": {
-                "rect": { "x": 547, "y": 1254, "width": 250, "height": 57 },
+                "rect": { "x": 567, "y": 1231, "width": 250, "height": 57 },
                 "style": "$StyleGoldAmount",
             },
         },
@@ -67,18 +60,18 @@
         {
             "type": "TabBarWidget", "name": "tabs",
             "fields": {
-                "rect": { "x": 109, "y": -1 },
-                "filename": "Controller/Panel/Vendor/V2/VendorTabs",
-                "inactiveFrames": [ 1, 1, 1, 1 ], 
-                "activeFrames": [ 0, 0, 0, 0 ],
+                "rect": { "x": 151, "y": 85 },
+                "filename": "PANEL\\vendors\\vendor_tabs",
+                "inactiveFrames": [ 0, 0, 0, 0 ], 
+                "activeFrames": [ 1, 1, 1, 1 ],
                 "textStyle": { "pointSize": "$MediumFontSize" },
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "focusIndicatorFilename": "Controller/HoverImages/StashTab_Hover",
                 "focusIndicatorOffset": { "x": 0, "y": -6 },
                 "unavailableTabsLeaveGaps": false,
-                "tabSize": { "x": 269, "y": 118 },
-                "tabPadding": { "x": 0, "y": 0 },
+                "tabSize": { "x": 248, "y": 75 },
+                "tabPadding": { "x": 2, "y": 0 },
                 "tabLeftIndicatorPosition": "$HalfPanelLeftTabButtonPromptPosition",
                 "tabRightIndicatorPosition": "$HalfPanelRightTabButtonPromptPosition",
                 "focusOnMouseOver": true,

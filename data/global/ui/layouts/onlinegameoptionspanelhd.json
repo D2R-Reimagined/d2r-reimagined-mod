@@ -1,101 +1,127 @@
 {
-    "type": "OnlineGameOptionsPanel", "name": "OnlineGameOptionsPanel",
+    "type": "OnlineGameOptionsPanel",
+    "name": "OnlineGameOptionsPanel",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
-        "anchor": { "x": 0.5 },
+        "anchor": {
+            "x": 0.5
+        }
     },
     "children": [
         {
-            "type": "ImageWidget", "name": "ScrollBarBackground",
+            "type": "ImageWidget",
+            "name": "ScrollBarBackground",
             "fields": {
                 "rect": "$OptionsScrollBarBackgroundRect",
-                "anchor": { "x": 1.0 },
-                "filename": "PauseMenu/VerticalScroll",
+                "anchor": {
+                    "x": 1.0
+                },
+                "filename": "PauseMenu/VerticalScroll"
             },
             "children": [
                 {
-                    "type": "ScrollControllerWidget", "name": "ScrollController",
+                    "type": "ScrollControllerWidget",
+                    "name": "ScrollController",
                     "fields": {
                         "rect": "$OptionsScrollBarRect",
-                        "anchor": { "x": 1.0 },
+                        "anchor": {
+                            "x": 1.0
+                        },
                         "upArrowFilepath": "FrontEnd/HD/Final/FrontEnd_ScrollUpBtn",
                         "downArrowFilepath": "FrontEnd/HD/Final/FrontEnd_ScrollDownBtn",
                         "barFilepath": "PauseMenu/VerticalIndicator",
                         "viewName": "ScrollView"
                     }
-                },
+                }
             ]
         },
         {
-            "type": "ScrollViewWidget", "name": "ScrollView",
+            "type": "ScrollViewWidget",
+            "name": "ScrollView",
             "fields": {
                 "fitToParent": true,
-                "scrollControllerName": "ScrollController",
+                "scrollControllerName": "ScrollController"
             },
             "children": [
                 {
-                    "type": "TableWidget", "name": "OptionsTable",
+                    "type": "TableWidget",
+                    "name": "OptionsTable",
                     "fields": {
-                        "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
-                        "rowHeight": "$OptionsTableRowHeight",
+                        "columns": [
+                            "$OptionsTableColumn1",
+                            "$OptionsTableColumn2"
+                        ],
+                        "rowHeight": "$OptionsTableRowHeight"
                     },
                     "children": [
                         {
-                            "type": "TableRowWidget", "name": "Row Shared",
+                            "type": "TableRowWidget",
+                            "name": "Row Shared",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Shared",
+                                    "type": "TextBoxWidget",
+                                    "name": "Shared",
                                     "fields": {
                                         "text": "@SharedHeader",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
                                         {
-                                            "type": "ImageWidget", "name": "Divider",
+                                            "type": "ImageWidget",
+                                            "name": "Divider",
                                             "fields": {
                                                 "rect": "$OptionsDividerRect",
-                                                "filename": "PauseMenu\\Divider",
+                                                "filename": "PauseMenu\\Divider"
                                             }
-                                        },
+                                        }
                                     ]
-                                },
+                                }
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row WideItemDropEnabled",
+                            "type": "TableRowWidget",
+                            "name": "Row WideItemDropEnabled",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "WideItemDropEnabledText",
+                                    "type": "TextBoxWidget",
+                                    "name": "WideItemDropEnabledText",
                                     "fields": {
                                         "text": "@ItemDropSpacingHD",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
                                 {
-                                    "type": "CarouselWidget", "name": "WideItemDropEnabled",
+                                    "type": "CarouselWidget",
+                                    "name": "WideItemDropEnabled",
                                     "fields": {
                                         "rect": "$OptionsCarouselRect",
                                         "focusIndicatorFilename": "$OptionsCarouselFocusIndicatorFilename",
-                                        "states": [ "ItemDropSpacingLegacyHD", "ItemDropSpacingResurrectedHD" ],
+                                        "states": [
+                                            "ItemDropSpacingLegacyHD",
+                                            "ItemDropSpacingResurrectedHD"
+                                        ],
                                         "fontType": "8ptE",
                                         "onUpdateMessage": "OptionsPanelMessage:SetWideItemDropEnabled",
                                         "style": "$StyleSettingsCarousel",
-                                        "enabledColor" : "$CarouselEnabledColor",
-                                        "disabledColor" : "$CarouselDisabledColor",
+                                        "enabledColor": "$CarouselEnabledColor",
+                                        "disabledColor": "$CarouselDisabledColor",
                                         "tooltipString": "@WideItemDropEnabledTooltip",
                                         "tooltipStyle": {
                                             "fontStyle": {
-                                                "options": { "newlineHandling": "standard" },
+                                                "options": {
+                                                    "newlineHandling": "standard"
+                                                }
                                             },
-                                            "showAfterDelay": true,
+                                            "showAfterDelay": true
                                         }
                                     }
-                                },
+                                }
                             ]
                         },
+/* Begin Online Only Options
                         {
-                            "type": "disabled", "name": "Row Online",
+                            "type": "TableRowWidget", "name": "Row Online",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "Online",
@@ -116,7 +142,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row MaxPlayers",
+                            "type": "TableRowWidget", "name": "Row MaxPlayers",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "MaxPlayersText",
@@ -167,7 +193,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row LevelDifferenceEnabled",
+                            "type": "TableRowWidget", "name": "Row LevelDifferenceEnabled",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "LevelDifferenceEnabledText",
@@ -205,7 +231,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row MaxLevelDifference",
+                            "type": "TableRowWidget", "name": "Row MaxLevelDifference",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "MaxLevelDifferenceText",
@@ -256,7 +282,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row AllowBnetFriendsJoin",
+                            "type": "TableRowWidget", "name": "Row AllowBnetFriendsJoin",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "AllowBnetFriendsJoinText",
@@ -294,7 +320,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row PrivateGameSecurity",
+                            "type": "TableRowWidget", "name": "Row PrivateGameSecurity",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "PrivateGameSecurityText",
@@ -327,7 +353,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row DesecratedZonesEnabled",
+                            "type": "TableRowWidget", "name": "Row DesecratedZonesEnabled",
                             "children": [
                                 {
                                     "type": "TextBoxWidget", "name": "DesecratedZonesEnabledText",
@@ -365,7 +391,7 @@
                             ]
                         },
                         {
-                            "type": "disabled", "name": "Row OnlineSettingsEffectNote",
+                            "type": "TableRowWidget", "name": "Row OnlineSettingsEffectNote",
                             "children": [
                                 {
                                         "type": "TextBoxWidget", "name": "OnlineSettingsEffectNote",
@@ -378,46 +404,56 @@
                                 },
                             ]
                         },
+End Online Only Options */
                         {
-                            "type": "TableRowWidget", "name": "Row Offline",
+                            "type": "TableRowWidget",
+                            "name": "Row Offline",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Offline",
+                                    "type": "TextBoxWidget",
+                                    "name": "Offline",
                                     "fields": {
                                         "text": "@OfflineHeader",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
                                         {
-                                            "type": "ImageWidget", "name": "Divider",
+                                            "type": "ImageWidget",
+                                            "name": "Divider",
                                             "fields": {
                                                 "rect": "$OptionsDividerRect",
-                                                "filename": "PauseMenu\\Divider",
+                                                "filename": "PauseMenu\\Divider"
                                             }
-                                        },
+                                        }
                                     ]
-                                },
+                                }
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row OfflineDesecratedZonesEnabled",
+                            "type": "TableRowWidget",
+                            "name": "Row OfflineDesecratedZonesEnabled",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "OfflineDesecratedZonesEnabledText",
+                                    "type": "TextBoxWidget",
+                                    "name": "OfflineDesecratedZonesEnabledText",
                                     "fields": {
                                         "text": "@TerrorZonesEnabled",
                                         "style": "$StyleSettingsText"
                                     }
                                 },
                                 {
-                                    "type": "ToggleButtonWidget", "name": "OfflineDesecratedZonesEnabled",
+                                    "type": "ToggleButtonWidget",
+                                    "name": "OfflineDesecratedZonesEnabled",
                                     "fields": {
                                         "rect": "$OptionsToggleRect",
                                         "sound": "cursor_menu_select_hd",
                                         "focusIndicatorPadding": "$OptionsToggleFocusIndicatorPadding",
                                         "focusIndicatorFilename": "$OptionsToggleFocusIndicatorFilename",
                                         "filename": "Lobby\\CreateGame\\CreateGame_AdvancedCheckbox",
-                                        "focusIndicatorOffset": { "x": 0, "y": -4 },
+                                        "focusIndicatorOffset": {
+                                            "x": 0,
+                                            "y": -4
+                                        },
                                         "untoggledFrame": 0,
                                         "untoggledPressedFrame": 1,
                                         "untoggledHoveredFrame": 3,
@@ -429,40 +465,54 @@
                                         "tooltipString": "@TerrorZonesEnabledTooltip",
                                         "tooltipStyle": {
                                             "fontStyle": {
-                                                "options": { "newlineHandling": "standard" },
+                                                "options": {
+                                                    "newlineHandling": "standard"
+                                                }
                                             },
-                                            "showAfterDelay": true,
+                                            "showAfterDelay": true
                                         }
-                                    },
-                                },
+                                    }
+                                }
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row OfflineNewGameSettingsEffectNote",
+                            "type": "TableRowWidget",
+                            "name": "Row OfflineNewGameSettingsEffectNote",
                             "children": [
                                 {
-                                        "type": "TextBoxWidget", "name": "OfflineNewGameSettingsEffectNote",
-                                        "fields": {
-                                                "rect": { "x": 0, "y": 0, "width": 1730 },
-                                                "anchor": { "x": 0.0, "y": 1.0 },
-                                                "text": "@SettingsEffectNote",
-                                                "style": "$StyleSettingsText"
-                                        }
-                                },
+                                    "type": "TextBoxWidget",
+                                    "name": "OfflineNewGameSettingsEffectNote",
+                                    "fields": {
+                                        "rect": {
+                                            "x": 0,
+                                            "y": 0,
+                                            "width": 1730
+                                        },
+                                        "anchor": {
+                                            "x": 0.0,
+                                            "y": 1.0
+                                        },
+                                        "text": "@SettingsEffectNote",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row OfflineDifficultyScaling",
+                            "type": "TableRowWidget",
+                            "name": "Row OfflineDifficultyScaling",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "OfflineDifficultyScalingText",
+                                    "type": "TextBoxWidget",
+                                    "name": "OfflineDifficultyScalingText",
                                     "fields": {
                                         "text": "@OptionsMenuOfflineDifficultyScalingSetting",
-                                        "style": "$StyleSettingsText",
+                                        "style": "$StyleSettingsText"
                                     }
                                 },
                                 {
-                                    "type": "SettingsSliderWidget", "name": "OfflineDifficultyScaling",
+                                    "type": "SettingsSliderWidget",
+                                    "name": "OfflineDifficultyScaling",
                                     "fields": {
                                         "rect": "$OptionsSliderRect",
                                         "focusIndicatorPadding": "$OptionsSliderFocusIndicatorPadding",
@@ -478,40 +528,59 @@
                                         "tooltipString": "@OptionsMenuOfflineDifficultyScalingTooltip",
                                         "tooltipStyle": {
                                             "fontStyle": {
-                                                "options": { "newlineHandling": "standard" },
+                                                "options": {
+                                                    "newlineHandling": "standard"
+                                                }
                                             },
-                                            "showAfterDelay": true,
+                                            "showAfterDelay": true
                                         }
                                     }
-                                },
+                                }
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row OfflineSettingsEffectNote",
+                            "type": "TableRowWidget",
+                            "name": "Row OfflineSettingsEffectNote",
                             "children": [
                                 {
-                                        "type": "TextBoxWidget", "name": "OfflineSettingsEffectNote",
-                                        "fields": {
-                                                "rect": { "x": 0, "y": 0, "width": 1730 },
-                                                "anchor": { "x": 0.0, "y": 1.0 },
-                                                "text": "@OfflineSettingsEffectNote",
-                                                "style": "$StyleSettingsText"
-                                        }
-                                },
+                                    "type": "TextBoxWidget",
+                                    "name": "OfflineSettingsEffectNote",
+                                    "fields": {
+                                        "rect": {
+                                            "x": 0,
+                                            "y": 0,
+                                            "width": 1730
+                                        },
+                                        "anchor": {
+                                            "x": 0.0,
+                                            "y": 1.0
+                                        },
+                                        "text": "@OfflineSettingsEffectNote",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
                             ]
-                        },
+                        }
                     ]
-                },
+                }
             ]
         },
         {
-            "type": "TextBoxWidget", "name": "SettingsEffectNote",
+            "type": "TextBoxWidget",
+            "name": "SettingsEffectNote",
             "fields": {
-                "rect": { "x": 0, "y": -50, "width": 1730 },
-                "anchor": { "x": 0.0, "y": 1.0 },
+                "rect": {
+                    "x": 0,
+                    "y": -50,
+                    "width": 1730
+                },
+                "anchor": {
+                    "x": 0.0,
+                    "y": 1.0
+                },
                 "text": "@SettingsEffectNote",
                 "style": "$StyleSettingsText"
             }
-        },
+        }
     ]
 }
