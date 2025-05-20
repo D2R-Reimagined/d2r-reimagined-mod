@@ -66,10 +66,10 @@
             "fields": {
                 "anchor": { "x": 0.5 },
                 "rect": { "y": 628 },
-                "text": "D2R Reimagined",
+                "text": "Reimagined Mod",
                 "style": {
-                    "fontColor": "$PanelTitleColor",
-                    "pointSize": "$XExtraLargeFontSize",
+                    "fontColor": "$FontColorDarkRed",
+                    "pointSize": "$ExtraLargeFontSize",
                     "dropShadow" :"$DefaultDropShadow",
                     "alignment": { "h": "center", "v": "center" }
                 }
@@ -93,7 +93,7 @@
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
-                                "textString": "Reimagined Mod Info",
+                                "textString": "Mod Information",
                                 "pressLabelOffset": [ 0, 0 ],
                                 "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
                                 "textColor": "$FontColorOrange",
@@ -148,8 +148,8 @@
                     "type": "TableRowWidget", "name": "Spacer",
                     "children": [
                         {
-                            "type": "Disabled", "name": "Spacer",
-                        },
+                            "type": "Disabled", "name": "Spacer"
+                        }
                     ]
                 },
                 {
