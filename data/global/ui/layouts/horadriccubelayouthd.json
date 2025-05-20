@@ -9,7 +9,7 @@
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
             "fields": {
-				"rect": {"y": -210, "width": 1750, "height": 1662 },
+				"rect": {"y": -210, "width": 1750, "height": 1662 }
             }
         },
         {
@@ -63,6 +63,22 @@
                 "tooltipString": "@strClose",
                 "onClickMessage": "HoradricCubePanelMessage:Close"
             }
+        },
+        {
+            "type": "ImageWidget", "name": "SizeWarning",
+            "fields": {
+                "rect": { "x": 1681, "y": -138 },
+                "filename": "filewarning"
+            },
+                "children": [
+                    {
+                    "type": "FocusableWidget", "name": "SizeWarningTooltip",
+                    "fields": {
+                    "fitToParent": true,
+                    "tooltipString": "@FileSizeWarningCube"
+                    }
+                }
+            ]
         },
         {
             "type": "InventoryGridWidget", "name": "grid",
