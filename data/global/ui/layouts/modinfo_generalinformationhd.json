@@ -103,6 +103,64 @@
                             ]
                         },
 /* <<< WEBSITE LINK OVER <<< */
+/* >>> FILE SIZE LIMITS TITLE >>> */
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "D2R File Size Limitations",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+/* >>> FILE SIZE LIMITS BELOW >>> */
+                        {
+                            "type": "TableRowWidget",
+                            "name": "RowTab",
+                            "fields": {
+                                "rect": {
+                                    "height": 900
+                                }
+                            },
+                            "children": [
+                              {
+                                "type": "TextBoxWidget",
+                                "name": "TextBox",
+                                "fields": {
+                                  "text": "Diablo 2 Resurrected has a hardcode file size limitation of 8192 bytes on disk, or about 8KB\n\nThe file to watch is <characterexample>.d2s in\n'C:\\Users\\<username>\\Saved Games\\Diablo II Resurrected\\mods\\Reimagined'\n\nThe inventories that contribute are: Player and Gear, Personal Stash, Mercenary, and Horadric Cube\n\nStoring a large quantity of small items, <Jewels especially, but charms, rings, amulets, belts also contribute in large numbers>, will quickly inflate the file size of the character and when the limit is reached items start to be removed out of the save, usually starting with custom mod added items, such as orb stacks, rune stacks, gem bag etc.\n\nIf you store Rune and Orb stacks in your personal tab so you can drag and drop to stack from your inventory, keep them stacked together, a stack of 100 quantity takes up less file space than 2 stacks of 1 quantity.\n\nNEVER use the Horadric Cube for in between game storage, <Save and Exit>, the Horadric Cube inventory contributes to your save file limit!",
+                                  "style": {
+                                    "pointSize": 28,
+                                    "spacing": {
+                                      "leading": 0.95,
+                                      "kerning": 0.95
+                                    },
+                                    "alignment": {
+                                      "h": "left",
+                                      "v": "center"
+                                    },
+                                    "options": {
+                                      "lineWrap": true,
+                                      "newlineHandling": "standard",
+                                      "pipeCharacterBehavior": "handle"
+                                    }
+                                   }
+                                }
+                              }
+                            ]
+                        },
+/* >>> FILE SIZE LIMITS OVER >>> */
 /* >>> GENERAL CHANGES TITLE >>> */
                         {
                             "type": "TableRowWidget", "name": "Upgrading",
