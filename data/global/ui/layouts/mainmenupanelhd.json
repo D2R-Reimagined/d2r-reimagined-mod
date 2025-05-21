@@ -220,8 +220,8 @@
         {
             "type": "ButtonWidget", "name": "OnlinePlaySettingsButton",
             "fields": {
-                "anchor": { "x": 0.5 },
-                "rect": { "x": -366, "y": 2500 },
+                "anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": -120, "y": 980 },
                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_Cog",
                 "focusIndicatorFilename": "Controller/HoverImages/OnlineGameplay_Hover",
                 "focusIndicatorOffset": { "x": 0, "y": 0 },
@@ -239,52 +239,16 @@
 			"type": "TextBoxWidget", "name": "ModTitle",
 			"fields": {
                 "anchor": {"x": 0.5 },
-				"rect": { "x": 400, "y": 50 },
-				"text": "D2R Reimagined",
+				"rect": { "x": 0, "y": 50 },
+				"text": "Reimagined Mod",
 				"style": {
 					"fontColor": "$FontColorGoldYellow",
-					"pointSize": "$ExtraLargeFontSize",
-					"alignment": { "h": "right", "v": "top" }
+					"pointSize": "$XExtraLargeFontSize",
+                    "dropShadow": "$DefaultDropShadow",
+					"alignment": { "h": "center", "v": "top" }
 				}
 			}
 		},
-		{
-			"type": "TextBoxWidget", "name": "ModVersion",
-			"fields": {
-                "anchor": {"x": 0.5 },
-				"rect": { "x": 1090, "y": 110 },
-				"text": "",
-				"style": {
-					"fontColor": "$FontColorGoldYellow",
-					"pointSize": "$SmallFontSize",
-					"alignment": { "h": "right", "v": "top" }
-				}
-			}
-		},
-        {
-            "type": "disabled", "name": "ModInfo",
-            "fields": {
-                "anchor": { "x": 0.5 },
-                "rect": { "x": 800, "y": 255 },
-                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall_r",
-                "textString": "ModInfo",
-                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonSmall_Hover",
-                "focusIndicatorOffset": { "x": 0, "y": 0 },
-                "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
-                "text/style": "$StyleFEButtonText",
-                "pointSize": "$NormalFontSize",
-				"textColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
-                "hoveredFrame": 3,
-                "disabledFrame": 2,
-                "disabledTint": { "a": 1.0 },
-                "sound": "cursor_launch_game_hd",
-                "navigation": {
-                    "down": { "name": "OnlinePlaySettingsButton" },
-                    "left": { "panelBoundary": true },
-                    "right": { "name": "SecondaryContextButton" }
-                }
-            }
-        },
         {
             "type": "disabled", "name": "Divider2",
             "fields": {

@@ -1,0 +1,70 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/b_a_yell_shock_wave_01/vfx_ba_yell_battle_orders.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/b_a_yell_shock_wave_01/vfx_ba_yell_shockwave.particles"
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/mask/T_FX_SoftTrail_Mask_Round_up.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "b_a_yell_shock_wave_01",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4031899908,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_battleOrders",
+            "id": 3566295466,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_battleOrders_UnitSourceSkillFilter",
+                    "sourceSkill": ""
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_battleOrders_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/b_a_yell_shock_wave_01/vfx_ba_yell_battle_orders.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}
