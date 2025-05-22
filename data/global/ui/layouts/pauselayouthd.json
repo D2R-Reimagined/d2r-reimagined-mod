@@ -140,16 +140,16 @@
             "children": [
                 {
                     "type": "TableRowWidget",
-                    "name": "Row Options",
+                    "name": "Mod Info",
                     "children": [
                         {
                             "type": "ButtonWidget",
-                            "name": "Settings",
+                            "name": "Mod Info",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
-                                "textString": "@OptionsHD",
-                                "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
+                                "textString": "Mod Info",
+                                "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
                                 "textColor": "$LightButtonTextColor",
                                 "text/style": "$StyleFEButtonText",
                                 "acceptsReturnKey": true,
@@ -161,16 +161,16 @@
                 },
                 {
                     "type": "TableRowWidget",
-                    "name": "Mod Info",
+                    "name": "Row Options",
                     "children": [
                         {
                             "type": "ButtonWidget",
-                            "name": "Mod Info",
+                            "name": "Settings",
                             "fields": {
                                 "filename": "PauseMenu\\PauseButton",
                                 "hoveredFrame": 3,
-                                "textString": "Mod Info",
-                                "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
+                                "textString": "@OptionsHD",
+                                "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
                                 "textColor": "$LightButtonTextColor",
                                 "text/style": "$StyleFEButtonText",
                                 "acceptsReturnKey": true,
@@ -206,9 +206,9 @@
                     "name": "Spacer",
                     "children": [
                         {
-                            "type": "ButtonWidget",
+                            "type": "Disabled",
                             "name": "Spacer"
-                        }                        
+                        }
                     ]
                 },
                 {

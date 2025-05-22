@@ -52,5 +52,21 @@
                 "rect": { "x":251, "y": 115 },
             },
         },
+                {
+            "type": "ImageWidget", "name": "SizeWarning",
+            "fields": {
+                "rect": { "x": 1060, "y": 1490 },
+                "filename": "filewarning"
+            },
+                "children": [
+                    {
+                    "type": "FocusableWidget", "name": "SizeWarningTooltip",
+                    "fields": {
+                    "fitToParent": true,
+                    "tooltipString": "@FileSizeWarningController"
+                    }
+                }
+            ]
+        },
     ]
 }

@@ -59,8 +59,24 @@
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
-                "onClickMessage": "BankPanelMessage:Close",
+                "onClickMessage": "BankPanelMessage:Close"
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "SizeWarning",
+            "fields": {
+                "rect": { "x": 1681, "y": -138 },
+                "filename": "filewarning"
             },
+                "children": [
+                    {
+                    "type": "FocusableWidget", "name": "SizeWarningTooltip",
+                    "fields": {
+                    "fitToParent": true,
+                    "tooltipString": "@FileSizeWarningStash"
+                    }
+                }
+            ]
         },
         {
             "type": "InventoryGridWidget", "name": "grid",
@@ -86,7 +102,6 @@
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "tabSize": { "x": 249, "y": 75 },
                 "tabPadding": { "x": 12, "y": 0 },
-                "onSwitchTabMessage": "BankPanelMessage:SelectTab",
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab"
             }
         }

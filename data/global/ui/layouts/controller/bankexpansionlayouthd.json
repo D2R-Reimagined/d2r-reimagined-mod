@@ -60,8 +60,23 @@
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
                 "onClickMessage": "BankPanelMessage:Close",
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "SizeWarning",
+            "fields": {
+                "rect": { "x": 860, "y": 1424 },
+                "filename": "filewarning"
             },
-            
+                "children": [
+                    {
+                    "type": "FocusableWidget", "name": "SizeWarningTooltip",
+                    "fields": {
+                    "fitToParent": true,
+                    "tooltipString": "@FileSizeWarningController"
+                    }
+                }
+            ]
         },
         {
             "type": "InventoryGridWidget", "name": "grid",
