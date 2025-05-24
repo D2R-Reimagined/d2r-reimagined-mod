@@ -15,7 +15,7 @@
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "filename": "PANEL\\Stash\\StashPanel_BG2",
+                "filename": "controller\\panel\\Stash\\v2\\StashPanelBG_Edit",
                 "rect": { "x": 0, "y": -210 }
             }
         },
@@ -31,7 +31,7 @@
             "fields": {
                 "rect": { "x": 877, "y": -112 },
                 "style": "$StyleTitleBlock",
-                "text": "@stash"
+                "text": ""
             }
         },
         {
@@ -52,7 +52,7 @@
             }
         },
         {
-            "type": "ButtonWidget", "name": "close",
+            "type": "disabled", "name": "close",
             "fields": {
                 "rect": { "x": 1675, "y": -210 },
                 "filename": "PANEL\\closebtn_4x",
@@ -74,21 +74,21 @@
         {
             "type": "TabBarWidget", "name": "BankTabs",
             "fields": {
-                "rect": { "x": 93, "y": -50 },
-                "tabCount": 6,
+                "rect": { "x": 82, "y": -46 },
+                "tabCount": 8,
                 "filename": "PANEL\\stash\\Stash_Tabs2",
-                "inactiveFrames": [ 0, 0, 0, 0 ],
-                "activeFrames": [ 1, 1, 1, 1 ],
-                "disabledFrames": [0, 0, 0, 0 ],
-                "textStrings": [ "@personal", "Classic", "Classic", "Classic"],
+                "inactiveFrames": [ 0, 0, 0, 0, 0, 0, 0, 0 ],
+                "activeFrames": [ 1, 1, 1, 1, 1, 1, 1, 1 ],
+                "disabledFrames": [0, 0, 0, 0, 0, 0, 0, 0 ],
+                "textStrings": [ "@personal", "Classic", "Classic", "Classic", "Classic", "Classic", "Classic", "Classic"],
                 "textStyle": { "pointSize": "$SmallPanelFontSize" },
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
-                "tabSize": { "x": 249, "y": 75 },
-                "tabPadding": { "x": 12, "y": 0 },
+                "tabSize": { "x": 198, "y": 75 },
+                "tabPadding": { "x": 0, "y": 0 },
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab",
                 "tabLeftIndicatorPosition": { "x": -42, "y": -2 },
-                "tabRightIndicatorPosition": { "x": 1135, "y": -2 },
+                "tabRightIndicatorPosition": { "x": 1625, "y": -2 },
                 "focusOnMouseOver": true,
             }
         }

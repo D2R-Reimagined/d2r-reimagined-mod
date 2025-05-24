@@ -23,19 +23,19 @@ Gem	gem	sock		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0
 Torch	torc	misc		0	1					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0
 Scroll	scro	misc		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0
 Not Used				0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0								0
-Scepter	scep	rod		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	5	40	6	0	1	pal		0							weap	0
+Scepter	scep	rod	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	5	40	6	0	1	pal		0							weap	0
 Wand	wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	2	25	2	40	2	0	1	nec		0							weap	0
 Staff	staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	5	25	6	40	6	0	1	sor		0							weap	0
 Bow	bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	3	25	4	40	6	1	3			0							weap	0
-Axe	axe	mele		1	1	rarm	larm			0	0	0	0		1	0	0	4	25	5	40	6	0	3			0							weap	0
-Club	club	blun		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
-Sword	swor	blde		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
-Hammer	hamm	blun		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
-Knife	knif	blde		1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	3			0							weap	0
+Axe	axe	mele	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	4	25	5	40	6	0	3			0							weap	0
+Club	club	blun	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
+Sword	swor	blde	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
+Hammer	hamm	blun	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
+Knife	knif	blde	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	3			0							weap	0
 Spear	spea	sppl		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
 Polearm	pole	sppl		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
 Crossbow	xbow	miss		1	1	rarm	larm	xboq		0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
-Mace	mace	blun		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
+Mace	mace	blun	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0
 Helm	merc			1	1	head	head			0	0	0	0		1	0	0	2	25	2	40	4	0	3			0							armo	0
 Missile Potion	tpot	thro		0	1	rarm	larm			1	1	1	1			1	0	0	25	0	40	0	0	3			0							misc	0
 Quest	ques			0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0								0
@@ -43,7 +43,7 @@ Body Part	body	misc		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0
 Key	key	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0							misc	0
 Throwing Knife	tkni	comb	knif	1	1	rarm	larm			1	1	1	1		1	0	0	0	25	0	40	0	0	3			0							misc	0
 Throwing Axe	taxe	comb	axe	1	1	rarm	larm			1	1	1	1		1	0	0	0	25	0	40	0	0	3			0							misc	0
-Javelin	jave	comb	spea	1	1	rarm	larm			1	1	1	1		1	0	0	0	25	0	40	0	0	3			0							misc	0
+Javelin	jave	comb		1	1	rarm	larm			1	1	1	1		1	0	0	0	25	0	40	0	0	3			0							misc	0
 Weapon	weap			0	0					0	0	0	0		1	0	0	0	25	0	40	0	1	3			0								0
 Melee Weapon	mele	weap		0	0					0	0	0	0		1	0	0	0	25	0	40	0	1	3			0								0
 Missile Weapon	miss	weap		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0
@@ -107,9 +107,11 @@ Skull	gemz	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0
 Merc Equip	helm	armo	merc	1	1	head	head			0	0	0	0		1	0	0	2	25	2	40	4	0	3			0							armo	0
 Gem Stack	gemx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0
 Rune Stack	runx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0
-Power Orb Stack	orbx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0							misc	0
+Power Orb Stack	orbx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0
 Storage	stor	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0							misc	0
 Item Grabber	grab	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0							misc	0
 Swords and Knives	blde	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0
 Spears and Polearms	sppl	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0
 Slam Weapons	slam	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0
+1H Weapons	1wep			0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0
+Act 5 Jankaround 1	afwe	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0

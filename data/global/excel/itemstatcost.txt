@@ -90,7 +90,7 @@ item_reducedprices	87			8											18957	203		3	0	7	0																8	19		Modi
 item_doubleherbduration	88		1	2														1	0	1	0																														0
 item_lightradius	89		1	5							1				15	51		4	4	4	4																6	19		ModStr3f	ModStr3f									2	0
 item_lightcolor	90		1	24							1				155	0		5	0	24	0																														0
-item_req_percent	91		1	8											26	-34		8	100	8	100																2	19		ModStr3h	ModStr3h										0
+item_req_percent	91		1	8											26	-34		8	100	8	100																2	19		ModStr3h2	ModStr3h										0
 item_levelreq	92		1															8	20	8	6																2	19		ItemStats2p	ItemStats2p										0
 item_fasterattackrate	93	1	1	9											1042	156		7	20	7	20											1					145	19		ModStr4m	ModStr4m									2	0
 item_levelreqpct	94																	7	20	7	64			13			item_levelreq																								0
@@ -199,7 +199,7 @@ item_skillonkill	196		1	7	16						1			2	85	19		21	0	7	0	16										1	kill	20			
 item_skillondeath	197		1	7	16						1			2	11	9		21	0	7	0	16											killed	30			160	15		Moditemskondeath	Moditemskondeath									2	0
 item_skillonhit	198		1	7	16						1			2	190	256		21	0	7	0	16										1	domeleedamage	20	domissiledamage	20	160	15		ItemExpansiveChanc1	ItemExpansiveChanc1									2	0
 item_skillonlevelup	199		1	7	16						1			2	7	6		21	0	7	0	16											levelup	30			160	15		ModitemskonLevel	ModitemskonLevel									2	0
-item_charge_noconsume	200			7											106	256				7	0																159	19		ModStr6k	ModStr6k									2	0
+item_charge_noconsume	200			7											106	256				7	0																298	19		ModStr6k	ModStr6k									2	0
 item_skillongethit	201		1	7	16						1			2	190	256		21	0	7	0	16											damagedinmelee	21	damagedbymissile	21	160	15		ItemExpansiveChanc2	ItemExpansiveChanc2									2	0
 modifierlist_castid	202																																																		0
 unused203	203																	21	0																																0
@@ -328,14 +328,14 @@ progressive_tohit	325		1	16																																															0
 poison_count	326		1	5																												1																			0
 damage_framerate	327		1	8																																															0
 pierce_idx	328		1	6																																															0
-passive_fire_mastery	329		1	12											1117	415		8	0	9	50																88	19		ModitemdamFiresk	ModitemdamFiresk									2	0
-passive_ltng_mastery	330		1	12											1054	408		8	0	9	50																88	19		ModitemdamLtngsk	ModitemdamLtngsk									2	0
-passive_cold_mastery	331		1	12											1295	379		8	0	9	50																88	19		ModitemdamColdsk	ModitemdamColdsk									2	0
-passive_pois_mastery	332		1	12											978	394		8	0	9	50																88	19		ModitemdamPoissk	ModitemdamPoissk									2	0
-passive_fire_pierce	333		1	9												2578		8	0	8	0																88	19		Moditemenresfiresk	Moditemenresfiresk									2	0
-passive_ltng_pierce	334		1	9												2493		8	0	8	0																88	19		Moditemenresltngsk	Moditemenresltngsk									2	0
-passive_cold_pierce	335		1	9												1984		8	0	8	0																88	19		Moditemenrescoldsk	Moditemenrescoldsk									2	0
-passive_pois_pierce	336		1	9												2345		8	0	8	0																88	19		Moditemenrespoissk	Moditemenrespoissk									2	0
+passive_fire_mastery	329		1	12											1117	415		8	0	9	50																88	19		ModitemdamFiresk	ModitemdamFiresk		3	19		allelemskilldmg	allelemskilldmg			2	0
+passive_ltng_mastery	330		1	12											1054	408		8	0	9	50																88	19		ModitemdamLtngsk	ModitemdamLtngsk		3	19		allelemskilldmg	allelemskilldmg			2	0
+passive_cold_mastery	331		1	12											1295	379		8	0	9	50																88	19		ModitemdamColdsk	ModitemdamColdsk		3	19		allelemskilldmg	allelemskilldmg			2	0
+passive_pois_mastery	332		1	12											978	394		8	0	9	50																88	19		ModitemdamPoissk	ModitemdamPoissk		3	19		allelemskilldmg	allelemskilldmg			2	0
+passive_fire_pierce	333		1	9												2578		8	0	8	0																88	19		Moditemenresfiresk	Moditemenresfiresk		4	19		PenetrateElePen	PenetrateElePen			2	0
+passive_ltng_pierce	334		1	9												2493		8	0	8	0																88	19		Moditemenresltngsk	Moditemenresltngsk		4	19		PenetrateElePen	PenetrateElePen			2	0
+passive_cold_pierce	335		1	9												1984		8	0	8	0																88	19		Moditemenrescoldsk	Moditemenrescoldsk		4	19		PenetrateElePen	PenetrateElePen			2	0
+passive_pois_pierce	336		1	9												2345		8	0	8	0																88	19		Moditemenrespoissk	Moditemenrespoissk		4	19		PenetrateElePen	PenetrateElePen			2	0
 passive_critical_strike	337		1	9														8	0	8	0																														0
 passive_dodge	338		1	9														7	0	7	0																														0
 passive_avoid	339		1	9														7	0	7	0																														0
@@ -403,3 +403,16 @@ item_elemskillcold	400		1	3	3						1				76	1024		4	0	3	0	3															157	19	
 item_elemskilllight	401		1	3	3						1				76	1024		4	0	3	0	3															157	19		ModStrlightningskill	ModStrlightningskill										0
 item_elemskillpoison	402		1	3	3						1				76	1024		4	0	3	0	3															157	19		ModStrpoisonskill	ModStrpoisonskill										0
 item_elemskillmagic	403		1	3	3						1				76	1024		4	0	3	0	3															157	19		ModStrmagicskill	ModStrmagicskill										0
+Dye_White	404			2											102	20		2	1	2	1																999	3	0	DyeWhite	DyeWhite										0
+Dye_Black	405			2											102	20		2	1	2	1																999	3	0	DyeBlack	DyeBlack										0
+Dye_Blue	406			2											102	20		2	1	2	1																999	3	0	DyeBlue	DyeBlue										0
+Dye_Red	407			2											102	20		2	1	2	1																999	3	0	DyeRed	DyeRed										0
+Dye_Green	408			2											102	20		2	1	2	1																999	3	0	DyeGreen	DyeGreen										0
+Dye_Yellow	409			2											102	20		2	1	2	1																999	3	0	DyeYellow	DyeYellow										0
+Dye_Purple	410			2											102	20		2	1	2	1																999	3	0	DyePurple	DyePurple										0
+Dye_Orange	411			2											102	20		2	1	2	1																999	3	0	DyeOrange	DyeOrange										0
+Dye_Tracker	412			2											102	20		4	7	4	7																														0
+item_strength_percent	413		1	8								1	1		125	55		7	63	7	63			11			strength										67	19		ModAttStrPercent	ModAttStrPercent										0
+item_dexterity_percent	414		1	8								1	1		125	55		7	63	7	63			11			dexterity										67	19		ModAttDexPercent	ModAttDexPercent										0
+item_vitality_percent	415		1	8								1	1		125	55		7	63	7	63			11			vitality										67	19		ModAttVitPercent	ModAttVitPercent										0
+item_energy_percent	416		1	8								1	1		125	55		7	63	7	63			11			energy										67	19		ModAttEnrPercent	ModAttEnrPercent										0
