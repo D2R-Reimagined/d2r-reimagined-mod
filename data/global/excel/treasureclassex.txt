@@ -1,10 +1,10 @@
 Treasure Class	group	level	Picks	Unique	Set	Rare	Magic	NoDrop	Item1	Prob1	Item2	Prob2	Item3	Prob3	Item4	Prob4	Item5	Prob5	Item6	Prob6	Item7	Prob7	Item8	Prob8	Item9	Prob9	Item10	Prob10	*ItemProbSum	*ItemProbTotal	*TreasureClassDropChance	firstLadderSeason	lastLadderSeason	noAlwaysSpawn	*eol
 Gold			1					0	"gld,mul=1024"	1																					Required Row 'Don't Remove'				0
 Void			0																																0
-Gold 1x			1					0	Void	9	"gld,mul=1024"	1																							0
-Gold 1.5x			1					0	Void	9	"gld,mul=1536"	1																							0
-Gold 2x			1					0	Void	9	"gld,mul=2048"	1																							0
-Gold 2.5x			1					0	Void	9	"gld,mul=2560"	1																							0
+Gold 1x			1					0	Void	4	"gld,mul=1024"	1																							0
+Gold 1.5x			1					0	Void	4	"gld,mul=1536"	1																							0
+Gold 2x			1					0	Void	4	"gld,mul=2048"	1																							0
+Gold 2.5x			1					0	Void	4	"gld,mul=2560"	1																							0
 Infusion Orb (Normal)			1					0	ooi	1																								1	0
 Assemblage Orb (Normal)			1					0	ooa	1																								1	0
 Conversion Orb (Normal)			1					0	ooc	1																								1	0
@@ -25,7 +25,7 @@ Jewelry Orbs Stack			1					0	Infusion Orb	4	Assemblage Orb	1	Conversion Orb	1			
 Sunder Charms			1					1180	Cold Rupture	1	Flame Rift	1	Crack of the Heavens	1	Rotting Fissure	1	Bone Break	1	Black Cleft	1														1	0
 Norm TZ Generic			1					98	Corruption Orb	1																								1	0
 NMH Boss			1					98	Socket Orb	1																								1	0
-NM TZ Generic			1					110	Corruption Orb	1	Socket Orb	1																						1	0
+NM TZ Generic			1					110	Socket Orb	1	Corruption Orb	1																						1	0
 Hell TZ Generic			1					640	Gem Cluster	7	Socket Orb	7	Corruption Orb	7	Pandemonium Keys	3	Shadow Orb	1																1	0
 Hell TZ Boss			1					640	Gem Cluster	7	Socket Orb	7	Corruption Orb	7	Shadow Orb	1																		1	0
 Jewelry A			1					10	rin	140	amu	80	jew	40	cm1	40	cm2	40	cm3	40	Jewelry Orbs Single	16													0
@@ -34,10 +34,10 @@ Jewelry C			1					20	rin	140	amu	80	jew	60	cm3	40	cm2	40	cm1	40	Jewelry Orbs Sta
 Gem			1					0	gmm	1	gmt	1	gms	1	gme	1	gmd	1	gmr	1	gmk	1													0
 Gem Stack			0					0	1am	1	1tp	1	1sa	1	1em	1	1di	1	1rb	1	1sk	1													0
 Misc			1					0	tsc	1	isc	1																							0
-Potion 1			1					0	hp1	10	hp2	5	mp1	10	mp2	5	rvs	2	Void	30															0
-Potion 2			1					0	hp2	10	hp3	5	mp2	10	mp3	5	rvs	2	Void	30															0
-Potion 3			1					0	hp3	10	hp4	5	mp3	10	mp4	5	rvs	2	Void	30															0
-Potion 4			1					0	hp5	10	mp5	10	rvl	2	Void	30																			0
+Potion 1			1					0	hp1	10	hp2	5	mp1	10	mp2	5	rvs	2	Void	25															0
+Potion 2			1					0	hp2	10	hp3	5	mp2	10	mp3	5	rvs	2	Void	25															0
+Potion 3			1					0	hp3	10	hp4	5	mp3	10	mp4	5	rvs	2	Void	25															0
+Potion 4			1					0	hp5	10	mp5	10	rvl	2	Void	22																			0
 Normal Potion	12		2					0	Potion 2	1																									0
 Good Potion	12	40	2					0	Potion 3	1																									0
 Super Potion	12	70	2					0	Potion 4	1																									0
@@ -174,11 +174,11 @@ Act 4 (H) Bow B	3	80	1					10	bow66	1	bow69	2	bow72	5	bow75	7	bow78	8	bow81	7	bo
 Act 5 (H) Bow A	3	82	1					10	bow69	1	bow72	2	bow75	5	bow78	7	bow81	8	bow84	7	bow87	2	bow87	1	Act 4 (H) Bow B	2080			33	2113	0.9844				0
 Act 5 (H) Bow B	3	83	1					10	bow72	1	bow75	2	bow78	5	bow81	7	bow84	8	bow87	7	bow87	2	bow87	1	Act 5 (H) Bow A	2080			33	2113	0.9844				0
 Act 5 (H) Bow C	3	85	1					10	bow75	1	bow78	2	bow81	5	bow84	7	bow87	8	bow87	1	bow87	1	bow87	1	Act 5 (H) Bow B	1655			26	1681	0.9845				0
-Act 1 Good	5	0	1					16	Jewelry A	3	Runes 1	1	Gem	0																					0
-Act 2 Good	5	12	1					16	Jewelry A	12	Runes 1	2	Runes 2	2	Gem	0																			0
+Act 1 Good	5	0	1					16	Jewelry A	3	Runes 1	1																							0
+Act 2 Good	5	12	1					16	Jewelry A	12	Runes 1	2	Runes 2	2																					0
 Act 3 Good	5	18	1					18	Jewelry A	18	Gem	3	Runes 3	6	Runes 4	6																			0
-Act 4 Good	5	26	1					18	Jewelry A	22	Gem	5	Runes 5	8	Runes 6	10																			0
-Act 5 Good	5	32	1					18	Jewelry A	25	Gem	8	Runes 7	10																					0
+Act 4 Good	5	26	1					18	Jewelry A	22	Gem	5	Runes 5	10	Runes 6	8																			0
+Act 5 Good	5	32	1					18	Jewelry A	25	Gem	10	Runes 7	10																					0
 Act 1 (N) Good	5	38	1					20	Jewelry B	30	Gem	14	Runes 8	12																					0
 Act 2 (N) Good	5	42	1					25	Jewelry B	30	Gem	14	Runes 9	12																					0
 Act 3 (N) Good	5	46	1					25	Jewelry B	30	Gem	14	Runes 10	12																					0
@@ -426,6 +426,12 @@ Swarm 2 (H)	17	74	1					80	Act 3 (H) Good	1	Potion 4	6	Void	15																		
 Flying Scimitar			1					60	Act 2 Good	3	scm	57																							0
 Flying Scimitar (N)			1					60	Act 2 (N) Good	3	scm	25	9sm	32																					0
 Flying Scimitar (H)			1					60	Act 2 (H) Good	3	scm	7	9sm	18	7sm	32																			0
+Cow			1					80	Act 5 Good	3	Act 5 Equip A	22	Gold 1x	12	Void	10																			0
+Cow (N)			1					78	Act 5 (N) Good	5	Act 5 (N) Equip A	22	Gold 1x	12	Void	12																			0
+Cow (H)			1	10	15	20	25	75	Act 5 (H) Good	7	Act 5 (H) Equip B	22	Gold 1x	12	Void	15																			0
+Trapped Soul			1					60	Act 4 Equip A	8	Potion 2	33	Gold 1x	9																					0
+Trapped Soul (N)			1					60	Act 4 (N) Equip A	8	Potion 3	33	Gold 1x	9																					0
+Trapped Soul (H)			1					60	Act 4 (H) Equip A	8	Potion 4	33	Gold 1x	9																					0
 Act 1 Citem A	11	0	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip A	37	Gold 1.5x	30	Void	15																			0
 Act 1 Citem B	11	5	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip B	37	Gold 1.5x	30	Void	15																			0
 Act 1 Citem C	11	9	1	800	800	800	1024	10	Act 1 Good	3	Act 1 Equip C	37	Gold 1.5x	30	Void	15																			0
@@ -610,462 +616,6 @@ Act 4 (H) Unique B	15	80	-3					10	Act 4 (H) Uitem B	2	Super Potion	1											
 Act 5 (H) Unique A	15	81	-3					10	Act 5 (H) Uitem A	2	Super Potion	1																							0
 Act 5 (H) Unique B	15	83	-3					10	Act 5 (H) Uitem B	2	Super Potion	1																							0
 Act 5 (H) Unique C	15	85	-3					10	Act 5 (H) Uitem C	2	Super Potion	1																							0
-Rune Boss Low			2					0	Runes 5	30	Runes 5	15	Runes 5	15																					0
-Rune Boss Low (N)			2					0	Runes 10	15	Runes 10	15	Runes 10	15																					0
-Rune Boss Low (H)			2					0	Runes 13	15	Runes 13	15	Runes 13	15																					0
-Rune Boss High			2					0	Runes 7	30	Runes 7	15	Runes 7	15																					0
-Rune Boss High (N)			2					0	Runes 11	15	Runes 11	15	Runes 11	15																					0
-Rune Boss High (H)			2					0	Runes 14	15	Runes 14	15	Runes 14	15																					0
-Rune Boss Low Desecrated			3					0	Runes 5	30	Runes 5	15	Runes 5	15																					0
-Rune Boss Low (N) Desecrated			3					0	Runes 10	15	Runes 10	15	Runes 10	15																					0
-Rune Boss Low (H) Desecrated			3					0	Runes 13	15	Runes 13	15	Runes 13	15																					0
-Rune Boss High Desecrated			3					0	Runes 7	30	Runes 7	15	Runes 7	15																					0
-Rune Boss High (N) Desecrated			3					0	Runes 11	15	Runes 11	15	Runes 11	15																					0
-Rune Boss High (H) Desecrated			3					0	Runes 14	15	Runes 14	15	Runes 14	15																					0
-Andarielq Item			6					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																					0
-Andarielq Item Desecrated A			6					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																					0
-Andarielq Item Desecrated B			6					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																					0
-Andarielq Item Desecrated C			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
-Andarielq Item (N)			6					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																					0
-Andarielq Item (N) Desecrated A			6					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																					0
-Andarielq Item (N) Desecrated B			6					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																					0
-Andarielq Item (N) Desecrated C			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
-Andarielq Item (H)			6					5	Act 2 (H) Good	4	Act 2 (H) Equip A	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated A			6					5	Act 3 (H) Good	4	Act 3 (H) Equip B	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated B			6					5	Act 3 (H) Good	4	Act 3 (H) Equip C	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated C			6					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated D			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated E			6					5	Act 4 (H) Good	4	Act 4 (H) Equip C	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated F			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated G			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
-Andarielq Item (H) Desecrated H			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
-Andarielq			-1	995	995	1024	1024	0	Andarielq Item	1																									0
-Andarielq Desecrated A	20	13	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated A	1																							0
-Andarielq Desecrated B	20	32	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated B	1																							0
-Andarielq Desecrated C	20	48	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated C	1																							0
-Andarielq (N)			-2	995	995	1024	1024	0	NMH Boss	1	Andarielq Item (N)	1																							0
-Andarielq (N) Desecrated A	20	43	-3	995	995	1024	1024	0	NM TZ Generic	1	Sunder Charms	1	Andarielq Item (N) Desecrated A	1																					0
-Andarielq (N) Desecrated B	20	57	-3	995	995	1024	1024	0	NM TZ Generic	1	Sunder Charms	1	Andarielq Item (N) Desecrated B	1																					0
-Andarielq (N) Desecrated C	20	73	-3	995	995	1024	1024	0	NM TZ Generic	1	Sunder Charms	1	Andarielq Item (N) Desecrated C	1																					0
-Andarielq (H)			-2	995	995	1024	1024	0	NMH Boss	1	Andarielq Item (H)	1																							0
-Andarielq (H) Desecrated A	20	84	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated A	1																					0
-Andarielq (H) Desecrated B	20	86	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated B	1																					0
-Andarielq (H) Desecrated C	20	88	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated C	1																					0
-Andarielq (H) Desecrated D	20	93	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated D	1																					0
-Andarielq (H) Desecrated E	20	96	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated E	1																					0
-Andarielq (H) Desecrated F	20	90	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated F	1																					0
-Andarielq (H) Desecrated G	20	93	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated G	1																					0
-Andarielq (H) Desecrated H	20	96	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated H	1																					0
-Radament Item			5					5	Act 3 Good	3	Act 3 Equip B	20	Potion 1	15	Gold 1.5x	15																			0
-Radament Item Desecrated A			5					5	Act 3 Good	3	Act 3 Equip B	20	Potion 1	15	Gold 1.5x	15																			0
-Radament Item Desecrated B			5					5	Act 4 Good	3	Act 4 Equip B	20	Potion 2	15	Gold 1.5x	15																			0
-Radament Item Desecrated C			5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	20	Potion 3	15	Gold 1.5x	15																			0
-Radament Item (N)			5					5	Act 3 (N) Good	3	Act 3 (N) Equip B	20	Potion 3	10	Gold 2x	10																			0
-Radament Item (N) Desecrated A			5					5	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	10	Gold 1.5x	15																			0
-Radament Item (N) Desecrated B			5					5	Act 5 (N) Good	3	Act 5 (N) Equip A	20	Potion 3	10	Gold 1.5x	15																			0
-Radament Item (N) Desecrated C			5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	10	Gold 1.5x	15																			0
-Radament Item (H)			5					5	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2.5x	10																			0
-Radament Item (H) Desecrated A			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	20	Potion 4	5	Gold 2x	15																			0
-Radament Item (H) Desecrated B			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	20	Potion 4	5	Gold 2x	15																			0
-Radament Item (H) Desecrated C			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	20	Potion 4	5	Gold 2x	15																			0
-Radament			-1	900	900	900	1024	0	Radament Item	1																									0
-Radament Desecrated A	21	19	-2	900	900	900	1024	0	Norm TZ Generic	1	Radament Item Desecrated A	1																							0
-Radament Desecrated B	21	33	-2	900	900	900	1024	0	Norm TZ Generic	1	Radament Item Desecrated B	1																							0
-Radament Desecrated C	21	48	-2	900	900	900	1024	0	Norm TZ Generic	1	Radament Item Desecrated C	1																							0
-Radament (N)			-1	900	900	900	1024	0	Radament Item (N)	1																									0
-Radament (N) Desecrated A	21	52	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Radament Item (N) Desecrated A	1																					0
-Radament (N) Desecrated B	21	62	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Radament Item (N) Desecrated B	1																					0
-Radament (N) Desecrated C	21	73	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Radament Item (N) Desecrated C	1																					0
-Radament (H)			-1	900	900	900	1024	0	Radament Item (H)	1																									0
-Radament (H) Desecrated A	21	86	-3	900	900	900	1024	0	Hell TZ Generic	1	Sunder Charms	1	Radament Item (H) Desecrated A	1																					0
-Radament (H) Desecrated B	21	92	-3	900	900	900	1024	0	Hell TZ Generic	1	Sunder Charms	1	Radament Item (H) Desecrated B	1																					0
-Radament (H) Desecrated C	21	96	-3	900	900	900	1024	0	Hell TZ Generic	1	Sunder Charms	1	Radament Item (H) Desecrated C	1																					0
-Bloodwitch Item			5					10	Act 2 Good	3	Act 2 Equip A	19	Potion 1	15	Gold 1.5x	7																			0
-Bloodwitch Item Desecrated A			5					10	Act 2 Good	3	Act 2 Equip A	19	Potion 1	15	Gold 1.5x	14																			0
-Bloodwitch Item Desecrated B			5					10	Act 2 Good	3	Act 2 Equip C	19	Potion 1	15	Gold 1.5x	14																			0
-Bloodwitch Item Desecrated C			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	19	Potion 3	15	Gold 1.5x	14																			0
-Bloodwitch Item (N)			5					10	Act 2 (N) Good	3	Act 2 (N) Equip A	19	Potion 2	10	Gold 2x	7																			0
-Bloodwitch Item (N) Desecrated A			5					10	Act 2 (N) Good	3	Act 2 (N) Equip A	19	Potion 2	10	Gold 1.5x	14																			0
-Bloodwitch Item (N) Desecrated B			5					10	Act 2 (N) Good	3	Act 2 (N) Equip C	19	Potion 2	10	Gold 1.5x	14																			0
-Bloodwitch Item (N) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	19	Potion 4	10	Gold 1.5x	14																			0
-Bloodwitch Item (H)			5					10	Act 2 (H) Good	3	Act 2 (H) Equip A	19	Potion 4	5	Gold 2.5x	7																			0
-Bloodwitch Item (H) Desecrated A			5					10	Act 2 (H) Good	3	Act 2 (H) Equip A	19	Potion 4	5	Gold 2x	14																			0
-Bloodwitch Item (H) Desecrated B			5					10	Act 2 (H) Good	3	Act 2 (H) Equip B	19	Potion 4	5	Gold 2x	14																			0
-Bloodwitch Item (H) Desecrated C			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
-Bloodwitch Item (H) Desecrated D			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
-Bloodwitch Item (H) Desecrated E			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
-Bloodwitch Item (H) Desecrated F			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
-Bloodwitch			-2	800	800	900	1024	0	Bloodwitch Item	1	Rune Boss Low	1																							0
-Bloodwitch Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Bloodwitch Item Desecrated A	1	Rune Boss Low Desecrated	1																					0
-Bloodwitch Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Bloodwitch Item Desecrated B	1	Rune Boss Low Desecrated	1																					0
-Bloodwitch Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Bloodwitch Item Desecrated C	1	Rune Boss Low Desecrated	1																					0
-Bloodwitch (N)			-2	800	800	900	1024	0	Bloodwitch Item (N)	1	Rune Boss Low (N)	1																							0
-Bloodwitch (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Bloodwitch Item (N) Desecrated A	1	Rune Boss Low (N) Desecrated	1																			0
-Bloodwitch (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Bloodwitch Item (N) Desecrated B	1	Rune Boss Low (N) Desecrated	1																			0
-Bloodwitch (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Bloodwitch Item (N) Desecrated C	1	Rune Boss Low (N) Desecrated	1																			0
-Bloodwitch (H)			-2	800	800	900	1024	0	Bloodwitch Item (H)	1	Rune Boss Low (H)	1																							0
-Bloodwitch (H) Desecrated A	27	88	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
-Bloodwitch (H) Desecrated B	27	93	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
-Bloodwitch (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
-Bloodwitch (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
-Bloodwitch (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
-Bloodwitch (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
-Battlemaiden Item			5					10	Act 3 Good	3	Act 3 Equip A	20	Potion 1	15	Gold 1.5x	14																			0
-Battlemaiden Item Desecrated A			5					10	Act 3 Good	3	Act 3 Equip A	20	Potion 1	15	Gold 1.5x	14																			0
-Battlemaiden Item Desecrated B			5					10	Act 3 Good	3	Act 3 Equip C	20	Potion 1	15	Gold 1.5x	14																			0
-Battlemaiden Item Desecrated C			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	15	Gold 1.5x	14																			0
-Battlemaiden Item (N)			5					10	Act 3 (N) Good	3	Act 3 (N) Equip A	20	Potion 3	10	Gold 2x	7																			0
-Battlemaiden Item (N) Desecrated A			5					10	Act 3 (N) Good	3	Act 3 (N) Equip A	20	Potion 3	10	Gold 1.5x	14																			0
-Battlemaiden Item (N) Desecrated B			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	10	Gold 1.5x	14																			0
-Battlemaiden Item (N) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	10	Gold 1.5x	14																			0
-Battlemaiden Item (H)			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	5	Gold 2.5x	7																			0
-Battlemaiden Item (H) Desecrated A			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	5	Gold 2x	14																			0
-Battlemaiden Item (H) Desecrated B			5					10	Act 3 (H) Good	3	Act 3 (H) Equip B	20	Potion 4	5	Gold 2x	14																			0
-Battlemaiden Item (H) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2x	14																			0
-Battlemaiden Item (H) Desecrated D			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2x	14																			0
-Battlemaiden Item (H) Desecrated E			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2x	14																			0
-Battlemaiden Item (H) Desecrated F			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2.5x	7																			0
-Battlemaiden			-2	800	800	900	1024	0	Battlemaiden Item	1	Rune Boss Low	1																							0
-Battlemaiden Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Battlemaiden Item Desecrated A	1	Rune Boss Low Desecrated	1																					0
-Battlemaiden Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Battlemaiden Item Desecrated B	1	Rune Boss Low Desecrated	1																					0
-Battlemaiden Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Battlemaiden Item Desecrated C	1	Rune Boss Low Desecrated	1																					0
-Battlemaiden (N)			-2	800	800	900	1024	0	Battlemaiden Item (N)	1	Rune Boss Low (N)	1																							0
-Battlemaiden (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Battlemaiden Item (N) Desecrated A	1	Rune Boss Low (N) Desecrated	1																			0
-Battlemaiden (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Battlemaiden Item (N) Desecrated B	1	Rune Boss Low (N) Desecrated	1																			0
-Battlemaiden (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Battlemaiden Item (N) Desecrated C	1	Rune Boss Low (N) Desecrated	1																			0
-Battlemaiden (H)			-2	800	800	900	1024	0	Battlemaiden Item (H)	1	Rune Boss Low (H)	1																							0
-Battlemaiden (H) Desecrated A	27	88	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
-Battlemaiden (H) Desecrated B	27	93	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
-Battlemaiden (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
-Battlemaiden (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
-Battlemaiden (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
-Battlemaiden (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
-Mephisto Item			6					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																					0
-Mephisto Item Desecrated A	22	26	6					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																					0
-Mephisto Item Desecrated B	22	38	6					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																					0
-Mephisto Item Desecrated C	22	48	6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																					0
-Mephisto Item (N)			6					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																					0
-Mephisto Item (N) Desecrated A	22	59	6					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																					0
-Mephisto Item (N) Desecrated B	22	66	6					5	Act 4 (N) Good	4	Act 4 (N) Equip C	30	Gold 1.5x	10																					0
-Mephisto Item (N) Desecrated C	22	73	6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 1.5x	10																					0
-Mephisto Item (H)			6					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																					0
-Mephisto Item (H) Desecrated A			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																					0
-Mephisto Item (H) Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																					0
-Mephisto Item (H) Desecrated C			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
-Mephisto Item (H) Desecrated D			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
-Mephisto			-1	983	983	983	1024	0	Mephisto Item	1																									0
-Mephisto Desecrated A	22	26	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated A	1																							0
-Mephisto Desecrated B	22	38	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated B	1																							0
-Mephisto Desecrated C	22	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated C	1																							0
-Mephisto (N)			-2	983	983	983	1024	0	NMH Boss	1	Mephisto Item (N)	1																							0
-Mephisto (N) Desecrated A	22	59	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Mephisto Item (N) Desecrated A	1																					0
-Mephisto (N) Desecrated B	22	66	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Mephisto Item (N) Desecrated B	1																					0
-Mephisto (N) Desecrated C	22	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Mephisto Item (N) Desecrated C	1																					0
-Mephisto (H)			-2	983	983	983	1024	0	NMH Boss	1	Mephisto Item (H)	1																							0
-Mephisto (H) Desecrated A	22	87	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated A	1																					0
-Mephisto (H) Desecrated B	22	90	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated B	1																					0
-Mephisto (H) Desecrated C	22	93	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated C	1																					0
-Mephisto (H) Desecrated D	22	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated D	1																					0
-Mephistoq Item			6					5	Act 4 Good	3	Act 4 Equip A	52																							0
-Mephistoq Item (N)			6					5	Act 4 (N) Good	3	Act 4 (N) Equip A	52																							0
-Mephistoq Item (H)			6					5	Act 4 (H) Good	3	Act 4 (H) Equip A	52																							0
-Mephistoq			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item	1																							0
-Mephistoq (N)			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item (N)	1																							0
-Mephistoq (H)			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item (H)	1																							0
-Diablo Item			6					5	Act 5 Good	4	Act 5 Equip A	30	Gold 1.5x	10																					0
-Diablo Item Desecrated A	23	40	6					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30	Gold 1.5x	10																					0
-Diablo Item Desecrated B	23	48	6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
-Diablo Item (N)			6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 2x	10																					0
-Diablo Item (N) Desecrated A	23	62	6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																					0
-Diablo Item (N) Desecrated B	23	67	6					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30	Gold 1.5x	10																					0
-Diablo Item (N) Desecrated C	23	73	6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
-Diablo Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2.5x	10																					0
-Diablo Item (H) Desecrated A			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
-Diablo Item (H) Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
-Diablo			-1	983	983	983	1024	0	Diablo Item	1																									0
-Diablo Desecrated A	23	40	-2	983	983	983	1024	0	Norm TZ Generic	1	Diablo Item Desecrated A	1																							0
-Diablo Desecrated B	23	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Diablo Item Desecrated B	1																							0
-Diablo (N)			-2	983	983	983	1024	0	NMH Boss	1	Diablo Item (N)	1																							0
-Diablo (N) Desecrated A	23	62	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Diablo Item (N) Desecrated A	1																					0
-Diablo (N) Desecrated B	23	67	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Diablo Item (N) Desecrated B	1																					0
-Diablo (N) Desecrated C	23	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Diablo Item (N) Desecrated C	1																					0
-Diablo (H)			-2	983	983	983	1024	0	NMH Boss	1	Diablo Item (H)	1																							0
-Diablo (H) Desecrated A	23	94	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Diablo Item (H) Desecrated A	1																					0
-Diablo (H) Desecrated B	23	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Diablo Item (H) Desecrated B	1																					0
-Diabloq Item			6					5	Act 5 Good	4	Act 5 Equip A	30																							0
-Diabloq Item (N)			6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30																							0
-Diabloq Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30																							0
-Diabloq			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item	1																							0
-Diabloq (N)			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item (N)	1																							0
-Diabloq (H)			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item (H)	1																							0
-Summoner Item			5					5	Act 2 Good	3	Act 2 Equip C	20	Potion 1	15	Gold 1.5x	14																			0
-Summoner Item Desecrated A			5					5	Act 2 Good	3	Act 2 Equip C	20	Potion 1	15	Gold 1.5x	14																			0
-Summoner Item Desecrated B			5					5	Act 4 Good	3	Act 4 Equip B	20	Potion 2	15	Gold 1.5x	14																			0
-Summoner Item Desecrated C			5					5	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	15	Gold 1.5x	14																			0
-Summoner Item (N)			5					5	Act 2 (N) Good	3	Act 2 (N) Equip C	20	Potion 3	10	Gold 2x	14																			0
-Summoner Item (N) Desecrated A			5					5	Act 4 (N) Good	3	Act 4 (N) Equip A	20	Potion 3	10	Gold 1.5x	14																			0
-Summoner Item (N) Desecrated B			5					5	Act 5 (N) Good	3	Act 5 (N) Equip A	20	Potion 4	10	Gold 1.5x	14																			0
-Summoner Item (N) Desecrated C			5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	10	Gold 1.5x	14																			0
-Summoner Item (H)			5					5	Act 2 (H) Good	3	Act 2 (H) Equip C	25	Potion 4	5	Gold 2.5x	14	Pandemonium Key A	3																	0
-Summoner Item (H) Desecrated A			5					5	Act 4 (H) Good	3	Act 4 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
-Summoner Item (H) Desecrated B			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
-Summoner Item (H) Desecrated C			5					5	Act 4 (H) Good	3	Act 4 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
-Summoner Item (H) Desecrated D			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
-Summoner Item (H) Desecrated E			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
-Summoner Item (H) Desecrated F			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
-Summoner			-1	900	900	972	1024	0	Summoner Item	1																									0
-Summoner Desecrated A	24	18	-2	900	900	972	1024	0	Norm TZ Generic	1	Summoner Item Desecrated A	1																							0
-Summoner Desecrated B	24	32	-2	900	900	972	1024	0	Norm TZ Generic	1	Summoner Item Desecrated B	1																							0
-Summoner Desecrated C	24	48	-2	900	900	972	1024	0	Norm TZ Generic	1	Summoner Item Desecrated C	1																							0
-Summoner (N)			-1	900	900	972	1024	0	Summoner Item (N)	1																									0
-Summoner (N) Desecrated A	24	55	-3	900	900	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Summoner Item (N) Desecrated A	1																					0
-Summoner (N) Desecrated B	24	63	-3	900	900	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Summoner Item (N) Desecrated B	1																					0
-Summoner (N) Desecrated C	24	73	-3	900	900	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Summoner Item (N) Desecrated C	1																					0
-Summoner (H)			-1	900	900	972	1024	0	Summoner Item (H)	1																									0
-Summoner (H) Desecrated A	24	80	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated A	1																					0
-Summoner (H) Desecrated B	24	84	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated B	1																					0
-Summoner (H) Desecrated C	24	87	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated C	1																					0
-Summoner (H) Desecrated D	24	90	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated D	1																					0
-Summoner (H) Desecrated E	24	93	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated E	1																					0
-Summoner (H) Desecrated F	24	96	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated F	1																					0
-Council Item			3					5	Act 4 Good	3	Act 4 Equip A	30	Potion 2	15	Gold 1.5x	14																			0
-Council Item Desecrated A			3					5	Act 4 Good	3	Act 4 Equip B	30	Potion 2	15	Gold 1.5x	14																			0
-Council Item Desecrated B			3					5	Act 5 Good	3	Act 5 Equip C	30	Potion 2	15	Gold 1.5x	14																			0
-Council Item Desecrated C			3					5	Act 3 (N) Good	3	Act 3 (N) Equip A	30	Potion 3	15	Gold 1.5x	14																			0
-Council Item (N)			3					5	Act 4 (N) Good	3	Act 4 (N) Equip A	30	Potion 3	10	Gold 2x	14																			0
-Council Item (N) Desecrated A			3					5	Act 4 (N) Good	3	Act 4 (N) Equip B	30	Potion 3	10	Gold 1.5x	14																			0
-Council Item (N) Desecrated B			3					5	Act 5 (N) Good	3	Act 5 (N) Equip C	30	Potion 3	10	Gold 1.5x	14																			0
-Council Item (N) Desecrated C			3					5	Act 3 (H) Good	3	Act 3 (H) Equip A	30	Potion 4	10	Gold 1.5x	14																			0
-Council Item (H)			3					5	Act 4 (H) Good	3	Act 4 (H) Equip A	30	Potion 4	5	Gold 2.5x	14																			0
-Council Item (H) Desecrated A			3					5	Act 4 (H) Good	3	Act 4 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
-Council Item (H) Desecrated B			3					5	Act 4 (H) Good	3	Act 4 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
-Council Item (H) Desecrated C			3					5	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2x	14																			0
-Council Item (H) Desecrated D			3					5	Act 5 (H) Good	3	Act 5 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
-Council Item (H) Desecrated E			3					5	Act 5 (H) Good	3	Act 5 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
-Council			-1	650	800	800	1024	0	Council Item	1																									0
-Council Desecrated A	25	28	-2	650	800	800	1024	0	Norm TZ Generic	1	Council Item Desecrated A	1																							0
-Council Desecrated B	25	38	-2	650	800	800	1024	0	Norm TZ Generic	1	Council Item Desecrated B	1																							0
-Council Desecrated C	25	48	-2	650	800	800	1024	0	Norm TZ Generic	1	Council Item Desecrated C	1																							0
-Council (N)			-1	650	800	800	1024	0	Council Item (N)	1																									0
-Council (N) Desecrated A	25	57	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Council Item (N) Desecrated A	1																					0
-Council (N) Desecrated B	25	66	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Council Item (N) Desecrated B	1																					0
-Council (N) Desecrated C	25	73	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Council Item (N) Desecrated C	1																					0
-Council (H)			-1	650	800	800	1024	0	Council Item (H)	1																									0
-Council (H) Desecrated A	25	85	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated A	1																					0
-Council (H) Desecrated B	25	87	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated B	1																					0
-Council (H) Desecrated C	25	90	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated C	1																					0
-Council (H) Desecrated D	25	93	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated D	1																					0
-Council (H) Desecrated E	25	96	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated E	1																					0
-Griswold Item			5					5	Act 1 Good	3	Act 1 Melee B	30	Potion 2	15	Gold 1.5x	14																			0
-Griswold Item Desecrated A			5					5	Act 1 Good	3	Act 1 Melee B	30	Potion 2	15	Gold 1.5x	14																			0
-Griswold Item Desecrated B			5					5	Act 1 Good	3	Act 4 Melee A	30	Potion 2	15	Gold 1.5x	14																			0
-Griswold Item Desecrated C			5					5	Act 1 Good	3	Act 2 (N) Melee B	30	Potion 3	15	Gold 1.5x	14																			0
-Griswold Item (N)			5					5	Act 1 (N) Good	3	Act 1 (N) Melee B	30	Potion 3	10	Gold 2x	14																			0
-Griswold Item (N) Desecrated A			5					5	Act 1 (N) Good	3	Act 1 (N) Melee B	30	Potion 3	10	Gold 1.5x	14																			0
-Griswold Item (N) Desecrated B			5					5	Act 1 (N) Good	3	Act 3 (N) Melee B	30	Potion 3	10	Gold 1.5x	14																			0
-Griswold Item (N) Desecrated C			5					5	Act 1 (N) Good	3	Act 3 (H) Melee B	30	Potion 4	10	Gold 1.5x	14																			0
-Griswold Item (H)			5					5	Act 1 (H) Good	3	Act 1 (H) Melee B	30	Potion 4	5	Gold 2.5x	14																			0
-Griswold Item (H) Desecrated A			5					5	Act 1 (H) Good	3	Act 4 (H) Melee A	30	Potion 4	5	Gold 2x	14																			0
-Griswold Item (H) Desecrated B			5					5	Act 1 (H) Good	3	Act 4 (H) Melee B	30	Potion 4	5	Gold 2x	14																			0
-Griswold Item (H) Desecrated C			5					5	Act 1 (H) Good	3	Act 5 (H) Melee A	30	Potion 4	5	Gold 2x	14																			0
-Griswold Item (H) Desecrated D			5					5	Act 1 (H) Good	3	Act 5 (H) Melee B	30	Potion 4	5	Gold 2x	14																			0
-Griswold			-1	650	800	800	1024	0	Griswold Item	1																									0
-Griswold Desecrated A	26	8	-2	650	800	800	1024	0	Norm TZ Generic	1	Griswold Item Desecrated A	1																							0
-Griswold Desecrated B	26	29	-2	650	800	800	1024	0	Norm TZ Generic	1	Griswold Item Desecrated B	1																							0
-Griswold Desecrated C	26	48	-2	650	800	800	1024	0	Norm TZ Generic	1	Griswold Item Desecrated C	1																							0
-Griswold (N)			-1	650	800	800	1024	0	Griswold Item (N)	1																									0
-Griswold (N) Desecrated A	26	42	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Griswold Item (N) Desecrated A	1																					0
-Griswold (N) Desecrated B	26	57	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Griswold Item (N) Desecrated B	1																					0
-Griswold (N) Desecrated C	26	73	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Griswold Item (N) Desecrated C	1																					0
-Griswold (H)			-1	650	800	800	1024	0	Griswold Item (H)	1																									0
-Griswold (H) Desecrated A	26	87	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated A	1																					0
-Griswold (H) Desecrated B	26	90	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated B	1																					0
-Griswold (H) Desecrated C	26	93	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated C	1																					0
-Griswold (H) Desecrated D	26	96	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated D	1																					0
-Cow			1					80	Act 5 Good	3	Act 5 Equip A	22	Gold 1x	12	Void	10																			0
-Cow (N)			1					78	Act 5 (N) Good	5	Act 5 (N) Equip A	22	Gold 1x	12	Void	12																			0
-Cow (H)			1	10	15	20	25	75	Act 5 (H) Good	7	Act 5 (H) Equip B	22	Gold 1x	12	Void	15																			0
-Trapped Soul			1					60	Act 4 Equip A	8	Potion 2	33	Gold 1x	9																					0
-Trapped Soul (N)			1					60	Act 4 (N) Equip A	8	Potion 3	33	Gold 1x	9																					0
-Trapped Soul (H)			1					60	Act 4 (H) Equip A	8	Potion 4	33	Gold 1x	9																					0
-Hephasto Item			5					10	Act 5 Good	3	Act 5 Equip A	30	Potion 2	15	Gold 1.5x	14																			0
-Hephasto Item Desecrated A			5					10	Act 5 Good	3	Act 5 Equip A	30	Potion 2	15	Gold 1.5x	14																			0
-Hephasto Item Desecrated B			5					10	Act 5 Good	3	Act 5 Equip C	30	Potion 2	15	Gold 1.5x	14																			0
-Hephasto Item Desecrated C			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	30	Potion 3	15	Gold 1.5x	14																			0
-Hephasto Item (N)			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	30	Potion 3	10	Gold 2x	14																			0
-Hephasto Item (N) Desecrated A			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	30	Potion 3	10	Gold 1.5x	14																			0
-Hephasto Item (N) Desecrated B			5					10	Act 5 (N) Good	3	Act 5 (N) Equip C	30	Potion 3	10	Gold 1.5x	14																			0
-Hephasto Item (N) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	30	Potion 4	10	Gold 1.5x	14																			0
-Hephasto Item (H)			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2.5x	14																			0
-Hephasto Item (H) Desecrated A			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2x	14																			0
-Hephasto Item (H) Desecrated B			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
-Hephasto Item (H) Desecrated C			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
-Hephasto Item (H) Desecrated D			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2x	14																			0
-Hephasto Item (H) Desecrated E			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
-Hephasto Item (H) Desecrated F			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
-Hephasto			-2	800	800	900	1024	0	Hephasto Item	1	Rune Boss Low	1																							0
-Hephasto Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Hephasto Item Desecrated A	1	Rune Boss High Desecrated	1																					0
-Hephasto Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Hephasto Item Desecrated B	1	Rune Boss High Desecrated	1																					0
-Hephasto Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Hephasto Item Desecrated C	1	Rune Boss High Desecrated	1																					0
-Hephasto (N)			-2	800	800	900	1024	0	Hephasto Item (N)	1	Rune Boss High (N)	1																							0
-Hephasto (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Hephasto Item (N) Desecrated A	1	Rune Boss High (N) Desecrated	1																			0
-Hephasto (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Hephasto Item (N) Desecrated B	1	Rune Boss High (N) Desecrated	1																			0
-Hephasto (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Hephasto Item (N) Desecrated C	1	Rune Boss High (N) Desecrated	1																			0
-Hephasto (H)			-2	800	800	900	1024	0	Hephasto Item (H)	1	Rune Boss Low (H)	1																							0
-Hephasto (H) Desecrated A	27	88	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
-Hephasto (H) Desecrated B	27	93	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
-Hephasto (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
-Hephasto (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
-Hephasto (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
-Hephasto (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
-Nihlathak Item			5					5	Act 5 Good	3	Act 5 Equip B	25	Potion 2	8	Gold 1.5x	14																			0
-Nihlathak Item Desecrated	28	68	5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	8	Gold 1.5x	14																			0
-Nihlathak Item (N)			5					5	Act 5 (N) Good	3	Act 5 (N) Equip B	25	Potion 3	5	Gold 2x	14																			0
-Nihlathak Item (N) Desecrated	28	73	5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	5	Gold 1.5x	14																			0
-Nihlathak Item (H)			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2.5x	14	Pandemonium Key C	3																	0
-Nihlathak Item (H) Desecrated			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key C	3																	0
-Nihlathak			-1	900	900	900	1024	0	Nihlathak Item	1																									0
-Nihlathak Desecrated	28	68	-2	900	900	900	1024	0	Norm TZ Generic	1	Nihlathak Item Desecrated	1																							0
-Nihlathak (N)			-1	900	900	900	1024	0	Nihlathak Item (N)	1																									0
-Nihlathak (N) Desecrated	28	73	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Nihlathak Item (N) Desecrated	1																					0
-Nihlathak (H)			-1	900	900	900	1024	0	Nihlathak Item (H)	1																									0
-Nihlathak (H) Desecrated	28	95	-3	900	900	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Nihlathak Item (H) Desecrated	1																					0
-Frozenstein Item			5					10	Act 5 Good	3	Act 5 Equip A	25	Potion 2	15	Gold 1.5x	14																			0
-Frozenstein Item Desecrated A			5					10	Act 5 Good	3	Act 5 Equip A	25	Potion 2	15	Gold 1.5x	14																			0
-Frozenstein Item Desecrated B			5					10	Act 5 Good	3	Act 5 Equip C	25	Potion 2	15	Gold 1.5x	14																			0
-Frozenstein Item Desecrated C			5					10	Act 5 (N) Good	3	Act 5 (N) Equip C	25	Potion 3	15	Gold 1.5x	14																			0
-Frozenstein Item (N)			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	25	Potion 3	10	Gold 2x	14																			0
-Frozenstein Item (N) Desecrated A			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	25	Potion 3	10	Gold 1.5x	14																			0
-Frozenstein Item (N) Desecrated B			5					10	Act 5 (N) Good	3	Act 5 (N) Equip C	25	Potion 3	10	Gold 1.5x	14																			0
-Frozenstein Item (N) Desecrated C			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
-Frozenstein Item (H)			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2.5x	14																			0
-Frozenstein Item (H) Desecrated A			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14																			0
-Frozenstein Item (H) Desecrated B			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
-Frozenstein Item (H) Desecrated C			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
-Frozenstein Item (H) Desecrated D			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
-Frozenstein Item (H) Desecrated E			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
-Frozenstein Item (H) Desecrated F			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
-Frozenstein			-2	800	800	900	1024	0	Frozenstein Item	1	Rune Boss High	1																							0
-Frozenstein Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Frozenstein Item Desecrated A	1	Rune Boss High Desecrated	1																					0
-Frozenstein Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Frozenstein Item Desecrated B	1	Rune Boss High Desecrated	1																					0
-Frozenstein Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Frozenstein Item Desecrated C	1	Rune Boss High Desecrated	1																					0
-Frozenstein (N)			-2	800	800	900	1024	0	Frozenstein Item (N)	1	Rune Boss High (N)	1																							0
-Frozenstein (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Frozenstein Item (N) Desecrated A	1	Rune Boss High (N) Desecrated	1																			0
-Frozenstein (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Frozenstein Item (N) Desecrated B	1	Rune Boss High (N) Desecrated	1																			0
-Frozenstein (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Frozenstein Item (N) Desecrated C	1	Rune Boss High (N) Desecrated	1																			0
-Frozenstein (H)			-2	800	800	900	1024	0	Frozenstein Item (H)	1	Rune Boss High (H)	1																							0
-Frozenstein (H) Desecrated A	27	81	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
-Frozenstein (H) Desecrated B	27	84	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
-Frozenstein (H) Desecrated C	27	87	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
-Frozenstein (H) Desecrated D	35	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
-Frozenstein (H) Desecrated E	35	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
-Frozenstein (H) Desecrated F	35	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
-Baal Item			6					5	Act 1 (N) Good	8	Act 1 (N) Equip A	30	Gold 2x	10																					0
-Baal Item Desecrated			6					5	Act 3 (N) Good	8	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
-Baal Item (N)			6					5	Act 1 (H) Good	8	Act 1 (H) Equip A	30	Gold 2x	10																					0
-Baal Item (N) Desecrated			6					5	Act 3 (H) Good	8	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
-Baal Item (H)			6					5	Act 5 (H) Good	8	Act 5 (H) Equip B	30	Gold 2.5x	10																					0
-Baal Item (H) Desecrated			6					5	Act 5 (H) Good	8	Act 5 (H) Equip C	30	Gold 2x	10																					0
-Baal			-1	983	983	983	1024	0	Baal Item	1																									0
-Baal Desecrated	29	60	-2	983	983	983	1024	0	Norm TZ Generic	1	Baal Item Desecrated	1																							0
-Baal (N)			-2	983	983	983	1024	0	NMH Boss	1	Baal Item (N)	1																							0
-Baal (N) Desecrated	29	75	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Baal Item (N) Desecrated	1																					0
-Baal (H)			-2	983	983	983	1024	0	NMH Boss	1	Baal Item (H)	1																							0
-Baal (H) Desecrated	29	99	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Baal Item (H) Desecrated	1																					0
-Baalq Item			6					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30																							0
-Baalq Item (N)			6					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30																							0
-Baalq Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30																							0
-Baalq			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item	1																							0
-Baalq (N)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (N)	1																							0
-Baalq (H)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (H)	1																							0
-Blood Raven Item			5					5	Act 1 Good	3	Act 1 Equip B	25	Potion 1	15	Gold 2x	14																			0
-Blood Raven Item Desecrated A			5					5	Act 1 Good	3	Act 1 Equip C	25	Potion 1	15	Gold 1.5x	14																			0
-Blood Raven Item Desecrated B			5					5	Act 4 Good	3	Act 4 Equip B	25	Potion 2	15	Gold 1.5x	14																			0
-Blood Raven Item Desecrated C			5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	15	Gold 1.5x	14																			0
-Blood Raven Item (N)			5					5	Act 1 (N) Good	3	Act 1 (N) Equip B	25	Potion 2	10	Gold 2x	14																			0
-Blood Raven Item (N) Desecrated A			5					5	Act 1 (N) Good	3	Act 1 (N) Equip C	25	Potion 2	10	Gold 1.5x	14																			0
-Blood Raven Item (N) Desecrated B			5					5	Act 4 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
-Blood Raven Item (N) Desecrated C			5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
-Blood Raven Item (H)			5					5	Act 1 (H) Good	3	Act 1 (H) Equip B	25	Potion 4	5	Gold 2.5x	14																			0
-Blood Raven Item (H) Desecrated A			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
-Blood Raven Item (H) Desecrated B			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14																			0
-Blood Raven Item (H) Desecrated C			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
-Blood Raven Item (H) Desecrated D			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
-Blood Raven			-1	800	800	972	1024	0	Blood Raven Item	1																									0
-Blood Raven Desecrated A	30	10	-2	800	800	972	1024	0	Norm TZ Generic	1	Blood Raven Item Desecrated A	1																							0
-Blood Raven Desecrated B	30	29	-2	800	800	972	1024	0	Norm TZ Generic	1	Blood Raven Item Desecrated B	1																							0
-Blood Raven Desecrated C	30	48	-2	800	800	972	1024	0	Norm TZ Generic	1	Blood Raven Item Desecrated C	1																							0
-Blood Raven (N)			-1	800	800	972	1024	0	Blood Raven Item (N)	1																									0
-Blood Raven (N) Desecrated A	30	43	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Blood Raven Item (N) Desecrated A	1																					0
-Blood Raven (N) Desecrated B	30	57	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Blood Raven Item (N) Desecrated B	1																					0
-Blood Raven (N) Desecrated C	30	73	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Blood Raven Item (N) Desecrated C	1																					0
-Blood Raven (H)			-1	800	800	972	1024	0	Blood Raven Item (H)	1																									0
-Blood Raven (H) Desecrated A	30	88	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated A	1																					0
-Blood Raven (H) Desecrated B	30	90	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated B	1																					0
-Blood Raven (H) Desecrated C	30	93	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated C	1																					0
-Blood Raven (H) Desecrated D	30	96	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated D	1																					0
-Smith Item			5					5	Act 1 Uitem C	1	Act 1 Melee B	2																							0
-Smith Item Desecrated A			5					5	Act 2 Uitem A	1	Act 2 Melee A	2																							0
-Smith Item Desecrated B			5					5	Act 4 Uitem B	1	Act 4 Melee B	2																							0
-Smith Item Desecrated C			5					5	Act 3 (N) Uitem A	1	Act 3 (N) Melee A	2																							0
-Smith Item (N)			5					5	Act 1 (H) Uitem C	1	Act 1 (N) Melee B	2																							0
-Smith Item (N) Desecrated A			5					5	Act 2 (N) Uitem A	1	Act 2 (N) Melee A	2																							0
-Smith Item (N) Desecrated B			5					5	Act 4 (N) Uitem B	1	Act 4 (N) Melee B	2																							0
-Smith Item (N) Desecrated C			5					5	Act 3 (H) Uitem A	1	Act 3 (H) Melee A	2																							0
-Smith Item (H)			5					5	Act 1 (H) Uitem C	1	Act 1 (H) Melee B	2																							0
-Smith Item (H) Desecrated A			5					5	Act 3 (H) Uitem A	1	Act 3 (H) Melee A	2																							0
-Smith Item (H) Desecrated B			5					5	Act 3 (H) Uitem B	2	Act 3 (H) Melee B	4																							0
-Smith Item (H) Desecrated C			5					5	Act 3 (H) Uitem C	2	Act 3 (H) Melee B	4																							0
-Smith Item (H) Desecrated D			5					5	Act 4 (H) Uitem A	2	Act 4 (H) Melee A	4																							0
-Smith Item (H) Desecrated E			5					5	Act 4 (H) Uitem B	2	Act 4 (H) Melee B	4																							0
-Smith Item (H) Desecrated F			5					5	Act 4 (H) Uitem B	2	Act 4 (H) Melee B	4																							0
-Smith Item (H) Desecrated G			5					5	Act 5 (H) Uitem A	2	Act 5 (H) Melee A	4																							0
-Smith Item (H) Desecrated H			5					5	Act 5 (H) Uitem B	2	Act 5 (H) Melee B	4																							0
-Smith Item (H) Desecrated I			5					5	Act 5 (H) Uitem C	2	Act 5 (H) Melee C	4																							0
-Smith			-1	800	800	972	1024	0	Smith Item	1																									0
-Smith Desecrated A	31	13	-2	800	800	972	1024	0	Norm TZ Generic	1	Smith Item Desecrated A	1																							0
-Smith Desecrated B	31	32	-2	800	800	972	1024	0	Norm TZ Generic	1	Smith Item Desecrated B	1																							0
-Smith Desecrated C	31	48	-2	800	800	972	1024	0	Norm TZ Generic	1	Smith Item Desecrated C	1																							0
-Smith (N)			-1	800	800	972	1024	0	Smith Item (N)	1																									0
-Smith (N) Desecrated A	31	43	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Smith Item (N) Desecrated A	1																					0
-Smith (N) Desecrated B	31	57	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Smith Item (N) Desecrated B	1																					0
-Smith (N) Desecrated C	31	73	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Smith Item (N) Desecrated C	1																					0
-Smith (H)			-1	800	800	972	1024	0	Smith Item (H)	1																									0
-Smith (H) Desecrated A	31	73	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated A	1																					0
-Smith (H) Desecrated B	31	75	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated B	1																					0
-Smith (H) Desecrated C	31	78	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated C	1																					0
-Smith (H) Desecrated D	31	81	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated D	1																					0
-Smith (H) Desecrated E	31	84	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated E	1																					0
-Smith (H) Desecrated F	31	87	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated F	1																					0
-Smith (H) Desecrated G	31	90	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated G	1																					0
-Smith (H) Desecrated H	31	93	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated H	1																					0
-Smith (H) Desecrated I	31	96	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated I	1																					0
-Izual Item			5					5	Act 4 Good	3	Act 4 Equip B	25	Potion 2	15	Gold 1.5x	14																			0
-Izual Item Desecrated A	32	29	5					5	Act 4 Good	3	Act 4 Equip B	25	Potion 2	15	Gold 1.5x	14																			0
-Izual Item Desecrated B	32	38	5					5	Act 5 Good	3	Act 5 Equip C	25	Potion 2	15	Gold 1.5x	14																			0
-Izual Item Desecrated C	32	48	5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	15	Gold 1.5x	14																			0
-Izual Item (N)			5					5	Act 4 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 2x	14																			0
-Izual Item (N) Desecrated A	32	60	5					5	Act 4 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
-Izual Item (N) Desecrated B	32	66	5					5	Act 5 (N) Good	3	Act 5 (N) Equip C	25	Potion 3	10	Gold 1.5x	14																			0
-Izual Item (N) Desecrated C	32	73	5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
-Izual Item (H)			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2.5x	14																			0
-Izual Item (H) Desecrated A			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
-Izual Item (H) Desecrated B			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14																			0
-Izual Item (H) Desecrated C			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
-Izual Item (H) Desecrated D			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
-Izual			-1	800	800	972	1024	0	Izual Item	1																									0
-Izual Desecrated A	32	29	-2	800	800	972	1024	0	Norm TZ Generic	1	Izual Item Desecrated A	1																							0
-Izual Desecrated B	32	38	-2	800	800	972	1024	0	Norm TZ Generic	1	Izual Item Desecrated B	1																							0
-Izual Desecrated C	32	48	-2	800	800	972	1024	0	Norm TZ Generic	1	Izual Item Desecrated C	1																							0
-Izual (N)			-1	800	800	972	1024	0	Izual Item (N)	1																									0
-Izual (N) Desecrated A	32	60	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Izual Item (N) Desecrated A	1																					0
-Izual (N) Desecrated B	32	66	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Izual Item (N) Desecrated B	1																					0
-Izual (N) Desecrated C	32	73	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Izual Item (N) Desecrated C	1																					0
-Izual (H)			-1	800	800	972	1024	0	Izual Item (H)	1																									0
-Izual (H) Desecrated A	32	86	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated A	1																					0
-Izual (H) Desecrated B	32	90	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated B	1																					0
-Izual (H) Desecrated C	32	93	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated C	1																					0
-Izual (H) Desecrated D	32	96	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated D	1																					0
 Act 1 Super A	18	0	-3	800	800	972	1024	0	Act 1 Uitem A	2	Normal Potion	1																							0
 Act 1 Super B	18	5	-3	800	800	972	1024	0	Act 1 Uitem B	2	Normal Potion	1																							0
 Act 1 Super C	18	9	-3	800	800	972	1024	0	Act 1 Uitem C	2	Normal Potion	1																							0
@@ -1186,113 +736,6 @@ Act 2 (H) LT Swarm	41	72	-2	512	654	972	1024	0	Act 2 (H) LT Item	1	Super Potion	
 Act 3 (H) LT Swarm	41	78	-2	512	654	972	1024	0	Act 3 (H) LT Item	1	Super Potion	1																							0
 Act 4 (H) LT Swarm	41	87	-2	512	654	972	1024	0	Act 4 (H) LT Item	1	Super Potion	1																							0
 Act 5 (H) LT Swarm	41	96	-2	512	654	972	1024	0	Act 5 (H) LT Item	1	Super Potion	1																							0
-Cow King Item			5					0	Act 1 Uitem C	1	Act 1 Melee B	2																							0
-Cow King Item Desecrated A			5					0	Act 4 Uitem B	3	Act 4 Melee B	6																							0
-Cow King Item Desecrated B			5					0	Act 1 (N) Uitem A	3	Act 1 (N) Melee A	6																							0
-Cow King Item Desecrated C			5					0	Act 3 (N) Uitem A	3	Act 3 (N) Melee A	6																							0
-Cow King Item (N)			5					0	Act 1 (H) Uitem C	1	Act 1 (N) Melee B	2																							0
-Cow King Item (N) Desecrated A			5					0	Act 1 (H) Uitem C	3	Act 1 (H) Melee B	6																							0
-Cow King Item (N) Desecrated B			5					0	Act 2 (H) Uitem C	3	Act 2 (H) Melee B	6																							0
-Cow King Item (N) Desecrated C			5					0	Act 3 (H) Uitem C	3	Act 3 (H) Melee B	6																							0
-Cow King Item (H)			5					0	Act 1 (H) Uitem C	1	Act 1 (H) Melee B	2																							0
-Cow King Item (H) Desecrated A			5					0	Act 4 (H) Uitem B	3	Act 4 (H) Melee B	6																							0
-Cow King Item (H) Desecrated B			5					0	Act 5 (H) Uitem A	3	Act 5 (H) Melee A	6																							0
-Cow King Item (H) Desecrated C			5					0	Act 5 (H) Uitem B	3	Act 5 (H) Melee B	6																							0
-Cow King Item (H) Desecrated D			5					0	Act 5 (H) Uitem C	3	Act 5 (H) Melee C	6																							0
-Cow King			-1	850	983	983	1024	0	Cow King Item	1																									0
-Cow King Desecrated A	33	31	-2	850	983	983	1024	0	Norm TZ Generic	1	Cow King Item Desecrated A	1																							0
-Cow King Desecrated B	33	40	-2	850	983	983	1024	0	Norm TZ Generic	1	Cow King Item Desecrated B	1																							0
-Cow King Desecrated C	33	48	-2	850	983	983	1024	0	Norm TZ Generic	1	Cow King Item Desecrated C	1																							0
-Cow King (N)			-1	850	983	983	1024	0	Cow King Item (N)	1																									0
-Cow King (N) Desecrated A	33	67	-3	850	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Cow King Item (N) Desecrated A	1																					0
-Cow King (N) Desecrated B	33	70	-3	850	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Cow King Item (N) Desecrated B	1																					0
-Cow King (N) Desecrated C	33	73	-3	850	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Cow King Item (N) Desecrated C	1																					0
-Cow King (H)			-1	850	983	983	1024	0	Cow King Item (H)	1																									0
-Cow King (H) Desecrated A	33	86	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated A	1																					0
-Cow King (H) Desecrated B	33	90	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated B	1																					0
-Cow King (H) Desecrated C	33	93	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated C	1																					0
-Cow King (H) Desecrated D	33	96	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated D	1																					0
-Duriel - Item			6					5	Act 3 Good	4	Act 3 Equip A	30	Gold 1.5x	10																					0
-Duriel - Item Desecrated A			6					5	Act 3 Good	4	Act 3 Equip B	30	Gold 1.5x	10																					0
-Duriel - Item Desecrated B			6					5	Act 5 Good	4	Act 5 Equip B	30	Gold 1.5x	10																					0
-Duriel - Item Desecrated C			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
-Duriel (N) - Item			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 2x	10																					0
-Duriel (N) - Item Desecrated A			6					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																					0
-Duriel (N) - Item Desecrated B			6					5	Act 5 (N) Good	4	Act 5 (N) Equip B	30	Gold 1.5x	10																					0
-Duriel (N) - Item Desecrated C			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
-Duriel (H) - Item			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 2.5x	10																					0
-Duriel (H) - Item Desecrated A			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																					0
-Duriel (H) - Item Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																					0
-Duriel (H) - Item Desecrated C			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
-Duriel (H) - Item Desecrated D			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
-Duriel			-1	983	983	983	1024	0	Duriel - Item	1																									0
-Duriel - Desecrated A	34	22	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated A	1																							0
-Duriel - Desecrated B	34	36	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated B	1																							0
-Duriel - Desecrated C	34	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated C	1																							0
-Duriel (N)			-2	983	983	983	1024	0	NMH Boss	1	Duriel (N) - Item	1																							0
-Duriel (N) - Desecrated A	34	55	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Duriel (N) - Item Desecrated A	1																					0
-Duriel (N) - Desecrated B	34	63	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Duriel (N) - Item Desecrated B	1																					0
-Duriel (N) - Desecrated C	34	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Duriel (N) - Item Desecrated C	1																					0
-Duriel (H)			-2	983	983	983	1024	0	NMH Boss	1	Duriel (H) - Item	1																							0
-Duriel (H) - Desecrated A	34	88	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated A	1																					0
-Duriel (H) - Desecrated B	34	90	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated B	1																					0
-Duriel (H) - Desecrated C	34	93	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated C	1																					0
-Duriel (H) - Desecrated D	34	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated D	1																					0
-Durielq - Item			6					5	Act 3 Good	4	Act 3 Equip A	30																							0
-Durielq (N) - Item			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30																							0
-Durielq (H) - Item			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30																							0
-Durielq			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq - Item	1																							0
-Durielq (N)			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq (N) - Item	1																							0
-Durielq (H)			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq (H) - Item	1																							0
-ROP			1	1024				0	Diablo	1																									0
-ROP (N)			1	1024				0	Diablo (N)	1																									0
-ROP (H)			1	1024				0	Annihilus	1																									0
-Countess Item			5					10	Act 2 Good	3	Act 1 Equip C	25	Potion 1	15	Gold 1.5x	14																			0
-Countess Item Desecrated A			5					10	Act 3 Good	3	Act 2 Equip A	25	Potion 1	15	Gold 1.5x	14																			0
-Countess Item Desecrated B			5					10	Act 1 (N) Good	3	Act 5 Equip A	25	Potion 2	15	Gold 1.5x	14																			0
-Countess Item Desecrated C			5					10	Act 4 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	15	Gold 1.5x	14																			0
-Countess Item (N)			5					10	Act 2 (N) Good	3	Act 1 (N) Equip C	25	Potion 2	10	Gold 2x	14																			0
-Countess Item (N) Desecrated A			5					10	Act 3 (N) Good	3	Act 2 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
-Countess Item (N) Desecrated B			5					10	Act 5 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
-Countess Item (N) Desecrated C			5					10	Act 4 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
-Countess Item (H)			5					10	Act 2 (H) Good	3	Act 1 (H) Equip C	25	Potion 4	5	Gold 2.5x	14	Pandemonium Key B	3																	0
-Countess Item (H) Desecrated A			5					10	Act 4 (H) Good	3	Act 4 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
-Countess Item (H) Desecrated B			5					10	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
-Countess Item (H) Desecrated C			5					10	Act 4 (H) Good	3	Act 4 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
-Countess Item (H) Desecrated D			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
-Countess Item (H) Desecrated E			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
-Countess Item (H) Desecrated F			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
-Countess			-2	883	883	883	1024	0	Countess Item	1	Rune Boss Low	1																							0
-Countess Desecrated A	35	11	-3	883	883	883	1024	0	Norm TZ Generic	1	Countess Item Desecrated A	1	Rune Boss Low Desecrated	1																					0
-Countess Desecrated B	35	34	-3	883	883	883	1024	0	Norm TZ Generic	1	Countess Item Desecrated B	1	Rune Boss Low Desecrated	1																					0
-Countess Desecrated C	35	48	-3	883	883	883	1024	0	Norm TZ Generic	1	Countess Item Desecrated C	1	Rune Boss Low Desecrated	1																					0
-Countess (N)			-2	883	883	983	1024	0	Countess Item (N)	1	Rune Boss Low (N)	1																							0
-Countess (N) Desecrated A	35	45	-4	883	883	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Countess Item (N) Desecrated A	1	Rune Boss Low (N) Desecrated	1																			0
-Countess (N) Desecrated B	35	59	-4	883	883	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Countess Item (N) Desecrated B	1	Rune Boss Low (N) Desecrated	1																			0
-Countess (N) Desecrated C	35	73	-4	883	883	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Countess Item (N) Desecrated C	1	Rune Boss Low (N) Desecrated	1																			0
-Countess (H)			-2	883	883	983	1024	0	Countess Item (H)	1	Rune Boss Low (H)	1																							0
-Countess (H) Desecrated A	35	82	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated A	1	Rune Boss Low (H) Desecrated	1																			0
-Countess (H) Desecrated B	35	84	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated B	1	Rune Boss Low (H) Desecrated	1																			0
-Countess (H) Desecrated C	35	87	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated C	1	Rune Boss Low (H) Desecrated	1																			0
-Countess (H) Desecrated D	35	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
-Countess (H) Desecrated E	35	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
-Countess (H) Desecrated F	35	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
-Uber Andariel			1					0	dhn	1																									0
-Uber Duriel			1					0	bey	1																									0
-Uber Izual			1					0	mbr	1																									0
-Mephisto's Animus			1					0	mpa	1																									0
-Baal's Calamity			1					0	blc	1																									0
-Diablo's Ire			1					0	dia	1																									0
-Pitzilla			-2					0	Act 5 Super C	1	Act 2 Good	1																							0
-Pitzilla (N)			-2					0	Act 5 (N) Super C	1	Act 2 (N) Good	1																							0
-Pitzilla (H)			-2					0	Act 5 (H) Super C	1	Act 2 (H) Good	1																							0
-Treehead Woodfist			-2					0	Act 1 Super B	2																									0
-Treehead Woodfist (N)			-2					0	Act 1 (N) Super B	2																									0
-Treehead Woodfist (H)			-2					0	Act 1 (H) Super B	2																									0
-Snapchip			-1					0	Act 5 Super B	1																									0
-Snapchip (N)			-1					0	Act 5 (N) Super B	1																									0
-Snapchip (H)			-1					0	Act 5 (H) Super B	1																									0
-Corpsefire Splash Charm		0	-5	800	800	972	1024	0	Act 1 Uitem A	2	Normal Potion	2	t1 Splash Charm	1																					0
 Act 1 (N) Champ A Desecrated	36	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Champ A	1																					0
 Act 1 (N) Champ B Desecrated	36	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Champ B	1																					0
 Act 1 (N) Champ C Desecrated	36	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Champ C	1																					0
@@ -1429,3 +872,560 @@ Act 2 (H) LT Swarm Desecrated	43	83	-3					0	Hell TZ Boss	1	Sunder Charms	1	Act 
 Act 3 (H) LT Swarm Desecrated	43	85	-3					0	Hell TZ Boss	1	Sunder Charms	1	Act 3 (H) LT Swarm	1																					0
 Act 4 (H) LT Swarm Desecrated	43	87	-3					0	Hell TZ Boss	1	Sunder Charms	1	Act 4 (H) LT Swarm	1																					0
 Act 5 (H) LT Swarm Desecrated	43	96	-3					0	Hell TZ Boss	1	Sunder Charms	1	Act 5 (H) LT Swarm	1																					0
+Pitzilla			-2					0	Act 5 Super C	1	Act 2 Good	1																							0
+Pitzilla (N)			-2					0	Act 5 (N) Super C	1	Act 2 (N) Good	1																							0
+Pitzilla (H)			-2					0	Act 5 (H) Super C	1	Act 2 (H) Good	1																							0
+Treehead Woodfist			-2					0	Act 1 Super B	2																									0
+Treehead Woodfist (N)			-2					0	Act 1 (N) Super B	2																									0
+Treehead Woodfist (H)			-2					0	Act 1 (H) Super B	2																									0
+Snapchip			-1					0	Act 5 Super B	1																									0
+Snapchip (N)			-1					0	Act 5 (N) Super B	1																									0
+Snapchip (H)			-1					0	Act 5 (H) Super B	1																									0
+Corpsefire Splash Charm		0	-5	800	800	972	1024	0	Act 1 Uitem A	2	Normal Potion	2	t1 Splash Charm	1																					0
+Rune Boss Low			2					0	Runes 5	30	Runes 5	15	Runes 5	15																					0
+Rune Boss Low (N)			2					0	Runes 10	15	Runes 10	15	Runes 10	15																					0
+Rune Boss Low (H)			2					0	Runes 13	15	Runes 13	15	Runes 13	15																					0
+Rune Boss High			2					0	Runes 7	30	Runes 7	15	Runes 7	15																					0
+Rune Boss High (N)			2					0	Runes 11	15	Runes 11	15	Runes 11	15																					0
+Rune Boss High (H)			2					0	Runes 14	15	Runes 14	15	Runes 14	15																					0
+Rune Boss Low Desecrated			2					0	Runes 5	30	Runes 5	15	Runes 5	15																					0
+Rune Boss Low (N) Desecrated			3					0	Runes 10	15	Runes 10	15	Runes 10	15																					0
+Rune Boss Low (H) Desecrated			3					0	Runes 13	15	Runes 13	15	Runes 13	15																					0
+Rune Boss High Desecrated			2					0	Runes 7	30	Runes 7	15	Runes 7	15																					0
+Rune Boss High (N) Desecrated			3					0	Runes 11	15	Runes 11	15	Runes 11	15																					0
+Rune Boss High (H) Desecrated			3					0	Runes 14	15	Runes 14	15	Runes 14	15																					0
+Blood Raven Item			5					5	Act 1 Good	3	Act 1 Equip B	25	Potion 1	15	Gold 2x	14																			0
+Blood Raven Item Desecrated A			5					5	Act 1 Good	3	Act 1 Equip C	25	Potion 1	15	Gold 1.5x	14																			0
+Blood Raven Item Desecrated B			5					5	Act 4 Good	3	Act 4 Equip B	25	Potion 2	15	Gold 1.5x	14																			0
+Blood Raven Item Desecrated C			5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	15	Gold 1.5x	14																			0
+Blood Raven Item (N)			5					5	Act 1 (N) Good	3	Act 1 (N) Equip B	25	Potion 2	10	Gold 2x	14																			0
+Blood Raven Item (N) Desecrated A			5					5	Act 1 (N) Good	3	Act 1 (N) Equip C	25	Potion 2	10	Gold 1.5x	14																			0
+Blood Raven Item (N) Desecrated B			5					5	Act 4 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
+Blood Raven Item (N) Desecrated C			5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
+Blood Raven Item (H)			5					5	Act 1 (H) Good	3	Act 1 (H) Equip B	25	Potion 4	5	Gold 2.5x	14																			0
+Blood Raven Item (H) Desecrated A			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
+Blood Raven Item (H) Desecrated B			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14																			0
+Blood Raven Item (H) Desecrated C			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
+Blood Raven Item (H) Desecrated D			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
+Blood Raven			-1	800	800	972	1024	0	Blood Raven Item	1																									0
+Blood Raven Desecrated A	30	10	-2	800	800	972	1024	0	Norm TZ Generic	1	Blood Raven Item Desecrated A	1																							0
+Blood Raven Desecrated B	30	29	-2	800	800	972	1024	0	Norm TZ Generic	1	Blood Raven Item Desecrated B	1																							0
+Blood Raven Desecrated C	30	48	-2	800	800	972	1024	0	Norm TZ Generic	1	Blood Raven Item Desecrated C	1																							0
+Blood Raven (N)			-1	800	800	972	1024	0	Blood Raven Item (N)	1																									0
+Blood Raven (N) Desecrated A	30	43	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Blood Raven Item (N) Desecrated A	1																					0
+Blood Raven (N) Desecrated B	30	57	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Blood Raven Item (N) Desecrated B	1																					0
+Blood Raven (N) Desecrated C	30	73	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Blood Raven Item (N) Desecrated C	1																					0
+Blood Raven (H)			-1	800	800	972	1024	0	Blood Raven Item (H)	1																									0
+Blood Raven (H) Desecrated A	30	88	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated A	1																					0
+Blood Raven (H) Desecrated B	30	90	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated B	1																					0
+Blood Raven (H) Desecrated C	30	93	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated C	1																					0
+Blood Raven (H) Desecrated D	30	96	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Blood Raven Item (H) Desecrated D	1																					0
+Griswold Item			5					5	Act 1 Good	3	Act 1 Melee B	30	Potion 2	15	Gold 1.5x	14																			0
+Griswold Item Desecrated A			5					5	Act 1 Good	3	Act 1 Melee B	30	Potion 2	15	Gold 1.5x	14																			0
+Griswold Item Desecrated B			5					5	Act 1 Good	3	Act 4 Melee A	30	Potion 2	15	Gold 1.5x	14																			0
+Griswold Item Desecrated C			5					5	Act 1 Good	3	Act 2 (N) Melee B	30	Potion 3	15	Gold 1.5x	14																			0
+Griswold Item (N)			5					5	Act 1 (N) Good	3	Act 1 (N) Melee B	30	Potion 3	10	Gold 2x	14																			0
+Griswold Item (N) Desecrated A			5					5	Act 1 (N) Good	3	Act 1 (N) Melee B	30	Potion 3	10	Gold 1.5x	14																			0
+Griswold Item (N) Desecrated B			5					5	Act 1 (N) Good	3	Act 3 (N) Melee B	30	Potion 3	10	Gold 1.5x	14																			0
+Griswold Item (N) Desecrated C			5					5	Act 1 (N) Good	3	Act 3 (H) Melee B	30	Potion 4	10	Gold 1.5x	14																			0
+Griswold Item (H)			5					5	Act 1 (H) Good	3	Act 1 (H) Melee B	30	Potion 4	5	Gold 2.5x	14																			0
+Griswold Item (H) Desecrated A			5					5	Act 1 (H) Good	3	Act 4 (H) Melee A	30	Potion 4	5	Gold 2x	14																			0
+Griswold Item (H) Desecrated B			5					5	Act 1 (H) Good	3	Act 4 (H) Melee B	30	Potion 4	5	Gold 2x	14																			0
+Griswold Item (H) Desecrated C			5					5	Act 1 (H) Good	3	Act 5 (H) Melee A	30	Potion 4	5	Gold 2x	14																			0
+Griswold Item (H) Desecrated D			5					5	Act 1 (H) Good	3	Act 5 (H) Melee B	30	Potion 4	5	Gold 2x	14																			0
+Griswold			-1	650	800	800	1024	0	Griswold Item	1																									0
+Griswold Desecrated A	26	8	-2	650	800	800	1024	0	Norm TZ Generic	1	Griswold Item Desecrated A	1																							0
+Griswold Desecrated B	26	29	-2	650	800	800	1024	0	Norm TZ Generic	1	Griswold Item Desecrated B	1																							0
+Griswold Desecrated C	26	48	-2	650	800	800	1024	0	Norm TZ Generic	1	Griswold Item Desecrated C	1																							0
+Griswold (N)			-1	650	800	800	1024	0	Griswold Item (N)	1																									0
+Griswold (N) Desecrated A	26	42	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Griswold Item (N) Desecrated A	1																					0
+Griswold (N) Desecrated B	26	57	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Griswold Item (N) Desecrated B	1																					0
+Griswold (N) Desecrated C	26	73	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Griswold Item (N) Desecrated C	1																					0
+Griswold (H)			-1	650	800	800	1024	0	Griswold Item (H)	1																									0
+Griswold (H) Desecrated A	26	87	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated A	1																					0
+Griswold (H) Desecrated B	26	90	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated B	1																					0
+Griswold (H) Desecrated C	26	93	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated C	1																					0
+Griswold (H) Desecrated D	26	96	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Griswold Item (H) Desecrated D	1																					0
+Smith Item			5					5	Act 1 Uitem C	1	Act 1 Melee B	2																							0
+Smith Item Desecrated A			5					5	Act 2 Uitem A	1	Act 2 Melee A	2																							0
+Smith Item Desecrated B			5					5	Act 4 Uitem B	1	Act 4 Melee B	2																							0
+Smith Item Desecrated C			5					5	Act 3 (N) Uitem A	1	Act 3 (N) Melee A	2																							0
+Smith Item (N)			5					5	Act 1 (H) Uitem C	1	Act 1 (N) Melee B	2																							0
+Smith Item (N) Desecrated A			5					5	Act 2 (N) Uitem A	1	Act 2 (N) Melee A	2																							0
+Smith Item (N) Desecrated B			5					5	Act 4 (N) Uitem B	1	Act 4 (N) Melee B	2																							0
+Smith Item (N) Desecrated C			5					5	Act 3 (H) Uitem A	1	Act 3 (H) Melee A	2																							0
+Smith Item (H)			5					5	Act 1 (H) Uitem C	1	Act 1 (H) Melee B	2																							0
+Smith Item (H) Desecrated A			5					5	Act 3 (H) Uitem A	1	Act 3 (H) Melee A	2																							0
+Smith Item (H) Desecrated B			5					5	Act 3 (H) Uitem B	2	Act 3 (H) Melee B	4																							0
+Smith Item (H) Desecrated C			5					5	Act 3 (H) Uitem C	2	Act 3 (H) Melee B	4																							0
+Smith Item (H) Desecrated D			5					5	Act 4 (H) Uitem A	2	Act 4 (H) Melee A	4																							0
+Smith Item (H) Desecrated E			5					5	Act 4 (H) Uitem B	2	Act 4 (H) Melee B	4																							0
+Smith Item (H) Desecrated F			5					5	Act 4 (H) Uitem B	2	Act 4 (H) Melee B	4																							0
+Smith Item (H) Desecrated G			5					5	Act 5 (H) Uitem A	2	Act 5 (H) Melee A	4																							0
+Smith Item (H) Desecrated H			5					5	Act 5 (H) Uitem B	2	Act 5 (H) Melee B	4																							0
+Smith Item (H) Desecrated I			5					5	Act 5 (H) Uitem C	2	Act 5 (H) Melee C	4																							0
+Smith			-1	800	800	972	1024	0	Smith Item	1																									0
+Smith Desecrated A	31	13	-2	800	800	972	1024	0	Norm TZ Generic	1	Smith Item Desecrated A	1																							0
+Smith Desecrated B	31	32	-2	800	800	972	1024	0	Norm TZ Generic	1	Smith Item Desecrated B	1																							0
+Smith Desecrated C	31	48	-2	800	800	972	1024	0	Norm TZ Generic	1	Smith Item Desecrated C	1																							0
+Smith (N)			-1	800	800	972	1024	0	Smith Item (N)	1																									0
+Smith (N) Desecrated A	31	43	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Smith Item (N) Desecrated A	1																					0
+Smith (N) Desecrated B	31	57	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Smith Item (N) Desecrated B	1																					0
+Smith (N) Desecrated C	31	73	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Smith Item (N) Desecrated C	1																					0
+Smith (H)			-1	800	800	972	1024	0	Smith Item (H)	1																									0
+Smith (H) Desecrated A	31	73	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated A	1																					0
+Smith (H) Desecrated B	31	75	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated B	1																					0
+Smith (H) Desecrated C	31	78	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated C	1																					0
+Smith (H) Desecrated D	31	81	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated D	1																					0
+Smith (H) Desecrated E	31	84	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated E	1																					0
+Smith (H) Desecrated F	31	87	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated F	1																					0
+Smith (H) Desecrated G	31	90	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated G	1																					0
+Smith (H) Desecrated H	31	93	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated H	1																					0
+Smith (H) Desecrated I	31	96	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Smith Item (H) Desecrated I	1																					0
+Countess Item			5					10	Act 2 Good	3	Act 1 Equip C	25	Potion 1	15	Gold 1.5x	14																			0
+Countess Item Desecrated A			5					10	Act 3 Good	3	Act 2 Equip A	25	Potion 1	15	Gold 1.5x	14																			0
+Countess Item Desecrated B			5					10	Act 1 (N) Good	3	Act 5 Equip A	25	Potion 2	15	Gold 1.5x	14																			0
+Countess Item Desecrated C			5					10	Act 4 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	15	Gold 1.5x	14																			0
+Countess Item (N)			5					10	Act 2 (N) Good	3	Act 1 (N) Equip C	25	Potion 2	10	Gold 2x	14																			0
+Countess Item (N) Desecrated A			5					10	Act 3 (N) Good	3	Act 2 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
+Countess Item (N) Desecrated B			5					10	Act 5 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
+Countess Item (N) Desecrated C			5					10	Act 4 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
+Countess Item (H)			5					10	Act 2 (H) Good	3	Act 1 (H) Equip C	25	Potion 4	5	Gold 2.5x	14	Pandemonium Key B	3																	0
+Countess Item (H) Desecrated A			5					10	Act 4 (H) Good	3	Act 4 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
+Countess Item (H) Desecrated B			5					10	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
+Countess Item (H) Desecrated C			5					10	Act 4 (H) Good	3	Act 4 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
+Countess Item (H) Desecrated D			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
+Countess Item (H) Desecrated E			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
+Countess Item (H) Desecrated F			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key B	3																	0
+Countess			-2	883	883	883	1024	0	Countess Item	1	Rune Boss Low	1																							0
+Countess Desecrated A	35	11	-3	883	883	883	1024	0	Norm TZ Generic	1	Countess Item Desecrated A	1	Rune Boss Low Desecrated	1																					0
+Countess Desecrated B	35	34	-3	883	883	883	1024	0	Norm TZ Generic	1	Countess Item Desecrated B	1	Rune Boss Low Desecrated	1																					0
+Countess Desecrated C	35	48	-3	883	883	883	1024	0	Norm TZ Generic	1	Countess Item Desecrated C	1	Rune Boss Low Desecrated	1																					0
+Countess (N)			-2	883	883	983	1024	0	Countess Item (N)	1	Rune Boss Low (N)	1																							0
+Countess (N) Desecrated A	35	45	-4	883	883	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Countess Item (N) Desecrated A	1	Rune Boss Low (N) Desecrated	1																			0
+Countess (N) Desecrated B	35	59	-4	883	883	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Countess Item (N) Desecrated B	1	Rune Boss Low (N) Desecrated	1																			0
+Countess (N) Desecrated C	35	73	-4	883	883	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Countess Item (N) Desecrated C	1	Rune Boss Low (N) Desecrated	1																			0
+Countess (H)			-2	883	883	983	1024	0	Countess Item (H)	1	Rune Boss Low (H)	1																							0
+Countess (H) Desecrated A	35	82	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated A	1	Rune Boss Low (H) Desecrated	1																			0
+Countess (H) Desecrated B	35	84	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated B	1	Rune Boss Low (H) Desecrated	1																			0
+Countess (H) Desecrated C	35	87	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated C	1	Rune Boss Low (H) Desecrated	1																			0
+Countess (H) Desecrated D	35	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
+Countess (H) Desecrated E	35	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
+Countess (H) Desecrated F	35	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
+Andarielq Item			6					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																					0
+Andarielq Item Desecrated A			6					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																					0
+Andarielq Item Desecrated B			6					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																					0
+Andarielq Item Desecrated C			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
+Andarielq Item (N)			6					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																					0
+Andarielq Item (N) Desecrated A			6					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																					0
+Andarielq Item (N) Desecrated B			6					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																					0
+Andarielq Item (N) Desecrated C			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
+Andarielq Item (H)			6					5	Act 2 (H) Good	4	Act 2 (H) Equip A	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated A			6					5	Act 3 (H) Good	4	Act 3 (H) Equip B	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated B			6					5	Act 3 (H) Good	4	Act 3 (H) Equip C	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated C			6					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated D			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated E			6					5	Act 4 (H) Good	4	Act 4 (H) Equip C	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated F			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated G			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
+Andarielq Item (H) Desecrated H			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
+Andarielq			-1	995	995	1024	1024	0	Andarielq Item	1																									0
+Andarielq Desecrated A	20	13	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated A	1																							0
+Andarielq Desecrated B	20	32	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated B	1																							0
+Andarielq Desecrated C	20	48	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated C	1																							0
+Andarielq (N)			-2	995	995	1024	1024	0	NMH Boss	1	Andarielq Item (N)	1																							0
+Andarielq (N) Desecrated A	20	43	-3	995	995	1024	1024	0	NM TZ Generic	1	Sunder Charms	1	Andarielq Item (N) Desecrated A	1																					0
+Andarielq (N) Desecrated B	20	57	-3	995	995	1024	1024	0	NM TZ Generic	1	Sunder Charms	1	Andarielq Item (N) Desecrated B	1																					0
+Andarielq (N) Desecrated C	20	73	-3	995	995	1024	1024	0	NM TZ Generic	1	Sunder Charms	1	Andarielq Item (N) Desecrated C	1																					0
+Andarielq (H)			-2	995	995	1024	1024	0	NMH Boss	1	Andarielq Item (H)	1																							0
+Andarielq (H) Desecrated A	20	84	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated A	1																					0
+Andarielq (H) Desecrated B	20	86	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated B	1																					0
+Andarielq (H) Desecrated C	20	88	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated C	1																					0
+Andarielq (H) Desecrated D	20	93	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated D	1																					0
+Andarielq (H) Desecrated E	20	96	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated E	1																					0
+Andarielq (H) Desecrated F	20	90	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated F	1																					0
+Andarielq (H) Desecrated G	20	93	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated G	1																					0
+Andarielq (H) Desecrated H	20	96	-3	995	995	1024	1024	0	Hell TZ Boss	1	Sunder Charms	1	Andarielq Item (H) Desecrated H	1																					0
+Radament Item			5					5	Act 3 Good	3	Act 3 Equip B	20	Potion 1	15	Gold 1.5x	15																			0
+Radament Item Desecrated A			5					5	Act 3 Good	3	Act 3 Equip B	20	Potion 1	15	Gold 1.5x	15																			0
+Radament Item Desecrated B			5					5	Act 4 Good	3	Act 4 Equip B	20	Potion 2	15	Gold 1.5x	15																			0
+Radament Item Desecrated C			5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	20	Potion 3	15	Gold 1.5x	15																			0
+Radament Item (N)			5					5	Act 3 (N) Good	3	Act 3 (N) Equip B	20	Potion 3	10	Gold 2x	10																			0
+Radament Item (N) Desecrated A			5					5	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	10	Gold 1.5x	15																			0
+Radament Item (N) Desecrated B			5					5	Act 5 (N) Good	3	Act 5 (N) Equip A	20	Potion 3	10	Gold 1.5x	15																			0
+Radament Item (N) Desecrated C			5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	10	Gold 1.5x	15																			0
+Radament Item (H)			5					5	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2.5x	10																			0
+Radament Item (H) Desecrated A			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	20	Potion 4	5	Gold 2x	15																			0
+Radament Item (H) Desecrated B			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	20	Potion 4	5	Gold 2x	15																			0
+Radament Item (H) Desecrated C			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	20	Potion 4	5	Gold 2x	15																			0
+Radament			-1	900	900	900	1024	0	Radament Item	1																									0
+Radament Desecrated A	21	19	-2	900	900	900	1024	0	Norm TZ Generic	1	Radament Item Desecrated A	1																							0
+Radament Desecrated B	21	33	-2	900	900	900	1024	0	Norm TZ Generic	1	Radament Item Desecrated B	1																							0
+Radament Desecrated C	21	48	-2	900	900	900	1024	0	Norm TZ Generic	1	Radament Item Desecrated C	1																							0
+Radament (N)			-1	900	900	900	1024	0	Radament Item (N)	1																									0
+Radament (N) Desecrated A	21	52	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Radament Item (N) Desecrated A	1																					0
+Radament (N) Desecrated B	21	62	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Radament Item (N) Desecrated B	1																					0
+Radament (N) Desecrated C	21	73	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Radament Item (N) Desecrated C	1																					0
+Radament (H)			-1	900	900	900	1024	0	Radament Item (H)	1																									0
+Radament (H) Desecrated A	21	86	-3	900	900	900	1024	0	Hell TZ Generic	1	Sunder Charms	1	Radament Item (H) Desecrated A	1																					0
+Radament (H) Desecrated B	21	92	-3	900	900	900	1024	0	Hell TZ Generic	1	Sunder Charms	1	Radament Item (H) Desecrated B	1																					0
+Radament (H) Desecrated C	21	96	-3	900	900	900	1024	0	Hell TZ Generic	1	Sunder Charms	1	Radament Item (H) Desecrated C	1																					0
+Bloodwitch Item			5					10	Act 2 Good	3	Act 2 Equip A	19	Potion 1	15	Gold 1.5x	7																			0
+Bloodwitch Item Desecrated A			5					10	Act 2 Good	3	Act 2 Equip A	19	Potion 1	15	Gold 1.5x	14																			0
+Bloodwitch Item Desecrated B			5					10	Act 2 Good	3	Act 2 Equip C	19	Potion 1	15	Gold 1.5x	14																			0
+Bloodwitch Item Desecrated C			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	19	Potion 3	15	Gold 1.5x	14																			0
+Bloodwitch Item (N)			5					10	Act 2 (N) Good	3	Act 2 (N) Equip A	19	Potion 2	10	Gold 2x	7																			0
+Bloodwitch Item (N) Desecrated A			5					10	Act 2 (N) Good	3	Act 2 (N) Equip A	19	Potion 2	10	Gold 1.5x	14																			0
+Bloodwitch Item (N) Desecrated B			5					10	Act 2 (N) Good	3	Act 2 (N) Equip C	19	Potion 2	10	Gold 1.5x	14																			0
+Bloodwitch Item (N) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	19	Potion 4	10	Gold 1.5x	14																			0
+Bloodwitch Item (H)			5					10	Act 2 (H) Good	3	Act 2 (H) Equip A	19	Potion 4	5	Gold 2.5x	7																			0
+Bloodwitch Item (H) Desecrated A			5					10	Act 2 (H) Good	3	Act 2 (H) Equip A	19	Potion 4	5	Gold 2x	14																			0
+Bloodwitch Item (H) Desecrated B			5					10	Act 2 (H) Good	3	Act 2 (H) Equip B	19	Potion 4	5	Gold 2x	14																			0
+Bloodwitch Item (H) Desecrated C			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
+Bloodwitch Item (H) Desecrated D			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
+Bloodwitch Item (H) Desecrated E			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
+Bloodwitch Item (H) Desecrated F			5					10	Act 2 (H) Good	3	Act 2 (H) Equip C	19	Potion 4	5	Gold 2x	14																			0
+Bloodwitch			-2	800	800	900	1024	0	Bloodwitch Item	1	Rune Boss Low	1																							0
+Bloodwitch Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Bloodwitch Item Desecrated A	1	Rune Boss Low Desecrated	1																					0
+Bloodwitch Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Bloodwitch Item Desecrated B	1	Rune Boss Low Desecrated	1																					0
+Bloodwitch Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Bloodwitch Item Desecrated C	1	Rune Boss Low Desecrated	1																					0
+Bloodwitch (N)			-2	800	800	900	1024	0	Bloodwitch Item (N)	1	Rune Boss Low (N)	1																							0
+Bloodwitch (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Bloodwitch Item (N) Desecrated A	1	Rune Boss Low (N) Desecrated	1																			0
+Bloodwitch (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Bloodwitch Item (N) Desecrated B	1	Rune Boss Low (N) Desecrated	1																			0
+Bloodwitch (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Bloodwitch Item (N) Desecrated C	1	Rune Boss Low (N) Desecrated	1																			0
+Bloodwitch (H)			-2	800	800	900	1024	0	Bloodwitch Item (H)	1	Rune Boss Low (H)	1																							0
+Bloodwitch (H) Desecrated A	27	88	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
+Bloodwitch (H) Desecrated B	27	93	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
+Bloodwitch (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
+Bloodwitch (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
+Bloodwitch (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
+Bloodwitch (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Bloodwitch Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
+Summoner Item			5					5	Act 2 Good	3	Act 2 Equip C	20	Potion 1	15	Gold 1.5x	14																			0
+Summoner Item Desecrated A			5					5	Act 2 Good	3	Act 2 Equip C	20	Potion 1	15	Gold 1.5x	14																			0
+Summoner Item Desecrated B			5					5	Act 4 Good	3	Act 4 Equip B	20	Potion 2	15	Gold 1.5x	14																			0
+Summoner Item Desecrated C			5					5	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	15	Gold 1.5x	14																			0
+Summoner Item (N)			5					5	Act 2 (N) Good	3	Act 2 (N) Equip C	20	Potion 3	10	Gold 2x	14																			0
+Summoner Item (N) Desecrated A			5					5	Act 4 (N) Good	3	Act 4 (N) Equip A	20	Potion 3	10	Gold 1.5x	14																			0
+Summoner Item (N) Desecrated B			5					5	Act 5 (N) Good	3	Act 5 (N) Equip A	20	Potion 4	10	Gold 1.5x	14																			0
+Summoner Item (N) Desecrated C			5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	10	Gold 1.5x	14																			0
+Summoner Item (H)			5					5	Act 2 (H) Good	3	Act 2 (H) Equip C	25	Potion 4	5	Gold 2.5x	14	Pandemonium Key A	3																	0
+Summoner Item (H) Desecrated A			5					5	Act 4 (H) Good	3	Act 4 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
+Summoner Item (H) Desecrated B			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
+Summoner Item (H) Desecrated C			5					5	Act 4 (H) Good	3	Act 4 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
+Summoner Item (H) Desecrated D			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
+Summoner Item (H) Desecrated E			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
+Summoner Item (H) Desecrated F			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key A	3																	0
+Summoner			-1	900	900	972	1024	0	Summoner Item	1																									0
+Summoner Desecrated A	24	18	-2	900	900	972	1024	0	Norm TZ Generic	1	Summoner Item Desecrated A	1																							0
+Summoner Desecrated B	24	32	-2	900	900	972	1024	0	Norm TZ Generic	1	Summoner Item Desecrated B	1																							0
+Summoner Desecrated C	24	48	-2	900	900	972	1024	0	Norm TZ Generic	1	Summoner Item Desecrated C	1																							0
+Summoner (N)			-1	900	900	972	1024	0	Summoner Item (N)	1																									0
+Summoner (N) Desecrated A	24	55	-3	900	900	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Summoner Item (N) Desecrated A	1																					0
+Summoner (N) Desecrated B	24	63	-3	900	900	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Summoner Item (N) Desecrated B	1																					0
+Summoner (N) Desecrated C	24	73	-3	900	900	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Summoner Item (N) Desecrated C	1																					0
+Summoner (H)			-1	900	900	972	1024	0	Summoner Item (H)	1																									0
+Summoner (H) Desecrated A	24	80	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated A	1																					0
+Summoner (H) Desecrated B	24	84	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated B	1																					0
+Summoner (H) Desecrated C	24	87	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated C	1																					0
+Summoner (H) Desecrated D	24	90	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated D	1																					0
+Summoner (H) Desecrated E	24	93	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated E	1																					0
+Summoner (H) Desecrated F	24	96	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated F	1																					0
+Duriel - Item			6					5	Act 3 Good	4	Act 3 Equip A	30	Gold 1.5x	10																					0
+Duriel - Item Desecrated A			6					5	Act 3 Good	4	Act 3 Equip B	30	Gold 1.5x	10																					0
+Duriel - Item Desecrated B			6					5	Act 5 Good	4	Act 5 Equip B	30	Gold 1.5x	10																					0
+Duriel - Item Desecrated C			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
+Duriel (N) - Item			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 2x	10																					0
+Duriel (N) - Item Desecrated A			6					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																					0
+Duriel (N) - Item Desecrated B			6					5	Act 5 (N) Good	4	Act 5 (N) Equip B	30	Gold 1.5x	10																					0
+Duriel (N) - Item Desecrated C			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
+Duriel (H) - Item			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 2.5x	10																					0
+Duriel (H) - Item Desecrated A			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																					0
+Duriel (H) - Item Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																					0
+Duriel (H) - Item Desecrated C			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
+Duriel (H) - Item Desecrated D			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
+Duriel			-1	983	983	983	1024	0	Duriel - Item	1																									0
+Duriel - Desecrated A	34	22	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated A	1																							0
+Duriel - Desecrated B	34	36	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated B	1																							0
+Duriel - Desecrated C	34	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated C	1																							0
+Duriel (N)			-2	983	983	983	1024	0	NMH Boss	1	Duriel (N) - Item	1																							0
+Duriel (N) - Desecrated A	34	55	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Duriel (N) - Item Desecrated A	1																					0
+Duriel (N) - Desecrated B	34	63	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Duriel (N) - Item Desecrated B	1																					0
+Duriel (N) - Desecrated C	34	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Duriel (N) - Item Desecrated C	1																					0
+Duriel (H)			-2	983	983	983	1024	0	NMH Boss	1	Duriel (H) - Item	1																							0
+Duriel (H) - Desecrated A	34	88	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated A	1																					0
+Duriel (H) - Desecrated B	34	90	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated B	1																					0
+Duriel (H) - Desecrated C	34	93	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated C	1																					0
+Duriel (H) - Desecrated D	34	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated D	1																					0
+Durielq - Item			6					5	Act 3 Good	4	Act 3 Equip A	30																							0
+Durielq (N) - Item			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30																							0
+Durielq (H) - Item			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30																							0
+Durielq			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq - Item	1																							0
+Durielq (N)			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq (N) - Item	1																							0
+Durielq (H)			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq (H) - Item	1																							0
+Battlemaiden Item			5					10	Act 3 Good	3	Act 3 Equip A	20	Potion 1	15	Gold 1.5x	14																			0
+Battlemaiden Item Desecrated A			5					10	Act 3 Good	3	Act 3 Equip A	20	Potion 1	15	Gold 1.5x	14																			0
+Battlemaiden Item Desecrated B			5					10	Act 3 Good	3	Act 3 Equip C	20	Potion 1	15	Gold 1.5x	14																			0
+Battlemaiden Item Desecrated C			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	15	Gold 1.5x	14																			0
+Battlemaiden Item (N)			5					10	Act 3 (N) Good	3	Act 3 (N) Equip A	20	Potion 3	10	Gold 2x	7																			0
+Battlemaiden Item (N) Desecrated A			5					10	Act 3 (N) Good	3	Act 3 (N) Equip A	20	Potion 3	10	Gold 1.5x	14																			0
+Battlemaiden Item (N) Desecrated B			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	20	Potion 3	10	Gold 1.5x	14																			0
+Battlemaiden Item (N) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	10	Gold 1.5x	14																			0
+Battlemaiden Item (H)			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	5	Gold 2.5x	7																			0
+Battlemaiden Item (H) Desecrated A			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	20	Potion 4	5	Gold 2x	14																			0
+Battlemaiden Item (H) Desecrated B			5					10	Act 3 (H) Good	3	Act 3 (H) Equip B	20	Potion 4	5	Gold 2x	14																			0
+Battlemaiden Item (H) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2x	14																			0
+Battlemaiden Item (H) Desecrated D			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2x	14																			0
+Battlemaiden Item (H) Desecrated E			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2x	14																			0
+Battlemaiden Item (H) Desecrated F			5					10	Act 3 (H) Good	3	Act 3 (H) Equip C	20	Potion 4	5	Gold 2.5x	7																			0
+Battlemaiden			-2	800	800	900	1024	0	Battlemaiden Item	1	Rune Boss Low	1																							0
+Battlemaiden Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Battlemaiden Item Desecrated A	1	Rune Boss Low Desecrated	1																					0
+Battlemaiden Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Battlemaiden Item Desecrated B	1	Rune Boss Low Desecrated	1																					0
+Battlemaiden Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Battlemaiden Item Desecrated C	1	Rune Boss Low Desecrated	1																					0
+Battlemaiden (N)			-2	800	800	900	1024	0	Battlemaiden Item (N)	1	Rune Boss Low (N)	1																							0
+Battlemaiden (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Battlemaiden Item (N) Desecrated A	1	Rune Boss Low (N) Desecrated	1																			0
+Battlemaiden (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Battlemaiden Item (N) Desecrated B	1	Rune Boss Low (N) Desecrated	1																			0
+Battlemaiden (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Battlemaiden Item (N) Desecrated C	1	Rune Boss Low (N) Desecrated	1																			0
+Battlemaiden (H)			-2	800	800	900	1024	0	Battlemaiden Item (H)	1	Rune Boss Low (H)	1																							0
+Battlemaiden (H) Desecrated A	27	88	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
+Battlemaiden (H) Desecrated B	27	93	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
+Battlemaiden (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
+Battlemaiden (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																			0
+Battlemaiden (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																			0
+Battlemaiden (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Battlemaiden Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																			0
+Council Item			3					5	Act 4 Good	3	Act 4 Equip A	30	Potion 2	15	Gold 1.5x	14																			0
+Council Item Desecrated A			3					5	Act 4 Good	3	Act 4 Equip B	30	Potion 2	15	Gold 1.5x	14																			0
+Council Item Desecrated B			3					5	Act 5 Good	3	Act 5 Equip C	30	Potion 2	15	Gold 1.5x	14																			0
+Council Item Desecrated C			3					5	Act 3 (N) Good	3	Act 3 (N) Equip A	30	Potion 3	15	Gold 1.5x	14																			0
+Council Item (N)			3					5	Act 4 (N) Good	3	Act 4 (N) Equip A	30	Potion 3	10	Gold 2x	14																			0
+Council Item (N) Desecrated A			3					5	Act 4 (N) Good	3	Act 4 (N) Equip B	30	Potion 3	10	Gold 1.5x	14																			0
+Council Item (N) Desecrated B			3					5	Act 5 (N) Good	3	Act 5 (N) Equip C	30	Potion 3	10	Gold 1.5x	14																			0
+Council Item (N) Desecrated C			3					5	Act 3 (H) Good	3	Act 3 (H) Equip A	30	Potion 4	10	Gold 1.5x	14																			0
+Council Item (H)			3					5	Act 4 (H) Good	3	Act 4 (H) Equip A	30	Potion 4	5	Gold 2.5x	14																			0
+Council Item (H) Desecrated A			3					5	Act 4 (H) Good	3	Act 4 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
+Council Item (H) Desecrated B			3					5	Act 4 (H) Good	3	Act 4 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
+Council Item (H) Desecrated C			3					5	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2x	14																			0
+Council Item (H) Desecrated D			3					5	Act 5 (H) Good	3	Act 5 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
+Council Item (H) Desecrated E			3					5	Act 5 (H) Good	3	Act 5 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
+Council			-1	650	800	800	1024	0	Council Item	1																									0
+Council Desecrated A	25	28	-2	650	800	800	1024	0	Norm TZ Generic	1	Council Item Desecrated A	1																							0
+Council Desecrated B	25	38	-2	650	800	800	1024	0	Norm TZ Generic	1	Council Item Desecrated B	1																							0
+Council Desecrated C	25	48	-2	650	800	800	1024	0	Norm TZ Generic	1	Council Item Desecrated C	1																							0
+Council (N)			-1	650	800	800	1024	0	Council Item (N)	1																									0
+Council (N) Desecrated A	25	57	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Council Item (N) Desecrated A	1																					0
+Council (N) Desecrated B	25	66	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Council Item (N) Desecrated B	1																					0
+Council (N) Desecrated C	25	73	-3	650	800	800	1024	0	NM TZ Generic	1	Sunder Charms	1	Council Item (N) Desecrated C	1																					0
+Council (H)			-1	650	800	800	1024	0	Council Item (H)	1																									0
+Council (H) Desecrated A	25	85	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated A	1																					0
+Council (H) Desecrated B	25	87	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated B	1																					0
+Council (H) Desecrated C	25	90	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated C	1																					0
+Council (H) Desecrated D	25	93	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated D	1																					0
+Council (H) Desecrated E	25	96	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated E	1																					0
+Mephisto Item			6					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																					0
+Mephisto Item Desecrated A	22	26	6					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																					0
+Mephisto Item Desecrated B	22	38	6					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																					0
+Mephisto Item Desecrated C	22	48	6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																					0
+Mephisto Item (N)			6					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																					0
+Mephisto Item (N) Desecrated A	22	59	6					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																					0
+Mephisto Item (N) Desecrated B	22	66	6					5	Act 4 (N) Good	4	Act 4 (N) Equip C	30	Gold 1.5x	10																					0
+Mephisto Item (N) Desecrated C	22	73	6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 1.5x	10																					0
+Mephisto Item (H)			6					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																					0
+Mephisto Item (H) Desecrated A			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																					0
+Mephisto Item (H) Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																					0
+Mephisto Item (H) Desecrated C			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
+Mephisto Item (H) Desecrated D			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
+Mephisto			-1	983	983	983	1024	0	Mephisto Item	1																									0
+Mephisto Desecrated A	22	26	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated A	1																							0
+Mephisto Desecrated B	22	38	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated B	1																							0
+Mephisto Desecrated C	22	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated C	1																							0
+Mephisto (N)			-2	983	983	983	1024	0	NMH Boss	1	Mephisto Item (N)	1																							0
+Mephisto (N) Desecrated A	22	59	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Mephisto Item (N) Desecrated A	1																					0
+Mephisto (N) Desecrated B	22	66	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Mephisto Item (N) Desecrated B	1																					0
+Mephisto (N) Desecrated C	22	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Mephisto Item (N) Desecrated C	1																					0
+Mephisto (H)			-2	983	983	983	1024	0	NMH Boss	1	Mephisto Item (H)	1																							0
+Mephisto (H) Desecrated A	22	87	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated A	1																					0
+Mephisto (H) Desecrated B	22	90	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated B	1																					0
+Mephisto (H) Desecrated C	22	93	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated C	1																					0
+Mephisto (H) Desecrated D	22	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated D	1																					0
+Mephistoq Item			6					5	Act 4 Good	3	Act 4 Equip A	52																							0
+Mephistoq Item (N)			6					5	Act 4 (N) Good	3	Act 4 (N) Equip A	52																							0
+Mephistoq Item (H)			6					5	Act 4 (H) Good	3	Act 4 (H) Equip A	52																							0
+Mephistoq			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item	1																							0
+Mephistoq (N)			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item (N)	1																							0
+Mephistoq (H)			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item (H)	1																							0
+Izual Item			5					5	Act 4 Good	3	Act 4 Equip B	25	Potion 2	15	Gold 1.5x	14																			0
+Izual Item Desecrated A	32	29	5					5	Act 4 Good	3	Act 4 Equip B	25	Potion 2	15	Gold 1.5x	14																			0
+Izual Item Desecrated B	32	38	5					5	Act 5 Good	3	Act 5 Equip C	25	Potion 2	15	Gold 1.5x	14																			0
+Izual Item Desecrated C	32	48	5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	15	Gold 1.5x	14																			0
+Izual Item (N)			5					5	Act 4 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 2x	14																			0
+Izual Item (N) Desecrated A	32	60	5					5	Act 4 (N) Good	3	Act 4 (N) Equip B	25	Potion 3	10	Gold 1.5x	14																			0
+Izual Item (N) Desecrated B	32	66	5					5	Act 5 (N) Good	3	Act 5 (N) Equip C	25	Potion 3	10	Gold 1.5x	14																			0
+Izual Item (N) Desecrated C	32	73	5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
+Izual Item (H)			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2.5x	14																			0
+Izual Item (H) Desecrated A			5					5	Act 4 (H) Good	3	Act 4 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
+Izual Item (H) Desecrated B			5					5	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14																			0
+Izual Item (H) Desecrated C			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
+Izual Item (H) Desecrated D			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
+Izual			-1	800	800	972	1024	0	Izual Item	1																									0
+Izual Desecrated A	32	29	-2	800	800	972	1024	0	Norm TZ Generic	1	Izual Item Desecrated A	1																							0
+Izual Desecrated B	32	38	-2	800	800	972	1024	0	Norm TZ Generic	1	Izual Item Desecrated B	1																							0
+Izual Desecrated C	32	48	-2	800	800	972	1024	0	Norm TZ Generic	1	Izual Item Desecrated C	1																							0
+Izual (N)			-1	800	800	972	1024	0	Izual Item (N)	1																									0
+Izual (N) Desecrated A	32	60	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Izual Item (N) Desecrated A	1																					0
+Izual (N) Desecrated B	32	66	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Izual Item (N) Desecrated B	1																					0
+Izual (N) Desecrated C	32	73	-3	800	800	972	1024	0	NM TZ Generic	1	Sunder Charms	1	Izual Item (N) Desecrated C	1																					0
+Izual (H)			-1	800	800	972	1024	0	Izual Item (H)	1																									0
+Izual (H) Desecrated A	32	86	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated A	1																					0
+Izual (H) Desecrated B	32	90	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated B	1																					0
+Izual (H) Desecrated C	32	93	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated C	1																					0
+Izual (H) Desecrated D	32	96	-3	800	800	972	1024	0	Hell TZ Generic	1	Sunder Charms	1	Izual Item (H) Desecrated D	1																					0
+Hephasto Item			5					10	Act 5 Good	3	Act 5 Equip A	30	Potion 2	15	Gold 1.5x	14																			0
+Hephasto Item Desecrated A			5					10	Act 5 Good	3	Act 5 Equip A	30	Potion 2	15	Gold 1.5x	14																			0
+Hephasto Item Desecrated B			5					10	Act 5 Good	3	Act 5 Equip C	30	Potion 2	15	Gold 1.5x	14																			0
+Hephasto Item Desecrated C			5					10	Act 3 (N) Good	3	Act 3 (N) Equip C	30	Potion 3	15	Gold 1.5x	14																			0
+Hephasto Item (N)			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	30	Potion 3	10	Gold 2x	14																			0
+Hephasto Item (N) Desecrated A			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	30	Potion 3	10	Gold 1.5x	14																			0
+Hephasto Item (N) Desecrated B			5					10	Act 5 (N) Good	3	Act 5 (N) Equip C	30	Potion 3	10	Gold 1.5x	14																			0
+Hephasto Item (N) Desecrated C			5					10	Act 3 (H) Good	3	Act 3 (H) Equip A	30	Potion 4	10	Gold 1.5x	14																			0
+Hephasto Item (H)			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2.5x	14																			0
+Hephasto Item (H) Desecrated A			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2x	14																			0
+Hephasto Item (H) Desecrated B			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
+Hephasto Item (H) Desecrated C			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
+Hephasto Item (H) Desecrated D			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	30	Potion 4	5	Gold 2x	14																			0
+Hephasto Item (H) Desecrated E			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	30	Potion 4	5	Gold 2x	14																			0
+Hephasto Item (H) Desecrated F			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	30	Potion 4	5	Gold 2x	14																			0
+Hephasto			-2	800	800	900	1024	0	Hephasto Item	1	Rune Boss Low	1																							0
+Hephasto Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Hephasto Item Desecrated A	1	Rune Boss High Desecrated	1																					0
+Hephasto Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Hephasto Item Desecrated B	1	Rune Boss High Desecrated	1																					0
+Hephasto Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Hephasto Item Desecrated C	1	Rune Boss High Desecrated	1																					0
+Hephasto (N)			-2	800	800	900	1024	0	Hephasto Item (N)	1	Rune Boss High (N)	1																							0
+Hephasto (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Hephasto Item (N) Desecrated A	1	Rune Boss High (N) Desecrated	1																			0
+Hephasto (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Hephasto Item (N) Desecrated B	1	Rune Boss High (N) Desecrated	1																			0
+Hephasto (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Hephasto Item (N) Desecrated C	1	Rune Boss High (N) Desecrated	1																			0
+Hephasto (H)			-2	800	800	900	1024	0	Hephasto Item (H)	1	Rune Boss Low (H)	1																							0
+Hephasto (H) Desecrated A	27	88	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
+Hephasto (H) Desecrated B	27	93	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
+Hephasto (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
+Hephasto (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
+Hephasto (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
+Hephasto (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
+Diablo Item			6					5	Act 5 Good	4	Act 5 Equip A	30	Gold 1.5x	10																					0
+Diablo Item Desecrated A	23	40	6					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30	Gold 1.5x	10																					0
+Diablo Item Desecrated B	23	48	6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
+Diablo Item (N)			6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 2x	10																					0
+Diablo Item (N) Desecrated A	23	62	6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																					0
+Diablo Item (N) Desecrated B	23	67	6					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30	Gold 1.5x	10																					0
+Diablo Item (N) Desecrated C	23	73	6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
+Diablo Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2.5x	10																					0
+Diablo Item (H) Desecrated A			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																					0
+Diablo Item (H) Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																					0
+Diablo			-1	983	983	983	1024	0	Diablo Item	1																									0
+Diablo Desecrated A	23	40	-2	983	983	983	1024	0	Norm TZ Generic	1	Diablo Item Desecrated A	1																							0
+Diablo Desecrated B	23	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Diablo Item Desecrated B	1																							0
+Diablo (N)			-2	983	983	983	1024	0	NMH Boss	1	Diablo Item (N)	1																							0
+Diablo (N) Desecrated A	23	62	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Diablo Item (N) Desecrated A	1																					0
+Diablo (N) Desecrated B	23	67	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Diablo Item (N) Desecrated B	1																					0
+Diablo (N) Desecrated C	23	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Diablo Item (N) Desecrated C	1																					0
+Diablo (H)			-2	983	983	983	1024	0	NMH Boss	1	Diablo Item (H)	1																							0
+Diablo (H) Desecrated A	23	94	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Diablo Item (H) Desecrated A	1																					0
+Diablo (H) Desecrated B	23	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Diablo Item (H) Desecrated B	1																					0
+Diabloq Item			6					5	Act 5 Good	4	Act 5 Equip A	30																							0
+Diabloq Item (N)			6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30																							0
+Diabloq Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30																							0
+Diabloq			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item	1																							0
+Diabloq (N)			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item (N)	1																							0
+Diabloq (H)			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item (H)	1																							0
+Frozenstein Item			5					10	Act 5 Good	3	Act 5 Equip A	25	Potion 2	15	Gold 1.5x	14																			0
+Frozenstein Item Desecrated A			5					10	Act 5 Good	3	Act 5 Equip A	25	Potion 2	15	Gold 1.5x	14																			0
+Frozenstein Item Desecrated B			5					10	Act 5 Good	3	Act 5 Equip C	25	Potion 2	15	Gold 1.5x	14																			0
+Frozenstein Item Desecrated C			5					10	Act 5 (N) Good	3	Act 5 (N) Equip C	25	Potion 3	15	Gold 1.5x	14																			0
+Frozenstein Item (N)			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	25	Potion 3	10	Gold 2x	14																			0
+Frozenstein Item (N) Desecrated A			5					10	Act 5 (N) Good	3	Act 5 (N) Equip A	25	Potion 3	10	Gold 1.5x	14																			0
+Frozenstein Item (N) Desecrated B			5					10	Act 5 (N) Good	3	Act 5 (N) Equip C	25	Potion 3	10	Gold 1.5x	14																			0
+Frozenstein Item (N) Desecrated C			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	10	Gold 1.5x	14																			0
+Frozenstein Item (H)			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2.5x	14																			0
+Frozenstein Item (H) Desecrated A			5					10	Act 5 (H) Good	3	Act 5 (H) Equip A	25	Potion 4	5	Gold 2x	14																			0
+Frozenstein Item (H) Desecrated B			5					10	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2x	14																			0
+Frozenstein Item (H) Desecrated C			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
+Frozenstein Item (H) Desecrated D			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
+Frozenstein Item (H) Desecrated E			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
+Frozenstein Item (H) Desecrated F			5					10	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14																			0
+Frozenstein			-2	800	800	900	1024	0	Frozenstein Item	1	Rune Boss High	1																							0
+Frozenstein Desecrated A	27	28	-3	800	800	900	1024	0	Norm TZ Generic	1	Frozenstein Item Desecrated A	1	Rune Boss High Desecrated	1																					0
+Frozenstein Desecrated B	27	38	-3	800	800	900	1024	0	Norm TZ Generic	1	Frozenstein Item Desecrated B	1	Rune Boss High Desecrated	1																					0
+Frozenstein Desecrated C	27	48	-3	800	800	900	1024	0	Norm TZ Generic	1	Frozenstein Item Desecrated C	1	Rune Boss High Desecrated	1																					0
+Frozenstein (N)			-2	800	800	900	1024	0	Frozenstein Item (N)	1	Rune Boss High (N)	1																							0
+Frozenstein (N) Desecrated A	27	60	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Frozenstein Item (N) Desecrated A	1	Rune Boss High (N) Desecrated	1																			0
+Frozenstein (N) Desecrated B	27	66	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Frozenstein Item (N) Desecrated B	1	Rune Boss High (N) Desecrated	1																			0
+Frozenstein (N) Desecrated C	27	73	-4	800	800	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Frozenstein Item (N) Desecrated C	1	Rune Boss High (N) Desecrated	1																			0
+Frozenstein (H)			-2	800	800	900	1024	0	Frozenstein Item (H)	1	Rune Boss High (H)	1																							0
+Frozenstein (H) Desecrated A	27	81	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
+Frozenstein (H) Desecrated B	27	84	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
+Frozenstein (H) Desecrated C	27	87	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
+Frozenstein (H) Desecrated D	35	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																			0
+Frozenstein (H) Desecrated E	35	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																			0
+Frozenstein (H) Desecrated F	35	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Frozenstein Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																			0
+Nihlathak Item			5					5	Act 5 Good	3	Act 5 Equip B	25	Potion 2	8	Gold 1.5x	14																			0
+Nihlathak Item Desecrated	28	68	5					5	Act 3 (N) Good	3	Act 3 (N) Equip A	25	Potion 3	8	Gold 1.5x	14																			0
+Nihlathak Item (N)			5					5	Act 5 (N) Good	3	Act 5 (N) Equip B	25	Potion 3	5	Gold 2x	14																			0
+Nihlathak Item (N) Desecrated	28	73	5					5	Act 3 (H) Good	3	Act 3 (H) Equip A	25	Potion 4	5	Gold 1.5x	14																			0
+Nihlathak Item (H)			5					5	Act 5 (H) Good	3	Act 5 (H) Equip B	25	Potion 4	5	Gold 2.5x	14	Pandemonium Key C	3																	0
+Nihlathak Item (H) Desecrated			5					5	Act 5 (H) Good	3	Act 5 (H) Equip C	25	Potion 4	5	Gold 2x	14	Pandemonium Key C	3																	0
+Nihlathak			-1	900	900	900	1024	0	Nihlathak Item	1																									0
+Nihlathak Desecrated	28	68	-2	900	900	900	1024	0	Norm TZ Generic	1	Nihlathak Item Desecrated	1																							0
+Nihlathak (N)			-1	900	900	900	1024	0	Nihlathak Item (N)	1																									0
+Nihlathak (N) Desecrated	28	73	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Nihlathak Item (N) Desecrated	1																					0
+Nihlathak (H)			-1	900	900	900	1024	0	Nihlathak Item (H)	1																									0
+Nihlathak (H) Desecrated	28	95	-3	900	900	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Nihlathak Item (H) Desecrated	1																					0
+Baal Item			6					5	Act 1 (N) Good	8	Act 1 (N) Equip A	30	Gold 2x	10																					0
+Baal Item Desecrated			6					5	Act 3 (N) Good	8	Act 3 (N) Equip A	30	Gold 1.5x	10																					0
+Baal Item (N)			6					5	Act 1 (H) Good	8	Act 1 (H) Equip A	30	Gold 2x	10																					0
+Baal Item (N) Desecrated			6					5	Act 3 (H) Good	8	Act 3 (H) Equip A	30	Gold 1.5x	10																					0
+Baal Item (H)			6					5	Act 5 (H) Good	8	Act 5 (H) Equip B	30	Gold 2.5x	10																					0
+Baal Item (H) Desecrated			6					5	Act 5 (H) Good	8	Act 5 (H) Equip C	30	Gold 2x	10																					0
+Baal			-1	983	983	983	1024	0	Baal Item	1																									0
+Baal Desecrated	29	60	-2	983	983	983	1024	0	Norm TZ Generic	1	Baal Item Desecrated	1																							0
+Baal (N)			-2	983	983	983	1024	0	NMH Boss	1	Baal Item (N)	1																							0
+Baal (N) Desecrated	29	75	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Baal Item (N) Desecrated	1																					0
+Baal (H)			-2	983	983	983	1024	0	NMH Boss	1	Baal Item (H)	1																							0
+Baal (H) Desecrated	29	99	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Baal Item (H) Desecrated	1																					0
+Baalq Item			6					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30																							0
+Baalq Item (N)			6					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30																							0
+Baalq Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30																							0
+Baalq			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item	1																							0
+Baalq (N)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (N)	1																							0
+Baalq (H)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (H)	1																							0
+Cow King Item			5					0	Act 1 Uitem C	1	Act 1 Melee B	2																							0
+Cow King Item Desecrated A			5					0	Act 4 Uitem B	3	Act 4 Melee B	6																							0
+Cow King Item Desecrated B			5					0	Act 1 (N) Uitem A	3	Act 1 (N) Melee A	6																							0
+Cow King Item Desecrated C			5					0	Act 3 (N) Uitem A	3	Act 3 (N) Melee A	6																							0
+Cow King Item (N)			5					0	Act 1 (H) Uitem C	1	Act 1 (N) Melee B	2																							0
+Cow King Item (N) Desecrated A			5					0	Act 1 (H) Uitem C	3	Act 1 (H) Melee B	6																							0
+Cow King Item (N) Desecrated B			5					0	Act 2 (H) Uitem C	3	Act 2 (H) Melee B	6																							0
+Cow King Item (N) Desecrated C			5					0	Act 3 (H) Uitem C	3	Act 3 (H) Melee B	6																							0
+Cow King Item (H)			5					0	Act 1 (H) Uitem C	1	Act 1 (H) Melee B	2																							0
+Cow King Item (H) Desecrated A			5					0	Act 4 (H) Uitem B	3	Act 4 (H) Melee B	6																							0
+Cow King Item (H) Desecrated B			5					0	Act 5 (H) Uitem A	3	Act 5 (H) Melee A	6																							0
+Cow King Item (H) Desecrated C			5					0	Act 5 (H) Uitem B	3	Act 5 (H) Melee B	6																							0
+Cow King Item (H) Desecrated D			5					0	Act 5 (H) Uitem C	3	Act 5 (H) Melee C	6																							0
+Cow King			-1	850	983	983	1024	0	Cow King Item	1																									0
+Cow King Desecrated A	33	31	-2	850	983	983	1024	0	Norm TZ Generic	1	Cow King Item Desecrated A	1																							0
+Cow King Desecrated B	33	40	-2	850	983	983	1024	0	Norm TZ Generic	1	Cow King Item Desecrated B	1																							0
+Cow King Desecrated C	33	48	-2	850	983	983	1024	0	Norm TZ Generic	1	Cow King Item Desecrated C	1																							0
+Cow King (N)			-1	850	983	983	1024	0	Cow King Item (N)	1																									0
+Cow King (N) Desecrated A	33	67	-3	850	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Cow King Item (N) Desecrated A	1																					0
+Cow King (N) Desecrated B	33	70	-3	850	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Cow King Item (N) Desecrated B	1																					0
+Cow King (N) Desecrated C	33	73	-3	850	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Cow King Item (N) Desecrated C	1																					0
+Cow King (H)			-1	850	983	983	1024	0	Cow King Item (H)	1																									0
+Cow King (H) Desecrated A	33	86	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated A	1																					0
+Cow King (H) Desecrated B	33	90	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated B	1																					0
+Cow King (H) Desecrated C	33	93	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated C	1																					0
+Cow King (H) Desecrated D	33	96	-3	850	983	983	1024	0	Hell TZ Generic	1	Sunder Charms	1	Cow King Item (H) Desecrated D	1																					0
+ROP			-1					0	Diablo	1																									0
+ROP (N)			-1					0	Diablo (N)	1																									0
+ROP (H)			1					0	Annihilus	1																									0
+Uber Andariel			1					0	dhn	1																									0
+Uber Duriel			1					0	bey	1																									0
+Uber Izual			1					0	mbr	1																									0
+Mephisto's Animus			1					0	mpa	1																									0
+Baal's Calamity			1					0	blc	1																									0
+Diablo's Ire			1					0	dia	1																									0
