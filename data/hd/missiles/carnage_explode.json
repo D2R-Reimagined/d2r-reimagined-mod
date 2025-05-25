@@ -2,19 +2,19 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/ice_IceBreakLarge/fx_ice_break_large.particles"
+                "path": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion.particles"
             }
         ],
         "models": [
             {
-                "path": "data/hd/vfx/meshes/missiles/icebreak/vfx_mesh_icebreak_single_chunk_05.model"
+                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
             }
         ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/gradient/T_FX_LightBlue_Gradient_03.texture"
+                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
             }
         ],
         "physics": [],
@@ -24,12 +24,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "ice_break_large",
+    "name": "corpse_explode_guts",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1092378120,
+            "id": 2622674882,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -48,24 +48,52 @@
                     "animations": []
                 }
             ]
+        },  
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 4010310920,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/objects/characters/exploding_cow/vfx_exploding_cow_bloodsquib.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
         },
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 4159529101,
+            "id": 925538895,
             "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/ice_IceFrozenOrbExplode/fx_ice_FrozenOrbExplode.particles",
-                    "hardKillOnDestroy": false
-                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 4.0,
+                        "y": 2.25,
                         "z": 0.0
                     },
                     "orientation": {
@@ -80,27 +108,27 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/spike_fiend_missle/vfx_spikefiend_missile.particles",
+                    "hardKillOnDestroy": false
                 }
             ]
-        },      
-        {
+        },
+                {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 4159529101,
+            "id": 925538895,
             "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/ice_IceFrozenOrbExplode/fx_ice_FrozenOrbExplode.particles",
-                    "hardKillOnDestroy": false
-                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 4.0,
-                        "z": 0.0
+                        "y": 2.25,
+                        "z": 0.5
                     },
                     "orientation": {
                         "x": 0.0,
@@ -114,108 +142,12 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
-                }
-            ]
-        },   
-        {
-            "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 4159529101,
-            "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/ice_IceFrozenOrbExplode/fx_ice_FrozenOrbExplode.particles",
-                    "hardKillOnDestroy": false
                 },
                 {
-                    "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
-                    "position": {
-                        "x": 0.0,
-                        "y": 4.0,
-                        "z": 0.0
-                    },
-                    "orientation": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "w": 1.0
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
-                }
-            ]
-        },   
-        {
-            "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 4159529101,
-            "components": [
-                {
                     "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/ice_IceFrozenOrbExplode/fx_ice_FrozenOrbExplode.particles",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/spike_fiend_missle/vfx_spikefiend_missile.particles",
                     "hardKillOnDestroy": false
-                },
-                {
-                    "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
-                    "position": {
-                        "x": 0.0,
-                        "y": 4.0,
-                        "z": 0.0
-                    },
-                    "orientation": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "w": 1.0
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
-                }
-            ]
-        },   
-        {
-            "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 1658310548,
-            "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/ice_IceBreakLarge/fx_ice_break_large.particles",
-                    "hardKillOnDestroy": false
-                },
-                {
-                    "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
-                    "position": {
-                        "x": 0.0,
-                        "y": 1.0,
-                        "z": 0.0
-                    },
-                    "orientation": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "w": 1.0
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
                 }
             ]
         }
