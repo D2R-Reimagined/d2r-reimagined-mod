@@ -1,0 +1,53 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/valkyrie/rabiesplague_blue.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_polarDisc_reduced_noCenter.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/distortion/T_FX_gaussian_distortion_verticle.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "OverlayDefinition",
+    "name": "rabiesplague",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4116676695,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx",
+                    "filename": "data/hd/vfx/particles/character/enemy/valkyrie/rabiesplague_blue.particles",
+                    "hardKillOnDestroy": true
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}
