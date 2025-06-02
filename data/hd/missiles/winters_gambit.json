@@ -1,0 +1,139 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/ice_bolt/fx_ice_projectile_bolt_fr_a.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/lit_mesh/icebolt/fx_mesh_icebolt.model"
+            },
+            {
+                "path": "data/hd/missiles/missile_dagger/throwing_knife.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_Bluelightning_Gradient.texture"
+            },
+            {
+                "path": "data/hd/items/weapon/knife/throwing_knife/weapon_throwing_knife_ALB.texture"
+            },
+            {
+                "path": "data/hd/items/weapon/knife/throwing_knife/weapon_throwing_knife_NRM.texture"
+            },
+            {
+                "path": "data/hd/items/weapon/knife/throwing_knife/weapon_throwing_knife_ORM.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "ice_bolt",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3999643842,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 236988751,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx1",
+                    "filename": "data/hd/vfx/particles/missiles/ice_bolt/fx_ice_projectile_bolt_fr_a.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 6.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 715073609,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_vfx1_ModelDefinition",
+                    "filename": "data/hd/missiles/missile_dagger/throwing_knife.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1 
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 6.0,
+                        "z": -1.9
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 2.0,
+                        "y": 2.0,
+                        "z": 2.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}
