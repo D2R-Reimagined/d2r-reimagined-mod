@@ -1,0 +1,358 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/bonefetish1/rhand_fbl.model"
+            },
+            {
+                "path": "data/hd/character/enemy/bonefetish1/rhand_fsp.model"
+            },
+            {
+                "path": "data/hd/character/enemy/bonefetish1/torso.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/bonefetish1/skeleton/bonefetish1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/bonefetish1/textures/bonefetish_body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/bonefetish1/textures/bonefetish_body_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/bonefetish1/textures/bonefetish_body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/bonefetish1/textures/bonefetish_body_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/common/FX_T_bone_ORM.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/bonefetish1/bonefetish1_state_machine.json"
+            },
+            {
+                "path": "data/hd/items/weapon/knife/_monsters/fetish_knife.json"
+            },
+            {
+                "path": "data/hd/items/weapon/spear/_monsters/fetish_spear.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/bonefetish1/bonefetish1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "bonefetish1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 1112951750,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/bonefetish1/bonefetish1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/bonefetish1/skeleton/bonefetish1.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/bonefetish1/bonefetish1_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {
+                        "type": "AttackVFXTable",
+                        "name": "AttackSuccess_Bone",
+                        "rules": [
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Bone_rules_0",
+                                "acceptedHitClasses": 828,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles",
+                                "soundId": "player_impact_gore_bone_hd2"
+                            },
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Bone_rules_1",
+                                "acceptedHitClasses": 7362,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles",
+                                "soundId": "player_impact_gore_bone_hd2"
+                            }
+                        ],
+                        "defaultVfxFile": "",
+                        "defaultSoundId": "player_impact_gore_bone_hd2"
+                    },
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 10.0,
+                            "baseMoveSpeed": 6.0,
+                            "animationName": "Walk"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_1",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 10.0,
+                            "maxMoveSpeed": 17.0,
+                            "baseMoveSpeed": 14.0,
+                            "animationName": "Run"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_2",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 17.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 20.0,
+                            "animationName": "Sprint"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_Outsource",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_0",
+                                "footBoneName": "R_leg_03_bind_jnt",
+                                "kneeBoneName": "R_leg_02_bind_jnt",
+                                "hipBoneName": "R_leg_01_bind_jnt",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_1",
+                                "footBoneName": "L_leg_03_bind_jnt",
+                                "kneeBoneName": "L_leg_02_bind_jnt",
+                                "hipBoneName": "L_leg_01_bind_jnt",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1968275582,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/bonefetish1/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_rhand_fbl",
+            "id": 4003440001,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_rhand_fbl",
+                    "part": "rhand",
+                    "variant": "fbl"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_rhand_fbl",
+                    "filename": "data/hd/character/enemy/bonefetish1/rhand_fbl.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_rhand_fbl_UnitAttachment",
+                    "filename": "data/hd/items/weapon/knife/_monsters/fetish_knife.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_rhand_fbl_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "rhand",
+                    "variant": "fbl"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_rhand_fsp",
+            "id": 257627918,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_rhand_fsp",
+                    "part": "rhand",
+                    "variant": "fsp"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_rhand_fsp",
+                    "filename": "data/hd/character/enemy/bonefetish1/rhand_fsp.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_rhand_fsp_UnitAttachment",
+                    "filename": "data/hd/items/weapon/spear/_monsters/fetish_spear.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_rhand_fsp_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "rhand",
+                    "variant": "fsp"
+                }
+            ]
+        }
+    ]
+}
