@@ -1,0 +1,473 @@
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+    {
+        "type": "GameplayOptionsPanel",
+        "name": "modinfo_orbs",
+        "fields": {
+            "priority": 9003,
+            "rect": "$OptionsPanelRect",
+            "anchor": {
+                "x": 0.5
+            },
+            "applySettingsImmediately": false
+        },
+        "children": [
+            {
+                "type": "ImageWidget",
+                "name": "ScrollBarBackground",
+                "fields": {
+                    "rect": "$OptionsScrollBarBackgroundRect",
+                    "anchor": {
+                        "x": 1.0
+                    },
+                    "filename": "PauseMenu\\VerticalScroll"
+                },
+                "children": [
+                    {
+                        "type": "ScrollControllerWidget",
+                        "name": "ScrollController",
+                        "fields": {
+                            "rect": "$OptionsScrollBarRect",
+                            "anchor": {
+                                "x": 1.0
+                            },
+                            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                            "barFilepath": "PauseMenu\\VerticalIndicator",
+                            "viewName": "ScrollView",
+                            "wheelScrollSound": "cursor_scroll_hd",
+                            "buttonScrollSound": "cursor_scroll_hd"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "ScrollViewWidget",
+                "name": "ScrollView",
+                "fields": {
+                    "fitToParent": true,
+                    "scrollControllerName": "ScrollController"
+                },
+                "children": [
+                    {
+                        "type": "TableWidget",
+                        "name": "OptionsTable",
+                        "fields": {
+                            "columns": [
+                                "$OptionsTableColumn1",
+                                "$OptionsTableColumn2"
+                            ],
+                            "rowHeight": "$OptionsTableRowHeight"
+                        },
+                        "children": [
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Power Information",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 150
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Orbs of Power can be used to modify items in various ways. This is a short description of each orb and what they do, more detailed information can be found on the wiki.",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Socketing",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 300
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Cube together with an item of any rarity that is able to obtain sockets to roll a random number of sockets between the base items minimum and maximum count.\n\nIn Cube:\nOrb of Socketing + Item = Return Item + Random 1-Max Sockets (Base Dependent)",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Corruption",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 600
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Cube together with any item of any rarity twice in order to first set the corruption and then reveal the result.\n\nOnce an item has been cubed with this orb twice the orb will be consumed.\nSubsequent attempts with a new orb will return the item and the orb with no changes.\n\nThere is a 55% chance a corruption is successful, adding a beneficial property to an item (Stats and the chances are on wiki), a 25% chance no property is added, a 10% chance the item is converted to a Rare Item, and a 10% chance the item is converted to a White Item (or Magic for Jewelry)\n\nIn Cube: Orb + Item + First Transmute = Orb + Item (Corrupted)\nIn Cube: Orb + Item + Second Transmute = Updated Item",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Infusion",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 450
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Cube together with any white weapon, armor or shield to turn that item base into a rare item equal to the character's level.\n\nCube together with any magic ring or amulet to turn that item base into a rare item equal to the character's level.\n\nThe properties returned are random and the orb works like Charsi imbuement without the various restrictions. It can be used regardless of other properties present.\n\nIn Cube: Orb + White Item or Magic Jewelry = Item Base returned as a new Rare Item",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Assemblage",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 450
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Cube together with a rare item of any base type in order to receive a random set item using the base's type.\n\nThis orb ignores item and character level and will always return a set item if the base has a set item on it, otherwise the returned item will be magic or rare.\n\nCheck the set items list on the website before using if you are unsure if the base has a set item on it or not.\n\nIn Cube: Orb + Rare Item Base = Item Base returned as new Set item",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Conversion",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 550
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Cube together with a rare item of any euqippable base type in order to receive a random unique item using the base's type.\n\nThis does not work on charms or jewels.\n\nThis orb ignores item and character level and will always return a unique item if the base has a unqiue item on it, otherwise the returned item will be magic or rare.\n\nCheck the unique items list on the website before using if you are unsure if the base has a unique item on it or not.\n\nIn Cube: Orb + Rare Item Base = Item Base returned as new Unique item",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                                                        {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "Orb of Shadows",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 450
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "Cube together with a almost any item that has durability to turn it ethereal.\nDoes not work on Bows/Xbows\nDoes not work on already Indestructible items\n\nSet Items can behave strangely if the set bonuses have %Enhanced Weapon Damage or Defense and it is not reccomended to use on a set item if you plan to wear the full set and it has these properties in the set bonuses.\n\nIn Cube: Orb + Non-Ethereal & Non-Indestructible Item = Item Returned with Ethereal Added",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
