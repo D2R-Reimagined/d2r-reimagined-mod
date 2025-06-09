@@ -88,13 +88,13 @@
                     "fontColor": "$FontColorWhite",
                     "spacing": { "leading":0.9, "kerning":0.95 }
                 },
-                "textStrings": ["General Information", "Rune Table", "Gem Table", "Item Upgrades", "TBD", "TBD", " TBD"],
+                "textStrings": ["General Information", "Power Orbs", "Item Upgrades", "Rune Table", "Gem Table", "TBD", " TBD"],
                 "tabMessages": [
                     "SettingsPanelMessage:CheckChanges:modinfo_generalinformation",
+                    "SettingsPanelMessage:CheckChanges:modinfo_orbs",
+                    "SettingsPanelMessage:CheckChanges:modinfo_itemupgrades",
                     "SettingsPanelMessage:CheckChanges:modinfo_runetable",
                     "SettingsPanelMessage:CheckChanges:modinfo_gemtable",
-                    "SettingsPanelMessage:CheckChanges:modinfo_itemupgrades",
-                    "SettingsPanelMessage:CheckChanges:modinfo_tab5",
                     "SettingsPanelMessage:CheckChanges:modinfo_tab6",
                     "SettingsPanelMessage:CheckChanges:modinfo_tab7"
                 ]
@@ -126,7 +126,7 @@
                                 "hoveredFrame": 3,
                                 "text/style" : "$StyleFEButtonText",
                                 "pointSize": "$MediumLargeFontSize",
-                                "textColor": "$FontColorLightRed",
+                                "textColor": "$LightButtonTextColor",
                                 "disabledFrame": 2,
                                 "tooltipString": "@strClose",
                                 "sound": "cursor_close_window_hd",

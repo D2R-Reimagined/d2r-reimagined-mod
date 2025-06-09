@@ -4,7 +4,7 @@
   "fallback": "",
   "logAppend": false,
   "log": "output.txt",
-  "iveConsideredDonating": false,
+  "iveConsideredDonating": true,
   "rules": {
     "Basic/NoDuplicateExcel": {
       "action": "warn"
@@ -43,7 +43,7 @@
       "action": "warn"
     },
     "Monsters/ValidChains": {
-      "action": "warn"
+      "action": "ignore"
     },
     "Skills/EqualSkills": {
       "action": "warn"

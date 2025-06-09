@@ -39,13 +39,13 @@ damageresist	36		1	9											152	68		8	0	9	200																22	19		ModStr2uP
 magicresist	37		1	9											164	68		8	0	9	200																41	19		ModStr1m	ModStr1m									2	0
 maxmagicresist	38		1	9											1091	409		5	0	5	0																46	19		ModStr5x	ModStr5x									2	0
 fireresist	39		1	9											43	20		8	0	9	200																36	19		ModStr1j	ModStr1j		2	19		strModAllResistances	strModAllResistances				0
-maxfireresist	40		1	9											584	256		5	0	5	0																42	19		ModStr5u	ModStr5u										0
+maxfireresist	40		1	9											584	256		5	0	5	0																42	19		ModStr5u	ModStr5u		5	19		ModStrAllMaxRes	ModStrAllMaxRes				0
 lightresist	41		1	9											43	20		8	0	9	200																38	19		ModStr1l	ModStr1l		2	19		strModAllResistances	strModAllResistances				0
-maxlightresist	42		1	9											584	256		5	0	5	0																43	19		ModStr5w	ModStr5w										0
+maxlightresist	42		1	9											584	256		5	0	5	0																43	19		ModStr5w	ModStr5w		5	19		ModStrAllMaxRes	ModStrAllMaxRes				0
 coldresist	43		1	9											43	20		8	0	9	200																40	19		ModStr1k	ModStr1k		2	19		strModAllResistances	strModAllResistances				0
-maxcoldresist	44		1	9											584	256		5	0	5	0																44	19		ModStr5v	ModStr5v										0
+maxcoldresist	44		1	9											584	256		5	0	5	0																44	19		ModStr5v	ModStr5v		5	19		ModStrAllMaxRes	ModStrAllMaxRes				0
 poisonresist	45		1	9											43	20		8	0	9	200																34	19		ModStr1n	ModStr1n		2	19		strModAllResistances	strModAllResistances				0
-maxpoisonresist	46		1	9											526	256		5	0	5	0																45	19		ModStr5y	ModStr5y										0
+maxpoisonresist	46		1	9											526	256		5	0	5	0																45	19		ModStr5y	ModStr5y		5	19		ModStrAllMaxRes	ModStrAllMaxRes				0
 damageaura	47		1	16																																															0
 firemindam	48		1	16											11	10		8	0	8	0											1					102	19		ModStr1p	ModStr1p										0
 firemaxdam	49		1	16											19	10		8	0	9	0											1					101	19		ModStr1o	ModStr1o										0
@@ -78,8 +78,8 @@ item_maxdurability_percent	75		1	7											117	10		7	20	7	20			13			maxdurabil
 item_maxhp_percent	76		1	16											32093	204		6	10	6	10			11			maxhp										58	19		ModStr2g	ModStr2g										0
 item_maxmana_percent	77		1	16											56452	204		6	10	6	10			11			maxmana										54	19		ModStr2h	ModStr2h										0
 item_attackertakesdamage	78		1	16							1				112	128		7	0	7	0												attackedinmelee	6			13	19		ModStr1v	ModStr1v									2	0
-item_goldbonus	79		1	10											187	34		9	100	9	100																10	19		ModStr1w	ModStr1w									2	0
-item_magicbonus	80		1	9											577	102		8	100	9	100																8	19		ModStr1x	ModStr1x									2	0
+item_goldbonus	79		1	12											187	34		9	100	9	100																10	19		ModStr1w	ModStr1w									2	0
+item_magicbonus	80		1	12											577	102		8	100	9	100																8	19		ModStr1x	ModStr1x									2	0
 item_knockback	81		1	8							1				105	0		7	0	7	0											1	domeleedamage	7	domissiledamage	7	76	19		ModStr1y	ModStr1y									2	0
 item_timeduration	82		1	10														9	20	9	20																														0
 item_addclassskills	83		1	4	3						1				49523	1560		3	0	3	0	3															150	13		ModStr3a	ModStr3a										0
@@ -363,8 +363,8 @@ skill_missile_damage_scale	360			32	16																																										
 item_corrupted	361		1	12										0	8	2		8	0	8	0																300	20	0	Corrupted	Corrupted										0
 item_corruptedDummy	362		1	12										0	8	2		8	0	8	0																														0
 item_splashonhit	363		1	7	16						1				-400	0		21	0	7	0	16										1	domeleedamage	20			160	15	0	splash3	splash3										0
-pl_maxdamage_percent	364		1	11											-400	0		9	100	9	100			11			maxdamage	secondary_maxdamage				1					129	19		ModStr2j	ModStr2j										0
-pl_mindamage_percent	365		1	11											-400	0		9	100	9	100			11			mindamage	secondary_mindamage				1					130	19		ModStr2k	ModStr2k										0
+pl_maxdamage_percent	364		1	11											-400	0		9	100	9	100			11			maxdamage	secondary_maxdamage	item_throw_maxdamage			1					129	19		ModStrPlayerMinDmgPercent	ModStrPlayerMinDmgPercent		6	19		ModStrPlayerDmgPercent	ModStrPlayerDmgPercent				0
+pl_mindamage_percent	365		1	11											-400	0		9	100	9	100			11			mindamage	secondary_mindamage	item_throw_mindamage			1					130	19		ModStrPlayerMaxDmgPercent	ModStrPlayerMaxDmgPercent		6	19		ModStrPlayerDmgPercent	ModStrPlayerDmgPercent				0
 hpregen_perlevel	366		1	6											-400	0		6	30	6	30			4	2	level	hpregen										56	19		ModStr2l	ModStr2w	increaseswithplaylevelX								2	0
 stacked_terror_key	367		0	6								1	0	0	1	0		8	0	8	0																56	19	0	StackedTerrorKey	StackedTerrorKey										0
 stacked_hate_key	368		0	6								1	0	0	1	0		8	0	8	0																56	19	0	StackedHateKey	StackedHateKey										0
@@ -412,3 +412,9 @@ Dye_Yellow	409			2											102	20		2	1	2	1																999	3	0	DyeYellow	Dy
 Dye_Purple	410			2											102	20		2	1	2	1																999	3	0	DyePurple	DyePurple										0
 Dye_Orange	411			2											102	20		2	1	2	1																999	3	0	DyeOrange	DyeOrange										0
 Dye_Tracker	412			2											102	20		4	7	4	7																														0
+item_strength_percent	413		1	8								1	1		125	55		7	63	7	63			11			strength										67	19		ModAttStrPercent	ModAttStrPercent										0
+item_dexterity_percent	414		1	8								1	1		125	55		7	63	7	63			11			dexterity										67	19		ModAttDexPercent	ModAttDexPercent										0
+item_vitality_percent	415		1	8								1	1		125	55		7	63	7	63			11			vitality										67	19		ModAttVitPercent	ModAttVitPercent										0
+item_energy_percent	416		1	8								1	1		125	55		7	63	7	63			11			energy										67	19		ModAttEnrPercent	ModAttEnrPercent										0
+pl_maxthrowdmg_percent	417		1	11											-400	0		9	100	9	100			11			item_throw_maxdamage					1					129	19		ModStrPlayerMinThrowDmgPercent	ModStrPlayerMinThrowDmgPercent		7	19		ModStrPlayerThrowDmgPercent	ModStrPlayerThrowDmgPercent				0
+pl_minthrowdmg_percent	418		1	11											-400	0		9	100	9	100			11			item_throw_mindamage					1					130	19		ModStrPlayerMaxThrowDmgPercent	ModStrPlayerMaxThrowDmgPercent		7	19		ModStrPlayerThrowDmgPercent	ModStrPlayerThrowDmgPercent				0

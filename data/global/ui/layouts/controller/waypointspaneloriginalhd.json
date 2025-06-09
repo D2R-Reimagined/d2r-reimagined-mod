@@ -1,11 +1,14 @@
 {
     "type": "WaypointsPanel", "name": "WaypointsPanelOriginal",
     "fields": {
-        "buttonOffset": 140,
-        "rect": "$ConsoleCenterPanelRect",
-        "selectableFontColor": "$FontColorGoldYellow",
+        "anchor" : { "x": 1.0, "y": 0.397 },
+        "rect": { "x": -1394, "y": -651, "width": 1162, "height": 1507 },
+        "buttonOffset": 123,
+        "selectableFontColor": "$FontColorCurrencyGold",
+        "selectableFrames": [ 0, 1 ],
         "currentFontColor": "$FontColorBlue",
-        "terrorZoneFontColor": { "r": 200, "g": 175, "b": 250, "a": 255 }
+        "defaultFontColor": "$FontColorLightGray",
+        "terrorZoneFontColor": "$FontColorPurple"
     },
     "children": [
         {
@@ -27,14 +30,14 @@
             "fields": {
                 "rect": "$LeftHingeRect",
                 "filename": "$LeftHingeSprite"
-            }
+            },
         },
         {
             "type": "TextBoxWidget", "name": "WaypointsTitle",
             "fields": {
                 "rect": "$InGamePanelTitleRect",
                 "text": "@Waypoint",
-                "style": "$StyleTitleBlock"
+                "style": "$StyleTitleBlock",
             }
         },
         {
@@ -54,7 +57,7 @@
                 "onSwitchTabMessage": "Waypoints:SelectTab",
                 "focusOnMouseOver": true,
                 "tabLeftIndicatorPosition": { "x": -46, "y": -1 },
-                "tabRightIndicatorPosition": { "x": 870, "y": -1 }
+                "tabRightIndicatorPosition": { "x": 906, "y": -1 }
             }
         },
         // waypoint button templates
@@ -75,11 +78,11 @@
                         {
                             "type": "ImageWidget", "name": "TerrorZone",
                             "fields": {
-                        				"rect": { "x": 31, "y": 31 },
+                        				"rect": { "x": 47, "y": 28 },
                         				"filename": "PANEL\\Waypoints\\terror_zone_icon",
                         				"visible": false
                         		}
-                        }
+                        },
                     ]
                 },
                 {
@@ -106,8 +109,15 @@
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
                 "sound": "cursor_close_window_hd",
-                "onClickMessage": "Waypoints:CloseWaypointPanel"
-            }
-        }
+                "onClickMessage": "Waypoints:CloseWaypointPanel",
+            },
+        },
+        {
+            "type": "ImageWidget", "name": "Overlay",
+            "fields": {
+                "rect": { "x": 150, "y": 201 },
+                "filename": "PANEL\\Waypoints\\Waypoints_Overlay"
+            },
+        },
     ]
 }
