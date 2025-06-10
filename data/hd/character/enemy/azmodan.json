@@ -1,0 +1,210 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/duriel/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/duriel/skeleton/duriel.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_body_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_body_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_corpse_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_corpse_NRM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_corpse_ORM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_corpse_sac_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_corpse_sac_NRM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_corpse_sac_ORM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_head_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_head_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_head_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_head_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_sac_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_sac_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_sac_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/duriel/textures/Duriel_sac_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/duriel/duriel_state_machine.json"
+            },
+            {
+                "path": "data/hd/overlays/paladin/holyfreeze.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/duriel/duriel_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "duriel",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 776734538,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/duriel/duriel_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/duriel/skeleton/duriel.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/duriel/duriel_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/paladin/holyfreeze.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_root_DeadAnimationSpeedOverrideComponent",
+                    "speed": 1.0
+                },
+                {
+                    "type": "AimLayersComponent",
+                    "name": "entity_root_AimLayers",
+                    "aimLayers": [
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_0",
+                            "layerName": "Aim_Head",
+                            "yawAnimationState": "HeadAim_Yaw",
+                            "yawOutOfRangeBehavior": 2,
+                            "yawAngleOffset": 0.0,
+                            "pitchAnimationState": "HeadAim_Pitch",
+                            "pitchOutOfRangeBehavior": 0,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 0.15,
+                            "aimTarget": 1
+                        },
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_1",
+                            "layerName": "Aim_Melee",
+                            "yawAnimationState": "",
+                            "yawOutOfRangeBehavior": 2,
+                            "yawAngleOffset": 0.0,
+                            "pitchAnimationState": "MeleeAim_Pitch",
+                            "pitchOutOfRangeBehavior": 0,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 0.3,
+                            "aimTarget": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "LookAtAnimationControlComponent",
+                    "name": "entity_root_LookAtAnimationControl",
+                    "controlOverrides": [],
+                    "aimLayerName": "Aim_Head",
+                    "blendInTime": 0.25,
+                    "blendOutTime": 0.25
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1309178327,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/duriel/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/darkelder/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/darkelder/skeleton/darkelder.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_armor_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_armor_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_armor_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_head_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_head_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_head_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_torso_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_torso_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/darkelder/textures/darkelder_torso_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/darkelder/darkelder_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/darkelder/darkelder_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "darkelder",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 677252301,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/darkelder/darkelder_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/darkelder/skeleton/darkelder.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/darkelder/darkelder_variant.json"
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 3.0,
+                            "baseMoveSpeed": 2.73,
+                            "animationName": "Walk"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_1",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 3.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 4.3,
+                            "animationName": "Run"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1209630298,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/darkelder/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}
