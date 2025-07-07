@@ -1,0 +1,162 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/boneprison4/torso.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/boneprison4/skeleton/boneprison4.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/boneprison1/textures/boneprison_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/boneprison1/textures/boneprison_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/boneprison1/textures/boneprison_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/common/FX_T_bone_ORM.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/boneprison4/boneprison4_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/boneprison4/boneprison4_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "boneprison4",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 2758846214,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/boneprison4/boneprison4_state_machine.json",
+                    "doNotInheritRotation": true,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/boneprison4/skeleton/boneprison4.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/boneprison4/boneprison4_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {
+                        "type": "AttackVFXTable",
+                        "name": "AttackSuccess_Bone",
+                        "rules": [
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Bone_rules_0",
+                                "acceptedHitClasses": 828,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles",
+                                "soundId": "player_impact_gore_bone_hd2"
+                            },
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Bone_rules_1",
+                                "acceptedHitClasses": 7362,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles",
+                                "soundId": "player_impact_gore_bone_hd2"
+                            }
+                        ],
+                        "defaultVfxFile": "",
+                        "defaultSoundId": "player_impact_gore_bone_hd2"
+                    },
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 3614235839,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/boneprison4/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_torso_DeadAnimationSpeedOverride",
+                    "speed": 1.0
+                }
+            ]
+        }
+    ]
+}
