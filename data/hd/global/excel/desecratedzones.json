@@ -14,22 +14,22 @@
                 "bound_incl_min": 3, /* Minimum level of a terrorized monster. MAX(bound_incl_min, original_monster_level) */
                 "bound_incl_max": 45, /* Maximum level of a terrorized monster. MAX(bound_incl_max, original_monster_level) */
                 "boost_level": 2, /* player_level + boost_level = terrorized_monster_level */
-                "difficulty_scale": 1, /* Fake the amount of players in the game. AKA /players X */
-                "boost_experience_percent": 25 /* Bonus experience percentage applied at to the monster's base experience in monstats.txt */
+                "difficulty_scale": 8, /* Fake the amount of players in the game. AKA /players X */
+                "boost_experience_percent": 100 /* Bonus experience percentage applied at to the monster's base experience in monstats.txt */
             },
             "default_nightmare": {
                 "bound_incl_min": 40,
                 "bound_incl_max": 80,
-                "boost_level": 2,
-                "difficulty_scale": 1,
-                "boost_experience_percent": 25
+                "boost_level": 5,
+                "difficulty_scale": 8,
+                "boost_experience_percent": 100
             },
             "default_hell": {
                 "bound_incl_min": 70,
                 "bound_incl_max": 99,
-                "boost_level": 2,
-                "difficulty_scale": 1,
-                "boost_experience_percent": 25
+                "boost_level": 10,
+                "difficulty_scale": 8,
+                "boost_experience_percent": 100
             },
             "warnings": [
                 {
