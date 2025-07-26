@@ -2,72 +2,75 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles"
-            },
-            {
-                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles"
+                "path": "data/hd/vfx/particles/character/enemy/lightningspire/fx_lightningspire_ambient_ball.particles"
             }
         ],
         "models": [
             {
-                "path": "data/hd/character/enemy/boneprison4/torso.model"
-            },
-            {
-                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+                "path": "data/hd/character/enemy/lightningspire/torso.model"
             }
         ],
         "skeletons": [
             {
-                "path": "data/hd/character/enemy/boneprison4/skeleton/boneprison4.skeleton"
+                "path": "data/hd/character/enemy/lightningspire/skeleton/lightningspire.skeleton"
             }
         ],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/character/common/common_ktint.texture"
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Gargoyle_alb.texture"
             },
             {
-                "path": "data/hd/character/enemy/boneprison1/textures/boneprison_alb.texture"
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Gargoyle_nrm.texture"
             },
             {
-                "path": "data/hd/character/enemy/boneprison1/textures/boneprison_nrm.texture"
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Gargoyle_orm.texture"
             },
             {
-                "path": "data/hd/character/enemy/boneprison1/textures/boneprison_orm.texture"
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Spire_alb.texture"
             },
             {
-                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Spire_nrm.texture"
             },
             {
-                "path": "data/hd/vfx/textures/common/FX_T_bone_ORM.texture"
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Spire_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/default/Black.texture"
             }
         ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/character/enemy/boneprison4/boneprison4_state_machine.json"
+                "path": "data/hd/character/enemy/lightningspire/lightningspire_state_machine.json"
+            },
+            {
+                "path": "data/hd/missiles/electric_nova.json"
+            },
+            {
+                "path": "data/hd/overlays/sorceress/light_cast_1.json"
             }
         ],
         "variantdata": [
             {
-                "path": "data/hd/character/enemy/boneprison4/boneprison4_variant.json"
+                "path": "data/hd/character/enemy/lightningspire/lightningspire_variant.json"
             }
         ],
         "objecteffects": [],
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "boneprison4",
+    "name": "lightningspire",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 2758846214,
+            "id": 2248570827,
             "components": [
                 {
                     "type": "UnitRootComponent",
                     "name": "component_root",
-                    "state_machine_filename": "data/hd/character/enemy/boneprison4/boneprison4_state_machine.json",
+                    "state_machine_filename": "data/hd/character/enemy/lightningspire/lightningspire_state_machine.json",
                     "doNotInheritRotation": true,
                     "rotationOverride": {
                         "x": 0.0,
@@ -83,55 +86,38 @@
                 {
                     "type": "SkeletonDefinitionComponent",
                     "name": "component_skeleton",
-                    "filename": "data/hd/character/enemy/boneprison4/skeleton/boneprison4.skeleton"
+                    "filename": "data/hd/character/enemy/lightningspire/skeleton/lightningspire.skeleton"
                 },
                 {
                     "type": "VariantDefinitionComponent",
                     "name": "component_variant",
-                    "filename": "data/hd/character/enemy/boneprison4/boneprison4_variant.json"
+                    "filename": "data/hd/character/enemy/lightningspire/lightningspire_variant.json"
                 },
                 {
-                    "type": "DamageFXComponent",
-                    "name": "entity_root_DamageFX",
-                    "vfxSpawnBones": [],
-                    "attackAttemptVfxOverrides": {},
-                    "disableAttemptVfx": false,
-                    "attackSuccessVfxOverrides": {
-                        "type": "AttackVFXTable",
-                        "name": "AttackSuccess_Bone",
-                        "rules": [
-                            {
-                                "type": "AttackVFXRule",
-                                "name": "AttackSuccess_Bone_rules_0",
-                                "acceptedHitClasses": 828,
-                                "acceptedVictims": 15,
-                                "acceptedBloodTypes": 7,
-                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles",
-                                "soundId": "player_impact_gore_bone_hd2"
-                            },
-                            {
-                                "type": "AttackVFXRule",
-                                "name": "AttackSuccess_Bone_rules_1",
-                                "acceptedHitClasses": 7362,
-                                "acceptedVictims": 15,
-                                "acceptedBloodTypes": 7,
-                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles",
-                                "soundId": "player_impact_gore_bone_hd2"
-                            }
-                        ],
-                        "defaultVfxFile": "",
-                        "defaultSoundId": "player_impact_gore_bone_hd2"
-                    },
-                    "disableSuccessVfx": false,
-                    "attackFailVfxOverrides": {},
-                    "disableFailVfx": false
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/electric_nova.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/sorceress/light_cast_1.json"
+                        }
+                    ],
+                    "minions": []
                 }
             ]
         },
         {
             "type": "Entity",
             "name": "entity_torso",
-            "id": 3614235839,
+            "id": 2797725784,
             "components": [
                 {
                     "type": "UnitPartComponent",
@@ -150,11 +136,19 @@
                     "floorModel": false,
                     "terrainBlendEnableYUpBlend": false,
                     "terrainBlendMode": 1
-                },
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "vfx",
+            "id": 1181865098,
+            "components": [
                 {
-                    "type": "DeadAnimationSpeedOverrideComponent",
-                    "name": "entity_torso_DeadAnimationSpeedOverride",
-                    "speed": 1.0
+                    "type": "VfxDefinitionComponent",
+                    "name": "vfx_components_vfx",
+                    "filename": "data/hd/vfx/particles/character/enemy/lightningspire/fx_lightningspire_ambient_ball.particles",
+                    "hardKillOnDestroy": false
                 }
             ]
         }
