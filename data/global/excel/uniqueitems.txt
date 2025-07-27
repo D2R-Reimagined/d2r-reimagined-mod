@@ -116,12 +116,12 @@ Snakecord	113	0	1			1	1	16	12	vbl	Light Belt		5	5000	blac	blac						dmg-pois	75	
 Nightsmoke	114	0	1			1	1	27	20	mbl	Belt		5	5000	lyel	lyel						res-all		10	10	dmg-to-mana		50	50	mana		20	20	red-dmg		2	2	ac		15	15	ac%		30	50																										0
 Goldwrap	115	0	1			1	1	36	27	tbl	Heavy Belt		5	5000	lblu	lblu						mag%		30	30	light		2	2	ac		25	25	swing2		10	10	ac%		40	60	gold%		50	80																										0
 Bladebuckle	116	0	1			1	1	39	29	hbl	Girdle		5	5000	dyel	dyel						thorns		8	8	ac		30	30	red-dmg		3	3	str		5	5	dex		10	10	ac%		80	100	balance2		30	30																						0
-Nokozan Relic	117	0	1			7	1	14	10	amu	Amulet		5	5000	lgld							dmg-fire		3	6	res-fire-max		10	10	res-fire		50	50	light		3	3	balance2		20	20																														0
-The Eye of Etlich	118	0	1			5	1	20	15	amu	Amulet		5	5000	dgld							ac-miss		10	40	light		1	5	allskills		1	1	lifesteal		3	7	cold-min		1	2	cold-max		3	5	cold-len		50	250																						0
-The Mahim-Oak Curio	119	0	1			7	1	34	25	amu	Amulet		5	5000	lpur							dex		10	10	str		10	10	enr		10	10	vit		10	10	ac		10	10	att%		10	10	res-all		10	10	ac%		10	10																		0
-Nagelring	120	0	1			7	1	10	7	rin	Ring		5	5000	dpur							red-mag		3	3	thorns		3	3	att		50	75	mag%		15	30																																		0
-Manald Heal	121	0	1			7	1	20	15	rin	Ring		5	5000	oran							manasteal		4	7	regen		5	8	hp		20	20	regen-mana		20	20																																		0
-The Stone of Jordan	122	0	1			2	1	39	29	rin	Ring		5	5000	whit							mana		20	20	mana%		25	25	ltng-min		25	25	allskills		1	1	ltng-max		50	50																													1	0
+Nokozan Relic	117	0	1			7	1	14	10	amu	Amulet		5	5000	lgld			invamu2				dmg-fire		3	6	res-fire-max		10	10	res-fire		50	50	light		3	3	balance2		20	20																														0
+The Eye of Etlich	118	0	1			5	1	20	15	amu	Amulet		5	5000	dgld			invamu2				ac-miss		10	40	light		1	5	allskills		1	1	lifesteal		3	7	cold-min		1	2	cold-max		3	5	cold-len		50	250																						0
+The Mahim-Oak Curio	119	0	1			7	1	34	25	amu	Amulet		5	5000	lpur			invamu2				dex		10	10	str		10	10	enr		10	10	vit		10	10	ac		10	10	att%		10	10	res-all		10	10	ac%		10	10																		0
+Nagelring	120	0	1			7	1	10	7	rin	Ring		5	5000	dpur			invring1				red-mag		3	3	thorns		3	3	att		50	75	mag%		15	30																																		0
+Manald Heal	121	0	1			7	1	20	15	rin	Ring		5	5000	oran			invring1				manasteal		4	7	regen		5	8	hp		20	20	regen-mana		20	20																																		0
+The Stone of Jordan	122	0	1			2	1	39	29	rin	Ring		5	5000	whit			invring1				mana		20	20	mana%		25	25	ltng-min		25	25	allskills		1	1	ltng-max		50	50																													1	0
 Amulet of the Viper	123	0	1			1	1	0	0	vip	Amulet		5	5000	lgry							mana		10	10	res-pois		25	25	hp		10	10			0	0			0	0			0	0			0	0																						0
 Staff of Kings	124	0	1			1	1	0	0	msf	Staff		5	5000	dgry							res-all		10	10	swing3		50	50			0	0			0	0			0	0			0	0			0	0																						0
 Horadric Staff	125	0	1			1	1	0	0	hst	Staff		5	5000	blac							mana		10	10	res-pois		25	25	hp		10	10	res-all		10	10	swing3		50	50			0	0			0	0																						0
@@ -263,21 +263,21 @@ Lightsabre	259	100	1			5	1	66	58	7cr	Phase Blade		5	5000	lblu			invcrsu				light
 Doombringer	260	100	1			1	1	75	69	7b7	Champion Sword		5	5000	dred	dred		invbswu				hp%		20	20	dmg%		180	250	att%		40	40	indestruct		1	1	dmg-norm		30	100	hit-skill	Weaken	8	3	lifesteal		5	7	oskill_hide	393	1	1																		0
 The Grandfather	261	100	1			1	1	85	81	7gd	Colossus Blade		5	5000	lyel	lyel		invgsdu				str		20	20	dex		20	20	vit		20	20	enr		20	20	att%		50	50	hp		80	80	dmg/lvl	20			indestruct		1	1	dmg%		150	250	oskill_hide	393	1	1										0
 Wizardspike	262	100	1			1	1	69	61	7dg	Bone Knife		5	5000	lgry	lgry						mana/lvl	16			regen-mana		15	15	mana%		15	15	res-all		75	75	indestruct		1	1	cast3		50	50	oskill_hide	393	1	1																						0
-Constricting Ring	263	100	1			2	1	95	95	rin	Ring		5	5000	cblu	cblu						res-all		40	40	regen		-30	-30	mag%		100	100	res-all-max		5	5										0																								0
+Constricting Ring	263	100	1			2	1	95	95	rin	Ring		5	5000	cblu	cblu		invring1				res-all		40	40	regen		-30	-30	mag%		100	100	res-all-max		5	5										0																								0
 Stormspire	264	100	1			1	1	78	70	7wc	Giant Thresher		5	5000	dblu	dblu						res-ltng		50	50	gethit-skill	Chain Lightning	5	5	dmg%		150	250	str		10	10	gethit-skill	Charged Bolt	2	0	swing2		30	30	indestruct		1	1	dmg-ltng		1	237	light-thorns		27	27	oskill_hide	393	1	1										0
 Eaglehorn	265	100	1			1	1	77	69	6l7	Crusader Bow		5	5000	dgld	dgld						ignore-ac		1	1	att/lvl	12			dmg%/lvl	16			dmg%		200	200	att-skill	Raven	18	33	dex		25	25	swing1		40	40	oskill_hide	393	1	1																		0
 Windforce	266	100	1			1	1	80	73	6lw	Hydra Bow		5	5000	dyel	dyel						dex		5	5	dmg/lvl	25			regen-stam		30	30	manasteal		6	8	knock		1	1	dmg%		250	250	swing2		20	20	str		10	10	oskill_hide	393	1	1														0
 Rings																																																																							0
-Bul-Kathos' Wedding Band	268	100	1			3	1	66	58	rin	Ring		5	5000	dpur	dpur						hp/lvl	4			allskills		1	1	lifesteal		3	5																																						0
-The Cat's Eye	269	100	1			5	1	58	50	amu	Amulet		5	5000	oran	oran						move2		30	30	swing2		20	20	ac		100	100	ac-miss		100	100	dex		25	25																														0
-The Rising Sun	270	100	1			5	1	73	65	amu	Amulet		5	5000	lgld	lgld						abs-fire/lvl	6			light		4	4	cast2		10	10	res-fire		15	30	fireskill		2	2	regen		10	10																										0
-Crescent Moon	271	100	1			5	1	68	68	amu	Amulet		5	5000	lblu	lblu						coldskill		2	2	extra-cold		5	10	light		4	4	mana		80	80	regen-mana		25	25																														0
-Mara's Kaleidoscope	272	100	1			3	1	80	67	amu	Amulet		5	5000	oran	oran						allskills		2	2	res-all		20	30	str		5	5	dex		5	5	vit		5	5	enr		5	5																										0
-Atma's Scarab	273	100	1			5	1	60	60	amu	Amulet		5	5000	cgrn	cgrn						dmg-pois	100	102	102	res-pois		75	75	light		3	3	thorns		5	5	hit-skill	Amplify Damage	5	2	att%		20	20	mag%		15	30	res-all		10	15																		0
-Dwarf Star	274	100	1			5	1	53	45	rin	Ring		5	5000	dgry	dgry						fireskill		1	1	gold%		100	100	mana-kill		3	5	hp		40	40	extra-fire		3	5	abs-fire%		15	15																										0
-Raven Frost	275	100	1			5	1	53	45	rin	Ring		5	5000	cblu	cblu						nofreeze		1	1	dmg-cold	100	15	45	abs-cold%		20	20	mana		40	40	dex		15	20	att		150	250																										0
-Highlord's Wrath	276	100	1			3	1	73	65	amu	Amulet		5	5000	bwht	bwht						res-ltng		35	35	dmg-ltng		1	30	swing2		20	20	allskills		1	1	deadly/lvl	3			light-thorns		15	15																										0
-Saracen's Chance	277	100	1			5	1	55	47	amu	Amulet		5	5000	dpur	dpur						res-all		15	25	gethit-skill	Iron Maiden	10	2	str		12	12	dex		12	12	enr		12	12	vit		12	12																										0
+Bul-Kathos' Wedding Band	268	100	1			3	1	66	58	rin	Ring		5	5000	dpur	dpur		invring1				hp/lvl	4			allskills		1	1	lifesteal		3	5																																						0
+The Cat's Eye	269	100	1			5	1	58	50	amu	Amulet		5	5000	oran			invamu2				move2		30	30	swing2		20	20	ac		100	100	ac-miss		100	100	dex		25	25																														0
+The Rising Sun	270	100	1			5	1	73	65	amu	Amulet		5	5000	lgld			invamu2				abs-fire/lvl	6			light		4	4	cast2		10	10	res-fire		15	30	fireskill		2	2	regen		10	10																										0
+Crescent Moon	271	100	1			5	1	68	68	amu	Amulet		5	5000	lblu			invamu2				coldskill		2	2	extra-cold		5	10	light		4	4	mana		80	80	regen-mana		25	25																														0
+Mara's Kaleidoscope	272	100	1			3	1	80	67	amu	Amulet		5	5000	oran			invamu2				allskills		2	2	res-all		20	30	str		5	5	dex		5	5	vit		5	5	enr		5	5																										0
+Atma's Scarab	273	100	1			5	1	60	60	amu	Amulet		5	5000	cgrn			invamu2				dmg-pois	100	102	102	res-pois		75	75	light		3	3	thorns		5	5	hit-skill	Amplify Damage	5	2	att%		20	20	mag%		15	30	res-all		10	15																		0
+Dwarf Star	274	100	1			5	1	53	45	rin	Ring		5	5000	dgry	dgry		invring1				fireskill		1	1	gold%		100	100	mana-kill		3	5	hp		40	40	extra-fire		3	5	abs-fire%		15	15																										0
+Raven Frost	275	100	1			5	1	53	45	rin	Ring		5	5000	cblu	cblu		invring1				nofreeze		1	1	dmg-cold	100	15	45	abs-cold%		20	20	mana		40	40	dex		15	20	att		150	250																										0
+Highlord's Wrath	276	100	1			3	1	73	65	amu	Amulet		5	5000	bwht			invamu2				res-ltng		35	35	dmg-ltng		1	30	swing2		20	20	allskills		1	1	deadly/lvl	3			light-thorns		15	15																										0
+Saracen's Chance	277	100	1			5	1	55	47	amu	Amulet		5	5000	dpur			invamu2				res-all		15	25	gethit-skill	Iron Maiden	10	2	str		12	12	dex		12	12	enr		12	12	vit		12	12																										0
 Class Specific																																																																							0
 Arreat's Face	279	100	1			1	1	50	42	baa	Slayer Guard		5	5000								bar		2	2	skilltab	12	2	2	ac%		150	200	balance2		30	30	att%		20	20	str		20	20	dex		20	20	lifesteal		3	6	res-all		30	30														0
 Homunculus	280	100	1			1	1	50	42	nea	Heirophant Trophy		5	5000								nec		2	2	skilltab	6	2	2	ac%		150	200	block2		30	30	block		40	40	enr		20	20	regen-mana		33	33	mana-kill		5	5	res-all		40	40	oskill_hide	393	1	1										0
@@ -300,9 +300,9 @@ Demon Limb	296	100	1			1	1	71	63	7sp	tyrant club		5	5000	dgrn	dgrn		invspcu				d
 Steel Shade	297	100	1			1	1	70	62	ulm	armet		5	5000	blac	blac		invhlmu				ac%		100	130	abs-fire		5	11	manasteal		4	8	regen		10	18																																		0
 Tomb Reaver	298	100	1			1	1	86	84	7pa	cryptic axe		5	5000	lyel	lyel						swing2		60	60	light		4	4	dmg%		200	280	dmg-undead		150	230	mag%		50	80	res-all		30	50	att-undead		250	350	reanimate	1	10	10	heal-kill		10	14	sock		1	3	oskill_hide	393	1	1						0
 Death's Web1	299	100	1			1	1	74	66	7gw	unearthed wand		5	5000	bwht	bwht						allskills		2	2	pierce-pois		40	50	heal-kill		7	12	mana-kill		7	12	skilltab	7	1	2	oskill_hide	393	1	1																										0
-Nature's Peace	300	100	1			3	1	77	69	rin	ring		5	5000	dgrn	dgrn						poisonskill		1	1	rip		1	1	red-dmg%		3	5	res-all		5	15	oskill	Oak Sage	2	2																														0
+Nature's Peace	300	100	1			3	1	77	69	rin	ring		5	5000	dgrn	dgrn		invring1				poisonskill		1	1	rip		1	1	red-dmg%		3	5	res-all		5	15	oskill	Oak Sage	2	2																														0
 Azurewrath	301	100	1			1	1	87	85	7cr	phase blade		5	5000	lgry			invcrs				dmg-mag		250	500	dmg%		230	270	aura	Sanctuary	10	13	dmg-cold	250	250	500	swing2		30	30	all-stats		5	10	light		3	3	allskills		1	1	oskill_hide	393	1	1														0
-Seraph's Hymn	302	100	1			3	1	73	65	amu	amulet		5	5000	bwht	bwht		invamu2				allskills		2	2	skilltab	11	1	2	dmg-demon		25	50	dmg-undead		25	50	att-demon		150	250	att-undead		150	250	light		2	2																						0
+Seraph's Hymn	302	100	1			3	1	73	65	amu	amulet		5	5000	bwht			invamu2				allskills		2	2	skilltab	11	1	2	dmg-demon		25	50	dmg-undead		25	50	att-demon		150	250	att-undead		150	250	light		2	2																						0
 Zakarum's Salvation	303	100				1	1						5	5000																																																									0
 Fleshripper	304	100	1			1	1	76	68	7kr	fanged knife		5	5000	dred	dred		invkrsu				dmg%		200	300	reduce-ac		50	50	noheal		1	1	crush		25	25	openwounds		50	50	deadly		33	33	slow		20	20	oskill_hide	393	1	1																		0
 Odium	305	100				1	1						5	5000	blac																																																								0
@@ -319,7 +319,7 @@ Executioner's Justice	315	100	1			1	1	83	75	7gi	glorious axe		5	5000	blac	blac		
 Stoneraven	316	100	1			1	1	72	64	amd	matriarchal spear		5	5000	dgry							dmg%		230	280	dmg-mag		101	187	res-all		30	50	ac		400	600	skilltab	2	1	3	oskill_hide	393	1	1																										0
 Leviathan	317	100	1			1	1	73	65	uld	kraken shell		5	5000	cgrn	cgrn						ac%		170	200	ac		100	150	red-dmg%		15	25	str		40	50	indestruct		1	1																														0
 Larzuk's Champion	318	100				1	1						5	5000	lgry		flphmr	invhfh																																																					0
-Wisp Projector	319	100	1			5	1	84	76	rin	ring		5	5000	bwht	bwht						abs-ltng%		10	20	hit-skill	Lightning	10	16	mag%		10	20	charged	Oak Sage	15	2	charged	Heart of Wolverine	13	5	charged	Spirit of Barbs	11	7																										0
+Wisp Projector	319	100	1			5	1	84	76	rin	ring		5	5000	bwht	bwht		invring1				abs-ltng%		10	20	hit-skill	Lightning	10	16	mag%		10	20	charged	Oak Sage	15	2	charged	Heart of Wolverine	13	5	charged	Spirit of Barbs	11	7																										0
 Gargoyle's Bite	320	100	1			1	1	78	70	7ts	winged harpoon		5	5000	cgrn	cgrn						dmg%		180	230	rep-quant	100			dmg-pois	250	300	300	lifesteal		9	15	charged	Plague Javelin	60	11	oskill_hide	393	1	1																										0
 Lacerator	321	100	1			1	1	76	68	7b8	winged axe		5	5000	blac	blac						dmg%		150	210	rep-quant	100			swing2		30	30	noheal		1	1	openwounds		33	33	howl		64	64	hit-skill	Amplify Damage	33	3	oskill_hide	393	1	1																		0
 Mang Song's Lesson	322	100	1			1	1	86	82	6ws	archon staff		5	5000	dgld	dgld		inv8wsu				allskills		5	5	extra-elem		20	30	pierce-elem		20	30	regen-mana		75	75	cast2		60	60	fireskill		2	2	coldskill		2	2	lightningskill		2	2	oskill_hide	393	1	1														0
@@ -359,7 +359,7 @@ Wolfhowl	355	100	1			1	1	85	79	bac	fury visor		3	5000	cred	cred						ac%		120	15
 Spirit Ward	356	100	1			1	1	76	68	uts	ward		3	5000	dblu	dblu		invgtsu				ac%		130	180	red-dmg%		10	10	res-all		30	40	block		20	30	block2		25	25	randclassskill	3	0	6	oskill_hide	393	1	1																						0
 Kira's Guardian	357	100	1			1	1	85	77	ci2	tiara		3	5000	blac	blac						ac		50	120	res-all		50	70	nofreeze		1	1	balance2		20	20																																		0
 Ormus' Robes	358	100	1			1	1	83	75	uui	dusk shroud		3	5000	blac	blac						ac		10	20	cast2		20	20	extra-fire		10	15	extra-cold		10	15	extra-ltng		10	15	regen-mana		10	15	skill-rand	3	36	60																						0
-Gheed's Fortune	359	100	1			1	1	60	55	cm3	charm	1	3	5000	lgld							mag%		50	75	gold%		100	200	cheap		10	10	charm-property		3	3																																		0
+Gheed's Fortune	359	100	1			1	1	60	55	cm3	charm	1	3	5000	lgld			invscm3				mag%		50	75	gold%		100	200	cheap		10	10	charm-property		3	3																																		0
 Stormlash	360	100	1			1	1	86	82	7fl	scourge		3	5000	dgry	dgry						dmg%		240	300	swing2		30	30	hit-skill	Static Field	15	10	hit-skill	Tornado	20	18	dmg-ltng		1	473	light-thorns		30	30	crush		33	33	abs-ltng		3	9	oskill_hide	393	1	1														0
 Halaberd's Reign	361	100	1			1	1	85	77	bae	conqueror crown		3	5000								ac%		140	170	skilltab	13	1	1	bar		2	2	balance2		20	20	regen		15	23	skill	Battle Orders	1	2	skill	Battle Command	1	2																						0
 Warriv's Warder	362	100				1	1						3	5000																																																									0
@@ -375,10 +375,10 @@ Heaven's Light	371	100	1			1	1	69	61	7sc	mighty scepter		5	5000	cblu	cblu						d
 Merman's Sprocket	372	100					1																																																																0
 Arachnid Mesh	373	100	1			1	1	87	80	ulc	spiderweb sash		5	5000	blac	blac						ac%		90	120	cast2		20	20	charged	Venom	11	3	allskills		1	1	slow		10	10	mana%		5	5																										0
 Nosferatu's Coil	374	100	1			1	1	68	51	uvc	vampirefang belt		5	5000								str		15	15	mana-kill		2	2	slow		10	10	lifesteal		5	7	swing2		10	10	light		-3	-3																										0
-Metalgrid	375	100	1			7	1	85	81	amu	amulet		5	5000								ac		300	350	res-all		25	35	att		400	450	charged	IronGolem	11	22	charged	Iron Maiden	20	12																														0
+Metalgrid	375	100	1			7	1	85	81	amu	amulet		5	5000				invamu2				ac		300	350	res-all		25	35	att		400	450	charged	IronGolem	11	22	charged	Iron Maiden	20	12																														0
 Verdungo's Hearty Cord	376	100	1			1	1	71	63	umc	mithril coil		5	5000	blac	blac						ac%		90	140	vit		30	40					balance2		10	10	red-dmg%		10	15	regen		10	13																										0
 Siggard's Stealth	377	100				1	1						5	5000																																																									0
-Carrion Wind	378	100	1			5	1	67	60	rin	ring		3	5000								ac-miss		100	160	lifesteal		6	9	res-pois		55	55	gethit-skill	Poison Nova	10	10	charged	Plague Poppy	15	21	hit-skill	Twister	8	13	dmg-to-mana		10	10	dex		10	15																		0
+Carrion Wind	378	100	1			5	1	67	60	rin	ring		3	5000				invring1				ac-miss		100	160	lifesteal		6	9	res-pois		55	55	gethit-skill	Poison Nova	10	10	charged	Plague Poppy	15	21	hit-skill	Twister	8	13	dmg-to-mana		10	10	dex		10	15																		0
 Giant Skull	379	100	1			1	1	73	65	uh9	bone visage		3	5000	lgry	lgry		invbhm				ac		250	320	str		25	35	oskill	stun	5	5	healperhit		2	4	att		180	220																														0
 Astreon's Iron Ward	380	100	1			1	1	68	60	7ws	caduceus		3	5000	blac	blac						dmg%		240	290	slow		25	25	att%		150	200	swing2		10	10	dmg-mag		80	240	red-dmg		4	7	dmg		40	85	skilltab	9	2	4	crush		33	33	oskill_hide	393	1	1										0
 Annihilus	381	100	1			1		110	75	cm1	charm		3	5000			flpmss	invmss	item_gem	12	item_gem	allskills		1	1	all-stats		10	10	res-all		10	10	addxp		5	5	charm-property		1	1	uberstone-property		1	1																										0
@@ -1323,27 +1323,27 @@ Sin Sister	1318	100	1			3	1	28	45	7tw	Runic Talons		5	5000	blac	blac						dmg%		
 Avalanche Strike	1319	100	1			1	1	15	35	7qr	scissors suwayyah		5	5000	cblu	cblu						dmg%		300	400	dmg-cold	300	200	250	hit-skill	Glacial Spike	50	4	res-cold		45	45	rep-dur	15			lifesteal		6	8	manasteal		6	8	oskill_hide	393	1	1																		0
 Torturer's Trust	1320	100	1			3	1	79	83	7qr	Scissors Suwayyah		5	5000								dmg%		225	300	allskills		2	2	skilltab	20	1	3	res-all		30	50	skill-rand	7	251	280	regen		15	20	gold%		100	100	mag%		25	50	att%		100	100	oskill_hide	393	1	1										0
 Ring of Engagement	1321	100	1			7	1	1	3	rin	ring		5	5000				invring1				dmg-max		2	5	hp		10	20	str		5	5	aura	98	1	1																																		0
-Nameless Fear	1322	100	1			7	1	1	11	rin	ring		5	5000				invring3				dmg%		10	15	swing1		10	10	howl		45	45	noheal		1	1																																		0
-Elven Heartband	1323	100	1			7	1	1	18	rin	ring		5	5000				invring5				addxp		3	5	hp		20	30	red-dmg%		5	5	mag%		15	25	lifesteal		4	6																														0
-Knell of Discord	1324	100	1			7	1	2	20	rin	ring		5	5000				invring6				lifesteal		5	7	slow		15	15	knock		3	3	enr		10	10																																		0
-Vampiric Regeneration	1325	100	1			5	1	8	28	rin	ring		5	5000				invring8				hp		35	35	regen		8	12	regen-mana		35	35	regen-stam		20	20	manasteal		3	5	lifesteal		5	7																										0
-Golem's Might	1326	100	1			7	1	24	24	rin	ring		5	5000				invring10				str		25	25	dmg-norm		10	15	res-all		8	15	heal-kill		5	8	swing1		10	10																														0
-Plantar Enlightenment	1327	100	1			2	1	23	23	rin	ring		5	5000				invring12				allskills		1	1	res-all		8	15	hp		35	50	gold%		65	65	enr		20	20	addxp		3	5	cheap		8	10																						0
-Thief of Dreams	1328	100	1			2	1	50	50	rin	ring		5	5000				invring13				mag%		33	50	res-fire		25	35	mana		65	80	cast1		15	15	addxp		3	3																														0
-Jackal's Laughter	1329	100	1			2	1	64	64	rin	ring		5	5000				invring16				allskills		1	1	lifesteal		8	11	manasteal		7	8	hp		55	80	oskill	terror	6	6	deadly/lvl	3																												0
-Fellowship's Hope	1330	100	1			2	1	73	73	rin	ring		5	5000				invring18				allskills		1	1	mag%		25	35	res-all		15	15	red-dmg		5	8	red-mag		5	8	move1		10	10	cast1		10	10	block1		10	10																		0
-Faerie Ring	1331	100	1			2	1	82	82	rin	ring		5	5000				invring20				allskills		1	1	hp%		15	15	mana%		15	15	light		7	7	fade		1	1	block		15	20	mag%		25	50	balance2		20	20																		0
-Jordan's Sigil	1332	100	1			1	1	85	85	rin	ring		5	5000				invring21				allskills		2	2	mana%		40	40	cast1		15	15	dmg-ltng		10	100																																		0
-Eye of Kahn	1333	100	1			7	1	3	3	amu	amulet		5	5000				invammy7				hp		25	35	mana		25	35	dex		5	10	str		5	10	dmg-max		3	6																														0
-Psyche Shroud	1334	100	1			7	1	6	6	amu	amulet		5	5000				invammy5				move2		15	15	res-ltng		20	20	hp		20	30	enr		10	10																																		0
-Amulet of Warding	1335	100	1			7	1	12	12	amu	amulet		5	5000				invammy2				red-dmg		5	8	res-all		10	15	red-mag		4	6	block		5	12	ac		35	50																														0
-Cryptking	1336	100	1			5	1	27	27	amu	amulet		5	5000				invammy8				oskill	skeleton mastery	5	10	oskill	raise skeletal mage	3	5	dmg-undead		200	200	allskills		1	1	regen		6	8	regen-mana		25	50																										0
-Sequence of Seasons	1337	100	1			5	1	30	30	amu	amulet		5	5000				invammy4				allskills		1	1	dmg-cold	100	15	25	dmg-ltng		1	70	dmg-fire		30	50	aura	103	1	1	regen		6	8																										0
-Rat Lord's Curse	1338	100	1			5	1	38	38	amu	amulet		5	5000				invammy1				dmg-demon		100	100	hp		35	50	str		15	25	dex		15	25	red-dmg%		10	10	red-mag		6	9																										0
-Luck Sigil	1339	100	1			5	1	45	45	amu	amulet		5	5000				invammy3				allskills		1	1	mag%/lvl	12			gold%/lvl	16			att%		10	10	fade		1	1																														0
-The Vanquisher	1340	100	1			3	1	85	81	amu	amulet		5	5000				invammy9				dmg%		150	200	cast2		20	20	lifesteal		8	8	manasteal		8	8	swing2		20	20	dmg-norm		15	25																										0
-Foul Sigil	1341	100	1			3	1	78	78	amu	amulet		5	5000				invammy13				allskills		1	2	all-stats		15	25	regen		-3	-3	res-pois		65	65	swing1		15	15	block		15	15	nofreeze		1	1																						0
-Sigil of Hope	1342	100	1			1	1	85	85	amu	amulet		5	5000				invammy6				allskills		2	2	block		10	15	kill-skill	corpse explosion	5	15	mag%		35	50	gold%/lvl	16			att%		25	25	res-all-max		5	5	res-all		30	50																		0
+Nameless Fear	1322	100	1			7	1	1	11	rin	ring		5	5000				invring1				dmg%		10	15	swing1		10	10	howl		45	45	noheal		1	1																																		0
+Elven Heartband	1323	100	1			7	1	1	18	rin	ring		5	5000				invring1				addxp		3	5	hp		20	30	red-dmg%		5	5	mag%		15	25	lifesteal		4	6																														0
+Knell of Discord	1324	100	1			7	1	2	20	rin	ring		5	5000				invring1				lifesteal		5	7	slow		15	15	knock		3	3	enr		10	10																																		0
+Vampiric Regeneration	1325	100	1			5	1	8	28	rin	ring		5	5000				invring1				hp		35	35	regen		8	12	regen-mana		35	35	regen-stam		20	20	manasteal		3	5	lifesteal		5	7																										0
+Golem's Might	1326	100	1			7	1	24	24	rin	ring		5	5000				invring1				str		25	25	dmg-norm		10	15	res-all		8	15	heal-kill		5	8	swing1		10	10																														0
+Plantar Enlightenment	1327	100	1			2	1	23	23	rin	ring		5	5000				invring1				allskills		1	1	res-all		8	15	hp		35	50	gold%		65	65	enr		20	20	addxp		3	5	cheap		8	10																						0
+Thief of Dreams	1328	100	1			2	1	50	50	rin	ring		5	5000				invring1				mag%		33	50	res-fire		25	35	mana		65	80	cast1		15	15	addxp		3	3																														0
+Jackal's Laughter	1329	100	1			2	1	64	64	rin	ring		5	5000				invring1				allskills		1	1	lifesteal		8	11	manasteal		7	8	hp		55	80	oskill	terror	6	6	deadly/lvl	3																												0
+Fellowship's Hope	1330	100	1			2	1	73	73	rin	ring		5	5000				invring1				allskills		1	1	mag%		25	35	res-all		15	15	red-dmg		5	8	red-mag		5	8	move1		10	10	cast1		10	10	block1		10	10																		0
+Faerie Ring	1331	100	1			2	1	82	82	rin	ring		5	5000				invring1				allskills		1	1	hp%		15	15	mana%		15	15	light		7	7	fade		1	1	block		15	20	mag%		25	50	balance2		20	20																		0
+Jordan's Sigil	1332	100	1			1	1	85	85	rin	ring		5	5000				invring1				allskills		2	2	mana%		40	40	cast1		15	15	dmg-ltng		10	100																																		0
+Eye of Kahn	1333	100	1			7	1	3	3	amu	amulet		5	5000				invamu2				hp		25	35	mana		25	35	dex		5	10	str		5	10	dmg-max		3	6																														0
+Psyche Shroud	1334	100	1			7	1	6	6	amu	amulet		5	5000				invamu2				move2		15	15	res-ltng		20	20	hp		20	30	enr		10	10																																		0
+Amulet of Warding	1335	100	1			7	1	12	12	amu	amulet		5	5000				invamu2				red-dmg		5	8	res-all		10	15	red-mag		4	6	block		5	12	ac		35	50																														0
+Cryptking	1336	100	1			5	1	27	27	amu	amulet		5	5000				invamu2				oskill	skeleton mastery	5	10	oskill	raise skeletal mage	3	5	dmg-undead		200	200	allskills		1	1	regen		6	8	regen-mana		25	50																										0
+Sequence of Seasons	1337	100	1			5	1	30	30	amu	amulet		5	5000				invamu2				allskills		1	1	dmg-cold	100	15	25	dmg-ltng		1	70	dmg-fire		30	50	aura	103	1	1	regen		6	8																										0
+Rat Lord's Curse	1338	100	1			5	1	38	38	amu	amulet		5	5000				invamu2				dmg-demon		100	100	hp		35	50	str		15	25	dex		15	25	red-dmg%		10	10	red-mag		6	9																										0
+Luck Sigil	1339	100	1			5	1	45	45	amu	amulet		5	5000				invamu2				allskills		1	1	mag%/lvl	12			gold%/lvl	16			att%		10	10	fade		1	1																														0
+The Vanquisher	1340	100	1			3	1	85	81	amu	amulet		5	5000				invamu2				dmg%		150	200	cast2		20	20	lifesteal		8	8	manasteal		8	8	swing2		20	20	dmg-norm		15	25																										0
+Foul Sigil	1341	100	1			3	1	78	78	amu	amulet		5	5000				invamu2				allskills		1	2	all-stats		15	25	regen		-3	-3	res-pois		65	65	swing1		15	15	block		15	15	nofreeze		1	1																						0
+Sigil of Hope	1342	100	1			1	1	85	85	amu	amulet		5	5000				invamu2				allskills		2	2	block		10	15	kill-skill	corpse explosion	5	15	mag%		35	50	gold%/lvl	16			att%		25	25	res-all-max		5	5	res-all		30	50																		0
 Autumn's Avatar	1343	100	1			3	1	12	12	cm1	charm	1	5	5000				invscm1				hp		20	30	mana		20	30	dmg-max		5	10	str		3	5	charm-property		1	1																														0
 Remembrance of Glory	1344	100	1			1	1	81	80	cm1	charm	1	5	5000				invscm1	item_scroll			hp		50	100	mana		50	100	res-all		5	10	dex		10	10	charm-property		1	1																														0
 Argo's Anchor	1345	100	1			3	1	48	48	cm1	charm	1	5	5000				invscm1	item_jewel			dmg-max		10	15	mag%		15	25	block		5	10	att		50	75	charm-property		1	1																														0
@@ -1413,4 +1413,4 @@ Rune Pliers	1439	100	0			1	1	1	1	rup	Rune Pliers		1	1					item_rune		item_rune		
 Jewel Pliers	1440	100	0			1	1	1	1	jwp	Jewel Pliers		1	1					item_gem		item_gem																																																		0
 Quiver of Pestilence	1441	100	1			1	1	1	85	z01	Arrows		5	5000	cgrn	cgrn		invarro3				pierce-pois		10	10	extra-pois		10	10	swing1		20	20	pierce		25	25	rep-quant	100			hit-skill	74	5	10	oskill_hide	393	1	1																						0
 Bolt Case of Pestilence	1442	100	1			1	1	1	85	z02	Bolts		5	5000	cgrn	cgrn						pierce-pois		10	10	extra-pois		10	10	swing1		20	20	pierce		25	25	rep-quant	100			hit-skill	74	5	10	oskill_hide	393	1	1																						0
-Barilzar's Mazed Band	1443	100	0			1	1	1	25	rin	ring		5	5000				invring21				oskill	Warp	1	1	res-all		5	5	all-stats		5	5																																						0
+Barilzar's Mazed Band	1443	100	0			1	1	1	25	rin	ring		5	5000				invring1				oskill	Warp	1	1	res-all		5	5	all-stats		5	5																																						0
