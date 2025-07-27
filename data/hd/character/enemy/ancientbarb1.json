@@ -1,0 +1,301 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/skeleton/ancientbarb1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_cloud_threshold.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_armor_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_armor_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_armor_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_hair_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_head_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_head_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_head_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_torso_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_torso_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb_torso_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/ancientbarb1_state_machine.json"
+            },
+            {
+                "path": "data/hd/items/armor/shield/_monsters/talic_shield.json"
+            },
+            {
+                "path": "data/hd/items/weapon/sword/_monsters/talic_sword.json"
+            },
+            {
+                "path": "data/hd/overlays/barbarian/whirlwind.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/ancientbarb1_variant.json"
+            }
+        ],
+        "objecteffects": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/ancientbarb1/vfx_ancientbarb1_objfx.particles",
+                "dependency": ""
+            }
+        ],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "ancientbarb1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 267185926,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/ancientbarb1/ancientbarb1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/ancientbarb1/skeleton/ancientbarb1.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/ancientbarb1/ancientbarb1_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/barbarian/whirlwind.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 9.0,
+                            "animationName": "Walk"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_VV",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_VV_footIKSetup_0",
+                                "footBoneName": "R_Foot",
+                                "kneeBoneName": "R_Calf",
+                                "hipBoneName": "R_Thigh",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_VV_footIKSetup_1",
+                                "footBoneName": "L_Foot",
+                                "kneeBoneName": "L_Calf",
+                                "hipBoneName": "L_Thigh",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_root_DeadAnimationSpeedOverride",
+                    "speed": 1.0
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1139221695,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/ancientbarb1/torso.model",
+                    "visibleLayers": 2057,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "ObjectEffectDefinitionComponent",
+                    "name": "entity_torso_ObjectEffectDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/ancientbarb1/vfx_ancientbarb1_objfx.particles"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "comp_spec1",
+            "id": 1778563947,
+            "components": [
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "comp_spec1_UnitAttachment",
+                    "filename": "data/hd/items/weapon/sword/_monsters/talic_sword.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "comp_spec1_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5,
+                            "z": 1.5
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "special1",
+                    "variant": "lit"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "comp_spec2",
+            "id": 2696102020,
+            "components": [
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "comp_spec2_UnitAttachment",
+                    "filename": "data/hd/items/armor/shield/_monsters/talic_shield.json",
+                    "overrideBoneName": "shield_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "comp_spec2_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "special2",
+                    "variant": "lit"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,287 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/suicideminion1/death_layer.model"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/head_hvy.model"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/head_med.model"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/suicideminion1/skeleton/suicideminion1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/minion1/textures/minion1_body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/minion1/textures/minion1_body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/minion1/textures/minion1_body_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion_blood_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion_blood_NRM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion_blood_ORM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion1_bodyhvy_SSS.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion1_bodymed_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion1_Bodymed_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion1_bodymed_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion1_bodymed_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/suicideminion1/textures/suicideminion1_bodymed_SSS.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/zombie1/textures/zombie1_death_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/zombie1/textures/zombie1_death_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/zombie1/textures/zombie1_death_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/suicideminion1/suicideminion1_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/suicideminion1/suicideminion1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "suicideminion1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 711385378,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/suicideminion1/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_head_med",
+            "id": 632832218,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_head_med_ModelDefinition",
+                    "filename": "data/hd/character/enemy/suicideminion1/head_med.model",
+                    "visibleLayers": 11,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "UnitPartComponent",
+                    "name": "entity_head_med_UnitPart",
+                    "part": "head",
+                    "variant": "med"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_head_lit",
+            "id": 4239339882,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_head_lit_ModelDefinition",
+                    "filename": "data/hd/character/enemy/suicideminion1/head_med.model",
+                    "visibleLayers": 11,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "UnitPartComponent",
+                    "name": "entity_head_lit_UnitPart",
+                    "part": "head",
+                    "variant": "lit"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4134251882,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/suicideminion1/suicideminion1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/suicideminion1/skeleton/suicideminion1.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/suicideminion1/suicideminion1_variant.json"
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_root_DeadAnimationSpeedOverrideComponent",
+                    "speed": 1.0
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "VV_Quad_Leg",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "VV_Quad_Leg_footIKSetup_0",
+                                "footBoneName": "L_leg_Foot",
+                                "kneeBoneName": "L_leg_Calf",
+                                "hipBoneName": "L_leg_Thigh",
+                                "locationTrackName": "L_IK_Position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "VV_Quad_Leg_footIKSetup_1",
+                                "footBoneName": "R_leg_Foot",
+                                "kneeBoneName": "R_leg_Calf",
+                                "hipBoneName": "R_leg_Thigh",
+                                "locationTrackName": "R_IK_Position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_head_hvy",
+            "id": 3746840508,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_head_hvy_ModelDefinition",
+                    "filename": "data/hd/character/enemy/suicideminion1/head_hvy.model",
+                    "visibleLayers": 11,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "UnitPartComponent",
+                    "name": "entity_head_hvy_UnitPart",
+                    "part": "head",
+                    "variant": "hvy"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_dead",
+            "id": 1283422310,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_dead_ModelDefinition",
+                    "filename": "data/hd/character/enemy/suicideminion1/death_layer.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}

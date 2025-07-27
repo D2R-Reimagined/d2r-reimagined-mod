@@ -1,0 +1,185 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/griswold/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/griswold/skeleton/griswold.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_Garment_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_Garment_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_Garment_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_Hair_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/griswold/textures/Griswold_SSS.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/griswold/griswold_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/griswold/griswold_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "griswold",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4288415946,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/griswold/griswold_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/griswold/skeleton/griswold.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/griswold/griswold_variant.json"
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Outsource_Biped_Alt",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Biped_Alt_footIKSetup_0",
+                                "footBoneName": "ankle_L_JNT",
+                                "kneeBoneName": "knee_L_JNT",
+                                "hipBoneName": "hip_L_JNT",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Biped_Alt_footIKSetup_1",
+                                "footBoneName": "ankle_R_JNT",
+                                "kneeBoneName": "knee_R_JNT",
+                                "hipBoneName": "hip_R_JNT",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 525891927,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/griswold/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}

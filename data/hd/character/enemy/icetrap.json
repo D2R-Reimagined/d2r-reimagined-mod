@@ -1,0 +1,156 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/lightningspire/fx_lightningspire_ambient_ball.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/lightningspire/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/lightningspire/skeleton/lightningspire.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Gargoyle_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Gargoyle_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Gargoyle_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Spire_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Spire_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/lightningspire/textures/LightningSpire_Spire_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/default/Black.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/lightningspire/lightningspire_state_machine.json"
+            },
+            {
+                "path": "data/hd/missiles/electric_nova.json"
+            },
+            {
+                "path": "data/hd/overlays/sorceress/light_cast_1.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/lightningspire/lightningspire_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "lightningspire",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 2248570827,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/lightningspire/lightningspire_state_machine.json",
+                    "doNotInheritRotation": true,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/lightningspire/skeleton/lightningspire.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/lightningspire/lightningspire_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/electric_nova.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/sorceress/light_cast_1.json"
+                        }
+                    ],
+                    "minions": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 2797725784,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/lightningspire/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "vfx",
+            "id": 1181865098,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "vfx_components_vfx",
+                    "filename": "data/hd/vfx/particles/character/enemy/lightningspire/fx_lightningspire_ambient_ball.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}
