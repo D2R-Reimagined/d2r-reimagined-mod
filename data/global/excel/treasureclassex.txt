@@ -5,6 +5,8 @@ Gold 1x			1					0	Void	5	"gld,mul=1024"	1																							0
 Gold 1.5x			1					0	Void	5	"gld,mul=1536"	1																							0
 Gold 2x			1					0	Void	5	"gld,mul=2048"	1																							0
 Gold 2.5x			1					0	Void	5	"gld,mul=2560"	1																							0
+Stat State Potions			1					0	mfp	1	exp	1																							0
+Sunder State Potions			1					0	fsp	1	csp	1	lsp	1	psp	1	msp	1	php	1															0
 Infusion Orb (Normal)			1					0	ooi	1																								1	0
 Assemblage Orb (Normal)			1					0	ooa	1																								1	0
 Conversion Orb (Normal)			1					0	ooc	1																								1	0
@@ -19,7 +21,11 @@ Gem Cluster			1					0	1gc	1																								1	0
 Pandemonium Key A			1					0	pk1	1																								1	0
 Pandemonium Key B			1					0	pk2	1																								1	0
 Pandemonium Key C			1					0	pk3	1																								1	0
-Pandemonium Keys			1					0	pk1	1	pk2	1	pk3	1																				1	0
+Pandemonium Key D			1					0	pk4	1																								1	0
+Pandemonium Key E			1					0	pk5	1																								1	0
+Pandemonium Key F			1					0	pk6	1																								1	0
+Pandemonium Key G			1					0	pk7	1																								1	0
+Pandemonium Keys			1					0	pk1	1	pk2	1	pk3	1	pk4	1	pk5	1	pk6	1	pk7	1												1	0
 Jewelry Orbs Single			1					0	Infusion Orb (Normal)	4	Assemblage Orb (Normal)	1	Conversion Orb (Normal)	1																				1	0
 Jewelry Orbs Stack			1					0	Infusion Orb	4	Assemblage Orb	1	Conversion Orb	1																				1	0
 Sunder Charms			1					1414	Cold Rupture	1	Flame Rift	1	Crack of the Heavens	1	Rotting Fissure	1	Bone Break	1	Black Cleft	1														1	0
@@ -58,6 +64,15 @@ Runes 14			1					0	s27	3	s28	2	Runes 13	210																					0
 Runes 15			1					0	s29	3	s30	2	Runes 14	240																					0
 Runes 16			1					0	s31	3	s32	2	Runes 15	260																					0
 Runes 17			1					0	s33	1	Runes 16	280																							0
+Pandemonium Key A			1					0	pk1	1																									0
+Pandemonium Key B			1					0	pk2	1																									0
+Pandemonium Key C			1					0	pk3	1																									0
+Pandemonium Key D			1					0	pk4	1																									0
+Pandemonium Key E			1					0	pk5	1																									0
+Pandemonium Key F			1					0	pk6	1																									0
+Pandemonium Key G			1					0	pk7	1																									0
+Pandemonium Keys			1					800	pk1	1	pk2	1	pk3	1	pk4	1	pk5	1	pk6	1	pk7	1													0
+Pandemonium Keys T1			1					600	pk1	1	pk2	1	pk3	1	pk4	1	pk5	1	pk6	1	pk7	1													0
 Act 1 Equip A	1	0	1					1	weap3	7	armo3	7																							0
 Act 1 Equip B	1	5	1					1	weap3	3	armo3	3	weap6	7	armo6	7																			0
 Act 1 Equip C	1	9	1					1	weap3	2	armo3	1	weap6	6	armo6	3	weap9	14	armo9	7	weap12	2	armo12	1											0
@@ -1426,6 +1441,231 @@ ROP (H)			1					0	Annihilus	1																									0
 Uber Andariel			1					0	dhn	1																									0
 Uber Duriel			1					0	bey	1																									0
 Uber Izual			1					0	mbr	1																									0
+Andariel's Hoof			1					0	aho	1																									0
+Duriel's Carapace			1					0	dca	1																									0
+Belial's Tongue			1					0	bto	1																									0
+Azmodan's Heart			1					0	ahe	1																									0
 Mephisto's Animus			1					0	mpa	1																									0
 Baal's Calamity			1					0	blc	1																									0
-Diablo's Ire			1					0	dia	1																									0
+Andariel's Suffering			1					0	asu	1																									0
+Duriel's Torment			1					0	dto	1																									0
+Azmodan's Guilt			1					0	agu	1																									0
+Belial's Deceit			1					0	bde	1																									0
+Countess			-2	883	883	883	1024	0	Countess Item	1	Countess Rune	1																							0
+Countess Desecrated A	35	11	-3	883	883	883	1024	0	Corruption Orb	1	Countess Item Desecrated A	1	Countess Rune	1																					0
+Countess Desecrated B	35	34	-3	883	883	883	1024	0	Corruption Orb	1	Countess Item Desecrated B	1	Countess Rune	1																					0
+Countess Desecrated C	35	48	-3	883	883	883	1024	0	Corruption Orb	1	Countess Item Desecrated C	1	Countess Rune	1																					0
+Countess (N)			-3	883	883	983	1024	0	Socket Orb	1	Countess Item (N)	1	Countess Rune (N)	1																					0
+Countess (N) Desecrated A	35	45	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (N) Desecrated A	1	Countess Rune (N) Desecrated	1																	0
+Countess (N) Desecrated B	35	59	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (N) Desecrated B	1	Countess Rune (N) Desecrated	1																	0
+Countess (N) Desecrated C	35	73	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (N) Desecrated C	1	Countess Rune (N) Desecrated	1																	0
+Countess (H)			-3	883	883	983	1024	0	Socket Orb	1	Countess Item (H)	1	Countess Rune (H)	1																					0
+Countess (H) Desecrated A	35	82	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (H) Desecrated A	1	Countess Rune (H) Desecrated	1																	0
+Countess (H) Desecrated B	35	84	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (H) Desecrated B	1	Countess Rune (H) Desecrated	1																	0
+Countess (H) Desecrated C	35	87	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (H) Desecrated C	1	Countess Rune (H) Desecrated	1																	0
+Countess (H) Desecrated D	35	90	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (H) Desecrated D	1	Countess Rune (H) Desecrated	1																	0
+Countess (H) Desecrated E	35	93	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (H) Desecrated E	1	Countess Rune (H) Desecrated	1																	0
+Countess (H) Desecrated F	35	96	-5	883	883	983	1024	0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Countess Item (H) Desecrated F	1	Countess Rune (H) Desecrated	1																	0
+Uber Andariel			1	1024				0	dhn	1																									0
+Uber Duriel			1	1024				0	bey	1																									0
+Uber Izual			1	1024				0	mbr	1																									0
+Andariel's Hoof			1	1024				0	aho	1																									0
+Duriel's Carapace			1	1024				0	dca	1																									0
+Belial's Tongue			1	1024				0	bto	1																									0
+Azmodan's Heart			1	1024				0	ahe	1																									0
+Torch			1	1024				0	Hellfire Torch	1																									0
+Mephisto's Animus			1	1024				0	mpa	1																									0
+Baal's Calamity			1	1024				0	blc	1																									0
+Diablo's Ire			1	1024				0	dia	1																									0
+Andariel's Suffering			1	1024				0	asu	1																									0
+Duriel's Torment			1	1024				0	dto	1																									0
+Azmodan's Guilt			1	1024				0	agu	1																									0
+Belial's Deceit			1	1024				0	bde	1																									0
+Workfire			-2					0	Act 5 Super C	1	Act 2 Good	1																							0
+Workfire (N)			-2					0	Act 5 (N) Super C	1	Act 2 (N) Good	1																							0
+Workfire (H)			-2					0	Act 5 (H) Super C	1	Act 2 (H) Good	1																							0
+Treehead Woodfist			-2					0	Act 1 Super B	2																									0
+Treehead Woodfist (N)			-2					0	Act 1 (N) Super B	2																									0
+Treehead Woodfist (H)			-2					0	Act 1 (H) Super B	2																									0
+Snapchip			-1					0	Act 5 Super B	1																									0
+Snapchip (N)			-1					0	Act 5 (N) Super B	1																									0
+Snapchip (H)			-1					0	Act 5 (H) Super B	1																									0
+Act 1 (N) Champ A Desecrated	36	68	-3					0	Socket Orb	1	Sunder Charms	1	Act 1 (N) Champ A	1																					0
+Act 1 (N) Champ B Desecrated	36	68	-3					0	Socket Orb	1	Sunder Charms	1	Act 1 (N) Champ B	1																					0
+Act 1 (N) Champ C Desecrated	36	68	-3					0	Socket Orb	1	Sunder Charms	1	Act 1 (N) Champ C	1																					0
+Act 2 (N) Champ A Desecrated	36	71	-3					0	Socket Orb	1	Sunder Charms	1	Act 2 (N) Champ A	1																					0
+Act 2 (N) Champ B Desecrated	36	71	-3					0	Socket Orb	1	Sunder Charms	1	Act 2 (N) Champ B	1																					0
+Act 2 (N) Champ C Desecrated	36	71	-3					0	Socket Orb	1	Sunder Charms	1	Act 2 (N) Champ C	1																					0
+Act 3 (N) Champ A Desecrated	36	74	-3					0	Socket Orb	1	Sunder Charms	1	Act 3 (N) Champ A	1																					0
+Act 3 (N) Champ B Desecrated	36	74	-3					0	Socket Orb	1	Sunder Charms	1	Act 3 (N) Champ B	1																					0
+Act 3 (N) Champ C Desecrated	36	74	-3					0	Socket Orb	1	Sunder Charms	1	Act 3 (N) Champ C	1																					0
+Act 4 (N) Champ A Desecrated	36	77	-3					0	Socket Orb	1	Sunder Charms	1	Act 4 (N) Champ A	1																					0
+Act 4 (N) Champ B Desecrated	36	77	-3					0	Socket Orb	1	Sunder Charms	1	Act 4 (N) Champ B	1																					0
+Act 5 (N) Champ A Desecrated	36	77	-3					0	Socket Orb	1	Sunder Charms	1	Act 5 (N) Champ A	1																					0
+Act 5 (N) Champ B Desecrated	36	80	-3					0	Socket Orb	1	Sunder Charms	1	Act 5 (N) Champ B	1																					0
+Act 5 (N) Champ C Desecrated	36	80	-3					0	Socket Orb	1	Sunder Charms	1	Act 5 (N) Champ C	1																					0
+Act 1 (H) Champ A Desecrated	36	81	-3					0	Socket Orb	1	Sunder Charms	1	Act 1 (H) Champ A	1																					0
+Act 1 (H) Champ B Desecrated	36	81	-3					0	Socket Orb	1	Sunder Charms	1	Act 1 (H) Champ B	1																					0
+Act 1 (H) Champ C Desecrated	36	81	-3					0	Socket Orb	1	Sunder Charms	1	Act 1 (H) Champ C	1																					0
+Act 2 (H) Champ A Desecrated	36	83	-3					0	Socket Orb	1	Sunder Charms	1	Act 2 (H) Champ A	1																					0
+Act 2 (H) Champ B Desecrated	36	83	-3					0	Socket Orb	1	Sunder Charms	1	Act 2 (H) Champ B	1																					0
+Act 2 (H) Champ C Desecrated	36	83	-3					0	Socket Orb	1	Sunder Charms	1	Act 2 (H) Champ C	1																					0
+Act 3 (H) Champ A Desecrated	36	85	-3					0	Socket Orb	1	Sunder Charms	1	Act 3 (H) Champ A	1																					0
+Act 3 (H) Champ B Desecrated	36	85	-3					0	Socket Orb	1	Sunder Charms	1	Act 3 (H) Champ B	1																					0
+Act 3 (H) Champ C Desecrated	36	85	-3					0	Socket Orb	1	Sunder Charms	1	Act 3 (H) Champ C	1																					0
+Act 4 (H) Champ A Desecrated	36	87	-3					0	Socket Orb	1	Sunder Charms	1	Act 4 (H) Champ A	1																					0
+Act 4 (H) Champ B Desecrated	36	87	-3					0	Socket Orb	1	Sunder Charms	1	Act 4 (H) Champ B	1																					0
+Act 5 (H) Champ A Desecrated	36	87	-3					0	Socket Orb	1	Sunder Charms	1	Act 5 (H) Champ A	1																					0
+Act 5 (H) Champ B Desecrated	36	90	-3					0	Socket Orb	1	Sunder Charms	1	Act 5 (H) Champ B	1																					0
+Act 5 (H) Champ C Desecrated	36	96	-3					0	Socket Orb	1	Sunder Charms	1	Act 5 (H) Champ C	1																					0
+Act 1 (N) Unique A Desecrated	37	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Unique A	1																			0
+Act 1 (N) Unique B Desecrated	37	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Unique B	1																			0
+Act 1 (N) Unique C Desecrated	37	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Unique C	1																			0
+Act 2 (N) Unique A Desecrated	37	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Unique A	1																			0
+Act 2 (N) Unique B Desecrated	37	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Unique B	1																			0
+Act 2 (N) Unique C Desecrated	37	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Unique C	1																			0
+Act 3 (N) Unique A Desecrated	37	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Unique A	1																			0
+Act 3 (N) Unique B Desecrated	37	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Unique B	1																			0
+Act 3 (N) Unique C Desecrated	37	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Unique C	1																			0
+Act 4 (N) Unique A Desecrated	37	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Unique A	1																			0
+Act 4 (N) Unique B Desecrated	37	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Unique B	1																			0
+Act 5 (N) Unique A Desecrated	37	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Unique A	1																			0
+Act 5 (N) Unique B Desecrated	37	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Unique B	1																			0
+Act 5 (N) Unique C Desecrated	37	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Unique C	1																			0
+Act 1 (N) Super A Desecrated	38	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Super A	1																			0
+Act 1 (N) Super B Desecrated	38	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Super B	1																			0
+Act 1 (N) Super C Desecrated	38	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Super C	1																			0
+Act 2 (N) Super A Desecrated	38	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Super A	1																			0
+Act 2 (N) Super B Desecrated	38	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Super B	1																			0
+Act 2 (N) Super C Desecrated	38	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Super C	1																			0
+Act 3 (N) Super A Desecrated	38	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Super A	1																			0
+Act 3 (N) Super B Desecrated	38	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Super B	1																			0
+Act 3 (N) Super C Desecrated	38	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Super C	1																			0
+Act 4 (N) Super A Desecrated	38	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Super A	1																			0
+Act 4 (N) Super B Desecrated	38	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Super B	1																			0
+Act 4 (N) Super C Desecrated	38	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Super C	1																			0
+Act 5 (N) Super A Desecrated	38	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Super A	1																			0
+Act 5 (N) Super B Desecrated	38	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Super B	1																			0
+Act 5 (N) Super C Desecrated	38	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Super C	1																			0
+Act 1 (N) Super Ax Desecrated	39	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Super Ax	1																			0
+Act 1 (N) Super Bx Desecrated	39	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Super Bx	1																			0
+Act 1 (N) Super Cx Desecrated	39	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) Super Cx	1																			0
+Act 2 (N) Super Ax Desecrated	39	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Super Ax	1																			0
+Act 2 (N) Super Bx Desecrated	39	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Super Bx	1																			0
+Act 2 (N) Super Cx Desecrated	39	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) Super Cx	1																			0
+Act 3 (N) Super Ax Desecrated	39	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Super Ax	1																			0
+Act 3 (N) Super Bx Desecrated	39	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Super Bx	1																			0
+Act 3 (N) Super Cx Desecrated	39	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) Super Cx	1																			0
+Act 4 (N) Super Ax Desecrated	39	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Super Ax	1																			0
+Act 4 (N) Super Bx Desecrated	39	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Super Bx	1																			0
+Act 4 (N) Super Cx Desecrated	39	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) Super Cx	1																			0
+Act 5 (N) Super Ax Desecrated	39	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Super Ax	1																			0
+Act 5 (N) Super Bx Desecrated	39	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Super Bx	1																			0
+Act 5 (N) Super Cx Desecrated	39	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) Super Cx	1																			0
+Act 1 (N) LT Desecrated	42	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) LT	1																			0
+Act 2 (N) LT Desecrated	42	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) LT	1																			0
+Act 3 (N) LT Desecrated	42	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) LT	1																			0
+Act 4 (N) LT Desecrated	42	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) LT	1																			0
+Act 5 (N) LT Desecrated	42	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) LT	1																			0
+Act 1 (N) LT Swarm Desecrated	43	68	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (N) LT Swarm	1																			0
+Act 2 (N) LT Swarm Desecrated	43	71	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (N) LT Swarm	1																			0
+Act 3 (N) LT Swarm Desecrated	43	74	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (N) LT Swarm	1																			0
+Act 4 (N) LT Swarm Desecrated	43	77	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (N) LT Swarm	1																			0
+Act 5 (N) LT Swarm Desecrated	43	80	-4					0	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (N) LT Swarm	1																			0
+Act 1 (H) Unique A Desecrated	37	81	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (H) Unique A	1																	0
+Act 1 (H) Unique B Desecrated	37	81	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (H) Unique B	1																	0
+Act 1 (H) Unique C Desecrated	37	81	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (H) Unique C	1																	0
+Act 2 (H) Unique A Desecrated	37	83	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (H) Unique A	1																	0
+Act 2 (H) Unique B Desecrated	37	83	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (H) Unique B	1																	0
+Act 2 (H) Unique C Desecrated	37	83	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (H) Unique C	1																	0
+Act 3 (H) Unique A Desecrated	37	85	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (H) Unique A	1																	0
+Act 3 (H) Unique B Desecrated	37	85	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (H) Unique B	1																	0
+Act 3 (H) Unique C Desecrated	37	85	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (H) Unique C	1																	0
+Act 4 (H) Unique A Desecrated	37	87	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (H) Unique A	1																	0
+Act 4 (H) Unique B Desecrated	37	87	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (H) Unique B	1																	0
+Act 5 (H) Unique A Desecrated	37	87	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (H) Unique A	1																	0
+Act 5 (H) Unique B Desecrated	37	90	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (H) Unique B	1																	0
+Act 5 (H) Unique C Desecrated	37	96	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (H) Unique C	1																	0
+Act 1 (H) Super A Desecrated	38	81	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 1 (H) Super A	1															0
+Act 1 (H) Super B Desecrated	38	81	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 1 (H) Super B	1															0
+Act 1 (H) Super C Desecrated	38	81	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 1 (H) Super C	1															0
+Act 2 (H) Super A Desecrated	38	83	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 2 (H) Super A	1															0
+Act 2 (H) Super B Desecrated	38	83	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 2 (H) Super B	1															0
+Act 2 (H) Super C Desecrated	38	83	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 2 (H) Super C	1															0
+Act 3 (H) Super A Desecrated	38	85	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 3 (H) Super A	1															0
+Act 3 (H) Super B Desecrated	38	85	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 3 (H) Super B	1															0
+Act 3 (H) Super C Desecrated	38	85	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 3 (H) Super C	1															0
+Act 4 (H) Super A Desecrated	38	87	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 4 (H) Super A	1															0
+Act 4 (H) Super B Desecrated	38	87	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 4 (H) Super B	1															0
+Act 4 (H) Super C Desecrated	38	87	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 4 (H) Super C	1															0
+Act 5 (H) Super A Desecrated	38	90	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 5 (H) Super A	1															0
+Act 5 (H) Super B Desecrated	38	90	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 5 (H) Super B	1															0
+Act 5 (H) Super C Desecrated	38	96	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 5 (H) Super C	1															0
+Act 1 (H) Super Ax Desecrated	39	81	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 1 (H) Super Ax	1															0
+Act 1 (H) Super Bx Desecrated	39	81	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 1 (H) Super Bx	1															0
+Act 1 (H) Super Cx Desecrated	39	81	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 1 (H) Super Cx	1															0
+Act 2 (H) Super Ax Desecrated	39	83	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 2 (H) Super Ax	1															0
+Act 2 (H) Super Bx Desecrated	39	83	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 2 (H) Super Bx	1															0
+Act 2 (H) Super Cx Desecrated	39	83	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 2 (H) Super Cx	1															0
+Act 3 (H) Super Ax Desecrated	39	85	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 3 (H) Super Ax	1															0
+Act 3 (H) Super Bx Desecrated	39	85	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 3 (H) Super Bx	1															0
+Act 3 (H) Super Cx Desecrated	39	85	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 3 (H) Super Cx	1															0
+Act 4 (H) Super Ax Desecrated	39	87	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 4 (H) Super Ax	1															0
+Act 4 (H) Super Bx Desecrated	39	87	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 4 (H) Super Bx	1															0
+Act 4 (H) Super Cx Desecrated	39	87	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 4 (H) Super Cx	1															0
+Act 5 (H) Super Ax Desecrated	39	90	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 5 (H) Super Ax	1															0
+Act 5 (H) Super Bx Desecrated	39	90	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 5 (H) Super Bx	1															0
+Act 5 (H) Super Cx Desecrated	39	96	-6					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Pandemonium Keys	1	Act 5 (H) Super Cx	1															0
+Act 1 (H) LT Desecrated	42	81	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (H) LT	1																	0
+Act 2 (H) LT Desecrated	42	83	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (H) LT	1																	0
+Act 3 (H) LT Desecrated	42	85	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (H) LT	1																	0
+Act 4 (H) LT Desecrated	42	87	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (H) LT	1																	0
+Act 5 (H) LT Desecrated	42	96	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (H) LT	1																	0
+Act 1 (H) LT Swarm Desecrated	43	81	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 1 (H) LT Swarm	1																	0
+Act 2 (H) LT Swarm Desecrated	43	83	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 2 (H) LT Swarm	1																	0
+Act 3 (H) LT Swarm Desecrated	43	85	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 3 (H) LT Swarm	1																	0
+Act 4 (H) LT Swarm Desecrated	43	87	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 4 (H) LT Swarm	1																	0
+Act 5 (H) LT Swarm Desecrated	43	96	-5					0	Shadow Orb	1	Corruption Orb	1	Socket Orb	1	Sunder Charms	1	Act 5 (H) LT Swarm	1																	0
+Act 1 Super A + t1 Splash Charm		0	-5	800	800	972	1024	0	Act 1 Uitem A	2	Normal Potion	2	t1 Splash Charm	1																					0
+Area Boss Item			-3					10																											0
+Area Boss			5	883	883	983	1024	0																											0
+Area Boss Item (N)			-3					10																											0
+Area Boss (N)			5	883	883	983	1024	0																											0
+Legendary Weapons Item 1			1	883	883	983	1024	0	The Butcher's Cleaver	1	Natalya's Solace	1	Talic's Sword	1	Tyreal's Sword of Justice	1	Trang'Ouls Reanimator	1	Leoric's Sword of the Undead	1	Andariel's Aculeus	1	The Staff of Esu	1	Korlic's Protector	1	Madawc's Guardian	1							0
+Legendary Weapons Item 2			1	883	883	983	1024	0		1		1		1		1		1																	0
+Legendary Weapons Item 3			1	883	883	983	1024	0		1		1		1		1		1																	0
+Bloodied Wolf Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Tainted Strike	3	Pandemonium Keys	3																	0
+Bloodied Wolf (H)			-3	883	883	983	1024	0	Socket Orb	1	Bloodied Wolf Item (H)	1																							0
+Earthshaker Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Violent Force	3	Pandemonium Keys	3																	0
+Earthshaker (H)			-3	883	883	983	1024	0	Socket Orb	1	Countess Item (H)	1	Countess Rune (H)	1																					0
+Fire Triad Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Pyrectic Flame	3	Pandemonium Keys	3																	0
+Fire Triad (H)			-3	883	883	983	1024	0	Socket Orb	1	Fire Triad Item (H)	1																							0
+Cold Triad Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Glacial Frost	3	Pandemonium Keys	3																	0
+Cold Triad (H)			-3	883	883	983	1024	0	Socket Orb	1	Cold Triad Item (H)	1																							0
+Lightning Triad Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Tempest Crack	3	Pandemonium Keys	3																	0
+Lightning Triad (H)			-3	883	883	983	1024	0	Socket Orb	1	Lightning Triad Item (H)	1																							0
+Gloomfang Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3	Pandemonium Keys	2																	0
+Gloomfang (H)			-3	883	883	983	1024	0	Socket Orb	1	Gloomfang Item (H)	1																							0
+The Skeleton King Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3	Pandemonium Keys	2																	0
+The Skeleton King (H)			-3	883	883	983	1024	0	Socket Orb	1	The Skeleton King Item (H)	1																							0
+Nightshade Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3	Pandemonium Keys	2																	0
+Nightshade (H)			-3	883	883	983	1024	0	Socket Orb	1	Nightshade Item (H)	1																							0
+Tathamet Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3	Pandemonium Keys	2																	0
+Tathamet (H)			-3	883	883	983	1024	0	Socket Orb	1	Tathamet Item (H)	1																							0
+Uber Trang'Oul Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Conjuring Hex	1																			0
+Uber Trang'Oul (H)			-3	883	883	983	1024	0	bto	1	Uber Trang'Oul Item (H)	1																							0
+Uber Uttu Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3		2																	0
+Uber Uttu (H)			-3	883	883	983	1024	0	dca	1	Uber Uttu Item (H)	1																							0
+Uber Na-Krul Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3		2																	0
+Uber Na-Krul (H)			-3	883	883	983	1024	0	ahe	1	Uber Na-Krul Item (H)	1																							0
+Uber Butcher Item (H)			5					10	Act 1 (H) LT Desecrated	1	Act 5 (H) Super Cx Desecrated	2	Legendary Weapons Item 1	15																					0
+Uber Butcher (H)			-3	883	883	983	1024	0	aho	1	Uber Butcher Item (H)	1																							0
+Uber Belial Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3		2																	0
+Uber Belial (H)			-3	883	883	983	1024	0	bde	1	Uber Belial Item (H)	1																							0
+Uber Duriel Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3		2																	0
+Uber Duriel (H)			-3	883	883	983	1024	0	dto	1	Uber Duriel Item (H)	1																							0
+Uber Andariel Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3		2																	0
+Uber Andariel (H)			-3	883	883	983	1024	0	asu	1	Uber Andariel Item (H)	1																							0
+Uber Azmodan Item (H)			5					10	Gold 2.5x	7	Act 1 (H) Equip C	19	Legendary Weapons Item 1	15	Act 2 (H) Good	3		2																	0
+Uber Azmodan (H)			-3	883	883	983	1024	0	agu	1	Uber Azmodan Item (H)	1																							0
+cheat			-6	883	883	983	1024	0	Legendary Weapons Item 1	6																									0

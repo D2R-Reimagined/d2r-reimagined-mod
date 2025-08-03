@@ -1,0 +1,258 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/spiritwolf/vfx_spiritwolf_spawn.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/spiritwolf/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/spiritwolf/skeleton/spiritwolf.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_body_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_body_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_fur_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_fur_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/spiritwolf/textures/spiritwolf_fur_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/wolf/textures/fur_ktint.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/distortion/T_FX_gaussian_distortion.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/spiritwolf/spiritwolf_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/spiritwolf/spiritwolf_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "spiritwolf",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 469904423,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/spiritwolf/spiritwolf_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.5,
+                        "y": 1.5,
+                        "z": 1.5
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/spiritwolf/skeleton/spiritwolf.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/spiritwolf/spiritwolf_variant.json"
+                },
+                {
+                    "type": "FidgetAnimationComponent",
+                    "name": "entity_root_FidgetAnimation",
+                    "neutralSet": {
+                        "type": "FidgetAnimationSet",
+                        "name": "entity_root_FidgetAnimation_neutralSet",
+                        "options": [
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_0",
+                                "stateName": "Fidget01",
+                                "weight": 2.0,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            },
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_1",
+                                "stateName": "Fidget02",
+                                "weight": 1.0,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            }
+                        ],
+                        "firstFidgetDelayMin": 0.0,
+                        "firstFidgetDelayMax": 0.0,
+                        "subsequentFidgetDelayMin": 0.0,
+                        "subsequentFidgetDelayMax": 1.0
+                    },
+                    "townNeutralSet": {
+                        "type": "FidgetAnimationSet",
+                        "name": "entity_root_FidgetAnimation_neutralSet",
+                        "options": [
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_0",
+                                "stateName": "Fidget01",
+                                "weight": 2.0,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            },
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_1",
+                                "stateName": "Fidget02",
+                                "weight": 1.0,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            }
+                        ],
+                        "firstFidgetDelayMin": 0.0,
+                        "firstFidgetDelayMax": 0.0,
+                        "subsequentFidgetDelayMin": 0.0,
+                        "subsequentFidgetDelayMax": 1.0
+                    },
+                    "frontendSet": {},
+                    "characterSelectSet": {}
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 7.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 10.0,
+                            "animationName": "Run"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_1",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 6.0,
+                            "baseMoveSpeed": 5.0,
+                            "animationName": "Walk"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1342005472,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/spiritwolf/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx",
+            "id": 3960197318,
+            "components": [
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_vfx_EntityAttachmentDefinition",
+                    "targetbone": "Root"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/spiritwolf/vfx_spiritwolf_spawn.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "new_entity",
+            "id": 1077885777,
+            "components": []
+        }
+    ]
+}
