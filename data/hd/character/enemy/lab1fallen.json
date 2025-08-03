@@ -1,0 +1,520 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/fallen1/special1_lit.model"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/special1_med.model"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/fallen1/skeleton/fallen1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_hair1_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_armor_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_armor_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_armor_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_armor_ORM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_armormed_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_armormed_fur_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_armormed_fur_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_armormed_fur_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_armormed_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_armormed_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/fallen_body_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_hair_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_hair_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_hair_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallen1/textures/Fallen_SSS.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/fallen1/fallen1_state_machine.json"
+            },
+            {
+                "path": "data/hd/items/armor/shield/_monsters/fallen_buckler_shield.json"
+            },
+            {
+                "path": "data/hd/items/armor/shield/_monsters/fallen_small_shield.json"
+            },
+            {
+                "path": "data/hd/items/misc/torch/torch.json"
+            },
+            {
+                "path": "data/hd/items/weapon/axe/double_axe.json"
+            },
+            {
+                "path": "data/hd/items/weapon/club/_monsters/fallen_club.json"
+            },
+            {
+                "path": "data/hd/items/weapon/sword/_monsters/fallen_scimitar.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/fallen1/fallen1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "fallen1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3810331088,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/fallen1/fallen1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/fallen1/skeleton/fallen1.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/fallen1/fallen1_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [
+                        "spine_05_bind_jnt"
+                    ],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {},
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 10.0,
+                            "baseMoveSpeed": 6.0,
+                            "animationName": "Walk"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_1",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 10.0,
+                            "maxMoveSpeed": 19.0,
+                            "baseMoveSpeed": 11.0,
+                            "animationName": "Run"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_2",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 19.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 16.0,
+                            "animationName": "Sprint"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "AimLayersComponent",
+                    "name": "entity_root_AimLayers",
+                    "aimLayers": [
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_0",
+                            "layerName": "Aim_Head",
+                            "yawAnimationState": "HeadAimLayer_Yaw",
+                            "yawOutOfRangeBehavior": 0,
+                            "yawAngleOffset": 0.0,
+                            "pitchAnimationState": "HeadAimLayer_Pitch",
+                            "pitchOutOfRangeBehavior": 0,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 0.2,
+                            "aimTarget": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "LookAtAnimationControlComponent",
+                    "name": "entity_root_LookAtAnimationControl",
+                    "controlOverrides": [],
+                    "aimLayerName": "Aim_Head",
+                    "blendInTime": 0.25,
+                    "blendOutTime": 0.25
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.2,
+                        "y": 1.1,
+                        "z": 1.1
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_Outsource",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_0",
+                                "footBoneName": "R_leg_03_bind_jnt",
+                                "kneeBoneName": "R_leg_02_bind_jnt",
+                                "hipBoneName": "R_leg_01_bind_jnt",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_1",
+                                "footBoneName": "L_leg_03_bind_jnt",
+                                "kneeBoneName": "L_leg_02_bind_jnt",
+                                "hipBoneName": "L_leg_01_bind_jnt",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 4051812299,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/fallen1/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_rhand_ssd",
+            "id": 2955072535,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_rhand_ssd",
+                    "part": "rhand",
+                    "variant": "ssd"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_rhand_ssd_UnitAttachment",
+                    "filename": "data/hd/items/weapon/club/wirts_leg.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {},
+                    "attachmentStateMachineFilename": "",
+                    "part": "rhand",
+                    "variant": "ssd"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_rhand_clb",
+            "id": 2422629259,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_rhand_clb",
+                    "part": "rhand",
+                    "variant": "clb"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_rhand_clb_UnitAttachment",
+                    "filename": "data/hd/items/weapon/club/wirts_leg.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {},
+                    "attachmentStateMachineFilename": "",
+                    "part": "rhand",
+                    "variant": "clb"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_rhand_axe",
+            "id": 1550528210,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_rhand_axe",
+                    "part": "rhand",
+                    "variant": "axe"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_rhand_axe_UnitAttachment",
+                    "filename": "data/hd/items/weapon/club/wirts_leg.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {},
+                    "attachmentStateMachineFilename": "",
+                    "part": "rhand",
+                    "variant": "axe"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_shield_sml",
+            "id": 936685333,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_shield_sml",
+                    "part": "shield",
+                    "variant": "sml"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_shield_sml_UnitAttachment",
+                    "filename": "data/hd/items/armor/shield/voodoo_head/perserved_head.json",
+                    "overrideBoneName": "",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {},
+                    "attachmentStateMachineFilename": "",
+                    "part": "shield",
+                    "variant": "sml"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_shield_buc",
+            "id": 387464840,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_shield_buc",
+                    "part": "shield",
+                    "variant": "buc"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_shield_buc_UnitAttachment",
+                    "filename": "data/hd/items/armor/shield/voodoo_head/demon_head.json",
+                    "overrideBoneName": "",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {},
+                    "attachmentStateMachineFilename": "",
+                    "part": "shield",
+                    "variant": "buc"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_shield_tch",
+            "id": 1792009421,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_shield_tch",
+                    "part": "shield",
+                    "variant": "tch"
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_shield_tch_UnitAttachment",
+                    "filename": "data/hd/items/misc/body_part/spleen.json",
+                    "overrideBoneName": "L_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {},
+                    "attachmentStateMachineFilename": "",
+                    "part": "shield",
+                    "variant": "tch"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_special1_lit",
+            "id": 2664044678,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_special1_lit",
+                    "part": "special1",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_special1_lit",
+                    "filename": "data/hd/character/enemy/fallen1/special1_lit.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_special1_med",
+            "id": 3196488211,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_special1_med",
+                    "part": "special1",
+                    "variant": "med"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_special1_med",
+                    "filename": "data/hd/character/enemy/fallen1/special1_med.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}
