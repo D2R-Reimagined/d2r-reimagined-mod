@@ -11,8 +11,8 @@
             "type": "RectangleWidget", "name": "EscapeOptionsBG",
             "fields": {
                 "rect": { "x": 525, "y": 385, "width": 735, "height": 660 },
-                "color": [ 0.05, 0.05, 0.05, 0.7 ],
-                "borderColor": [ 0.80, 0.73, 0.51, 0.4 ],
+                "color": [ 0.0, 0.0, 0.0, 0 ],
+                "borderColor": [ 0.5, 0.0, 0.0, 0 ],
                 "drawBorder": true
             }
         },
@@ -37,7 +37,7 @@
         {
             "type": "ButtonWidget", "name": "Help",
             "fields": {
-                "rect": { "x": 564, "y": 728 },
+                "rect": { "x": 564, "y": 578 },
                 "anchor": { "x": 0.5 },
                 "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
                 "textString": "@minipanelHelp",
@@ -55,7 +55,7 @@
         {
             "type": "ButtonWidget", "name": "Settings",
             "fields": {
-                "rect": { "x": 564, "y": 578},
+                "rect": { "x": 564, "y": 728},
                 "anchor": { "x": 0.5, "y":0.5 },
                 "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
                 "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
@@ -63,6 +63,7 @@
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "pointSize": "$MediumLargeFontSize",
                 "textString": "@OptionsHD",
+                "pointSize": "$MediumLargeFontSize",
                 "textColor": "$LightButtonTextColor",
                 "text/style": "$StyleFEButtonText",
                 "hoveredFrame": 3,

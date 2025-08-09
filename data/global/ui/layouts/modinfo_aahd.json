@@ -75,9 +75,9 @@
                 "tabPadding": { "x": 2, "y": 0 },
                 "unavailableTabsLeaveGaps": false,
                 "tabSizingMethod": "fixedCenter",
-                "filename": "Controller/Panel/Stash/V2/StashTabs",
+                "filename": "Controller/Panel/Stash/V2/StashTabs_ModInfo",
                 "inactiveFrames": [ 1, 1, 1, 1, 1, 1, 1],
-                "activeFrames": [ 1, 0, 0, 0, 0, 0, 0],
+                "activeFrames": [ 0, 0, 0, 0, 0, 0, 0],
                 "activeTextColor": "$TabsActiveTextColor",
                 "inactiveTextColor": "$TabsInactiveTextColor",
                 "tabTextOffset": { "x": 0, "y": -4 },
@@ -112,32 +112,7 @@
                 ],
                 "rowHeight": 120,
                 "cellPadding": { "left": 0, "right": 0 }
-            },
-            "children": [
-                {
-                    "type": "TableRowWidget", "name": "Row",
-                    "children": [
-                        {
-                            "type": "ButtonWidget", "name": "Close",
-                            "fields": {
-                                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-                                "onClickMessage": "PanelManager:ClosePanel:modinfo_aa",
-                                "textString": "Close",
-                                "hoveredFrame": 3,
-                                "text/style" : "$StyleFEButtonText",
-                                "pointSize": "$MediumLargeFontSize",
-                                "textColor": "$LightButtonTextColor",
-                                "disabledFrame": 2,
-                                "tooltipString": "@strClose",
-                                "sound": "cursor_close_window_hd",
-                                "acceptsEscKeyEverywhere": true,
-                                "action": "back"
-
-                            }
-                        }
-                    ]
-                }
-            ]
+            }
         }
     ]
 }
