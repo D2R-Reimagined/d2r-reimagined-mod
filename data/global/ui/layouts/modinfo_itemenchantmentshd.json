@@ -1,7 +1,7 @@
 {
   /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
   "type": "GameplayOptionsPanel",
-  "name": "modinfo_itemupgrades",
+  "name": "modinfo_itemenchantments",
   "fields": {
     "priority": 9003,
     "rect": "$OptionsPanelRect",
@@ -67,7 +67,7 @@
                   "type": "TextBoxWidget",
                   "name": "Upgrading",
                   "fields": {
-                    "text": "Item Upgrades Info",
+                    "text": "Item Enchantments Info",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -91,7 +91,7 @@
                   "type": "TextBoxWidget",
                   "name": "Upgrading",
                   "fields": {
-                    "text": "Items can be upgraded with additional stats via cube recipes. A comprehensive list can be found on the Wiki",
+                    "text": "Items can be enchanted with additional stats via cube recipes. A comprehensive list can be found on the Wiki",
                     "style": "$StyleSettingsText"
                   }
                 }
@@ -110,7 +110,7 @@
                   "type": "TextBoxWidget",
                   "name": "TextBox",
                   "fields": {
-                    "text": "Upgrades are limited by item type:\n2x for rings & amulets\n3x for helms, belts, gloves & boots\n5x for 1H weapons, shields & chest\n10x for 2H Weapons\n",
+                    "text": "Enchantments are limited by item type:\n2x for rings & amulets\n3x for helms, belts, gloves & boots\n5x for 1H weapons, shields & chest\n10x for 2H Weapons\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -144,7 +144,7 @@
                   "type": "TextBoxWidget",
                   "name": "TextBox",
                   "fields": {
-                    "text": "!!WARNING!!:\nWhen upgrading set items remove all other set items from your char/put in shared stash\n\nFailing to do so will apply the upgrade to the set bonus and will only be effective when set bonuses are active\n",
+                    "text": "!!WARNING!!:\nWhen enchanting set items remove all other set items from your char/put in shared stash\n\nFailing to do so will apply the enchantments to the set bonus and will only be effective when set bonuses are active\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {

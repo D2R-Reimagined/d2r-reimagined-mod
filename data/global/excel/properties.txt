@@ -102,7 +102,7 @@ dmg-undead	1	+#% Damage to Undead	1	item_undeaddamage_percent																			
 att-demon	1	+# to Attack Rating against Demons	1	item_demon_tohit																												Min #	Max #		0
 att-undead	1	+# to Attack Rating against Undead	1	item_undead_tohit																												Min #	Max #		0
 throw	1		1	item_throwable																												1	1	Currently Not Used	0
-fireskill	1	+# to Fire Skills	21	item_elemskill		1	1	item_elemskillfire																								Min #	Max #		0
+fireskill	1	+# to Fire Skills	21	item_elemskill		1	3	item_elemskillfire																								Min #	Max #		0
 allskills	1	+# to All Skills	1	item_allskills																												Min #	Max #		0
 light-thorns	1	Attacker Takes Lightning Damage of #	1	item_attackertakeslightdamage																												Min #	Max #		0
 freeze	1	Freezes Target +#	1	item_freeze																												Min #	Max #		0
@@ -281,10 +281,10 @@ dmg-min%/dex	1		17	item_mindamage_percent_perdex																											(8ths
 dmg-min%/lvl	1		17	item_mindamage_percent_perlvl																											(8ths)				0
 crush/str	1	+% Chance of Crushing Blow per Player Level	17	item_crushingblow_perstr																											(8ths)			none	0
 crush/dex	1	+% Chance of Crushing Blow per Player Level	17	item_crushingblow_perdex																											(8ths)			none	0
-coldskill	1		21	item_elemskill		4	1	item_elemskillcold																										none	0
-lightningskill	1		21	item_elemskill		2	1	item_elemskilllight																										none	0
-poisonskill	1		21	item_elemskill		5	1	item_elemskillpoison																										none	0
-magicskill	1		21	item_elemskill		3	1	item_elemskillmagic																										none	0
+coldskill	1		21	item_elemskill		4	3	item_elemskillcold																										none	0
+lightningskill	1		21	item_elemskill		2	3	item_elemskilllight																										none	0
+poisonskill	1		21	item_elemskill		5	3	item_elemskillpoison																										none	0
+magicskill	1		21	item_elemskill		3	3	item_elemskillmagic																										none	0
 ac%/str	1	AC% per Player Level	17	item_armorpercent_perstr																											ac%/lvl (8ths)			none	0
 ac%/dex	1	AC% per Player Level	17	item_armorpercent_perdex																											ac%/lvl (8ths)			none	0
 att%/str	1	Attack% per Player Level	17	item_tohitpercent_perstr																											att%/lvl (8ths)			none	0
@@ -388,3 +388,5 @@ Dye-Purple	1		17	Dye_Purple																															0
 Dye-Orange	1		17	Dye_Orange																															0
 Dye-Tracker	1		17	Dye_Tracker																															0
 dmg3%	1	+#% Extra Throwing Weapon Damage	15	pl_minthrowdmg_percent			16	pl_maxthrowdmg_percent																								-100	411		0
+upgrade/uberCharmSmall	1		17	upgrade_uber_charm_small																										# Upgrades		0	5	Used to determine number of upgrades on certain items	0
+upgrade/uberCharmLarge	1		17	upgrade_uber_charm_large																										# Upgrades		0	10	Used to determine number of upgrades on certain items	0
