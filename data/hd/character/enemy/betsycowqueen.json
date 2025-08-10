@@ -1,0 +1,338 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/cow/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/cow/skeleton/cow.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_fur_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_fur_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cow/textures/cow_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cow/textures/cow_fur_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cow/textures/cow_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cow/textures/cow_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cow/textures/cow_SSS.texture"
+            },
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/fluid/T_FX_BloodDroplet_N.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/cow/cow_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/cow/cow_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "cow",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 2118668368,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/betsycowqueen/cow_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/cow/skeleton/cow.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/cow/cow_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {
+                        "type": "AttackVFXTable",
+                        "name": "AttackSuccess_Blood",
+                        "rules": [
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Blood_rules_0",
+                                "acceptedHitClasses": 828,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash.particles",
+                                "soundId": "player_impact_gore_blood_hd2"
+                            },
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Blood_rules_1",
+                                "acceptedHitClasses": 7362,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point.particles",
+                                "soundId": "player_impact_gore_blood_hd2"
+                            }
+                        ],
+                        "defaultVfxFile": "",
+                        "defaultSoundId": "player_impact_gore_blood_hd2"
+                    },
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 6.0,
+                            "baseMoveSpeed": 2.0,
+                            "animationName": "Walk"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "FidgetAnimationComponent",
+                    "name": "entity_root_FidgetAnimation",
+                    "neutralSet": {
+                        "type": "FidgetAnimationSet",
+                        "name": "entity_root_FidgetAnimation_neutralSet",
+                        "options": [
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_0",
+                                "stateName": "Fidget01",
+                                "weight": 1.0,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            },
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_1",
+                                "stateName": "Fidget02",
+                                "weight": 0.25,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            },
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_2",
+                                "stateName": "Fidget03",
+                                "weight": 0.25,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            },
+                            {
+                                "type": "FidgetAnimationOption",
+                                "name": "entity_root_FidgetAnimation_neutralSet_options_3",
+                                "stateName": "Fidget04",
+                                "weight": 0.25,
+                                "cooldownMin": 0.0,
+                                "cooldownMax": 0.0
+                            }
+                        ],
+                        "firstFidgetDelayMin": 5.0,
+                        "firstFidgetDelayMax": 10.0,
+                        "subsequentFidgetDelayMin": 5.0,
+                        "subsequentFidgetDelayMax": 10.0
+                    },
+                    "townNeutralSet": {},
+                    "frontendSet": {},
+                    "characterSelectSet": {}
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Outsource_Quadruped_C",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Quadruped_C_footIKSetup_0",
+                                "footBoneName": "L_front_leg_05_bind_jnt",
+                                "kneeBoneName": "L_front_leg_04_bind_jnt",
+                                "hipBoneName": "L_front_leg_03_bind_jnt",
+                                "locationTrackName": "L1_IK_position",
+                                "enabledTrackName": "L1_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Quadruped_C_footIKSetup_1",
+                                "footBoneName": "R_front_leg_05_bind_jnt",
+                                "kneeBoneName": "R_front_leg_04_bind_jnt",
+                                "hipBoneName": "R_front_leg_03_bind_jnt",
+                                "locationTrackName": "R1_IK_position",
+                                "enabledTrackName": "R1_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Quadruped_C_footIKSetup_2",
+                                "footBoneName": "L_back_leg_04_bind_jnt",
+                                "kneeBoneName": "L_back_leg_03_bind_jnt",
+                                "hipBoneName": "L_back_leg_02_bind_jnt",
+                                "locationTrackName": "L2_IK_position",
+                                "enabledTrackName": "L2_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Quadruped_C_footIKSetup_3",
+                                "footBoneName": "R_back_leg_04_bind_jnt",
+                                "kneeBoneName": "R_back_leg_03_bind_jnt",
+                                "hipBoneName": "R_back_leg_02_bind_jnt",
+                                "locationTrackName": "R2_IK_position",
+                                "enabledTrackName": "R2_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 2973992201,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/cow/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "PhysicsBodyDefinitionComponent",
+                    "name": "entity_torso_PhysicsBodyDefinition",
+                    "bodytype": "kinematic",
+                    "fixturedefs": [
+                        {
+                            "type": "PhysicsFixtureDefinition",
+                            "name": "entity_torso_PhysicsBodyDefinition_fixturedefs_0",
+                            "shapetype": {
+                                "type": "PhysicsSphereDefinition",
+                                "name": "entity_torso_PhysicsBodyDefinition_fixturedefs_0_shapetype",
+                                "center": {
+                                    "x": 0.0,
+                                    "y": 3.0,
+                                    "z": -1.0
+                                },
+                                "radius": 3.5
+                            },
+                            "friction": 0.6,
+                            "restitution": 0.0,
+                            "rollingresistance": 0.2,
+                            "impulsefactor": 1.0,
+                            "explosionfactor": 1.0,
+                            "explosionliftfactor": 1.0,
+                            "windfactor": 0.0,
+                            "dragfactor": 0.0,
+                            "liftfactor": 1.0,
+                            "density": 37.5,
+                            "boneindex": -1
+                        }
+                    ],
+                    "filter": "monster",
+                    "allowTransition": true,
+                    "removeOnDeath": true,
+                    "lineardamping": 0.0,
+                    "angulardamping": 0.0,
+                    "gravityscale": 1.0
+                }
+            ]
+        }
+    ]
+}
