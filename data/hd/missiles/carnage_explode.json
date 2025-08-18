@@ -48,8 +48,8 @@
                     "animations": []
                 }
             ]
-        },  
-        {
+        },
+                {
             "type": "Entity",
             "name": "entity_vfx1",
             "id": 4010310920,
@@ -86,15 +86,21 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 925538895,
+            "id": 867739660,
             "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/carnage_explode.particles",
+                    "hardKillOnDestroy": false
+                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 2.25,
-                        "z": 0.0
+                        "y": 5.0,
+                        "z": 2.0
                     },
                     "orientation": {
                         "x": 0.0,
@@ -108,27 +114,27 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
-                },
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/missiles/spike_fiend_missle/vfx_spikefiend_missile.particles",
-                    "hardKillOnDestroy": false
                 }
             ]
         },
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 925538895,
+            "id": 867739660,
             "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/spike_fiend_missle/vfx_spikefiend_missile.particles",
+                    "hardKillOnDestroy": false
+                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 2.25,
-                        "z": 0.5
+                        "y": 5.0,
+                        "z": 2.0
                     },
                     "orientation": {
                         "x": 0.0,
@@ -142,12 +148,6 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
-                },
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/missiles/spike_fiend_missle/vfx_spikefiend_missile.particles",
-                    "hardKillOnDestroy": false
                 }
             ]
         }
