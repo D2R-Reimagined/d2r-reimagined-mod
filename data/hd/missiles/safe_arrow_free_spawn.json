@@ -2,19 +2,31 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion.particles"
+                "path": "data/hd/vfx/particles/missiles/safe_arrow/Safe_arrow.particles"
             }
         ],
         "models": [
             {
-                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+                "path": "data/hd/missiles/arrow/arrow.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_generic_cone_alphabase.model"
             }
         ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+                "path": "data/hd/missiles/arrow/missiles_arrow_ALB.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_NRM.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/FX_T_alphaRemap_tight_shockwave.texture"
             }
         ],
         "physics": [],
@@ -24,12 +36,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "corpse_explode_guts",
+    "name": "safe_arrow",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 2622674882,
+            "id": 4226820552,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -52,14 +64,20 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 4010310920,
+            "id": 464231253,
             "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx1",
+                    "filename": "data/hd/vfx/particles/missiles/safe_arrow/Safe_arrow.particles",
+                    "hardKillOnDestroy": true
+                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 1.0,
+                        "y": 5.0,
                         "z": 0.0
                     },
                     "orientation": {
@@ -76,49 +94,16 @@
                     "inheritOnlyPosition": false
                 },
                 {
-                    "type": "VfxDefinitionComponent",
-                    "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/objects/characters/exploding_cow/vfx_exploding_cow_bloodsquib.particles",
-                    "hardKillOnDestroy": false
-                },
-                {
-                    "type": "UnitSourceSkillFilterComponent",
-                    "name": "entity_vfx_PoisonNova_UnitSourceSkillFilter",
-                    "sourceSkill": "Concentrate"
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 867739660,
-            "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/carnage_explode.particles",
-                    "hardKillOnDestroy": false
-                },
-                {
-                    "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
-                    "position": {
-                        "x": 0.0,
-                        "y": 5.0,
-                        "z": 2.0
-                    },
-                    "orientation": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "w": 1.0
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_vfx1_ModelDefinition",
+                    "filename": "data/hd/missiles/arrow/arrow.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
                 }
             ]
         }
