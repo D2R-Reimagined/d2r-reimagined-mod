@@ -67,7 +67,7 @@ Wizendraw	64	0	1			1	1	20	26	lbb	Long Battle Bow		5	5000	dgrn	dgrn						magicarr
 Hellclap	65	0	1			1	1	22	27	swb	Short War Bow		5	5000	cgrn			invswbu				swing1		10	10	dmg-fire		15	50	extra-fire		10	10	att		50	75	res-fire		40	40	dex		12	12	dmg%		70	90	fireskill		1	1	oskill_hide	393	1	1														0
 Blastbark	66	0	1			1	1	25	28	lwb	Long War Bow		5	5000	lyel	lyel						dmg%		70	130	str		5	5	pierce-fire		10	15	manasteal		3	3	oskill	Exploding Arrow	2	3	aura	Holy Fire	2	3	oskill_hide	393	1	1																						0
 Leadcrow	67	0	1			1	1	1	9	lxb	Light Crossbow		5	5000	dyel			invlxbu				dex		10	10	hp		10	10	dmg%		70	70	res-pois		30	30	deadly		5	5	att		40	40	oskill_hide	393	1	1																						0
-Ichorsting	68	0	1			1	1	12	18	mxb	Crossbow		5	5000	lgld			invmxbu				dmg-pois	75	102	102	dex		20	20	pierce		50	50	att		50	50	dmg%		50	50	swing2		20	20	oskill_hide	393	1	1																						0
+Ichorsting	68	0	1			1	1	12	18	mxb	Crossbow		5	5000	lgld			invmxbu				dmg-pois	75	200	200	dex		20	20	pierce		25	25	att		50	50	dmg%		50	50	swing2		20	20	oskill_hide	393	1	1																						0
 Hellcast	69	0	1			1	1	17	27	hxb	Heavy Crossbow		5	5000	dgld			invhxbu				explosivearrow		5	5	res-fire-max		5	5	res-fire		30	30	att		70	70	swing2		20	20	dmg%		70	80	dmg-fire		30	50	oskill_hide	393	1	1																		0
 Doomslinger	70	0	1			1	1	17	28	rxb	Repeating Crossbow		5	5000	lpur			invrxbu				ama		1	2	pierce		35	35	swing3		30	30	hp		15	15	dmg%		100	150	noheal		1	1	oskill_hide	393	1	1																						0
 Biggin's Bonnet	71	0	1			1	1	1	3	cap	Cap		5	5000	dpur			invcapu				hp		15	15	att		30	30	dmg%		30	30	mana		15	15	ac		14	14																														0
@@ -293,7 +293,7 @@ Bloodmoon	289	100	1			1	1	45	61	7sb	elegant blade		5	5000	cred	cred		invsbru				
 Djinn Slayer	290	100	1			1	1	50	65	7sm	ataghan		5	5000	dpur	dpur		invscmu				dmg%		250	300	dmg-fire		250	500	dmg-demon		100	150	att-demon		200	300	abs-ltng		3	7	manasteal		3	6	sock		1	2	oskill_hide	393	1	1																		0
 Deathbit	291	100	1			1	1	25	40	9tk	battle dart		5	5000								deadly		10	10	dmg%		150	200	att		200	450	lifesteal		7	9	manasteal		4	6	rep-quant	100			oskill_hide	393	1	1																						0
 Warshrike	292	100	1			1	1	83	75	7bk	winged knife		5	5000	bwht	bwht		invtk3				dmg%		300	350	pierce		20	30	swing2		30	30	deadly		15	15	rep-quant	100			hit-skill	Storm Pulse	12	20	oskill_hide	393	1	1																						0
-Gut Siphon	293	100	1			1	1	65	71	6rx	demon crossbow		5	5000	lgrn	lgrn		invrxbu				dmg%		200	250	pierce		30	40	lifesteal		12	18	hit-skill	Decrepify	12	5	hit-skill	Life Tap	8	5	openwounds		30	50	hit-skill	Spine Piercer	20	5	oskill_hide	393	1	1																		0
+Gut Siphon	293	100	1			1	1	80	80	6rx	demon crossbow		5	5000	lgrn	lgrn		invrxbu				dmg%		350	400	pierce		30	40	lifesteal		12	18	hit-skill	Decrepify	12	5	hit-skill	Life Tap	8	5	openwounds		30	50	hit-skill	Spine Piercer	20	5	oskill_hide	393	1	1																		0
 Razor's Edge	294	100	1			1	1	60	67	7ha	tomahawk		5	5000	lblu			invhaxu				dmg%		175	225	swing2		40	40	reduce-ac		33	33	deadly		10	15	openwounds		15	25	oskill_hide	393	1	1																										0
 Gore Ripper	295	100				1	1						5	5000	dred	dred																																																							0
 Demon Limb	296	100	1			1	1	71	75	7sp	tyrant club		5	5000	dgrn	dgrn		invspcu				dmg%		300	365	dmg-fire		222	333	lifesteal		7	13	charged	Enchant	10	50	rep-dur	5			dmg-demon		150	200	res-fire		15	20	oskill_hide	393	1	1																		0
@@ -766,8 +766,8 @@ Rethral Bolt	761	100	1			1	1	17	25	lxb	light crossbow		5	5000	dred	dred		invcbow
 Nail Flinger	762	100	1			1	1	1	12	lxb	light crossbow		5	5000				invlxb				dmg%		100	150	dmg-max		7	12	pierce		50	50	red-dmg		4	6	red-mag		2	5	oskill_hide	393	1	1																										0
 Piercing Bolt	763	100	1			1	1	17	25	mxb	crossbow		5	5000				invcbow5				dmg-norm		25	50	pierce		100	100	res-all		20	30	knock		1	1	att%		20	20	lifesteal		5	5	addxp		2	3	oskill_hide	393	1	1																		0
 Janglebright	764	100	1			1	1	6	18	mxb	crossbow		5	5000	whit	whit		invmxb				dmg%		125	175	light		3	5	res-all		25	25	balance2		15	15	swing1		10	10	sock		1	1	oskill_hide	393	1	1																						0
-Harpo Bogglinn	765	100	1			1	1	25	32	hxb	heavy crossbow		5	5000								dmg-norm		25	50	swing1		10	10	slow		15	15	pierce-fire		10	10	extra-fire		10	10	allskills		1	1	oskill_hide	393	1	1																						0
-Spikethrower	766	100	1			1	1	10	24	hxb	heavy crossbow		5	5000				invhxb				dmg%		150	200	dmg-norm		10	20	crush		10	10	deadly		10	10	noheal		1	1	ama		1	1	oskill_hide	393	1	1																						0
+Harpo Bogglinn	765	100	1			1	1	25	32	hxb	heavy crossbow		5	5000								dmg-norm		25	50	swing1		10	10	slow		10	10	pierce-fire		10	10	extra-fire		10	10	allskills		1	1	oskill_hide	393	1	1																						0
+Spikethrower	766	100	1			1	1	12	24	hxb	heavy crossbow		5	5000				invhxb				dmg%		150	200	dmg-norm		10	20	crush		10	10	deadly		10	10	noheal		1	1	ama		1	1	oskill_hide	393	1	1																						0
 Synthalus	767	100	1			1	1	25	35	rxb	repeating crossbow		5	5000				invcbow3				dmg-norm		35	70	att		200	200	balance2		20	20	dex		15	15	mana		35	35	dmg/lvl	4			magicarrow		1	1	hit-skill	Quickness	5	1	oskill_hide	393	1	1														0
 King's Nail	768	100	1			1	1	25	30	rxb	repeating crossbow		5	5000				invrxb				allskills		1	1	oskill	guided arrow	3	5	swing2		30	30	lifesteal		5	5	manasteal		3	3	gold%		50	50	hit-skill	Decrepify	15	3	dmg-min		10	20	dmg-max		30	50	dmg%		100	125	oskill_hide	393	1	1						0
 Kyuss' Crossbow	769	100	1			1	1	40	48	8lx	arbalest		5	5000				invcbow6				dmg%		175	220	swing2		20	20	oskill	freezing arrow	3	5	heal-kill		10	15	regen-mana		60	60	mag%		30	50	gold%		75	75	oskill_hide	393	1	1																		0
