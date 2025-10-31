@@ -1,0 +1,78 @@
+{
+    "basedOn": "TitleScreenPanelHD.json",
+    "type": "TitleScreenHDPanel", "name": "TitleScreenPanel",
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "Background"
+        },
+        {
+            "type": "MoviePlayerWidget", "name": "MoviePlayer",
+            "fields": {
+                "showCursor": false
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "InputPrompt",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 1 },
+                "rect": { "x": 0, "y": -428 },
+                "text": "@ControllerTitleScreenPrompt",
+                "style": {
+                    "alignment": { "h": "center", "v": "center" },
+        	    "fontColor": "$FontColorDarkGrayBlue",
+       	            "pointSize": "$XExtraLargeFontSize"
+                }
+            }
+        },
+        {
+            "type": "ImageWidget", "name": "BlizzLogo"
+        },
+        {
+            "type": "TextBoxWidget", "name": "Copyright"
+        },
+        {
+            "type": "TextBoxWidget", "name": "LoadingPrompt",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 1 },
+                "rect": { "x": 0, "y": -428 },
+                "text": "@strBNPleaseWait",
+                "style": {
+                    "alignment": { "h": "center", "v": "center" },
+                    "pointSize": "$HugeFontSize"
+                }
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "BuildVersionTextBox"
+        },
+        {
+            "type": "TextBoxWidget", "name": "EnvironmentSettingsTextBox"
+        },
+        {
+            "type": "TextBoxWidget", "name": "BGSAddressTextBox"
+        },
+        {
+            "type": "RectangleWidget", "name": "LoadingScreen",
+            "children": [
+                {
+                    "type": "AnimatedImageWidget", "name": "FullGlow"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "Logo"
+                },
+                {
+                    "type": "ImageWidget", "name": "ResurrectedText"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames"
+                },
+                {
+                    "type": "ImageWidget", "name": "ReimaginedText"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlamesRI"
+                }
+            ]
+        }
+    ]
+}
