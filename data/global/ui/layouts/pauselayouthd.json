@@ -54,26 +54,26 @@
                 {
                     "type": "AnimatedImageWidget", "name": "BottomFlames",
                     "fields": {
-                        "rect": { "x": -129, "y": 511 },
+                        "rect": { "x": -129, "y": 521 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20
+                    }
+                },                {
+                    "type": "ImageWidget", "name": "ReimaginedText",
+                    "fields": {
+                        "rect": { "x": -239, "y": 555 },
+                        "filename": "LogoAnimation/ReimaginedText"
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlamesRI",
+                    "fields": {
+                        "rect": { "x": -129, "y": 603 },
                         "filename": "LogoAnimation/Logo_BottomFlame",
                         "fps": 20
                     }
                 }
             ]
-        },
-        {
-            "type": "TextBoxWidget", "name": "PauseText",
-            "fields": {
-                "anchor": { "x": 0.5 },
-                "rect": { "y": 628 },
-                "text": "Reimagined Mod",
-                "style": {
-                    "fontColor": "$FontColorGoldYellow",
-                    "pointSize": "$ExtraLargeFontSize",
-                    "dropShadow" :"$DefaultDropShadow",
-                    "alignment": { "h": "center", "v": "center" }
-                }
-            }
         },
         {
             "type": "TableWidget", "name": "PauseTable",
