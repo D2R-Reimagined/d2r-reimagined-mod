@@ -14,14 +14,14 @@
         {
             "type": "ImageWidget", "name": "Background",
             "fields": {
-                "rect": { "x": -801, "y": 0 },
+                "rect": { "x": -878, "y": 0 },
                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_RightPanel"
             },
             "children": [
                 {
                     "type": "ListWidget", "name": "CharacterList",
                     "fields": {
-                        "rect": { "x": 77, "y": 140, "width": 613, "height": 1650 },
+                        "rect": { "x": 77, "y": 142, "width": 613, "height": 1577 },
                         "scrollControllerName": "ScrollBar",
                         "selectorName": "Selection",
                         "direction": "vertical",
@@ -156,7 +156,7 @@
                 {
                     "type": "ImageWidget", "name": "BackgroundCover",
                     "fields": {
-                        "rect": { "x": -75, "y": 40 }
+                        "rect": { "x": -75, "y": -30 }
                     },
                     "children": [
                         {
@@ -188,7 +188,7 @@
                         {
                             "type": "ButtonWidget", "name": "DeleteCharacter",
                             "fields": {
-                                "rect": { "x": 315, "y": 1940 },
+                                "rect": { "x": 316, "y": 1940 },
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_Delete",
                                 "tooltipString": "@strDelete",
                                 "onClickMessage": "CharacterSelect:ShowDeleteCharacterModal",
@@ -254,14 +254,14 @@
                         {
                             "type": "ImageWidget", "name": "ScrollBarBackground",
                             "fields": {
-                                "rect": { "x": 765, "y": 101 },
+                                "rect": { "x": 765, "y": 172 },
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_Scrollbar"
                             },
                             "children": [
                                 {
                                     "type": "ScrollControllerWidget", "name": "ScrollBar",
                                     "fields": {
-                                        "rect": { "x": 5, "y": 31, "width": 24, "height": 1590 },
+                                        "rect": { "x": 5, "y": 31, "width": 24, "height": 1519 },
                                         "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
                                         "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
                                         "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
@@ -273,7 +273,7 @@
                         {
                             "type": "TextBoxWidget", "name": "D2RReimaginedModInfo",
                             "fields": {
-                                "rect": { "x": 140, "y": 2062, "width": 400 },
+                                "rect": { "x": 142, "y": 2054, "width": 400 },
                                 "text":"D2R Reimagined v2.2.0",
                                 "style": {
                                     "fontColor": "$CharacterListDetailsColor",
