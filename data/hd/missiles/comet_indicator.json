@@ -2,15 +2,25 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles"
+                "path": "data/hd/vfx/particles/missiles/meteor_target_indicator/vfx_meteor_target_indicator.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/meteor_target_indicator/vfx_meteor_target_indicator_vampireMeteor.particles"
             }
         ],
-        "models": [],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/vfx_lava_rock_small.model"
+            }
+        ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/default/White.texture"
+                "path": "data/hd/vfx/textures/gradient/T_FX_scortch_gradient.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/mask/T_FX_CircleMask_01.texture"
             }
         ],
         "physics": [],
@@ -20,12 +30,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "diablo_lightning",
+    "name": "meteor_target_indicator",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1991923717,
+            "id": 3605627396,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -48,27 +58,21 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 2864025022,
+            "id": 4138005649,
             "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles",
-                    "hardKillOnDestroy": true
-                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": -12.0
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
                         "y": 0.0,
                         "z": 0.0,
-                        "w": 1
+                        "w": 1.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -76,40 +80,12 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 2864025022,
-            "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles",
-                    "hardKillOnDestroy": true
                 },
                 {
-                    "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
-                    "position": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": -8.0
-                    },
-                    "orientation": {
-                        "x": 0.5,
-                        "y": 0.5,
-                        "z": 0.5,
-                        "w": 0.5
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/comet/vfx_comet_indicator.particles",
+                    "hardKillOnDestroy": false
                 }
             ]
         }

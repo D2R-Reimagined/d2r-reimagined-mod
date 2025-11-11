@@ -2,7 +2,10 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles"
+                "path": "data/hd/vfx/particles/missiles/electric_nova/electric_nova_missile.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/electric_nova/electric_nova_missile_SM.particles"
             }
         ],
         "models": [],
@@ -10,7 +13,10 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/default/White.texture"
+                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/FX_T_lightningGrad_01.texture"
             }
         ],
         "physics": [],
@@ -20,12 +26,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "diablo_lightning",
+    "name": "electric_nova",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1991923717,
+            "id": 4268503811,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -48,27 +54,27 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 2864025022,
+            "id": 828860347,
             "components": [
                 {
                     "type": "VfxDefinitionComponent",
                     "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles",
-                    "hardKillOnDestroy": true
+                    "filename": "data/hd/vfx/particles/missiles/storm_pulse/fx_storm_pulse.particles",
+                    "hardKillOnDestroy": false
                 },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 0.0,
-                        "z": -12.0
+                        "y": 1.0,
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
                         "y": 0.0,
                         "z": 0.0,
-                        "w": 1
+                        "w": 1.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -76,33 +82,43 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx1_UnitSourceSkillFilter",
+                    "sourceSkill": ""
                 }
             ]
         },
         {
             "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 2864025022,
+            "name": "entity_electricNova_SM",
+            "id": 643844487,
             "components": [
                 {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_electricNova_SM_UnitSourceSkillFilter",
+                    "sourceSkill": "Attack"
+                },
+                {
                     "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles",
-                    "hardKillOnDestroy": true
+                    "name": "entity_electricNova_SM_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/storm_pulse/fx_storm_pulse.particles",
+                    "hardKillOnDestroy": false
                 },
                 {
                     "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
+                    "name": "entity_electricNova_SM_TransformDefinition",
                     "position": {
-                        "x": 1.0,
+                        "x": 0.0,
                         "y": 1.0,
-                        "z": -8.0
+                        "z": 0.0
                     },
                     "orientation": {
-                        "x": 0.5,
-                        "y": 0.5,
-                        "z": 0.5,
-                        "w": 0.5
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
                     },
                     "scale": {
                         "x": 1.0,

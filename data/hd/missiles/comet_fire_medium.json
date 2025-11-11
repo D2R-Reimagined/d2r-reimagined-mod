@@ -2,15 +2,46 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles"
+                "path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall_vampire.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_medium/vfx_ground_fire_medium.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small_firestorm.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/meteor/vfx_meteor_fire.particles"
             }
         ],
-        "models": [],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_fire_cylinder.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_polarDiscLump.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/missiles/ground_fire_big/fx_mesh_groundFireCylinder.model"
+            }
+        ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/default/White.texture"
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/decal/T_FX_burning_ash_E.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_AlphaRemapCurve_blinkfix.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_scortch_gradient.texture"
             }
         ],
         "physics": [],
@@ -20,12 +51,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "diablo_lightning",
+    "name": "ground_fire_medium",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1991923717,
+            "id": 3149065990,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -48,27 +79,21 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 2864025022,
+            "id": 3681444243,
             "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles",
-                    "hardKillOnDestroy": true
-                },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": -12.0
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
                         "y": 0.0,
                         "z": 0.0,
-                        "w": 1
+                        "w": 1.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -76,40 +101,12 @@
                         "z": 1.0
                     },
                     "inheritOnlyPosition": false
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 2864025022,
-            "components": [
-                {
-                    "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/missiles/diablo_lightning/DiabloLightning_missile.particles",
-                    "hardKillOnDestroy": true
                 },
                 {
-                    "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
-                    "position": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": -8.0
-                    },
-                    "orientation": {
-                        "x": 0.5,
-                        "y": 0.5,
-                        "z": 0.5,
-                        "w": 0.5
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/comet/vfx_comet_fire_medium.particles",
+                    "hardKillOnDestroy": false
                 }
             ]
         }
