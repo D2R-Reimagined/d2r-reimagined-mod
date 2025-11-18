@@ -1,10 +1,22 @@
 {
     "dependencies": {
-        "particles": [],
-        "models": [],
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/expansion_twister/vfx_light_twister.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/missiles/tornado/fx_mesh_tornado_back_optimized.model"
+            }
+        ],
         "skeletons": [],
         "animations": [],
-        "textures": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/noise/T_FX_Noise_FluidBands_02_inverted.texture"
+            }
+        ],
         "physics": [],
         "json": [],
         "variantdata": [],
@@ -12,12 +24,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "warcryextra",
+    "name": "expansion_twister",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 777654545457,
+            "id": 4161671294,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -40,12 +52,12 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 76534545456,
+            "id": 415924747,
             "components": [
                 {
                     "type": "VfxDefinitionComponent",
                     "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_skill1.particles",
+                    "filename": "data/hd/vfx/particles/missiles/expansion_twister/vfx_light_twister.particles",
                     "hardKillOnDestroy": false
                 },
                 {
@@ -54,7 +66,41 @@
                     "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 7.0
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx",
+            "id": 4169024490,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_VfxDefinitionComponent",
+                    "filename": "data/hd/vfx/particles/missiles/lightning_strike/Lightning_Fury.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_vfx_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 4.0,
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,

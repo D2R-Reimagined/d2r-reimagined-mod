@@ -1,0 +1,133 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/electric_nova/electric_nova_missile.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/electric_nova/electric_nova_missile_SM.particles"
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/FX_T_lightningGrad_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "electric_nova",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4268503811,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 828860347,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx1",
+                    "filename": "data/hd/vfx/particles/missiles/storm_pulse/fx_storm_pulse.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx1_UnitSourceSkillFilter",
+                    "sourceSkill": ""
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_electricNova_SM",
+            "id": 643844487,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_electricNova_SM_UnitSourceSkillFilter",
+                    "sourceSkill": "Attack"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_electricNova_SM_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/storm_pulse/fx_storm_pulse.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_electricNova_SM_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}

@@ -1545,7 +1545,7 @@
         },
         {
             "type": "AnimationItem",
-            "name": "hth_",
+            "name": "hth_attack1",
             "filename": "data/hd/character/player/paladin/animation/hth_attack1.animation"
         },
         {
@@ -2967,6 +2967,56 @@
             "type": "AnimationItem",
             "name": "xbw_townfidget_03",
             "filename": "data/hd/character/player/paladin/animation/xbw_townfidget_03.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "hth_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/hth_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1hs_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1hs_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ht_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1ht_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "stf_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/stf_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2hs_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/2hs_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "2ht_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/2ht_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1js_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1js_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1jt_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1jt_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1ss_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1ss_whirlwind.animation"
+        },
+        {
+            "type": "AnimationItem",
+            "name": "1st_whirlwind",
+            "filename": "data/hd/character/player/barbarian/animation/1st_whirlwind.animation"
         }
     ],
     "states": [
@@ -4136,14 +4186,7 @@
                 ],
                 "2ht": [
                     "2ht_skill3"
-                ],
-                "xbw": [],
-                "1js": [],
-                "1jt": [],
-                "1ss": [],
-                "1st": [],
-                "ht1": [],
-                "ht2": []                
+                ]
             },
             "enterEvents": [],
             "exitEvents": []
@@ -4533,14 +4576,7 @@
                 ],
                 "2ht": [
                     "2ht_skill3"
-                ],
-                "xbw": [],
-                "1js": [],
-                "1jt": [],
-                "1ss": [],
-                "1st": [],
-                "ht1": [],
-                "ht2": []               
+                ]
             },
             "enterEvents": [],
             "exitEvents": []
@@ -4830,25 +4866,25 @@
             "stepIndex": 1,
             "animationBindings": {
                 "hth": [
-                    "hth_kick"
+                    "hth_attack1"
                 ],
                 "bow": [
-                    "bow_kick"
+                    "bow_attack1"
                 ],
                 "1hs": [
-                    "1hs_kick"
+                    "1hs_attack1"
                 ],
                 "1ht": [
-                    "1ht_kick"
+                    "1ht_attack1"
                 ],
                 "stf": [
-                    "stf_skill3"
+                    "stf_attack1"
                 ],
                 "2hs": [
-                    "2hs_skill3"
+                    "2hs_attack1"
                 ],
                 "2ht": [
-                    "2ht_skill3"
+                    "2ht_attack1"
                 ],
                 "xbw": [
                     "xbw_attack1"
@@ -5065,6 +5101,51 @@
                 ],
                 "xbw": [
                     "xbw_townfidget_03"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": []
+        },
+        {
+            "type": "AnimationState",
+            "name": "PMODE_SEQUENCE_WHIRLWIND",
+            "_name": "SKILL_WHIRLWIND",
+            "audioId": "",
+            "loopCount": 0,
+            "stateId": 51,
+            "modeId": 18,
+            "skillIndex": 151,
+            "stepIndex": 0,
+            "animationBindings": {
+                "hth": [
+                    "hth_whirlwind"
+                ],
+                "1hs": [
+                    "1hs_whirlwind"
+                ],
+                "1ht": [
+                    "1ht_whirlwind"
+                ],
+                "stf": [
+                    "stf_whirlwind"
+                ],
+                "2hs": [
+                    "2hs_whirlwind"
+                ],
+                "2ht": [
+                    "2ht_whirlwind"
+                ],
+                "1js": [
+                    "1js_whirlwind"
+                ],
+                "1jt": [
+                    "1jt_whirlwind"
+                ],
+                "1ss": [
+                    "1ss_whirlwind"
+                ],
+                "1st": [
+                    "1st_whirlwind"
                 ]
             },
             "enterEvents": [],
@@ -12965,7 +13046,7 @@
                 {
                     "type": "AnimationTransitionItem",
                     "name": "AnimationState007_transitiongroup_transition035",
-                    "crossfadeSeconds": 0.0,
+                    "crossfadeSeconds": 0.2,
                     "to": 26
                 },
                 {
@@ -13013,7 +13094,7 @@
                 {
                     "type": "AnimationTransitionItem",
                     "name": "AnimationState007_transitiongroup_transition043",
-                    "crossfadeSeconds": 0.0,
+                    "crossfadeSeconds": 0.2,
                     "to": 44
                 },
                 {
@@ -16035,7 +16116,7 @@
                 {
                     "type": "AnimationTransitionItem",
                     "name": "AnimationState017_transitiongroup_transition035",
-                    "crossfadeSeconds": 0.0,
+                    "crossfadeSeconds": 0.2,
                     "to": 36
                 },
                 {
@@ -18431,7 +18512,7 @@
                 {
                     "type": "AnimationTransitionItem",
                     "name": "AnimationState025_transitiongroup_transition025",
-                    "crossfadeSeconds": 0.0,
+                    "crossfadeSeconds": 0.2,
                     "to": 26
                 },
                 {
@@ -18539,7 +18620,7 @@
                 {
                     "type": "AnimationTransitionItem",
                     "name": "AnimationState025_transitiongroup_transition043",
-                    "crossfadeSeconds": 0.0,
+                    "crossfadeSeconds": 0.2,
                     "to": 44
                 },
                 {
