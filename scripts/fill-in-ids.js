@@ -1,213 +1,106 @@
+// node fill-in-ids.js
+
 const fs = require('fs');
+const path = require('path');
 
-let skipUntil = 30000;
-/**
- * Item Modifiers
- */
-let jsonPath = '../data/local/lng/strings/item-modifiers.json';
-let file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-let json = JSON.parse(file);
-let startingIndex = 48000; //Replace with whatever u want to start at;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
+// Do not touch ids below this value
+const SKIP_UNTIL = 30000;
 
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Item Modifiers successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
+// Directory that contains your JSON string files
+const STRINGS_DIR = path.join(__dirname, '..', 'data', 'local', 'lng', 'strings');
 
+// Configure each file and its starting ID range
+const FILES = [
+    { file: 'item-modifiers.json',  startId: 48000 },
+    { file: 'item-nameaffixes.json', startId: 49000 },
+    { file: 'item-names.json',      startId: 50000 },
+    { file: 'item-runes.json',      startId: 53500 },
+    { file: 'levels.json',          startId: 54000 },
+    { file: 'monsters.json',        startId: 55000 },
+    { file: 'skills.json',          startId: 56000 },
+    { file: 'ui.json',              startId: 57000 },
+];
 
-/**
- * Item Name Affixes
- */
-jsonPath = '../data/local/lng/strings/item-nameaffixes.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 49000;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
+function main() {
+    console.log('=== Filling IDs in string JSON files ===');
+    console.log('Strings dir:', STRINGS_DIR);
+    console.log('Skip ids below:', SKIP_UNTIL);
+    console.log('');
 
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Item Name Affixes successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-/**
- * Item Names
- */
-jsonPath = '../data/local/lng/strings/item-names.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 50000;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
-
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Item Names successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-/**
- * Item Runes
- */
-jsonPath = '../data/local/lng/strings/item-runes.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 53500;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
-
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Item Runes successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-/**
- * Levels
- */
-jsonPath = '../data/local/lng/strings/levels.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 54000;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
-
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Levels successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-/**
- * Monsters
- */
-jsonPath = '../data/local/lng/strings/monsters.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 55000;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
-
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Monsters successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-/**
- * Skills
- */
-jsonPath = '../data/local/lng/strings/skills.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 56000;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
-
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("Skills successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-/**
- * UI
- */
-jsonPath = '../data/local/lng/strings/ui.json';
-file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
-json = JSON.parse(file);
-startingIndex = 57000;
-try {
-    // Process each object in the array
-    json = json.map(obj => {
-        return fillInIds(obj);
-    });
-
-    // Overwrite the file with the modified JSON
-    fs.writeFile(jsonPath, JSON.stringify(json, null, 4), err => {
-        if (err) {
-            console.error("Error writing file:", err);
-        } else {
-            console.log("UI successfully written!");
-        }
-    });
-} catch (parseError) {
-    console.error("Error parsing JSON:", parseError);
-}
-
-
-function fillInIds(obj) {
-    if (obj.id < skipUntil) {
-        return obj;
+    for (const entry of FILES) {
+        processFile(entry);
+        console.log('----------------------------------------');
     }
-    obj.id = startingIndex;
-    startingIndex++;
-    return obj;
+
+    console.log('All done.');
 }
+
+function processFile({ file, startId }) {
+    const fullPath = path.join(STRINGS_DIR, file);
+    console.log(`Processing: ${fullPath}`);
+    console.log(`Starting ID for this file: ${startId}`);
+
+    let raw;
+    try {
+        raw = fs.readFileSync(fullPath, 'utf8');
+    } catch (err) {
+        console.error('  ✖ Error reading file:', err.message);
+        return;
+    }
+
+    const cleaned = raw.replace(/^\uFEFF/, '').trim();
+
+    if (!cleaned) {
+        console.error('  ✖ File is empty or only BOM, skipping.');
+        return;
+    }
+
+    let json;
+    try {
+        json = JSON.parse(cleaned);
+    } catch (err) {
+        console.error('  ✖ Error parsing JSON, NOT writing anything.');
+        console.error('    Message:', err.message);
+        return;
+    }
+
+    if (!Array.isArray(json)) {
+        console.error('  ✖ JSON root is not an array, skipping.');
+        return;
+    }
+
+    let currentId = startId;
+    let changed = false;
+
+    const updated = json.map((obj) => {
+        if (!obj || typeof obj !== 'object') return obj;
+
+        // Only touch numeric ids >= SKIP_UNTIL
+        if (typeof obj.id === 'number' && obj.id >= SKIP_UNTIL) {
+            if (obj.id !== currentId) {
+                changed = true;
+            }
+            obj = { ...obj, id: currentId };
+            currentId++;
+        }
+
+        return obj;
+    });
+
+    if (!changed) {
+        console.log('  ✔ No ids changed; not writing file.');
+        return;
+    }
+
+    // Write updated JSON back to file
+    try {
+        const out = JSON.stringify(updated, null, 4) + '\n';
+        fs.writeFileSync(fullPath, out, 'utf8');
+        console.log('  ✔ File written successfully.');
+        console.log('  Last ID used in this file:', currentId - 1);
+    } catch (err) {
+        console.error('  ✖ Error writing file:', err.message);
+    }
+}
+
+main();
