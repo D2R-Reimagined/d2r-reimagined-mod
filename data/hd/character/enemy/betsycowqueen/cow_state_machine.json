@@ -5,10 +5,10 @@
         "skeletons": [],
         "animations": [
             {
-                "path": "data/hd/character/enemy/bear/animation/attack1.animation"
+                "path": "data/hd/character/enemy/cow/animation/attack1.animation"
             },
             {
-                "path": "data/hd/character/enemy/bear/animation/attack2.animation"
+                "path": "data/hd/character/enemy/cow/animation/attack2.animation"
             },
             {
                 "path": "data/hd/character/enemy/cow/animation/block.animation"
@@ -76,7 +76,7 @@
         {
             "type": "AnimationItem",
             "name": "death",
-            "filename": "data/hd/character/enemy/hellbovine/animation/dead.animation"
+            "filename": "data/hd/character/enemy/cow/animation/death.animation"
         },
         {
             "type": "AnimationItem",
@@ -116,7 +116,7 @@
         {
             "type": "AnimationItem",
             "name": "dead",
-            "filename": "data/hd/character/enemy/hellbovine/animation/dead.animation"
+            "filename": "data/hd/character/enemy/cow/animation/dead.animation"
         },
         {
             "type": "AnimationItem",
@@ -131,12 +131,12 @@
         {
             "type": "AnimationItem",
             "name": "attack2",
-            "filename": "data/hd/character/enemy/bear/animation/attack2.animation"
+            "filename": "data/hd/character/enemy/cow/animation/attack2.animation"
         },
         {
             "type": "AnimationItem",
             "name": "skill2",
-            "filename": "data/hd/character/enemy/bear/animation/skill2.animation"
+            "filename": "data/hd/character/enemy/cow/animation/skill2.animation"
         },
         {
             "type": "AnimationItem",
@@ -272,7 +272,7 @@
             "stepIndex": 0,
             "animationBindings": {
                 "hth": [
-                    "attack2"
+                    "attack1"
                 ]
             },
             "enterEvents": [],
@@ -308,7 +308,7 @@
             "stepIndex": 0,
             "animationBindings": {
                 "hth": [
-                    "cast"
+                    "attack1"
                 ]
             },
             "enterEvents": [],
@@ -326,7 +326,7 @@
             "stepIndex": 0,
             "animationBindings": {
                 "hth": [
-                    "skill1"
+                    "attack1"
                 ]
             },
             "enterEvents": [],
@@ -335,7 +335,7 @@
         {
             "type": "AnimationState",
             "name": "State_Skill2",
-            "_name": "Skill2",
+            "_name": "attack1",
             "audioId": "",
             "loopCount": 1,
             "stateId": 9,
@@ -344,7 +344,7 @@
             "stepIndex": 0,
             "animationBindings": {
                 "hth": [
-                    "skill2"
+                    "attack1"
                 ]
             },
             "enterEvents": [],
@@ -362,7 +362,7 @@
             "stepIndex": 0,
             "animationBindings": {
                 "hth": [
-                    "skill3"
+                    "attack1"
                 ]
             },
             "enterEvents": [],
@@ -380,7 +380,7 @@
             "stepIndex": 0,
             "animationBindings": {
                 "hth": [
-                    "skill4"
+                    "attack1"
                 ]
             },
             "enterEvents": [],
