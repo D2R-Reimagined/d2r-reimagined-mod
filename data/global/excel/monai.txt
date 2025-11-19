@@ -1,0 +1,149 @@
+AI	*aip1	*aip2	*aip3	*aip4	*aip5	*aip6	*aip7	*aip8	*eol
+None									0
+Idle									0
+Skeleton	Approach Enemy (% Chance)	AI Delay (Frames)	Attack Enemy (% Chance)	"Attack1 (% Chance), else Attack2"					0
+Zombie	Approach Enemy (% Chance)	Enemy Awareness (Range)		"Attack1 (% Chance), else Attack2"					0
+Bighead	Hurt State (Life % threshold)	Circle Walk (% Chance)	Ranged Attack Not Hurt (% Chance)	Ranged Attack Hurt (% Chance)					0
+BloodHawk	Charge (% Chance)	Wander behavior (% Chance)	Attack1 (% Chance)	Attack1 Move Velocity	Charge Velocity				0
+Fallen	Command Attack (% Chance)	Non-command Wander behavior (% Chance)	Attack Enemy (% Chance)	"Attack1 (% Chance), else Attack2"					0
+Brute			Attack Enemy / Circle Walk (% Chance) 	"Attack1 (% Chance), else Attack2"					0
+SandRaider	Regroup Life % threshold	Circle Walk (% Chance)	Attack Enemy (% Chance)	Approach Enemy (% Chance)	Charge time (Frames)	"Charge overlay (1 = blue, else red)"	"Attack1 (% Chance), else Attack2"		0
+Wraith	Approach Enemy (% Chance)	AI Delay (Frames)	Attack Enemy (% Chance)						0
+CorruptRogue	Approach Enemy (% Chance)	AI Delay (Frames)	Attack Enemy (% Chance)	Run Velocity	Run During Approach (% Chance)				0
+Baboon	Hurt State (Life % threshold)	Circle Walk (% Chance)	Attack Enemy (% Chance)	"Attack1 (% Chance), else Attack2"	hpregen bonus when hurt				0
+Goatman	Approach Enemy (% Chance)	AI Delay (Frames)	Attack Enemy (% Chance)						0
+FallenShaman	Issue Attack Command / Resurrect (Skill1) (% Chance)	Fireball (Skill2) (% Chance)	Attack Enemy / Circle Walk (% Chance) 	Ally Corpse Search Range	Fireball (Skill2) Search Range				0
+QuillRat	Activate Range	Attack2 (% Chance)		Walk Away Range					0
+SandMaggot	Lay an egg (% Chance)	Attack2 (% Chance)	Max Egg Unit Spawn Count	Attack1 (% Chance)	Min Down/Up State Time (Frames)				0
+ClawViper	Charge (% Chance)	Charge Max Range	Attack Enemy (% Chance)	"Attack1 (% Chance), else Attack2"	AI Delay (Frames)	"Charge overlay (0 = none, 1 = red, else blue)"			0
+SandLeaper	Leap (Skill1) (% Chance)	Attack2 (% Chance)	Approach Enemy (% Chance)	Circle Walk (% Chance)					0
+PantherWoman	Approach Enemy (% Chance)	Attack1 (% Chance)	Find Nearest Ally Range	AI Delay (Frames)	Regroup to allies (% Chance)				0
+Swarm	Approach Enemy (% Chance)	AI Delay (Frames)	Attack1 (% Chance)						0
+Scarab	Attack Enemy (% Chance)	"Attack1 (% Chance), else Attack2"	AI Delay (Frames)	Jab (Skill1) (% Chance)	Command Attack (% Chance)				0
+Mummy	Enemy Awareness (Range)	Approach Enemy (% Chance)	Attack Enemy (% Chance)	"Attack1 (% Chance), else Attack2"	AI Delay (Frames)				0
+GreaterMummy	"Attack1 (% Chance), else Attack2"	Raise Ally (Skill1) (% Chance)	Heal (Skill2) (% Chance)	Shoot (Skill3) (% Chance)	Ally Corpse Search Range				0
+Vulture	Attack1 (% Chance)	AI Delay (Frames)	Hurt State (Life % threshold)	Circle Walk (% Chance)	Approach Enemy (% Chance)				0
+Mosquito			Approach Enemy (% Chance)	"Mosquito (Skill1) (% Chance), else Attack1"	Max random walk time (Frames)				0
+WillOWisp	Cast (% Chance)	Attack1 (% Chance)	Approach Enemy (% Chance)						0
+Arach	Attack1 (% Chance - 25)	Circle Walk (% Chance)	Approach Enemy (% Chance)	Run Away Range	Hurt State (Life % threshold)				0
+ThornHulk	Attack1 (% Chance)	"Attack1 (% Chance), else Attack2"	Circle Walk (% Chance)	Frenzy (Skill1) (% Chance)	AI Delay After Frenzy Attack2 (Frames)	Frenzy Attack2 Duration (Frames)			0
+Vampire	Attack1 (% Chance)	Use Skill (% Chance)	Active Range	Skill1/Skill2/Skill3/Skill4 (% Chance)	"Spell bit flags (1=Fireball/Skill1, 2=Firewall/Skill2, 4=Meteor/Skill3)"				0
+BatDemon	Hurt State (Life % threshold)	Run away when hit (% Chance)	Attack Enemy (% Chance)	"Attack2 (% Chance), else Attack1"	Life Regen Bonus (hpregen)				0
+Fetish	Attack1 (% Chance)	AI Delay (Frames)	Attack Delay (Frames)	Life % threshold for Attack Loop					0
+NpcOutOfTown									0
+Npc									0
+HellMeteor	Skill1 (% Chance)	AI Delay (Frames)	Skill1 Range						0
+Andariel	Skill1/Attack1 in melee (% Chance)	AI Delay (Frames)	Skill1/Skill2 in ranged (% Chance)	"For ranged, use Skill1 (% Chance), else Skill2"					0
+CorruptArcher	Approach Enemy (% Chance)	Use Skill1/Skill2/Skill3 (% Chance)	AI Delay (Frames)	Run Away (% Chance)	Run Away Range	Skill 2 (% Chance)	Skill 3 (% Chance)	Approach Range	0
+CorruptLancer	Approach Enemy (% Chance)	Use Skill1/Skill2/Skill3 (% Chance)	AI Delay (Frames)	"Run (% Chance), else Walk"	Always Run Range	Skill 1 (% Chance)	Skill 2 (% Chance)	Skill 3 (% Chance)	0
+SkeletonBow	Attack1 (% Chance)	AI Delay (Frames)	Approach Enemy (% Chance)	Walk Steps to take	Min Target Range				0
+MaggotLarva	Attack1 (% Chance)	Attack1 Delay (Frames)	Approach Enemy (% Chance)	AI Delay (Frames)					0
+PinHead	Skill1/Skill2/Attack1 (% Chance)	Attack Delay (Frames)	Approach Enemy (% Chance)	AI Delay (Frames)	Skill1 (% Chance)	Skill2 (% Chance)			0
+MaggotEgg	Attack Delay (Frames)	Hatch (Skill1) (% Chance)							0
+Towner									0
+Vendor									0
+FoulCrowNest	Unit Spawn Interval (Frames)		Unit Spawn Count						0
+Duriel	Skill3 (Holy Freeze) Skill Level	Skill3 (Holy Freeze) (% Chance)	Skill2 (Jab) (% Chance)	Attack2 (% Chance)	Skill1 (Charge) (% Chance)				0
+Sarcophagus	Unit Spawn Interval (Frames)		Unit Spawn Count						0
+ElementalBeast	Approach Enemy (% Chance)	Enemy Awareness (Range)	AI Delay (Frames)						0
+FlyingScimitar	Approach Enemy (% Chance)	Attack1 (% Chance)	AI Delay (Frames)	Circle Walk (% Chance)					0
+ZakarumZealot	Attack Enemy (% Chance)	"Attack2 (% Chance), else Attack1"	Hurt State (Life % threshold)	"Run (% Chance), else Walk"					0
+ZakarumPriest	Attack1 (% Chance)	Skill4 (MonBlizzard) (% Chance)	Skill2 (ZakarumLightning) (% Chance)	Skill4/Skill2 (% Chance)	Skill3 (MonTeleport) Interval (Frames)	Skill1 (ZakarumHeal) Search Range			0
+Mephisto	Attack Enemy (% Chance)								0
+Diablo									0
+FrogDemon	Melee Attack1 (% Chance)	Melee Attack2 (% Chance)	Melee Circle Walk (% Chance)	Ranged Circle Walk (% Chance)	Ranged Attack2 (% Chance)	Ranged Attack Range	AI Delay (Frames)	Emerge Awareness Range	0
+Summoner	Cast (% Chance)	Skill5 (Weaken) (% Chance)	Prefer Cold Skills (Skill1/2/3/4) (% Chance)	Skill2 (Nova) Interval (Frames)	Skill3 (VampireFirewall) Interval (Frames)	Run Away (% Chance)	Skill2 (Frost Nova) Range	Skill1/3 (Glacial Spike / Fire Ball) Range	0
+NpcStationary									0
+Izual	Attack1 (% Chance)	Approach Enemy (% Chance)	Ranged Skill1 (Frost Nova) (% Chance)	Melee Skill1 (Frost Nova) (% Chance)	Post Skill1 (Frost Nova) AI Delay (Frames)	Post Skill1 (Frost Nova) Attack Swing Count			0
+Tentacle	Attack1 (% Chance)	Submerge (% Chance)	Submerge AI Delay (Frames)	Emerge AI Delay (Frames)	AI Delay (Frames)	Enemy Awareness (Range)			0
+TentacleHead	Attack1 (% Chance)	Submerge (% Chance)	Submerge AI Delay (Frames)	Emerge AI Delay (Frames)	AI Delay (Frames)	Enemy Awareness (Range)			0
+Navi									0
+BloodRaven									0
+GoodNpcRanged									0
+Hireable	"Range type (1=ranged, 2=melee, 3=hybrid)"	Skill to use as a basic attack	Monster Mode to use for non-skill basic attack	If hireable bonus damage should be applied to missiles					0
+TownRogue									0
+GargoyleTrap	Skill1 Range	Skill1 (% Chance)	Skill1 AI Delay (Frames)	AI Delay (Frames)					0
+SkeletonMage	Attack1 (% Chance)	Approach Enemy (Range)	Approach Enemy (% Chance)	Walk Away Range	Walk Away (% Chance)	Attack1 (% Chance)	Circle Walk (% Chance)	AI Delay (Frames)	0
+FetishShaman	Skill3 (Resurrect2) (% Chance)	"Skill3 (Resurrect2) Check (0=only party, 1=any fetish, 2=any fetish/blow, 3=any unique fetish/blow)"	Skill3 (Resurrect2) Range	Circle Walk (% Chance)	Skill3 (Resurrect2) Unit Search Range				0
+SandMaggotQueen	Max Unit Spawn Count	AI Delay (Frames)							0
+NecroPet									0
+VileMother	Max Unit Spawn Count	Unit Spawn Count Per Use	Spawn Unit (% Chance)	Attack1 (% Chance)	Approach Enemy (Range)	Circle Walk (% Chance)	AI Delay (Frames)		0
+VileDog	Attack1 (% Chance)	Melee AI Delay (Frames)	Approach Enemy (Range)						0
+FingerMage	"Attack1 (% Chance), else Skill1/Circle Walk"	Skill1 (FingerMageSpider) (% Chance)	Fight Life % Threshold	Run Away Life % Threshold	Skill1 (FingerMageSpider) Range	Max Run Away Attempts	Approach Enemy (Range)	Ranged AI Delay (Frames)	0
+Regurgitator	Attack1 (% Chance)	Eat Corpse In Melee (% Chance)	Approach Enemy (% Chance)	Find Corpse (% Chance)	Find Corpse In Melee (% Chance)	Find Corpse Target Range			0
+DoomKnight	Attack1 (% Chance)	Melee AI Delay (Frames)	Approach Enemy (% Chance)	AI Delay (Frames)					0
+AbyssKnight	Skill2 (MonBoneArmor) Life % Threshold	Skill2 (MonBoneArmor) (% Chance)	Attack1 (% Chance)	Melee AI Delay (Frames)	Skill1 (DoomKnightMissile) Range	Skill1 AI Delay (Frames)	Approach Enemy (% Chance)	Circle Walk (% Chance)	0
+OblivionKnight	Run Away Range	Ranged Skill Range	Skill4 (Decrepify) AI Delay (Frames)	Skill6 (MonCurseCast) (% Chance)	Skill1/Skill3 (% Chance)	"Skill3 (MonBoneSpirit) (% Chance), else Skill1"	Approach Enemy (% Chance)	Approach Enemy (Range)	0
+QuillMother	Attack1 (% Chance)	Approach Enemy (% Chance)	Melee AI Delay (Frames)	AI Delay (Frames)					0
+EvilHole	Max Unit Spawn Count	AI Delay (Frames)							0
+Trap-Missile	Enemy Awareness (Range)	Max Use Count	AI Delay (Frames)						0
+Trap-RightArrow	Min Target Range	Max Target Range	Attack AI Delay (Frames)	Skill1 AI Delay (Frames)					0
+Trap-LeftArrow	Min Target Range	Max Target Range	Attack AI Delay (Frames)	Skill1 AI Delay (Frames)					0
+Trap-Poison	Enemy Awareness (Range)	Max Use Count	AI Delay (Frames)						0
+JarJar									0
+InvisoSpawner	Max Unit Spawn Count	Enemy Awareness (Range)	Spawn Unit Delay (Frames)						0
+MosquitoNest	Max Unit Spawn Count	Enemy Awareness (Range)	Spawn Unit Delay (Frames)						0
+BoneWall									0
+HighPriest	Melee Attack1 (% Chance)	Skill2 (ZakarumLightning) (% Chance)	Skill AI Delay (Frames)	Skill1 (ZakarumHeal) (% Chance)	Ranged Lightning Skill (% Chance)	Melee Run Away (% Chance)	Melee Lightning Skill (% Chance)	Approach Enemy (Range)	0
+Hydra									0
+Trap-Melee	Attack1 (% Chance)	AI Delay (Frames)							0
+7TIllusion									0
+Megademon	Ranged Skill1 (MegademonInferno) (% Chance)	Melee Skill1 (MegademonInferno) (% Chance)	Melee Attack1 (% Chance)	Approach Enemy (% Chance)	Circle Walk (% Chance)	Skill1 (MegademonInferno) AI Delay (Frames)			0
+Griswold									0
+DarkWanderer									0
+Trap-Nova	Activate Range	Activate Max Count	AI Delay (Frames)						0
+ArcaneTower	Attack1 Use Count	Skill1 Interval Delay (Frames)	Skill1 Depleted AI Delay (Frames)	Skill1 Use Count	Attack1 Interval Delay (Frames)	Attack1 Depleted AI Delay (Frames)			0
+DesertTurret	Skill1 Interval Delay (Frames)	Skill1 Max Shot Count	Skill1 Depleted AI Delay (Frames)	Enemy Awareness (Range)	Skill1 Missile Direction Spread				0
+PantherJavelin	Approach Enemy (% Chance)	Attack1 (% Chance)	Find Ally Regroup Range	Walk Away Range	AI Delay (Frames)	Ranged Target Range			0
+FetishBlowgun	Ranged Max Range	Run Away Range							0
+Spirit									0
+Smith									0
+TrappedSoul									0
+Buffy									0
+AssassinSentry	Skill1 (% Chance)	Skill1 Followup AI Delay (Frames)	AI Delay (Frames)	Skill1 Range					0
+BladeCreeper									0
+InvisoPet	Teleport Skill Range	AI Delay (Frames)							0
+DeathSentry		AI Delay (Frames)	Skill2 (% Chance)	Skill2 (Range)					0
+ShadowWarrior	Max Target Range	Caster Leash Range	Attack (% Chance)	Skill Decrement				Summon Skill/Skill Min Chance/Skill Max Chance (#/256)	0
+ShadowMaster	Approach Range/Melee Bonus Rating/Progressive Bonus Rating	Random Skill Pick/Enemy Awareness Range/Caster Leash Range	Attack (% Chance)					Summon Skill	0
+Raven	Caster Min Leash Range	Caster Ideal Leash Range	Attack interval (Frames)	Attack Enemy (% Chance)	Caster Max Leash Range				0
+DruidWolf	AI Delay (Frames)	Skill1 (Fenris Rage) (% Chance)	Walk Randomly (% Chance)	Max Target Range	Caster Leash Range				0
+Totem	Run Away From Enemy (% Chance)	Stay Close to Caster (% Chance)	Teleport Leash Range to Caster	Move Leash Range to Caster					0
+Vines	Skill1 Interval (Frames)	Target Range	AI Delay (Frames)	Move Away From Poisoned Target (Frames)	Teleport Leash Range to Caster				0
+CycleOfLife	Skill1 Interval (Frames)	Find Corpse Range	AI Delay (Frames)	Run Away From Target (Frames)	Teleport Leash Range to Caster				0
+DruidBear	AI Delay (Frames)	Approach Enemy (% Chance)	Attack Enemy (% Chance)						0
+SiegeTower	AI Delay (Frames)								0
+ReanimatedHorde	Attack1 (% Chance)	Melee AI Delay (Frames)	Skill2 (Range)	Skill2 (% Chance)	Walk Towards Enemy (% Chance)	Take a few steps toward enemy (% Chance)	AI Delay (Frames)		0
+SiegeBeast	Call Nearby Imp Range	Attack1 (% Chance)	Melee Skill1 (% Chance)	Melee AI Delay (Frames)	"Ranged Skill1 Max Range, Ranged Skill1 (% Chance)"	Approach Enemy (% Chance)	Approach Enemy (Velocity)		0
+Minion	Melee Attack (% Chance)	"Attack2 (% Chance), else Melee AI Delay (Frames)"	Approach Enemy (% Chance)	AI Delay (Frames)					0
+SuicideMinion		AI Delay (Frames)	Approach Enemy (% Chance)		Suicide Delay (Frames)				0
+Succubus	Attack1 (% Chance)	Approach Enemy (% Chance)	Skill (% Chance)	Skill Range	Melee AI Delay (Frames)	Ranged AI Delay (Frames)	Skill1 Target Min Life % Threshold	Skill2 Target Max Life % Threshold	0
+SuccubusWitch	Attack1 (% Chance)	Approach Enemy (% Chance)	"Skill (% Chance), else Run Away (% Chance)"	Skill Range	Skill2 (% Chance)	AI Delay (Frames)	Skill1 Target Min Life % Threshold	Skill2 Target Max Life % Threshold	0
+Overseer	Skill1 (Cry Help) AI Delay (Frames)	Skill2 (Healing Vortex) (% Chance)	Skill3 (Whip) (% Chance)	Run Away Min Range	Run Away Max Range	Attack (% Chance)	"Attack2 (% Chance), else Attack1"		0
+MinionSpawner	Max Spawn Count	AI Delay (Frames)	Skill1 Delay (Frames)	Enemy Awareness (Range)					0
+Imp	Approach Ally Range / Hurt Life % Threshold / Run Away Range	Teleport Range / Run Away (% Chance)	Skill1 (% Chance) / Skill4 Range	Skill4 (% Chance)					0
+Catapult	Attack1 (% Chance)								0
+FrozenHorror	Attack1 (% Chance)	Aproach Enemy (% Chance)	Skill1 (Horror Arctic Blast) (% Chance)	AI Delay (Frames)					0
+BloodLord	Attack (% Chance)	Aproach Enemy (% Chance)	"Attack2 (BloodLordFrenzy) (% Chance), else Attack1"	AI Delay (Frames)					0
+CatapultSpotter	Attack (% Chance)	AI Delay (Frames)		Random Attack Range Around Target	Max Shot Count Per Skill				0
+NpcBarb	AI Delay (Frames)	Approach Enemy (% Chance)	Enemy Awareness (Range)						0
+Nihlathak	Teleport (% Chance)	Teleport Range	Skill3 (Corpse Explosion) (% Chance)	Skill2 (Overseer Whip) (% Chance)	Run Away From Target (Range)				0
+GenericSpawner	Spawn Interval (Frames)		Max Spawn Count						0
+DeathMauler	Attack1 (% Chance)	Approach Enemy (% Chance)	Skill1 Range	Skill1 (% Chance)					0
+Wussie									0
+AncientStatue									0
+Ancient	Attack/Skill1 Range	Attack/Skill1 (% Chance)	Attack1/Attack2/Skill1 (% Chance)	Target Range	Run Away From Target (Frames)				0
+BaalThrone	Skill1 (% Chance)								0
+BaalCrab									0
+BaalTaunt	Approach Enemy (% Chance)	Taunt Skill (% Chance)	AI Delay (Frames)						0
+PutridDefiler	Run Away From Target (Range)	Run Away From Target (Frames)							0
+BaalToStairs	Stairs Max Range								0
+BaalTentacle	Attack1 (% Chance)	AI Delay (Frames)	Base Life Duration (Frames)						0
+BaalCrabClone									0
+BaalMinion	Skill1/Attack1 (% Chance)	Approach Enemy (% Chance)	"Skill1 (% Chance), else Attack1 else AI Delay (Frames)"	AI Delay (Frames)					0
+ClawViperEx	Skill1 (Charge) (% Chance)	Skill1 (Charge) Range	Attack2 (% Chance)	Attack1 (% Chance)	AI Delay (Frames)	"Charge overlay (0 = none, 2 = red, else blue)"	Attack1 Range	Attack1 Interval (Frames)	0
+ShadowMasterNoInit	Approach Enemy Range/Melee bonus rating/Progressive bonus rating	Caster Leash Range	Attack (% Chance)					summoning skill	0
+UberIzual	Attack1 (% Chance)	Approach Enemy (% Chance)	Ranged Skill1 (Frost Nova) (% Chance)	Melee Skill1 (Frost Nova) (% Chance)	Post Skill1 (Frost Nova) AI Delay (Frames)	Post Skill1 (Frost Nova) Attack Swing Count			0
+UberBaal									0
+UberMephisto									0
+UberDiablo									0
