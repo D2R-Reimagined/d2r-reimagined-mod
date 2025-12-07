@@ -1,0 +1,114 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall_vampire.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_medium/vfx_ground_fire_medium.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small_firestorm.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/missiles/meteor/vfx_meteor_fire.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_fire_cylinder.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_polarDiscLump.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/missiles/ground_fire_big/fx_mesh_groundFireCylinder.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/decal/T_FX_burning_ash_E.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_AlphaRemapCurve_blinkfix.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_scortch_gradient.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "ground_fire_medium",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3149065990,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 3681444243,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/trang/vfx_trang_meteor_fire_medium.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}
