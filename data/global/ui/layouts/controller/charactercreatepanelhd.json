@@ -1,0 +1,221 @@
+{
+    "basedOn": "CharacterCreatePanelHD.json",
+    "type": "CharacterCreatePanel", "name": "CharacterCreatePanel",
+    "fields": {
+        "defaultWidget": "Barbarian",
+    },
+    "children": [
+        {
+            "type": "Camera3DWidget", "name": "Camera",
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Amazon",
+            "fields": {
+                "navigation": {
+                    "right": { "name": "Assassin" },
+                    "down": { "name": "ToMainMenu" }
+                },
+            }
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Assassin",
+            "fields": {
+                "navigation": {
+                    "left": { "name": "Amazon" },
+                    "right": { "name": "Necromancer" },
+                    "down": { "name": "ToMainMenu" }
+                },
+            }
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Necromancer",
+            "fields": {
+                "navigation": {
+                    "left": { "name": "Assassin" },
+                    "right": { "name": "Barbarian" },
+                    "down": { "name": "InputText" }
+                },
+            }
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Barbarian",
+            "fields": {
+                "navigation": {
+                    "left": { "name": "Necromancer" },
+                    "right": { "name": "Paladin" },
+                    "down": { "name": "InputText" }
+                },
+            },
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Paladin",
+            "fields": {
+                "navigation": {
+                    "left": { "name": "Barbarian" },
+                    "right": { "name": "Sorceress" },
+                    "down": { "name": "InputText" }
+                },
+            }
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Sorceress",
+            "fields": {
+                "navigation": {
+                    "left": { "name": "Paladin" },
+                    "right": { "name": "Druid" },
+                    "down": { "name": "ToGame" }
+                },
+            }
+        },
+        {
+            "type": "HDCharacterSelectorWidget", "name": "Druid",
+            "fields": {
+                "navigation": {
+                    "left": { "name": "Sorceress" },
+                    "down": {  "name": "ToGame" }
+                },
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "Title",
+        },
+
+        // navigation buttons
+        {
+            "type": "Widget", "name": "LeftAnchor",
+            "children": [
+                {
+                    "type": "ButtonWidget", "name": "ToMainMenu",
+                    "fields": {
+                        "navigation": {
+                            "right": { "name": "LadderToggle" },
+                            "up": { "name": "Amazon" },
+                        }
+                    }
+                },
+            ]
+        },
+
+        {
+            "type": "Widget", "name": "RightAnchor",
+            "children": [
+                {
+                    // Toggle between SD/HD
+                    "type": "ButtonWidget", "name": "ToggleLegacy",
+                    "fields": {
+                        "navigation": {
+                            "down": { "name": "Barbarian" },
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "ToGame",
+                    "fields": {
+                        "navigation": {
+                            "left": { "name": "ClassicToggle" },
+                            "up": { "name": "Druid" },
+                        }
+                    }
+                },
+            ]
+        },
+        {
+            "type": "Widget", "name": "InfoContainer",
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "ClassTitle",
+                },
+                {
+                    "type": "TextBoxWidget", "name": "ClassDescription",
+                },
+            ]
+        },
+        {
+            "type": "Widget", "name": "InputContainer",
+            "fields": {
+                "rect": {"x": 0, "y": -50}
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "NameLabel",
+                },
+
+                {
+                    "type": "ImageWidget", "name": "InputBackground",
+                },
+
+                {
+                    "type": "InputTextBoxWidget", "name": "InputText",
+                    "fields": {
+                        "navigation": {
+                            "up": { "name": "Barbarian" },
+                            "right": { "name": "ToGame" },
+                            "left": { "name": "ToMainMenu" },
+                            "down": { "name": "HardcoreCheckbox" },
+                        },
+                    }
+                },
+
+                {
+                    "type": "disable", "name": "ClassicToggle",
+                    "fields": {
+                        "navigation": {
+                            "up": { "name": "InputText" },
+                            "right": { "name": "ToGame" },
+                            "left": { "name": "HardcoreCheckbox" },
+                        },
+                    }
+                },
+                {
+                    "type": "ToggleButtonWidget", "name": "HardcoreCheckbox",
+                    "fields": {
+                        "navigation": {
+                            "up": { "name": "InputText" },
+                            "right": { "name": "ClassicToggle" },
+                            "left": { "name": "LadderToggle" },
+                        },
+                    }
+                },
+                {
+                    "type": "disable", "name": "LadderToggle",
+                    "fields": {
+                        "navigation": {
+                            "up": { "name": "InputText" },
+                            "right": { "name": "HardcoreCheckbox" },
+                            "left": { "name": "ToMainMenu" },
+                        },
+                    }
+                },
+            ]
+        },
+        {
+            "type": "ButtonLegendWidget", "name": "CharacterCreateLegend",
+            "fields": {
+                "rect": { "x": -600, "y": 1990, "width": 1200, "height": 186 },
+                "text": { "style": "$StyleButtonLegend",
+                    "style": { "fontColor": "$FontColorWhite" }
+                },
+            }
+        },
+        {
+            "type": "RectangleWidget", "name": "LoadingScreen",
+            "children": [
+                {
+                    "type": "ClickCatcherWidget", "name": "catcher",
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "FullGlow",
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "Logo",
+                },
+                {
+                    "type": "ImageWidget", "name": "ResurrectedText",
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                },
+            ]
+        },
+    ]
+}
