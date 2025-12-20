@@ -1,10 +1,18 @@
 {
     "dependencies": {
-        "particles": [],
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/lightning_javelin/Lightning_Javelin.particles"
+            }
+        ],
         "models": [],
         "skeletons": [],
         "animations": [],
-        "textures": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/mask/FX_T_HOGM_Trail_01_rotated_padded_faded_256flipped.texture"
+            }
+        ],
         "physics": [],
         "json": [],
         "variantdata": [],
@@ -12,12 +20,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "warcryextra",
+    "name": "lightning_javelin",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 777654545457,
+            "id": 2898158099,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -40,12 +48,12 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 76534545456,
+            "id": 3753481931,
             "components": [
                 {
                     "type": "VfxDefinitionComponent",
                     "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_skill1.particles",
+                    "filename": "data/hd/vfx/particles/missiles/lightning_javelin/Lightning_Javelin.particles",
                     "hardKillOnDestroy": false
                 },
                 {
@@ -53,8 +61,8 @@
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 0.0,
-                        "z": 7.0
+                        "y": 4.0,
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,

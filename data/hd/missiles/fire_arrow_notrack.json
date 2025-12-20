@@ -1,0 +1,136 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/fire_arrow/fx_fire_projectile_arrow.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/missiles/arrow/arrow.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_ALB.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_NRM.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/debug/white.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "fire_arrow",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3301666762,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 4173767810,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 5.0,
+                        "z": 1.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/fire_arrow/fx_fire_projectile_arrow.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_model",
+            "id": 2694118616,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_model_ModelDefinition",
+                    "filename": "data/hd/missiles/arrow/arrow.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_model_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 5.0,
+                        "z": -0.35
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}

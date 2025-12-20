@@ -1,0 +1,111 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/safe_arrow/Safe_arrow.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/missiles/arrow/arrow.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_generic_cone_alphabase.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_ALB.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_NRM.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/FX_T_alphaRemap_tight_shockwave.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "safe_arrow",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 4226820552,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 464231253,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx1",
+                    "filename": "data/hd/vfx/particles/missiles/safe_arrow/Safe_arrow.particles",
+                    "hardKillOnDestroy": true
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 5.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_vfx1_ModelDefinition",
+                    "filename": "data/hd/missiles/arrow/arrow.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "type": "Panel", "name": "MainMenuLoadingPanel",
+    "fields": {
+        "priority": 2147483645,
+        "fitToParent": true
+    },
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "LoadingScreen",
+            "fields": {
+                "fitToScreen": true
+            },
+            "children": [
+                {
+                    "type": "ClickCatcherWidget", "name": "LoadingClickCatcher",
+                    "fields": {
+                        "fitToParent": true
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "FullGlow",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -400, "y": -420, "scale": 0.5 },
+                        "filename": "LogoAnimation/FullGlow_PC",
+                        "fps": 20
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "Logo",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -399, "y": -412, "scale": 0.5 },
+                        "filename": "LogoAnimation/LogoAnimation",
+                        "fps": 20
+                    }
+                },
+                {
+                    "type": "ImageWidget", "name": "ResurrectedText",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -370, "y": -246, "scale": 0.5 },
+                        "filename": "LogoAnimation/ResurrectedText"
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -319, "y": -220, "scale": 0.5 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20
+                    }
+                },
+                {
+                    "type": "ImageWidget", "name": "ReimaginedText",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -370, "y": -200, "scale": 0.5 },
+                        "filename": "LogoAnimation/ReimaginedText"
+                    }
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlamesRI",
+                    "fields": {
+                        "anchor": { "x": 1.0, "y": 1.0 },
+                        "rect": { "x": -319, "y": -174, "scale": 0.5 },
+                        "filename": "LogoAnimation/Logo_BottomFlame",
+                        "fps": 20
+                    }
+                }
+            ]
+        }
+    ]
+}
