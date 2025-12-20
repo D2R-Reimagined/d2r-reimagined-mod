@@ -2,19 +2,28 @@
     "dependencies": {
         "particles": [
             {
-                "path": "data/hd/vfx/particles/missiles/corpse_explode_guts/vfx_corpse_explosion.particles"
+                "path": "data/hd/vfx/particles/missiles/fire_arrow/fx_fire_projectile_arrow.particles"
             }
         ],
         "models": [
             {
-                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+                "path": "data/hd/missiles/arrow/arrow.model"
             }
         ],
         "skeletons": [],
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+                "path": "data/hd/missiles/arrow/missiles_arrow_ALB.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_NRM.texture"
+            },
+            {
+                "path": "data/hd/missiles/arrow/missiles_arrow_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/debug/white.texture"
             }
         ],
         "physics": [],
@@ -24,12 +33,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "corpse_explode_guts",
+    "name": "fire_arrow",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 2622674882,
+            "id": 3301666762,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -52,15 +61,15 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 4010310920,
+            "id": 4173767810,
             "components": [
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "component_transform1",
                     "position": {
                         "x": 0.0,
-                        "y": 1.0,
-                        "z": 0.0
+                        "y": 5.0,
+                        "z": 1.0
                     },
                     "orientation": {
                         "x": 0.0,
@@ -78,34 +87,35 @@
                 {
                     "type": "VfxDefinitionComponent",
                     "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/objects/characters/exploding_cow/vfx_exploding_cow_bloodsquib.particles",
+                    "filename": "data/hd/vfx/particles/missiles/fire_arrow/fx_fire_projectile_arrow.particles",
                     "hardKillOnDestroy": false
-                },
-                {
-                    "type": "UnitSourceSkillFilterComponent",
-                    "name": "entity_vfx_PoisonNova_UnitSourceSkillFilter",
-                    "sourceSkill": "Concentrate"
                 }
             ]
         },
         {
             "type": "Entity",
-            "name": "entity_vfx1",
-            "id": 867739660,
+            "name": "entity_model",
+            "id": 2694118616,
             "components": [
                 {
-                    "type": "VfxDefinitionComponent",
-                    "name": "entity_vfx1_VfxDefinition",
-                    "filename": "data/hd/vfx/particles/missiles/expansion_tornado/carnage_explode.particles",
-                    "hardKillOnDestroy": false
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_model_ModelDefinition",
+                    "filename": "data/hd/missiles/arrow/arrow.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
                 },
                 {
                     "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
+                    "name": "entity_model_TransformDefinition",
                     "position": {
                         "x": 0.0,
                         "y": 5.0,
-                        "z": 2.0
+                        "z": -0.35
                     },
                     "orientation": {
                         "x": 0.0,
