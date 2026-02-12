@@ -26,9 +26,11 @@
                         "selectorName": "Selection",
                         "direction": "vertical",
                         "itemSelectionMessage": "CharacterSelect:SelectCharacter",
-                        "selectionChangedSound": "cursor_movement_hd"
+                        "selectionChangedSound": "cursor_movement_hd",
+                        "selectInactiveItems": true
                     },
                     "children": [
+                        // character list
                         {
                             "type": "ListItemWidget", "name": "CharacterTemplate",
                             "fields": {
@@ -142,7 +144,6 @@
                                         }
                                     }
                                 }
-
                             ]
                         },
                         {
@@ -247,6 +248,7 @@
                                 "tabSize": { "x": 332, "y": 71 },
                                 "tabPadding": { "x": -1, "y": 0 },
                                 "onSwitchTabMessage": "CharacterSelect:SelectTab",
+                                "automaticallyPositionIndicators": true,
                                 "tabLeftIndicatorPosition": { "x": 0, "y": -500 },
                                 "tabRightIndicatorPosition": { "x": 0, "y": -500 }
                             }
