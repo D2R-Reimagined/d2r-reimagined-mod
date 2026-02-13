@@ -541,5 +541,76 @@
     "JoinGameRect": { "x": 825, "y": 105 },
     "JoinGameNarrowRect": { "x": 455, "y": 80 },
     "LadderRect": { "x": 1210, "y": 105 },
-    "LadderNarrowRect": { "x": 840, "y": 80 }
+    "LadderNarrowRect": { "x": 840, "y": 80 },
+
+    // Join game tweaks.
+    "JoinGamePlayerEntryHeight": 100,
+    "JoinGamePlayerNameHeight": 60,
+
+    // Loot filter options panel
+    "LootFilterOptionsPanelWidth": 1730,
+    "LootFilterOptionsPanelHeight": 1405,
+    "LootFilterOptionsPanelRect": { "x": -865, "y": 279, "width": "$LootFilterOptionsPanelWidth", "height": "$LootFilterOptionsPanelHeight" },
+    "LootFilterItemTabRect": { "x": -880, "y": 670, "width": 1770, "height": 1000 },
+    "LootFilterConfirmButtonX": 421,
+    "LootFilterSmallFontSize": "$SmallFontSize",
+    "LootFilterMediumFontSize": "$MediumFontSize",
+    "LootFilterMediumLargeFontSize": "$MediumLargeFontSize",
+    "StyleLFButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+        "alignment": { "v": "center" }
+    },
+    "StyleLFButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": { "kerning": 0.88, "leading": 0.8 },
+        "alignment": { "v": "center", "h": "center" },
+        "options": { "lineWrap": true }
+    },
+    "StyleRuleSummaryButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+        "alignment": { "v": "center" }
+    },
+    "StyleItemListButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+        "alignment": { "v": "center" }
+    },
+    "StyleItemListButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterSmallFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+        "alignment": { "v": "center" },
+        "options": { "lineWrap": true }
+    },
+    "StyleFilterRuleListButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterSmallFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+        "alignment": { "v": "center" },
+        "options": { "lineWrap": false }
+    },
+    "StyleLootFilterAltTitle": {
+        "fontColor": "$FontColorGoldYellow",
+        "pointSize": "$LootFilterMediumFontSize",
+        "alignment": { "h": "left", "v": "center" },
+        "options": { "lineWrap": true }
+    }
 }
