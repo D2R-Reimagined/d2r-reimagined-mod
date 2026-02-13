@@ -2,13 +2,15 @@
     // Named globals.
     "INT_MAX": 2147483647,
 
+    "ToggleButtonFocusIndicatorPadding": { "left": 3,"top": 6, "right": 12, "bottom": 9 },
+
     // Anchor points.
     "LeftPanelAnchor": { "x": 0.0, "y": 0.397 },
     "RightPanelAnchor": { "x": 1.0, "y": 0.397 },
     // In-game panel rects.
     "LeftPanelRect": { "x": 236, "y": -651, "width": 1162, "height": 1507 },
     "RightPanelRect": { "x": -1394, "y": -651, "width": 1162, "height": 1507 },
-    "PanelClickCatcherRect": { "x": 0, "y": -200, "width": 1162, "height": 1507 },
+    "PanelClickCatcherRect": { "x": 0, "y": 0, "width": 1162, "height": 1507 },
     "InGamePanelTitleRect" : { "x": 91, "y": 64, "width": 972, "height": 71 },
     "ScrollSpeechWidth": 700,
     "ScrollSpeechBorderWidth": 800,
@@ -55,11 +57,13 @@
     "FontColorLightBlue": { "r": 175, "g": 183, "b": 255, "a": 255 },
     "FontColorLightGray": { "r": 148, "g": 148, "b": 148, "a": 255 },
     "FontColorDarkRed": { "r": 175, "g": 25, "b": 25, "a": 255 },
+    "FontColorMoreLightGray": { "r": 191, "g": 191, "b": 191, "a": 255 },
     "FontColorDarkGrayBlue":  { "r": 125, "g": 141, "b": 144, "a": 255 },
     "FontColorDarkGrayGold" : { "r": 173, "g": 168, "b": 148, "a": 255 }, // Usage example: attribute points to spend
     "FontColorTransparent": { "r": 0, "g": 0, "b": 0, "a": 0 },
     "FontColorPartyOrange": { "r": 196, "g": 129, "b": 0, "a": 255 },
     "FontColorPartyGreen": {"r": 79, "g": 194, "b": 56, "a": 255 },
+    "FontColorDesecrated": { "r": 154, "g": 72, "b": 252, "a": 255 },
 
     // Text color presets
     "CarouselEnabledColor": "$FontColorLightGold",
@@ -92,6 +96,7 @@
     "TooltipFontSize": 36,
     "CinematicsFontSize": 32,
     "AddFriendModalFontSize": 26, // Usage: AddFriendModal needs to be the same size in all profiles to support IME
+    "GameNameFilterFontSize": 28, // Usage: it needs to be the same size in all profiles
 
     // K&M LV-mode in-game panels are just scaled up, thus we need
     // versions of fonts which can be used in panels.
@@ -190,16 +195,37 @@
     },
     "StyleTitleBlock": {
         "fontColor": "$PanelTitleColor",
-        "pointSize": "$ExtraLargeFontSize",
+        "pointSize": "$LargeFontSize",
         "dropShadow": "$DefaultDropShadow",
         "alignment": { "h": "center", "v": "center" },
-        "spacing": "$ReducedSpacing"
+        "spacing": "$ReducedSpacing",
+    },
+    "StyleRewardsTitleBlock": {
+        "fontColor": "$PanelTitleColor",
+        "pointSize": "$LargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": { "h": "center", "v": "center" },
+        "spacing": "$ReducedSpacing",
     },
     "StyleGoldAmount": {
         "fontColor": "$FontColorCurrencyGold",
         "pointSize": "$XMediumLargeFontSize",
         "dropShadow": "$DefaultDropShadow",
-        "alignment": { "h": "left", "v": "center" }
+        "alignment": { "h": "left", "v": "center" },
+    },
+    "AltStyleGoldAmount": {
+        "fontColor": "$FontColorCurrencyGold",
+        "pointSize": "$SmallPanelFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": {
+            "h": "left",
+            "v": "center"
+        }
+    },
+    "StyleGoldMax": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$SmallFontSize",
+        "alignment": { "h": "center", "v": "center" }
     },
     "StyleWeaponSwapTabs": {
         "fontColor": "$FontColorWhite",
@@ -213,6 +239,11 @@
         "pointSize": "$SmallPanelFontSize",
         "alignment": { "h": "center", "v": "center" },
         "fontColor": "$FontColorWhite"
+    },
+    "StyleChronicleItemList": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$SmallPanelFontSize",
+        "alignment": { "h": "left", "v": "center" }
     },
     "StyleSettingsTitle": {
         "fontColor": "$FontColorGoldYellow",
@@ -236,6 +267,11 @@
         "spacing" : "$ReducedSpacing",
         "alignment": { "h": "center", "v": "center" }
     },
+    "StyleSettingsLargeCarousel": {
+        "pointSize": "$MediumLargeFontSize",
+        "spacing" : "$ReducedSpacing",
+        "alignment": { "h": "center", "v": "center" }
+    },
     "StyleSettingsNumeric": {
         "fontFace": "Exocet",
         "pointSize": "$MediumFontSize",
@@ -255,7 +291,6 @@
         "fontColor": "$FontColorWhite",
         "alignment": { "h": "center", "v": "center" },
         "options": { "newlineHandling": "standard", "lineWrap": true },
-        "spacing": { "leading": 1.5 }
     },
     "StyleVictoryText": {
         "fontColor": "$FontColorDarkGold",
@@ -310,6 +345,7 @@
         "GoldColor": "$FontColorWhite",
         "RuneColor": "$FontColorOrange",
         "EventItemsColor": "$FontColorOrange",
+        "DesecratedColor": "$FontColorDesecrated",
         "GemsColor": "$FontColorOrange"
     },
 
@@ -321,6 +357,7 @@
         "Spells/Barbarian/BaSkillicon",
         "Spells/Druid/DrSkillicon",
         "Spells/Assassin/AsSkillicon",
+        "Spells/Warlock/WaSkillicon",
         "Spells/SubMenu/Skillicon"
     ],
 
@@ -364,6 +401,8 @@
     "OptionsSliderRect": { "width": 480, "height": 72 },
     "CalibrationTableColumn1": { "width": 700, "alignment": { "h": "fit", "v": "fit" } },
     "OptionsSliderValueRect": { "x": -159, "y": 17, "width": 70, "height": 40 },
+    "ChronicleSearchBox": { "x": 1275, "y": -118, "width": 450, "height": 102 },
+    "ChronicleSearchInput": { "x": 40, "y": 0, "width": 400, "height": 102 },
 
     // Options hover indicators
     "OptionsSliderFocusIndicatorFilename": "Controller/HoverImages/Slider_Hover",
@@ -431,7 +470,7 @@
     "SkillHotkeyTextStyle": {
         "fontColor": "$FontColorLightGold",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
             "offset": { "x": 4, "y": 4 }
         },
         "pointSize": "$MediumFontSize",
@@ -440,25 +479,24 @@
     "SkillHotkeyTextAltStyle": {
         "fontColor": "$FontColorLightGold",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
             "offset": { "x": 4, "y": 4 }
         },
-        "pointSize": "$MediumFontSize",
+        "pointSize": "$SmallFontSize",
         "alignment": { "h": "right" },
         "options": { "lineWrap": true },
         "spacing": "$MinimumSpacing"
     },
+    "SkillHotkeyTextRect": { "x": -4, "y": 3, "width": 132, "height": 124 },
     "SkillQuantityTextStyle": {
         "fontColor": "$FontColorBlue",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
             "offset": { "x": 4, "y": 4 }
         },
         "pointSize": "$MediumFontSize",
-        "alignment": { "h": "left" },
-        "options": { "hideOverflow": true }
+        "alignment": { "h": "left" }
     },
-    "SkillHotkeyTextRect": { "x": -4, "y": 5, "width": 124, "height": 114 },
     "SkillQuantityTextRect": { "x": 6, "y": 85 },
     "SkillQuantityTextRectController": { "x": 6, "y": 6 },
 
@@ -488,6 +526,7 @@
 
     // Account Linking
     "AccountLinkingTileRect": { "x": -875, "y": 561, "width": 1750, "height": 930 },
+    "AccountLinkingActiveUserRect": { "x": 50 , "y": 10, "width": 1650, "height": 160 },
     "AccountLinkingDescriptionRect": { "x": 50 , "y": 180, "width": 1650, "height": 160 },
     "AccountLinkingUserCodeRect": { "x": 50 , "y": 390, "width": 1650, "height": 215 },
     "AccountLinkingUrlRect": { "x": 50 , "y": 625, "width": 1650, "height": 110 },
@@ -517,8 +556,10 @@
     "TutorialTooltipConsoleTabsRect": { "x": -675, "y": 751, "width": 900, "height": 700 },
     "TutorialTooltipConsoleOnlineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
     "TutorialTooltipConsoleOfflineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
-    "TutorialTooltipConsoleSoloRect": { "x": 275, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleSoloRect": { "x": -200, "y": 451, "width": 900, "height": 700 },
     "TutorialTooltipConsoleMultiRect": { "x": -1375, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleGameCreatorRect": { "x": -1600, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleGameListRect": { "x": -700, "y": 451, "width": 900, "height": 700 },
 
     "TooltipConfirmSmall": { "x": 200, "y": 250 },
     "TooltipDismissSmall": { "x": 200, "y": 400 },
@@ -612,5 +653,5 @@
         "pointSize": "$LootFilterMediumFontSize",
         "alignment": { "h": "left", "v": "center" },
         "options": { "lineWrap": true }
-    }
+    },
 }
