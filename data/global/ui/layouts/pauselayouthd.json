@@ -58,7 +58,8 @@
                         "filename": "LogoAnimation/Logo_BottomFlame",
                         "fps": 20
                     }
-                },                {
+                },
+                {
                     "type": "ImageWidget", "name": "ReimaginedText",
                     "fields": {
                         "rect": { "x": -239, "y": 555 },
@@ -125,34 +126,6 @@
                     ]
                 },
                 {
-                    "type": "TableRowWidget", "name": "Row Return to Game",
-                    "children": [
-                        {
-                            "type": "ButtonWidget", "name": "ReturnToGame",
-                            "fields": {
-                                "filename": "PauseMenu\\PauseButton",
-                                "hoveredFrame": 3,
-                                "textString": "@ReturnToGame",
-                                "pressLabelOffset": [ 0, 0 ],
-                                "onClickMessage": "PausePanelMessage:Close",
-                                "textColor": "$LightButtonTextColor",
-                                "text/style": "$StyleFEButtonText",
-                                "acceptsReturnKey": true,
-                                "focusOnMouseOver": true,
-                                "sound": "select"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "TableRowWidget", "name": "Spacer",
-                    "children": [
-                        {
-                            "type": "Disabled", "name": "Spacer"
-                        }
-                    ]
-                },
-                {
                     "type": "TableRowWidget", "name": "Row Save and Exit Game",
                     "children": [
                         {
@@ -168,6 +141,26 @@
                                 "acceptsReturnKey": true,
                                 "focusOnMouseOver": true,
                                 "sound": "cursor_select"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Row Return to Game",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "ReturnToGame",
+                            "fields": {
+                                "filename": "PauseMenu\\PauseButton",
+                                "hoveredFrame": 3,
+                                "textString": "@ReturnToGame",
+                                "pressLabelOffset": [ 0, 0 ],
+                                "onClickMessage": "PausePanelMessage:Close",
+                                "textColor": "$LightButtonTextColor",
+                                "text/style": "$StyleFEButtonText",
+                                "acceptsReturnKey": true,
+                                "focusOnMouseOver": true,
+                                "sound": "select"
                             }
                         }
                     ]
@@ -218,7 +211,7 @@
             "type": "ImageWidget", "name": "AgeDescriptorImage",
             "fields": {
                 "rect": { "x": 40, "y": 80 },
-                "filename": "PauseMenu\\descriptor-18"
+                "filename": "PauseMenu\\age-descriptor"
             }
         },
         {
