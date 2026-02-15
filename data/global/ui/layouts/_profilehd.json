@@ -3,7 +3,7 @@
     "INT_MAX": 2147483647,
 
     "ToggleButtonFocusIndicatorPadding": { "left": 3,"top": 6, "right": 12, "bottom": 9 },
-
+    
     // Anchor points.
     "LeftPanelAnchor": { "x": 0.0, "y": 0.397 },
     "RightPanelAnchor": { "x": 1.0, "y": 0.397 },
@@ -56,8 +56,8 @@
     "FontColorLightYellow": { "r": 255, "g": 235, "b": 164, "a": 255 },
     "FontColorLightBlue": { "r": 175, "g": 183, "b": 255, "a": 255 },
     "FontColorLightGray": { "r": 148, "g": 148, "b": 148, "a": 255 },
-    "FontColorDarkRed": { "r": 175, "g": 25, "b": 25, "a": 255 },
     "FontColorMoreLightGray": { "r": 191, "g": 191, "b": 191, "a": 255 },
+    "FontColorDarkRed": { "r": 175, "g": 25, "b": 25, "a": 255 },
     "FontColorDarkGrayBlue":  { "r": 125, "g": 141, "b": 144, "a": 255 },
     "FontColorDarkGrayGold" : { "r": 173, "g": 168, "b": 148, "a": 255 }, // Usage example: attribute points to spend
     "FontColorTransparent": { "r": 0, "g": 0, "b": 0, "a": 0 },
@@ -150,7 +150,7 @@
         "spacing": { "leading": 1.0 }
     },
     "StyleButtonLegend": {
-        "fontColor": "$FontColorLightGray",
+        "fontColor": "$FontColorWhite",
         "pointSize": "$MediumFontSize",
         "spacing": { "leading": 1.2, "kerning": 0.95 }
     },
@@ -195,7 +195,7 @@
     },
     "StyleTitleBlock": {
         "fontColor": "$PanelTitleColor",
-        "pointSize": "$LargeFontSize",
+        "pointSize": "$ExtraLargeFontSize",
         "dropShadow": "$DefaultDropShadow",
         "alignment": { "h": "center", "v": "center" },
         "spacing": "$ReducedSpacing",
@@ -225,7 +225,7 @@
     "StyleGoldMax": {
         "fontColor": "$FontColorWhite",
         "pointSize": "$SmallFontSize",
-        "alignment": { "h": "center", "v": "center" }
+        "alignment": { "h": "center", "v": "center" },
     },
     "StyleWeaponSwapTabs": {
         "fontColor": "$FontColorWhite",
@@ -243,7 +243,7 @@
     "StyleChronicleItemList": {
         "fontColor": "$FontColorWhite",
         "pointSize": "$SmallPanelFontSize",
-        "alignment": { "h": "left", "v": "center" }
+        "alignment": { "h": "left", "v": "center" },
     },
     "StyleSettingsTitle": {
         "fontColor": "$FontColorGoldYellow",
@@ -265,12 +265,12 @@
     "StyleSettingsCarousel": {
         "pointSize": "$MediumFontSize",
         "spacing" : "$ReducedSpacing",
-        "alignment": { "h": "center", "v": "center" }
+        "alignment": { "h": "center", "v": "center" },
     },
     "StyleSettingsLargeCarousel": {
         "pointSize": "$MediumLargeFontSize",
         "spacing" : "$ReducedSpacing",
-        "alignment": { "h": "center", "v": "center" }
+        "alignment": { "h": "center", "v": "center" },
     },
     "StyleSettingsNumeric": {
         "fontFace": "Exocet",
@@ -291,6 +291,7 @@
         "fontColor": "$FontColorWhite",
         "alignment": { "h": "center", "v": "center" },
         "options": { "newlineHandling": "standard", "lineWrap": true },
+        "spacing": { "leading": 1.5 }
     },
     "StyleVictoryText": {
         "fontColor": "$FontColorDarkGold",
@@ -365,18 +366,18 @@
     "SecondSetIconOffset": { "x": 175 },
 
     // SidePanel
-    "LeftSideSprite": "PANEL\\Docking_Bar\\SidePanel_L_Blank",
+    "LeftSideSprite": "",
     "LeftSideRect": { },
     "LeftSideRectImbuePanel": { "x": -236, "y": -205 },
     "LeftSideRectHireMenu": { "x": -236, "y": -204 },
     "LeftSideCatcherRect": { "x": 0, "y": 0, "width": 954, "height": 2160 },
     "LeftHingeRect": { "x": -236, "y": 630 },
-    "LeftHingeSprite": "PANEL\\Docking_Bar\\SidePanel_Hinge_L_Blank",
-    "RightSideSprite": "PANEL\\Docking_Bar\\SidePanel_R_Blank",
+    "LeftHingeSprite": "",
+    "RightSideSprite": "",
     "RightSideRect": { "x": -732 },
     "RightSideCatcherRect": { "x": -732, "y": 0, "width": 954, "height": 2160 },
     "RightHingeRect": { "x": 1076, "y": 630 },
-    "RightHingeSprite": "PANEL\\Docking_Bar\\SidePanel_Hinge_R_Blank",
+    "RightHingeSprite": "",
 
     // Inventory
     "ItemCellSize": { "x": 98, "y": 98 },
@@ -470,7 +471,7 @@
     "SkillHotkeyTextStyle": {
         "fontColor": "$FontColorLightGold",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
             "offset": { "x": 4, "y": 4 }
         },
         "pointSize": "$MediumFontSize",
@@ -479,10 +480,10 @@
     "SkillHotkeyTextAltStyle": {
         "fontColor": "$FontColorLightGold",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
             "offset": { "x": 4, "y": 4 }
         },
-        "pointSize": "$SmallFontSize",
+        "pointSize": "$MediumFontSize",
         "alignment": { "h": "right" },
         "options": { "lineWrap": true },
         "spacing": "$MinimumSpacing"
@@ -491,11 +492,11 @@
     "SkillQuantityTextStyle": {
         "fontColor": "$FontColorBlue",
         "dropShadow": {
-            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 200 },
+            "shadowColor": { "r": 0, "g": 0, "b": 0, "a": 255 },
             "offset": { "x": 4, "y": 4 }
         },
         "pointSize": "$MediumFontSize",
-        "alignment": { "h": "left" }
+        "alignment": { "h": "left" },
     },
     "SkillQuantityTextRect": { "x": 6, "y": 85 },
     "SkillQuantityTextRectController": { "x": 6, "y": 6 },
@@ -556,9 +557,8 @@
     "TutorialTooltipConsoleTabsRect": { "x": -675, "y": 751, "width": 900, "height": 700 },
     "TutorialTooltipConsoleOnlineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
     "TutorialTooltipConsoleOfflineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
-    "TutorialTooltipConsoleSoloRect": { "x": -200, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleSoloRect": { "x": 275, "y": 451, "width": 900, "height": 700 },
     "TutorialTooltipConsoleMultiRect": { "x": -1375, "y": 451, "width": 900, "height": 700 },
-    "TutorialTooltipConsoleGameCreatorRect": { "x": -1600, "y": 451, "width": 900, "height": 700 },
     "TutorialTooltipConsoleGameListRect": { "x": -700, "y": 451, "width": 900, "height": 700 },
 
     "TooltipConfirmSmall": { "x": 200, "y": 250 },
@@ -587,57 +587,57 @@
     // Join game tweaks.
     "JoinGamePlayerEntryHeight": 100,
     "JoinGamePlayerNameHeight": 60,
-
-    // Loot filter options panel
+	
+	// Loot filter options panel
     "LootFilterOptionsPanelWidth": 1730,
     "LootFilterOptionsPanelHeight": 1405,
     "LootFilterOptionsPanelRect": { "x": -865, "y": 279, "width": "$LootFilterOptionsPanelWidth", "height": "$LootFilterOptionsPanelHeight" },
-    "LootFilterItemTabRect": { "x": -880, "y": 670, "width": 1770, "height": 1000 },
-    "LootFilterConfirmButtonX": 421,
-    "LootFilterSmallFontSize": "$SmallFontSize",
-    "LootFilterMediumFontSize": "$MediumFontSize",
-    "LootFilterMediumLargeFontSize": "$MediumLargeFontSize",
-    "StyleLFButtonText":
+	"LootFilterItemTabRect": { "x": -880, "y": 670, "width": 1770, "height": 1000 },
+	"LootFilterConfirmButtonX": 421,
+	"LootFilterSmallFontSize": "$SmallFontSize",
+	"LootFilterMediumFontSize": "$MediumFontSize",
+	"LootFilterMediumLargeFontSize": "$MediumLargeFontSize",
+	"StyleLFButtonText":
     {
         "fontColor": "$LightButtonTextColor",
         "pointSize": "$LootFilterMediumLargeFontSize",
         "dropShadow": "$DefaultDropShadow",
         "spacing": "$MinimumSpacing",
-        "alignment": { "v": "center" }
+		"alignment": { "v": "center" },
     },
-    "StyleLFButtonTextSmall":
+	"StyleLFButtonTextSmall":
     {
         "fontColor": "$LightButtonTextColor",
         "pointSize": "$LootFilterMediumFontSize",
         "dropShadow": "$DefaultDropShadow",
         "spacing": { "kerning": 0.88, "leading": 0.8 },
-        "alignment": { "v": "center", "h": "center" },
-        "options": { "lineWrap": true }
+		"alignment": { "v": "center", "h": "center" },
+		"options": { "lineWrap": true },
     },
-    "StyleRuleSummaryButtonText":
+	"StyleRuleSummaryButtonText":
     {
         "fontColor": "$LightButtonTextColor",
         "pointSize": "$LootFilterMediumFontSize",
         "dropShadow": "$DefaultDropShadow",
         "spacing": "$MinimumSpacing",
-        "alignment": { "v": "center" }
+		"alignment": { "v": "center" },
     },
-    "StyleItemListButtonText":
+	"StyleItemListButtonText":
     {
         "fontColor": "$LightButtonTextColor",
         "pointSize": "$LootFilterMediumFontSize",
         "dropShadow": "$DefaultDropShadow",
         "spacing": "$MinimumSpacing",
-        "alignment": { "v": "center" }
+		"alignment": { "v": "center" },
     },
-    "StyleItemListButtonTextSmall":
+	"StyleItemListButtonTextSmall":
     {
         "fontColor": "$LightButtonTextColor",
         "pointSize": "$LootFilterSmallFontSize",
         "dropShadow": "$DefaultDropShadow",
         "spacing": "$MinimumSpacing",
-        "alignment": { "v": "center" },
-        "options": { "lineWrap": true }
+		"alignment": { "v": "center" },
+		"options": { "lineWrap": true },
     },
     "StyleFilterRuleListButtonTextSmall":
     {
@@ -645,13 +645,13 @@
         "pointSize": "$LootFilterSmallFontSize",
         "dropShadow": "$DefaultDropShadow",
         "spacing": "$MinimumSpacing",
-        "alignment": { "v": "center" },
-        "options": { "lineWrap": false }
+		"alignment": { "v": "center" },
+		"options": { "lineWrap": false },
     },
-    "StyleLootFilterAltTitle": {
+	"StyleLootFilterAltTitle": {
         "fontColor": "$FontColorGoldYellow",
         "pointSize": "$LootFilterMediumFontSize",
         "alignment": { "h": "left", "v": "center" },
-        "options": { "lineWrap": true }
+		"options": { "lineWrap": true },
     },
 }

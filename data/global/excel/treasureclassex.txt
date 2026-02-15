@@ -1,10 +1,10 @@
 Treasure Class	group	level	Picks	Unique	Set	Rare	Magic	NoDrop	Item1	Prob1	Item2	Prob2	Item3	Prob3	Item4	Prob4	Item5	Prob5	Item6	Prob6	Item7	Prob7	Item8	Prob8	Item9	Prob9	Item10	Prob10	*ItemProbSum	*ItemProbTotal	*TreasureClassDropChance	ConditionCalc	firstLadderSeason	lastLadderSeason	noAlwaysSpawn	QuestFlag	QuestFlagEx	*eol
 Gold			1					0	gld,mul=1024	1																					Required Row 'Don't Remove'							0
 Void			0																																			0
-Gold 1x			1					0	Void	5	gld,mul=1024	1																										0
-Gold 1.5x			1					0	Void	5	gld,mul=1536	1																										0
-Gold 2x			1					0	Void	5	gld,mul=2048	1																										0
-Gold 2.5x			1					0	Void	5	gld,mul=2560	1																										0
+Gold 1x			1					0	gld,mul=1024	1																												0
+Gold 1.5x			1					0	gld,mul=1536	1																												0
+Gold 2x			1					0	gld,mul=2048	1																												0
+Gold 2.5x			1					0	gld,mul=2560	1																												0
 Infusion Orb (Normal)			1					0	ooi	1																									1			0
 Assemblage Orb (Normal)			1					0	ooa	1																									1			0
 Conversion Orb (Normal)			1					0	ooc	1																									1			0
@@ -22,7 +22,7 @@ Pandemonium Key C			1					0	pk3	1																									1			0
 Pandemonium Keys			1					0	pk1	1	pk2	1	pk3	1																					1			0
 Jewelry Orbs Single			1					0	Infusion Orb (Normal)	4	Assemblage Orb (Normal)	1	Conversion Orb (Normal)	1																					1			0
 Jewelry Orbs Stack			1					0	Infusion Orb	4	Assemblage Orb	1	Conversion Orb	1																					1			0
-Sunder Charms			1					1414	Cold Rupture	1	Flame Rift	1	Crack of the Heavens	1	Rotting Fissure	1	Bone Break	1	Black Cleft	1															1			0
+Sunder Charms			1					1414	PreCrafted Cold Rupture	1	PreCrafted Flame Rift	1	PreCrafted Crack of the Heavens	1	PreCrafted Rotting Fissure	1	PreCrafted Bone Break	1	PreCrafted Black Cleft	1															1			0
 Norm TZ Generic			1					114	Corruption Orb	1																									1			0
 NMH Boss			1					114	Socket Orb	1																									1			0
 NM TZ Generic			1					114	Socket Orb	1	Corruption Orb	1																							1			0
@@ -1012,23 +1012,23 @@ Countess (H) Desecrated C	35	87	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Char
 Countess (H) Desecrated D	35	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated D	1	Rune Boss Low (H) Desecrated	1																						0
 Countess (H) Desecrated E	35	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated E	1	Rune Boss Low (H) Desecrated	1																						0
 Countess (H) Desecrated F	35	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Countess Item (H) Desecrated F	1	Rune Boss Low (H) Desecrated	1																						0
-Andarielq Item			6					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																								0
-Andarielq Item Desecrated A			6					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																								0
-Andarielq Item Desecrated B			6					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																								0
-Andarielq Item Desecrated C			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
-Andarielq Item (N)			6					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																								0
-Andarielq Item (N) Desecrated A			6					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																								0
-Andarielq Item (N) Desecrated B			6					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																								0
-Andarielq Item (N) Desecrated C			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
-Andarielq Item (H)			6					5	Act 2 (H) Good	4	Act 2 (H) Equip A	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated A			6					5	Act 3 (H) Good	4	Act 3 (H) Equip B	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated B			6					5	Act 3 (H) Good	4	Act 3 (H) Equip C	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated C			6					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated D			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated E			6					5	Act 4 (H) Good	4	Act 4 (H) Equip C	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated F			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated G			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
-Andarielq Item (H) Desecrated H			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
+Andarielq Item			7					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																								0
+Andarielq Item Desecrated A			7					5	Act 2 Good	4	Act 2 Equip A	30	Gold 1.5x	10																								0
+Andarielq Item Desecrated B			7					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																								0
+Andarielq Item Desecrated C			7					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
+Andarielq Item (N)			7					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																								0
+Andarielq Item (N) Desecrated A			7					5	Act 2 (N) Good	4	Act 2 (N) Equip A	30	Gold 1.5x	10																								0
+Andarielq Item (N) Desecrated B			7					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																								0
+Andarielq Item (N) Desecrated C			7					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
+Andarielq Item (H)			7					5	Act 2 (H) Good	4	Act 2 (H) Equip A	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated A			7					5	Act 3 (H) Good	4	Act 3 (H) Equip B	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated B			7					5	Act 3 (H) Good	4	Act 3 (H) Equip C	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated C			7					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated D			7					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated E			7					5	Act 4 (H) Good	4	Act 4 (H) Equip C	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated F			7					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated G			7					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
+Andarielq Item (H) Desecrated H			7					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
 Andarielq			-1	995	995	1024	1024	0	Andarielq Item	1																												0
 Andarielq Desecrated A	20	13	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated A	1																										0
 Andarielq Desecrated B	20	32	-2	995	995	1024	1024	0	Norm TZ Generic	1	Andarielq Item Desecrated B	1																										0
@@ -1130,19 +1130,19 @@ Summoner (H) Desecrated C	24	87	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Char
 Summoner (H) Desecrated D	24	90	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated D	1																								0
 Summoner (H) Desecrated E	24	93	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated E	1																								0
 Summoner (H) Desecrated F	24	96	-3	900	900	972	1024	0	Hell TZ Boss	1	Sunder Charms	1	Summoner Item (H) Desecrated F	1																								0
-Duriel - Item			6					5	Act 3 Good	4	Act 3 Equip A	30	Gold 1.5x	10																								0
-Duriel - Item Desecrated A			6					5	Act 3 Good	4	Act 3 Equip B	30	Gold 1.5x	10																								0
-Duriel - Item Desecrated B			6					5	Act 5 Good	4	Act 5 Equip B	30	Gold 1.5x	10																								0
-Duriel - Item Desecrated C			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
-Duriel (N) - Item			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 2x	10																								0
-Duriel (N) - Item Desecrated A			6					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																								0
-Duriel (N) - Item Desecrated B			6					5	Act 5 (N) Good	4	Act 5 (N) Equip B	30	Gold 1.5x	10																								0
-Duriel (N) - Item Desecrated C			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
-Duriel (H) - Item			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 2.5x	10																								0
-Duriel (H) - Item Desecrated A			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																								0
-Duriel (H) - Item Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																								0
-Duriel (H) - Item Desecrated C			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
-Duriel (H) - Item Desecrated D			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
+Duriel - Item			7					5	Act 3 Good	4	Act 3 Equip A	30	Gold 1.5x	10																								0
+Duriel - Item Desecrated A			7					5	Act 3 Good	4	Act 3 Equip B	30	Gold 1.5x	10																								0
+Duriel - Item Desecrated B			7					5	Act 5 Good	4	Act 5 Equip B	30	Gold 1.5x	10																								0
+Duriel - Item Desecrated C			7					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
+Duriel (N) - Item			7					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 2x	10																								0
+Duriel (N) - Item Desecrated A			7					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																								0
+Duriel (N) - Item Desecrated B			7					5	Act 5 (N) Good	4	Act 5 (N) Equip B	30	Gold 1.5x	10																								0
+Duriel (N) - Item Desecrated C			7					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
+Duriel (H) - Item			7					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 2.5x	10																								0
+Duriel (H) - Item Desecrated A			7					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																								0
+Duriel (H) - Item Desecrated B			7					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																								0
+Duriel (H) - Item Desecrated C			7					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
+Duriel (H) - Item Desecrated D			7					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
 Duriel			-1	983	983	983	1024	0	Duriel - Item	1																												0
 Duriel - Desecrated A	34	22	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated A	1																										0
 Duriel - Desecrated B	34	36	-2	983	983	983	1024	0	Norm TZ Generic	1	Duriel - Item Desecrated B	1																										0
@@ -1156,9 +1156,9 @@ Duriel (H) - Desecrated A	34	88	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Char
 Duriel (H) - Desecrated B	34	90	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated B	1																								0
 Duriel (H) - Desecrated C	34	93	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated C	1																								0
 Duriel (H) - Desecrated D	34	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Duriel (H) - Item Desecrated D	1																								0
-Durielq - Item			6					5	Act 3 Good	4	Act 3 Equip A	30																										0
-Durielq (N) - Item			6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30																										0
-Durielq (H) - Item			6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30																										0
+Durielq - Item			7					5	Act 3 Good	4	Act 3 Equip A	30																										0
+Durielq (N) - Item			7					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30																										0
+Durielq (H) - Item			7					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30																										0
 Durielq			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq - Item	1																										0
 Durielq (N)			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq (N) - Item	1																										0
 Durielq (H)			-2	993	993	1024	1024	0	Infusion Orb (Normal)	1	Durielq (H) - Item	1																										0
@@ -1220,19 +1220,19 @@ Council (H) Desecrated B	25	87	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Ch
 Council (H) Desecrated C	25	90	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated C	1																								0
 Council (H) Desecrated D	25	93	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated D	1																								0
 Council (H) Desecrated E	25	96	-3	650	800	800	1024	0	Hell TZ Generic	1	Sunder Charms	1	Council Item (H) Desecrated E	1																								0
-Mephisto Item			6					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																								0
-Mephisto Item Desecrated A	22	26	6					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																								0
-Mephisto Item Desecrated B	22	38	6					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																								0
-Mephisto Item Desecrated C	22	48	6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																								0
-Mephisto Item (N)			6					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																								0
-Mephisto Item (N) Desecrated A	22	59	6					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																								0
-Mephisto Item (N) Desecrated B	22	66	6					5	Act 4 (N) Good	4	Act 4 (N) Equip C	30	Gold 1.5x	10																								0
-Mephisto Item (N) Desecrated C	22	73	6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 1.5x	10																								0
-Mephisto Item (H)			6					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																								0
-Mephisto Item (H) Desecrated A			6					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																								0
-Mephisto Item (H) Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																								0
-Mephisto Item (H) Desecrated C			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
-Mephisto Item (H) Desecrated D			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
+Mephisto Item			7					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																								0
+Mephisto Item Desecrated A	22	26	7					5	Act 4 Good	4	Act 4 Equip A	30	Gold 1.5x	10																								0
+Mephisto Item Desecrated B	22	38	7					5	Act 4 Good	4	Act 4 Equip B	30	Gold 1.5x	10																								0
+Mephisto Item Desecrated C	22	48	7					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																								0
+Mephisto Item (N)			7					5	Act 4 (N) Good	4	Act 4 (N) Equip A	30	Gold 1.5x	10																								0
+Mephisto Item (N) Desecrated A	22	59	7					5	Act 4 (N) Good	4	Act 4 (N) Equip B	30	Gold 1.5x	10																								0
+Mephisto Item (N) Desecrated B	22	66	7					5	Act 4 (N) Good	4	Act 4 (N) Equip C	30	Gold 1.5x	10																								0
+Mephisto Item (N) Desecrated C	22	73	7					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 1.5x	10																								0
+Mephisto Item (H)			7					5	Act 4 (H) Good	4	Act 4 (H) Equip A	30	Gold 2x	10																								0
+Mephisto Item (H) Desecrated A			7					5	Act 4 (H) Good	4	Act 4 (H) Equip B	30	Gold 2x	10																								0
+Mephisto Item (H) Desecrated B			7					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2x	10																								0
+Mephisto Item (H) Desecrated C			7					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
+Mephisto Item (H) Desecrated D			7					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
 Mephisto			-1	983	983	983	1024	0	Mephisto Item	1																												0
 Mephisto Desecrated A	22	26	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated A	1																										0
 Mephisto Desecrated B	22	38	-2	983	983	983	1024	0	Norm TZ Generic	1	Mephisto Item Desecrated B	1																										0
@@ -1246,9 +1246,9 @@ Mephisto (H) Desecrated A	22	87	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Char
 Mephisto (H) Desecrated B	22	90	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated B	1																								0
 Mephisto (H) Desecrated C	22	93	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated C	1																								0
 Mephisto (H) Desecrated D	22	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Mephisto Item (H) Desecrated D	1																								0
-Mephistoq Item			6					5	Act 4 Good	3	Act 4 Equip A	52																										0
-Mephistoq Item (N)			6					5	Act 4 (N) Good	3	Act 4 (N) Equip A	52																										0
-Mephistoq Item (H)			6					5	Act 4 (H) Good	3	Act 4 (H) Equip A	52																										0
+Mephistoq Item			7					5	Act 4 Good	3	Act 4 Equip A	52																										0
+Mephistoq Item (N)			7					5	Act 4 (N) Good	3	Act 4 (N) Equip A	52																										0
+Mephistoq Item (H)			7					5	Act 4 (H) Good	3	Act 4 (H) Equip A	52																										0
 Mephistoq			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item	1																										0
 Mephistoq (N)			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item (N)	1																										0
 Mephistoq (H)			-2	993	993	1024	1024	0	Assemblage Orb (Normal)	1	Mephistoq Item (H)	1																										0
@@ -1308,16 +1308,16 @@ Hephasto (H) Desecrated C	27	96	-4	800	800	900	1024	0	Hell TZ Boss	1	Sunder Char
 Hephasto (H) Desecrated D	27	90	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated D	1	Rune Boss High (H) Desecrated	1																						0
 Hephasto (H) Desecrated E	27	93	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated E	1	Rune Boss High (H) Desecrated	1																						0
 Hephasto (H) Desecrated F	27	96	-4	883	883	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Hephasto Item (H) Desecrated F	1	Rune Boss High (H) Desecrated	1																						0
-Diablo Item			6					5	Act 5 Good	4	Act 5 Equip A	30	Gold 1.5x	10																								0
-Diablo Item Desecrated A	23	40	6					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30	Gold 1.5x	10																								0
-Diablo Item Desecrated B	23	48	6					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
-Diablo Item (N)			6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 2x	10																								0
-Diablo Item (N) Desecrated A	23	62	6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																								0
-Diablo Item (N) Desecrated B	23	67	6					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30	Gold 1.5x	10																								0
-Diablo Item (N) Desecrated C	23	73	6					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
-Diablo Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2.5x	10																								0
-Diablo Item (H) Desecrated A			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
-Diablo Item (H) Desecrated B			6					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
+Diablo Item			7					5	Act 5 Good	4	Act 5 Equip A	30	Gold 1.5x	10																								0
+Diablo Item Desecrated A	23	40	7					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30	Gold 1.5x	10																								0
+Diablo Item Desecrated B	23	48	7					5	Act 3 (N) Good	4	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
+Diablo Item (N)			7					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 2x	10																								0
+Diablo Item (N) Desecrated A	23	62	7					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30	Gold 1.5x	10																								0
+Diablo Item (N) Desecrated B	23	67	7					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30	Gold 1.5x	10																								0
+Diablo Item (N) Desecrated C	23	73	7					5	Act 3 (H) Good	4	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
+Diablo Item (H)			7					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30	Gold 2.5x	10																								0
+Diablo Item (H) Desecrated A			7					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30	Gold 2x	10																								0
+Diablo Item (H) Desecrated B			7					5	Act 5 (H) Good	4	Act 5 (H) Equip C	30	Gold 2x	10																								0
 Diablo			-1	983	983	983	1024	0	Diablo Item	1																												0
 Diablo Desecrated A	23	40	-2	983	983	983	1024	0	Norm TZ Generic	1	Diablo Item Desecrated A	1																										0
 Diablo Desecrated B	23	48	-2	983	983	983	1024	0	Norm TZ Generic	1	Diablo Item Desecrated B	1																										0
@@ -1328,9 +1328,9 @@ Diablo (N) Desecrated C	23	73	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charm
 Diablo (H)			-2	983	983	983	1024	0	NMH Boss	1	Diablo Item (H)	1																										0
 Diablo (H) Desecrated A	23	94	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Diablo Item (H) Desecrated A	1																								0
 Diablo (H) Desecrated B	23	96	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Diablo Item (H) Desecrated B	1																								0
-Diabloq Item			6					5	Act 5 Good	4	Act 5 Equip A	30																										0
-Diabloq Item (N)			6					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30																										0
-Diabloq Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30																										0
+Diabloq Item			7					5	Act 5 Good	4	Act 5 Equip A	30																										0
+Diabloq Item (N)			7					5	Act 5 (N) Good	4	Act 5 (N) Equip A	30																										0
+Diabloq Item (H)			7					5	Act 5 (H) Good	4	Act 5 (H) Equip A	30																										0
 Diabloq			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item	1																										0
 Diabloq (N)			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item (N)	1																										0
 Diabloq (H)			-2	993	993	1024	1024	0	Conversion Orb (Normal)	1	Diabloq Item (H)	1																										0
@@ -1376,21 +1376,21 @@ Nihlathak (N)			-1	900	900	900	1024	0	Nihlathak Item (N)	1																						
 Nihlathak (N) Desecrated	28	73	-3	900	900	900	1024	0	NM TZ Generic	1	Sunder Charms	1	Nihlathak Item (N) Desecrated	1																								0
 Nihlathak (H)			-1	900	900	900	1024	0	Nihlathak Item (H)	1																												0
 Nihlathak (H) Desecrated	28	95	-3	900	900	900	1024	0	Hell TZ Boss	1	Sunder Charms	1	Nihlathak Item (H) Desecrated	1																								0
-Baal Item			6					5	Act 1 (N) Good	8	Act 1 (N) Equip A	30	Gold 2x	10																								0
-Baal Item Desecrated			6					5	Act 3 (N) Good	8	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
-Baal Item (N)			6					5	Act 1 (H) Good	8	Act 1 (H) Equip A	30	Gold 2x	10																								0
-Baal Item (N) Desecrated			6					5	Act 3 (H) Good	8	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
-Baal Item (H)			6					5	Act 5 (H) Good	8	Act 5 (H) Equip B	30	Gold 2.5x	10																								0
-Baal Item (H) Desecrated			6					5	Act 5 (H) Good	8	Act 5 (H) Equip C	30	Gold 2x	10																								0
+Baal Item			7					5	Act 1 (N) Good	8	Act 1 (N) Equip A	30	Gold 2x	10																								0
+Baal Item Desecrated			7					5	Act 3 (N) Good	8	Act 3 (N) Equip A	30	Gold 1.5x	10																								0
+Baal Item (N)			7					5	Act 1 (H) Good	8	Act 1 (H) Equip A	30	Gold 2x	10																								0
+Baal Item (N) Desecrated			7					5	Act 3 (H) Good	8	Act 3 (H) Equip A	30	Gold 1.5x	10																								0
+Baal Item (H)			7					5	Act 5 (H) Good	8	Act 5 (H) Equip B	30	Gold 2.5x	10																								0
+Baal Item (H) Desecrated			7					5	Act 5 (H) Good	8	Act 5 (H) Equip C	30	Gold 2x	10																								0
 Baal			-1	983	983	983	1024	0	Baal Item	1																												0
 Baal Desecrated	29	60	-2	983	983	983	1024	0	Norm TZ Generic	1	Baal Item Desecrated	1																										0
 Baal (N)			-2	983	983	983	1024	0	NMH Boss	1	Baal Item (N)	1																										0
 Baal (N) Desecrated	29	75	-3	983	983	983	1024	0	NM TZ Generic	1	Sunder Charms	1	Baal Item (N) Desecrated	1																								0
 Baal (H)			-2	983	983	983	1024	0	NMH Boss	1	Baal Item (H)	1																										0
 Baal (H) Desecrated	29	99	-3	983	983	983	1024	0	Hell TZ Boss	1	Sunder Charms	1	Baal Item (H) Desecrated	1																								0
-Baalq Item			6					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30																										0
-Baalq Item (N)			6					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30																										0
-Baalq Item (H)			6					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30																										0
+Baalq Item			7					5	Act 1 (N) Good	4	Act 1 (N) Equip A	30																										0
+Baalq Item (N)			7					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30																										0
+Baalq Item (H)			7					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30																										0
 Baalq			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item	1																										0
 Baalq (N)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (N)	1																										0
 Baalq (H)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (H)	1																										0
@@ -1486,11 +1486,11 @@ Act 4 (H) Equip C Desecrated Herald			1						weap72	2	armo72	1	weap75	6	armo75	3
 Act 5 (H) Equip A Desecrated Herald			1						weap75	2	armo75	1	weap78	6	armo78	3	weap81	14	armo81	7	weap84	2	armo84	1	Act 4 (H) Equip C Desecrated Herald	1250												0
 Act 5 (H) Equip B Desecrated Herald			1						weap78	2	armo78	1	weap81	6	armo81	3	weap84	14	armo84	7	weap87	2	armo87	1	Act 5 (H) Equip A Desecrated Herald	1250												0
 Act 5 (H) Equip C Desecrated Herald			1						weap81	2	armo81	1	weap84	6	armo84	3	weap87	14	armo87	7	weap87	1	armo87	1	Act 5 (H) Equip B Desecrated Herald	1250												0
-Act 1 (H) Good Desecrated Herald			1						Jewelry C	60	Chipped Gem	4	Flawed Gem	10	Normal Gem	14	Flawless Gem	28	Runes 13	18																		0
-Act 2 (H) Good Desecrated Herald			1						Jewelry C	60	Chipped Gem	4	Flawed Gem	10	Normal Gem	14	Flawless Gem	28	Runes 14	18																		0
-Act 3 (H) Good Desecrated Herald			1						Jewelry C	60	Chipped Gem	4	Flawed Gem	10	Normal Gem	14	Flawless Gem	28	Runes 15	18																		0
-Act 4 (H) Good Desecrated Herald			1						Jewelry C	60	Chipped Gem	4	Flawed Gem	10	Normal Gem	14	Flawless Gem	28	Runes 16	18																		0
-Act 5 (H) Good Desecrated Herald			1						Jewelry C	60	Chipped Gem	4	Flawed Gem	10	Normal Gem	14	Flawless Gem	28	Runes 17	18																		0
+Act 1 (H) Good Desecrated Herald			1						Jewelry C	60	Hell TZ Generic	56	Runes 13	18																								0
+Act 2 (H) Good Desecrated Herald			1						Jewelry C	60	Hell TZ Generic	56	Runes 14	18																								0
+Act 3 (H) Good Desecrated Herald			1						Jewelry C	60	Hell TZ Generic	56	Runes 15	18																								0
+Act 4 (H) Good Desecrated Herald			1						Jewelry C	60	Hell TZ Generic	56	Runes 16	18																								0
+Act 5 (H) Good Desecrated Herald			1						Jewelry C	60	Hell TZ Generic	56	Runes 17	18																								0
 Act 1 (H) Herald Item A			1	850	850	850	1024	0	Act 1 (H) Equip A Desecrated Herald	116	Act 1 (H) Good Desecrated Herald	8																										0
 Act 1 (H) Herald Item B			1	850	850	850	1024	0	Act 1 (H) Equip B Desecrated Herald	116	Act 1 (H) Good Desecrated Herald	8																										0
 Act 1 (H) Herald Item C			1	850	850	850	1024	0	Act 1 (H) Equip C Desecrated Herald	116	Act 1 (H) Good Desecrated Herald	8																										0
@@ -1533,18 +1533,18 @@ Act 4 (H) Herald Item K - 2 Extra			-2	850	850	850	1024	0	Act 4 (H) Herald Item 
 Act 5 (H) Herald Item L - 2 Extra			-2	850	850	850	1024	0	Act 5 (H) Herald Item L	2																						(stat('heraldtier'.accr) >=4) 						0
 Act 5 (H) Herald Item M - 2 Extra			-2	850	850	850	1024	0	Act 5 (H) Herald Item M	2																						(stat('heraldtier'.accr) >=4) 						0
 Act 5 (H) Herald Item N - 2 Extra			-2	850	850	850	1024	0	Act 5 (H) Herald Item N	2																						(stat('heraldtier'.accr) >=4) 						0
-Act 1 (H) Herald A	41	67	-7	989	983	1024	1024	0	Act 1 (H) Herald Item A	2	Sunder Charms	1	Act 1 (H) Herald Item A - 1 Extra	1	Act 1 (H) Herald Item A - 2 Extra	1	Act 3 Terrorize Act Consumable Desecrated 	1	Act 1 (H) Cpot A	2																		0
-Act 1 (H) Herald B	41	68	-7	989	983	1024	1024	0	Act 1 (H) Herald Item B	2	Sunder Charms	1	Act 1 (H) Herald Item B - 1 Extra	1	Act 1 (H) Herald Item B - 2 Extra	1	Act 3 Terrorize Act Consumable Desecrated 	1	Act 1 (H) Cpot B	2																		0
-Act 1 (H) Herald C	41	69	-7	989	983	1024	1024	0	Act 1 (H) Herald Item C	2	Sunder Charms	1	Act 1 (H) Herald Item C - 1 Extra	1	Act 1 (H) Herald Item C - 2 Extra	1	Act 3 Terrorize Act Consumable Desecrated 	1	Act 1 (H) Cpot C	2																		0
-Act 2 (H) Herald A	41	70	-7	989	983	1024	1024	0	Act 2 (H) Herald Item D	2	Sunder Charms	1	Act 2 (H) Herald Item D - 1 Extra	1	Act 2 (H) Herald Item D - 2 Extra	1	Act 4 Terrorize Act Consumable Desecrated 	1	Act 2 (H) Cpot A	2																		0
-Act 2 (H) Herald B	41	71	-7	989	983	1024	1024	0	Act 2 (H) Herald Item E	2	Sunder Charms	1	Act 2 (H) Herald Item E - 1 Extra	1	Act 2 (H) Herald Item E - 2 Extra	1	Act 4 Terrorize Act Consumable Desecrated 	1	Act 2 (H) Cpot B	2																		0
-Act 2 (H) Herald C	41	72	-7	989	983	1024	1024	0	Act 2 (H) Herald Item F	2	Sunder Charms	1	Act 2 (H) Herald Item F - 1 Extra	1	Act 2 (H) Herald Item F - 2 Extra	1	Act 4 Terrorize Act Consumable Desecrated 	1	Act 2 (H) Cpot C	2																		0
-Act 3 (H) Herald A	41	73	-7	989	983	1024	1024	0	Act 3 (H) Herald Item G	2	Sunder Charms	1	Act 3 (H) Herald Item G - 1 Extra	1	Act 3 (H) Herald Item G - 2 Extra	1	Act 5 Terrorize Act Consumable Desecrated 	1	Act 3 (H) Cpot A	2																		0
-Act 3 (H) Herald B	41	75	-7	989	983	1024	1024	0	Act 3 (H) Herald Item H	2	Sunder Charms	1	Act 3 (H) Herald Item H - 1 Extra	1	Act 3 (H) Herald Item H - 2 Extra	1	Act 5 Terrorize Act Consumable Desecrated 	1	Act 3 (H) Cpot B	2																		0
-Act 3 (H) Herald C	41	78	-7	989	983	1024	1024	0	Act 3 (H) Herald Item I	2	Sunder Charms	1	Act 3 (H) Herald Item I - 1 Extra	1	Act 3 (H) Herald Item I - 2 Extra	1	Act 5 Terrorize Act Consumable Desecrated 	1	Act 3 (H) Cpot C	2																		0
-Act 4 (H) Herald A	41	81	-7	989	983	1024	1024	0	Act 4 (H) Herald Item J	2	Sunder Charms	1	Act 4 (H) Herald Item J - 1 Extra	1	Act 4 (H) Herald Item J - 2 Extra	1	Act 2 Terrorize Act Consumable Desecrated 	1	Act 4 (H) Cpot A	2																		0
-Act 4 (H) Herald B	41	84	-7	989	983	1024	1024	0	Act 4 (H) Herald Item K	2	Sunder Charms	1	Act 4 (H) Herald Item K - 1 Extra	1	Act 4 (H) Herald Item K - 2 Extra	1	Act 2 Terrorize Act Consumable Desecrated 	1	Act 4 (H) Cpot B	2																		0
-Act 4 (H) Herald C	41	87	-7	989	983	1024	1024	0	Act 4 (H) Herald Item K	2	Sunder Charms	1	Act 4 (H) Herald Item K - 1 Extra	1	Act 4 (H) Herald Item K - 2 Extra	1	Act 2 Terrorize Act Consumable Desecrated 	1	Act 4 (H) Cpot B	2																		0
-Act 5 (H) Herald A	41	90	-7	989	983	1024	1024	0	Act 5 (H) Herald Item L	2	Sunder Charms	1	Act 5 (H) Herald Item L - 1 Extra	1	Act 5 (H) Herald Item L - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated 	1	Act 5 (H) Cpot A	2																		0
-Act 5 (H) Herald B	41	93	-7	989	983	1024	1024	0	Act 5 (H) Herald Item M	2	Sunder Charms	1	Act 5 (H) Herald Item M - 1 Extra	1	Act 5 (H) Herald Item M - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated 	1	Act 5 (H) Cpot B	2																		0
-Act 5 (H) Herald C	41	96	-7	989	983	1024	1024	0	Act 5 (H) Herald Item N	2	Sunder Charms	1	Act 5 (H) Herald Item N - 1 Extra	1	Act 5 (H) Herald Item N - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated 	1	Act 5 (H) Cpot C	2																		0
+Act 1 (H) Herald A	41	67	-7	989	983	1024	1024	0	Act 1 (H) Herald Item A	2	Sunder Charms	1	Act 1 (H) Herald Item A - 1 Extra	1	Act 1 (H) Herald Item A - 2 Extra	1	Act 3 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 1 (H) Herald B	41	68	-7	989	983	1024	1024	0	Act 1 (H) Herald Item B	2	Sunder Charms	1	Act 1 (H) Herald Item B - 1 Extra	1	Act 1 (H) Herald Item B - 2 Extra	1	Act 3 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 1 (H) Herald C	41	69	-7	989	983	1024	1024	0	Act 1 (H) Herald Item C	2	Sunder Charms	1	Act 1 (H) Herald Item C - 1 Extra	1	Act 1 (H) Herald Item C - 2 Extra	1	Act 3 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 2 (H) Herald A	41	70	-7	989	983	1024	1024	0	Act 2 (H) Herald Item D	2	Sunder Charms	1	Act 2 (H) Herald Item D - 1 Extra	1	Act 2 (H) Herald Item D - 2 Extra	1	Act 4 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 2 (H) Herald B	41	71	-7	989	983	1024	1024	0	Act 2 (H) Herald Item E	2	Sunder Charms	1	Act 2 (H) Herald Item E - 1 Extra	1	Act 2 (H) Herald Item E - 2 Extra	1	Act 4 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 2 (H) Herald C	41	72	-7	989	983	1024	1024	0	Act 2 (H) Herald Item F	2	Sunder Charms	1	Act 2 (H) Herald Item F - 1 Extra	1	Act 2 (H) Herald Item F - 2 Extra	1	Act 4 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 3 (H) Herald A	41	73	-7	989	983	1024	1024	0	Act 3 (H) Herald Item G	2	Sunder Charms	1	Act 3 (H) Herald Item G - 1 Extra	1	Act 3 (H) Herald Item G - 2 Extra	1	Act 5 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 3 (H) Herald B	41	75	-7	989	983	1024	1024	0	Act 3 (H) Herald Item H	2	Sunder Charms	1	Act 3 (H) Herald Item H - 1 Extra	1	Act 3 (H) Herald Item H - 2 Extra	1	Act 5 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 3 (H) Herald C	41	78	-7	989	983	1024	1024	0	Act 3 (H) Herald Item I	2	Sunder Charms	1	Act 3 (H) Herald Item I - 1 Extra	1	Act 3 (H) Herald Item I - 2 Extra	1	Act 5 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 4 (H) Herald A	41	81	-7	989	983	1024	1024	0	Act 4 (H) Herald Item J	2	Sunder Charms	1	Act 4 (H) Herald Item J - 1 Extra	1	Act 4 (H) Herald Item J - 2 Extra	1	Act 2 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 4 (H) Herald B	41	84	-7	989	983	1024	1024	0	Act 4 (H) Herald Item K	2	Sunder Charms	1	Act 4 (H) Herald Item K - 1 Extra	1	Act 4 (H) Herald Item K - 2 Extra	1	Act 2 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 4 (H) Herald C	41	87	-7	989	983	1024	1024	0	Act 4 (H) Herald Item K	2	Sunder Charms	1	Act 4 (H) Herald Item K - 1 Extra	1	Act 4 (H) Herald Item K - 2 Extra	1	Act 2 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 5 (H) Herald A	41	90	-7	989	983	1024	1024	0	Act 5 (H) Herald Item L	2	Sunder Charms	1	Act 5 (H) Herald Item L - 1 Extra	1	Act 5 (H) Herald Item L - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 5 (H) Herald B	41	93	-7	989	983	1024	1024	0	Act 5 (H) Herald Item M	2	Sunder Charms	1	Act 5 (H) Herald Item M - 1 Extra	1	Act 5 (H) Herald Item M - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0
+Act 5 (H) Herald C	41	96	-7	989	983	1024	1024	0	Act 5 (H) Herald Item N	2	Sunder Charms	1	Act 5 (H) Herald Item N - 1 Extra	1	Act 5 (H) Herald Item N - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated 	1	Super Potion	1																		0

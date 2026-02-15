@@ -123,12 +123,12 @@ explosivearrow	120	1	1	item_explosivearrow																												Fires Expl
 Expansion																																					0
 dru	121	1	21	item_addclassskills		5																										+# to Druid Skill Levels		Min #	Max #		0
 ass	122	1	21	item_addclassskills		6																										+# to Assassin Skill Levels		Min #	Max #		0
-skill	123	1	22	item_singleskill																												+# to [Skill] ([Class] only)	Skill	Min #	Max #		0
+skill	123	1	22	item_singleskill																											5	+# to [Skill] ([Class] only)	Skill	Min #	Max #		0
 skilltab	124	1	10	item_addskill_tab																												+# to [Class Skill Tab] Skills	Class Skill Tab ID	Min #	Max #	[Class Skill Tab ID] = (Amazon = 0-2, Sorceress = 3-5, Necromancer = 6-8, Paladin = 9-11, Barbarian = 12-14, Druid = 15-17,  Assassin = 18-20)	0
 aura	125	1	22	item_aura																												Level # [Skill] Aura When Equipped	Skill	Min #	Max #		0
-att-skill	126	1	11	item_skillonattack																												#% Chance to cast level # [Skill] on attack	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-hit-skill	127	1	11	item_skillonhit																												#% Chance to cast level # [Skill] on striking	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-gethit-skill	128	1	11	item_skillongethit																												#% Chance to cast level # [Skill] when struck	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+att-skill	126	1	11	item_skillonattack																											6	#% Chance to cast level # [Skill] on attack	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+hit-skill	127	1	11	item_skillonhit																											6	#% Chance to cast level # [Skill] on striking	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+gethit-skill	128	1	11	item_skillongethit																											6	#% Chance to cast level # [Skill] when struck	Skill	% Chance (If 0, then default to 5)	Skill Level		0
 gembonus	129																																				0
 regen-dur	130																																				0
 fire-fx	131																																				0
@@ -141,43 +141,43 @@ dmg-cold	137	1	15	coldmindam			16	coldmaxdam			17	coldlength																				
 dmg-pois	138	1	15	poisonmindam			16	poisonmaxdam			17	poisonlength																				Adds #-# Poison Damage Over # Seconds	Length (Frames)	Min #	Max #	# of Frames (25 Frames = 1 Second)	0
 dmg-throw	139	1	15	item_throw_mindamage			16	item_throw_maxdamage																										Min #	Max #	Currently Not Used	0
 dmg-norm	140	1	15	mindamage			16	maxdamage																								Adds #-# Damage		Min #	Max #		0
-ac/lvl	141	1	17	item_armor_perlevel																												+# Defense (Based on Character Level)	ac/lvl (8ths)				0
-ac%/lvl	142	1	17	item_armorpercent_perlevel																												+#% Enhanced Defense (Based on Character Level)	#/8 per Level				0
-hp/lvl	143	1	17	item_hp_perlevel																												+# to Life (Based on Character Level)	#/8 per Level				0
-mana/lvl	144	1	17	item_mana_perlevel																												+# to Mana (Based on Character Level)	#/8 per Level				0
-dmg/lvl	145	1	17	item_maxdamage_perlevel																												+# to Maximum Damage (Based on Character Level)	#/8 per Level				0
-dmg%/lvl	146	1	17	item_maxdamage_percent_perlevel																												+#% Enhanced Maximum Damage (Based on Character Level)	#/8 per Level				0
-str/lvl	147	1	17	item_strength_perlevel																												+# to Strength (Based on Character Level)	#/8 per Level				0
-dex/lvl	148	1	17	item_dexterity_perlevel																												+# to Dexterity (Based on Character Level)	#/8 per Level				0
-enr/lvl	149	1	17	item_energy_perlevel																												+# to Energy (Based on Character Level)	#/8 per Level			Currently Not Used	0
-vit/lvl	150	1	17	item_vitality_perlevel																												+# to Vitality (Based on Character Level)	#/8 per Level				0
-att/lvl	151	1	17	item_tohit_perlevel																												+# to Attack Rating (Based on Character Level)	#/2 per Level				0
-att%/lvl	152	1	17	item_tohitpercent_perlevel																												#% Bonus to Attack Rating (Based on Character Level)	#/2 per Level				0
-dmg-cold/lvl	153	1	17	item_cold_damagemax_perlevel																												+# to Maximum Cold Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-dmg-fire/lvl	154	1	17	item_fire_damagemax_perlevel																												+# to Maximum Fire Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-dmg-ltng/lvl	155	1	17	item_ltng_damagemax_perlevel																												+# to Maximum Lightning Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-dmg-pois/lvl	156	1	17	item_pois_damagemax_perlevel																												+# to Maximum Poison Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-res-cold/lvl	157	1	17	item_resist_cold_perlevel																												Cold Resist +#% (Based on Character Level)	#/8 per Level				0
-res-fire/lvl	158	1	17	item_resist_fire_perlevel																												Fire Resist +#% (Based on Character Level)	#/8 per Level				0
-res-ltng/lvl	159	1	17	item_resist_ltng_perlevel																												Lightning Resist +#% (Based on Character Level)	#/8 per Level				0
-res-pois/lvl	160	1	17	item_resist_pois_perlevel																												Poison Resist +#% (Based on Character Level)	#/8 per Level				0
-abs-cold/lvl	161	1	17	item_absorb_cold_perlevel																												Absorbs Cold Damage (Based on Character Level)	#/8 per Level				0
-abs-fire/lvl	162	1	17	item_absorb_fire_perlevel																												Absorbs Fire Damage (Based on Character Level)	#/8 per Level				0
-abs-ltng/lvl	163	1	17	item_absorb_ltng_perlevel																												Absorbs Lightning Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-abs-pois/lvl	164	1	17	item_absorb_pois_perlevel																												Absorbs Poison Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-thorns/lvl	165	1	17	item_thorns_perlevel																												Attacker Takes Damage of # (Based on Character Level)	#/8 per Level				0
-gold%/lvl	166	1	17	item_find_gold_perlevel																												#% Extra Gold from Monsters (Based on Character Level)	#/8 per Level				0
-mag%/lvl	167	1	17	item_find_magic_perlevel																												#% Better Chance of Getting Magic Items (Based on Character Level)	#/8 per Level				0
-regen-stam/lvl	168	1	17	item_regenstamina_perlevel																												Heal Stamina Plus #% (Based on Character Level)	#/8 per Level				0
-stam/lvl	169	1	17	item_stamina_perlevel																												+# Maximum Stamina (Based on Character Level)	#/8 per Level				0
-dmg-dem/lvl	170	1	17	item_damage_demon_perlevel																												+#% Damage to Demons (Based on Character Level)	#/8 per Level				0
-dmg-und/lvl	171	1	17	item_damage_undead_perlevel																												+#% Damage to Undead (Based on Character Level)	#/8 per Level				0
-att-dem/lvl	172	1	17	item_tohit_demon_perlevel																												+# to Attack Rating against Demons (Based on Character Level)	#/2 per Level				0
-att-und/lvl	173	1	17	item_tohit_undead_perlevel																												+# to Attack Rating against Undead (Based on Character Level)	#/2 per Level				0
-crush/lvl	174	1	17	item_crushingblow_perlevel																												#% Chance of Crushing Blow (Based on Character Level)	#/8 per Level			Currently Not Used	0
-wounds/lvl	175	1	17	item_openwounds_perlevel																												#% Chance of Open Wounds (Based on Character Level)	#/8 per Level			Currently Not Used	0
-kick/lvl	176	1	17	item_kick_damage_perlevel																												+# Kick Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
-deadly/lvl	177	1	17	item_deadlystrike_perlevel																												#% Deadly Strike (Based on Character Level)	#/8 per Level				0
+ac/lvl	141	1	17	item_armor_perlevel																											1	+# Defense (Based on Character Level)	ac/lvl (8ths)				0
+ac%/lvl	142	1	17	item_armorpercent_perlevel																											1	+#% Enhanced Defense (Based on Character Level)	#/8 per Level				0
+hp/lvl	143	1	17	item_hp_perlevel																											1	+# to Life (Based on Character Level)	#/8 per Level				0
+mana/lvl	144	1	17	item_mana_perlevel																											1	+# to Mana (Based on Character Level)	#/8 per Level				0
+dmg/lvl	145	1	17	item_maxdamage_perlevel																											1	+# to Maximum Damage (Based on Character Level)	#/8 per Level				0
+dmg%/lvl	146	1	17	item_maxdamage_percent_perlevel																											1	+#% Enhanced Maximum Damage (Based on Character Level)	#/8 per Level				0
+str/lvl	147	1	17	item_strength_perlevel																											1	+# to Strength (Based on Character Level)	#/8 per Level				0
+dex/lvl	148	1	17	item_dexterity_perlevel																											1	+# to Dexterity (Based on Character Level)	#/8 per Level				0
+enr/lvl	149	1	17	item_energy_perlevel																											1	+# to Energy (Based on Character Level)	#/8 per Level			Currently Not Used	0
+vit/lvl	150	1	17	item_vitality_perlevel																											1	+# to Vitality (Based on Character Level)	#/8 per Level				0
+att/lvl	151	1	17	item_tohit_perlevel																											1	+# to Attack Rating (Based on Character Level)	#/2 per Level				0
+att%/lvl	152	1	17	item_tohitpercent_perlevel																											1	#% Bonus to Attack Rating (Based on Character Level)	#/2 per Level				0
+dmg-cold/lvl	153	1	17	item_cold_damagemax_perlevel																											1	+# to Maximum Cold Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+dmg-fire/lvl	154	1	17	item_fire_damagemax_perlevel																											1	+# to Maximum Fire Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+dmg-ltng/lvl	155	1	17	item_ltng_damagemax_perlevel																											1	+# to Maximum Lightning Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+dmg-pois/lvl	156	1	17	item_pois_damagemax_perlevel																											1	+# to Maximum Poison Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+res-cold/lvl	157	1	17	item_resist_cold_perlevel																											1	Cold Resist +#% (Based on Character Level)	#/8 per Level				0
+res-fire/lvl	158	1	17	item_resist_fire_perlevel																											1	Fire Resist +#% (Based on Character Level)	#/8 per Level				0
+res-ltng/lvl	159	1	17	item_resist_ltng_perlevel																											1	Lightning Resist +#% (Based on Character Level)	#/8 per Level				0
+res-pois/lvl	160	1	17	item_resist_pois_perlevel																											1	Poison Resist +#% (Based on Character Level)	#/8 per Level				0
+abs-cold/lvl	161	1	17	item_absorb_cold_perlevel																											1	Absorbs Cold Damage (Based on Character Level)	#/8 per Level				0
+abs-fire/lvl	162	1	17	item_absorb_fire_perlevel																											1	Absorbs Fire Damage (Based on Character Level)	#/8 per Level				0
+abs-ltng/lvl	163	1	17	item_absorb_ltng_perlevel																											1	Absorbs Lightning Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+abs-pois/lvl	164	1	17	item_absorb_pois_perlevel																											1	Absorbs Poison Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+thorns/lvl	165	1	17	item_thorns_perlevel																											1	Attacker Takes Damage of # (Based on Character Level)	#/8 per Level				0
+gold%/lvl	166	1	17	item_find_gold_perlevel																											1	#% Extra Gold from Monsters (Based on Character Level)	#/8 per Level				0
+mag%/lvl	167	1	17	item_find_magic_perlevel																											1	#% Better Chance of Getting Magic Items (Based on Character Level)	#/8 per Level				0
+regen-stam/lvl	168	1	17	item_regenstamina_perlevel																											1	Heal Stamina Plus #% (Based on Character Level)	#/8 per Level				0
+stam/lvl	169	1	17	item_stamina_perlevel																											1	+# Maximum Stamina (Based on Character Level)	#/8 per Level				0
+dmg-dem/lvl	170	1	17	item_damage_demon_perlevel																											1	+#% Damage to Demons (Based on Character Level)	#/8 per Level				0
+dmg-und/lvl	171	1	17	item_damage_undead_perlevel																											1	+#% Damage to Undead (Based on Character Level)	#/8 per Level				0
+att-dem/lvl	172	1	17	item_tohit_demon_perlevel																											1	+# to Attack Rating against Demons (Based on Character Level)	#/2 per Level				0
+att-und/lvl	173	1	17	item_tohit_undead_perlevel																											1	+# to Attack Rating against Undead (Based on Character Level)	#/2 per Level				0
+crush/lvl	174	1	17	item_crushingblow_perlevel																											1	#% Chance of Crushing Blow (Based on Character Level)	#/8 per Level			Currently Not Used	0
+wounds/lvl	175	1	17	item_openwounds_perlevel																											1	#% Chance of Open Wounds (Based on Character Level)	#/8 per Level			Currently Not Used	0
+kick/lvl	176	1	17	item_kick_damage_perlevel																											1	+# Kick Damage (Based on Character Level)	#/8 per Level			Currently Not Used	0
+deadly/lvl	177	1	17	item_deadlystrike_perlevel																											1	#% Deadly Strike (Based on Character Level)	#/8 per Level				0
 gems%/lvl	178																																				0
 rep-dur	179	1	17	item_replenish_durability																												Repairs 1 durability in # seconds	Repair Speed			Repair 1 Durability every 100/[Repair Speed] seconds	0
 rep-quant	180	1	17	item_replenish_quantity																												Replenishes quantity	Repair Speed			Replenish 1 Quantity every 100/[Repair Speed] seconds	0
@@ -258,10 +258,10 @@ cheap	254	1	1	item_reducedprices																												Reduces all Vendor P
 rip	255	1	1	item_restinpeace																												Slain Monsters Rest in Peace		1	1		0
 att-mon%	256	1	24	attack_vs_montype																												#% to Attack Rating versus [Monster Type]	monstats.txt MonType	Min #	Max #	Currently Not Used	0
 dmg-mon%	257	1	24	damage_vs_montype																												#% to Damage versus [Monster Type]	monstats.txt MonType	Min #	Max #	Currently Not Used	0
-kill-skill	258	1	11	item_skillonkill																												#% Chance to cast level # [Skill] when you Kill an Enemy	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-death-skill	259	1	11	item_skillondeath																												#% Chance to cast level # [Skill] when you Die	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-levelup-skill	260	1	11	item_skillonlevelup																												#% Chance to cast level # [Skill] when you Level-Up	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-skill-rand	261	1	12	item_singleskill																												+# to [Skill] ([Class] only)	Skill Level	Min Skill ID	Max Skill ID		0
+kill-skill	258	1	11	item_skillonkill																											6	#% Chance to cast level # [Skill] when you Kill an Enemy	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+death-skill	259	1	11	item_skillondeath																											6	#% Chance to cast level # [Skill] when you Die	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+levelup-skill	260	1	11	item_skillonlevelup																											6	#% Chance to cast level # [Skill] when you Level-Up	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+skill-rand	261	1	12	item_singleskill																											2	+# to [Skill] ([Class] only)	Skill Level	Min Skill ID	Max Skill ID		0
 fade	262	1	17	fade																														Min #	Max #	Visuals Only	0
 levelreq	263	1	1	item_levelreq																												Required Level: #		Min #	Max #		0
 ethereal	264	1	23																													Ethereal		1	1		0
@@ -295,16 +295,16 @@ vit%/lvl	291	1	17	item_vitalitypercent_perlevel																												Vital
 thorns-blind	292	1	11	item_attackergetsblind																												attacker gets blinded		min	max	armour only	0
 thorns-flee	293	1	11	item_attackerflees																												attacker runs away		min	max	armour only	0
 fire-thorns	294	1	1	item_attackertakesfiredamage																																	0
-cold-thorns	295	1	1	item_attackertakescolddamage																																	0
-dmg-max/str	296	1	17	item_maxdamage_perstr																													(8ths)				0
-dmg-max/dex	297	1	17	item_maxdamage_perdex																													(8ths)				0
-dmg-min/lvl	298	1	17	item_mindamage_perlvl																													(8ths)				0
+cold-thorns	295	1	1	item_attackertakescolddamage																											6						0
+dmg-max/str	296	1	17	item_maxdamage_perstr																											6		(8ths)				0
+dmg-max/dex	297	1	17	item_maxdamage_perdex																											6		(8ths)				0
+dmg-min/lvl	298	1	17	item_mindamage_perlvl																											2		(8ths)				0
 dmg-min/str	299	1	17	item_mindamage_perstr																													(8ths)				0
 dmg-min/dex	300	1	17	item_mindamage_perdex																													(8ths)				0
 dmg-max%/str	301	1	17	item_maxdamage_percent_perstr																													(8ths)				0
 dmg-max%/dex	302	1	17	item_maxdamage_percent_perdex																													(8ths)				0
 wounds/dex	303	1	17	item_openwounds_perdex			1	item_extrablood																									(8ths)				0
-deadly/dex	304	1	17	item_deadlystrike_perdex																													(8ths)				0
+deadly/dex	304	1	17	item_deadlystrike_perdex																											3		(8ths)				0
 wounds/str	305	1	17	item_openwounds_perstr			1	item_extrablood																									(8ths)				0
 deadly/str	306	1	17	item_deadlystrike_perstr																													(8ths)				0
 ac/str	307	1	17	item_armor_perstr																												armour per strength	(8ths)			armour only	0
