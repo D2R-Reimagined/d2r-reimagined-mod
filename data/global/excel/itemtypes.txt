@@ -1,5 +1,5 @@
 ItemType	Code	Equiv1	Equiv2	Repair	Body	BodyLoc1	BodyLoc2	Shoots	Quiver	Throwable	Reload	ReEquip	AutoStack	Magic	Rare	Normal	Beltable	MaxSockets1	MaxSocketsLevelThreshold1	MaxSockets2	MaxSocketsLevelThreshold2	MaxSockets3	TreasureClass	Rarity	StaffMods	Class	VarInvGfx	InvGfx1	InvGfx2	InvGfx3	InvGfx4	InvGfx5	InvGfx6	StorePage	*eol	UICategory	RunewordCategory1	RunewordCategory2	Restricted
-Any				0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0								0	Shoots	Quiver	Throwable	Reload
+Any				0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0								0				
 None	none			0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0								0				
 Shield	shie	shld		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	3	40	4	0	3			0							armo	0	shlds	r_off		
 Armor	tors	armo		1	1	tors	tors			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							armo	0	armor	r_arm		
@@ -31,7 +31,7 @@ Axe	axe	mele	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	4	25	5	40	6	0	3			0							weap	
 Club	club	blun	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0	maces	r_mel		
 Sword	swor	blde	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0	sword	r_mel		
 Hammer	hamm	blun	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0	maces	r_mel		
-Knife	knif	blde	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	3			0							weap	0	daggs	r_mel		
+Knife	knif	blde	afwe	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	3	war		0							weap	0	daggs	r_mel		
 Spear	spea	sppl		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0	spear	r_mel		
 Polearm	pole	sppl		1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0	poles	r_mel		
 Crossbow	xbow	miss		1	1	rarm	larm	xboq		0	0	0	0		1	0	0	3	25	4	40	6	0	3			0							weap	0	xbows	r_mis		
@@ -57,7 +57,7 @@ Second Hand	seco			0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0		r_off
 Staves And Rods	rod	blun		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0		r_mel		
 Missile	misl	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0								0		r_mis		
 Blunt	blun	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0		r_mel		
-Expansion																																			0				
+Expansion																																							
 Jewel	jewl	sock		0	0					0	0	0	0	1	1	0	0	0	25	0	40	0	0	3			6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0	jewel			
 Class Specific	clas			0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
 Amazon Item	amaz	clas		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	1		ama	0								0				
@@ -67,36 +67,36 @@ Paladin Item	pala	clas		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	1		pal	0								0		
 Sorceress Item	sorc	clas		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	1		sor	0								0				
 Assassin Item	assn	clas		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	2		ass	0								0				
 Druid Item	drui	clas		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	1		dru	0								0				
-Hand to Hand	h2h	mele	assn	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	2	ass	ass	0							weap	0				
-Orb	orb	weap	sorc	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	1	sor	sor	0							weap	0	assas	r_mel		
-Voodoo Heads	head	shld	necr	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	4	0	1	nec	nec	0							armo	0	sorce	r_mel		
-Auric Shields	ashd	shld	pala	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	4	0	1		pal	0							armo	0	necro	r_arm		
-Primal Helm	phlm	helm	barb	1	1	head	head			0	0	0	0		1	0	0	2	25	3	40	4	0	1	bar	bar	0							armo	0	palad	r_off		
-Pelt	pelt	helm	drui	1	1	head	head			0	0	0	0		1	0	0	2	25	3	40	4	0	1	dru	dru	0							armo	0	barbh	r_hel		
-Cloak	cloa	tors	assn	1	1	tors	tors			0	0	0	0		1	0	0	0	25	0	40	0	0	1	ass	ass	0							armo	0	druid	r_hel		
-Rune	rune	sock		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0		r_arm		
-Circlet	circ	helm		1	1	head	head			0	0	0	0		1	0	0	1	25	2	40	4	0	3			0							armo	0	runes			
-Healing Potion	hpot	poti		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	circl	r_hel		
+Warlock Item	warl	clas		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	1	war	war	0							armo	0				
+Hand to Hand	h2h	mele	assn	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	2	ass	ass	0							weap	0	assas	r_mel		
+Orb	orb	weap	sorc	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	1	sor	sor	0							weap	0	sorce	r_mel		
+Voodoo Heads	head	shld	necr	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	4	0	1	nec	nec	0							armo	0	necro	r_arm		
+Auric Shields	ashd	shld	pala	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	4	0	1		pal	0							armo	0	palad	r_off		
+Primal Helm	phlm	helm	barb	1	1	head	head			0	0	0	0		1	0	0	2	25	3	40	4	0	1	bar	bar	0							armo	0	barbh	r_hel		
+Pelt	pelt	helm	drui	1	1	head	head			0	0	0	0		1	0	0	2	25	3	40	4	0	1	dru	dru	0							armo	0	druid	r_hel		
+Cloak	cloa	tors	assn	1	1	tors	tors			0	0	0	0		1	0	0	0	25	0	40	0	0	1	ass	ass	0							armo	0		r_arm		
+Rune	rune	sock		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	runes			
+Circlet	circ	helm		1	1	head	head			0	0	0	0		1	0	0	1	25	2	40	4	0	3			0							armo	0	circl	r_hel		
+Healing Potion	hpot	poti		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	potis			
 Mana Potion	mpot	poti		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	potis			
 Rejuv Potion	rpot	hpot	mpot	0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	potis			
 Stamina Potion	spot	poti		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	potis			
 Antidote Potion	apot	poti		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	potis			
 Thawing Potion	wpot	poti		0	0					0	0	0	0			1	1	0	25	0	40	0	0	3			0							misc	0	potis			
-Small Charm	scha	char		0	0					0	0	0	0	1		0	0	0	25	0	40	0	0	3			3	invch1	invch4	invch7				misc	0	potis			
+Small Charm	scha	char		0	0					0	0	0	0	1		0	0	0	25	0	40	0	0	3			3	invch1	invch4	invch7				misc	0	charm			
 Medium Charm	mcha	char		0	0					0	0	0	0	1		0	0	0	25	0	40	0	0	3			3	invch2	invch5	invch8				misc	0	charm			
 Large Charm	lcha	char		0	0					0	0	0	0	1		0	0	0	25	0	40	0	0	3			3	invch3	invch6	invch9				misc	0	charm			
-Amazon Bow	abow	bow	amaz	0	1	rarm	larm	bowq		0	0	0	0		1	0	0	3	25	4	40	5	1	1		ama	0							weap	0	charm			
-Amazon Spear	aspe	spea	amaz	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	1		ama	0							weap	0	amazo	r_mis		
+Amazon Bow	abow	bow	amaz	0	1	rarm	larm	bowq		0	0	0	0		1	0	0	3	25	4	40	5	1	1		ama	0							weap	0	amazo	r_mis		
+Amazon Spear	aspe	spea	amaz	1	1	rarm	larm			0	0	0	0		1	0	0	3	25	4	40	6	0	1		ama	0							weap	0	amazo	r_mel		
 Amazon Javelin	ajav	jave	amaz	1	1	rarm	larm			1	1	1	1		1	0	0	2	25	2	40	3	0	1		ama	0							misc	0	amazo	r_mel		
-Hand to Hand 2	h2h2	h2h		1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	2	ass	ass	0							weap	0	amazo	r_mel		
-Magic Bow Quiv	mboq	bowq		0	1	rarm	larm		bow	0	1	0	0	1	1	0	0	0	25	0	40	0	0	3			0							misc	0	assas	r_mel		
+Hand to Hand 2	h2h2	h2h		1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	2	ass	ass	0							weap	0	assas	r_mel		
+Magic Bow Quiv	mboq	bowq		0	1	rarm	larm		bow	0	1	0	0	1	1	0	0	0	25	0	40	0	0	3			0							misc	0				
 Magic Xbow Quiv	mxbq	xboq		0	1	rarm	larm		xbow	0	1	0	0	1	1	0	0	0	25	0	40	0	0	3			0							misc	0				
-Chipped Gem	gem0	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0				
+Chipped Gem	gem0	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Flawed Gem	gem1	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Standard Gem	gem2	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Flawless Gem	gem3	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Perfect Gem	gem4	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
-Gem	pgem	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Amethyst	gema	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Diamond	gemd	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Emerald	geme	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
@@ -104,17 +104,18 @@ Ruby	gemr	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems
 Sapphire	gems	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Topaz	gemt	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
 Skull	gemz	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0	gems			
-Merc Equip	helm	armo	merc	1	1	head	head			0	0	0	0		1	0	0	2	25	2	40	4	0	3			0							armo	0				
-Gem Stack	gemx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0				
-Rune Stack	runx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0	warlo			
-Power Orb Stack	orbx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0	jewel			1
-Storage	stor	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0							misc	0				
-Item Grabber	grab	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0							misc	0				
 Swords and Knives	blde	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
 Spears and Polearms	sppl	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
-Slam Weapons	slam	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
-1H Weapons	1wep			0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
-Act 5 Jankaround 1	afwe	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
 Grimoire	grim	shld	warl	1	1	rarm	larm			0	0	0	0		1	0	0	2	25	3	40	3	0	1	war	war	0							armo	0	warlo			
 Colossal Jewel	cjwl	jewl		0	0					0	0	0	0	1	1	0	0	0	25	0	40	0	0	3			6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0	jewel			1
 Crafted Sunder Charm	csch	char		0	0					0	0	0	0	1		0	0	0	25	0	40	0	0	3			3	invch3	invch6	invch9				misc	0				
+Gem	pgem	gem		0	0					0	0	0	0			1	0	0	25	0	40	0	0	3			0							misc	0				
+Merc Equip	helm	armo	merc	1	1	head	head			0	0	0	0		1	0	0	2	25	2	40	4	0	3			0							armo	0				
+Gem Stack	gemx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0				
+Rune Stack	runx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0				
+Power Orb Stack	orbx	misc		0	0					0	0	0	1			1	0	0	25	0	40	0	0	3			0								0				
+Storage	stor	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0							misc	0				
+Item Grabber	grab	misc		0	0					0	0	0	0			0	0	0	25	0	40	0	0	3			0							misc	0				
+Slam Weapons	slam	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
+1H Weapons	1wep			0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
+Act 5 Jankaround 1	afwe	mele		0	0					0	0	0	0		1	0	0	0	25	0	40	0	0	3			0								0				
