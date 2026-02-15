@@ -1,10 +1,15 @@
 {
-    "type": "CharacterCreatePanel", "name": "CharacterCreatePanel",
+    "type": "CharacterCreatePanel",
+    "name": "CharacterCreatePanel",
     "fields": {
-        "anchor": { "x": 0.5 },
+        "anchor": {
+            "x": 0.5
+        },
         "fitToParent": true,
-        "offlineHardcorePosition": { "x": -114, "y": 1902 },
-        "offlineClassicPosition": { "x": 12, "y": 1902 },
+        "offlineHardcorePosition": {
+            "x": -60,
+            "y": 1902
+        },
         "barbarianNames": [
             "Kord",
             "Brovos",
@@ -205,20 +210,75 @@
             "Kegan",
             "Phelan"
         ],
+        "warlockNames": [
+            "Malthus",
+            "Erebus",
+            "Thaxus",
+            "Corvus",
+            "Noctis",
+            "Vex",
+            "Malachar",
+            "Zephon",
+            "Draven",
+            "Mordain",
+            "Kaleth",
+            "Obsidian",
+            "Raziel",
+            "Vaelor",
+            "Tenebris",
+            "Hex",
+            "Malachai",
+            "Thorne",
+            "Vesper",
+            "Vortigern",
+            "Nyx",
+            "Azrael",
+            "Lucien",
+            "Grimwald",
+            "Caelum",
+            "Lazarus",
+            "Balthazar",
+            "Pookie"
+        ],
+        "gameVersionNames": [
+            "@Expansion",
+            "@RotWLong"
+        ]
     },
     "children": [
         {
-            "type": "Camera3DWidget", "name": "Camera",
+            "type": "Camera3DWidget",
+            "name": "Camera",
             "fields": {
                 "yawDegrees": -134,
                 "pitchDegrees": 0,
                 "fovDegrees": 47,
-                "position": [ 1070, 3.5, 133 ], 
+                "position": [
+                    1070,
+                    3.5,
+                    133
+                ],
                 "activateOnOpened": true,
-                "frustumBoundsMin": [ 1015.0, 0.0, 60.0 ],
-                "frustumBoundsMax": [ 1080.0, 40.0, 150.0 ],
-                "playerBoundsMin": [ 38.0, 0.0, 100.0 ],
-                "playerBoundsMax": [ 68.0, 10.0, 130.0 ],
+                "frustumBoundsMin": [
+                    1015.0,
+                    0.0,
+                    60.0
+                ],
+                "frustumBoundsMax": [
+                    1080.0,
+                    40.0,
+                    150.0
+                ],
+                "playerBoundsMin": [
+                    38.0,
+                    0.0,
+                    100.0
+                ],
+                "playerBoundsMax": [
+                    68.0,
+                    10.0,
+                    130.0
+                ],
                 "enableOutdoorShadow": true,
                 "overrideFrustumBoundsOnActivate": true,
                 "visDataPath": "data/hd/env/vis/ui_frontend_charactercreate.json",
@@ -226,48 +286,96 @@
             }
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Amazon",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Amazon",
             "fields": {
-                "rect": { "x": -1280, "y": 400, "width": 350, "height": 1300 },
+                "rect": {
+                    "x": -1455,
+                    "y": 400,
+                    "width": 350,
+                    "height": 1300
+                },
                 "player/playerClass": "Amazon",
-                "player/position": [ 1049.0, 0.1, 125.75 ],
+                "player/position": [
+                    1046.0,
+                    0.1,
+                    125.75
+                ],
                 "player/yawDegrees": 110,
                 "player/rightHand": "data/hd/items/weapon/javelin/javelin.json",
                 "player/shield": "data/hd/items/armor/shield/large_shield.json",
-                "player/legs": "Light", "player/rightArm": "Heavy", "player/leftArm": "Heavy",
-                "player/spec1": "Heavy", "player/spec2": "Heavy",
+                "player/legs": "Light",
+                "player/rightArm": "Heavy",
+                "player/leftArm": "Heavy",
+                "player/spec1": "Heavy",
+                "player/spec2": "Heavy",
                 "focusIndicatorVisible": false,
             }
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Assassin",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Assassin",
             "fields": {
-                "rect": { "x": -930, "y": 400, "width": 330, "height": 1300 },
+                "rect": {
+                    "x": -1105,
+                    "y": 400,
+                    "width": 330,
+                    "height": 1300
+                },
                 "player/playerClass": "Assassin",
-                "player/position": [ 1048.2, 0.1, 121.9 ],
+                "player/position": [
+                    1045,
+                    0.1,
+                    121.9
+                ],
                 "player/yawDegrees": 80,
-                "player/torso": "Light","player/legs": "Heavy",
+                "player/torso": "Light",
+                "player/legs": "Heavy",
                 "focusIndicatorVisible": false,
             }
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Necromancer",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Necromancer",
             "fields": {
-                "rect": { "x": -595, "y": 400, "width": 360, "height": 1300 },
+                "rect": {
+                    "x": -770,
+                    "y": 400,
+                    "width": 360,
+                    "height": 1300
+                },
                 "player/playerClass": "Necromancer",
-                "player/position": [ 1047.5, 0.1, 117.3 ],
+                "player/position": [
+                    1045,
+                    0.1,
+                    118
+                ],
                 "player/yawDegrees": 42,
-                "player/torso": "Heavy", "player/legs": "Heavy", "player/rightArm": "Heavy", "player/leftArm": "Heavy",
-                "player/spec1": "Heavy", "player/spec2": "Heavy",
+                "player/torso": "Heavy",
+                "player/legs": "Heavy",
+                "player/rightArm": "Heavy",
+                "player/leftArm": "Heavy",
+                "player/spec1": "Heavy",
+                "player/spec2": "Heavy",
                 "focusIndicatorVisible": false,
             }
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Barbarian",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Barbarian",
             "fields": {
-                "rect": { "x": -225, "y": 400, "width": 400, "height": 1300 },
+                "rect": {
+                    "x": -400,
+                    "y": 400,
+                    "width": 400,
+                    "height": 1300
+                },
                 "player/playerClass": "Barbarian",
-                "player/position": [ 1049.7, 0.1, 113.7 ],
+                "player/position": [
+                    1047,
+                    0.1,
+                    114.0
+                ],
                 "player/yawDegrees": 40,
                 "player/leftHand": "data/hd/items/weapon/axe/_monsters/monster_battle_axe_01.json",
                 "player/rightHand": "data/hd/items/misc/whetstone/fe_axe_whetstone.json",
@@ -275,70 +383,143 @@
             },
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Paladin",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Paladin",
             "fields": {
-                "rect": { "x": 200, "y": 400, "width": 380, "height": 1300 },
+                "rect": {
+                    "x": 25,
+                    "y": 400,
+                    "width": 380,
+                    "height": 1300
+                },
                 "player/playerClass": "Paladin",
-                "player/position": [ 1053, 0.1, 110.6 ],
+                "player/position": [
+                    1051.1,
+                    0.1,
+                    111.5
+                ],
                 "player/yawDegrees": 39,
                 "player/rightHand": "data/hd/items/weapon/sword/blacktongue.json",
                 "player/shield": "data/hd/items/armor/shield/kite_shield.json",
-                "player/torso": "Heavy", "player/legs": "Heavy", "player/rightArm": "Heavy", "player/leftArm": "Heavy",
-                "player/spec1": "Heavy", "player/spec2": "Heavy",
+                "player/torso": "Heavy",
+                "player/legs": "Heavy",
+                "player/rightArm": "Heavy",
+                "player/leftArm": "Heavy",
+                "player/spec1": "Heavy",
+                "player/spec2": "Heavy",
                 "focusIndicatorVisible": false,
             }
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Sorceress",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Sorceress",
             "fields": {
-                "rect": { "x": 580, "y": 400, "width": 370, "height": 1300 },
+                "rect": {
+                    "x": 405,
+                    "y": 400,
+                    "width": 360,
+                    "height": 1300
+                },
                 "player/playerClass": "Sorceress",
-                "player/position": [ 1057.5, 0.1, 109.5 ],
+                "player/position": [
+                    1055,
+                    0.1,
+                    110
+                ],
                 "player/yawDegrees": 40,
                 "player/rightHand": "data/hd/items/weapon/staff/_monsters/fe_sorceress_staff.json",
                 "focusIndicatorVisible": false,
             }
         },
         {
-            "type": "HDCharacterSelectorWidget", "name": "Druid",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Druid",
             "fields": {
-                "rect": { "x": 950, "y": 400, "width": 400, "height": 1300 },
+                "rect": {
+                    "x": 1185,
+                    "y": 400,
+                    "width": 400,
+                    "height": 1300
+                },
                 "player/playerClass": "Druid",
-                "player/position": [ 1061.4, 0.1, 110.0 ],
+                "player/position": [
+                    1062.9,
+                    0.1,
+                    110.0
+                ],
                 "player/yawDegrees": 10,
                 "focusIndicatorVisible": false,
             }
         },
         {
-            "type": "TextBoxWidget", "name": "Title",
+            "type": "HDCharacterSelectorWidget",
+            "name": "Warlock",
             "fields": {
-                "rect": { "x": -400, "y": 125, "width": 800, "height": 50 },
+                "rect": {
+                    "x": 715,
+                    "y": 400,
+                    "width": 400,
+                    "height": 1300
+                },
+                "player/playerClass": "Warlock",
+                "player/position": [
+                    1059.3,
+                    0.1,
+                    110.25
+                ],
+                "player/yawDegrees": 10,
+                "player/rightHand": "data/hd/items/armor/grimoires/fe_grimoire.json",
+                "focusIndicatorVisible": false,
+            }
+        },
+        {
+            "type": "TextBoxWidget",
+            "name": "Title",
+            "fields": {
+                "rect": {
+                    "x": -400,
+                    "y": 125,
+                    "width": 800,
+                    "height": 50
+                },
                 "fontType": "30pt",
                 "text": "@strSelectHeroClass",
                 "style": {
                     "fontColor": "$FontColorGoldYellow",
                     "spacing": "$ReducedSpacing",
-                    "alignment": { "h": "center" },
+                    "alignment": {
+                        "h": "center"
+                    },
                     "pointSize": "$XExtraLargeFontSize",
                     "dropShadow": "$DefaultDropShadow",
                 },
             }
         },
-
         // navigation buttons
         {
-            "type": "Widget", "name": "LeftAnchor",
+            "type": "Widget",
+            "name": "LeftAnchor",
             "fields": {
-                "anchor": { "x": -0.5, "y": 1.0 }
+                "anchor": {
+                    "x": -0.5,
+                    "y": 1.0
+                }
             },
             "children": [
                 {
-                    "type": "ButtonWidget", "name": "ToMainMenu",
+                    "type": "ButtonWidget",
+                    "name": "ToMainMenu",
                     "fields": {
-                        "rect": { "x": 100, "y": -220 },
+                        "rect": {
+                            "x": 100,
+                            "y": -220
+                        },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
-                        "focusIndicatorOffset": { "x": 0, "y": 0 },
+                        "focusIndicatorOffset": {
+                            "x": 0,
+                            "y": 0
+                        },
                         "textString": "@UIBack",
                         "onClickMessage": "FrontEndNavigation:ToCharacterSelect",
                         "pressedFrame": 1,
@@ -351,23 +532,33 @@
                 },
             ]
         },
-
         {
-            "type": "Widget", "name": "RightAnchor",
+            "type": "Widget",
+            "name": "RightAnchor",
             "fields": {
-                "anchor": { "x": 0.5, "y": 1.0 }
+                "anchor": {
+                    "x": 0.5,
+                    "y": 1.0
+                }
             },
             "children": [
                 {
                     // Toggle between SD/HD
-                    "type": "Disabled", "name": "ToggleLegacy",
+                    "type": "ButtonWidget",
+                    "name": "ToggleLegacy",
                     "fields": {
-                        "rect": { "x": -572, "y": -2025 },
+                        "rect": {
+                            "x": -572,
+                            "y": -2025
+                        },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "textString": "@FrontEndToggleLegacyButtonText",
                         "tooltipString": "@ToggleRendererHint",
                         "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
-                        "focusIndicatorOffset": { "x": 0, "y": -2 },
+                        "focusIndicatorOffset": {
+                            "x": 0,
+                            "y": -2
+                        },
                         "onClickMessage": "CharacterCreate:ToggleLegacy",
                         "pressedFrame": 1,
                         "text/style": "$StyleFEButtonText",
@@ -378,12 +569,109 @@
                     }
                 },
                 {
-                    "type": "ButtonWidget", "name": "ToGame",
+                    "type": "Widget",
+                    "name": "GameVersionContainer",
                     "fields": {
-                        "rect": { "x": -572, "y": -220 },
-                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
-                        "focusIndicatorOffset": { "x": 0, "y": 0 },
+                        "rect": {
+                            "x": -712,
+                            "y": -421,
+                            "width": 610,
+                            "height": 178
+                        }
+                    },
+                    "children": [
+                        {
+                            "type": "TextBoxWidget",
+                            "name": "GameVersionLabel",
+                            "fields": {
+                                "rect": {
+                                    "x": -209,
+                                    "y": 0,
+                                    "width": 525,
+                                    "height": 62
+                                },
+                                "fontType": "24pt",
+                                "text": "@GameVersionLabel",
+                                "style": {
+                                    "fontColor": "$FontColorGoldYellow",
+                                    "alignment": {
+                                        "h": "left",
+                                        "v": "center"
+                                    },
+                                    "pointSize": "$LargeFontSize",
+                                    "dropShadow": "$DefaultDropShadow",
+                                    "spacing": "$ReducedSpacing"
+                                }
+                            }
+                        },
+                        {
+                            "type": "ButtonWidget",
+                            "name": "GameVersionInfoButton",
+                            "fields": {
+                                "rect": {
+                                    "x": 536,
+                                    "y": 0
+                                },
+                                "filename": "PANEL\\Loot_Filter\\Chronicle_Btn_Info",
+                                "pressedFrame": 0,
+                                "acceptsReturnKey": false,
+                                "focusOnMouseOver": false,
+                                "tooltipString": "@CharacterGameVersionTooltip"
+                            }
+                        },
+                        {
+                            "type": "DropdownListWidget",
+                            "name": "GameVersionDropdown",
+                            "fields": {
+                                "rect": {
+                                    "x": -209,
+                                    "y": 73,
+                                    "width": 820,
+                                    "height": 105
+                                },
+                                "background": {
+                                    "rect": {
+                                        "width": 820,
+                                        "height": 105
+                                    },
+                                    "filename": "PANEL/DropdownButton_Large_Center",
+                                    "leftCap/filename": "PANEL/DropdownButton_Large_Left",
+                                    "rightCap/filename": "PANEL/DropdownButton_Large_Right"
+                                },
+                                "pressedFrame": 3,
+                                "disabledFrame": 2,
+                                "hoveredFrame": 1,
+                                "states": [
+                                    ""
+                                ], // States will be populated in code based on the "gameVersionNames" list at the top of this file
+                                "onUpdateMessage": "CharacterCreate:GameVersionSelected",
+                                "text/style": "$StyleSettingsCarousel",
+                                "textColor": "$FontColorLightGold",
+                                "textMargin": {
+                                    "left": 0,
+                                    "top": 0,
+                                    "right": 100,
+                                    "bottom": 0
+                                },
+                                "expandUpwards": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "ButtonWidget",
+                    "name": "ToGame",
+                    "fields": {
+                        "rect": {
+                            "x": -712,
+                            "y": -220
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonLarge",
+                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonLarge",
+                        "focusIndicatorOffset": {
+                            "x": 0,
+                            "y": 0
+                        },
                         "textString": "@UICreate",
                         "disabledTooltipString": "@DisabledCharacterCreateTooltip",
                         "onClickMessage": "CharacterCreate:Create",
@@ -395,7 +683,67 @@
                         "disabledFrame": 2,
                         "tooltipStyle": {
                             "fontStyle": {
-                                "options": { "newlineHandling": "standard" },
+                                "options": {
+                                    "newlineHandling": "standard"
+                                },
+                            }
+                        },
+                    }
+                },
+                {
+                    "type": "TextBoxWidget",
+                    "name": "UpsellDescription",
+                    "fields": {
+                        "rect": {
+                            "x": -712,
+                            "y": -409,
+                            "width": 667,
+                            "height": 190
+                        },
+                        "text": "@ClassRequiresPurchase",
+                        "fontType": "24pt",
+                        "style": {
+                            "alignment": {
+                                "h": "left",
+                                "v": "center"
+                            },
+                            "pointSize": "$LargeFontSize",
+                            "spacing": "$ReducedSpacing",
+                            "fontColor": "$FontColorGoldYellow",
+                            "dropShadow": "$DefaultDropShadow",
+                            "options": {
+                                "lineWrap": true
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "ButtonWidget",
+                    "name": "UpsellButton",
+                    "fields": {
+                        "rect": {
+                            "x": -712,
+                            "y": -220
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonLarge",
+                        "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonLarge",
+                        "focusIndicatorOffset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "textString": "@UILearnMore",
+                        "onClickMessage": "CharacterCreate:Upsell",
+                        "pressedFrame": 1,
+                        "text/style": "$StyleFEButtonText",
+                        "pointSize": "$LargeFontSize",
+                        "textColor": "$LightButtonTextColor",
+                        "hoveredFrame": 3,
+                        "disabledFrame": 2,
+                        "tooltipStyle": {
+                            "fontStyle": {
+                                "options": {
+                                    "newlineHandling": "standard"
+                                },
                             }
                         },
                     }
@@ -403,15 +751,24 @@
             ]
         },
         {
-            "type": "Widget", "name": "InfoContainer",
+            "type": "Widget",
+            "name": "InfoContainer",
             "children": [
                 {
-                    "type": "TextBoxWidget", "name": "ClassTitle",
+                    "type": "TextBoxWidget",
+                    "name": "ClassTitle",
                     "fields": {
-                        "rect": { "x": -400, "y": 284, "width": 800, "height": 50 },
+                        "rect": {
+                            "x": -400,
+                            "y": 284,
+                            "width": 800,
+                            "height": 50
+                        },
                         "style": {
                             "pointSize": "$HugeFontSize",
-                            "alignment": { "h": "center" },
+                            "alignment": {
+                                "h": "center"
+                            },
                             "spacing": "$ReducedSpacing",
                             "fontColor": "$FontColorGoldYellow",
                             "dropShadow": "$DefaultDropShadow",
@@ -419,14 +776,25 @@
                     }
                 },
                 {
-                    "type": "TextBoxWidget", "name": "ClassDescription",
+                    "type": "TextBoxWidget",
+                    "name": "ClassDescription",
                     "fields": {
-                        "rect": { "x": -500, "y": 400, "width": 1000, "height": 135 },
+                        "rect": {
+                            "x": -500,
+                            "y": 400,
+                            "width": 1000,
+                            "height": 135
+                        },
                         "style": {
                             "pointSize": "$LargeFontSize",
-                            "alignment": { "h": "center" },
+                            "alignment": {
+                                "h": "center"
+                            },
                             "spacing": "$ReducedSpacing",
-                            "options": { "lineWrap": true, "newlineHandling": "standard" },
+                            "options": {
+                                "lineWrap": true,
+                                "newlineHandling": "standard"
+                            },
                             "dropShadow": "$DefaultDropShadow",
                         },
                     }
@@ -434,78 +802,94 @@
             ]
         },
         {
-            "type": "Widget", "name": "InputContainer",
+            "type": "Widget",
+            "name": "InputContainer",
             "fields": {
-                "rect": {"x": 0, "y": -50}
+                "rect": {
+                    "x": 0,
+                    "y": -50
+                }
             },
             "children": [
                 {
-                    "type": "TextBoxWidget", "name": "NameLabel",
+                    "type": "TextBoxWidget",
+                    "name": "NameLabel",
                     "fields": {
-                        "rect": { "x": -300, "y": 1725, "width": 600, "height": 50 },
+                        "rect": {
+                            "x": -300,
+                            "y": 1725,
+                            "width": 600,
+                            "height": 50
+                        },
                         "fontType": "24pt",
                         "text": "@strCharacterName",
                         "style": {
                             "fontColor": "$FontColorGoldYellow",
-                            "alignment": { "v": "bottom", "h": "center" },
+                            "alignment": {
+                                "v": "bottom",
+                                "h": "center"
+                            },
                             "pointSize": "$LargeFontSize",
                             "dropShadow": "$DefaultDropShadow",
-                            "spacing" : "$ReducedSpacing"
+                            "spacing": "$ReducedSpacing"
                         },
                     }
                 },
-
                 {
-                    "type": "ImageWidget", "name": "InputBackground",
+                    "type": "ImageWidget",
+                    "name": "InputBackground",
                     "fields": {
-                        "rect": { "x": -444, "y": 1778 },
+                        "rect": {
+                            "x": -444,
+                            "y": 1778
+                        },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_CharNameEntry"
                     },
                 },
-
                 {
-                    "type": "InputTextBoxWidget", "name": "InputText",
+                    "type": "InputTextBoxWidget",
+                    "name": "InputText",
                     "fields": {
-                        "rect": { "x": -360, "y": 1806, "width": 714, "height": 80 },
-                        "backgroundColor":  { "r": 0, "g": 0, "b": 0, "a": 0 },
+                        "rect": {
+                            "x": -360,
+                            "y": 1806,
+                            "width": 714,
+                            "height": 80
+                        },
+                        "backgroundColor": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0,
+                            "a": 0
+                        },
                         "focusIndicatorFilename": "Controller\\HoverImages\\CreateTextInputL_Hover",
                         "alwaysAcceptsKeyInput": true,
                         "maxStringLength": 15,
                         "imeEnabled": true,
                         "fontStyle": {
                             "fontFace": "BlizzardGlobal",
-                            "alignment": { "v": "center" },
+                            "alignment": {
+                                "v": "center"
+                            },
                             "pointSize": "$MediumLargeFontSize",
                         },
                         "fontType": "12ptF",
                     }
                 },
-
                 {
-                    "type": "Disabled", "name": "ClassicToggle",
+                    "type": "ToggleButtonWidget",
+                    "name": "HardcoreCheckbox",
                     "fields": {
-                        "rect": { "x": 103, "y": 1902 },
-                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ClassicIconLarge",
-                        "focusIndicatorFilename": "Controller/HoverImages/CharacterToggle_Hover",
-                        "focusIndicatorOffset": { "x": 2, "y": 0 },
-                        "untoggledFrame": 2,
-                        "toggledFrame": 1,
-                        "toggledPressedFrame": 1,
-                        "untoggledPressedFrame": 1,
-                        "toggledHoveredFrame": 3,
-                        "untoggledHoveredFrame": 0,
-                        "tooltipString": "@TooltipPreExpansionCharacter",
-                        "disabledTooltipString": "@CharacterCreatePreExpansionDisabledTooltip",
-                        "sound": "cursor_character_flag_hd",
-                    }
-                },
-                {
-                    "type": "ToggleButtonWidget", "name": "HardcoreCheckbox",
-                    "fields": {
-                        "rect": { "x": -63, "y": 1902 },
+                        "rect": {
+                            "x": 8,
+                            "y": 1902
+                        },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_HardcoreIconLarge",
                         "focusIndicatorFilename": "Controller/HoverImages/CharacterToggle_Hover",
-                        "focusIndicatorOffset": { "x": 2, "y": 0 },
+                        "focusIndicatorOffset": {
+                            "x": 2,
+                            "y": 0
+                        },
                         "untoggledFrame": 2,
                         "toggledFrame": 1,
                         "toggledPressedFrame": 1,
@@ -518,12 +902,19 @@
                     }
                 },
                 {
-                    "type": "Disabled", "name": "LadderToggle",
+                    "type": "ToggleButtonWidget",
+                    "name": "LadderToggle",
                     "fields": {
-                        "rect": { "x": -209, "y": 1902 },
+                        "rect": {
+                            "x": -127,
+                            "y": 1902
+                        },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_LadderIconLarge",
                         "focusIndicatorFilename": "Controller/HoverImages/CharacterToggle_Hover",
-                        "focusIndicatorOffset": { "x": 2, "y": 0 },
+                        "focusIndicatorOffset": {
+                            "x": 2,
+                            "y": 0
+                        },
                         "untoggledFrame": 2,
                         "toggledFrame": 1,
                         "toggledPressedFrame": 1,
@@ -538,54 +929,90 @@
             ]
         },
         {
-            "type": "RectangleWidget", "name": "LoadingScreen",
+            "type": "RectangleWidget",
+            "name": "LoadingScreen",
             "fields": {
-                "anchor": { "x": -0.5 },
+                "anchor": {
+                    "x": -0.5
+                },
                 "fitToScreen": true,
             },
             "children": [
                 {
-                    "type": "ClickCatcherWidget", "name": "catcher",
+                    "type": "ClickCatcherWidget",
+                    "name": "catcher",
                     "fields": {
                         "fitToParent": true,
                     }
                 },
                 {
-                    "type": "AnimatedImageWidget", "name": "FullGlow",
+                    "type": "AnimatedImageWidget",
+                    "name": "FullGlow",
                     "fields": {
-                        "anchor": { "x": 1.0, "y": 1.0 },
-                        "rect": { "x": -400, "y": -400, "scale": 0.5 },
+                        "anchor": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rect": {
+                            "x": -400,
+                            "y": -400,
+                            "scale": 0.5
+                        },
                         "filename": "LogoAnimation/FullGlow_PC",
                         "fps": 20,
                     },
                 },
                 {
-                    "type": "AnimatedImageWidget", "name": "Logo",
+                    "type": "AnimatedImageWidget",
+                    "name": "Logo",
                     "fields": {
-                        "anchor": { "x": 1.0, "y": 1.0 },
-                        "rect": { "x": -399, "y": -392, "scale": 0.5 },
+                        "anchor": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rect": {
+                            "x": -399,
+                            "y": -392,
+                            "scale": 0.5
+                        },
                         "filename": "LogoAnimation/LogoAnimation",
                         "fps": 20,
                     },
                 },
                 {
-                    "type": "ImageWidget", "name": "ResurrectedText",
+                    "type": "ImageWidget",
+                    "name": "ResurrectedText",
                     "fields": {
-                        "anchor": { "x": 1.0, "y": 1.0 },
-                        "rect": { "x": -370, "y": -226, "scale": 0.5 },
+                        "anchor": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rect": {
+                            "x": -370,
+                            "y": -226,
+                            "scale": 0.5
+                        },
                         "filename": "LogoAnimation/ResurrectedText",
                     },
                 },
                 {
-                    "type": "AnimatedImageWidget", "name": "BottomFlames",
+                    "type": "AnimatedImageWidget",
+                    "name": "BottomFlames",
                     "fields": {
-                        "anchor": { "x": 1.0, "y": 1.0 },
-                        "rect": { "x": -319, "y": -208, "scale": 0.5 },
+                        "anchor": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "rect": {
+                            "x": -319,
+                            "y": -208,
+                            "scale": 0.5
+                        },
                         "filename": "LogoAnimation/Logo_BottomFlame",
                         "fps": 20,
                     },
                 },
             ]
-       },
+        },
     ]
 }

@@ -3,7 +3,7 @@
     "fields": {
         // The in-game panels are all 0 priority or higher, so this keeps the overlay underneath them.
         "priority": -1,
-        "panels": [ "party", "quest_log", "character", "inventory", "pause", "skills_tree", "hireling_inventory" ],
+        "panels": [ "party", "quest_log", "character", "inventory", "skills_tree", "hireling_inventory", "pause" ],
         "interruptablePanels": [ "stash", "horadric_cube", "vendor", "imbue", "trade", "waypoints", "scroll_of_inifuss" ],
         "rememberLastPanel": false,
         "fitToParent": true,
@@ -36,7 +36,7 @@
             "type": "ImageWidget", "name": "AgeDescriptorImage",
             "fields": {
                 "rect": { "x": 22, "y": 58 },
-                "filename": "PauseMenu\\descriptor-18",
+                "filename": "PauseMenu\\age-descriptor",
             }
         },
         {
