@@ -491,7 +491,7 @@
 				{
                     "type": "AdvancedStashSlotWidget", "name": "gmk",
                     "fields": {
-                        "rect": { "width": 98, "height": 98, "x": 66, "y": 722 },
+                        "rect": { "width": 98, "height": 98, "x": 164, "y": 622 },
 						"itemCode": "gmk"
                     }
                 },
@@ -659,6 +659,13 @@
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 962, "y": 244 },
 						"itemCode": "xa5"
+                    }
+                },
+                                {
+                    "type": "AdvancedStashSlotWidget", "name": "std",
+                    "fields": {
+                        "rect": { "width": 98, "height": 98, "x": 310, "y": 242844 },
+						"itemCode": "std"
                     }
                 },
                 {
@@ -989,8 +996,8 @@
 				{
 					"type": "InventoryGridWidget", "name": "horadriccube_grid",
 					"fields": {
-						"rect": { "x": 431, "y": 579 },
-						"cellCount": { "x": 3, "y": 4 },
+						"rect": { "x": 70, "y": 740 },
+						"cellCount": { "x": 12, "y": 8 },
 						"cellSize": "$ItemCellSize",
 						"gemSocketFilename": "PANEL\\gemsocket"
 					},
@@ -998,7 +1005,7 @@
 						{
 							"type": "AnimatedImageWidget", "name": "chronicleFlourish",
 							"fields": {
-								"rect": { "x": 0, "y": 0, "width": 370, "height": 540, "scale": 2 },
+								"rect": { "x": 0, "y": 0, "width": 0, "height": 750, "scale": 2 },
 								"filename": "PANEL\\Chronicle\\RewardAnims\\PANEL_ChronicleReward_1x1",
 								"blendMode": "black",
 								"fps": 30,
@@ -1012,7 +1019,7 @@
 				{
 					"type": "ButtonWidget", "name": "convert",
 					"fields": {
-						"rect": { "x": 520, "y": 1034 },
+						"rect": { "x": 520, "y": 570 },
 						"filename": "PANEL\\Horadric_Cube\\TransmuteButton",
 						"tooltipString": "@strUiMenu2",
 						"hoveredFrame": 2,
@@ -1023,7 +1030,7 @@
 					"type": "ImageWidget", "name": "horadriccube_cover",
 					"fields": {
 						"rect": { "x": 432, "y": 579 },
-						"filename": "PANEL\\Stash\\AdditionalStash\\HoradricCubeCover"
+						"filename": ""
 					}
 				},
                 {
