@@ -15,18 +15,18 @@
                                 "focusIndicatorFilename": "Controller/HoverImages/CharacterListSelection_Hover",
                                 "focusIndicatorOffset": { "x": 0, "y": 0 },
                                 "navigation": {
-                                    "left": { "panelBoundary": true },
-                                },
+                                    "left": { "panelBoundary": true }
+                                }
                             },
                             "children": [
                                 {
-                                    "type": "ImageWidget", "name": "Background",
+                                    "type": "ImageWidget", "name": "Background"
                                 },
                                 {
                                     "type": "ImageWidget", "name": "LadderIcon",
                                     "children": [
                                         {
-                                            "type": "FocusableWidget", "name": "LadderIconTooltip",
+                                            "type": "FocusableWidget", "name": "LadderIconTooltip"
                                         }
                                     ]
                                 },
@@ -39,27 +39,35 @@
                                     ]
                                 },
                                 {
-                                    "type": "ImageWidget", "name": "HardcoreIcon",
+                                    "type": "ImageWidget", "name": "ExpansionIcon",
                                     "children": [
                                         {
-                                            "type": "FocusableWidget", "name": "HardcoreIconTooltip",
+                                            "type": "FocusableWidget", "name": "ExpansionIconTooltip",
                                         }
                                     ]
                                 },
                                 {
-                                    "type": "TextBoxWidget", "name": "Title",
+                                    "type": "ImageWidget", "name": "HardcoreIcon",
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "HardcoreIconTooltip"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "type": "TextBoxWidget", "name": "Name",
+                                    "type": "TextBoxWidget", "name": "Title"
                                 },
                                 {
-                                    "type": "TextBoxWidget", "name": "Level&Class",
+                                    "type": "TextBoxWidget", "name": "Name"
                                 },
+                                {
+                                    "type": "TextBoxWidget", "name": "Level&Class"
+                                }
                             ]
                         },
                         {
-                            "type": "ImageWidget", "name": "Selection",
-                        },
+                            "type": "ImageWidget", "name": "Selection"
+                        }
                     ]
                 },
                 {
@@ -69,7 +77,7 @@
                             "type": "ButtonWidget", "name": "CreateCharacter",
                             "fields": {
                                 "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
-                                "focusIndicatorOffset": { "x": 0, "y": 0 },
+                                "focusIndicatorOffset": { "x": 0, "y": 0 }
                             },
                             "children": [
                                 {
@@ -80,10 +88,10 @@
                                             "style": "$StyleButtonLegend",
                                             "style": {
                                                 "dropShadow": "$DefaultDropShadow"
-                                            },
-                                        },
+                                            }
+                                        }
                                     }
-                                },
+                                }
                             ]
                         },
                         {
@@ -97,10 +105,10 @@
                                             "style": "$StyleButtonLegend",
                                             "style": {
                                                 "dropShadow": "$DefaultDropShadow"
-                                            },
-                                        },
+                                            }
+                                        }
                                     }
-                                },
+                                }
                             ]
                         },
                         {
@@ -114,29 +122,29 @@
                                             "style": "$StyleButtonLegend",
                                             "style": {
                                                 "dropShadow": "$DefaultDropShadow"
-                                            },
-                                        },
+                                            }
+                                        }
                                     }
-                                },
+                                }
                             ]
                         },
                         {
-                            "type": "TabBarWidget", "name": "Tabs",
+                            "type": "TabBarWidget", "name": "Tabs"
                         },
                         {
                             "type": "ImageWidget", "name": "ScrollBarBackground",
                             "children": [
                                 {
-                                    "type": "ScrollControllerWidget", "name": "ScrollBar",
-                                },
+                                    "type": "ScrollControllerWidget", "name": "ScrollBar"
+                                }
                             ]
                         },
                         {
-                            "type": "TextBoxWidget", "name": "D2RReimaginedModInfo",
+                            "type": "TextBoxWidget", "name": "D2RReimaginedModInfo"
                         }
                     ]
-                },
+                }
             ]
-        },
+        }
     ]
 }

@@ -52,22 +52,6 @@
                 "onClickMessage": "PlayerInventoryPanelMessage:Close"
             }
         },
-                {
-            "type": "ImageWidget", "name": "SizeWarning",
-            "fields": {
-                "rect": { "x": 1093, "y": -138 },
-                "filename": "filewarning"
-            },
-                "children": [
-                    {
-                    "type": "FocusableWidget", "name": "SizeWarningTooltip",
-                    "fields": {
-                    "fitToParent": true,
-                    "tooltipString": "@FileSizeWarningCube"
-                    }
-                }
-            ]
-        },
         {
             "type": "InventoryGridWidget", "name": "grid",
             "fields": {

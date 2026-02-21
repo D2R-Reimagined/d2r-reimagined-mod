@@ -2,13 +2,15 @@
     // Named globals.
     "INT_MAX": 2147483647,
 
+    "ToggleButtonFocusIndicatorPadding": { "left": 3,"top": 6, "right": 12, "bottom": 9 },
+    
     // Anchor points.
     "LeftPanelAnchor": { "x": 0.0, "y": 0.397 },
     "RightPanelAnchor": { "x": 1.0, "y": 0.397 },
     // In-game panel rects.
     "LeftPanelRect": { "x": 236, "y": -651, "width": 1162, "height": 1507 },
     "RightPanelRect": { "x": -1394, "y": -651, "width": 1162, "height": 1507 },
-    "PanelClickCatcherRect": { "x": 0, "y": -200, "width": 1162, "height": 1507 },
+    "PanelClickCatcherRect": { "x": 0, "y": 0, "width": 1162, "height": 1507 },
     "InGamePanelTitleRect" : { "x": 91, "y": 64, "width": 972, "height": 71 },
     "ScrollSpeechWidth": 700,
     "ScrollSpeechBorderWidth": 800,
@@ -54,12 +56,14 @@
     "FontColorLightYellow": { "r": 255, "g": 235, "b": 164, "a": 255 },
     "FontColorLightBlue": { "r": 175, "g": 183, "b": 255, "a": 255 },
     "FontColorLightGray": { "r": 148, "g": 148, "b": 148, "a": 255 },
+    "FontColorMoreLightGray": { "r": 191, "g": 191, "b": 191, "a": 255 },
     "FontColorDarkRed": { "r": 175, "g": 25, "b": 25, "a": 255 },
     "FontColorDarkGrayBlue":  { "r": 125, "g": 141, "b": 144, "a": 255 },
     "FontColorDarkGrayGold" : { "r": 173, "g": 168, "b": 148, "a": 255 }, // Usage example: attribute points to spend
     "FontColorTransparent": { "r": 0, "g": 0, "b": 0, "a": 0 },
     "FontColorPartyOrange": { "r": 196, "g": 129, "b": 0, "a": 255 },
     "FontColorPartyGreen": {"r": 79, "g": 194, "b": 56, "a": 255 },
+    "FontColorDesecrated": { "r": 154, "g": 72, "b": 252, "a": 255 },
 
     // Text color presets
     "CarouselEnabledColor": "$FontColorLightGold",
@@ -92,6 +96,7 @@
     "TooltipFontSize": 36,
     "CinematicsFontSize": 32,
     "AddFriendModalFontSize": 26, // Usage: AddFriendModal needs to be the same size in all profiles to support IME
+    "GameNameFilterFontSize": 28, // Usage: it needs to be the same size in all profiles
 
     // K&M LV-mode in-game panels are just scaled up, thus we need
     // versions of fonts which can be used in panels.
@@ -145,7 +150,7 @@
         "spacing": { "leading": 1.0 }
     },
     "StyleButtonLegend": {
-        "fontColor": "$FontColorLightGray",
+        "fontColor": "$FontColorWhite",
         "pointSize": "$MediumFontSize",
         "spacing": { "leading": 1.2, "kerning": 0.95 }
     },
@@ -193,13 +198,34 @@
         "pointSize": "$ExtraLargeFontSize",
         "dropShadow": "$DefaultDropShadow",
         "alignment": { "h": "center", "v": "center" },
-        "spacing": "$ReducedSpacing"
+        "spacing": "$ReducedSpacing",
+    },
+    "StyleRewardsTitleBlock": {
+        "fontColor": "$PanelTitleColor",
+        "pointSize": "$LargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": { "h": "center", "v": "center" },
+        "spacing": "$ReducedSpacing",
     },
     "StyleGoldAmount": {
         "fontColor": "$FontColorCurrencyGold",
         "pointSize": "$XMediumLargeFontSize",
         "dropShadow": "$DefaultDropShadow",
-        "alignment": { "h": "left", "v": "center" }
+        "alignment": { "h": "left", "v": "center" },
+    },
+    "AltStyleGoldAmount": {
+        "fontColor": "$FontColorCurrencyGold",
+        "pointSize": "$SmallPanelFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "alignment": {
+            "h": "left",
+            "v": "center"
+        }
+    },
+    "StyleGoldMax": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$SmallFontSize",
+        "alignment": { "h": "center", "v": "center" },
     },
     "StyleWeaponSwapTabs": {
         "fontColor": "$FontColorWhite",
@@ -213,6 +239,11 @@
         "pointSize": "$SmallPanelFontSize",
         "alignment": { "h": "center", "v": "center" },
         "fontColor": "$FontColorWhite"
+    },
+    "StyleChronicleItemList": {
+        "fontColor": "$FontColorWhite",
+        "pointSize": "$SmallPanelFontSize",
+        "alignment": { "h": "left", "v": "center" },
     },
     "StyleSettingsTitle": {
         "fontColor": "$FontColorGoldYellow",
@@ -234,7 +265,12 @@
     "StyleSettingsCarousel": {
         "pointSize": "$MediumFontSize",
         "spacing" : "$ReducedSpacing",
-        "alignment": { "h": "center", "v": "center" }
+        "alignment": { "h": "center", "v": "center" },
+    },
+    "StyleSettingsLargeCarousel": {
+        "pointSize": "$MediumLargeFontSize",
+        "spacing" : "$ReducedSpacing",
+        "alignment": { "h": "center", "v": "center" },
     },
     "StyleSettingsNumeric": {
         "fontFace": "Exocet",
@@ -310,6 +346,7 @@
         "GoldColor": "$FontColorWhite",
         "RuneColor": "$FontColorOrange",
         "EventItemsColor": "$FontColorOrange",
+        "DesecratedColor": "$FontColorDesecrated",
         "GemsColor": "$FontColorOrange"
     },
 
@@ -321,6 +358,7 @@
         "Spells/Barbarian/BaSkillicon",
         "Spells/Druid/DrSkillicon",
         "Spells/Assassin/AsSkillicon",
+        "Spells/Warlock/WaSkillicon",
         "Spells/SubMenu/Skillicon"
     ],
 
@@ -328,18 +366,18 @@
     "SecondSetIconOffset": { "x": 175 },
 
     // SidePanel
-    "LeftSideSprite": "PANEL\\Docking_Bar\\SidePanel_L_Blank",
+    "LeftSideSprite": "",
     "LeftSideRect": { },
     "LeftSideRectImbuePanel": { "x": -236, "y": -205 },
     "LeftSideRectHireMenu": { "x": -236, "y": -204 },
     "LeftSideCatcherRect": { "x": 0, "y": 0, "width": 954, "height": 2160 },
     "LeftHingeRect": { "x": -236, "y": 630 },
-    "LeftHingeSprite": "PANEL\\Docking_Bar\\SidePanel_Hinge_L_Blank",
-    "RightSideSprite": "PANEL\\Docking_Bar\\SidePanel_R_Blank",
+    "LeftHingeSprite": "",
+    "RightSideSprite": "",
     "RightSideRect": { "x": -732 },
     "RightSideCatcherRect": { "x": -732, "y": 0, "width": 954, "height": 2160 },
     "RightHingeRect": { "x": 1076, "y": 630 },
-    "RightHingeSprite": "PANEL\\Docking_Bar\\SidePanel_Hinge_R_Blank",
+    "RightHingeSprite": "",
 
     // Inventory
     "ItemCellSize": { "x": 98, "y": 98 },
@@ -364,6 +402,8 @@
     "OptionsSliderRect": { "width": 480, "height": 72 },
     "CalibrationTableColumn1": { "width": 700, "alignment": { "h": "fit", "v": "fit" } },
     "OptionsSliderValueRect": { "x": -159, "y": 17, "width": 70, "height": 40 },
+    "ChronicleSearchBox": { "x": 1275, "y": -118, "width": 450, "height": 102 },
+    "ChronicleSearchInput": { "x": 40, "y": 0, "width": 400, "height": 102 },
 
     // Options hover indicators
     "OptionsSliderFocusIndicatorFilename": "Controller/HoverImages/Slider_Hover",
@@ -448,6 +488,7 @@
         "options": { "lineWrap": true },
         "spacing": "$MinimumSpacing"
     },
+    "SkillHotkeyTextRect": { "x": -4, "y": 3, "width": 132, "height": 124 },
     "SkillQuantityTextStyle": {
         "fontColor": "$FontColorBlue",
         "dropShadow": {
@@ -456,9 +497,7 @@
         },
         "pointSize": "$MediumFontSize",
         "alignment": { "h": "left" },
-        "options": { "hideOverflow": true }
     },
-    "SkillHotkeyTextRect": { "x": -4, "y": 5, "width": 124, "height": 114 },
     "SkillQuantityTextRect": { "x": 6, "y": 85 },
     "SkillQuantityTextRectController": { "x": 6, "y": 6 },
 
@@ -488,6 +527,7 @@
 
     // Account Linking
     "AccountLinkingTileRect": { "x": -875, "y": 561, "width": 1750, "height": 930 },
+    "AccountLinkingActiveUserRect": { "x": 50 , "y": 10, "width": 1650, "height": 160 },
     "AccountLinkingDescriptionRect": { "x": 50 , "y": 180, "width": 1650, "height": 160 },
     "AccountLinkingUserCodeRect": { "x": 50 , "y": 390, "width": 1650, "height": 215 },
     "AccountLinkingUrlRect": { "x": 50 , "y": 625, "width": 1650, "height": 110 },
@@ -519,6 +559,7 @@
     "TutorialTooltipConsoleOfflineRect": { "x": -1375, "y": 451, "width": 900, "height": 1150 },
     "TutorialTooltipConsoleSoloRect": { "x": 275, "y": 451, "width": 900, "height": 700 },
     "TutorialTooltipConsoleMultiRect": { "x": -1375, "y": 451, "width": 900, "height": 700 },
+    "TutorialTooltipConsoleGameListRect": { "x": -700, "y": 451, "width": 900, "height": 700 },
 
     "TooltipConfirmSmall": { "x": 200, "y": 250 },
     "TooltipDismissSmall": { "x": 200, "y": 400 },
@@ -541,5 +582,76 @@
     "JoinGameRect": { "x": 825, "y": 105 },
     "JoinGameNarrowRect": { "x": 455, "y": 80 },
     "LadderRect": { "x": 1210, "y": 105 },
-    "LadderNarrowRect": { "x": 840, "y": 80 }
+    "LadderNarrowRect": { "x": 840, "y": 80 },
+
+    // Join game tweaks.
+    "JoinGamePlayerEntryHeight": 100,
+    "JoinGamePlayerNameHeight": 60,
+	
+	// Loot filter options panel
+    "LootFilterOptionsPanelWidth": 1730,
+    "LootFilterOptionsPanelHeight": 1405,
+    "LootFilterOptionsPanelRect": { "x": -865, "y": 279, "width": "$LootFilterOptionsPanelWidth", "height": "$LootFilterOptionsPanelHeight" },
+	"LootFilterItemTabRect": { "x": -880, "y": 670, "width": 1770, "height": 1000 },
+	"LootFilterConfirmButtonX": 421,
+	"LootFilterSmallFontSize": "$SmallFontSize",
+	"LootFilterMediumFontSize": "$MediumFontSize",
+	"LootFilterMediumLargeFontSize": "$MediumLargeFontSize",
+	"StyleLFButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumLargeFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+		"alignment": { "v": "center" },
+    },
+	"StyleLFButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": { "kerning": 0.88, "leading": 0.8 },
+		"alignment": { "v": "center", "h": "center" },
+		"options": { "lineWrap": true },
+    },
+	"StyleRuleSummaryButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+		"alignment": { "v": "center" },
+    },
+	"StyleItemListButtonText":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterMediumFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+		"alignment": { "v": "center" },
+    },
+	"StyleItemListButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterSmallFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+		"alignment": { "v": "center" },
+		"options": { "lineWrap": true },
+    },
+    "StyleFilterRuleListButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterSmallFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": "$MinimumSpacing",
+		"alignment": { "v": "center" },
+		"options": { "lineWrap": false },
+    },
+	"StyleLootFilterAltTitle": {
+        "fontColor": "$FontColorGoldYellow",
+        "pointSize": "$LootFilterMediumFontSize",
+        "alignment": { "h": "left", "v": "center" },
+		"options": { "lineWrap": true },
+    },
 }

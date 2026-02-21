@@ -1,0 +1,854 @@
+{
+    "type": "CharacterCreatePanel",
+    "name": "CharacterCreatePanel",
+    "fields": {
+        "anchor": {
+            "x": 0.5
+        },
+        "barbarianNames": [
+            "Kord",
+            "Brovos",
+            "Haldo",
+            "Agron",
+            "Fyodin",
+            "Haakon",
+            "Keldon",
+            "Madz",
+            "Haggar",
+            "Cronan",
+            "Lokar",
+            "Hogoth",
+            "Hodorr",
+            "Brogoh",
+            "Norhig",
+            "Fjordvik",
+            "Gask",
+            "Baldur",
+            "Titus",
+            "Hoek",
+            "Garran",
+            "Torren",
+            "Gorr",
+            "Lothus",
+            "Magnus",
+            "Ramwolde"
+        ],
+        "amazonNames": [
+            "Freya",
+            "Brunhild",
+            "Freda",
+            "Ossen",
+            "Greyta",
+            "Hildebran",
+            "Andriss",
+            "Rainath",
+            "Fralen",
+            "Anvell",
+            "Gretchynn",
+            "Grunhelda",
+            "Olga",
+            "Heidi",
+            "Skarra",
+            "Morga",
+            "Hannah",
+            "Foedra",
+            "Halgerde",
+            "Thora",
+            "Valla",
+            "Gallinsa",
+            "Renna",
+            "Ameth",
+            "Hartra",
+            "Droga"
+        ],
+        "sorceressNames": [
+            "Destinova",
+            "Chloen",
+            "Xade",
+            "Valeri",
+            "Alina",
+            "Steshany",
+            "Bronwyn",
+            "Azulae",
+            "Morgana",
+            "Terinn",
+            "Ellishara",
+            "Darra",
+            "Evra",
+            "Nnda",
+            "Ista",
+            "Draeka",
+            "Zanna",
+            "Urza",
+            "Genevieve",
+            "Lilac",
+            "Sortia",
+            "Marion",
+            "Cilie",
+            "Gale",
+            "Andonsia",
+            "Amanthea",
+            "Lorenna",
+            "Kestral"
+        ],
+        "paladinNames": [
+            "Burr",
+            "Barrum",
+            "Andrew",
+            "Horvath",
+            "Kannalth",
+            "Lorrust",
+            "Lorinthu",
+            "Meannus",
+            "Mortakkv",
+            "Narris",
+            "Oleffus",
+            "Cathalt",
+            "Carrulle",
+            "Darunne",
+            "Denthil",
+            "Ecundess",
+            "Eerthidyll",
+            "Fortalle",
+            "Fimakus",
+            "Gamullus",
+            "Geomand",
+            "Haranthus",
+            "Iwanul",
+            "Irttadum",
+            "Jeorth",
+            "Juntull",
+            "Kuraltus"
+        ],
+        "necromancerNames": [
+            "Bratan",
+            "Heran",
+            "Valko",
+            "Karos",
+            "Zelik",
+            "Damir",
+            "Rajan",
+            "Xarosan",
+            "Vlas",
+            "Jareth",
+            "Vojkan",
+            "Zrenn",
+            "Goran",
+            "Miro",
+            "Braz",
+            "Mzstlaw",
+            "Zolan",
+            "Malin",
+            "Velin",
+            "Razeth",
+            "Draz",
+            "Zdislav",
+            "Zhell",
+            "Davor",
+            "Kazyh",
+            "Obrenn",
+            "Xen",
+            "Kamen"
+        ],
+        "assassinNames": [
+            "Kara",
+            "Deziray",
+            "Nyka",
+            "Sovyen",
+            "Famki",
+            "Sashenka",
+            "Luvik",
+            "Anselma",
+            "Ivana",
+            "Korrah",
+            "Spirris",
+            "Tilka",
+            "Korsa",
+            "Byalla",
+            "Nall",
+            "Jatherine",
+            "Liv",
+            "Nadia",
+            "Dior",
+            "Tona",
+            "Rilia",
+            "Drachenna",
+            "Nerra",
+            "Vida",
+            "Isadorra"
+        ],
+        "druidNames": [
+            "Ciordan",
+            "Edan",
+            "Nora",
+            "Azgar",
+            "Grey",
+            "Vane",
+            "Mug",
+            "Tadg",
+            "Amergin",
+            "Erwen",
+            "Merlin",
+            "Gwenchlan",
+            "Cathban",
+            "Bodhmall",
+            "Birog",
+            "Gwilherm",
+            "Getafix",
+            "Taliesin",
+            "Albion",
+            "Baird",
+            "Bevyn",
+            "Carden",
+            "Donal",
+            "Finian",
+            "Kegan",
+            "Phelan"
+        ],
+        "warlockNames": [
+            "Malthus",
+            "Erebus",
+            "Thaxus",
+            "Corvus",
+            "Noctis",
+            "Vex",
+            "Malachar",
+            "Zephon",
+            "Draven",
+            "Mordain",
+            "Kaleth",
+            "Obsidian",
+            "Raziel",
+            "Vaelor",
+            "Tenebris",
+            "Hex",
+            "Malachai",
+            "Thorne",
+            "Vesper",
+            "Vortigern",
+            "Nyx",
+            "Azrael",
+            "Lucien",
+            "Grimwald",
+            "Caelum",
+            "Lazarus",
+            "Balthazar",
+            "Pookie"
+        ],
+    },
+    "children": [
+        {
+            "type": "GridImageWidget",
+            "name": "Background",
+            "fields": {
+                "rect": {
+                    "x": -400,
+                    "y": 0
+                },
+                "filename": "FrontEnd\\charactercreationscreenEXP",
+                "frames": 12,
+                "rows": 3
+            },
+        },
+        {
+            "type": "TextBoxWidget",
+            "name": "Title",
+            "fields": {
+                "rect": {
+                    "x": -400,
+                    "y": 20,
+                    "width": 800,
+                    "height": 50
+                },
+                "fontType": "30pt",
+                "text": "@strSelectHeroClass",
+                "style": {
+                    "alignment": {
+                        "h": "center"
+                    },
+                },
+            }
+        },
+        {
+            "type": "ButtonWidget",
+            "name": "ToMainMenu",
+            "fields": {
+                "rect": {
+                    "x": -365,
+                    "y": 537
+                },
+                "filename": "FrontEnd\\MediumSelButtonBlank",
+                "textString": "@strExit",
+                "onClickMessage": "FrontEndNavigation:ToCharacterSelect",
+                "pressedFrame": 1,
+                "fontType": "10ptE",
+                "textColor": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": -1
+                },
+            }
+        },
+        {
+            "type": "ButtonWidget",
+            "name": "ToGame",
+            "fields": {
+                "rect": {
+                    "x": 239,
+                    "y": 537
+                },
+                "filename": "FrontEnd\\MediumSelButtonBlank",
+                "textString": "@strOk",
+                "onClickMessage": "CharacterCreate:Create",
+                "pressedFrame": 1,
+                "fontType": "10ptE",
+                "textColor": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": -1
+                },
+                "disabledTooltipString": "@DisabledCharacterCreateTooltip",
+                "tooltipStyle": {
+                    "fontStyle": {
+                        "options": {
+                            "newlineHandling": "standard"
+                        },
+                    }
+                },
+            }
+        },
+        // Toggle between SD/HD
+        {
+            "type": "ButtonWidget",
+            "name": "ToggleLegacy",
+            "fields": {
+                "rect": {
+                    "x": 239,
+                    "y": 30
+                },
+                "filename": "FrontEnd\\XLMediumButtonBlank",
+                "textString": "@FrontEndSDLegacyToggleButtonText",
+                "tooltipString": "@ToggleRendererHint",
+                "onClickMessage": "CharacterCreate:ToggleLegacy",
+                "pressedFrame": 1,
+                "fontType": "8ptE",
+                "textColor": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": -1
+                },
+            },
+        },
+        {
+            "type": "CharacterCreateContainerWidget",
+            "name": "CharacterContainer",
+            "children": [
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Amazon",
+                    "fields": {
+                        "rect": {
+                            "x": -300,
+                            "y": 337,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\amazon\\amnu1",
+                                "speedMultiplier": 3.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\amazon\\amnu2",
+                                "speedMultiplier": 3.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\amazon\\amfw"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\amazon\\amnu3",
+                                "speedMultiplier": 2.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\amazon\\ambw"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Assassin",
+                    "fields": {
+                        "rect": {
+                            "x": -168,
+                            "y": 364,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\assassin\\asnu1",
+                                "speedMultiplier": 3.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\assassin\\asnu2",
+                                "speedMultiplier": 3.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\assassin\\asfw"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\assassin\\asnu3",
+                                "speedMultiplier": 2.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\assassin\\asbw"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Barbarian",
+                    "fields": {
+                        "rect": {
+                            "x": 0,
+                            "y": 330,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\barbarian\\banu1",
+                                "speedMultiplier": 2.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\barbarian\\banu2",
+                                "speedMultiplier": 2.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\barbarian\\bafw",
+                                "overlayPath": "FrontEnd\\barbarian\\bafws"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\barbarian\\banu3",
+                                "speedMultiplier": 1.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\barbarian\\babw"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Druid",
+                    "fields": {
+                        "rect": {
+                            "x": 320,
+                            "y": 370,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\druid\\dznu1",
+                                "speedMultiplier": 2.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\druid\\dznu2",
+                                "speedMultiplier": 2.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\druid\\dzfw"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\druid\\dznu3",
+                                "speedMultiplier": 2.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\druid\\dzbw"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Necromancer",
+                    "fields": {
+                        "rect": {
+                            "x": -99,
+                            "y": 333,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\necromancer\\nenu1",
+                                "speedMultiplier": 3.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\necromancer\\nenu2",
+                                "speedMultiplier": 3.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\necromancer\\nefw",
+                                "overlayPath": "FrontEnd\\necromancer\\nefws",
+                                "overlayBlendMode": "black"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\necromancer\\nenu3",
+                                "overlayPath": "FrontEnd\\necromancer\\nenu3s",
+                                "overlayBlendMode": "black",
+                                "speedMultiplier": 2.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\necromancer\\nebw",
+                                "overlayPath": "FrontEnd\\necromancer\\nebws",
+                                "overlayBlendMode": "black"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Paladin",
+                    "fields": {
+                        "rect": {
+                            "x": 121,
+                            "y": 339,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\paladin\\panu1",
+                                "speedMultiplier": 2.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\paladin\\panu2",
+                                "speedMultiplier": 2.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\paladin\\pafw",
+                                "overlayPath": "FrontEnd\\paladin\\pafws"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\paladin\\panu3",
+                                "speedMultiplier": 2.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\paladin\\pabw"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Sorceress",
+                    "fields": {
+                        "rect": {
+                            "x": 226,
+                            "y": 353,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\sorceress\\sonu1",
+                                "speedMultiplier": 2.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\sorceress\\sonu2",
+                                "speedMultiplier": 2.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\sorceress\\sofw",
+                                "overlayPath": "FrontEnd\\sorceress\\sofws",
+                                "overlayBlendMode": "black"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\sorceress\\sonu3",
+                                "overlayPath": "FrontEnd\\sorceress\\sonu3s",
+                                "overlayBlendMode": "black"
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\sorceress\\sobw",
+                                "overlayPath": "FrontEnd\\sorceress\\sobws",
+                                "overlayBlendMode": "black"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "CharacterCreateWidget",
+                    "name": "Warlock",
+                    "fields": {
+                        "rect": {
+                            "x": 320,
+                            "y": 370,
+                        },
+                        "stateAnimations": {
+                            "base": {
+                                "basePath": "FrontEnd\\warlock\\wlnu1",
+                                "speedMultiplier": 3.0
+                            },
+                            "onHover": {
+                                "basePath": "FrontEnd\\warlock\\wlnu2",
+                                "speedMultiplier": 3.0
+                            },
+                            "onSelect": {
+                                "basePath": "FrontEnd\\warlock\\wlfw",
+                                "overlayPath": "FrontEnd\\warlock\\wlfws",
+                                "overlayBlendMode": "black"
+                            },
+                            "selected": {
+                                "basePath": "FrontEnd\\warlock\\wlnu3",
+                                "overlayPath": "FrontEnd\\warlock\\wlnu3s",
+                                "overlayBlendMode": "black",
+                                "speedMultiplier": 2.0
+                            },
+                            "onUnselect": {
+                                "basePath": "FrontEnd\\warlock\\wlbw",
+                                "overlayPath": "FrontEnd\\warlock\\wlbws",
+                                "overlayBlendMode": "black"
+                            },
+                        },
+                    }
+                },
+            ],
+        },
+        {
+            "type": "AnimatedImageWidget",
+            "name": "Fire",
+            "fields": {
+                "rect": {
+                    "x": -23,
+                    "y": 211
+                },
+                "filename": "FrontEnd\\fire",
+                "fps": 25,
+                "blendMode": "black"
+            },
+        },
+        {
+            "type": "Widget",
+            "name": "InfoContainer",
+            "fields": {
+                "rect": {
+                    "y": -40
+                },
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget",
+                    "name": "ClassTitle",
+                    "fields": {
+                        "rect": {
+                            "x": -400,
+                            "y": 110,
+                            "width": 800,
+                            "height": 50
+                        },
+                        "fontType": "30pt",
+                        "style": {
+                            "alignment": {
+                                "h": "center"
+                            },
+                        },
+                    }
+                },
+                {
+                    "type": "TextBoxWidget",
+                    "name": "ClassDescription",
+                    "fields": {
+                        "rect": {
+                            "x": -150,
+                            "y": 146,
+                            "width": 300,
+                            "height": 50
+                        },
+                        "fontType": "16pt",
+                        "style": {
+                            "alignment": {
+                                "h": "center"
+                            },
+                            "spacing": {
+                                "leading": 0.90
+                            },
+                            "options": {
+                                "lineWrap": true,
+                                "newlineHandling": "standard"
+                            },
+                        },
+                    }
+                },
+            ]
+        },
+        {
+            "type": "Widget",
+            "name": "InputContainer",
+            "fields": {
+                "rect": {
+                    "x": 20
+                },
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget",
+                    "name": "NameLabel",
+                    "fields": {
+                        "rect": {
+                            "x": -99,
+                            "y": 475,
+                            "width": 200,
+                            "height": 50
+                        },
+                        "fontType": "16pt",
+                        "text": "@strCharacterName",
+                        "style": {
+                            "fontColor": {
+                                "r": 199,
+                                "g": 179,
+                                "b": 119,
+                                "a": 255
+                            }
+                        },
+                    }
+                },
+                {
+                    "type": "ImageWidget",
+                    "name": "InputBackground",
+                    "fields": {
+                        "rect": {
+                            "x": -100,
+                            "y": 494
+                        },
+                        "filename": "FrontEnd\\textbox"
+                    },
+                },
+                {
+                    "type": "InputTextBoxWidget",
+                    "name": "InputText",
+                    "fields": {
+                        "rect": {
+                            "x": -93,
+                            "y": "$CharacterCreateNameInputY",
+                            "width": 165,
+                            "height": 22
+                        },
+                        "backgroundColor": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0,
+                            "a": 0
+                        },
+                        "alwaysAcceptsKeyInput": true,
+                        "maxStringLength": 15,
+                        "fontStyle": {
+                            "alignment": {
+                                "v": "top"
+                            },
+                            "spacing": {
+                                "leading": 0.68
+                            }
+                        },
+                        "fontType": "12ptF",
+                    }
+                },
+                {
+                    "type": "TextBoxWidget",
+                    "name": "ExpansionLabel",
+                    "fields": {
+                        "rect": {
+                            "x": -80,
+                            "y": 524,
+                            "width": 200,
+                            "height": 20
+                        },
+                        "fontType": "16pt",
+                        "text": "@strexpansionchar2",
+                        "style": {
+                            "fontColor": {
+                                "r": 199,
+                                "g": 179,
+                                "b": 119,
+                                "a": 255
+                            }
+                        },
+                    }
+                },
+                {
+                    "type": "ToggleButtonWidget",
+                    "name": "ExpansionCheckbox",
+                    "fields": {
+                        "rect": {
+                            "x": -100,
+                            "y": 525
+                        },
+                        "filename": "FrontEnd\\clickbox",
+                        "toggledFrame": 1,
+                        "isToggled": true,
+                    }
+                },
+                {
+                    "type": "TextBoxWidget",
+                    "name": "HardcoreLabel",
+                    "fields": {
+                        "rect": {
+                            "x": -80,
+                            "y": 544,
+                            "width": 200,
+                            "height": 20
+                        },
+                        "fontType": "16pt",
+                        "text": "@strHardcore",
+                        "style": {
+                            "fontColor": {
+                                "r": 199,
+                                "g": 179,
+                                "b": 119,
+                                "a": 255
+                            }
+                        },
+                    }
+                },
+                {
+                    "type": "ToggleButtonWidget",
+                    "name": "HardcoreCheckbox",
+                    "fields": {
+                        "rect": {
+                            "x": -100,
+                            "y": 545
+                        },
+                        "filename": "FrontEnd\\clickbox",
+                        "toggledFrame": 1,
+                    }
+                },
+                {
+                    "type": "TextBoxWidget",
+                    "name": "LadderLabel",
+                    "fields": {
+                        "rect": {
+                            "x": -80,
+                            "y": 564,
+                            "width": 200,
+                            "height": 20
+                        },
+                        "fontType": "16pt",
+                        "text": "@LaddeCharacter",
+                        "style": {
+                            "fontColor": {
+                                "r": 199,
+                                "g": 179,
+                                "b": 119,
+                                "a": 255
+                            }
+                        },
+                    }
+                },
+                {
+                    "type": "ToggleButtonWidget",
+                    "name": "LadderToggle",
+                    "fields": {
+                        "rect": {
+                            "x": -100,
+                            "y": 565
+                        },
+                        "filename": "FrontEnd\\clickbox",
+                        "toggledFrame": 1,
+                    }
+                },
+            ]
+        },
+    ]
+}
