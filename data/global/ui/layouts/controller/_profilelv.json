@@ -1,0 +1,115 @@
+{
+    // Base (parent) profile.
+    "basedOn": "ControllerHD",
+
+    // In-game panel rects.
+    "ButtonLegendRect": { "x": 0, "y": 1661, "width": 1164, "height": 106 },
+    "ScrollSpeechWidth": 1350,
+    "ScrollSpeechBorderWidth": 1550,
+    "ScrollSpeechOffset": -675, // This is negative and half of the width; Used as the horizontal offset.
+
+    // temporary until all panels on console are converted
+    "PanelTitleRect": { "x": 52, "y": 151, "width": 1065, "height": 130 },
+
+    // Colors.
+    "FontColorWhite": { "r": 255, "g": 255, "b": 255, "a": 255 },
+
+    // Font sizes.
+    "XMediumFontSize": 32, // Usage:Secondary Action Center Buttons, Character list title and level text
+    "MediumFontSize": 32, // Usage : Settings field text
+    "SmallFontSize": 28,
+    "TooltipFontSize": 40,
+
+    // Standard Styles.
+    "StyleSettingsTitle": {
+        "fontColor": "$FontColorLightGold",
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "left", "v": "center" },
+    },
+    "StyleSettingsText": {
+        "fontColor": "$FontColorLightGold",
+        "pointSize": "$MediumFontSize",
+        "alignment": { "h": "left", "v": "center" },
+        "options": { "lineWrap": true },
+    },
+    "StyleScrollingSpeech": {
+        "fontFace": "Formal",
+        "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "left" },
+        "options": { "newlineHandling": "standard", "lineWrap": true },
+    },
+    "StyleNPCDialogueSize": "$LargeFontSize",
+
+    "TooltipStyle": {
+        "fontStyle": {
+            "fontColor": "$FontColorWhite",
+            "pointSize": "$TooltipFontSize",
+            "alignment": { "h": "center", "v": "center" },
+            "options": { "pipeCharacterBehavior": "handle", "newlineHandling": "reversed" }
+        },
+        "padding": [ 6, 6, 6, 6 ],
+        "drawBorder": false,
+        "centeredOnAnchor": true,
+        "hp": 0,
+        "backgroundColor": [ 0, 0, 0, 0.8 ],
+        "inGameBackgroundColor": [ 0, 0, 0, 0.8 ],
+        "inGameShowItemsSelectedBackgroundColor": [ 0, 0.25, 0.5, 1.0 ],
+        "substringColor": "$FontColorLightGray",
+        "healthColor": [ 0.31, 0, 0, 1.0 ],
+        "borderColor": "$TooltipBorderColor",
+        "DefaultColor": "$FontColorWhite",
+        "QuestColor": "$FontColorGoldYellow",
+        "RareColor": "$FontColorYellow",
+        "CraftedColor": "$FontColorOrange",
+        "TemperedColor": "$FontColorDarkGreen",
+        "MagicColor": "$FontColorBlue",
+        "SetColor": "$FontColorGreen",
+        "UniqueColor": "$FontColorGoldYellow",
+        "SocketedColor": "$FontColorGrey",
+        "EtherealColor": "$FontColorLightPurple",
+        "HealthPotionColor": "$FontColorRed",
+        "ManaPotionColor": "$FontColorBlue",
+        "RejuvPotionColor": "$FontColorLightPurple",
+        "GoldColor": "$FontColorWhite",
+        "RuneColor": "$FontColorOrange",
+        "EventItemsColor": "$FontColorOrange",
+        "DesecratedColor": "$FontColorDesecrated",
+        "GemsColor": "$FontColorOrange"
+    },
+
+    // HirablesPanel
+    "SecondSetIconOffset": { "x": 225 },
+
+    // Account Linking
+    "AccountLinkingTileRect": { "x": -875, "y": 561, "width": 1750, "height": 930 },
+    "AccountLinkingActiveUserRect": { "x": 50 , "y": 10, "width": 1650, "height": 160 },
+    "AccountLinkingDescriptionRect": { "x": 50 , "y": 130, "width": 1650, "height": 160 },
+    "AccountLinkingUserCodeRect": { "x": 50 , "y": 440, "width": 1650, "height": 215 },
+    "AccountLinkingUrlRect": { "x": 50 , "y": 690, "width": 1650, "height": 110 },
+    "AccountLinkingOkButtonRect": { "x": -260, "y": 1370 },
+
+    //Tutorial Tooltips
+    "TutorialTooltipConsoleIntroRect": { "x": -675, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipConsoleTabsRect": { "x": -675, "y": 751, "width": 900, "height": 800 },
+    "TutorialTooltipConsoleOnlineRect": { "x": -1375, "y": 451, "width": 900, "height": 1400 },
+    "TutorialTooltipConsoleOfflineRect": { "x": -1375, "y": 451, "width": 900, "height": 1400 },
+    "TutorialTooltipConsoleSoloRect": { "x": -200, "y": 451, "width": 900, "height": 800 },
+    "TutorialTooltipConsoleGameCreatorRect": { "x": -1600, "y": 451, "width": 900, "height": 800 },
+    "TutorialTooltipConsoleGameListRect": { "x": -700, "y": 451, "width": 900, "height": 800 },
+
+    "TooltipConfirmSmall": { "x": 200, "y": 300 },
+    "TooltipDismissSmall": { "x": 200, "y": 450 },
+    "TooltipConfirmMed": { "x": 200, "y": 475 },
+    "TooltipDismissMed": { "x": 200, "y": 625 },
+    "TooltipConfirmLarge": { "x": 200, "y": 750 },
+    "TooltipDismissLarge": { "x": 200, "y": 900 },
+    "TooltipConfirmXL": { "x": 200, "y": 1050 },
+    "TooltipDismissXL": { "x": 200, "y": 1200 },
+
+    // Join game tweaks.
+    "JoinGamePlayerEntryHeight": 140,
+    "JoinGamePlayerNameHeight": 100,
+
+    "ChronicleRewardsControllerRect": { "x": -1039, "y": 240, "wifth": 0, "height": 0, "scale" : "$ConsoleUIScale"},
+}
