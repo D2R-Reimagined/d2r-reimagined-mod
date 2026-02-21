@@ -1,10 +1,10 @@
 Treasure Class	group	level	Picks	Unique	Set	Rare	Magic	NoDrop	Item1	Prob1	Item2	Prob2	Item3	Prob3	Item4	Prob4	Item5	Prob5	Item6	Prob6	Item7	Prob7	Item8	Prob8	Item9	Prob9	Item10	Prob10	*ItemProbSum	*ItemProbTotal	*TreasureClassDropChance	ConditionCalc	firstLadderSeason	lastLadderSeason	noAlwaysSpawn	QuestFlag	QuestFlagEx	*eol
 Gold			1					0	gld,mul=1024	1																					Required Row 'Don't Remove'							0
 Void			0																																			0
-Gold 1x			1					0	Void	2	gld,mul=1024	1																										0
-Gold 1.5x			1					0	Void	2	gld,mul=1536	1																										0
-Gold 2x			1					0	Void	2	gld,mul=2048	1																										0
-Gold 2.5x			1					0	Void	2	gld,mul=2560	1																										0
+Gold 1x			1					0	Void	3	gld,mul=1024	1																										0
+Gold 1.5x			1					0	Void	3	gld,mul=1536	1																										0
+Gold 2x			1					0	Void	3	gld,mul=2048	1																										0
+Gold 2.5x			1					0	Void	3	gld,mul=2560	1																										0
 Infusion Orb (Normal)			1					0	ooi	1																									1			0
 Assemblage Orb (Normal)			1					0	ooa	1																									1			0
 Conversion Orb (Normal)			1					0	ooc	1																									1			0
@@ -513,20 +513,20 @@ Act 4 (N) Champ C	13	56	-2					10	Act 4 (N) Citem B	1	Super Potion	1												
 Act 5 (N) Champ A	13	57	-2					10	Act 5 (N) Citem A	1	Super Potion	1																										0
 Act 5 (N) Champ B	13	60	-2					10	Act 5 (N) Citem B	1	Super Potion	1																										0
 Act 5 (N) Champ C	13	62	-2					10	Act 5 (N) Citem C	1	Super Potion	1																										0
-Act 1 (H) Champ A	13	63	-3					10	Act 1 (H) Citem A	1	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Champ B	13	66	-3					10	Act 1 (H) Citem B	1	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Champ C	13	68	-3					10	Act 1 (H) Citem C	1	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Champ A	13	69	-3					10	Act 2 (H) Citem A	1	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Champ B	13	71	-3					10	Act 2 (H) Citem B	1	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Champ C	13	72	-3					10	Act 2 (H) Citem C	1	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Champ A	13	74	-3					10	Act 3 (H) Citem A	1	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Champ B	13	75	-3					10	Act 3 (H) Citem B	1	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Champ C	13	77	-3					10	Act 3 (H) Citem C	1	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Champ A	13	78	-3					10	Act 4 (H) Citem A	1	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Champ B	13	80	-3					10	Act 4 (H) Citem B	1	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Champ A	13	81	-3					10	Act 5 (H) Citem A	1	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Champ B	13	83	-3					10	Act 5 (H) Citem B	1	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Champ C	13	85	-3					10	Act 5 (H) Citem C	1	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
+Act 1 (H) Champ A	13	63	-3					10	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Citem A	1	Super Potion	1																								0
+Act 1 (H) Champ B	13	66	-3					10	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Citem B	1	Super Potion	1																								0
+Act 1 (H) Champ C	13	68	-3					10	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Citem C	1	Super Potion	1																								0
+Act 2 (H) Champ A	13	69	-3					10	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Citem A	1	Super Potion	1																								0
+Act 2 (H) Champ B	13	71	-3					10	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Citem B	1	Super Potion	1																								0
+Act 2 (H) Champ C	13	72	-3					10	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Citem C	1	Super Potion	1																								0
+Act 3 (H) Champ A	13	74	-3					10	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Citem A	1	Super Potion	1																								0
+Act 3 (H) Champ B	13	75	-3					10	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Citem B	1	Super Potion	1																								0
+Act 3 (H) Champ C	13	77	-3					10	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Citem C	1	Super Potion	1																								0
+Act 4 (H) Champ A	13	78	-3					10	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Citem A	1	Super Potion	1																								0
+Act 4 (H) Champ B	13	80	-3					10	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Citem B	1	Super Potion	1																								0
+Act 5 (H) Champ A	13	81	-3					10	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Citem A	1	Super Potion	1																								0
+Act 5 (H) Champ B	13	83	-3					10	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Citem B	1	Super Potion	1																								0
+Act 5 (H) Champ C	13	85	-3					10	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Citem C	1	Super Potion	1																								0
 Act 1 Uitem A	14	0	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip A	43	Void	15																								0
 Act 1 Uitem B	14	5	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip B	43	Void	15																								0
 Act 1 Uitem C	14	9	1	800	800	800	1024	10	Act 1 Good	4	Act 1 Equip C	43	Void	15																								0
@@ -612,20 +612,20 @@ Act 4 (N) Unique B	15	54	-2					10	Act 4 (N) Uitem B	1	Super Potion	1											
 Act 5 (N) Unique A	15	57	-2					10	Act 5 (N) Uitem A	1	Super Potion	1																										0
 Act 5 (N) Unique B	15	60	-2					10	Act 5 (N) Uitem B	1	Super Potion	1																										0
 Act 5 (N) Unique C	15	62	-2					10	Act 5 (N) Uitem C	1	Super Potion	1																										0
-Act 1 (H) Unique A	15	63	-4					10	Act 1 (H) Uitem A	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Unique B	15	66	-4					10	Act 1 (H) Uitem B	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Unique C	15	68	-4					10	Act 1 (H) Uitem C	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Unique A	15	69	-4					10	Act 2 (H) Uitem A	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Unique B	15	71	-4					10	Act 2 (H) Uitem B	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Unique C	15	72	-4					10	Act 2 (H) Uitem C	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Unique A	15	74	-4					10	Act 3 (H) Uitem A	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Unique B	15	75	-4					10	Act 3 (H) Uitem B	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Unique C	15	77	-4					10	Act 3 (H) Uitem C	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Unique A	15	78	-4					10	Act 4 (H) Uitem A	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Unique B	15	80	-4					10	Act 4 (H) Uitem B	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Unique A	15	81	-4					10	Act 5 (H) Uitem A	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Unique B	15	83	-4					10	Act 5 (H) Uitem B	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Unique C	15	85	-4					10	Act 5 (H) Uitem C	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
+Act 1 (H) Unique A	15	63	-4					10	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem A	2	Super Potion	1																								0
+Act 1 (H) Unique B	15	66	-4					10	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem B	2	Super Potion	1																								0
+Act 1 (H) Unique C	15	68	-4					10	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem C	2	Super Potion	1																								0
+Act 2 (H) Unique A	15	69	-4					10	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem A	2	Super Potion	1																								0
+Act 2 (H) Unique B	15	71	-4					10	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem B	2	Super Potion	1																								0
+Act 2 (H) Unique C	15	72	-4					10	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem C	2	Super Potion	1																								0
+Act 3 (H) Unique A	15	74	-4					10	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem A	2	Super Potion	1																								0
+Act 3 (H) Unique B	15	75	-4					10	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem B	2	Super Potion	1																								0
+Act 3 (H) Unique C	15	77	-4					10	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem C	2	Super Potion	1																								0
+Act 4 (H) Unique A	15	78	-4					10	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem A	2	Super Potion	1																								0
+Act 4 (H) Unique B	15	80	-4					10	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem B	2	Super Potion	1																								0
+Act 5 (H) Unique A	15	81	-4					10	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem A	2	Super Potion	1																								0
+Act 5 (H) Unique B	15	83	-4					10	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem B	2	Super Potion	1																								0
+Act 5 (H) Unique C	15	85	-4					10	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem C	2	Super Potion	1																								0
 Act 1 Super A	18	0	-3	800	800	972	1024	0	Act 1 Uitem A	2	Normal Potion	1																										0
 Act 1 Super B	18	5	-3	800	800	972	1024	0	Act 1 Uitem B	2	Normal Potion	1																										0
 Act 1 Super C	18	9	-3	800	800	972	1024	0	Act 1 Uitem C	2	Normal Potion	1																										0
@@ -656,21 +656,21 @@ Act 4 (N) Super C	18	60	-3	800	800	972	1024	0	Act 4 (N) Uitem B	2	Super Potion	1
 Act 5 (N) Super A	18	62	-3	800	800	972	1024	0	Act 5 (N) Uitem A	2	Super Potion	1																										0
 Act 5 (N) Super B	18	63	-3	800	800	972	1024	0	Act 5 (N) Uitem B	2	Super Potion	1																										0
 Act 5 (N) Super C	18	66	-3	800	800	972	1024	0	Act 5 (N) Uitem C	2	Super Potion	1																										0
-Act 1 (H) Super A	18	67	-4	800	800	972	1024	0	Act 1 (H) Uitem A	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Super B	18	67	-4	800	800	972	1024	0	Act 1 (H) Uitem B	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Super C	18	68	-4	800	800	972	1024	0	Act 1 (H) Uitem C	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Super A	18	68	-4	800	800	972	1024	0	Act 2 (H) Uitem A	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Super B	18	69	-4	800	800	972	1024	0	Act 2 (H) Uitem B	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Super C	18	72	-4	800	800	972	1024	0	Act 2 (H) Uitem C	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Super A	18	73	-4	800	800	972	1024	0	Act 3 (H) Uitem A	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Super B	18	75	-4	800	800	972	1024	0	Act 3 (H) Uitem B	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Super C	18	78	-4	800	800	972	1024	0	Act 3 (H) Uitem C	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Super A	18	81	-4	800	800	972	1024	0	Act 4 (H) Uitem A	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Super B	18	84	-4	800	800	972	1024	0	Act 4 (H) Uitem B	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Super C	18	87	-4	800	800	972	1024	0	Act 4 (H) Uitem B	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Super A	18	90	-4	800	800	972	1024	0	Act 5 (H) Uitem A	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Super B	18	93	-4	800	800	972	1024	0	Act 5 (H) Uitem B	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Super C	18	96	-4	800	800	972	1024	0	Act 5 (H) Uitem C	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
+Act 1 (H) Super A	18	67	-4	800	800	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem A	2	Super Potion	1																								0
+Act 1 (H) Super B	18	67	-4	800	800	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem B	2	Super Potion	1																								0
+Act 1 (H) Super C	18	68	-4	800	800	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem C	2	Super Potion	1																								0
+Act 2 (H) Super A	18	68	-4	800	800	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem A	2	Super Potion	1																								0
+Act 2 (H) Super B	18	69	-4	800	800	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem B	2	Super Potion	1																								0
+Act 2 (H) Super C	18	72	-4	800	800	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem C	2	Super Potion	1																								0
+Act 3 (H) Super A	18	73	-4	800	800	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem A	2	Super Potion	1																								0
+Act 3 (H) Super B	18	75	-4	800	800	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem B	2	Super Potion	1																								0
+Act 3 (H) Super C	18	78	-4	800	800	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem C	2	Super Potion	1																								0
+Act 4 (H) Super A	18	81	-4	800	800	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem A	2	Super Potion	1																								0
+Act 4 (H) Super B	18	84	-4	800	800	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem B	2	Super Potion	1																								0
+Act 4 (H) Super C	18	87	-4	800	800	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem B	2	Super Potion	1																								0
+Act 5 (H) Super A	18	90	-4	800	800	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem A	2	Super Potion	1																								0
+Act 5 (H) Super B	18	93	-4	800	800	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem B	2	Super Potion	1																								0
+Act 5 (H) Super C	18	96	-4	800	800	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem C	2	Super Potion	1																								0
 Act 1 Super Ax	19	0	-3	512	654	972	1024	0	Act 1 Uitem A	2	Normal Potion	1																										0
 Act 1 Super Bx	19	5	-3	512	654	972	1024	0	Act 1 Uitem B	2	Normal Potion	1																										0
 Act 1 Super Cx	19	9	-3	512	654	972	1024	0	Act 1 Uitem C	2	Normal Potion	1																										0
@@ -721,31 +721,31 @@ Act 2 (N) LT Swarm	41	46	-2	512	654	972	1024	0	Act 2 (N) LT Item	1	Good Potion	1
 Act 3 (N) LT Swarm	41	51	-2	512	654	972	1024	0	Act 3 (N) LT Item	1	Super Potion	1																										0
 Act 4 (N) LT Swarm	41	60	-2	512	654	972	1024	0	Act 4 (N) LT Item	1	Super Potion	1																										0
 Act 5 (N) LT Swarm	41	66	-2	512	654	972	1024	0	Act 5 (N) LT Item	1	Super Potion	1																										0
-Act 1 (H) Super Ax	19	67	-4	512	654	972	1024	0	Act 1 (H) Uitem A	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Super Bx	19	67	-4	512	654	972	1024	0	Act 1 (H) Uitem B	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) Super Cx	19	68	-4	512	654	972	1024	0	Act 1 (H) Uitem C	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Super Ax	19	68	-4	512	654	972	1024	0	Act 2 (H) Uitem A	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Super Bx	19	69	-4	512	654	972	1024	0	Act 2 (H) Uitem B	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) Super Cx	19	72	-4	512	654	972	1024	0	Act 2 (H) Uitem C	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Super Ax	19	73	-4	512	654	972	1024	0	Act 3 (H) Uitem A	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Super Bx	19	75	-4	512	654	972	1024	0	Act 3 (H) Uitem B	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) Super Cx	19	78	-4	512	654	972	1024	0	Act 3 (H) Uitem C	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Super Ax	19	81	-4	512	654	972	1024	0	Act 4 (H) Uitem A	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Super Bx	19	84	-4	512	654	972	1024	0	Act 4 (H) Uitem B	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) Super Cx	19	87	-4	512	654	972	1024	0	Act 4 (H) Uitem B	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Super Ax	19	90	-4	512	654	972	1024	0	Act 5 (H) Uitem A	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Super Bx	19	93	-4	512	654	972	1024	0	Act 5 (H) Uitem B	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) Super Cx	19	96	-4	512	654	972	1024	0	Act 5 (H) Uitem C	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) LT	40	68	-4	512	654	972	1024	0	Act 1 (H) LT Item	2	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) LT	40	72	-4	512	654	972	1024	0	Act 2 (H) LT Item	2	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) LT	40	78	-4	512	654	972	1024	0	Act 3 (H) LT Item	2	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) LT	40	87	-4	512	654	972	1024	0	Act 4 (H) LT Item	2	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) LT	40	96	-4	512	654	972	1024	0	Act 5 (H) LT Item	2	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
-Act 1 (H) LT Swarm	41	68	-3	512	654	972	1024	0	Act 1 (H) LT Item	1	Super Potion	1	Act 3 Terrorize Act Consumable Desecrated	1																								0
-Act 2 (H) LT Swarm	41	72	-3	512	654	972	1024	0	Act 2 (H) LT Item	1	Super Potion	1	Act 4 Terrorize Act Consumable Desecrated	1																								0
-Act 3 (H) LT Swarm	41	78	-3	512	654	972	1024	0	Act 3 (H) LT Item	1	Super Potion	1	Act 5 Terrorize Act Consumable Desecrated	1																								0
-Act 4 (H) LT Swarm	41	87	-3	512	654	972	1024	0	Act 4 (H) LT Item	1	Super Potion	1	Act 2 Terrorize Act Consumable Desecrated	1																								0
-Act 5 (H) LT Swarm	41	96	-3	512	654	972	1024	0	Act 5 (H) LT Item	1	Super Potion	1	Act 1 Terrorize Act Consumable Desecrated	1																								0
+Act 1 (H) Super Ax	19	67	-4	512	654	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem A	2	Super Potion	1																								0
+Act 1 (H) Super Bx	19	67	-4	512	654	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem B	2	Super Potion	1																								0
+Act 1 (H) Super Cx	19	68	-4	512	654	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Uitem C	2	Super Potion	1																								0
+Act 2 (H) Super Ax	19	68	-4	512	654	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem A	2	Super Potion	1																								0
+Act 2 (H) Super Bx	19	69	-4	512	654	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem B	2	Super Potion	1																								0
+Act 2 (H) Super Cx	19	72	-4	512	654	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Uitem C	2	Super Potion	1																								0
+Act 3 (H) Super Ax	19	73	-4	512	654	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem A	2	Super Potion	1																								0
+Act 3 (H) Super Bx	19	75	-4	512	654	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem B	2	Super Potion	1																								0
+Act 3 (H) Super Cx	19	78	-4	512	654	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Uitem C	2	Super Potion	1																								0
+Act 4 (H) Super Ax	19	81	-4	512	654	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem A	2	Super Potion	1																								0
+Act 4 (H) Super Bx	19	84	-4	512	654	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem B	2	Super Potion	1																								0
+Act 4 (H) Super Cx	19	87	-4	512	654	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Uitem B	2	Super Potion	1																								0
+Act 5 (H) Super Ax	19	90	-4	512	654	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem A	2	Super Potion	1																								0
+Act 5 (H) Super Bx	19	93	-4	512	654	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem B	2	Super Potion	1																								0
+Act 5 (H) Super Cx	19	96	-4	512	654	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Uitem C	2	Super Potion	1																								0
+Act 1 (H) LT	40	68	-4	512	654	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) LT Item	2	Super Potion	1																								0
+Act 2 (H) LT	40	72	-4	512	654	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) LT Item	2	Super Potion	1																								0
+Act 3 (H) LT	40	78	-4	512	654	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) LT Item	2	Super Potion	1																								0
+Act 4 (H) LT	40	87	-4	512	654	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) LT Item	2	Super Potion	1																								0
+Act 5 (H) LT	40	96	-4	512	654	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) LT Item	2	Super Potion	1																								0
+Act 1 (H) LT Swarm	41	68	-3	512	654	972	1024	0	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) LT Item	1	Super Potion	1																								0
+Act 2 (H) LT Swarm	41	72	-3	512	654	972	1024	0	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) LT Item	1	Super Potion	1																								0
+Act 3 (H) LT Swarm	41	78	-3	512	654	972	1024	0	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) LT Item	1	Super Potion	1																								0
+Act 4 (H) LT Swarm	41	87	-3	512	654	972	1024	0	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) LT Item	1	Super Potion	1																								0
+Act 5 (H) LT Swarm	41	96	-3	512	654	972	1024	0	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) LT Item	1	Super Potion	1																								0
 Act 1 (N) Champ A Desecrated	36	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Champ A	1																								0
 Act 1 (N) Champ B Desecrated	36	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Champ B	1																								0
 Act 1 (N) Champ C Desecrated	36	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Champ C	1																								0
@@ -760,20 +760,20 @@ Act 4 (N) Champ B Desecrated	36	77	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 
 Act 5 (N) Champ A Desecrated	36	77	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (N) Champ A	1																								0
 Act 5 (N) Champ B Desecrated	36	80	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (N) Champ B	1																								0
 Act 5 (N) Champ C Desecrated	36	80	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (N) Champ C	1																								0
-Act 1 (H) Champ A Desecrated	36	81	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (H) Champ A	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Champ B Desecrated	36	81	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (H) Champ B	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Champ C Desecrated	36	81	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (H) Champ C	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Champ A Desecrated	36	83	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 2 (H) Champ A	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Champ B Desecrated	36	83	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 2 (H) Champ B	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Champ C Desecrated	36	83	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 2 (H) Champ C	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Champ A Desecrated	36	85	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 3 (H) Champ A	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Champ B Desecrated	36	85	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 3 (H) Champ B	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Champ C Desecrated	36	85	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 3 (H) Champ C	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Champ A Desecrated	36	87	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 4 (H) Champ A	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Champ B Desecrated	36	87	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 4 (H) Champ B	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Champ A Desecrated	36	87	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (H) Champ A	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Champ B Desecrated	36	90	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (H) Champ B	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Champ C Desecrated	36	96	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (H) Champ C	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
+Act 1 (H) Champ A Desecrated	36	81	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Champ A	1																						0
+Act 1 (H) Champ B Desecrated	36	81	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Champ B	1																						0
+Act 1 (H) Champ C Desecrated	36	81	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Champ C	1																						0
+Act 2 (H) Champ A Desecrated	36	83	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Champ A	1																						0
+Act 2 (H) Champ B Desecrated	36	83	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Champ B	1																						0
+Act 2 (H) Champ C Desecrated	36	83	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Champ C	1																						0
+Act 3 (H) Champ A Desecrated	36	85	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Champ A	1																						0
+Act 3 (H) Champ B Desecrated	36	85	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Champ B	1																						0
+Act 3 (H) Champ C Desecrated	36	85	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Champ C	1																						0
+Act 4 (H) Champ A Desecrated	36	87	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Champ A	1																						0
+Act 4 (H) Champ B Desecrated	36	87	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Champ B	1																						0
+Act 5 (H) Champ A Desecrated	36	87	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Champ A	1																						0
+Act 5 (H) Champ B Desecrated	36	90	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Champ B	1																						0
+Act 5 (H) Champ C Desecrated	36	96	-4					0	NM TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Champ C	1																						0
 Act 1 (N) Unique A Desecrated	37	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Unique A	1																								0
 Act 1 (N) Unique B Desecrated	37	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Unique B	1																								0
 Act 1 (N) Unique C Desecrated	37	68	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 1 (N) Unique C	1																								0
@@ -828,60 +828,60 @@ Act 2 (N) LT Swarm Desecrated	43	71	-3					0	NM TZ Generic	1	Sunder Charms	1	Act
 Act 3 (N) LT Swarm Desecrated	43	74	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 3 (N) LT Swarm	1																								0
 Act 4 (N) LT Swarm Desecrated	43	77	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 4 (N) LT Swarm	1																								0
 Act 5 (N) LT Swarm Desecrated	43	80	-3					0	NM TZ Generic	1	Sunder Charms	1	Act 5 (N) LT Swarm	1																								0
-Act 1 (H) Unique A Desecrated	37	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Unique A	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Unique B Desecrated	37	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Unique B	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Unique C Desecrated	37	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Unique C	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Unique A Desecrated	37	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Unique A	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Unique B Desecrated	37	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Unique B	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Unique C Desecrated	37	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Unique C	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Unique A Desecrated	37	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Unique A	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Unique B Desecrated	37	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Unique B	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Unique C Desecrated	37	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Unique C	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Unique A Desecrated	37	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Unique A	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Unique B Desecrated	37	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Unique B	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Unique A Desecrated	37	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Unique A	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Unique B Desecrated	37	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Unique B	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Unique C Desecrated	37	96	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Unique C	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Super A Desecrated	38	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Super A	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Super B Desecrated	38	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Super B	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Super C Desecrated	38	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Super C	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Super A Desecrated	38	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Super A	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Super B Desecrated	38	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Super B	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Super C Desecrated	38	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Super C	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Super A Desecrated	38	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Super A	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Super B Desecrated	38	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Super B	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Super C Desecrated	38	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Super C	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Super A Desecrated	38	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Super A	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Super B Desecrated	38	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Super B	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Super C Desecrated	38	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Super C	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Super A Desecrated	38	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Super A	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Super B Desecrated	38	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Super B	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Super C Desecrated	38	96	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Super C	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Super Ax Desecrated	39	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Super Ax	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Super Bx Desecrated	39	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Super Bx	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) Super Cx Desecrated	39	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 (H) Super Cx	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Super Ax Desecrated	39	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Super Ax	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Super Bx Desecrated	39	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Super Bx	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) Super Cx Desecrated	39	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 (H) Super Cx	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Super Ax Desecrated	39	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Super Ax	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Super Bx Desecrated	39	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Super Bx	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) Super Cx Desecrated	39	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 (H) Super Cx	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Super Ax Desecrated	39	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Super Ax	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Super Bx Desecrated	39	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Super Bx	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) Super Cx Desecrated	39	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 (H) Super Cx	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Super Ax Desecrated	39	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Super Ax	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Super Bx Desecrated	39	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Super Bx	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) Super Cx Desecrated	39	96	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 (H) Super Cx	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) LT Desecrated	42	81	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 1 (H) LT	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) LT Desecrated	42	83	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 2 (H) LT	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) LT Desecrated	42	85	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 3 (H) LT	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) LT Desecrated	42	87	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 4 (H) LT	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) LT Desecrated	42	96	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 5 (H) LT	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
-Act 1 (H) LT Swarm Desecrated	43	81	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 1 (H) LT Swarm	1	Act 3 Terrorize Act Consumable Desecrated	1																						0
-Act 2 (H) LT Swarm Desecrated	43	83	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 2 (H) LT Swarm	1	Act 4 Terrorize Act Consumable Desecrated	1																						0
-Act 3 (H) LT Swarm Desecrated	43	85	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 3 (H) LT Swarm	1	Act 5 Terrorize Act Consumable Desecrated	1																						0
-Act 4 (H) LT Swarm Desecrated	43	87	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 4 (H) LT Swarm	1	Act 2 Terrorize Act Consumable Desecrated	1																						0
-Act 5 (H) LT Swarm Desecrated	43	96	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 5 (H) LT Swarm	1	Act 1 Terrorize Act Consumable Desecrated	1																						0
+Act 1 (H) Unique A Desecrated	37	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Unique A	1																						0
+Act 1 (H) Unique B Desecrated	37	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Unique B	1																						0
+Act 1 (H) Unique C Desecrated	37	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Unique C	1																						0
+Act 2 (H) Unique A Desecrated	37	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Unique A	1																						0
+Act 2 (H) Unique B Desecrated	37	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Unique B	1																						0
+Act 2 (H) Unique C Desecrated	37	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Unique C	1																						0
+Act 3 (H) Unique A Desecrated	37	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Unique A	1																						0
+Act 3 (H) Unique B Desecrated	37	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Unique B	1																						0
+Act 3 (H) Unique C Desecrated	37	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Unique C	1																						0
+Act 4 (H) Unique A Desecrated	37	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Unique A	1																						0
+Act 4 (H) Unique B Desecrated	37	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Unique B	1																						0
+Act 5 (H) Unique A Desecrated	37	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Unique A	1																						0
+Act 5 (H) Unique B Desecrated	37	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Unique B	1																						0
+Act 5 (H) Unique C Desecrated	37	96	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Unique C	1																						0
+Act 1 (H) Super A Desecrated	38	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Super A	1																						0
+Act 1 (H) Super B Desecrated	38	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Super B	1																						0
+Act 1 (H) Super C Desecrated	38	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Super C	1																						0
+Act 2 (H) Super A Desecrated	38	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Super A	1																						0
+Act 2 (H) Super B Desecrated	38	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Super B	1																						0
+Act 2 (H) Super C Desecrated	38	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Super C	1																						0
+Act 3 (H) Super A Desecrated	38	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Super A	1																						0
+Act 3 (H) Super B Desecrated	38	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Super B	1																						0
+Act 3 (H) Super C Desecrated	38	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Super C	1																						0
+Act 4 (H) Super A Desecrated	38	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Super A	1																						0
+Act 4 (H) Super B Desecrated	38	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Super B	1																						0
+Act 4 (H) Super C Desecrated	38	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Super C	1																						0
+Act 5 (H) Super A Desecrated	38	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Super A	1																						0
+Act 5 (H) Super B Desecrated	38	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Super B	1																						0
+Act 5 (H) Super C Desecrated	38	96	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Super C	1																						0
+Act 1 (H) Super Ax Desecrated	39	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Super Ax	1																						0
+Act 1 (H) Super Bx Desecrated	39	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Super Bx	1																						0
+Act 1 (H) Super Cx Desecrated	39	81	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) Super Cx	1																						0
+Act 2 (H) Super Ax Desecrated	39	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Super Ax	1																						0
+Act 2 (H) Super Bx Desecrated	39	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Super Bx	1																						0
+Act 2 (H) Super Cx Desecrated	39	83	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) Super Cx	1																						0
+Act 3 (H) Super Ax Desecrated	39	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Super Ax	1																						0
+Act 3 (H) Super Bx Desecrated	39	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Super Bx	1																						0
+Act 3 (H) Super Cx Desecrated	39	85	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) Super Cx	1																						0
+Act 4 (H) Super Ax Desecrated	39	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Super Ax	1																						0
+Act 4 (H) Super Bx Desecrated	39	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Super Bx	1																						0
+Act 4 (H) Super Cx Desecrated	39	87	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) Super Cx	1																						0
+Act 5 (H) Super Ax Desecrated	39	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Super Ax	1																						0
+Act 5 (H) Super Bx Desecrated	39	90	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Super Bx	1																						0
+Act 5 (H) Super Cx Desecrated	39	96	-4					0	Hell TZ Generic	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) Super Cx	1																						0
+Act 1 (H) LT Desecrated	42	81	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) LT	1																						0
+Act 2 (H) LT Desecrated	42	83	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) LT	1																						0
+Act 3 (H) LT Desecrated	42	85	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) LT	1																						0
+Act 4 (H) LT Desecrated	42	87	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) LT	1																						0
+Act 5 (H) LT Desecrated	42	96	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) LT	1																						0
+Act 1 (H) LT Swarm Desecrated	43	81	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 3 Terrorize Act Consumable Desecrated	1	Act 1 (H) LT Swarm	1																						0
+Act 2 (H) LT Swarm Desecrated	43	83	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 4 Terrorize Act Consumable Desecrated	1	Act 2 (H) LT Swarm	1																						0
+Act 3 (H) LT Swarm Desecrated	43	85	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 5 Terrorize Act Consumable Desecrated	1	Act 3 (H) LT Swarm	1																						0
+Act 4 (H) LT Swarm Desecrated	43	87	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 2 Terrorize Act Consumable Desecrated	1	Act 4 (H) LT Swarm	1																						0
+Act 5 (H) LT Swarm Desecrated	43	96	-4					0	Hell TZ Boss	1	Sunder Charms	1	Act 1 Terrorize Act Consumable Desecrated	1	Act 5 (H) LT Swarm	1																						0
 Pitzilla			-2					0	Act 5 Super C	1	Act 2 Good	1																										0
 Pitzilla (N)			-2					0	Act 5 (N) Super C	1	Act 2 (N) Good	1																										0
 Pitzilla (H)			-2					0	Act 5 (H) Super C	1	Act 2 (H) Good	1																										0
