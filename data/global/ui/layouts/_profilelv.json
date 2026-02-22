@@ -1,0 +1,169 @@
+{
+    // Base (parent) profile.
+    "basedOn": "HD",
+
+    // In-game panel rects.
+    "LeftPanelRect": { "x": 0, "y": -856, "width": 1162, "height": 1507, "scale": 1.16 },
+    "RightPanelRect":  { "x": -1346, "y": -856, "width": 1162, "height": 1507, "scale": 1.16 },
+    "ScrollSpeechWidth": 1050,
+    "ScrollSpeechBorderWidth": 1150,
+    "ScrollSpeechOffset": -525, // This is negative and half of the width; Used as the horizontal offset.
+    "QuestLogScrollingSpeechParentRect": { "x": 298, "y": 1190, "width": 770, "height": 254 },
+
+    "StyleWeaponSwapTabs": {
+        "fontColor": "$FontColorLightGold",
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "center", "v": "center" },
+    },
+    "StyleScrollingSpeech": {
+        "fontFace": "Formal",
+        "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+        "pointSize": "$LargeFontSize",
+        "alignment": { "h": "left" },
+        "options": { "newlineHandling": "standard", "lineWrap": true },
+    },
+    "StyleNPCDialogueSize": "$LargeFontSize",
+
+    // K&M LV-mode in-game panels are just scaled up, thus we need
+    // versions of fonts which can be used in panels.
+    "XMediumPanelFontSize": 28,
+    "MediumPanelFontSize": 26,
+    "SmallPanelFontSize": 22,
+
+    "XMediumFontSize": 32,
+    "MediumFontSize": 32,
+    "SmallFontSize": 28,
+    "TooltipFontSize": 40,
+
+    "TooltipStyle": {
+        "fontStyle": {
+            "fontColor": "$FontColorWhite",
+            "pointSize": "$TooltipFontSize",
+            "alignment": { "h": "center", "v": "center" },
+            "options": { "pipeCharacterBehavior" : "handle", "newlineHandling": "reversed" }
+        },
+        "padding": [ 20, 12, 20, 12 ],
+        "inGameTargetPadding": [ 7, 1, 7, 1 ],
+        "drawBorder": false,
+        "centeredOnAnchor": true,
+        "hp": 0,
+        "backgroundColor": [ 0, 0, 0, 0.8 ],
+        // This color is used for in-game tooltip label backgrounds
+        "inGameBackgroundColor": [ 0, 0, 0, 0.8 ],
+        // This color is used for the show items selected label background
+        "inGameShowItemsSelectedBackgroundColor": [ 0, 0.25, 0.5, 1.0 ],
+        "substringColor": "$FontColorLightGray",
+        "healthColor": [ 0.31, 0, 0, 1.0 ],
+        "borderColor": "$TooltipBorderColor",
+        "DefaultColor": "$FontColorWhite",
+        "QuestColor": "$FontColorGoldYellow",
+        "RareColor": "$FontColorYellow",
+        "CraftedColor": "$FontColorOrange",
+        "TemperedColor": "$FontColorDarkGreen",
+        "MagicColor": "$FontColorBlue",
+        "SetColor": "$FontColorGreen",
+        "UniqueColor": "$FontColorGoldYellow",
+        "SocketedColor": "$FontColorGrey",
+        "EtherealColor": "$FontColorLightPurple",
+        "HealthPotionColor": "$FontColorRed",
+        "ManaPotionColor": "$FontColorBlue",
+        "RejuvPotionColor": "$FontColorLightPurple",
+        "GoldColor": "$FontColorWhite",
+        "RuneColor": "$FontColorOrange",
+        "EventItemsColor": "$FontColorOrange",
+        "DesecratedColor": "$FontColorDesecrated",
+        "GemsColor": "$FontColorOrange"
+    },
+
+    // HirablesPanel
+    "SecondSetIconOffset": { "x": 225 },
+
+    // SidePanel
+    "LeftHingeSprite": "",
+    "LeftSideSprite": "PANEL\\Docking_Bar\\SidePanel_LV",
+    "LeftSideRect": { "y": 1744, "scale": 1.16 },
+    "LeftSideCatcherRect": { "x": 0, "y": 1744, "width": 1162, "height": 360, "scale": 1.16 },
+    "LeftSideRectImbuePanel": { "y": 1506 },
+    "LeftSideRectHireMenu": { "y": 1506 },
+    "RightHingeSprite": "",
+    "RightSideSprite": "PANEL\\Docking_Bar\\SidePanel_LV",
+    "RightSideRect": { "x": -1348, "y": 1744, "scale": 1.16 },
+    "RightSideCatcherRect": { "x": -1348, "y": 1744, "width": 1162, "height": 360, "scale": 1.16 },
+
+    // Cutscenes
+    "SubtitleConfiguration": {
+        "anchor": { "x": 0.5, "y": 0.8 },
+        "style": {
+            "pointSize": "$HugeFontSize",
+            "options": { "newlineHandling": "standard" },
+            "alignment": { "h": "center", "v": "center" },
+            "highlight": {
+                "endIndex": "$INT_MAX", // longer than any chunk of subtitle text
+                "backgroundColor": { "r": 0, "g": 0, "b": 0, "a": 127 }
+            },
+        },
+    },
+    "HoldToSkipTextConfiguration": {
+        "anchor": { "x": 0.9, "y": 0.1 },
+        "style": {
+            "pointSize": "$XExtraLargeFontSize",
+            "alignment": { "h": "right", "v": "bottom" },
+        },
+        "text": "@MoviePlaybackHoldToSkip",
+    },
+
+    // Account Linking
+    "AccountLinkingTileRect": { "x": -875, "y": 561, "width": 1750, "height": 1100 },
+    "AccountLinkingActiveUserRect": { "x": 50 , "y": 10, "width": 1650, "height": 160 },
+    "AccountLinkingDescriptionRect": { "x": 50 , "y": 180, "width": 1650, "height": 160 },
+    "AccountLinkingUserCodeRect": { "x": 50 , "y": 390, "width": 1650, "height": 215 },
+    "AccountLinkingUrlRect": { "x": 50 , "y": 625, "width": 1650, "height": 110 },
+    "AccountLinkingOkButtonRect": { "x": -260, "y": 1500 },
+
+    //Tutorial Tooltips
+    "TutorialTooltipIntroRect" : { "x": 175, "y": 351, "width": 900, "height": 1400 },
+    "TutorialTooltipLocalRect" : { "x": 175, "y": 451, "width": 900, "height": 1100 },
+    "TutorialTooltipTabsRect" : { "x": 175, "y": 351, "width": 900, "height": 575 },
+    "TutorialTooltipCreateNewRect" : { "x": 475, "y": 951, "width": 900, "height": 800 },
+    "TutorialTooltipDeleteRect" : { "x": 475, "y": 1351, "width": 900, "height": 575 },
+    "TutorialTooltipConvertRect" : { "x": 475, "y": 751, "width": 900, "height": 1100 },
+
+    "TutorialTooltipChatRect" : { "x": 175, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipChatArrowRect" : { "x": -1075, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipCreateGameRect": { "x": -275, "y": 451, "width": 900, "height": 575 },
+    "TutorialTooltipGameName": { "x": -575, "y": 451, "width": 900, "height": 800 },
+    "TutorialTooltipJoinGame": { "x": 275, "y": 451, "width": 900, "height": 575 },
+    "TutorialTooltipLadder": { "x": 275, "y": 451, "width": 900, "height": 1100 },
+
+    "TutorialTooltipConsoleIntroRect": { "x": -675, "y": 751, "width": 900, "height": 575 },
+    "TutorialTooltipConsoleTabsRect": { "x": -675, "y": 751, "width": 900, "height": 800 },
+    "TutorialTooltipConsoleOnlineRect": { "x": -1375, "y": 451, "width": 900, "height": 1400 },
+    "TutorialTooltipConsoleOfflineRect": { "x": -1375, "y": 451, "width": 900, "height": 1400 },
+    "TutorialTooltipConsoleSoloRect": { "x": -200, "y": 451, "width": 900, "height": 800 },
+    "TutorialTooltipConsoleGameCreatorRect": { "x": -1600, "y": 451, "width": 900, "height": 800 },
+    "TutorialTooltipConsoleGameListRect": { "x": -700, "y": 451, "width": 900, "height": 800 },
+
+    "TooltipConfirmSmall": { "x": 200, "y": 300 },
+    "TooltipDismissSmall": { "x": 200, "y": 450 },
+    "TooltipConfirmMed": { "x": 200, "y": 475 },
+    "TooltipDismissMed": { "x": 200, "y": 625 },
+    "TooltipConfirmLarge": { "x": 200, "y": 750 },
+    "TooltipDismissLarge": { "x": 200, "y": 900 },
+    "TooltipConfirmXL": { "x": 200, "y": 1050 },
+    "TooltipDismissXL": { "x": 200, "y": 1200 },
+
+    // Join game tweaks.
+    "JoinGamePlayerEntryHeight": 140,
+    "JoinGamePlayerNameHeight": 100,
+	
+	// Loot filter
+	"StyleLFButtonTextSmall":
+    {
+        "fontColor": "$LightButtonTextColor",
+        "pointSize": "$LootFilterSmallFontSize",
+        "dropShadow": "$DefaultDropShadow",
+        "spacing": { "kerning": 0.88, "leading": 0.8 },
+		"alignment": { "v": "center", "h": "center" },
+		"options": { "lineWrap": true },
+    },
+}
