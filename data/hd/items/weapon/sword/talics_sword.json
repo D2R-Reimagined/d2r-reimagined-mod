@@ -1,0 +1,128 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/ancientbarb1/vfx_ancientbarb1_flamesword.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/items/weapon/sword/_monsters/talic_sword/talic_sword.model"
+            },
+            {
+                "path": "data/hd/vfx/meshes/fx_mesh_talic_blade_shell.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb1_sword_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb1_sword_NRM.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/ancientbarb1/textures/ancientbarb1_sword_ORM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/gradient/T_FX_holyfire_Gradient_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [
+            {
+                "path": "data/hd/vfx/particles/character/enemy/ancientbarb1/vfx_ancientbarb1_sword_objfx.particles",
+                "dependency": ""
+            }
+        ],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "talic_sword",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "root_entity",
+            "id": 1683758901,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "root_entity_UnitRootComponent",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "ObjectEffectDefinitionComponent",
+                    "name": "root_entity_ObjectEffectDefinition",
+                    "filename": "data/hd/vfx/particles/character/enemy/ancientbarb1/vfx_ancientbarb1_sword_objfx.particles"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "model_entity",
+            "id": 2232914114,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/items/weapon/sword/_monsters/talic_sword/talic_sword.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "vfx_entity",
+            "id": 3159803457,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "vfx_entity_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/fire_arrow/fx_fire_projectile_arrow.particles",
+                    "hardKillOnDestroy": true
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_torso_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.70,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 2.0,
+                        "y": 2.0,
+                        "z": 2.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        }
+    ]
+}

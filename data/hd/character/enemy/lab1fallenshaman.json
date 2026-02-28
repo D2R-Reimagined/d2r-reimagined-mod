@@ -1,0 +1,275 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/skeleton/fallenshaman1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_armor_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_armor_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_armor_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_armor_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_body_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_body_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_body_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_body_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_body_SSS.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_hair_ALB.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_weapon_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_weapon_KTINT.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_weapon_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/textures/fallenshaman_weapon_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/fallenshaman1_state_machine.json"
+            },
+            {
+                "path": "data/hd/items/weapon/knife/_monsters/fallen_shaman_dagger.json"
+            },
+            {
+                "path": "data/hd/missiles/shaman_fireball.json"
+            },
+            {
+                "path": "data/hd/missiles/shaman_fireball_explode_final.json"
+            },
+            {
+                "path": "data/hd/overlays/common/healing.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/fallenshaman1/fallenshaman1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "fallenshaman1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 289157208,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/fallenshaman1/fallenshaman1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/fallenshaman1/skeleton/fallenshaman1.skeleton"
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/fallenshaman1/fallenshaman1_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/shaman_fireball_explode_final.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry2",
+                            "filename": "data/hd/missiles/shaman_fireball.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/common/healing.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 7.0,
+                            "baseMoveSpeed": 5.5,
+                            "animationName": "Walk"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_1",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 7.0,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 8.3,
+                            "animationName": "Run"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_Outsource",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_0",
+                                "footBoneName": "R_leg_03_bind_jnt",
+                                "kneeBoneName": "R_leg_02_bind_jnt",
+                                "hipBoneName": "R_leg_01_bind_jnt",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_Outsource_footIKSetup_1",
+                                "footBoneName": "L_leg_03_bind_jnt",
+                                "kneeBoneName": "L_leg_02_bind_jnt",
+                                "hipBoneName": "L_leg_01_bind_jnt",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1161323792,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/fallenshaman1/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                },
+                {
+                    "type": "UnitAttachmentComponent",
+                    "name": "entity_torso_UnitAttachment",
+                    "filename": "data/hd/items/weapon/knife/gidbinn.json",
+                    "overrideBoneName": "R_weapon_attach",
+                    "orientTowardBoneName": "",
+                    "attachmentTransform": {
+                        "type": "Transform",
+                        "name": "entity_torso_UnitAttachment_attachmentTransform",
+                        "translation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        }
+                    },
+                    "attachmentStateMachineFilename": "",
+                    "part": "torso",
+                    "variant": "lit"
+                }
+            ]
+        }
+    ]
+}
