@@ -26,18 +26,14 @@
                         "selectorName": "Selection",
                         "direction": "vertical",
                         "itemSelectionMessage": "CharacterSelect:SelectCharacter",
-                        "selectionChangedSound": "cursor_movement_hd"
+                        "selectionChangedSound": "cursor_movement_hd",
+                        "selectInactiveItems": true
                     },
                     "children": [
                         {
                             "type": "ListItemWidget", "name": "CharacterTemplate",
                             "fields": {
                                 "rect": { "x": 0, "y": 0, "width": 612, "height": 184 },
-                                "focusIndicatorFilename": "Controller/HoverImages/CharacterListSelection_Hover",
-                                "focusIndicatorOffset": { "x": 0, "y": 0 },
-                                "navigation": {
-                                    "left": { "panelBoundary": true }
-                                }
                             },
                             "children": [
                                 {
@@ -74,7 +70,23 @@
                                             "type": "FocusableWidget", "name": "ClassicIconTooltip",
                                             "fields": {
                                                 "fitToParent": true,
-                                                "tooltipString": "@CharacterSelectPanelPreExpansionCharacter"
+                                                "tooltipString": "@CharacterSelectPanelPreExpansionCharacter",
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ImageWidget", "name": "ExpansionIcon",
+                                    "fields": {
+                                        "rect": { "x": 545, "y": 0 },
+                                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ExpansionIconSmall"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "FocusableWidget", "name": "ExpansionIconTooltip",
+                                            "fields": {
+                                                "fitToParent": true,
+                                                "tooltipString": "@Expansion",
                                             }
                                         }
                                     ]
@@ -165,25 +177,12 @@
                                 "rect": { "x": 240, "y": 1775 },
                                 "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                                 "textString": "@strLaunchCharSelectNewX",
-                                "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
-                                "focusIndicatorOffset": { "x": 0, "y": 0 },
                                 "onClickMessage": "FrontEndNavigation:ToCharacterCreate",
                                 "textColor": "$LightButtonTextColor",
                                 "text/style": "$StyleFEButtonText",
                                 "hoveredFrame": 3,
                                 "disabledFrame": 2
                             },
-                            "children": [
-                                {
-                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
-                                    "fields": {
-                                        "anchor": { "x": 0.5, "y": 1.0 },
-                                        "text": {
-                                            "style": "$StyleButtonLegend"
-                                        }
-                                    }
-                                }
-                            ]
                         },
                         {
                             "type": "ButtonWidget", "name": "DeleteCharacter",
@@ -195,17 +194,6 @@
                                 "hoveredFrame": 2,
                                 "disabledFrame": 3
                             },
-                            "children": [
-                                {
-                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
-                                    "fields": {
-                                        "anchor": { "x": 0.5, "y": 1.0 },
-                                        "text": {
-                                            "style": "$StyleButtonLegend"
-                                        }
-                                    }
-                                }
-                            ]
                         },
                         {
                             "type": "ButtonWidget", "name": "ConvertCharacter",
@@ -218,32 +206,21 @@
                                 "hoveredFrame": 2,
                                 "disabledFrame": 3
                             },
-                            "children": [
-                                {
-                                    "type": "ButtonLegendWidget", "name": "MainMenuLegend",
-                                    "fields": {
-                                        "anchor": { "x": 0.5, "y": 1.0 },
-                                        "text": {
-                                            "style": "$StyleButtonLegend"
-                                        }
-                                    }
-                                }
-                            ]
                         },
                         {
                             "type": "TabBarWidget", "name": "Tabs",
                             "fields": {
-                                "rect": { "x": 145, "y": 29 },
+                                "rect": { "x": 126, "y": 86 },
                                 "tabCount": 2,
                                 "filename": "",
                                 "inactiveFrames": [ 1, 1 ],
                                 "activeFrames": [ 0, 0 ],
                                 "disabledFrames": [ 2, -1 ],
-                                "textStrings": [ "", "" ],
+                                "textStrings": [ "", "Click if Red" ],
                                 "textStyle": { "pointSize": "$MediumLargeFontSize" },
-                                "activeTextColor": "$TabsActiveTextColor",
-                                "inactiveTextColor": "$TabsInactiveTextColor",
-                                "disabledTextColor": "$FontColorGray",
+                                "activeTextColor": "$FontColorGold",
+                                "inactiveTextColor": "$FontColorRed",
+                                "disabledTextColor": "$FontColorRed",
                                 "tabSize": { "x": 332, "y": 71 },
                                 "tabPadding": { "x": -1, "y": 0 },
                                 "onSwitchTabMessage": "CharacterSelect:SelectTab",
@@ -274,7 +251,7 @@
                             "type": "TextBoxWidget", "name": "D2RReimaginedModInfo",
                             "fields": {
                                 "rect": { "x": 142, "y": 2054, "width": 400 },
-                                "text":"D2R Reimagined v2.2.0",
+                                "text":"D2R Reimagined v3.0.2",
                                 "style": {
                                     "fontColor": "$CharacterListDetailsColor",
                                     "pointSize": "$XMediumFontSize",

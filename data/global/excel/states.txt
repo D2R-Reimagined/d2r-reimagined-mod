@@ -16,7 +16,7 @@ blaze	13																																																		3																					
 bonearmor	14	1																																				1	1				bonearmor_front	bonearmor_back	bonearmor_null1	bonearmor_null2		bonearmor_cast			6	3																						0
 concentrate	15													1																																				skill_armor_percent																								0
 enchant	16											1									1																											enchant		skill_enchant					weap	cred																		0
-innersight	17																					1																					innersight							armorclass																								0
+innersight	17																					1																					innersight							armorclass																						1		0
 skill_move	18																																																																									0
 weaken	19						1	1													1																						curseweaken					curse_hit		damagepercent												necromancer_weaken												0
 chillingarmor	20	1												1																													chillarmor							skill_armor_percent																hitbymissile	1							0
@@ -58,14 +58,14 @@ ironmaiden	55						1	1																																			curseironmaiden					cur
 terror	56						1	1																																			curseterror					curse_hit														necromancer_taint												0
 attract	57						1	1																			1																curseattract					curse_hit														necromancer_attract												0
 lifetap	58						1	1																																			cursereversevampire					curse_hit														necromancer_reversevampire												0
-confuse	59						1	1																			1																curseconfuse					curse_hit														necromancer_confuse												0
+confuse	59	8					1	1																			1																curseconfuse					curse_hit														necromancer_confuse												0
 decrepify	60						1	1													1																						cursedecrepify					curse_hit		skill_decrepify												necromancer_decrepify												0
 lowerresist	61						1	1															1	1	1	1																	curselowerresist					curse_hit		lightresist																								0
 openwounds	62								1																										1																																	85						0
 dopplezon	63				1						1																		1	1	1	1		1						1																								2	0									0
 criticalstrike	64			1																																																																						0
 dodge	65			1																																																																						0
-elementalcovenant	66					1																	1	1	1	1																	elementalcovenant							lightresist																								0
+avoid	66			1																																																																						0
 penetrate	67																																																																									0
 evade	68			1																																																																						0
 pierce	69																																																																									0
@@ -88,7 +88,7 @@ nomanaregen	85			1																																																														
 justhit	86	1		1																																																																						0
 slowmissiles	87																																										innersight							skill_handofathena																								0
 shiverarmor	88	1							1					1																													shiverarmor							skill_armor_percent																		87						0
-battlecry	89												1	1																													battlecry							skill_armor_percent												barbarian_battlecry_state												0
+battlecry	89												1	1																													battlecry							skill_armor_percent												barbarian_battlecry_state										1		0
 blue	90																																																								100	108	150	215	255													0
 red	91																																																								70	100	255	255	255													0
 death_delay	92																																																																									0
@@ -146,7 +146,7 @@ attached	143								1																				1	1				1																	13	9										
 hurricane	144								1																																										7	4																90	145					0
 armageddon	145																																																																				146					0
 invis	146																																																		12	8																						0
-barbs	147					1																																						spirit_of_barbs																														0
+barbs	147					1																																						spirit_of_barbs																												1		0
 wolverine	148					1						1	1																															heart_of_wolverine						item_tohit_percent																								0
 oaksage	149					1																																						oak_sage																														0
 vine_beast	150								1																																										11																	89						0
@@ -191,62 +191,99 @@ impale	188																																																																						
 desecrated	189																												1	1																																												0
 markbear	190	4																																					1				bloodlust_state																															0
 markwolf	191	5										1																											1				impregnated																															0
-monsterset1	192	3			1						1																																					fire_cast_2																1	362									0
-monsterset2	193	3			1						1																																					fire_cast_2																1	256									0
-monsterset3	194	3			1						1																																					fire_cast_2																1	40									0
-monsterset4	195	3			1						1																																					fire_cast_2																1	156									0
-battleorders1	196					1																																					bladeshield					battleorderscast																										0
-barbed	197					1																																												damageresist																								0
-carrionvine	198					1																																												hitpoints																								0
-charm_weight	199					1																																												mana_control																								0
-slam_state	200																																																	damagepercent																								0
-firegolemaura_state	201					1																																					aura_holyfire_front	aura_holyfire_back						firemindam												paladin_aura_holyfire												0
-mfpot1state	202																																										aura_fanatic							item_magicbonus	1																							0
-xppot1state	203																																										shrine_experience							item_addexperience	1																							0
-potionsunderfire	204																																										aura_resistfire							item_pierce_fire_immunity	1																							0
-potionsundercold	205																																										aura_resistcold							item_pierce_cold_immunity	1																							0
-potionsunderlightning	206																																										aura_resistlight							item_pierce_light_immunity	1																							0
-potionsunderpoison	207																																										convictionfront	convictionback						item_pierce_poison_immunity	1																							0
-potionsundermagic	208																																										aura_resistall_front							item_pierce_magic_immunity	1																							0
-potionsunderphysical	209																																										redemptionfront	spirit_of_barbs						item_pierce_damage_immunity	1																							0
-torch_weight	210					1																																												uber_control																								0
-soulstone_weight	211					1																																												uber_control																								0
-veng_elements	212					1																																																																				0
-Weapon_White	213																																																						weap	bwht																		0
-Weapon_Black	214																																																						weap	blac																		0
-Weapon_Blue	215																																																						weap	cblu																		0
-Weapon_Red	216																																																						weap	cred																		0
-Weapon_Green	217																																																						weap	dgrn																		0
-Weapon_Yellow	218																																																						weap	dyel																		0
-Weapon_Purple	219																																																						weap	dpur																		0
-Weapon_Orange	220																																																						weap	oran																		0
-Helm_White	221																																																						helm	bwht																		0
-Helm_Black	222																																																						helm	blac																		0
-Helm_Blue	223																																																						helm	cblu																		0
-Helm_Red	224																																																						helm	cred																		0
-Helm_Green	225																																																						helm	dgrn																		0
-Helm_Yellow	226																																																						helm	dyel																		0
-Helm_Purple	227																																																						helm	dpur																		0
-Helm_Orange	228																																																						helm	oran																		0
-Shield_White	229																																																						shld	bwht																		0
-Shield_Black	230																																																						shld	blac																		0
-Shield_Blue	231																																																						shld	cblu																		0
-Shield_Red	232																																																						shld	cred																		0
-Shield_Green	233																																																						shld	dgrn																		0
-Shield_Yellow	234																																																						shld	lyel																		0
-Shield_Purple	235																																																						shld	dpur																		0
-Shield_Orange	236																																																						shld	oran																		0
-Armor_White	237																																																						tors	bwht																		0
-Armor_Black	238																																																						tors	blac																		0
-Armor_Blue	239																																																						tors	cblu																		0
-Armor_Red	240																																																						tors	cred																		0
-Armor_Green	241																																																						tors	cgrn																		0
-Armor_Yellow	242																																																						tors	lyel																		0
-Armor_Purple	243																																																						tors	dpur																		0
-Armor_Orange	244																																																						tors	oran																		0
-polarbear	245	3			1	1				1	1		1	1																											1																10	50	255	255	255	druid_morph	druid_morph	1	428									0
-cowkingelite	246	3			1	1					1		1	1																											1																		255	255	255	druid_morph	druid_morph	1	743									0
-barb_ancient	247	3			1	1						1	1																														valkyrie_blue	rabiesplague_blue																														0
-kings_charisma	248											1																																				kingscharisma		skill_enchant					weap	cred																		0
-titanscovenant	249					1							1																														titanscovenant							damagepercent																								0
+sigillethargy	192																																															curse_hit									90	103				Warlock_Skill_Seal_Lethargy_Hit												0
+sigilrancor	193	8																																														curse_hit									90	106				Warlock_Skill_Seal_Rancor_Hit												0
+sigildeath	194																																															curse_hit									90	107				Warlock_Skill_Seal_Death_Hit												0
+bloodoath	195			1																																																																						0
+demonic_mastery	196			1																																																																						0
+levitate_mastery	197																																																																									0
+hexbane	198	6																																														hex_enchant							mele																		1	0
+hexbanedebuff	199	7				1	1																																				hexbanedebuff					curse_hit														Warlock_Skill_Hex_Bane_Hit											1	0
+hexsiphon	200	6										1																																				hex_enchant							mele																		2	0
+hexsiphondebuff	201	7				1	1																																				hexsyphondebuff					curse_hit														Warlock_Skill_Hex_Siphon_Hit											2	0
+hexpurge	202	6										1																																				hex_enchant							mele																		4	0
+mindbarrier	203	1																																									bladeshield																															0
+shadow_mastery	204			1																																																																						0
+sigil	205			1																																																																						0
+psychicward	206	1																																									psychicward																															0
+bind_demon	207																																										warlockdemonground	warlockdemontorso							19						70	130																0
+consume	208	9																																									warlockconsume																															0
+advancedstash	209																																																																									0
+healthlink	210																																										healthlink																															0
+engorge	211																																										engorgestate																															0
+death_mark	212																																										death_mark																			Warlock_Skill_Death_Mark_01												0
+healthlinkcaster	213			1																																																																						0
+warlockdemonground	214					1																																					warlockdemonground														70	130																0
+warlockdemontorso	215					1																																					warlockdemontorso														70	130																0
+skill_channeling	216			1																																																																						0
+hexpurgedebuff	217	7				1	1																																				hexpurgedebuff					curse_hit														Warlock_Skill_Hex_Purge_Hit											4	0
+chroniclebacklight	218																																										chronicle_backlight																															0
+chroniclefootprints	219																																																																									0
+chronicleportal	220																																																	customization_index																								0
+eldritchblastperiodic	221								1																																		eldritchblastperiodic																									107						0
+lightningenchant	222											1									1																											lightningenchant		skill_enchant					weap	cred																		0
+coldenchant	223											1									1																											coldenchant		skill_enchant					weap	cred																		0
+talicfirepierce	224					1																	1																				talicfirepierce																															0
+madawclightpierce	225					1																		1																			madawclightpierce																															0
+korliccoldpierce	226					1																			1																		korliccoldpierce																															0
+bind_demon_underling	227																																																		19						70	130																0
+herald	228																																										herald																															0
+apocalypse	229																																																																									0
+elementalcovenant	230					1																	1	1	1	1																	elementalcovenant							lightresist																								0
+monsterset1	231	3			1						1																																					fire_cast_2																1	362									0
+monsterset2	232	3			1						1																																					fire_cast_2																1	256									0
+monsterset3	233	3			1						1																																					fire_cast_2																1	40									0
+monsterset4	234	3			1						1																																					fire_cast_2																1	156									0
+carrionvine	235					1																																												hitpoints																								0
+charm_weight	236					1																																												mana_control																								0
+slam_state	237																																																	damagepercent																								0
+firegolemaura_state	238					1																																					aura_holyfire_front	aura_holyfire_back						firemindam												paladin_aura_holyfire												0
+mfpot1state	239																																										aura_fanatic							item_magicbonus	1																							0
+xppot1state	240																																										shrine_experience							item_addexperience	1																							0
+potionsunderfire	241																																										aura_resistfire							item_pierce_fire_immunity	1																							0
+potionsundercold	242																																										aura_resistcold							item_pierce_cold_immunity	1																							0
+potionsunderlightning	243																																										aura_resistlight							item_pierce_light_immunity	1																							0
+potionsunderpoison	244																																										convictionfront	convictionback						item_pierce_poison_immunity	1																							0
+potionsundermagic	245																																										aura_resistall_front							item_pierce_magic_immunity	1																							0
+potionsunderphysical	246																																										redemptionfront	spirit_of_barbs						item_pierce_damage_immunity	1																							0
+torch_weight	247					1																																												uber_control																								0
+soulstone_weight	248					1																																												uber_control																								0
+veng_elements	249					1																																																																				0
+polarbear	250	3			1	1				1	1		1	1																											1																10	50	255	255	255	druid_morph	druid_morph	1	428									0
+cowkingelite	251	3			1	1					1		1	1																											1																		255	255	255	druid_morph	druid_morph	1	743									0
+barb_ancient	252	3			1	1						1	1																														valkyrie_blue	rabiesplague_blue																														0
+kings_charisma	253											1																																				kingscharisma		skill_enchant					weap	cred																		0
+titanscovenant	254					1							1																														titanscovenant							damagepercent																								0
 betsy_state	250					1																																					holyfreeze														10	51				paladin_aura_holywind												0
+Weapon_White	255																																																						weap	bwht																		0
+Weapon_Black	256																																																						weap	blac																		0
+Weapon_Blue	257																																																						weap	cblu																		0
+Weapon_Red	258																																																						weap	cred																		0
+Weapon_Green	259																																																						weap	dgrn																		0
+Weapon_Yellow	260																																																						weap	dyel																		0
+Weapon_Purple	261																																																						weap	dpur																		0
+Weapon_Orange	262																																																						weap	oran																		0
+Helm_White	263																																																						helm	bwht																		0
+Helm_Black	264																																																						helm	blac																		0
+Helm_Blue	265																																																						helm	cblu																		0
+Helm_Red	266																																																						helm	cred																		0
+Helm_Green	267																																																						helm	dgrn																		0
+Helm_Yellow	268																																																						helm	dyel																		0
+Helm_Purple	269																																																						helm	dpur																		0
+Helm_Orange	270																																																						helm	oran																		0
+Shield_White	271																																																						shld	bwht																		0
+Shield_Black	272																																																						shld	blac																		0
+Shield_Blue	273																																																						shld	cblu																		0
+Shield_Red	274																																																						shld	cred																		0
+Shield_Green	275																																																						shld	dgrn																		0
+Shield_Yellow	276																																																						shld	lyel																		0
+Shield_Purple	277																																																						shld	dpur																		0
+Shield_Orange	278																																																						shld	oran																		0
+Armor_White	279																																																						tors	bwht																		0
+Armor_Black	280																																																						tors	blac																		0
+Armor_Blue	281																																																						tors	cblu																		0
+Armor_Red	282																																																						tors	cred																		0
+Armor_Green	283																																																						tors	cgrn																		0
+Armor_Yellow	284																																																						tors	lyel																		0
+Armor_Purple	285																																																						tors	dpur																		0
+Armor_Orange	286																																																						tors	oran																		0

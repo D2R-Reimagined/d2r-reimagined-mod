@@ -1,552 +1,1848 @@
 {
+    "dependencies": {
+        "particles": [],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "DesecratedZonesConfigs",
+    "name": "desecratedzones",
     "desecrated_zones": [
         {
-            "start_time_utc": "2023-01-27 00:00:00",
-            /* "end_time_utc": "2022-12-15 00:00:00", */ /* Use end time to automate multiple configs. Useful for events. */
-            "terror_duration_min": 60,
-            "terror_break_min": 0,
-            "seed": 16664395743969097666, /* UInt64. Can't be above 18446744073709551615 */
-            "non_ladder_enabled": true,
-            "enabled_normal": true,
-            "enabled_nightmare": true,
-            "enabled_hell": true,
-            "default_normal": {
-                "bound_incl_min": 3, /* Minimum level of a terrorized monster. MAX(bound_incl_min, original_monster_level) */
-                "bound_incl_max": 45, /* Maximum level of a terrorized monster. MAX(bound_incl_max, original_monster_level) */
-                "boost_level": 2, /* player_level + boost_level = terrorized_monster_level */
-                "difficulty_scale": 1, /* Fake the amount of players in the game. AKA /players X */
-                "boost_experience_percent": 25 /* Bonus experience percentage applied at to the monster's base experience in monstats.txt */
-            },
-            "default_nightmare": {
-                "bound_incl_min": 40,
-                "bound_incl_max": 80,
-                "boost_level": 2,
-                "difficulty_scale": 1,
-                "boost_experience_percent": 25
-            },
-            "default_hell": {
-                "bound_incl_min": 70,
-                "bound_incl_max": 99,
-                "boost_level": 2,
-                "difficulty_scale": 1,
-                "boost_experience_percent": 25
+            "type": "DesecratedConfigData",
+            "name": "desecratedzones_desecrated_zones_0",
+            "start_time_utc": "2025-12-05 00:00:00",
+            "end_time_utc": "",
+            "seed": 16665365343970128666,
+            "zone_duration_minutes": 60,
+            "break_duration_minutes": 0,
+            "manual_deprioritize_threshold": 0,
+            "manual_removal_threshold": 0,
+            "game_difficulties": {
+                "type": "DesecratedGameDifficultyPerGameVersion",
+                "name": "desecratedzones_desecrated_zones_0_game_difficulties",
+                "expansion": {
+                    "type": "DesecratedGameDifficultyPerDifficulty",
+                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion",
+                    "normal": {
+                        "type": "DesecratedGameDifficultyConfig",
+                        "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_normal",
+                        "ladder_enabled": true,
+                        "non_ladder_enabled": true,
+                        "max_herald_tokens": 0,
+                        "max_herald_tiers": 0,
+                        "defaults": {
+                            "type": "DesecratedDifficultyConfig",
+                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_normal_defaults",
+                            "bound_incl_min": 3,
+                            "bound_incl_max": 45,
+                            "boost_level": 2,
+                            "boost_experience_percent": 25
+                        }
+                    },
+                    "nightmare": {
+                        "type": "DesecratedGameDifficultyConfig",
+                        "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_nightmare",
+                        "ladder_enabled": true,
+                        "non_ladder_enabled": true,
+                        "max_herald_tokens": 0,
+                        "max_herald_tiers": 0,
+                        "defaults": {
+                            "type": "DesecratedDifficultyConfig",
+                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_nightmare_defaults",
+                            "bound_incl_min": 45,
+                            "bound_incl_max": 80,
+                            "boost_level": 2,
+                            "boost_experience_percent": 25
+                        }
+                    },
+                    "hell": {
+                        "type": "DesecratedGameDifficultyConfig",
+                        "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_hell",
+                        "ladder_enabled": true,
+                        "non_ladder_enabled": true,
+                        "max_herald_tokens": 0,
+                        "max_herald_tiers": 0,
+                        "defaults": {
+                            "type": "DesecratedDifficultyConfig",
+                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_hell_defaults",
+                            "bound_incl_min": 90,
+                            "bound_incl_max": 100,
+                            "boost_level": 2,
+                            "boost_experience_percent": 25
+                        }
+                    }
+                },
+                "rotw": {
+                    "type": "DesecratedGameDifficultyPerDifficulty",
+                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw",
+                    "normal": {
+                        "type": "DesecratedGameDifficultyConfig",
+                        "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_normal",
+                        "ladder_enabled": true,
+                        "non_ladder_enabled": true,
+                        "max_herald_tokens": 0,
+                        "max_herald_tiers": 0,
+                        "defaults": {
+                            "type": "DesecratedDifficultyConfig",
+                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_normal_defaults",
+                            "bound_incl_min": 3,
+                            "bound_incl_max": 45,
+                            "boost_level": 2,
+                            "boost_experience_percent": 25
+                        }
+                    },
+                    "nightmare": {
+                        "type": "DesecratedGameDifficultyConfig",
+                        "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_nightmare",
+                        "ladder_enabled": true,
+                        "non_ladder_enabled": true,
+                        "max_herald_tokens": 0,
+                        "max_herald_tiers": 0,
+                        "defaults": {
+                            "type": "DesecratedDifficultyConfig",
+                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_nightmare_defaults",
+                            "bound_incl_min": 45,
+                            "bound_incl_max": 80,
+                            "boost_level": 2,
+                            "boost_experience_percent": 25
+                        }
+                    },
+                    "hell": {
+                        "type": "DesecratedGameDifficultyConfig",
+                        "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell",
+                        "ladder_enabled": true,
+                        "non_ladder_enabled": true,
+                        "max_herald_tokens": 5,
+                        "max_herald_tiers": 5,
+                        "always_unique_mod_pool": [
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_0",
+                                "unique_mod": 5,
+                                "chance": 15
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_1",
+                                "unique_mod": 6,
+                                "chance": 15
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_2",
+                                "unique_mod": 7,
+                                "chance": 5
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_3",
+                                "unique_mod": 9,
+                                "chance": 15
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_4",
+                                "unique_mod": 17,
+                                "chance": 10
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_5",
+                                "unique_mod": 18,
+                                "chance": 15
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_6",
+                                "unique_mod": 25,
+                                "chance": 5
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_7",
+                                "unique_mod": 27,
+                                "chance": 5
+                            },
+                            {
+                                "type": "AlwaysUniqueMod",
+                                "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_always_unique_mod_pool_8",
+                                "unique_mod": 28,
+                                "chance": 5
+                            }
+                        ],
+                        "defaults": {
+                            "type": "DesecratedDifficultyConfig",
+                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults",
+                            "bound_incl_min": 90,
+                            "bound_incl_max": 100,
+                            "boost_level": 2,
+                            "boost_experience_percent": 25,
+                            "chance_to_gain_herald_token": 2.0,
+                            "chance_for_token_to_convert_to_herald": 1.0,
+                            "unique_mod_chance_boosts": [
+                                {
+                                    "type": "UniqueModChanceBoost",
+                                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_unique_mod_chance_boosts_0",
+                                    "unique_mod": 30,
+                                    "boost": 6,
+                                    "behavior": 0
+                                }
+                            ],
+                            "herald_tiers": [
+                                {
+                                    "type": "DesecratedHeraldTier",
+                                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_0",
+                                    "herald_health_boost_percent": 1000,
+                                    "herald_damage_boost_percent": 50,
+                                    "minion_health_boost_percent": 250,
+                                    "minion_damage_boost_percent": 10,
+                                    "minion_behavior": 1,
+                                    "min_minions": 6,
+                                    "max_minions": 6,
+                                    "minions": [
+                                        {
+                                            "type": "DesecratedHeraldMinion",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_0_minions_0",
+                                            "minion_type": 1,
+                                            "chance": 1,
+                                            "min": 6,
+                                            "max": 6
+                                        }
+                                    ],
+                                    "min_unique_mods": 3,
+                                    "max_unique_mods": 3,
+                                    "unique_mod_chance_boosts": [
+                                        {
+                                            "type": "UniqueModChanceBoost",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_0_unique_mod_chance_boosts_0",
+                                            "unique_mod": 30,
+                                            "boost": 1,
+                                            "behavior": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "DesecratedHeraldTier",
+                                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_1",
+                                    "herald_health_boost_percent": 1500,
+                                    "herald_damage_boost_percent": 100,
+                                    "herald_treasure_class_level_boost": 3,
+                                    "minion_health_boost_percent": 375,
+                                    "minion_damage_boost_percent": 20,
+                                    "minion_behavior": 1,
+                                    "min_minions": 8,
+                                    "max_minions": 8,
+                                    "minions": [
+                                        {
+                                            "type": "DesecratedHeraldMinion",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_1_minions_0",
+                                            "minion_type": 1,
+                                            "chance": 2,
+                                            "min": 8,
+                                            "max": 8
+                                        }
+                                    ],
+                                    "min_unique_mods": 3,
+                                    "max_unique_mods": 3,
+                                    "unique_mod_chance_boosts": [
+                                        {
+                                            "type": "UniqueModChanceBoost",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_1_unique_mod_chance_boosts_0",
+                                            "unique_mod": 30,
+                                            "boost": 1,
+                                            "behavior": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "DesecratedHeraldTier",
+                                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_2",
+                                    "herald_health_boost_percent": 2000,
+                                    "herald_damage_boost_percent": 150,
+                                    "herald_treasure_class_level_boost": 6,
+                                    "minion_health_boost_percent": 500,
+                                    "minion_damage_boost_percent": 30,
+                                    "minion_behavior": 1,
+                                    "min_minions": 10,
+                                    "max_minions": 10,
+                                    "minions": [
+                                        {
+                                            "type": "DesecratedHeraldMinion",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_2_minions_0",
+                                            "minion_type": 1,
+                                            "chance": 3,
+                                            "min": 10,
+                                            "max": 10
+                                        }
+                                    ],
+                                    "min_unique_mods": 4,
+                                    "max_unique_mods": 4,
+                                    "unique_mod_chance_boosts": [
+                                        {
+                                            "type": "UniqueModChanceBoost",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_2_unique_mod_chance_boosts_0",
+                                            "unique_mod": 30,
+                                            "boost": 1,
+                                            "behavior": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "DesecratedHeraldTier",
+                                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_3",
+                                    "herald_health_boost_percent": 2500,
+                                    "herald_damage_boost_percent": 200,
+                                    "herald_treasure_class_level_boost": 9,
+                                    "minion_health_boost_percent": 625,
+                                    "minion_damage_boost_percent": 40,
+                                    "minion_behavior": 1,
+                                    "min_minions": 12,
+                                    "max_minions": 12,
+                                    "minions": [
+                                        {
+                                            "type": "DesecratedHeraldMinion",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_3_minions_0",
+                                            "minion_type": 1,
+                                            "chance": 5,
+                                            "min": 12,
+                                            "max": 12
+                                        }
+                                    ],
+                                    "min_unique_mods": 4,
+                                    "max_unique_mods": 4,
+                                    "unique_mod_chance_boosts": [
+                                        {
+                                            "type": "UniqueModChanceBoost",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_3_unique_mod_chance_boosts_0",
+                                            "unique_mod": 30,
+                                            "boost": 1,
+                                            "behavior": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "DesecratedHeraldTier",
+                                    "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_4",
+                                    "herald_health_boost_percent": 3000,
+                                    "herald_damage_boost_percent": 250,
+                                    "herald_treasure_class_level_boost": 12,
+                                    "minion_health_boost_percent": 750,
+                                    "minion_damage_boost_percent": 50,
+                                    "minion_behavior": 1,
+                                    "min_minions": 14,
+                                    "max_minions": 14,
+                                    "minions": [
+                                        {
+                                            "type": "DesecratedHeraldMinion",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_4_minions_0",
+                                            "minion_type": 1,
+                                            "chance": 6,
+                                            "min": 14,
+                                            "max": 14
+                                        }
+                                    ],
+                                    "min_unique_mods": 4,
+                                    "max_unique_mods": 4,
+                                    "unique_mod_chance_boosts": [
+                                        {
+                                            "type": "UniqueModChanceBoost",
+                                            "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_4_unique_mod_chance_boosts_0",
+                                            "unique_mod": 30,
+                                            "boost": 1,
+                                            "behavior": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
             },
             "warnings": [
                 {
-                    "announce_time_min": 10,
+                    "type": "DesecratedWarning",
+                    "name": "desecratedzones_desecrated_zones_0_warnings_0",
+                    "announce_time_minutes": 3,
                     "tier": 1
                 },
                 {
-                    "announce_time_min": 5,
+                    "type": "DesecratedWarning",
+                    "name": "desecratedzones_desecrated_zones_0_warnings_1",
+                    "announce_time_minutes": 2,
                     "tier": 2
                 },
                 {
-                    "announce_time_min": 1,
+                    "type": "DesecratedWarning",
+                    "name": "desecratedzones_desecrated_zones_0_warnings_2",
+                    "announce_time_minutes": 1,
                     "tier": 3
                 },
                 {
-                    /* DO NOT REMOVE! ALWAYS NEED A TIER 0 AT MINUTE 0. DO NOT REMOVE! */
-                    "announce_time_min": 0,
+                    "type": "DesecratedWarning",
+                    "name": "desecratedzones_desecrated_zones_0_warnings_3",
+                    "announce_time_minutes": 0,
                     "tier": 0
+                }
+            ],
+            "manual_zones": [
+                {
+                    "type": "DesecratedZoneGroup",
+                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0",
+                    "group_id": 1,
+                    "zones": [
+                        {
+                            "type": "DesecratedZone",
+                            "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0",
+                            "id": "Act1-Manual",
+                            "levels": [
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_0",
+                                    "level_id": 33,
+                                    "waypoint_level_id": 32
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_1",
+                                    "level_id": 17,
+                                    "waypoint_level_id": 3
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_2",
+                                    "level_id": 18
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_3",
+                                    "level_id": 19
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_4",
+                                    "level_id": 34
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_5",
+                                    "level_id": 35,
+                                    "waypoint_level_id": 35
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_6",
+                                    "level_id": 36
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_7",
+                                    "level_id": 37
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_8",
+                                    "level_id": 32
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_9",
+                                    "level_id": 3,
+                                    "waypoint_level_id": 3
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_10",
+                                    "level_id": 9
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_11",
+                                    "level_id": 13
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_12",
+                                    "level_id": 5,
+                                    "waypoint_level_id": 5
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_13",
+                                    "level_id": 10
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_14",
+                                    "level_id": 14
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_15",
+                                    "level_id": 2,
+                                    "waypoint_level_id": 1
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_16",
+                                    "level_id": 8
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_17",
+                                    "level_id": 28,
+                                    "waypoint_level_id": 0
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_18",
+                                    "level_id": 29,
+                                    "waypoint_level_id": 29
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_19",
+                                    "level_id": 30
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_20",
+                                    "level_id": 31
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_22",
+                                    "level_id": 4,
+                                    "waypoint_level_id": 4
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_23",
+                                    "level_id": 38
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_24",
+                                    "level_id": 6,
+                                    "waypoint_level_id": 6
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_25",
+                                    "level_id": 11
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_26",
+                                    "level_id": 15
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_27",
+                                    "level_id": 20
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_28",
+                                    "level_id": 21
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_29",
+                                    "level_id": 22
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_30",
+                                    "level_id": 23
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_31",
+                                    "level_id": 24
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_32",
+                                    "level_id": 25
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_33",
+                                    "level_id": 7,
+                                    "waypoint_level_id": 27
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_34",
+                                    "level_id": 12
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_35",
+                                    "level_id": 16
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_36",
+                                    "level_id": 26
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_37",
+                                    "level_id": 27
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "DesecratedZoneGroup",
+                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1",
+                    "group_id": 2,
+                    "zones": [
+                        {
+                            "type": "DesecratedZone",
+                            "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0",
+                            "id": "Act2-Manual",
+                            "levels": [
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_0",
+                                    "level_id": 47,
+                                    "waypoint_level_id": 40
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_1",
+                                    "level_id": 48,
+                                    "waypoint_level_id": 48
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_2",
+                                    "level_id": 49
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_3",
+                                    "level_id": 41,
+                                    "waypoint_level_id": 40
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_4",
+                                    "level_id": 55
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_5",
+                                    "level_id": 59
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_6",
+                                    "level_id": 42,
+                                    "waypoint_level_id": 42
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_7",
+                                    "level_id": 56
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_8",
+                                    "level_id": 57,
+                                    "waypoint_level_id": 57
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_9",
+                                    "level_id": 60
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_10",
+                                    "level_id": 43,
+                                    "waypoint_level_id": 43
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_11",
+                                    "level_id": 62
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_12",
+                                    "level_id": 63
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_13",
+                                    "level_id": 64
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_14",
+                                    "level_id": 44,
+                                    "waypoint_level_id": 44
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_15",
+                                    "level_id": 45
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_16",
+                                    "level_id": 58
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_17",
+                                    "level_id": 61
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_18",
+                                    "level_id": 65
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_19",
+                                    "level_id": 66,
+                                    "waypoint_level_id": 46
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_20",
+                                    "level_id": 67
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_21",
+                                    "level_id": 68
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_22",
+                                    "level_id": 69
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_23",
+                                    "level_id": 70
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_24",
+                                    "level_id": 71
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_25",
+                                    "level_id": 72
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_26",
+                                    "level_id": 73
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_27",
+                                    "level_id": 46
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_28",
+                                    "level_id": 74,
+                                    "waypoint_level_id": 74
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_29",
+                                    "level_id": 50
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_30",
+                                    "level_id": 51
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_31",
+                                    "level_id": 52,
+                                    "waypoint_level_id": 52
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_32",
+                                    "level_id": 53
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_33",
+                                    "level_id": 54
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "DesecratedZoneGroup",
+                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2",
+                    "group_id": 3,
+                    "zones": [
+                        {
+                            "type": "DesecratedZone",
+                            "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0",
+                            "id": "Act3-Manual",
+                            "levels": [
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_0",
+                                    "level_id": 76,
+                                    "waypoint_level_id": 76
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_1",
+                                    "level_id": 85,
+                                    "waypoint_level_id": 75
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_26",
+                                    "level_id": 84
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_2",
+                                    "level_id": 77,
+                                    "waypoint_level_id": 77
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_3",
+                                    "level_id": 78,
+                                    "waypoint_level_id": 78
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_4",
+                                    "level_id": 88
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_5",
+                                    "level_id": 89
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_6",
+                                    "level_id": 91
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_7",
+                                    "level_id": 86
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_8",
+                                    "level_id": 87
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_9",
+                                    "level_id": 90
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_10",
+                                    "level_id": 80,
+                                    "waypoint_level_id": 80
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_11",
+                                    "level_id": 79,
+                                    "waypoint_level_id": 79
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_12",
+                                    "level_id": 81,
+                                    "waypoint_level_id": 81
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_13",
+                                    "level_id": 82
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_14",
+                                    "level_id": 92
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_15",
+                                    "level_id": 93
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_16",
+                                    "level_id": 94
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_17",
+                                    "level_id": 95
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_18",
+                                    "level_id": 96
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_19",
+                                    "level_id": 97
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_20",
+                                    "level_id": 98
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_21",
+                                    "level_id": 99
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_22",
+                                    "level_id": 83,
+                                    "waypoint_level_id": 83
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_23",
+                                    "level_id": 100
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_24",
+                                    "level_id": 101,
+                                    "waypoint_level_id": 101
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_25",
+                                    "level_id": 102
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "DesecratedZoneGroup",
+                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3",
+                    "group_id": 4,
+                    "zones": [
+                        {
+                            "type": "DesecratedZone",
+                            "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0",
+                            "id": "Act4-Manual",
+                            "levels": [
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_0",
+                                    "level_id": 104,
+                                    "waypoint_level_id": 103
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_1",
+                                    "level_id": 105
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_2",
+                                    "level_id": 106,
+                                    "waypoint_level_id": 106
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_3",
+                                    "level_id": 107,
+                                    "waypoint_level_id": 107
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_4",
+                                    "level_id": 108,
+                                    "waypoint_level_id": 107
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_5",
+                                    "level_id": 39,
+                                    "waypoint_level_id": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "DesecratedZoneGroup",
+                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4",
+                    "group_id": 5,
+                    "zones": [
+                        {
+                            "type": "DesecratedZone",
+                            "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0",
+                            "id": "Act5-Manual",
+                            "levels": [
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_0",
+                                    "level_id": 111,
+                                    "waypoint_level_id": 111
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_1",
+                                    "level_id": 110
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_2",
+                                    "level_id": 125
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_3",
+                                    "level_id": 112,
+                                    "waypoint_level_id": 112
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_4",
+                                    "level_id": 126
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_5",
+                                    "level_id": 113,
+                                    "waypoint_level_id": 113
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_6",
+                                    "level_id": 114
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_7",
+                                    "level_id": 121,
+                                    "waypoint_level_id": 109
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_8",
+                                    "level_id": 122
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_9",
+                                    "level_id": 123,
+                                    "waypoint_level_id": 123
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_10",
+                                    "level_id": 124
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_11",
+                                    "level_id": 115,
+                                    "waypoint_level_id": 115
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_12",
+                                    "level_id": 116
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_13",
+                                    "level_id": 118,
+                                    "waypoint_level_id": 118
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_14",
+                                    "level_id": 119
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_15",
+                                    "level_id": 117,
+                                    "waypoint_level_id": 117
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_16",
+                                    "level_id": 127
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_17",
+                                    "level_id": 128
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_18",
+                                    "level_id": 129,
+                                    "waypoint_level_id": 129
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_19",
+                                    "level_id": 130
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_20",
+                                    "level_id": 131
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_21",
+                                    "level_id": 132
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "zones": [
                 {
-                    /* Act 1 */
-                    "id": 1,
+                    "type": "DesecratedZone",
+                    "name": "desecratedzones_desecrated_zones_0_zones_0",
+                    "id": "Act1-Auto",
                     "levels": [
                         {
-                            /* Burial Grounds */
-                            "level_id": 17
-                        },
-                        {
-                            /* The Crypt */
-                            "level_id": 18
-                        },
-                        {
-                            /* The Mausoleum */
-                            "level_id": 19
-                        },
-                        {
-                            /* Underground Passage Level 1 */
-                            "level_id": 10
-                        },
-                        {
-                            /* Dark Wood */
-                            "level_id": 5,
-                            /* Dark Wood */
-                            "waypoint_level_id": 5
-                        },
-                        {
-                            /* Black Marsh */
-                            "level_id": 6,
-                            /* Black Marsh */
-                            "waypoint_level_id": 6
-                        },
-                        {
-                            /* Tower Cellar Level 1 */
-                            "level_id": 21
-                        },
-                        {
-                            /* Tower Cellar Level 2 */
-                            "level_id": 22
-                        },
-                        {
-                            /* Tower Cellar Level 3 */
-                            "level_id": 23
-                        },
-                        {
-                            /* Tower Cellar Level 4 */
-                            "level_id": 24
-                        },
-                        {
-                            /* Tower Cellar Level 5 */
-                            "level_id": 25
-                        },
-                        {
-                            /*  Tamoe Highland */
-                            "level_id": 7
-                        },
-                        {
-                            /*  Pit Level 1 */
-                            "level_id": 12
-                        },
-                        {
-                            /* Pit Level 2 */
-                            "level_id": 16
-                        },
-                        {
-                            /*  Outer Cloister */
-                            "level_id": 27
-                        },
-                        {
-                            /* Barracks */
-                            "level_id": 28,
-                            /* Outer Cloister */
-                            "waypoint_level_id": 27
-                        },
-                        {
-                            /* Jail Level 1 */
-                            "level_id": 29,
-                            /* Jail Level 1 */
-                            "waypoint_level_id": 29
-                        },
-                        {
-                            /* Jail Level 2 */
-                            "level_id": 30
-                        },
-                        {
-                            /* Jail Level 3 */
-                            "level_id": 31
-                        },
-                        {
-                            /* Cathedral */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_0",
                             "level_id": 33,
-                            /* Inner Cloister */
                             "waypoint_level_id": 32
                         },
                         {
-                            /* Catacombs Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_1",
+                            "level_id": 17,
+                            "waypoint_level_id": 3
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_2",
+                            "level_id": 18
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_3",
+                            "level_id": 19
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_4",
                             "level_id": 34
                         },
                         {
-                            /* Catacombs Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_5",
                             "level_id": 35,
-                            /* Catacombs Level 2 */
                             "waypoint_level_id": 35
                         },
                         {
-                            /* Catacombs Level 3 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_6",
                             "level_id": 36
                         },
                         {
-                            /* Catacombs Level 4 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_7",
                             "level_id": 37
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_8",
+                            "level_id": 32
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_9",
+                            "level_id": 3,
+                            "waypoint_level_id": 3
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_10",
+                            "level_id": 9
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_11",
+                            "level_id": 13
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_12",
+                            "level_id": 5,
+                            "waypoint_level_id": 5
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_13",
+                            "level_id": 10
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_14",
+                            "level_id": 14
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_15",
+                            "level_id": 2,
+                            "waypoint_level_id": 1
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_16",
+                            "level_id": 8
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_17",
+                            "level_id": 28,
+                            "waypoint_level_id": 0
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_18",
+                            "level_id": 29,
+                            "waypoint_level_id": 29
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_19",
+                            "level_id": 30
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_20",
+                            "level_id": 31
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_21",
+                            "level_id": 4,
+                            "waypoint_level_id": 4
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_22",
+                            "level_id": 38
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_23",
+                            "level_id": 6,
+                            "waypoint_level_id": 6
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_24",
+                            "level_id": 11
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_25",
+                            "level_id": 15
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_26",
+                            "level_id": 20
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_27",
+                            "level_id": 21
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_28",
+                            "level_id": 22
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_29",
+                            "level_id": 23
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_30",
+                            "level_id": 24
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_31",
+                            "level_id": 25
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_32",
+                            "level_id": 7,
+                            "waypoint_level_id": 27
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_33",
+                            "level_id": 12
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_34",
+                            "level_id": 16
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_35",
+                            "level_id": 26
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_0_levels_36",
+                            "level_id": 27
                         }
                     ]
                 },
                 {
-                    /* Act 2 */
-                    "id": 2,
+                    "type": "DesecratedZone",
+                    "name": "desecratedzones_desecrated_zones_0_zones_1",
+                    "id": "Act2-Auto",
                     "levels": [
                         {
-                            /* Sewers Level 1 */
-                            "level_id": 47
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_0",
+                            "level_id": 47,
+                            "waypoint_level_id": 40
                         },
                         {
-                            /* Sewers Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_1",
                             "level_id": 48,
-                            /* Lut Gholein */
                             "waypoint_level_id": 48
                         },
                         {
-                            /* Sewers Level 3 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_2",
                             "level_id": 49
                         },
                         {
-                            /* Stony Tomb Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_3",
+                            "level_id": 41,
+                            "waypoint_level_id": 40
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_4",
                             "level_id": 55
                         },
                         {
-                            /* Stony Tomb Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_5",
                             "level_id": 59
                         },
                         {
-                            /* Dry Hills */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_6",
                             "level_id": 42,
-                            /* Dry Hills */
                             "waypoint_level_id": 42
                         },
                         {
-                            /* Halls of the Dead Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_7",
                             "level_id": 56
                         },
                         {
-                            /* Halls of the Dead Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_8",
                             "level_id": 57,
-                            /* Halls of the Dead Level 2 */
                             "waypoint_level_id": 57
                         },
                         {
-                            /* Halls of the Dead Level 3 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_9",
                             "level_id": 60
                         },
                         {
-                            /* Lost City */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_10",
+                            "level_id": 43,
+                            "waypoint_level_id": 43
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_11",
+                            "level_id": 62
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_12",
+                            "level_id": 63
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_13",
+                            "level_id": 64
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_14",
                             "level_id": 44,
-                            /* Lost City */
                             "waypoint_level_id": 44
                         },
                         {
-                            /* Ancient Tunnels */
-                            "level_id": 65,
-                            /* Lost City */
-                            "waypoint_level_id": 44
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_15",
+                            "level_id": 45
                         },
                         {
-                            /* Claw Viper Temple Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_16",
                             "level_id": 58
                         },
                         {
-                            /* Claw Viper Temple Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_17",
                             "level_id": 61
                         },
                         {
-                            /* Arcane Sanctuary */
-                            "level_id": 74,
-                            /* Arcane Sanctuary */
-                            "waypoint_level_id": 74
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_18",
+                            "level_id": 65
                         },
                         {
-                            /* Canyon of the Magi */
-                            "level_id": 46,
-                            /* Canyon of the Magi */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_19",
+                            "level_id": 66,
                             "waypoint_level_id": 46
                         },
                         {
-                            /* Tal Rasha's Tomb */
-                            "level_id": 66
-                        },
-                        {
-                            /* Tal Rasha's Tomb */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_20",
                             "level_id": 67
                         },
                         {
-                            /* Tal Rasha's Tomb */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_21",
                             "level_id": 68
                         },
                         {
-                            /* Tal Rasha's Tomb */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_22",
                             "level_id": 69
                         },
                         {
-                            /* Tal Rasha's Tomb */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_23",
                             "level_id": 70
                         },
                         {
-                            /* Tal Rasha's Tomb */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_24",
                             "level_id": 71
                         },
                         {
-                            /* Tal Rasha's Tomb */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_25",
                             "level_id": 72
                         },
                         {
-                            /* Tal Rasha's Chamber */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_26",
                             "level_id": 73
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_27",
+                            "level_id": 46
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_28",
+                            "level_id": 74,
+                            "waypoint_level_id": 74
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_29",
+                            "level_id": 50
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_30",
+                            "level_id": 51
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_31",
+                            "level_id": 52,
+                            "waypoint_level_id": 52
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_32",
+                            "level_id": 53
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_1_levels_33",
+                            "level_id": 54
                         }
                     ]
                 },
                 {
-                    /* Act 3 */
-                    "id": 3,
+                    "type": "DesecratedZone",
+                    "name": "desecratedzones_desecrated_zones_0_zones_2",
+                    "id": "Act3-Auto",
                     "levels": [
                         {
-                            /* Spider Forest */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_0",
                             "level_id": 76,
-                            /* Spider Forest */
                             "waypoint_level_id": 76
                         },
                         {
-                            /* Arachnid Lair */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_1",
+                            "level_id": 85,
+                            "waypoint_level_id": 75
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_2",
                             "level_id": 84
                         },
                         {
-                            /* Spider Cavern */
-                            "level_id": 85
-                        },
-                        {
-                            /* Great Marsh */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_3",
                             "level_id": 77,
-                            /* Great Marsh */
                             "waypoint_level_id": 77
                         },
                         {
-                            /* Flayer Jungle */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_4",
                             "level_id": 78,
-                            /* Flayer Jungle */
                             "waypoint_level_id": 78
                         },
                         {
-                            /* Flayer Dungeon Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_5",
                             "level_id": 88
                         },
                         {
-                            /* Flayer Dungeon Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_6",
                             "level_id": 89
                         },
                         {
-                            /* Flayer Dungeon Level 3 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_7",
                             "level_id": 91
                         },
                         {
-                            /* Lower Kurast */
-                            "level_id": 79,
-                            /* Lower Kurast */
-                            "waypoint_level_id": 79
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_8",
+                            "level_id": 86
                         },
                         {
-                            /* Kurast Bazaar */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_9",
+                            "level_id": 87
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_10",
+                            "level_id": 90
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_11",
                             "level_id": 80,
-                            /* Kurast Bazaar */
                             "waypoint_level_id": 80
                         },
                         {
-                            /* Ruined Temple */
-                            "level_id": 94
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_12",
+                            "level_id": 79,
+                            "waypoint_level_id": 79
                         },
                         {
-                            /* Disused Fane */
-                            "level_id": 95
-                        },
-                        {
-                            /* Sewers Level 1 */
-                            "level_id": 92
-                        },
-                        {
-                            /* Sewers Level 2 */
-                            "level_id": 93
-                        },
-                        {
-                            /* Upper Kurast */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_13",
                             "level_id": 81,
-                            /* Upper Kurast */
                             "waypoint_level_id": 81
                         },
                         {
-                            /* Forgotten Temple */
-                            "level_id": 97
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_14",
+                            "level_id": 82
                         },
                         {
-                            /* Forgotten Reliquary */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_15",
+                            "level_id": 92
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_16",
+                            "level_id": 93
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_17",
+                            "level_id": 94
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_18",
+                            "level_id": 95
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_19",
                             "level_id": 96
                         },
                         {
-                            /* Ruined Fane */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_20",
+                            "level_id": 97
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_21",
                             "level_id": 98
                         },
                         {
-                            /* Disused Reliquary */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_22",
                             "level_id": 99
                         },
                         {
-                            /* Travincal */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_23",
                             "level_id": 83,
-                            /* Travincal */
                             "waypoint_level_id": 83
                         },
                         {
-                            /* Durance of Hate Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_24",
                             "level_id": 100
                         },
                         {
-                            /* Durance of Hate Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_25",
                             "level_id": 101,
-                            /* Durance of Hate Level 2 */
                             "waypoint_level_id": 101
                         },
                         {
-                            /* Durance of Hate Level 3 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_2_levels_26",
                             "level_id": 102
                         }
                     ]
                 },
                 {
-                    /* Act 4 */
-                    "id": 4,
+                    "type": "DesecratedZone",
+                    "name": "desecratedzones_desecrated_zones_0_zones_3",
+                    "id": "Act4-Auto",
                     "levels": [
                         {
-                            /* Outer Steppes */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_3_levels_0",
                             "level_id": 104,
-                            /* Pandemonium Fortress */
                             "waypoint_level_id": 103
                         },
                         {
-                            /* Plains of Despair */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_3_levels_1",
                             "level_id": 105
                         },
                         {
-                            /* City of the Damned */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_3_levels_2",
                             "level_id": 106,
-                            /* City of the Damned */
                             "waypoint_level_id": 106
                         },
                         {
-                            /* River of Flame */
-                            "level_id": 107
-                        },
-                        {
-                            /* Chaos Sanctuary */
-                            "level_id": 108,
-                            /* River of Flame */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_3_levels_3",
+                            "level_id": 107,
                             "waypoint_level_id": 107
                         },
                         {
-                            /* Stony Field */
-                            "level_id": 4,
-                            /* Stony Field */
-                            "waypoint_level_id": 4
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_3_levels_4",
+                            "level_id": 108,
+                            "waypoint_level_id": 107
                         },
                         {
-                            /* Tristram */
-                            "level_id": 38
-                        },
-                        {
-                            /* Moo Moo Farm */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_3_levels_5",
                             "level_id": 39,
-                            /* Rogue Encampment */
                             "waypoint_level_id": 1
                         }
                     ]
                 },
                 {
-                    /* Act 5 */
-                    "id": 5,
+                    "type": "DesecratedZone",
+                    "name": "desecratedzones_desecrated_zones_0_zones_4",
+                    "id": "Act5-Auto",
                     "levels": [
                         {
-                            /* Bloody Foothills */
-                            "level_id": 110
-                        },
-                        {
-                            /* Frigid Highlands */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_0",
                             "level_id": 111,
-                            /* Frigid Highlands */
                             "waypoint_level_id": 111
                         },
                         {
-                            /* Abbadon */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_1",
+                            "level_id": 110
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_2",
                             "level_id": 125
                         },
                         {
-                            /* Arreat Plateau */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_3",
                             "level_id": 112,
-                            /* Arreat Plateau */
                             "waypoint_level_id": 112
                         },
                         {
-                            /* Pit of Acheron */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_4",
                             "level_id": 126
                         },
                         {
-                            /* Crystalline Passage */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_5",
                             "level_id": 113,
-                            /* Crystalline Passage */
                             "waypoint_level_id": 113
                         },
                         {
-                            /* Frozen River */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_6",
                             "level_id": 114
                         },
                         {
-                            /* Nihlathak's Temple */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_7",
                             "level_id": 121,
-                            /* Harrogath */
                             "waypoint_level_id": 109
                         },
                         {
-                            /* Halls of Anguish */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_8",
                             "level_id": 122
                         },
                         {
-                            /* Halls of Pain */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_9",
                             "level_id": 123,
-                            /* Halls of Pain */
                             "waypoint_level_id": 123
                         },
                         {
-                            /* Halls of Vaught */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_10",
                             "level_id": 124
                         },
                         {
-                            /* Glacial Trail */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_11",
                             "level_id": 115,
-                            /* Glacial Trail */
                             "waypoint_level_id": 115
                         },
                         {
-                            /* Drifter Cavern */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_12",
                             "level_id": 116
                         },
                         {
-                            /* Frozen Tundra */
-                            "level_id": 117,
-                            /* Frozen Tundra */
-                            "waypoint_level_id": 117
-                        },
-                        {
-                            /* Infernal Pit */
-                            "level_id": 127
-                        },
-                        {
-                            /* Ancient's Way */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_13",
                             "level_id": 118,
-                            /* Ancient's Way */
                             "waypoint_level_id": 118
                         },
                         {
-                            /* Icy Cellar */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_14",
                             "level_id": 119
                         },
                         {
-                            /* Worldstone Keep Level 1 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_15",
+                            "level_id": 117,
+                            "waypoint_level_id": 117
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_16",
+                            "level_id": 127
+                        },
+                        {
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_17",
                             "level_id": 128
                         },
                         {
-                            /* Worldstone Keep Level 2 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_18",
                             "level_id": 129,
-                            /* Worldstone Keep Level 2 */
                             "waypoint_level_id": 129
                         },
                         {
-                            /* Worldstone Keep Level 3 */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_19",
                             "level_id": 130
                         },
                         {
-                            /* Throne of Destruction */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_20",
                             "level_id": 131
                         },
                         {
-                            /* Worldstone Chamber */
+                            "type": "DesecratedLevel",
+                            "name": "desecratedzones_desecrated_zones_0_zones_4_levels_21",
                             "level_id": 132
                         }
                     ]

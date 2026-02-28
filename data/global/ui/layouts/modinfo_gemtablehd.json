@@ -452,7 +452,57 @@
                                         }
                                     }
                                 ]
-                            }                            
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Divider",
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "Upgrading",
+                                        "fields": {
+                                         "rect": "$OptionsDividerRect",
+                                        "filename": "PauseMenu\\Divider"
+                                        }
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "type": "TableRowWidget", "name": "Rune Heading",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget", "name": "Rune Name",
+                                        "fields": {
+                                            "text": "Chaos Onyx",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 120, "height": 100, "x":0,  "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Weapon",
+                                        "fields": {
+                                            "text": "+15-20 Magic Dmg",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "ArmorHelm",
+                                        "fields": {
+                                            "text": "+5 All Attributes",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 405, "height": 100, "x":735, "y": 50 }
+                                        }
+                                    },
+                                    {
+                                        "type": "TextBoxWidget", "name": "Shield",
+                                        "fields": {
+                                            "text": "+5% Magic Resist",
+                                            "style": "$StyleSettingsText",
+                                            "rect": {"width" : 495, "height": 100, "x":1230, "y": 50 }
+                                        }
+                                    }
+                                ]
+                            }                             
                         ]
                     }
                 ]
