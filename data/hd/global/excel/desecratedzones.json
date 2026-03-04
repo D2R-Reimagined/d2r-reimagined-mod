@@ -119,7 +119,7 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 5,
+                        "max_herald_tokens": 100,
                         "max_herald_tiers": 5,
                         "always_unique_mod_pool": [
                             {
@@ -184,8 +184,8 @@
                             "bound_incl_max": 100,
                             "boost_level": 2,
                             "boost_experience_percent": 25,
-                            "chance_to_gain_herald_token": 2.0,
-                            "chance_for_token_to_convert_to_herald": 1.0,
+                            "chance_to_gain_herald_token": 5.0,
+                            "chance_for_token_to_convert_to_herald": 5.0,
                             "unique_mod_chance_boosts": [
                                 {
                                     "type": "UniqueModChanceBoost",
@@ -369,13 +369,13 @@
                 {
                     "type": "DesecratedWarning",
                     "name": "desecratedzones_desecrated_zones_0_warnings_0",
-                    "announce_time_minutes": 3,
+                    "announce_time_minutes": 5,
                     "tier": 1
                 },
                 {
                     "type": "DesecratedWarning",
                     "name": "desecratedzones_desecrated_zones_0_warnings_1",
-                    "announce_time_minutes": 2,
+                    "announce_time_minutes": 3,
                     "tier": 2
                 },
                 {
@@ -597,6 +597,12 @@
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_37",
                                     "level_id": 27
+                                },
+                                                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_5",
+                                    "level_id": 39,
+                                    "waypoint_level_id": 1
                                 }
                             ]
                         }
@@ -992,6 +998,17 @@
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_4",
                                     "level_id": 108,
                                     "waypoint_level_id": 107
+                                },
+                                                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_22",
+                                    "level_id": 4,
+                                    "waypoint_level_id": 4
+                                },
+                                {
+                                    "type": "DesecratedLevel",
+                                    "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_23",
+                                    "level_id": 38
                                 },
                                 {
                                     "type": "DesecratedLevel",
