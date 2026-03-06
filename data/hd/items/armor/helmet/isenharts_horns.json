@@ -1,1 +1,281 @@
-{"dependencies":{"particles":[],"models":[{"path":"data/hd/items/armor/helmet/duskdeep/duskdeep.model"}],"skeletons":[{"path":"data/hd/items/dropped_items/skeleton/dropped_items.skeleton"}],"animations":[],"textures":[{"path":"data/hd/items/armor/helmet/duskdeep/armor_duskdeep_alb.texture"},{"path":"data/hd/items/armor/helmet/duskdeep/armor_duskdeep_KTINT.texture"},{"path":"data/hd/items/armor/helmet/duskdeep/armor_duskdeep_nrm.texture"},{"path":"data/hd/items/armor/helmet/duskdeep/armor_duskdeep_orm.texture"}],"physics":[],"json":[{"path":"data/hd/items/dropped_items/dropped_items_helms_flip_side_sw.json"}],"variantdata":[],"objecteffects":[],"other":[]},"type":"UnitDefinition","name":"duskdeep","entities":[{"type":"Entity","name":"entity_root","id":1742710446,"components":[{"type":"UnitRootComponent","name":"component_root","state_machine_filename":"data/hd/items/dropped_items/dropped_items_helms_flip_side_sw.json","doNotInheritRotation":false,"rotationOverride":{"x":0.0,"y":0.3826834,"z":0.0,"w":0.9238795},"doNotUseHDHeight":false,"hideAllMeshWhenInOpenedMode":false,"onCreateEventName":"","animations":[]},{"type":"SkeletonDefinitionComponent","name":"component_skeleton","filename":"data/hd/items/dropped_items/skeleton/dropped_items.skeleton","enableWeaponAttachInertialization":false},{"type":"ChangeMeshLayersOnAttachComponent","name":"entity_root_ChangeMeshLayersOnAttach","defaultLayerChange":{"type":"MeshLayerChange","name":"entity_root_ChangeMeshLayersOnAttach_defaultLayerChange","layersToHide":32,"layersToShow":128},"playerClassOverrides":{}},{"type":"TransformDefinitionComponent","name":"entity_root_TransformDefinition","position":{"x":-0.346,"y":0.0,"z":0.37},"orientation":{"x":0.0,"y":0.492423564,"z":0.0,"w":0.8703557},"scale":{"x":1.0,"y":1.0,"z":1.0},"inheritOnlyPosition":false},{"type":"OverrideAttachmentTransformComponent","name":"entity_root_OverrideAttachmentTransform","playerClassTransforms":{"6":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Assassin","translation":{"x":0.0,"y":-0.02,"z":0.04},"rotation":{"x":3.0,"y":0.0,"z":0.0},"scale":{"x":0.88,"y":0.82,"z":0.87}},"0":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Amazon","translation":{"x":0.0,"y":0.05,"z":-0.054},"rotation":{"x":5.0,"y":0.0,"z":0.0},"scale":{"x":0.9,"y":0.8,"z":1.05}},"2":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Necromancer","translation":{"x":0.0,"y":0.15,"z":-0.05},"rotation":{"x":10.0,"y":0.0,"z":0.0},"scale":{"x":1.1,"y":0.9,"z":1.18}},"5":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Druid","translation":{"x":0.0,"y":0.02,"z":0.08},"rotation":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.07,"y":1.0,"z":1.05}},"4":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Barbarian","translation":{"x":0.0,"y":0.04,"z":0.0},"rotation":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.15,"y":1.0,"z":1.2}},"1":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Sorceress","translation":{"x":0.0,"y":0.06,"z":-0.05},"rotation":{"x":5.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":0.8,"z":1.05}},"3":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Paladin","translation":{"x":0.0,"y":0.04,"z":0.07},"rotation":{"x":4.0,"y":0.0,"z":0.0},"scale":{"x":1.035,"y":0.95,"z":1.12}},"7":{"type":"Transform","name":"entity_root_OverrideAttachmentTransform_playerClassTransforms_Warlock","translation":{"x":0.0,"y":0.15,"z":0.0},"rotation":{"x":10.0,"y":0.0,"z":0.0},"scale":{"x":1.08,"y":0.9,"z":1.0}}}}]},{"type":"Entity","name":"entity_model","id":2838222485,"components":[{"type":"ModelDefinitionComponent","name":"component_model_duskdeep","filename":"data/hd/items/armor/helmet/duskdeep/duskdeep.model","visibleLayers":1,"lightMask":19,"shadowMask":3,"ghostShadows":false,"floorModel":false,"terrainBlendEnableYUpBlend":false,"terrainBlendMode":1}]}]}
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/items/armor/helmet/duskdeep/duskdeep.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/items/armor/helmet/duskdeep/armor_duskdeep_alb.texture"
+            },
+            {
+                "path": "data/hd/items/armor/helmet/duskdeep/armor_duskdeep_KTINT.texture"
+            },
+            {
+                "path": "data/hd/items/armor/helmet/duskdeep/armor_duskdeep_nrm.texture"
+            },
+            {
+                "path": "data/hd/items/armor/helmet/duskdeep/armor_duskdeep_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_side_sw.json"
+            }
+        ],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "duskdeep",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 1742710446,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_side_sw.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "ChangeMeshLayersOnAttachComponent",
+                    "name": "entity_root_ChangeMeshLayersOnAttach",
+                    "defaultLayerChange": {
+                        "type": "MeshLayerChange",
+                        "name": "entity_root_ChangeMeshLayersOnAttach_defaultLayerChange",
+                        "layersToHide": 32,
+                        "layersToShow": 128
+                    },
+                    "playerClassOverrides": {}
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": -0.346,
+                        "y": 0.0,
+                        "z": 0.37
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.492423564,
+                        "z": 0.0,
+                        "w": 0.8703557
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "OverrideAttachmentTransformComponent",
+                    "name": "entity_root_OverrideAttachmentTransform",
+                    "playerClassTransforms": {
+                        "6": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Assassin",
+                            "translation": {
+                                "x": 0.0,
+                                "y": -0.02,
+                                "z": 0.04
+                            },
+                            "rotation": {
+                                "x": 3.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 0.88,
+                                "y": 0.82,
+                                "z": 0.87
+                            }
+                        },
+                        "0": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Amazon",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.05,
+                                "z": -0.054
+                            },
+                            "rotation": {
+                                "x": 5.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 0.9,
+                                "y": 0.8,
+                                "z": 1.05
+                            }
+                        },
+                        "2": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Necromancer",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.15,
+                                "z": -0.05
+                            },
+                            "rotation": {
+                                "x": 10.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 1.1,
+                                "y": 0.9,
+                                "z": 1.18
+                            }
+                        },
+                        "5": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Druid",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.02,
+                                "z": 0.08
+                            },
+                            "rotation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 1.07,
+                                "y": 1.0,
+                                "z": 1.05
+                            }
+                        },
+                        "4": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Barbarian",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.04,
+                                "z": 0.0
+                            },
+                            "rotation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 1.15,
+                                "y": 1.0,
+                                "z": 1.2
+                            }
+                        },
+                        "1": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Sorceress",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.06,
+                                "z": -0.05
+                            },
+                            "rotation": {
+                                "x": 5.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 1.0,
+                                "y": 0.8,
+                                "z": 1.05
+                            }
+                        },
+                        "3": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Paladin",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.04,
+                                "z": 0.07
+                            },
+                            "rotation": {
+                                "x": 4.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 1.035,
+                                "y": 0.95,
+                                "z": 1.12
+                            }
+                        },
+                        "7": {
+                            "type": "Transform",
+                            "name": "entity_root_OverrideAttachmentTransform_playerClassTransforms_Warlock",
+                            "translation": {
+                                "x": 0.0,
+                                "y": 0.15,
+                                "z": 0.0
+                            },
+                            "rotation": {
+                                "x": 10.0,
+                                "y": 0.0,
+                                "z": 0.0
+                            },
+                            "scale": {
+                                "x": 1.08,
+                                "y": 0.9,
+                                "z": 1.0
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_model",
+            "id": 2838222485,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_duskdeep",
+                    "filename": "data/hd/items/armor/helmet/duskdeep/duskdeep.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}
