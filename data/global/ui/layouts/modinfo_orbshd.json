@@ -67,7 +67,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Power Information",
+                                            "text": "@strPOrbHead",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -96,7 +96,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Orbs of Power can be used to modify items in various ways. This is a short description of each orb and what they do, more detailed information can be found on the wiki.",
+                                            "text": "@strPOrbBody",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -125,7 +125,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Socketing",
+                                            "text": "@strOOSHead",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -154,7 +154,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Cube together with an item of any rarity that is able to obtain sockets to roll a random number of sockets between the base items minimum and maximum count.\n\nIn Cube:\nOrb of Socketing + Item = Return Item + Random 1-Max Sockets (Base Dependent)",
+                                            "text": "@strOOSBody",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -183,7 +183,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Corruption",
+                                            "text": "@strKA3Head",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -212,7 +212,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Cube together with any item of any rarity twice in order to first set the corruption and then reveal the result.\n\nOnce an item has been cubed with this orb twice the orb will be consumed.\nSubsequent attempts with a new orb will return the item and the orb with no changes.\n\nThere is a 55% chance a corruption is successful, adding a beneficial property to an item (Stats and the chances are on wiki), a 25% chance no property is added, a 10% chance the item is converted to a Rare Item, and a 10% chance the item is converted to a White Item (or Magic for Jewelry)\n\nIn Cube: Orb + Item + First Transmute = Orb + Item (Corrupted)\nIn Cube: Orb + Item + Second Transmute = Updated Item",
+                                            "text": "@strKA3Body",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -241,7 +241,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Infusion",
+                                            "text": "@strOOIHead",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -270,7 +270,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Cube together with any white weapon, armor or shield to turn that item base into a rare item equal to the character's level.\n\nCube together with any magic ring or amulet to turn that item base into a rare item equal to the character's level.\n\nThe properties returned are random and the orb works like Charsi imbuement without the various restrictions. It can be used regardless of other properties present.\n\nIn Cube: Orb + White Item or Magic Jewelry = Item Base returned as a new Rare Item",
+                                            "text": "@strOOIBody",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -299,7 +299,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Assemblage",
+                                            "text": "@strOOAHead",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -328,7 +328,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Cube together with a rare item of any base type in order to receive a random set item using the base's type.\n\nThis orb ignores item and character level and will always return a set item if the base has a set item on it, otherwise the returned item will be magic or rare.\n\nCheck the set items list on the website before using if you are unsure if the base has a set item on it or not.\n\nIn Cube: Orb + Rare Item Base = Item Base returned as new Set item",
+                                            "text": "@strOOABody",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -357,7 +357,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Conversion",
+                                            "text": "@strOOCHead",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -386,7 +386,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Cube together with a rare item of any euqippable base type in order to receive a random unique item using the base's type.\n\nThis does not work on charms or jewels.\n\nThis orb ignores item and character level and will always return a unique item if the base has a unqiue item on it, otherwise the returned item will be magic or rare.\n\nCheck the unique items list on the website before using if you are unsure if the base has a unique item on it or not.\n\nIn Cube: Orb + Rare Item Base = Item Base returned as new Unique item",
+                                            "text": "@strOOCBody",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -407,7 +407,7 @@
                                     }
                                 ]
                             },
-                                                        {
+                            {
                                 "type": "TableRowWidget",
                                 "name": "Row Orb Title",
                                 "children": [
@@ -415,7 +415,65 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Title",
                                         "fields": {
-                                            "text": "Orb of Shadows",
+                                            "text": "@strOORHead",
+                                            "style": "$StyleSettingsTitle"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ImageWidget",
+                                                "name": "Divider",
+                                                "fields": {
+                                                    "rect": "$OptionsDividerRect",
+                                                    "filename": "PauseMenu\\Divider"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Description",
+                                "fields": {
+                                    "rect": {
+                                        "height": 250
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Description",
+                                        "fields": {
+                                            "text": "@strOORBody",
+                                            "style": {
+                                                "pointSize": 28,
+                                                "spacing": {
+                                                    "leading": 0.95,
+                                                    "kerning": 0.95
+                                                },
+                                                "alignment": {
+                                                    "h": "left",
+                                                    "v": "center"
+                                                },
+                                                "options": {
+                                                    "lineWrap": true,
+                                                    "newlineHandling": "standard",
+                                                    "pipeCharacterBehavior": "handle"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "TableRowWidget",
+                                "name": "Row Orb Title",
+                                "children": [
+                                    {
+                                        "type": "TextBoxWidget",
+                                        "name": "Text Orb Title",
+                                        "fields": {
+                                            "text": "@strOOEHead",
                                             "style": "$StyleSettingsTitle"
                                         },
                                         "children": [
@@ -444,7 +502,7 @@
                                         "type": "TextBoxWidget",
                                         "name": "Text Orb Description",
                                         "fields": {
-                                            "text": "Cube together with a almost any item that has durability to turn it ethereal.\nDoes not work on Bows/Xbows\nDoes not work on already Indestructible items\n\nSet Items can behave strangely if the set bonuses have %Enhanced Weapon Damage or Defense and it is not reccomended to use on a set item if you plan to wear the full set and it has these properties in the set bonuses.\n\nIn Cube: Orb + Non-Ethereal & Non-Indestructible Item = Item Returned with Ethereal Added",
+                                            "text": "@strOOEBody",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
