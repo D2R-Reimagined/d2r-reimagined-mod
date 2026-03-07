@@ -1,0 +1,112 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/items/dropped_items/splint_mail.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/items/dropped_items/skeleton/dropped_items_armor_chest_leather.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/items/armor/armor/splint_mail/textures/armor_splintmail_alb.texture"
+            },
+            {
+                "path": "data/hd/items/armor/armor/splint_mail/textures/armor_splintmail_mask.texture"
+            },
+            {
+                "path": "data/hd/items/armor/armor/splint_mail/textures/armor_splintmail_nrm.texture"
+            },
+            {
+                "path": "data/hd/items/armor/armor/splint_mail/textures/armor_splintmail_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/items/dropped_items/dropped_items_armor_chest_leather_ne.json"
+            }
+        ],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "splint_mail",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3376508394,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_armor_chest_leather_ne.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items_armor_chest_leather.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.5,
+                        "y": 0.0,
+                        "z": 0.4
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_model",
+            "id": 3599996011,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_splint_mail",
+                    "filename": "data/hd/items/dropped_items/splint_mail.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}
