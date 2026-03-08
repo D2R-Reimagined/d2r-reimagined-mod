@@ -51,7 +51,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "TBD",
+                                        "text": "@strTBDText",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -74,27 +74,6 @@
                                     "fields": {
                                         "text": "Maybe there will be something in the last tab... you think",
                                         "style": "$StyleSettingsText"
-                                    }
-                                },
-                                {
-                                    "type": "disabled", "name": "Runes",
-                                    "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
-                                        }
                                     }
                                 }
                             ]
