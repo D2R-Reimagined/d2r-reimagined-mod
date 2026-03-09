@@ -1,26 +1,35 @@
 {
-	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
-	"type": "GameplayOptionsPanel", "name": "modinfo_generalinformation",
+    /* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+    "type": "GameplayOptionsPanel",
+    "name": "modinfo_generalinformation",
     "fields": {
         "priority": 9003,
         "rect": "$OptionsPanelRect",
-        "anchor": { "x": 0.5 },
+        "anchor": {
+            "x": 0.5
+        },
         "applySettingsImmediately": false
     },
     "children": [
         {
-            "type": "ImageWidget", "name": "ScrollBarBackground",
+            "type": "ImageWidget",
+            "name": "ScrollBarBackground",
             "fields": {
                 "rect": "$OptionsScrollBarBackgroundRect",
-                "anchor": { "x": 1.0 },
+                "anchor": {
+                    "x": 1.0
+                },
                 "filename": "PauseMenu\\VerticalScroll"
             },
             "children": [
                 {
-                    "type": "ScrollControllerWidget", "name": "ScrollController",
+                    "type": "ScrollControllerWidget",
+                    "name": "ScrollController",
                     "fields": {
                         "rect": "$OptionsScrollBarRect",
-                        "anchor": { "x": 1.0 },
+                        "anchor": {
+                            "x": 1.0
+                        },
                         "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
                         "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
                         "barFilepath": "PauseMenu\\VerticalIndicator",
@@ -32,32 +41,40 @@
             ]
         },
         {
-            "type": "ScrollViewWidget", "name": "ScrollView",
+            "type": "ScrollViewWidget",
+            "name": "ScrollView",
             "fields": {
                 "fitToParent": true,
                 "scrollControllerName": "ScrollController"
             },
             "children": [
                 {
-                    "type": "TableWidget", "name": "OptionsTable",
+                    "type": "TableWidget",
+                    "name": "OptionsTable",
                     "fields": {
-                        "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
+                        "columns": [
+                            "$OptionsTableColumn1",
+                            "$OptionsTableColumn2"
+                        ],
                         "rowHeight": "$OptionsTableRowHeight"
                     },
                     "children": [
-/* >>> WEBSITE TITLE >>> */
+                        /* >>> WEBSITE TITLE >>> */
                         {
-                            "type": "TableRowWidget", "name": "Upgrading",
+                            "type": "TableRowWidget",
+                            "name": "Upgrading",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget",
+                                    "name": "Upgrading",
                                     "fields": {
-                                        "text": "Official Website and Wiki",
+                                        "text": "@strWebWikiHead",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
                                         {
-                                            "type": "ImageWidget", "name": "Divider",
+                                            "type": "ImageWidget",
+                                            "name": "Divider",
                                             "fields": {
                                                 "rect": "$OptionsDividerRect",
                                                 "filename": "PauseMenu\\Divider"
@@ -67,7 +84,7 @@
                                 }
                             ]
                         },
-/* >>> WEBSITE LINK BELOW >>> */
+                        /* >>> WEBSITE LINK BELOW >>> */
                         {
                             "type": "TableRowWidget",
                             "name": "RowTab",
@@ -77,103 +94,48 @@
                                 }
                             },
                             "children": [
-                              {
-                                "type": "TextBoxWidget",
-                                "name": "TextBox",
-                                "fields": {
-                                  "text": "www.d2r-reimagined.com\n\nwiki.d2r-reimagined.com\n\nFull patch notes can be found on the wiki or discord\n\nDiscord link found on website home page\n",
-                                  "style": {
-                                    "pointSize": 28,
-                                    "spacing": {
-                                      "leading": 0.95,
-                                      "kerning": 0.95
-                                    },
-                                    "alignment": {
-                                      "h": "left",
-                                      "v": "center"
-                                    },
-                                    "options": {
-                                      "lineWrap": true,
-                                      "newlineHandling": "standard",
-                                      "pipeCharacterBehavior": "handle"
-                                    }
-                                   }
-                                }
-                              }
-                            ]
-                        },
-/* <<< WEBSITE LINK OVER <<< */
-/* >>> FILE SIZE LIMITS TITLE >>> */
-                        {
-                            "type": "TableRowWidget", "name": "Upgrading",
-                            "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget",
+                                    "name": "TextBox",
                                     "fields": {
-                                        "text": "D2R File Size Limitations",
-                                        "style": "$StyleSettingsTitle"
-                                    },
-                                    "children": [
-                                        {
-                                            "type": "ImageWidget", "name": "Divider",
-                                            "fields": {
-                                                "rect": "$OptionsDividerRect",
-                                                "filename": "PauseMenu\\Divider"
+                                        "text": "@strWebWikiBody",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
                                             }
                                         }
-                                    ]
+                                    }
                                 }
                             ]
                         },
-/* >>> FILE SIZE LIMITS BELOW >>> */
+                        /* <<< WEBSITE LINK OVER <<< */
+                        /* >>> GENERAL CHANGES TITLE >>> */
                         {
                             "type": "TableRowWidget",
-                            "name": "RowTab",
-                            "fields": {
-                                "rect": {
-                                    "height": 900
-                                }
-                            },
-                            "children": [
-                              {
-                                "type": "TextBoxWidget",
-                                "name": "TextBox",
-                                "fields": {
-                                  "text": "Diablo 2 Resurrected has a hardcode file size limitation of 8192 bytes on disk, or about 8KB\n\nThe file to watch is <characterexample>.d2s in\n'C:\\Users\\<username>\\Saved Games\\Diablo II Resurrected\\mods\\Reimagined'\n\nThe inventories that contribute are: Player and Gear, Personal Stash, Mercenary, and Horadric Cube\n\nStoring a large quantity of small items, <Jewels especially, but charms, rings, amulets, belts also contribute in large numbers>, will quickly inflate the file size of the character and when the limit is reached items start to be removed out of the save, usually starting with custom mod added items, such as orb stacks, rune stacks, gem bag etc.\n\nIf you store Rune and Orb stacks in your personal tab so you can drag and drop to stack from your inventory, keep them stacked together, a stack of 100 quantity takes up less file space than 2 stacks of 1 quantity.\n\nNEVER use the Horadric Cube for in between game storage, <Save and Exit>, the Horadric Cube inventory contributes to your save file limit!",
-                                  "style": {
-                                    "pointSize": 28,
-                                    "spacing": {
-                                      "leading": 0.95,
-                                      "kerning": 0.95
-                                    },
-                                    "alignment": {
-                                      "h": "left",
-                                      "v": "center"
-                                    },
-                                    "options": {
-                                      "lineWrap": true,
-                                      "newlineHandling": "standard",
-                                      "pipeCharacterBehavior": "handle"
-                                    }
-                                   }
-                                }
-                              }
-                            ]
-                        },
-/* >>> FILE SIZE LIMITS OVER >>> */
-/* >>> GENERAL CHANGES TITLE >>> */
-                        {
-                            "type": "TableRowWidget", "name": "Upgrading",
+                            "name": "Upgrading",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget",
+                                    "name": "Upgrading",
                                     "fields": {
-                                        "text": "General Changes",
+                                        "text": "@strGCHead",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
                                         {
-                                            "type": "ImageWidget", "name": "Divider",
+                                            "type": "ImageWidget",
+                                            "name": "Divider",
                                             "fields": {
                                                 "rect": "$OptionsDividerRect",
                                                 "filename": "PauseMenu\\Divider"
@@ -183,7 +145,7 @@
                                 }
                             ]
                         },
-/* >>> GENERAL CHANGES BELOW >>> */
+                        /* >>> GENERAL CHANGES BELOW >>> */
                         {
                             "type": "TableRowWidget",
                             "name": "RowTab",
@@ -193,45 +155,48 @@
                                 }
                             },
                             "children": [
-                              {
-                                "type": "TextBoxWidget",
-                                "name": "TextBox",
-                                "fields": {
-                                  "text": "Max level is 100, 99 for Mercenaries\n\nLevel Curve and Difficulty Scaling adjusted for Hell Difficulty\n\nThere are a lot of new recipes to craft, enchant, and uptier. Hold onto your jewels and check website/wiki.\n\nReworked Jewelry reroll recipes to yield the same item type used in the recipe, and increased ring to 100% plvl\n\nThe Splash Charm (Collin's Lesser Might) is obtained by killing Corpsefire (Den of Evil) on Normal difficulty. This enables splash damage for many melee skills while slightly lowering damage\n\nThe Splash Charm can also be upgraded to decrease the damage penality. Check the wiki.\n\nSelling Standard of Heroes dropped from Ubers Spawns Diablo's Clone which drops the ANNIHILUS Small Charm",
-                                  "style": {
-                                    "pointSize": 28,
-                                    "spacing": {
-                                      "leading": 0.95,
-                                      "kerning": 0.95
-                                    },
-                                    "alignment": {
-                                      "h": "left",
-                                      "v": "center"
-                                    },
-                                    "options": {
-                                      "lineWrap": true,
-                                      "newlineHandling": "standard",
-                                      "pipeCharacterBehavior": "handle"
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "TextBox",
+                                    "fields": {
+                                        "text": "@strGCBody",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
                                     }
-                                   }
                                 }
-                              }
                             ]
                         },
-/* <<< GENERAL CHANGES OVER <<< */
-/* >>> KNOWN BUGS TITLE >>> */
+                        /* <<< GENERAL CHANGES OVER <<< */
+                        /* >>> KNOWN BUGS TITLE >>> */
                         {
-                            "type": "TableRowWidget", "name": "Upgrading",
+                            "type": "TableRowWidget",
+                            "name": "Upgrading",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget",
+                                    "name": "Upgrading",
                                     "fields": {
-                                        "text": "Known Bugs",
+                                        "text": "@strBugHead",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
                                         {
-                                            "type": "ImageWidget", "name": "Divider",
+                                            "type": "ImageWidget",
+                                            "name": "Divider",
                                             "fields": {
                                                 "rect": "$OptionsDividerRect",
                                                 "filename": "PauseMenu\\Divider"
@@ -241,7 +206,7 @@
                                 }
                             ]
                         },
-/* >>> KNOWN BUGS LIST BELOW >>> */
+                        /* >>> KNOWN BUGS LIST BELOW >>> */
                         {
                             "type": "TableRowWidget",
                             "name": "RowTab",
@@ -251,44 +216,47 @@
                                 }
                             },
                             "children": [
-                              {
-                                "type": "TextBoxWidget",
-                                "name": "TextBox",
-                                "fields": {
-                                  "text": "Andariel and The Hell Forge Quest reward still drop vanilla gems. Cube them with the gem bag\n",
-                                  "style": {
-                                    "pointSize": 28,
-                                    "spacing": {
-                                      "leading": 0.95,
-                                      "kerning": 0.95
-                                    },
-                                    "alignment": {
-                                      "h": "left",
-                                      "v": "center"
-                                    },
-                                    "options": {
-                                      "lineWrap": true,
-                                      "newlineHandling": "standard",
-                                      "pipeCharacterBehavior": "handle"
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "TextBox",
+                                    "fields": {
+                                        "text": "@strBugBody",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
                                     }
-                                   }
                                 }
-                              }
                             ]
                         },
-/* >>> NOT A BUG TILTE >>> */
+                        /* >>> NOT A BUG TILTE >>> */
                         {
-                            "type": "TableRowWidget", "name": "Upgrading",
+                            "type": "TableRowWidget",
+                            "name": "Upgrading",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget",
+                                    "name": "Upgrading",
                                     "fields": {
-                                        "text": "Not A Bug",
+                                        "text": "@strNotBugHead",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
                                         {
-                                            "type": "ImageWidget", "name": "Divider",
+                                            "type": "ImageWidget",
+                                            "name": "Divider",
                                             "fields": {
                                                 "rect": "$OptionsDividerRect",
                                                 "filename": "PauseMenu\\Divider"
@@ -298,7 +266,7 @@
                                 }
                             ]
                         },
-/* >>> NOT A BUG LIST BELOW >>> */
+                        /* >>> NOT A BUG LIST BELOW >>> */
                         {
                             "type": "TableRowWidget",
                             "name": "RowTab",
@@ -308,32 +276,32 @@
                                 }
                             },
                             "children": [
-                              {
-                                "type": "TextBoxWidget",
-                                "name": "TextBox",
-                                "fields": {
-                                  "text": "Skills with no Class restrictions (Oskills) granted by items are limited to +3 if used by a Class it belongs to. It is hard coded\n\nPaladins take damage when using necromancy\n",
-                                  "style": {
-                                    "pointSize": 28,
-                                    "spacing": {
-                                      "leading": 0.95,
-                                      "kerning": 0.95
-                                    },
-                                    "alignment": {
-                                      "h": "left",
-                                      "v": "center"
-                                    },
-                                    "options": {
-                                      "lineWrap": true,
-                                      "newlineHandling": "standard",
-                                      "pipeCharacterBehavior": "handle"
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "TextBox",
+                                    "fields": {
+                                        "text": "@strNotBugBody",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
                                     }
-                                   }
                                 }
-                              }
                             ]
                         }
-/* <<< NOT A BUG LIST OVER <<< */
+                        /* <<< NOT A BUG LIST OVER <<< */
                     ]
                 }
             ]
