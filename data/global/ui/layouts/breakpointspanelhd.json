@@ -42,7 +42,7 @@
         {
             "type": "TextBoxWidget", "name": "Title",
             "fields": {
-                "text": "@Breakpoints",
+                "text": "Breakpoints",
                 "rect": { "x": 260, "y": 60, "width": 665, "height": 85 },
                 "style": "$StyleTitleBlock"
             }
@@ -67,7 +67,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "mf",
                                     "fields": {
-                                        "text": "@strBPMFHead",
+                                        "text": "Magic Find(MF):",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -82,8 +82,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf1",
                                     "fields": {
-                                        "text": "@strBPMFInfo1",
-                                        "rect": { "x": 20 },
+                                        "text": "MF is the +% Increased Chance Items Roll Magic or Better",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -98,8 +98,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf2",
                                     "fields": {
-                                        "text": "@strBPMFInfo2",
-                                        "rect": { "x": 20 },
+                                        "text": "DOES NOT affect chance of base tier/runes/orbs/misc items",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -114,8 +114,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf3",
                                     "fields": {
-                                        "text": "@strBPMFInfo3",
-                                        "rect": { "x": 20 },
+                                        "text": "After the 400-600 mark, MF has strong diminishing returns",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -130,8 +130,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf100",
                                     "fields": {
-                                        "text": "@strBPMFRow1",
-                                        "rect": { "x": 20 },
+                                        "text": "100% MF: Magic 100%, Rare 85%, Set 83%, Uniques 71%",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -146,8 +146,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf200",
                                     "fields": {
-                                        "text": "@strBPMFRow2",
-                                        "rect": { "x": 20 },
+                                        "text": "200% MF: Magic 200%, Rare 150%, Set 142%, Uniques 111%",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -162,8 +162,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf300",
                                     "fields": {
-                                        "text": "@strBPMFRow3",
-                                        "rect": { "x": 20 },
+                                        "text": "300% MF: Magic 300%, Rare 200%, Set 187%, Uniques 136%",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -178,8 +178,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf400",
                                     "fields": {
-                                        "text": "@strBPMFRow4",
-                                        "rect": { "x": 20 },
+                                        "text": "400% MF: Magic 400%, Rare 240%, Set 222%, Uniques 153%",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -194,8 +194,8 @@
                                {
                                     "type": "TextBoxWidget", "name": "mf500",
                                     "fields": {
-                                        "text": "@strBPMFRow5",
-                                        "rect": { "x": 20 },
+                                        "text": "500% MF: Magic 500%, Rare 272%, Set 250%, Uniques 166%",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -208,10 +208,10 @@
                             "type": "TableRowWidget", "name": "Breakpoint Row",
                             "children": [
                                {
-                                    "type": "TextBoxWidget", "name": "mf600",
+                                    "type": "TextBoxWidget", "name": "mf500",
                                     "fields": {
-                                        "text": "@strBPMFRow6",
-                                        "rect": { "x": 20 },
+                                        "text": "600% MF: Magic 600%, Rare 300%, Set 272%, Uniques 176%",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -226,7 +226,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Sorceress",
                                     "fields": {
-                                        "text": "@Sorceress",
+                                        "text": "Sorceress:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -242,7 +242,7 @@
                                     "type": "TextBoxWidget", "name": "SorceressFCR",
                                     "fields": {
                                         "text": "FCR %: 9/20/37/63/105/200",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -258,7 +258,7 @@
                                     "type": "TextBoxWidget", "name": "SorceressFCRlight",
                                     "fields": {
                                         "text": "FCR Light %: 7/15/23/35/52/78/117/194",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -274,7 +274,7 @@
                                     "type": "TextBoxWidget", "name": "SorceressFHR",
                                     "fields": {
                                         "text": "FHR %: 5/9/14/20/30/42/60/86/142/280/1480",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -290,7 +290,7 @@
                                     "type": "TextBoxWidget", "name": "SorceressFBR",
                                     "fields": {
                                         "text": "FBR %: 7/15/27/48/86/200/4680",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -305,7 +305,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Paladin",
                                     "fields": {
-                                        "text": "@Paladin",
+                                        "text": "Paladin:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -321,7 +321,7 @@
                                     "type": "TextBoxWidget", "name": "PaladinFCR",
                                     "fields": {
                                         "text": "FCR %: 9/18/30/48/75/125",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -337,7 +337,7 @@
                                     "type": "TextBoxWidget", "name": "PaladinFHR",
                                     "fields": {
                                         "text": "FHR %: 7/15/27/48/86/200/4680",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -353,7 +353,7 @@
                                     "type": "TextBoxWidget", "name": "PaladinFBR",
                                     "fields": {
                                         "text": "FBR %: 13/32/86/600",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -369,7 +369,7 @@
                                     "type": "TextBoxWidget", "name": "PaladinFBRhs",
                                     "fields": {
                                         "text": "FBR Holy Shield %: 86",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -384,7 +384,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Amazon",
                                     "fields": {
-                                        "text": "@Amazon",
+                                        "text": "Amazon:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -400,7 +400,7 @@
                                     "type": "TextBoxWidget", "name": "AmazonFCR",
                                     "fields": {
                                         "text": "FCR %: 7/14/22/32/48/68/99/152",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -416,7 +416,7 @@
                                     "type": "TextBoxWidget", "name": "AmazonFHR",
                                     "fields": {
                                         "text": "FHR %: 6/13/20/32/52/86/174/600",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -432,7 +432,7 @@
                                     "type": "TextBoxWidget", "name": "AmazonFBR",
                                     "fields": {
                                         "text": "FBR %: 13/32/86/600",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -447,8 +447,8 @@
                                 {
                                     "type": "TextBoxWidget", "name": "AmazonFBRone",
                                     "fields": {
-                                        "text": "FBR Hit by 1-Hand %: 4/6/11/15/23/29/40/56/80/120/200",
-                                        "rect": { "x": 20 },
+                                        "text": "FBR Hit by 1-Hand %: 4/6/11/15/23/29/40/56/80/120/200/480",
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -463,7 +463,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Assassin",
                                     "fields": {
-                                        "text": "@Assassin",
+                                        "text": "Assassin:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -479,7 +479,7 @@
                                     "type": "TextBoxWidget", "name": "AssassinFCR",
                                     "fields": {
                                         "text": "FCR %: 8/16/27/42/65/102/174",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -495,7 +495,7 @@
                                     "type": "TextBoxWidget", "name": "AssassinFHR",
                                     "fields": {
                                         "text": "FHR %: 7/15/27/48/86/200/4680",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -511,7 +511,7 @@
                                     "type": "TextBoxWidget", "name": "AssassinFBR",
                                     "fields": {
                                         "text": "FBR %: 13/32/86/600",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -526,7 +526,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Barbarian",
                                     "fields": {
-                                        "text": "@Barbarian",
+                                        "text": "Barbarian:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -542,7 +542,7 @@
                                     "type": "TextBoxWidget", "name": "BarbarianFCR",
                                     "fields": {
                                         "text": "FCR %: 9/20/37/63/105/200",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -558,7 +558,7 @@
                                     "type": "TextBoxWidget", "name": "BarbarianFHR",
                                     "fields": {
                                         "text": "FHR %: 7/15/27/48/86/200/4680",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -574,7 +574,7 @@
                                     "type": "TextBoxWidget", "name": "BarbarianFBR",
                                     "fields": {
                                         "text": "FBR %: 9/20/42/86/280",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -589,7 +589,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Necromancer",
                                     "fields": {
-                                        "text": "@Necromancer",
+                                        "text": "Necromancer:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -605,7 +605,7 @@
                                     "type": "TextBoxWidget", "name": "NecromancerFCR",
                                     "fields": {
                                         "text": "FCR %: 9/18/30/48/75/125",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -621,7 +621,7 @@
                                     "type": "TextBoxWidget", "name": "NecromancerFCRvamp",
                                     "fields": {
                                         "text": "FCR Vampire %: 6/11/18/24/35/48/65/86/120/180",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -637,7 +637,7 @@
                                     "type": "TextBoxWidget", "name": "NecromancerFHR",
                                     "fields": {
                                         "text": "FHR %: 5/10/16/26/39/56/86/152/377",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -653,7 +653,7 @@
                                     "type": "TextBoxWidget", "name": "NecromancerFBR",
                                     "fields": {
                                         "text": "FBR %: 6/13/20/32/52/86/174/600",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -668,7 +668,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Druid",
                                     "fields": {
-                                        "text": "@Druid",
+                                        "text": "Druid:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -684,7 +684,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFCR",
                                     "fields": {
                                         "text": "FCR %: 4/10/19/30/46/68/99/163",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -700,7 +700,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFCRbear",
                                     "fields": {
                                         "text": "FCR Bear %: 7/15/26/40/63/99/163",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -716,7 +716,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFCRwolf",
                                     "fields": {
                                         "text": "FCR Wolf %: 6/14/26/40/60/95/157",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -732,7 +732,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFHR",
                                     "fields": {
                                         "text": "FHR %: 5/10/16/26/39/56/86/152/377",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -748,7 +748,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFHRone",
                                     "fields": {
                                         "text": "FHR Hit by 1-hand %: 3/7/13/19/29/42/63/99/174/456",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -764,7 +764,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFHRbear",
                                     "fields": {
                                         "text": "FHR Bear %: 5/10/16/24/37/54/86/152/360",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -780,7 +780,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFHRwolf",
                                     "fields": {
                                         "text": "FHR Wolf %: 9/20/42/86/280",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -796,7 +796,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFBR",
                                     "fields": {
                                         "text": "FBR %: 6/13/20/32/52/86/174/600",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -812,7 +812,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFBRbear",
                                     "fields": {
                                         "text": "FBR Bear %: 5/10/16/27/40/65/109/223",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -828,7 +828,7 @@
                                     "type": "TextBoxWidget", "name": "DruidFBRwolf",
                                     "fields": {
                                         "text": "FBR Wolf %: 7/15/27/48/86/200",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -843,7 +843,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Warlock",
                                     "fields": {
-                                        "text": "@Warlock",
+                                        "text": "Warlock:",
                                         "style": {
                                             "fontColor": "$FontColorGold",
                                             "pointSize": "$MediumFontSize"
@@ -859,7 +859,7 @@
                                     "type": "TextBoxWidget", "name": "WarlockFCR",
                                     "fields": {
                                         "text": "FCR %: 9/18/30/48/75/125",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -875,7 +875,7 @@
                                     "type": "TextBoxWidget", "name": "WarlockFHR",
                                     "fields": {
                                         "text": "FHR %: 5/10/16/26/39/56/86/152/377",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
@@ -891,7 +891,7 @@
                                     "type": "TextBoxWidget", "name": "WarlockFBR",
                                     "fields": {
                                         "text": "FBR %: 6/13/20/32/52/86",
-                                        "rect": { "x": 20 },
+                                        "rect": { "x": 40 },
                                         "style": {
                                             "fontColor": "$FontColorWhite",
                                             "pointSize": "$SmallFontSize"
