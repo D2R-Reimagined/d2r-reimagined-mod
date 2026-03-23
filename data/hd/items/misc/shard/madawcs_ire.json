@@ -3,7 +3,7 @@
         "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model"
+                "path": "data/hd/items/misc/shard/madawcs_ire/madawcs_ire.model"
             }
         ],
         "skeletons": [
@@ -14,19 +14,19 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ALB.texture"
+                "path": "data/hd/items/misc/shard/madawcs_ire/madawcs_ire_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_NRM.texture"
+                "path": "data/hd/items/misc/shard/madawcs_ire/madawcs_ire_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ORM.texture"
+                "path": "data/hd/items/misc/shard/madawcs_ire/madawcs_ire_ORM.texture"
             }
         ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json"
+                "path": "data/hd/items/dropped_items/dropped_items_jadestatue_flip.json"
             }
         ],
         "variantdata": [],
@@ -34,17 +34,17 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "flawed_saphire",
+    "name": "madawcs_ire",
     "entities": [
         {
             "type": "Entity",
-            "name": "entity_root",
-            "id": 1953044404,
+            "name": "root_entity",
+            "id": 2594885322,
             "components": [
                 {
                     "type": "UnitRootComponent",
-                    "name": "component_root",
-                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json",
+                    "name": "root_entity_UnitRootComponent",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_jadestatue_flip.json",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
                         "x": 0.0,
@@ -59,21 +59,42 @@
                 },
                 {
                     "type": "SkeletonDefinitionComponent",
-                    "name": "component_skeleton",
+                    "name": "root_entity_SkeletonDefinition",
                     "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
                     "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "root_entity_TransformDefinition",
+                    "position": {
+                        "x": 0.125,
+                        "y": 0.0,
+                        "z": 0.1
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0348994955,
+                        "z": 0.0,
+                        "w": 0.999390841
+                    },
+                    "scale": {
+                        "x": 0.9,
+                        "y": 0.9,
+                        "z": 0.9
+                    },
+                    "inheritOnlyPosition": false
                 }
             ]
         },
         {
             "type": "Entity",
-            "name": "entity_model",
-            "id": 2110207902,
+            "name": "model_entity",
+            "id": 3450143619,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_flawed_saphire",
-                    "filename": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/items/misc/shard/madawcs_ire/madawcs_ire.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,

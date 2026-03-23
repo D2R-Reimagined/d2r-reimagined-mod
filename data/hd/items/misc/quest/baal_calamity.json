@@ -1,26 +1,32 @@
 {
     "dependencies": {
-        "particles": [
-            {
-                "path": "data/hd/vfx/particles/overlays/object/horadric_light/fx_horadric_light.particles"
-            }
-        ],
+        "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/quest/baal_calamity/soul.model"
+                "path": "data/hd/items/dropped_items/festering_essence_of_destruction.model"
             }
         ],
         "skeletons": [
             {
-                "path": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+                "path": "data/hd/items/dropped_items/skeleton/dropped_items_essence.skeleton"
             }
         ],
         "animations": [],
-        "textures": [],
+        "textures": [
+            {
+                "path": "data/hd/items/misc/quest/festering_essence_of_destruction/misc_festering_essence_of_destruction_ALB.texture"
+            },
+            {
+                "path": "data/hd/items/misc/quest/festering_essence_of_destruction/misc_festering_essence_of_destruction_NRM.texture"
+            },
+            {
+                "path": "data/hd/items/misc/quest/festering_essence_of_destruction/misc_festering_essence_of_destruction_ORM.texture"
+            }
+        ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json"
+                "path": "data/hd/items/dropped_items/dropped_items_quest_dust_flip.json"
             }
         ],
         "variantdata": [],
@@ -28,17 +34,17 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "baal_calamity",
+    "name": "festering_essence_of_destruction",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 3362269685,
+            "id": 3594192888,
             "components": [
                 {
                     "type": "UnitRootComponent",
                     "name": "component_root",
-                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_quest_dust_flip.json",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
                         "x": 0.0,
@@ -54,21 +60,22 @@
                 {
                     "type": "SkeletonDefinitionComponent",
                     "name": "component_skeleton",
-                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items_essence.skeleton",
+                    "enableWeaponAttachInertialization": false
                 },
                 {
                     "type": "TransformDefinitionComponent",
                     "name": "entity_root_TransformDefinition",
                     "position": {
-                        "x": 0.0,
-                        "y": -0.7,
-                        "z": 0.0
+                        "x": -0.2,
+                        "y": 0.0,
+                        "z": 0.15
                     },
                     "orientation": {
                         "x": 0.0,
-                        "y": -0.95105654,
+                        "y": 0.0,
                         "z": 0.0,
-                        "w": 0.309017
+                        "w": 1.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -82,12 +89,12 @@
         {
             "type": "Entity",
             "name": "entity_model",
-            "id": 464378974,
+            "id": 848836899,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_soul",
-                    "filename": "data/hd/items/misc/quest/baal_calamity/soul.model",
+                    "name": "component_model_festering_essence_of_destruction",
+                    "filename": "data/hd/items/dropped_items/festering_essence_of_destruction.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,

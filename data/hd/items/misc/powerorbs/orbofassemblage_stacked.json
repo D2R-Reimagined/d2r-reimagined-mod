@@ -1,13 +1,9 @@
 {
     "dependencies": {
-        "particles": [
-            {
-                "path": "data/hd/vfx/particles/overlays/object/horadric_light/fx_horadric_light.particles"
-            }
-        ],
+        "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/quest/orbofassemblage/soul.model"
+                "path": "data/hd/items/misc/gem/flawed_emerald/flawed_emerald.model"
             }
         ],
         "skeletons": [
@@ -18,19 +14,19 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/body_part/spleen/spleen_ALB.texture"
+                "path": "data/hd/items/misc/gem/flawed_emerald/misc_flawed_emerald_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/body_part/spleen/spleen_NRM.texture"
+                "path": "data/hd/items/misc/gem/flawed_emerald/misc_flawed_emerald_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/body_part/spleen/spleen_ORM.texture"
+                "path": "data/hd/items/misc/gem/flawed_emerald/misc_flawed_emerald_ORM.texture"
             }
         ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json"
+                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_nw.json"
             }
         ],
         "variantdata": [],
@@ -38,17 +34,17 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "orbofassemblage",
+    "name": "flawed_emerald",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 3362269685,
+            "id": 3988208822,
             "components": [
                 {
                     "type": "UnitRootComponent",
                     "name": "component_root",
-                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_potions_flip_ne.json",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_nw.json",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
                         "x": 0.0,
@@ -64,40 +60,20 @@
                 {
                     "type": "SkeletonDefinitionComponent",
                     "name": "component_skeleton",
-                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
-                },
-                {
-                    "type": "TransformDefinitionComponent",
-                    "name": "entity_root_TransformDefinition",
-                    "position": {
-                        "x": 0.0,
-                        "y": -0.7,
-                        "z": 0.0
-                    },
-                    "orientation": {
-                        "x": 0.0,
-                        "y": -0.95105654,
-                        "z": 0.0,
-                        "w": 0.309017
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0,
-                        "z": 1.0
-                    },
-                    "inheritOnlyPosition": false
+                    "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
+                    "enableWeaponAttachInertialization": false
                 }
             ]
         },
         {
             "type": "Entity",
             "name": "entity_model",
-            "id": 464378974,
+            "id": 1238107110,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_soul",
-                    "filename": "data/hd/items/misc/quest/orbofassemblage/soul.model",
+                    "name": "component_model_flawed_emerald",
+                    "filename": "data/hd/items/misc/gem/flawed_emerald/flawed_emerald.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
