@@ -3,7 +3,7 @@
         "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model"
+                "path": "data/hd/items/misc/body_part/fragment_fire/frag_fire.model"
             }
         ],
         "skeletons": [
@@ -14,19 +14,19 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ALB.texture"
+                "path": "data/hd/items/misc/body_part/fragment_fire/misc_frag_fire_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_NRM.texture"
+                "path": "data/hd/items/misc/body_part/fragment_fire/misc_frag_fire_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ORM.texture"
+                "path": "data/hd/items/misc/body_part/fragment_fire/misc_frag_fire_ORM.texture"
             }
         ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json"
+                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_se.json"
             }
         ],
         "variantdata": [],
@@ -34,17 +34,17 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "flawed_saphire",
+    "name": "fragment_fire",
     "entities": [
         {
             "type": "Entity",
-            "name": "entity_root",
-            "id": 1953044404,
+            "name": "root_entity",
+            "id": 2389468430,
             "components": [
                 {
                     "type": "UnitRootComponent",
-                    "name": "component_root",
-                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json",
+                    "name": "root_entity_UnitRootComponent",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_se.json",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
                         "x": 0.0,
@@ -59,21 +59,42 @@
                 },
                 {
                     "type": "SkeletonDefinitionComponent",
-                    "name": "component_skeleton",
+                    "name": "root_entity_SkeletonDefinition",
                     "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
                     "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "root_entity_TransformDefinition",
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": -0.9
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
                 }
             ]
         },
         {
             "type": "Entity",
-            "name": "entity_model",
-            "id": 2110207902,
+            "name": "model_entity",
+            "id": 4116958847,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_flawed_saphire",
-                    "filename": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/items/misc/body_part/fragment_fire/frag_fire.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
