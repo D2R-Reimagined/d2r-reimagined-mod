@@ -3,7 +3,7 @@
         "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model"
+                "path": "data/hd/items/misc/shard/mote_of_destruction/mote_of_destruction.model"
             }
         ],
         "skeletons": [
@@ -14,19 +14,19 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ALB.texture"
+                "path": "data/hd/items/misc/shard/mote_of_destruction/misc_mote_of_destruction_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_NRM.texture"
+                "path": "data/hd/items/misc/shard/mote_of_destruction/misc_mote_of_destruction_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ORM.texture"
+                "path": "data/hd/items/misc/shard/mote_of_destruction/misc_mote_of_destruction_ORM.texture"
             }
         ],
         "physics": [],
         "json": [
             {
-                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json"
+                "path": "data/hd/items/dropped_items/dropped_items_helms_flip_nw.json"
             }
         ],
         "variantdata": [],
@@ -34,17 +34,17 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "flawed_saphire",
+    "name": "mote_of_destruction",
     "entities": [
         {
             "type": "Entity",
-            "name": "entity_root",
-            "id": 1953044404,
+            "name": "root_entity",
+            "id": 423526644,
             "components": [
                 {
                     "type": "UnitRootComponent",
-                    "name": "component_root",
-                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json",
+                    "name": "root_entity_UnitRootComponent",
+                    "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_nw.json",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
                         "x": 0.0,
@@ -59,7 +59,7 @@
                 },
                 {
                     "type": "SkeletonDefinitionComponent",
-                    "name": "component_skeleton",
+                    "name": "root_entity_SkeletonDefinition",
                     "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
                     "enableWeaponAttachInertialization": false
                 }
@@ -67,13 +67,13 @@
         },
         {
             "type": "Entity",
-            "name": "entity_model",
-            "id": 2110207902,
+            "name": "model_entity",
+            "id": 1295627693,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_flawed_saphire",
-                    "filename": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/items/misc/shard/mote_of_destruction/mote_of_destruction.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,

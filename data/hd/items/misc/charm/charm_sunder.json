@@ -3,7 +3,7 @@
         "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model"
+                "path": "data/hd/items/misc/charm/charm_large/charm_large.model"
             }
         ],
         "skeletons": [
@@ -14,13 +14,13 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ALB.texture"
+                "path": "data/hd/items/misc/charm/charm_large/misc_charm_large_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_NRM.texture"
+                "path": "data/hd/items/misc/charm/charm_large/misc_charm_large_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ORM.texture"
+                "path": "data/hd/items/misc/charm/charm_large/misc_charm_large_ORM.texture"
             }
         ],
         "physics": [],
@@ -34,12 +34,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "flawed_saphire",
+    "name": "charm_large",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1953044404,
+            "id": 1876325760,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -62,18 +62,39 @@
                     "name": "component_skeleton",
                     "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
                     "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": -0.382683426,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
                 }
             ]
         },
         {
             "type": "Entity",
             "name": "entity_model",
-            "id": 2110207902,
+            "id": 996691434,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_flawed_saphire",
-                    "filename": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model",
+                    "name": "component_model_charm_large",
+                    "filename": "data/hd/items/misc/charm/charm_large/charm_large.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,

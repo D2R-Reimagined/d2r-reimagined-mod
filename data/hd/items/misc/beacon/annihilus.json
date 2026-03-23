@@ -3,7 +3,7 @@
         "particles": [],
         "models": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model"
+                "path": "data/hd/items/misc/quest/mephisto_soul_stone/mephisto_soul_stone.model"
             }
         ],
         "skeletons": [
@@ -14,13 +14,13 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ALB.texture"
+                "path": "data/hd/items/misc/quest/mephisto_soul_stone/misc_mephisto_soul_stone_ALB.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_NRM.texture"
+                "path": "data/hd/items/misc/quest/mephisto_soul_stone/misc_mephisto_soul_stone_NRM.texture"
             },
             {
-                "path": "data/hd/items/misc/gem/flawed_saphire/misc_flawed_saphire_ORM.texture"
+                "path": "data/hd/items/misc/quest/mephisto_soul_stone/misc_mephisto_soul_stone_ORM.texture"
             }
         ],
         "physics": [],
@@ -34,12 +34,12 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "flawed_saphire",
+    "name": "mephisto_soul_stone",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 1953044404,
+            "id": 2963572539,
             "components": [
                 {
                     "type": "UnitRootComponent",
@@ -62,18 +62,39 @@
                     "name": "component_skeleton",
                     "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton",
                     "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.165,
+                        "y": 0.0,
+                        "z": 0.165
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.852640152,
+                        "z": 0.0,
+                        "w": 0.522498548
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
                 }
             ]
         },
         {
             "type": "Entity",
             "name": "entity_model",
-            "id": 2110207902,
+            "id": 1444153583,
             "components": [
                 {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_flawed_saphire",
-                    "filename": "data/hd/items/misc/gem/flawed_saphire/flawed_saphire.model",
+                    "name": "component_model_mephisto_soul_stone",
+                    "filename": "data/hd/items/misc/quest/mephisto_soul_stone/mephisto_soul_stone.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
