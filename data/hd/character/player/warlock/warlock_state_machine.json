@@ -5492,8 +5492,14 @@
             "skillIndex": 106,
             "stepIndex": 0,
             "animationBindings": {
+                "hth": [
+                    "hth_attack1"
+                ],
                 "1hs": [
                     "1hs_attack1"
+                ],
+                "1ht": [
+                    "1ht_attack1"
                 ],
                 "stf": [
                     "stf_attack1",
@@ -5506,17 +5512,7 @@
                 "2ht": [
                     "2ht_attack1",
                     "2ht_attack2"
-                ],
-                "hth": [],
-                "bow": [],
-                "1ht": [],
-                "xbw": [],
-                "1js": [],
-                "1jt": [],
-                "1ss": [],
-                "1st": [],
-                "ht1": [],
-                "ht2": []
+                ]
             },
             "enterEvents": [],
             "exitEvents": [],
@@ -5534,8 +5530,14 @@
             "skillIndex": 106,
             "stepIndex": 1,
             "animationBindings": {
+                "hth": [
+                    "hth_attack1"
+                ],
                 "1hs": [
                     "1hs_attack1"
+                ],
+                "1ht": [
+                    "1ht_attack1"
                 ],
                 "stf": [
                     "stf_attack1",
@@ -5548,17 +5550,7 @@
                 "2ht": [
                     "2ht_attack1",
                     "2ht_attack2"
-                ],
-                "hth": [],
-                "bow": [],
-                "1ht": [],
-                "xbw": [],
-                "1js": [],
-                "1jt": [],
-                "1ss": [],
-                "1st": [],
-                "ht1": [],
-                "ht2": []
+                ]
             },
             "enterEvents": [],
             "exitEvents": [],
@@ -6163,6 +6155,52 @@
                 ],
                 "1st": [
                     "1st_whirlwind"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": [],
+            "exitBlendType": 0
+        },
+        {
+            "type": "AnimationState",
+            "name": "AnimationState025",
+            "_name": "Strafe_FirstAttack",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 44,
+            "enableVfxAttributes": false,
+            "modeId": 18,
+            "skillIndex": 26,
+            "stepIndex": 0,
+            "animationBindings": {
+                "bow": [
+                    "bow_attack1"
+                ],
+                "xbw": [
+                    "xbw_attack1"
+                ]
+            },
+            "enterEvents": [],
+            "exitEvents": [],
+            "exitBlendType": 0
+        },
+        {
+            "type": "AnimationState",
+            "name": "AnimationState026",
+            "_name": "Strafe_FollowUpAttack",
+            "audioId": "",
+            "loopCount": 1,
+            "stateId": 45,
+            "enableVfxAttributes": false,
+            "modeId": 18,
+            "skillIndex": 26,
+            "stepIndex": 1,
+            "animationBindings": {
+                "bow": [
+                    "bow_attack1"
+                ],
+                "xbw": [
+                    "xbw_attack1"
                 ]
             },
             "enterEvents": [],
