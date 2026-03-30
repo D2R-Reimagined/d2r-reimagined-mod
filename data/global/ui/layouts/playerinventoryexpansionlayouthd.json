@@ -10,10 +10,7 @@
             "type": "ClickCatcherWidget", "name": "click_catcher"
         },
         {
-            "type": "ImageWidget", "name": "background",
-            "fields": {
-                "filename": "PANEL\\Inventory\\Background_Expanded2"
-            }
+            "type": "ImageWidget", "name": "background"
         },
         {
             "type": "ImageWidget", "name": "RightHinge"
@@ -63,21 +60,21 @@
         {
             "type": "ImageWidget", "name": "background_right_arm_selected",
             "fields": {
-                "rect": { "x": 97, "y": 290 },
+                "rect": { "x": 100, "y": 104 },
                 "filename": "PANEL\\Inventory\\Tab"
             }
         },
         {
             "type": "ImageWidget", "name": "background_left_arm_selected",
             "fields": {
-                "rect": { "x": 850, "y": 290 },
+                "rect": { "x": 852, "y": 104 },
                 "filename": "PANEL\\Inventory\\Tab"
             }
         },
         {
             "type": "ImageWidget", "name": "background_right_arm",
             "fields": {
-                "rect": { "x": 97, "y": 290 },
+                "rect": { "x": 100, "y": 104 },
                 "filename": "PANEL\\Inventory\\Tab",
                 "frame": 1
             }
@@ -85,7 +82,7 @@
         {
             "type": "ImageWidget", "name": "background_left_arm",
             "fields": {
-                "rect": { "x": 850, "y": 290 },
+                "rect": { "x": 852, "y": 104 },
                 "filename": "PANEL\\Inventory\\Tab",
                 "frame": 1
             }
@@ -93,7 +90,7 @@
         {
             "type": "TextBoxWidget", "name": "text_i_left",
             "fields": {
-                "rect": { "x": 112, "y": 325, "width": 84 },
+                "rect": { "x": 112, "y": 130, "width": 84 },
                 "text": "I",
                 "style": "$StyleWeaponSwapTabs"
             }
@@ -101,7 +98,7 @@
         {
             "type": "TextBoxWidget", "name": "text_ii_left",
             "fields": {
-                "rect": { "x": 218, "y": 325, "width": 84 },
+                "rect": { "x": 218, "y": 130, "width": 84 },
                 "text": "II",
                 "style": "$StyleWeaponSwapTabs"
             }
@@ -109,7 +106,7 @@
         {
             "type": "TextBoxWidget", "name": "text_i_right",
             "fields": {
-                "rect": { "x": 862, "y": 325, "width": 84 },
+                "rect": { "x": 864, "y": 130, "width": 84 },
                 "text": "I",
                 "style": "$StyleWeaponSwapTabs"
             }
@@ -117,7 +114,7 @@
         {
             "type": "TextBoxWidget", "name": "text_ii_right",
             "fields": {
-                "rect": { "x": 970, "y": 325, "width": 84 },
+                "rect": { "x": 970, "y": 130, "width": 84 },
                 "text": "II",
                 "style": "$StyleWeaponSwapTabs"
             }
@@ -125,13 +122,13 @@
         {
             "type": "FocusableWidget", "name": "weaponswap_right_arm",
             "fields": {
-                "rect": { "x": 97, "y": 300, "width": 215, "height": 48 }
+                "rect": { "x": 100, "y": 104, "width": 215, "height": 48 }
             }
         },
         {
             "type": "FocusableWidget", "name": "weaponswap_left_arm",
             "fields": {
-                "rect": { "x": 850, "y": 300, "width": 215, "height": 48 }
+                "rect": { "x": 852, "y": 104, "width": 215, "height": 48 }
             }
         }
     ]
