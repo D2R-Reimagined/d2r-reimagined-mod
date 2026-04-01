@@ -2,7 +2,7 @@
     "type": "BankPanel", "name": "BankOriginalLayout",
     "fields": {
         "priority": 5,
-        "rect": "$LeftPanelRectST",
+        "rect": "$LeftPanelRect",
         "anchor": "$LeftPanelAnchor"
     },
     "children": [
@@ -15,7 +15,8 @@
         {
             "type": "ImageWidget", "name": "background",
             "fields": {
-                "filename": "PANEL\\Stash\\StashPanel_BG2"
+                "filename": "PANEL\\Stash\\StashPanel_BG2",
+                "rect": { "x": 0, "y": -210 }
             }
         },
         {
@@ -28,7 +29,7 @@
         {
             "type": "TextBoxWidget", "name": "title",
             "fields": {
-                "rect": { "x": 877, "y": 105 },
+                "rect": { "x": 877, "y": -112 },
                 "style": "$StyleTitleBlock",
                 "text": "@stash"
             }
@@ -53,7 +54,7 @@
         {
             "type": "ButtonWidget", "name": "close",
             "fields": {
-                "rect": { "x": 1669, "y": 10 },
+                "rect": { "x": 1669, "y": -200 },
                 "filename": "PANEL\\closebtn_4x",
                 "hoveredFrame": 3,
                 "tooltipString": "@strClose",
