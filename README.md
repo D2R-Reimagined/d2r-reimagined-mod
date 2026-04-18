@@ -21,5 +21,5 @@ This repository contains a number of tools that can be used to help develop the 
 These tools include the ability to compare key entries for strings between two files, copying english names to other languages, and copying the files from this git repository into your d2r install directory.
 
 ### Launcher
-A beta launcher for this mod can be found here h[ttps://github.com/D2R-Reimagined/reimagined-launcher](https://github.com/D2R-Reimagined/reimagined-launcher)
+A beta launcher for this mod can be found here [https://github.com/D2R-Reimagined/reimagined-launcher](https://github.com/D2R-Reimagined/reimagined-launcher)
 This can make your installation fast and easy and allow you to make your own edits to your Reimagined Playthrough
