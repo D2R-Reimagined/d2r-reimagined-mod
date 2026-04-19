@@ -1,0 +1,62 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/blood_splash/vfx_blood_boil.particles"
+            }
+        ],
+        "models": [],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/distortion/T_FX_goopy_distortion_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "bloodsplash",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3376473451,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "entity_root_UnitRoot",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx",
+            "id": 2534396115,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/blood_splash/vfx_blood_boil.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}
