@@ -2,6 +2,7 @@
     "dependencies": {
         "particles": [
             {
+                "path": "data/hd/vfx/particles/missiles/holy_bolt_missile/HolyBolt_missile_b.particles"
             }
         ],
         "models": [
@@ -13,7 +14,8 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/vfx/textures/gradient/T_FX_Bluelightning_Gradient.texture"
+                "path": "data/hd/vfx/textures/gradient/T_FX_Bluelightning_Gradient.texture",
+                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
             }
         ],
         "physics": [],
@@ -80,9 +82,43 @@
                         "w": 1.0
                     },
                     "scale": {
-                        "x": 1.5,
-                        "y": 1.5,
-                        "z": 1.5
+                        "x": 1.8,
+                        "y": 1.8,
+                        "z": 1.8
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 1032371411,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "component_vfx1",
+                    "filename": "data/hd/vfx/particles/missiles/holy_bolt_missile/HolyBolt_missile_b.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0.0,
+                        "y": 3.6,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
                     },
                     "inheritOnlyPosition": false
                 }
