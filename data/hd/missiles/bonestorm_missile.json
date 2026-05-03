@@ -1,1 +1,95 @@
-{"dependencies":{"particles":[{"path":"data/hd/vfx/particles/overlays/necro/bonearmor_front/vfx_BoneArmor_Front.particles"}],"models":[{"path":"data/hd/vfx/meshes/lit_mesh/bonearmor/bonearmor.model"}],"skeletons":[{"path":"data/hd/vfx/meshes/lit_mesh/bonearmor/skeleton/bonearmor.skeleton"}],"animations":[{"path":"data/hd/vfx/meshes/lit_mesh/bonearmor/animation/bone_armor_rig.animation"}],"textures":[{"path":"data/hd/vfx/meshes/lit_mesh/bonearmor/textures/bonearmor_ALB.texture"},{"path":"data/hd/vfx/textures/graphic/t_fx_graphic_skulls_bonestbs.texture"}],"physics":[],"json":[],"variantdata":[],"objecteffects":[],"other":[]},"type":"UnitDefinition","name":"bonestorm_missile","entities":[{"type":"Entity","name":"entity_root","id":53437847,"components":[{"type":"UnitRootComponent","name":"component_root","state_machine_filename":"","doNotInheritRotation":false,"rotationOverride":{"x":0,"y":0.3826834,"z":0,"w":0.9238795},"doNotUseHDHeight":false,"hideAllMeshWhenInOpenedMode":false,"onCreateEventName":"","animations":[]}]},{"type":"Entity","name":"entity_vfx1","id":925538895,"components":[{"type":"TransformDefinitionComponent","name":"component_transform1","position":{"x":0,"y":2.25,"z":0},"orientation":{"x":0,"y":0,"z":0,"w":1},"scale":{"x":0.75,"y":0.75,"z":0.75},"inheritOnlyPosition":false},{"type":"VfxDefinitionComponent","name":"entity_vfx1_VfxDefinition","filename":"data/hd/vfx/particles/overlays/necro/bonearmor_front/vfx_BoneArmor_Front.particles","hardKillOnDestroy":false}]}]}
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/overlays/necro/bonearmor_front/vfx_BoneArmor_Front.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/vfx/meshes/lit_mesh/bonearmor/bonearmor.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/vfx/meshes/lit_mesh/bonearmor/skeleton/bonearmor.skeleton"
+            }
+        ],
+        "animations": [
+            {
+                "path": "data/hd/vfx/meshes/lit_mesh/bonearmor/animation/bone_armor_rig.animation"
+            }
+        ],
+        "textures": [
+            {
+                "path": "data/hd/vfx/meshes/lit_mesh/bonearmor/textures/bonearmor_ALB.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "bonestorm_missile",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 53437847,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0,
+                        "y": 0.3826834,
+                        "z": 0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 925538895,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {
+                        "x": 0,
+                        "y": 2.25,
+                        "z": 0
+                    },
+                    "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                    },
+                    "scale": {
+                        "x": 0.75,
+                        "y": 0.75,
+                        "z": 0.75
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/overlays/necro/bonearmor_front/vfx_BoneArmor_Front.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        }
+    ]
+}
