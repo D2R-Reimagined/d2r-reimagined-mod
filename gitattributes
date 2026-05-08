@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# Encoding & line-ending policy for the d2r-reimagined-mod data tree.
+#
+# Investigation of every *.txt and *.json under data/ showed:
+#   *.txt   : 100% ASCII / valid UTF-8 (no BOM), CRLF line endings.
+#   *.json  : ASCII or UTF-8 (one stray UTF-8 BOM file), CRLF line endings.
+#
+# D2R itself loads these files at runtime; its excel/.txt and JSON parsers
+# expect UTF-8 *without* a BOM and tolerate (in fact prefer) CRLF endings.
+#
+# This .gitattributes enforces that contract regardless of the editor or OS
+# a contributor uses:
+#   * `working-tree-encoding=UTF-8` -> if anyone commits a UTF-16 (or other)
+#     file, Git transcodes it to UTF-8 in the stored blob; checkout always
+#     materializes UTF-8 on disk.
+#   * `text eol=crlf` -> the blob is normalized to LF on commit and checked
+#     out as CRLF, so line endings stay stable cross-platform.
+#
+# After landing this file for the first time, run once to renormalize:
+#     git add --renormalize .
+#     git commit -m "chore: enforce UTF-8 + CRLF on data files"
+# ---------------------------------------------------------------------------
+
+# Default: let Git auto-detect text vs binary for anything not listed below.
+* text=auto
+
+# D2R excel / TSV data tables and JSON layouts/strings.
+*.txt   text working-tree-encoding=UTF-8 eol=crlf
+*.json  text working-tree-encoding=UTF-8 eol=crlf
+
+# Common binary assets that must never be touched by line-ending or encoding
+# conversion (belt-and-suspenders alongside .gitignore *.png).
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.dds   binary
+*.tga   binary
+*.tbl   binary
+*.dc6   binary
+*.ds1   binary
+*.dt1   binary
+*.cof   binary
+*.bin   binary
+*.wav   binary
+*.ogg   binary
+*.mp3   binary
