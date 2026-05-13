@@ -690,6 +690,36 @@
         },
         {
           "path" : "data/hd/vfx/textures/noise/T_FX_Noise_Dots.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_e_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_d_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_g_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_j_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_a_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_i_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_f_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_b_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_h_alb.texture"
+        },
+        {
+          "path" : "data/hd/env/texture/expansion/baallair/baallair_undercliffs/expansion_baallair_underclifff_01_c_alb.texture"
         }
       ],
       "skeletons" : [
@@ -957,6 +987,12 @@
         },
         {
           "path" : "data/hd/objects/braziers/tomb_wall_torch_right/model/torso.model"
+        },
+        {
+          "path" : "data/hd/env/model/expansion/baallair/expansion_baallair_undercliff/undercliff_01.model"
+        },
+        {
+          "path" : "data/hd/env/model/act2/tomb/act2_tomb_doorways/stairs_down01.model"
         }
       ],
       "animations" : [
@@ -1493,7 +1529,7 @@
             "position" : {
               "x" : 63.6849899291992,
               "y" : 0,
-              "z" : 120.761901855469
+              "z" : 117.761901855469
             },
             "scale" : {
               "x" : 1,
@@ -6514,7 +6550,7 @@
             "position" : {
               "x" : 60,
               "y" : 0,
-              "z" : 120.943397521973
+              "z" : 142.669998168945
             },
             "scale" : {
               "x" : 1,
@@ -6916,7 +6952,7 @@
             "position" : {
               "x" : 63.6849899291992,
               "y" : 0,
-              "z" : 130.761901855469
+              "z" : 133.761901855469
             },
             "scale" : {
               "x" : 1,
@@ -7361,6 +7397,862 @@
               "x" : 30,
               "y" : 0,
               "z" : 40.9434509277344
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.707106828689575,
+              "z" : 0,
+              "w" : 0.707106828689575
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "wall_b01_23_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent108",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition109",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition108",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : -5.05400514602661,
+                    "y" : 6.84519577026367,
+                    "z" : 0.929647624492645
+                  },
+                  "extents" : {
+                    "x" : 5.06477403640747,
+                    "y" : 6.93077421188354,
+                    "z" : 2.18487501144409
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "walltransparent",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelVariationDefinitionComponent",
+            "name" : "wall_b01_ModelVariationDefinitionComponent",
+            "variations" : [
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationEntry",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b01.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_1",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b02.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_2",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b03.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_3",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b04.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_4",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b05.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_5",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b06.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_6",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b07.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_7",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b08.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_8",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b09.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              }
+            ]
+          },
+          {
+            "type" : "WallTransparencyComponent",
+            "name" : "wall_b01_WallTransparency",
+            "drawOrder" : 0,
+            "wallTileLocalCoord" : {
+              "x" : -1,
+              "y" : -1
+            }
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "wall_b01_23",
+        "id" : 3771871326,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "wall_b01_23_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 30,
+              "y" : 0,
+              "z" : 60.2999992370605
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.707106828689575,
+              "z" : 0,
+              "w" : 0.707106828689575
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "wall_b01_23_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent108",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition109",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition108",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : -5.05400514602661,
+                    "y" : 6.84519577026367,
+                    "z" : 0.929647624492645
+                  },
+                  "extents" : {
+                    "x" : 5.06477403640747,
+                    "y" : 6.93077421188354,
+                    "z" : 2.18487501144409
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "walltransparent",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelVariationDefinitionComponent",
+            "name" : "wall_b01_ModelVariationDefinitionComponent",
+            "variations" : [
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationEntry",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b01.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_1",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b02.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_2",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b03.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_3",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b04.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_4",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b05.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_5",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b06.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_6",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b07.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_7",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b08.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_8",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b09.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              }
+            ]
+          },
+          {
+            "type" : "WallTransparencyComponent",
+            "name" : "wall_b01_WallTransparency",
+            "drawOrder" : 0,
+            "wallTileLocalCoord" : {
+              "x" : -1,
+              "y" : -1
+            }
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "wall_b01_23",
+        "id" : 3771871326,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "wall_b01_23_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 30,
+              "y" : 0,
+              "z" : 69.0100021362305
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.707106828689575,
+              "z" : 0,
+              "w" : 0.707106828689575
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "wall_b01_23_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent108",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition109",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition108",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : -5.05400514602661,
+                    "y" : 6.84519577026367,
+                    "z" : 0.929647624492645
+                  },
+                  "extents" : {
+                    "x" : 5.06477403640747,
+                    "y" : 6.93077421188354,
+                    "z" : 2.18487501144409
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "walltransparent",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelVariationDefinitionComponent",
+            "name" : "wall_b01_ModelVariationDefinitionComponent",
+            "variations" : [
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationEntry",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b01.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_1",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b02.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_2",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b03.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_3",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b04.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_4",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b05.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_5",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b06.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_6",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b07.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_7",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b08.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_8",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b09.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              }
+            ]
+          },
+          {
+            "type" : "WallTransparencyComponent",
+            "name" : "wall_b01_WallTransparency",
+            "drawOrder" : 0,
+            "wallTileLocalCoord" : {
+              "x" : -1,
+              "y" : -1
+            }
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "wall_b01_23",
+        "id" : 3771871326,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "wall_b01_23_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 30,
+              "y" : 0,
+              "z" : 76.129997253418
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.707106828689575,
+              "z" : 0,
+              "w" : 0.707106828689575
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "wall_b01_23_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent108",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition109",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition108",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : -5.05400514602661,
+                    "y" : 6.84519577026367,
+                    "z" : 0.929647624492645
+                  },
+                  "extents" : {
+                    "x" : 5.06477403640747,
+                    "y" : 6.93077421188354,
+                    "z" : 2.18487501144409
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "walltransparent",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelVariationDefinitionComponent",
+            "name" : "wall_b01_ModelVariationDefinitionComponent",
+            "variations" : [
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationEntry",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b01.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_1",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b02.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_2",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b03.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_3",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b04.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_4",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b05.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_5",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b06.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_6",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b07.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_7",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b08.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              },
+              {
+                "type" : "ModelVariationEntry",
+                "name" : "wall_b01_ModelVariationDefinitionComponent_variations_8",
+                "weight" : 1,
+                "filename" : "data/hd/env/model/act2/tomb/act2_tomb_walls/act2_tomb_walls_b_set/wall_b09.model",
+                "visibleLayers" : 1,
+                "lightMask" : 19,
+                "shadowMask" : 3,
+                "ghostShadows" : false,
+                "floorModel" : false,
+                "terrainBlendEnableYUpBlend" : false,
+                "terrainBlendMode" : 1
+              }
+            ]
+          },
+          {
+            "type" : "WallTransparencyComponent",
+            "name" : "wall_b01_WallTransparency",
+            "drawOrder" : 0,
+            "wallTileLocalCoord" : {
+              "x" : -1,
+              "y" : -1
+            }
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "wall_b01_23",
+        "id" : 3771871326,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "wall_b01_23_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 30,
+              "y" : 0,
+              "z" : 81.7300033569336
             },
             "scale" : {
               "x" : 1,
@@ -19992,9 +20884,9 @@
             "type" : "TransformDefinitionComponent",
             "name" : "stairs_down_Alchemy_Runtime_TransformDefinitionComponent",
             "position" : {
-              "x" : 31,
+              "x" : 61.0000038146973,
               "y" : 0.0799999982118607,
-              "z" : 60.2400016784668
+              "z" : 110.089996337891
             },
             "scale" : {
               "x" : 1,
