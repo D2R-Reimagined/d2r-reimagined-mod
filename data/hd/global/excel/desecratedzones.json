@@ -35,7 +35,6 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_normal",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 0,
                         "max_herald_tiers": 0,
                         "defaults": {
                             "type": "DesecratedDifficultyConfig",
@@ -51,7 +50,6 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_nightmare",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 0,
                         "max_herald_tiers": 0,
                         "defaults": {
                             "type": "DesecratedDifficultyConfig",
@@ -67,7 +65,6 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_expansion_hell",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 0,
                         "max_herald_tiers": 0,
                         "defaults": {
                             "type": "DesecratedDifficultyConfig",
@@ -87,7 +84,6 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_normal",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 0,
                         "max_herald_tiers": 0,
                         "defaults": {
                             "type": "DesecratedDifficultyConfig",
@@ -103,7 +99,6 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_nightmare",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 0,
                         "max_herald_tiers": 0,
                         "defaults": {
                             "type": "DesecratedDifficultyConfig",
@@ -119,7 +114,6 @@
                         "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell",
                         "ladder_enabled": true,
                         "non_ladder_enabled": true,
-                        "max_herald_tokens": 100,
                         "max_herald_tiers": 5,
                         "always_unique_mod_pool": [
                             {
@@ -184,8 +178,6 @@
                             "bound_incl_max": 100,
                             "boost_level": 2,
                             "boost_experience_percent": 25,
-                            "chance_to_gain_herald_token": 5.0,
-                            "chance_for_token_to_convert_to_herald": 5.0,
                             "unique_mod_chance_boosts": [
                                 {
                                     "type": "UniqueModChanceBoost",
@@ -199,6 +191,10 @@
                                 {
                                     "type": "DesecratedHeraldTier",
                                     "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_0",
+                                    "zone_chance_slope": 0.04,
+                                    "zone_chance_midpoint": 56.0,
+                                    "zone_chance_asymptote": 10.0,
+                                    "zone_chance_vertical_shift": -4.6,
                                     "herald_health_boost_percent": 1000,
                                     "herald_damage_boost_percent": 50,
                                     "minion_health_boost_percent": 250,
@@ -231,8 +227,12 @@
                                 {
                                     "type": "DesecratedHeraldTier",
                                     "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_1",
-                                    "herald_health_boost_percent": 1500,
-                                    "herald_damage_boost_percent": 100,
+                                    "zone_chance_slope": 0.04,
+                                    "zone_chance_midpoint": 44.0,
+                                    "zone_chance_asymptote": 7.0,
+                                    "zone_chance_vertical_shift": -3.4,
+                                    "herald_health_boost_percent": 1250,
+                                    "herald_damage_boost_percent": 75,
                                     "herald_treasure_class_level_boost": 3,
                                     "minion_health_boost_percent": 375,
                                     "minion_damage_boost_percent": 20,
@@ -264,8 +264,12 @@
                                 {
                                     "type": "DesecratedHeraldTier",
                                     "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_2",
-                                    "herald_health_boost_percent": 2000,
-                                    "herald_damage_boost_percent": 150,
+                                    "zone_chance_slope": 0.04,
+                                    "zone_chance_midpoint": 44.0,
+                                    "zone_chance_asymptote": 7.0,
+                                    "zone_chance_vertical_shift": -3.4,
+                                    "herald_health_boost_percent": 1500,
+                                    "herald_damage_boost_percent": 100,
                                     "herald_treasure_class_level_boost": 6,
                                     "minion_health_boost_percent": 500,
                                     "minion_damage_boost_percent": 30,
@@ -297,8 +301,12 @@
                                 {
                                     "type": "DesecratedHeraldTier",
                                     "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_3",
-                                    "herald_health_boost_percent": 2500,
-                                    "herald_damage_boost_percent": 200,
+                                    "zone_chance_slope": 0.05,
+                                    "zone_chance_midpoint": 47.0,
+                                    "zone_chance_asymptote": 4.0,
+                                    "zone_chance_vertical_shift": -1.2,
+                                    "herald_health_boost_percent": 1750,
+                                    "herald_damage_boost_percent": 125,
                                     "herald_treasure_class_level_boost": 9,
                                     "minion_health_boost_percent": 625,
                                     "minion_damage_boost_percent": 40,
@@ -330,8 +338,12 @@
                                 {
                                     "type": "DesecratedHeraldTier",
                                     "name": "desecratedzones_desecrated_zones_0_game_difficulties_rotw_hell_defaults_herald_tiers_4",
-                                    "herald_health_boost_percent": 3000,
-                                    "herald_damage_boost_percent": 250,
+                                    "zone_chance_slope": 0.08,
+                                    "zone_chance_midpoint": 42.0,
+                                    "zone_chance_asymptote": 2.5,
+                                    "zone_chance_vertical_shift": -0.13,
+                                    "herald_health_boost_percent": 2000,
+                                    "herald_damage_boost_percent": 150,
                                     "herald_treasure_class_level_boost": 12,
                                     "minion_health_boost_percent": 750,
                                     "minion_damage_boost_percent": 50,
@@ -369,13 +381,13 @@
                 {
                     "type": "DesecratedWarning",
                     "name": "desecratedzones_desecrated_zones_0_warnings_0",
-                    "announce_time_minutes": 5,
+                    "announce_time_minutes": 3,
                     "tier": 1
                 },
                 {
                     "type": "DesecratedWarning",
                     "name": "desecratedzones_desecrated_zones_0_warnings_1",
-                    "announce_time_minutes": 3,
+                    "announce_time_minutes": 2,
                     "tier": 2
                 },
                 {
@@ -406,125 +418,171 @@
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_0",
                                     "level_id": 33,
-                                    "waypoint_level_id": 32
+                                    "waypoint_level_id": 32,
+                                    "zone_data_id": "Act1-Catacombs",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_1",
                                     "level_id": 17,
-                                    "waypoint_level_id": 3
+                                    "waypoint_level_id": 3,
+                                    "zone_data_id": "Act1-BurialGrounds",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_2",
-                                    "level_id": 18
+                                    "level_id": 18,
+                                    "zone_data_id": "Act1-BurialGrounds",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_3",
-                                    "level_id": 19
+                                    "level_id": 19,
+                                    "zone_data_id": "Act1-BurialGrounds",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_4",
-                                    "level_id": 34
+                                    "level_id": 34,
+                                    "zone_data_id": "Act1-Catacombs",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_5",
                                     "level_id": 35,
-                                    "waypoint_level_id": 35
+                                    "waypoint_level_id": 35,
+                                    "zone_data_id": "Act1-Catacombs",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_6",
-                                    "level_id": 36
+                                    "level_id": 36,
+                                    "zone_data_id": "Act1-Catacombs",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_7",
-                                    "level_id": 37
+                                    "level_id": 37,
+                                    "zone_data_id": "Act1-Catacombs",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_8",
-                                    "level_id": 32
+                                    "level_id": 32,
+                                    "zone_data_id": "Act1-Catacombs",
+                                    "zone_completion_weight": 0.5
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_9",
                                     "level_id": 3,
-                                    "waypoint_level_id": 3
+                                    "waypoint_level_id": 3,
+                                    "zone_data_id": "Act1-ColdPlains",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_10",
-                                    "level_id": 9
+                                    "level_id": 9,
+                                    "zone_data_id": "Act1-ColdPlains-Cave",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_11",
-                                    "level_id": 13
+                                    "level_id": 13,
+                                    "zone_data_id": "Act1-ColdPlains-Cave",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_12",
                                     "level_id": 5,
-                                    "waypoint_level_id": 5
+                                    "waypoint_level_id": 5,
+                                    "zone_data_id": "Act1-DarkWood",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_13",
-                                    "level_id": 10
+                                    "level_id": 10,
+                                    "zone_data_id": "Act1-DarkWood-Cave",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_14",
-                                    "level_id": 14
+                                    "level_id": 14,
+                                    "zone_data_id": "Act1-DarkWood-Cave",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_15",
                                     "level_id": 2,
-                                    "waypoint_level_id": 1
+                                    "waypoint_level_id": 1,
+                                    "zone_data_id": "Act1-BloodMoor",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_16",
                                     "level_id": 28,
-                                    "waypoint_level_id": 0
+                                    "waypoint_level_id": 0,
+                                    "zone_data_id": "Act1-Barracks",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_17",
                                     "level_id": 29,
-                                    "waypoint_level_id": 29
+                                    "waypoint_level_id": 29,
+                                    "zone_data_id": "Act1-Jail",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_18",
-                                    "level_id": 30
+                                    "level_id": 30,
+                                    "zone_data_id": "Act1-Jail",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_19",
-                                    "level_id": 31
+                                    "level_id": 31,
+                                    "zone_data_id": "Act1-Jail",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_21",
                                     "level_id": 6,
-                                    "waypoint_level_id": 6
+                                    "waypoint_level_id": 6,
+                                    "zone_data_id": "Act1-Tower-Wilderness",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_22",
-                                    "level_id": 11
+                                    "level_id": 11,
+                                    "zone_data_id": "Act1-Tower-Cave",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_23",
-                                    "level_id": 15
+                                    "level_id": 15,
+                                    "zone_data_id": "Act1-Tower-Cave",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
@@ -534,65 +592,89 @@
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_25",
-                                    "level_id": 21
+                                    "level_id": 21,
+                                    "zone_data_id": "Act1-Tower",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_26",
-                                    "level_id": 22
+                                    "level_id": 22,
+                                    "zone_data_id": "Act1-Tower",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_27",
-                                    "level_id": 23
+                                    "level_id": 23,
+                                    "zone_data_id": "Act1-Tower",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_28",
-                                    "level_id": 24
+                                    "level_id": 24,
+                                    "zone_data_id": "Act1-Tower",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_29",
-                                    "level_id": 25
+                                    "level_id": 25,
+                                    "zone_data_id": "Act1-Tower",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_30",
                                     "level_id": 7,
-                                    "waypoint_level_id": 27
+                                    "waypoint_level_id": 27,
+                                    "zone_data_id": "Act1-Monastery-Wilderness",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_31",
-                                    "level_id": 12
+                                    "level_id": 12,
+                                    "zone_data_id": "Act1-Monastery-Cave",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_32",
-                                    "level_id": 16
+                                    "level_id": 16,
+                                    "zone_data_id": "Act1-Monastery-Cave",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_33",
-                                    "level_id": 26
+                                    "level_id": 26,
+                                    "zone_data_id": "Act1-Monastery-Wilderness",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_0_zones_0_levels_34",
-                                    "level_id": 27
+                                    "level_id": 27,
+                                    "zone_data_id": "Act1-Monastery-Wilderness",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_5",
                                     "level_id": 4,
-                                    "waypoint_level_id": 4
+                                    "waypoint_level_id": 4,
+                                    "zone_data_id": "Act1-Tristram",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_6",
-                                    "level_id": 38
-                                }                                
+                                    "level_id": 38,
+                                    "zone_data_id": "Act1-Tristram",
+                                    "zone_completion_weight": 1.0
+                                }
                             ]
                         }
                     ]
@@ -611,83 +693,113 @@
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_0",
                                     "level_id": 47,
-                                    "waypoint_level_id": 40
+                                    "waypoint_level_id": 40,
+                                    "zone_data_id": "Act2-Sewers",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_1",
                                     "level_id": 48,
-                                    "waypoint_level_id": 48
+                                    "waypoint_level_id": 48,
+                                    "zone_data_id": "Act2-Sewers",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_2",
-                                    "level_id": 49
+                                    "level_id": 49,
+                                    "zone_data_id": "Act2-Sewers",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_3",
                                     "level_id": 41,
-                                    "waypoint_level_id": 40
+                                    "waypoint_level_id": 40,
+                                    "zone_data_id": "Act2-RockyWaste",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_4",
-                                    "level_id": 55
+                                    "level_id": 55,
+                                    "zone_data_id": "Act2-RockyWaste-Tomb",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_5",
-                                    "level_id": 59
+                                    "level_id": 59,
+                                    "zone_data_id": "Act2-RockyWaste-Tomb",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_6",
                                     "level_id": 42,
-                                    "waypoint_level_id": 42
+                                    "waypoint_level_id": 42,
+                                    "zone_data_id": "Act2-DryHills",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_7",
-                                    "level_id": 56
+                                    "level_id": 56,
+                                    "zone_data_id": "Act2-DryHills-Tomb",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_8",
                                     "level_id": 57,
-                                    "waypoint_level_id": 57
+                                    "waypoint_level_id": 57,
+                                    "zone_data_id": "Act2-DryHills-Tomb",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_9",
-                                    "level_id": 60
+                                    "level_id": 60,
+                                    "zone_data_id": "Act2-DryHills-Tomb",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_10",
                                     "level_id": 43,
-                                    "waypoint_level_id": 43
+                                    "waypoint_level_id": 43,
+                                    "zone_data_id": "Act2-FarOasis",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_11",
-                                    "level_id": 62
+                                    "level_id": 62,
+                                    "zone_data_id": "Act2-FarOasis-LairA",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_12",
-                                    "level_id": 63
+                                    "level_id": 63,
+                                    "zone_data_id": "Act2-FarOasis-LairB",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_13",
-                                    "level_id": 64
+                                    "level_id": 64,
+                                    "zone_data_id": "Act2-FarOasis-LairC",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_14",
                                     "level_id": 44,
-                                    "waypoint_level_id": 44
+                                    "waypoint_level_id": 44,
+                                    "zone_data_id": "Act2-LostCity",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
@@ -697,53 +809,73 @@
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_16",
-                                    "level_id": 58
+                                    "level_id": 58,
+                                    "zone_data_id": "Act2-LostCity-Tomb",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_17",
-                                    "level_id": 61
+                                    "level_id": 61,
+                                    "zone_data_id": "Act2-LostCity-Tomb",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_18",
-                                    "level_id": 65
+                                    "level_id": 65,
+                                    "zone_data_id": "Act2-LostCity-Sewer",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_19",
                                     "level_id": 66,
-                                    "waypoint_level_id": 46
+                                    "waypoint_level_id": 46,
+                                    "zone_data_id": "Act2-TalRashas-Tomb1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_20",
-                                    "level_id": 67
+                                    "level_id": 67,
+                                    "zone_data_id": "Act2-TalRashas-Tomb2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_21",
-                                    "level_id": 68
+                                    "level_id": 68,
+                                    "zone_data_id": "Act2-TalRashas-Tomb3",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_22",
-                                    "level_id": 69
+                                    "level_id": 69,
+                                    "zone_data_id": "Act2-TalRashas-Tomb4",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_23",
-                                    "level_id": 70
+                                    "level_id": 70,
+                                    "zone_data_id": "Act2-TalRashas-Tomb5",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_24",
-                                    "level_id": 71
+                                    "level_id": 71,
+                                    "zone_data_id": "Act2-TalRashas-Tomb6",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_25",
-                                    "level_id": 72
+                                    "level_id": 72,
+                                    "zone_data_id": "Act2-TalRashas-Tomb7",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
@@ -753,13 +885,17 @@
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_27",
-                                    "level_id": 46
+                                    "level_id": 46,
+                                    "zone_data_id": "Act2-TalRashas",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_28",
                                     "level_id": 74,
-                                    "waypoint_level_id": 74
+                                    "waypoint_level_id": 74,
+                                    "zone_data_id": "Act2-ArcaneSanctuary",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
@@ -769,23 +905,31 @@
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_30",
-                                    "level_id": 51
+                                    "level_id": 51,
+                                    "zone_data_id": "Act2-ArcaneSanctuary-Harem",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_31",
                                     "level_id": 52,
-                                    "waypoint_level_id": 52
+                                    "waypoint_level_id": 52,
+                                    "zone_data_id": "Act2-ArcaneSanctuary-Basement",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_32",
-                                    "level_id": 53
+                                    "level_id": 53,
+                                    "zone_data_id": "Act2-ArcaneSanctuary-Basement",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_1_zones_0_levels_33",
-                                    "level_id": 54
+                                    "level_id": 54,
+                                    "zone_data_id": "Act2-ArcaneSanctuary-Basement",
+                                    "zone_completion_weight": 1.0
                                 }
                             ]
                         }
@@ -805,145 +949,199 @@
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_0",
                                     "level_id": 76,
-                                    "waypoint_level_id": 76
+                                    "waypoint_level_id": 76,
+                                    "zone_data_id": "Act3-SpiderForest",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_1",
                                     "level_id": 85,
-                                    "waypoint_level_id": 75
+                                    "waypoint_level_id": 75,
+                                    "zone_data_id": "Act3-SpiderForest-Cave2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_2",
-                                    "level_id": 84
+                                    "level_id": 84,
+                                    "zone_data_id": "Act3-SpiderForest-Cave1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_3",
                                     "level_id": 77,
-                                    "waypoint_level_id": 77
+                                    "waypoint_level_id": 77,
+                                    "zone_data_id": "Act3-GreatMarsh",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_4",
                                     "level_id": 78,
-                                    "waypoint_level_id": 78
+                                    "waypoint_level_id": 78,
+                                    "zone_data_id": "Act3-FlayerJungle",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_5",
-                                    "level_id": 88
+                                    "level_id": 88,
+                                    "zone_data_id": "Act3-FlayerJungle-Dungeon2",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_6",
-                                    "level_id": 89
+                                    "level_id": 89,
+                                    "zone_data_id": "Act3-FlayerJungle-Dungeon2",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_7",
-                                    "level_id": 91
+                                    "level_id": 91,
+                                    "zone_data_id": "Act3-FlayerJungle-Dungeon2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_8",
-                                    "level_id": 86
+                                    "level_id": 86,
+                                    "zone_data_id": "Act3-FlayerJungle-Dungeon1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_9",
-                                    "level_id": 87
+                                    "level_id": 87,
+                                    "zone_data_id": "Act3-FlayerJungle-Dungeon1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_10",
-                                    "level_id": 90
+                                    "level_id": 90,
+                                    "zone_data_id": "Act3-FlayerJungle-Dungeon1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_11",
                                     "level_id": 80,
-                                    "waypoint_level_id": 80
+                                    "waypoint_level_id": 80,
+                                    "zone_data_id": "Act3-Kurast2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_12",
                                     "level_id": 79,
-                                    "waypoint_level_id": 79
+                                    "waypoint_level_id": 79,
+                                    "zone_data_id": "Act3-Kurast1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_13",
                                     "level_id": 81,
-                                    "waypoint_level_id": 81
+                                    "waypoint_level_id": 81,
+                                    "zone_data_id": "Act3-Kurast3",
+                                    "zone_completion_weight": 9.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_14",
-                                    "level_id": 82
+                                    "level_id": 82,
+                                    "zone_data_id": "Act3-Kurast3",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_15",
-                                    "level_id": 92
+                                    "level_id": 92,
+                                    "zone_data_id": "Act3-KurastSewer",
+                                    "zone_completion_weight": 4.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_16",
-                                    "level_id": 93
+                                    "level_id": 93,
+                                    "zone_data_id": "Act3-KurastSewer",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_17",
-                                    "level_id": 94
+                                    "level_id": 94,
+                                    "zone_data_id": "Act3-KurastTemple",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_18",
-                                    "level_id": 95
+                                    "level_id": 95,
+                                    "zone_data_id": "Act3-KurastTemple",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_19",
-                                    "level_id": 96
+                                    "level_id": 96,
+                                    "zone_data_id": "Act3-KurastTemple",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_20",
-                                    "level_id": 97
+                                    "level_id": 97,
+                                    "zone_data_id": "Act3-KurastTemple",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_21",
-                                    "level_id": 98
+                                    "level_id": 98,
+                                    "zone_data_id": "Act3-KurastTemple",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_22",
-                                    "level_id": 99
+                                    "level_id": 99,
+                                    "zone_data_id": "Act3-KurastTemple",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_23",
                                     "level_id": 83,
-                                    "waypoint_level_id": 83
+                                    "waypoint_level_id": 83,
+                                    "zone_data_id": "Act3-Travincal",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_24",
-                                    "level_id": 100
+                                    "level_id": 100,
+                                    "zone_data_id": "Act3-DuranceOfHate",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_25",
                                     "level_id": 101,
-                                    "waypoint_level_id": 101
+                                    "waypoint_level_id": 101,
+                                    "zone_data_id": "Act3-DuranceOfHate",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_2_zones_0_levels_26",
-                                    "level_id": 102
+                                    "level_id": 102,
+                                    "zone_data_id": "Act3-DuranceOfHate",
+                                    "zone_completion_weight": 1.0
                                 }
                             ]
                         }
@@ -963,36 +1161,48 @@
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_0",
                                     "level_id": 104,
-                                    "waypoint_level_id": 103
+                                    "waypoint_level_id": 103,
+                                    "zone_data_id": "Act4_OuterSteppes1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_1",
-                                    "level_id": 105
+                                    "level_id": 105,
+                                    "zone_data_id": "Act4_OuterSteppes2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_2",
                                     "level_id": 106,
-                                    "waypoint_level_id": 106
+                                    "waypoint_level_id": 106,
+                                    "zone_data_id": "Act4-RiverOfFlame1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_3",
                                     "level_id": 107,
-                                    "waypoint_level_id": 107
+                                    "waypoint_level_id": 107,
+                                    "zone_data_id": "Act4-RiverOfFlame2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_4",
                                     "level_id": 108,
-                                    "waypoint_level_id": 107
+                                    "waypoint_level_id": 107,
+                                    "zone_data_id": "Act4-ChaosSanctuary",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_3_zones_0_levels_7",
                                     "level_id": 39,
-                                    "waypoint_level_id": 39
+                                    "waypoint_level_id": 39,
+                                    "zone_data_id": "Act1-MooMooFarm",
+                                    "zone_completion_weight": 1.0
                                 }
                             ]
                         }
@@ -1012,115 +1222,157 @@
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_0",
                                     "level_id": 111,
-                                    "waypoint_level_id": 111
+                                    "waypoint_level_id": 111,
+                                    "zone_data_id": "Act5-BloodyFoothils2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_1",
-                                    "level_id": 110
+                                    "level_id": 110,
+                                    "zone_data_id": "Act5-BloodyFoothils1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_2",
-                                    "level_id": 125
+                                    "level_id": 125,
+                                    "zone_data_id": "Act5-BloodyFoothils3",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_3",
                                     "level_id": 112,
-                                    "waypoint_level_id": 112
+                                    "waypoint_level_id": 112,
+                                    "zone_data_id": "Act5-ArreatPlateau1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_4",
-                                    "level_id": 126
+                                    "level_id": 126,
+                                    "zone_data_id": "Act5-ArreatPlateau2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_5",
                                     "level_id": 113,
-                                    "waypoint_level_id": 113
+                                    "waypoint_level_id": 113,
+                                    "zone_data_id": "Act5-CrystallinePassage1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_6",
-                                    "level_id": 114
+                                    "level_id": 114,
+                                    "zone_data_id": "Act5-CrystallinePassage2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_7",
                                     "level_id": 121,
-                                    "waypoint_level_id": 109
+                                    "waypoint_level_id": 109,
+                                    "zone_data_id": "Act5-Halls1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_8",
-                                    "level_id": 122
+                                    "level_id": 122,
+                                    "zone_data_id": "Act5-Halls1",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_9",
                                     "level_id": 123,
-                                    "waypoint_level_id": 123
+                                    "waypoint_level_id": 123,
+                                    "zone_data_id": "Act5-Halls2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_10",
-                                    "level_id": 124
+                                    "level_id": 124,
+                                    "zone_data_id": "Act5-Halls3",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_11",
                                     "level_id": 115,
-                                    "waypoint_level_id": 115
+                                    "waypoint_level_id": 115,
+                                    "zone_data_id": "Act5-GlacialTrail",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_12",
-                                    "level_id": 116
+                                    "level_id": 116,
+                                    "zone_data_id": "Act5-GlacialTrail",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_13",
                                     "level_id": 118,
-                                    "waypoint_level_id": 118
+                                    "waypoint_level_id": 118,
+                                    "zone_data_id": "Act5-AncientsWay",
+                                    "zone_completion_weight": 3.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_14",
-                                    "level_id": 119
+                                    "level_id": 119,
+                                    "zone_data_id": "Act5-AncientsWay",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_15",
                                     "level_id": 117,
-                                    "waypoint_level_id": 117
+                                    "waypoint_level_id": 117,
+                                    "zone_data_id": "Act5-FrozenTundra1",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_16",
-                                    "level_id": 127
+                                    "level_id": 127,
+                                    "zone_data_id": "Act5-FrozenTundra2",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_17",
-                                    "level_id": 128
+                                    "level_id": 128,
+                                    "zone_data_id": "Act5-WorldstoneKeep",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_18",
                                     "level_id": 129,
-                                    "waypoint_level_id": 129
+                                    "waypoint_level_id": 129,
+                                    "zone_data_id": "Act5-WorldstoneKeep",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_19",
-                                    "level_id": 130
+                                    "level_id": 130,
+                                    "zone_data_id": "Act5-WorldstoneKeep",
+                                    "zone_completion_weight": 2.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
                                     "name": "desecratedzones_desecrated_zones_0_manual_zones_4_zones_0_levels_20",
-                                    "level_id": 131
+                                    "level_id": 131,
+                                    "zone_data_id": "Act5-WorldstoneKeep",
+                                    "zone_completion_weight": 1.0
                                 },
                                 {
                                     "type": "DesecratedLevel",
@@ -1142,130 +1394,178 @@
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_0",
                             "level_id": 33,
-                            "waypoint_level_id": 32
+                            "waypoint_level_id": 32,
+                            "zone_data_id": "Act1-Catacombs",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_1",
                             "level_id": 17,
-                            "waypoint_level_id": 3
+                            "waypoint_level_id": 3,
+                            "zone_data_id": "Act1-BurialGrounds",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_2",
-                            "level_id": 18
+                            "level_id": 18,
+                            "zone_data_id": "Act1-BurialGrounds",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_3",
-                            "level_id": 19
+                            "level_id": 19,
+                            "zone_data_id": "Act1-BurialGrounds",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_4",
-                            "level_id": 34
+                            "level_id": 34,
+                            "zone_data_id": "Act1-Catacombs",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_5",
                             "level_id": 35,
-                            "waypoint_level_id": 35
+                            "waypoint_level_id": 35,
+                            "zone_data_id": "Act1-Catacombs",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_6",
-                            "level_id": 36
+                            "level_id": 36,
+                            "zone_data_id": "Act1-Catacombs",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_7",
-                            "level_id": 37
+                            "level_id": 37,
+                            "zone_data_id": "Act1-Catacombs",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_8",
-                            "level_id": 32
+                            "level_id": 32,
+                            "zone_data_id": "Act1-Catacombs",
+                            "zone_completion_weight": 0.5
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_9",
                             "level_id": 3,
-                            "waypoint_level_id": 3
+                            "waypoint_level_id": 3,
+                            "zone_data_id": "Act1-ColdPlains",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_10",
-                            "level_id": 9
+                            "level_id": 9,
+                            "zone_data_id": "Act1-ColdPlains-Cave",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_11",
-                            "level_id": 13
+                            "level_id": 13,
+                            "zone_data_id": "Act1-ColdPlains-Cave",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_12",
                             "level_id": 5,
-                            "waypoint_level_id": 5
+                            "waypoint_level_id": 5,
+                            "zone_data_id": "Act1-DarkWood",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_13",
-                            "level_id": 10
+                            "level_id": 10,
+                            "zone_data_id": "Act1-DarkWood-Cave",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_14",
-                            "level_id": 14
+                            "level_id": 14,
+                            "zone_data_id": "Act1-DarkWood-Cave",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_15",
                             "level_id": 2,
-                            "waypoint_level_id": 1
+                            "waypoint_level_id": 1,
+                            "zone_data_id": "Act1-BloodMoor",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_16",
-                            "level_id": 8
+                            "level_id": 8,
+                            "zone_data_id": "Act1-BloodMoor-Cave",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_17",
                             "level_id": 28,
-                            "waypoint_level_id": 0
+                            "waypoint_level_id": 0,
+                            "zone_data_id": "Act1-Barracks",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_18",
                             "level_id": 29,
-                            "waypoint_level_id": 29
+                            "waypoint_level_id": 29,
+                            "zone_data_id": "Act1-Jail",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_19",
-                            "level_id": 30
+                            "level_id": 30,
+                            "zone_data_id": "Act1-Jail",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_20",
-                            "level_id": 31
+                            "level_id": 31,
+                            "zone_data_id": "Act1-Jail",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_23",
                             "level_id": 6,
-                            "waypoint_level_id": 6
+                            "waypoint_level_id": 6,
+                            "zone_data_id": "Act1-Tower-Wilderness",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_24",
-                            "level_id": 11
+                            "level_id": 11,
+                            "zone_data_id": "Act1-Tower-Cave",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_25",
-                            "level_id": 15
+                            "level_id": 15,
+                            "zone_data_id": "Act1-Tower-Cave",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
@@ -1275,65 +1575,89 @@
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_27",
-                            "level_id": 21
+                            "level_id": 21,
+                            "zone_data_id": "Act1-Tower",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_28",
-                            "level_id": 22
+                            "level_id": 22,
+                            "zone_data_id": "Act1-Tower",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_29",
-                            "level_id": 23
+                            "level_id": 23,
+                            "zone_data_id": "Act1-Tower",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_30",
-                            "level_id": 24
+                            "level_id": 24,
+                            "zone_data_id": "Act1-Tower",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_31",
-                            "level_id": 25
+                            "level_id": 25,
+                            "zone_data_id": "Act1-Tower",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_32",
                             "level_id": 7,
-                            "waypoint_level_id": 27
+                            "waypoint_level_id": 27,
+                            "zone_data_id": "Act1-Monastery-Wilderness",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_33",
-                            "level_id": 12
+                            "level_id": 12,
+                            "zone_data_id": "Act1-Monastery-Cave",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_34",
-                            "level_id": 16
+                            "level_id": 16,
+                            "zone_data_id": "Act1-Monastery-Cave",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_35",
-                            "level_id": 26
+                            "level_id": 26,
+                            "zone_data_id": "Act1-Monastery-Wilderness",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_0_levels_36",
-                            "level_id": 27
+                            "level_id": 27,
+                            "zone_data_id": "Act1-Monastery-Wilderness",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_5",
                             "level_id": 4,
-                            "waypoint_level_id": 4
+                            "waypoint_level_id": 4,
+                            "zone_data_id": "Act1-Tristram",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_6",
-                            "level_id": 38
-                        }                        
+                            "level_id": 38,
+                            "zone_data_id": "Act1-Tristram",
+                            "zone_completion_weight": 1.0
+                        }
                     ]
                 },
                 {
@@ -1345,83 +1669,113 @@
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_0",
                             "level_id": 47,
-                            "waypoint_level_id": 40
+                            "waypoint_level_id": 40,
+                            "zone_data_id": "Act2-Sewers",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_1",
                             "level_id": 48,
-                            "waypoint_level_id": 48
+                            "waypoint_level_id": 48,
+                            "zone_data_id": "Act2-Sewers",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_2",
-                            "level_id": 49
+                            "level_id": 49,
+                            "zone_data_id": "Act2-Sewers",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_3",
                             "level_id": 41,
-                            "waypoint_level_id": 40
+                            "waypoint_level_id": 40,
+                            "zone_data_id": "Act2-RockyWaste",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_4",
-                            "level_id": 55
+                            "level_id": 55,
+                            "zone_data_id": "Act2-RockyWaste-Tomb",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_5",
-                            "level_id": 59
+                            "level_id": 59,
+                            "zone_data_id": "Act2-RockyWaste-Tomb",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_6",
                             "level_id": 42,
-                            "waypoint_level_id": 42
+                            "waypoint_level_id": 42,
+                            "zone_data_id": "Act2-DryHills",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_7",
-                            "level_id": 56
+                            "level_id": 56,
+                            "zone_data_id": "Act2-DryHills-Tomb",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_8",
                             "level_id": 57,
-                            "waypoint_level_id": 57
+                            "waypoint_level_id": 57,
+                            "zone_data_id": "Act2-DryHills-Tomb",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_9",
-                            "level_id": 60
+                            "level_id": 60,
+                            "zone_data_id": "Act2-DryHills-Tomb",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_10",
                             "level_id": 43,
-                            "waypoint_level_id": 43
+                            "waypoint_level_id": 43,
+                            "zone_data_id": "Act2-FarOasis",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_11",
-                            "level_id": 62
+                            "level_id": 62,
+                            "zone_data_id": "Act2-FarOasis-LairA",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_12",
-                            "level_id": 63
+                            "level_id": 63,
+                            "zone_data_id": "Act2-FarOasis-LairB",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_13",
-                            "level_id": 64
+                            "level_id": 64,
+                            "zone_data_id": "Act2-FarOasis-LairC",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_14",
                             "level_id": 44,
-                            "waypoint_level_id": 44
+                            "waypoint_level_id": 44,
+                            "zone_data_id": "Act2-LostCity",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
@@ -1431,53 +1785,73 @@
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_16",
-                            "level_id": 58
+                            "level_id": 58,
+                            "zone_data_id": "Act2-LostCity-Tomb",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_17",
-                            "level_id": 61
+                            "level_id": 61,
+                            "zone_data_id": "Act2-LostCity-Tomb",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_18",
-                            "level_id": 65
+                            "level_id": 65,
+                            "zone_data_id": "Act2-LostCity-Sewer",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_19",
                             "level_id": 66,
-                            "waypoint_level_id": 46
+                            "waypoint_level_id": 46,
+                            "zone_data_id": "Act2-TalRashas-Tomb1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_20",
-                            "level_id": 67
+                            "level_id": 67,
+                            "zone_data_id": "Act2-TalRashas-Tomb2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_21",
-                            "level_id": 68
+                            "level_id": 68,
+                            "zone_data_id": "Act2-TalRashas-Tomb3",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_22",
-                            "level_id": 69
+                            "level_id": 69,
+                            "zone_data_id": "Act2-TalRashas-Tomb4",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_23",
-                            "level_id": 70
+                            "level_id": 70,
+                            "zone_data_id": "Act2-TalRashas-Tomb5",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_24",
-                            "level_id": 71
+                            "level_id": 71,
+                            "zone_data_id": "Act2-TalRashas-Tomb6",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_25",
-                            "level_id": 72
+                            "level_id": 72,
+                            "zone_data_id": "Act2-TalRashas-Tomb7",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
@@ -1487,13 +1861,17 @@
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_27",
-                            "level_id": 46
+                            "level_id": 46,
+                            "zone_data_id": "Act2-TalRashas",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_28",
                             "level_id": 74,
-                            "waypoint_level_id": 74
+                            "waypoint_level_id": 74,
+                            "zone_data_id": "Act2-ArcaneSanctuary",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
@@ -1503,23 +1881,31 @@
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_30",
-                            "level_id": 51
+                            "level_id": 51,
+                            "zone_data_id": "Act2-ArcaneSanctuary-Harem",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_31",
                             "level_id": 52,
-                            "waypoint_level_id": 52
+                            "waypoint_level_id": 52,
+                            "zone_data_id": "Act2-ArcaneSanctuary-Basement",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_32",
-                            "level_id": 53
+                            "level_id": 53,
+                            "zone_data_id": "Act2-ArcaneSanctuary-Basement",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_1_levels_33",
-                            "level_id": 54
+                            "level_id": 54,
+                            "zone_data_id": "Act2-ArcaneSanctuary-Basement",
+                            "zone_completion_weight": 1.0
                         }
                     ]
                 },
@@ -1532,145 +1918,199 @@
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_0",
                             "level_id": 76,
-                            "waypoint_level_id": 76
+                            "waypoint_level_id": 76,
+                            "zone_data_id": "Act3-SpiderForest",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_1",
                             "level_id": 85,
-                            "waypoint_level_id": 75
+                            "waypoint_level_id": 75,
+                            "zone_data_id": "Act3-SpiderForest-Cave2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_2",
-                            "level_id": 84
+                            "level_id": 84,
+                            "zone_data_id": "Act3-SpiderForest-Cave1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_3",
                             "level_id": 77,
-                            "waypoint_level_id": 77
+                            "waypoint_level_id": 77,
+                            "zone_data_id": "Act3-GreatMarsh",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_4",
                             "level_id": 78,
-                            "waypoint_level_id": 78
+                            "waypoint_level_id": 78,
+                            "zone_data_id": "Act3-FlayerJungle",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_5",
-                            "level_id": 88
+                            "level_id": 88,
+                            "zone_data_id": "Act3-FlayerJungle-Dungeon2",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_6",
-                            "level_id": 89
+                            "level_id": 89,
+                            "zone_data_id": "Act3-FlayerJungle-Dungeon2",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_7",
-                            "level_id": 91
+                            "level_id": 91,
+                            "zone_data_id": "Act3-FlayerJungle-Dungeon2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_8",
-                            "level_id": 86
+                            "level_id": 86,
+                            "zone_data_id": "Act3-FlayerJungle-Dungeon1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_9",
-                            "level_id": 87
+                            "level_id": 87,
+                            "zone_data_id": "Act3-FlayerJungle-Dungeon1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_10",
-                            "level_id": 90
+                            "level_id": 90,
+                            "zone_data_id": "Act3-FlayerJungle-Dungeon1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_11",
                             "level_id": 80,
-                            "waypoint_level_id": 80
+                            "waypoint_level_id": 80,
+                            "zone_data_id": "Act3-Kurast2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_12",
                             "level_id": 79,
-                            "waypoint_level_id": 79
+                            "waypoint_level_id": 79,
+                            "zone_data_id": "Act3-Kurast1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_13",
                             "level_id": 81,
-                            "waypoint_level_id": 81
+                            "waypoint_level_id": 81,
+                            "zone_data_id": "Act3-Kurast3",
+                            "zone_completion_weight": 9.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_14",
-                            "level_id": 82
+                            "level_id": 82,
+                            "zone_data_id": "Act3-Kurast3",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_15",
-                            "level_id": 92
+                            "level_id": 92,
+                            "zone_data_id": "Act3-KurastSewer",
+                            "zone_completion_weight": 4.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_16",
-                            "level_id": 93
+                            "level_id": 93,
+                            "zone_data_id": "Act3-KurastSewer",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_17",
-                            "level_id": 94
+                            "level_id": 94,
+                            "zone_data_id": "Act3-KurastTemple",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_18",
-                            "level_id": 95
+                            "level_id": 95,
+                            "zone_data_id": "Act3-KurastTemple",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_19",
-                            "level_id": 96
+                            "level_id": 96,
+                            "zone_data_id": "Act3-KurastTemple",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_20",
-                            "level_id": 97
+                            "level_id": 97,
+                            "zone_data_id": "Act3-KurastTemple",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_21",
-                            "level_id": 98
+                            "level_id": 98,
+                            "zone_data_id": "Act3-KurastTemple",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_22",
-                            "level_id": 99
+                            "level_id": 99,
+                            "zone_data_id": "Act3-KurastTemple",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_23",
                             "level_id": 83,
-                            "waypoint_level_id": 83
+                            "waypoint_level_id": 83,
+                            "zone_data_id": "Act3-Travincal",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_24",
-                            "level_id": 100
+                            "level_id": 100,
+                            "zone_data_id": "Act3-DuranceOfHate",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_25",
                             "level_id": 101,
-                            "waypoint_level_id": 101
+                            "waypoint_level_id": 101,
+                            "zone_data_id": "Act3-DuranceOfHate",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_2_levels_26",
-                            "level_id": 102
+                            "level_id": 102,
+                            "zone_data_id": "Act3-DuranceOfHate",
+                            "zone_completion_weight": 1.0
                         }
                     ]
                 },
@@ -1683,36 +2123,48 @@
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_0",
                             "level_id": 104,
-                            "waypoint_level_id": 103
+                            "waypoint_level_id": 103,
+                            "zone_data_id": "Act4_OuterSteppes1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_1",
-                            "level_id": 105
+                            "level_id": 105,
+                            "zone_data_id": "Act4_OuterSteppes2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_2",
                             "level_id": 106,
-                            "waypoint_level_id": 106
+                            "waypoint_level_id": 106,
+                            "zone_data_id": "Act4-RiverOfFlame1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_3",
                             "level_id": 107,
-                            "waypoint_level_id": 107
+                            "waypoint_level_id": 107,
+                            "zone_data_id": "Act4-RiverOfFlame2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_4",
                             "level_id": 108,
-                            "waypoint_level_id": 107
+                            "waypoint_level_id": 107,
+                            "zone_data_id": "Act4-ChaosSanctuary",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_3_levels_7",
                             "level_id": 39,
-                            "waypoint_level_id": 39
+                            "waypoint_level_id": 39,
+                            "zone_data_id": "Act1-MooMooFarm",
+                            "zone_completion_weight": 1.0
                         }
                     ]
                 },
@@ -1725,115 +2177,157 @@
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_0",
                             "level_id": 111,
-                            "waypoint_level_id": 111
+                            "waypoint_level_id": 111,
+                            "zone_data_id": "Act5-BloodyFoothils2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_1",
-                            "level_id": 110
+                            "level_id": 110,
+                            "zone_data_id": "Act5-BloodyFoothils1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_2",
-                            "level_id": 125
+                            "level_id": 125,
+                            "zone_data_id": "Act5-BloodyFoothils3",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_3",
                             "level_id": 112,
-                            "waypoint_level_id": 112
+                            "waypoint_level_id": 112,
+                            "zone_data_id": "Act5-ArreatPlateau1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_4",
-                            "level_id": 126
+                            "level_id": 126,
+                            "zone_data_id": "Act5-ArreatPlateau2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_5",
                             "level_id": 113,
-                            "waypoint_level_id": 113
+                            "waypoint_level_id": 113,
+                            "zone_data_id": "Act5-CrystallinePassage1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_6",
-                            "level_id": 114
+                            "level_id": 114,
+                            "zone_data_id": "Act5-CrystallinePassage2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_7",
                             "level_id": 121,
-                            "waypoint_level_id": 109
+                            "waypoint_level_id": 109,
+                            "zone_data_id": "Act5-Halls1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_8",
-                            "level_id": 122
+                            "level_id": 122,
+                            "zone_data_id": "Act5-Halls1",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_9",
                             "level_id": 123,
-                            "waypoint_level_id": 123
+                            "waypoint_level_id": 123,
+                            "zone_data_id": "Act5-Halls2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_10",
-                            "level_id": 124
+                            "level_id": 124,
+                            "zone_data_id": "Act5-Halls3",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_11",
                             "level_id": 115,
-                            "waypoint_level_id": 115
+                            "waypoint_level_id": 115,
+                            "zone_data_id": "Act5-GlacialTrail",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_12",
-                            "level_id": 116
+                            "level_id": 116,
+                            "zone_data_id": "Act5-GlacialTrail",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_13",
                             "level_id": 118,
-                            "waypoint_level_id": 118
+                            "waypoint_level_id": 118,
+                            "zone_data_id": "Act5-AncientsWay",
+                            "zone_completion_weight": 3.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_14",
-                            "level_id": 119
+                            "level_id": 119,
+                            "zone_data_id": "Act5-AncientsWay",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_15",
                             "level_id": 117,
-                            "waypoint_level_id": 117
+                            "waypoint_level_id": 117,
+                            "zone_data_id": "Act5-FrozenTundra1",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_16",
-                            "level_id": 127
+                            "level_id": 127,
+                            "zone_data_id": "Act5-FrozenTundra2",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_17",
-                            "level_id": 128
+                            "level_id": 128,
+                            "zone_data_id": "Act5-WorldstoneKeep",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_18",
                             "level_id": 129,
-                            "waypoint_level_id": 129
+                            "waypoint_level_id": 129,
+                            "zone_data_id": "Act5-WorldstoneKeep",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_19",
-                            "level_id": 130
+                            "level_id": 130,
+                            "zone_data_id": "Act5-WorldstoneKeep",
+                            "zone_completion_weight": 2.0
                         },
                         {
                             "type": "DesecratedLevel",
                             "name": "desecratedzones_desecrated_zones_0_zones_4_levels_20",
-                            "level_id": 131
+                            "level_id": 131,
+                            "zone_data_id": "Act5-WorldstoneKeep",
+                            "zone_completion_weight": 1.0
                         },
                         {
                             "type": "DesecratedLevel",
