@@ -126,9 +126,9 @@ ass	122	1	21	item_addclassskills		6																										+# to Assassin Skil
 skill	123	1	22	item_singleskill																											5	+# to [Skill] ([Class] only)	Skill	Min #	Max #		0
 skilltab	124	1	10	item_addskill_tab																												+# to [Class Skill Tab] Skills	Class Skill Tab ID	Min #	Max #	[Class Skill Tab ID] = (Amazon = 0-2, Sorceress = 3-5, Necromancer = 6-8, Paladin = 9-11, Barbarian = 12-14, Druid = 15-17,  Assassin = 18-20)	0
 aura	125	1	22	item_aura																												Level # [Skill] Aura When Equipped	Skill	Min #	Max #		0
-att-skill	126	1	11	item_skillonattack																											6	#% Chance to cast level # [Skill] on attack	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-hit-skill	127	1	11	item_skillonhit																											6	#% Chance to cast level # [Skill] on striking	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-gethit-skill	128	1	11	item_skillongethit																											6	#% Chance to cast level # [Skill] when struck	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+att-skill	126	1	11	item_skillonattack																											7	#% Chance to cast level # [Skill] on attack	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+hit-skill	127	1	11	item_skillonhit																											7	#% Chance to cast level # [Skill] on striking	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+gethit-skill	128	1	11	item_skillongethit																											7	#% Chance to cast level # [Skill] when struck	Skill	% Chance (If 0, then default to 5)	Skill Level		0
 gembonus	129																																				0
 regen-dur	130																																				0
 fire-fx	131																																				0
@@ -243,7 +243,7 @@ att%-mon	239																																				0
 ac-mon	240																																				0
 ac%-mon	241																																				0
 indestruct	242	1	20																													Indestructible		1	1		0
-charged	243	1	19	item_charged_skill																												Level # [Skill] (#/# Charges)	Skill	# of Max Charges	Skill Level		0
+charged	243	1	19	item_charged_skill																											6	Level # [Skill] (#/# Charges)	Skill	# of Max Charges	Skill Level		0
 extra-fire	244	1	1	passive_fire_mastery																												+#% to Fire Skill Damage		Min %	Max %		0
 extra-ltng	245	1	1	passive_ltng_mastery																												+#% to Lightning Skill Damage		Min %	Max %		0
 extra-cold	246	1	1	passive_cold_mastery																												+#% to Cold Skill Damage		Min %	Max %		0
@@ -258,14 +258,14 @@ cheap	254	1	1	item_reducedprices																												Reduces all Vendor P
 rip	255	1	1	item_restinpeace																												Slain Monsters Rest in Peace		1	1		0
 att-mon%	256	1	24	attack_vs_montype																												#% to Attack Rating versus [Monster Type]	monstats.txt MonType	Min #	Max #	Currently Not Used	0
 dmg-mon%	257	1	24	damage_vs_montype																												#% to Damage versus [Monster Type]	monstats.txt MonType	Min #	Max #	Currently Not Used	0
-kill-skill	258	1	11	item_skillonkill																											6	#% Chance to cast level # [Skill] when you Kill an Enemy	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-death-skill	259	1	11	item_skillondeath																											6	#% Chance to cast level # [Skill] when you Die	Skill	% Chance (If 0, then default to 5)	Skill Level		0
-levelup-skill	260	1	11	item_skillonlevelup																											6	#% Chance to cast level # [Skill] when you Level-Up	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+kill-skill	258	1	11	item_skillonkill																											7	#% Chance to cast level # [Skill] when you Kill an Enemy	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+death-skill	259	1	11	item_skillondeath																											7	#% Chance to cast level # [Skill] when you Die	Skill	% Chance (If 0, then default to 5)	Skill Level		0
+levelup-skill	260	1	11	item_skillonlevelup																											7	#% Chance to cast level # [Skill] when you Level-Up	Skill	% Chance (If 0, then default to 5)	Skill Level		0
 skill-rand	261	1	12	item_singleskill																											2	+# to [Skill] ([Class] only)	Skill Level	Min Skill ID	Max Skill ID		0
 fade	262	1	17	fade																														Min #	Max #	Visuals Only	0
 levelreq	263	1	1	item_levelreq																												Required Level: #		Min #	Max #		0
 ethereal	264	1	23																													Ethereal		1	1		0
-oskill	265	1	22	item_nonclassskill_display			24	item_nonclassskill																								+# to [Skill]	Skill	Min #	Max #		0
+oskill	265	1	22	item_nonclassskill_display			24	item_nonclassskill																							5	+# to [Skill]	Skill	Min #	Max #		0
 state	266	1	24	state																													State	1	1	Applies a State on the unit	0
 randclassskill	267	1	12	item_addclassskills																												+# to [Class] Skill Levels		Min Class ID	Max Class ID	val1 = # of Skill levels	0
 noconsume	268		1	item_noconsume																												+# to not Consume Quantity		Min %	Max %		0
