@@ -1,0 +1,110 @@
+﻿name: Encoding & line-ending check
+
+on:
+  pull_request:
+    branches: [ "**" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-encoding:
+    name: Verify .txt/.json are UTF-8 (no BOM) + CRLF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Preserve bytes exactly as committed; do not let Git rewrite EOLs.
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Disable autocrlf for this checkout
+        run: |
+          git config core.autocrlf false
+          git config core.eol crlf
+
+      - name: Determine files to check
+        id: files
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base_sha="${{ github.event.pull_request.base.sha }}"
+            head_sha="${{ github.event.pull_request.head.sha }}"
+            git diff --name-only --diff-filter=ACMRT "$base_sha" "$head_sha" \
+              | grep -E '\.(txt|json)$' > changed.txt || true
+          else
+            git ls-files -- '*.txt' '*.json' > changed.txt
+          fi
+          echo "---- files to check ----"
+          cat changed.txt || true
+
+      - name: Verify encoding and line endings
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import sys, pathlib
+
+          listing = pathlib.Path("changed.txt")
+          if not listing.exists():
+              print("No file list produced; nothing to check.")
+              sys.exit(0)
+
+          files = [l.strip() for l in listing.read_text().splitlines() if l.strip()]
+          if not files:
+              print("No .txt or .json files changed; nothing to check.")
+              sys.exit(0)
+
+          errors = []
+          for rel in files:
+              p = pathlib.Path(rel)
+              if not p.is_file():
+                  # Deleted or renamed-away; skip.
+                  continue
+              data = p.read_bytes()
+
+              # 1) UTF-8 BOM check.
+              if data.startswith(b"\xef\xbb\xbf"):
+                  errors.append(f"{rel}: file starts with a UTF-8 BOM (must be UTF-8 without BOM).")
+                  # keep checking further issues
+
+              # 2) UTF-8 validity (also rejects UTF-16/UTF-32, etc.).
+              try:
+                  data.decode("utf-8")
+              except UnicodeDecodeError as e:
+                  errors.append(f"{rel}: not valid UTF-8 ({e}).")
+                  continue
+
+              # 3) CRLF line endings: every LF must be preceded by CR.
+              #    Allow a file with no line breaks at all.
+              bad_lf = 0
+              prev = None
+              for b in data:
+                  if b == 0x0A and prev != 0x0D:
+                      bad_lf += 1
+                  prev = b
+              if bad_lf:
+                  errors.append(f"{rel}: {bad_lf} LF line ending(s) not preceded by CR (must be CRLF).")
+
+              # 4) Stray CR not followed by LF (old Mac endings) — also disallowed.
+              stray_cr = 0
+              for i, b in enumerate(data):
+                  if b == 0x0D and (i + 1 >= len(data) or data[i + 1] != 0x0A):
+                      stray_cr += 1
+              if stray_cr:
+                  errors.append(f"{rel}: {stray_cr} CR character(s) not followed by LF (must be CRLF).")
+
+          if errors:
+              print("Encoding / line-ending violations:")
+              for e in errors:
+                  print(f"  - {e}")
+              print()
+              print("All .txt and .json files must be UTF-8 without BOM and use CRLF line endings.")
+              print("See .gitattributes for the enforced rules.")
+              sys.exit(1)
+
+          print(f"OK: {len(files)} file(s) pass UTF-8 (no BOM) + CRLF checks.")
+          PY
