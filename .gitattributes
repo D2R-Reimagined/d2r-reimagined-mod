@@ -1,0 +1,11 @@
+﻿# Default: leave everything alone (treat as binary) so Git never silently
+# rewrites bytes in unknown file types.
+* -text
+
+# D2R mod text data: UTF-8 without BOM, CRLF line endings.
+# `eol=crlf` forces CRLF in the working tree regardless of the user's
+# core.autocrlf / core.eol settings.
+# UTF-8-no-BOM is enforced by the "Encoding & line-ending check" workflow
+# (.github/workflows/encoding-check.yml), which runs on every pull request.
+*.txt   text eol=crlf
+*.json  text eol=crlf
