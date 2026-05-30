@@ -1,0 +1,118 @@
+name: Release Mod
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (e.g. v1.2.3 — leading "v" is stripped from the release name)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub App token
+        id: app_token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.D2RR_GH_APP_ID }}
+          private-key: ${{ secrets.D2RR_GH_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-contents: write
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app_token.outputs.token }}
+
+      - name: Compute display version
+        id: ver
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: echo "display=${INPUT_VERSION#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Bump modinfo.json version
+        env:
+          V: ${{ steps.ver.outputs.display }}
+        run: |
+          python - <<'PY'
+          import json, os
+          p = "modinfo.json"
+          with open(p, "rb") as f:
+              data = json.loads(f.read().decode("utf-8-sig"))
+          data["version"] = os.environ["V"]
+          text = json.dumps(data, indent=4) + "\n"
+          # Preserve CRLF line endings, write UTF-8 without BOM.
+          with open(p, "wb") as f:
+              f.write(text.replace("\n", "\r\n").encode("utf-8"))
+          PY
+
+      - name: Bump character select panel version text
+        env:
+          V: ${{ steps.ver.outputs.display }}
+        run: |
+          python - <<'PY'
+          import os, re
+          p = "data/global/ui/layouts/characterselectpanelhd.json"
+          # Read as UTF-8 (tolerate a stray BOM); preserve original CRLF line endings byte-for-byte.
+          with open(p, "rb") as f:
+              raw = f.read()
+          text = raw.decode("utf-8-sig")
+          new_text, n = re.subn(
+              r'("text"\s*:\s*")D2R Reimagined v\d+\.\d+\.\d+(")',
+              rf'\g<1>D2R Reimagined v{os.environ["V"]}\g<2>',
+              text,
+              count=1,
+          )
+          if n != 1:
+              raise SystemExit(f"Expected exactly 1 version string in {p}, replaced {n}")
+          # Write UTF-8 without BOM; surrounding bytes (incl. CRLFs) are untouched aside from the matched span.
+          with open(p, "wb") as f:
+              f.write(new_text.encode("utf-8"))
+          PY
+
+      - name: Stage mod files
+        run: |
+          mkdir -p "staging/mods/Reimagined/Reimagined.mpq/data"
+          # Exclude patterns from .gitignore (*.idea, *.iml, *.bak, *.png) and *.bat files
+          rsync -a \
+            --exclude='*.idea*' \
+            --exclude='*.iml' \
+            --exclude='*.bak' \
+            --exclude='*.png' \
+            --exclude='*.bat' \
+            data/ "staging/mods/Reimagined/Reimagined.mpq/data/"
+          cp modinfo.json "staging/mods/Reimagined/Reimagined.mpq/modinfo.json"
+
+      - name: Create archive
+        env:
+          V: ${{ steps.ver.outputs.display }}
+        run: |
+          cd staging
+          zip -r "../D2R Reimagined - ${V}.zip" mods
+
+      - name: Commit version bump
+        env:
+          V: ${{ steps.ver.outputs.display }}
+          APP_SLUG: ${{ steps.app_token.outputs.app-slug }}
+        run: |
+          git config user.name "${APP_SLUG}[bot]"
+          git config user.email "${{ steps.app_token.outputs.installation-id }}+${APP_SLUG}[bot]@users.noreply.github.com"
+          git add modinfo.json data/global/ui/layouts/characterselectpanelhd.json
+          if git diff --cached --quiet; then
+            echo "No version changes to commit."
+          else
+            git commit -m "chore: release ${V}"
+            git push
+          fi
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ steps.app_token.outputs.token }}
+          tag_name: ${{ inputs.version }}
+          name: D2R Reimagined - ${{ steps.ver.outputs.display }}
+          files: D2R Reimagined - ${{ steps.ver.outputs.display }}.zip
