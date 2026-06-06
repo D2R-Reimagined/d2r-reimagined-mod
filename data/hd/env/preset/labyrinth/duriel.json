@@ -7352,9 +7352,9 @@
               "z" : 1
             },
             "orientation" : {
-              "x" : 0.041752003133297,
+              "x" : 0.0417519994080067,
               "y" : 0.749244332313538,
-              "z" : -0.0509437583386898,
+              "z" : -0.0509437508881092,
               "w" : 0.659010291099548
             },
             "inheritOnlyPosition" : false
@@ -9342,9 +9342,9 @@
               "z" : 1
             },
             "orientation" : {
-              "x" : -0.0114886667579412,
+              "x" : -0.0114886676892638,
               "y" : -0.919507503509521,
-              "z" : -0.00231019733473659,
+              "z" : -0.00231019756756723,
               "w" : -0.392897725105286
             },
             "inheritOnlyPosition" : false
@@ -16260,9 +16260,9 @@
               "z" : 1
             },
             "orientation" : {
-              "x" : -0.00083414011169225,
+              "x" : -0.000834140169899911,
               "y" : -0.440185010433197,
-              "z" : 0.00159065413754433,
+              "z" : 0.00159065425395966,
               "w" : 0.897905290126801
             },
             "inheritOnlyPosition" : false
@@ -16352,9 +16352,9 @@
               "z" : 1
             },
             "orientation" : {
-              "x" : 0.000534936378244311,
+              "x" : 0.000534936436451972,
               "y" : 0.323657125234604,
-              "z" : 0.0017145883757621,
+              "z" : 0.00171458849217743,
               "w" : 0.946172714233398
             },
             "inheritOnlyPosition" : false
@@ -42963,6 +42963,965 @@
               "w" : 1
             },
             "inheritOnlyPosition" : false
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "shop05",
+        "id" : 712431609,
+        "components" : [
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "shop05_components_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/act2/town/act2_town_shops/shop05.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 1,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "shop05_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 112.599998474121,
+              "y" : 0,
+              "z" : 226.649993896484
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -0.555726170539856,
+              "z" : 0,
+              "w" : 0.831365406513214
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "shop05_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : 0
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent685",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition686",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition685",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : -2.34956407546997,
+                    "y" : 6.05596208572388,
+                    "z" : -3.03920292854309
+                  },
+                  "extents" : {
+                    "x" : 4.38526391983032,
+                    "y" : 6.10298776626587,
+                    "z" : 4.88953113555908
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "wall",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "wall01_23",
+        "id" : 741752914,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "wall01_23_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 120.611198425293,
+              "y" : 0,
+              "z" : 215.659683227539
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.194906577467918,
+              "z" : 0,
+              "w" : 0.980821788311005
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent788",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition789",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition788",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : 0.00707769393920898,
+                    "y" : 4.88763904571533,
+                    "z" : -0.0013031359994784
+                  },
+                  "extents" : {
+                    "x" : 4.969153881073,
+                    "y" : 4.9273099899292,
+                    "z" : 0.945999383926392
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "wall",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "model",
+            "filename" : "data/hd/env/model/act2/town/act2_town_walls_int/wall01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "wall01_23",
+        "id" : 741752914,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "wall01_23_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 114.143081665039,
+              "y" : 0,
+              "z" : 218.336013793945
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.194906577467918,
+              "z" : 0,
+              "w" : 0.980821788311005
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent788",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition789",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition788",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : 0.00707769393920898,
+                    "y" : 4.88763904571533,
+                    "z" : -0.0013031359994784
+                  },
+                  "extents" : {
+                    "x" : 4.969153881073,
+                    "y" : 4.9273099899292,
+                    "z" : 0.945999383926392
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "wall",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "model",
+            "filename" : "data/hd/env/model/act2/town/act2_town_walls_int/wall01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "shop07_07",
+        "id" : 3795429652,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "shop07_07_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 121.610816955566,
+              "y" : 0,
+              "z" : 222.27229309082
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -0.555726170539856,
+              "z" : 0,
+              "w" : 0.831365406513214
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "PhysicsBodyDefinitionComponent698",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "PhysicsFixtureDefinition699",
+                "shapetype" : {
+                  "type" : "PhysicsBoxDefinition",
+                  "name" : "PhysicsBoxDefinition698",
+                  "orientation" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "z" : 0,
+                    "w" : 1
+                  },
+                  "center" : {
+                    "x" : -1.82330405712128,
+                    "y" : 6.02051401138306,
+                    "z" : -3.09606599807739
+                  },
+                  "extents" : {
+                    "x" : 3.85885405540466,
+                    "y" : 6.11039400100708,
+                    "z" : 5.33451890945435
+                  }
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "wall",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "model",
+            "filename" : "data/hd/env/model/act2/town/act2_town_shops/shop07.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 1,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "shop07_ModelPlatformTier",
+            "visibilityTier" : -1,
+            "shadowTier" : 0
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "crate01_16",
+        "id" : 1064782391,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "crate01_10_components_TransformDefinitionComponent001",
+            "position" : {
+              "x" : 108.260398864746,
+              "y" : 0,
+              "z" : 224.008483886719
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.194906577467918,
+              "z" : 0,
+              "w" : 0.980821788311005
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "crate01_16_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : 3
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "crate01_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_tavern_props/crate01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "crate01_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "crate01_PhysicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "crate01_PhysicsFileDefinition",
+                  "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_tavern_props/crate01.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "wall",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "tablet_small01_06",
+        "id" : 1597160644,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "tablet_small01_03_components_TransformDefinitionComponent001",
+            "position" : {
+              "x" : 115.246765136719,
+              "y" : 0,
+              "z" : 229.547058105469
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.194906577467918,
+              "z" : 0,
+              "w" : 0.980821788311005
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "tablet_small01_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_furniture/tablet_small01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "act2_aloe01_01",
+        "id" : 3073677121,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "act2_aloe01_01_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 117.175720214844,
+              "y" : 1.42873954772949,
+              "z" : 226.021438598633
+            },
+            "scale" : {
+              "x" : 1.26161980628967,
+              "y" : 1.26161992549896,
+              "z" : 1.26161980628967
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.194906577467918,
+              "z" : 0,
+              "w" : 0.980821788311005
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "act2_aloe01_ModelDefinitionComponent",
+            "filename" : "data/hd/env/foliage/global/model/act2_aloe/act2_aloe01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "book_green01_20",
+        "id" : 4170416884,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "book_green01_08_components_TransformDefinitionComponent001",
+            "position" : {
+              "x" : 108.542045593262,
+              "y" : 1.69540977478027,
+              "z" : 223.939025878906
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.831365406513214,
+              "z" : 0,
+              "w" : 0.555726170539856
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "book_green01_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_tavern_props/book_green01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : true,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "shield01_02",
+        "id" : 102691834,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "shield01_02_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 110.886283874512,
+              "y" : 6.51698112487793,
+              "z" : 223.572769165039
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -0.555726170539856,
+              "z" : 0,
+              "w" : 0.831365406513214
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "shield01_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_tavern_props/shield01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "carpet04_03",
+        "id" : 2276152523,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "carpet04_03_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 124.943954467773,
+              "y" : 0.148281097412109,
+              "z" : 225.971298217773
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -0.553510129451752,
+              "z" : 0,
+              "w" : 0.832842469215393
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "carpet04_03_components_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : 3
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "carpet04_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_shop_props/carpet04.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : true,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "shelf05_05",
+        "id" : 862246541,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "shelf05_03_components_TransformDefinitionComponent001",
+            "position" : {
+              "x" : 110.623207092285,
+              "y" : 0,
+              "z" : 226.719680786133
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -0.555726170539856,
+              "z" : 0,
+              "w" : 0.831365406513214
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "shelf05_03_components_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : 1
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "shelf05_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_furniture/shelf05.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "carpet03_06",
+        "id" : 4218788670,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "carpet03_03_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 117.51929473877,
+              "y" : 0.0207290649414063,
+              "z" : 228.90705871582
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.14079087972641,
+              "z" : 0,
+              "w" : 0.990039348602295
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "carpet03_03_components_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : 3
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "carpet03_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_shop_props/carpet03.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : true,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "street_lantern01_11",
+        "id" : 2856370378,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "street_lantern01_11_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 110.77864074707,
+              "y" : 9.21892356872559,
+              "z" : 219.818176269531
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -0.980821788311005,
+              "z" : 0,
+              "w" : 0.194906577467918
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "lantern01_ModelDefinitionComponent",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_lights/street_lantern01.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "SkeletonDefinitionComponent",
+            "name" : "lantern01_SkeletonDefinition",
+            "filename" : "data/hd/env/model/global/prop/act2/town/act2_town_lights/skeleton/act2_town_lights.skeleton"
+          },
+          {
+            "type" : "PhysicsPartialRagdollDefinitionComponent",
+            "name" : "street_lantern01_PhysicsPartialRagdollDefinition",
+            "anchorLocation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0
+            },
+            "attachLocation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0
+            },
+            "density" : 37.5,
+            "jointSettings" : [
+            ],
+            "maxWindSpeed" : 50,
+            "minimumPlatformTier" : 1,
+            "positionIterations" : 3,
+            "radius" : 0.100000001490116,
+            "tracking" : 0.699999988079071,
+            "velocityIterations" : 8
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "act2_duriel_accent_point02_12",
+        "id" : 2376221996,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "act2_duriel_accent_point02_12_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 114.614555358887,
+              "y" : 6.09000015258789,
+              "z" : 225.690551757813
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.0652172341942787,
+              "z" : 0,
+              "w" : 0.997871100902557
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "act2_duriel_accent_point02_12_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PointLightDefinitionComponent",
+            "name" : "act2_duriel_accent_point02_PointLightDefinition",
+            "color" : {
+              "x" : 1,
+              "y" : 0.111304834485054,
+              "z" : 0
+            },
+            "power" : 2500,
+            "radius" : 30,
+            "attenuation" : 4,
+            "lightMask" : 1,
+            "isLocalLight" : false,
+            "diffuseContribution" : 1,
+            "specularContribution" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "act2_duriel_accent_point02_12",
+        "id" : 2376221996,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "act2_duriel_accent_point02_12_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 123.089622497559,
+              "y" : 12.3000001907349,
+              "z" : 209.348388671875
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.0652172341942787,
+              "z" : 0,
+              "w" : 0.997871100902557
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "act2_duriel_accent_point02_12_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PointLightDefinitionComponent",
+            "name" : "act2_duriel_accent_point02_PointLightDefinition",
+            "color" : {
+              "x" : 0,
+              "y" : 0.482352942228317,
+              "z" : 1
+            },
+            "power" : 5000,
+            "radius" : 30,
+            "attenuation" : 4,
+            "lightMask" : 1,
+            "isLocalLight" : false,
+            "diffuseContribution" : 1,
+            "specularContribution" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "act2_duriel_accent_point02_12",
+        "id" : 2376221996,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "act2_duriel_accent_point02_12_components_TransformDefinitionComponent",
+            "position" : {
+              "x" : 135.607696533203,
+              "y" : 6.30000019073486,
+              "z" : 227.876708984375
+            },
+            "scale" : {
+              "x" : 1,
+              "y" : 1,
+              "z" : 1
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0.0652172341942787,
+              "z" : 0,
+              "w" : 0.997871100902557
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "ModelPlatformTierComponent",
+            "name" : "act2_duriel_accent_point02_12_ModelPlatformTierComponent",
+            "visibilityTier" : 0,
+            "shadowTier" : -1
+          },
+          {
+            "type" : "PointLightDefinitionComponent",
+            "name" : "act2_duriel_accent_point02_PointLightDefinition",
+            "color" : {
+              "x" : 0,
+              "y" : 0.482352942228317,
+              "z" : 1
+            },
+            "power" : 2500,
+            "radius" : 10,
+            "attenuation" : 4,
+            "lightMask" : 1,
+            "isLocalLight" : false,
+            "diffuseContribution" : 1,
+            "specularContribution" : 1
           }
         ]
       }
