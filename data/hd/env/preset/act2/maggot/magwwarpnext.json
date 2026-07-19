@@ -4712,9 +4712,9 @@
               "z" : 1
             },
             "orientation" : {
-              "x" : -0.0957993566989899,
+              "x" : -0.0957993641495705,
               "y" : 0.0154024735093117,
-              "z" : 0.122579857707024,
+              "z" : 0.122579865157604,
               "w" : 0.98770409822464
             },
             "inheritOnlyPosition" : false
@@ -7420,9 +7420,9 @@
               "z" : 1
             },
             "orientation" : {
-              "x" : -0.0127462968230247,
+              "x" : -0.0127462977543473,
               "y" : -0.611633896827698,
-              "z" : 0.0164814591407776,
+              "z" : 0.0164814610034227,
               "w" : 0.790866494178772
             },
             "inheritOnlyPosition" : false
@@ -8283,1150 +8283,6 @@
       },
       {
         "type" : "Entity",
-        "name" : "mound03_11",
-        "id" : 515028747,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_11_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 26.5580787658691,
-              "y" : 0,
-              "z" : 40.6544990539551
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : -0.593806982040405,
-              "z" : 0,
-              "w" : -0.804607510566711
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent017",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition018",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition017",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 9.51799964904785,
-              "y" : 0,
-              "z" : 40.9486122131348
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 0.854624271392822,
-              "z" : 0,
-              "w" : -0.519246935844421
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 15.5100002288818,
-              "y" : 0,
-              "z" : 34.8699989318848
-            },
-            "scale" : {
-              "x" : 2,
-              "y" : 1,
-              "z" : 2
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 0.707106828689575,
-              "z" : 0,
-              "w" : 0.707106828689575
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 15.5100002288818,
-              "y" : 0,
-              "z" : 56.2700004577637
-            },
-            "scale" : {
-              "x" : 2,
-              "y" : 1,
-              "z" : 2
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : -0.707106828689575,
-              "z" : 0,
-              "w" : 0.707106828689575
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 7.76999998092651,
-              "y" : 0,
-              "z" : 44.1100006103516
-            },
-            "scale" : {
-              "x" : 2,
-              "y" : 1,
-              "z" : 2
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 1,
-              "z" : 0,
-              "w" : 0
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 23.0300006866455,
-              "y" : 0,
-              "z" : 56.2700004577637
-            },
-            "scale" : {
-              "x" : 2,
-              "y" : 1,
-              "z" : 2
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : -0.707106828689575,
-              "z" : 0,
-              "w" : 0.707106828689575
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 30.7800006866455,
-              "y" : 0,
-              "z" : 59.7000007629395
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : -0.841330945491791,
-              "z" : 0,
-              "w" : 0.540520429611206
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 38.0299987792969,
-              "y" : 0,
-              "z" : 62.3499984741211
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : -0.841330945491791,
-              "z" : 0,
-              "w" : 0.540520429611206
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 40.7200012207031,
-              "y" : 0,
-              "z" : 60.7900009155273
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : -0.841330945491791,
-              "z" : 0,
-              "w" : 0.540520429611206
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 27.4699993133545,
-              "y" : 0,
-              "z" : 34.8699989318848
-            },
-            "scale" : {
-              "x" : 2,
-              "y" : 1,
-              "z" : 2
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 0.707106828689575,
-              "z" : 0,
-              "w" : 0.707106828689575
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 33.7400016784668,
-              "y" : 0,
-              "z" : 34.8699989318848
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 0.707106828689575,
-              "z" : 0,
-              "w" : 0.707106828689575
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 41.1300010681152,
-              "y" : 0,
-              "z" : 33.5499992370605
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 0.897116601467133,
-              "z" : 0,
-              "w" : 0.441793859004974
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
-        "name" : "mound03_10",
-        "id" : 1119402040,
-        "components" : [
-          {
-            "type" : "TransformDefinitionComponent",
-            "name" : "mound03_10_components_TransformDefinitionComponent",
-            "position" : {
-              "x" : 44.1399993896484,
-              "y" : 0,
-              "z" : 27.4099998474121
-            },
-            "scale" : {
-              "x" : 1,
-              "y" : 1,
-              "z" : 1
-            },
-            "orientation" : {
-              "x" : 0,
-              "y" : 0.897116601467133,
-              "z" : 0,
-              "w" : 0.441793859004974
-            },
-            "inheritOnlyPosition" : false
-          },
-          {
-            "type" : "PhysicsBodyDefinitionComponent",
-            "name" : "PhysicsBodyDefinitionComponent016",
-            "bodytype" : "static",
-            "fixturedefs" : [
-              {
-                "type" : "PhysicsFixtureDefinition",
-                "name" : "PhysicsFixtureDefinition017",
-                "shapetype" : {
-                  "type" : "PhysicsBoxDefinition",
-                  "name" : "PhysicsBoxDefinition016",
-                  "orientation" : {
-                    "x" : 0,
-                    "y" : 0,
-                    "z" : 0,
-                    "w" : 1
-                  },
-                  "center" : {
-                    "x" : -0.860695779323578,
-                    "y" : 1.04193699359894,
-                    "z" : -0.536032676696777
-                  },
-                  "extents" : {
-                    "x" : 5.70073413848877,
-                    "y" : 1.04006505012512,
-                    "z" : 9.18441009521484
-                  }
-                },
-                "friction" : 0.600000023841858,
-                "restitution" : 0,
-                "rollingresistance" : 0.200000002980232,
-                "impulsefactor" : 1,
-                "explosionfactor" : 1,
-                "explosionliftfactor" : 1,
-                "windfactor" : 0,
-                "dragfactor" : 0,
-                "liftfactor" : 1,
-                "density" : 37.5,
-                "boneindex" : -1
-              }
-            ],
-            "filter" : "wall",
-            "allowTransition" : true,
-            "removeOnDeath" : true,
-            "lineardamping" : 0,
-            "angulardamping" : 0,
-            "gravityscale" : 1
-          },
-          {
-            "type" : "ModelDefinitionComponent",
-            "name" : "mound03_ModelDefinitionComponent",
-            "filename" : "data/hd/env/model/act2/maggot/act2_maggot_mounds/mound03.model",
-            "visibleLayers" : 1,
-            "lightMask" : 19,
-            "shadowMask" : 3,
-            "ghostShadows" : false,
-            "floorModel" : true,
-            "terrainBlendEnableYUpBlend" : true,
-            "terrainBlendMode" : 2
-          }
-        ]
-      },
-      {
-        "type" : "Entity",
         "name" : "pf_pit_01",
         "id" : 1321094133,
         "components" : [
@@ -9455,6 +8311,1854 @@
             "type" : "PrefabPlacementDefinitionComponent",
             "name" : "pf_pit_01_PrefabPlacementDefinitionComponent",
             "prefab" : "data/hd/env/model/act2/maggot/prefab/pf_pit.json"
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -16.3790321350098,
+              "y" : 0.000566482543945313,
+              "z" : 37.0964317321777
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 36.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 68.3000030517578
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 36.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 65.6435699462891
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -16.3790321350098,
+              "y" : 0.000566482543945313,
+              "z" : 34.439998626709
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -16.3790321350098,
+              "y" : 0.000566482543945313,
+              "z" : 31.6299991607666
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 36.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 57.1699981689453
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -16.3790321350098,
+              "y" : 0.000566482543945313,
+              "z" : 25.9664249420166
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 36.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 62.8335723876953
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 49.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 68.3000030517578
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -3.37903213500977,
+              "y" : 0.000566482543945313,
+              "z" : 37.0964317321777
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 59.879997253418,
+              "y" : 0.000566482543945313,
+              "z" : 57.1699829101563
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 6.62096405029297,
+              "y" : 0.000566482543945313,
+              "z" : 25.9664096832275
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 6.62096405029297,
+              "y" : 0.000566482543945313,
+              "z" : 31.6299839019775
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 59.879997253418,
+              "y" : 0.000566482543945313,
+              "z" : 62.8335571289063
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 59.879997253418,
+              "y" : 0.000566482543945313,
+              "z" : 65.6435546875
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 6.62096405029297,
+              "y" : 0.000566482543945313,
+              "z" : 34.4399833679199
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 6.62096405029297,
+              "y" : 0.000566482543945313,
+              "z" : 37.0964164733887
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 59.879997253418,
+              "y" : 0.000566482543945313,
+              "z" : 68.2999877929688
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -3.37903213500977,
+              "y" : 0.000566482543945313,
+              "z" : 34.439998626709
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 49.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 65.6435699462891
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 49.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 62.8335723876953
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -3.37903213500977,
+              "y" : 0.000566482543945313,
+              "z" : 31.6299991607666
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : -3.37903213500977,
+              "y" : 0.000566482543945313,
+              "z" : 25.9664249420166
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : 0,
+              "z" : 0,
+              "w" : 1
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
+          }
+        ]
+      },
+      {
+        "type" : "Entity",
+        "name" : "terrain",
+        "id" : 3367773057,
+        "components" : [
+          {
+            "type" : "TransformDefinitionComponent",
+            "name" : "terrain_TransformDefinitionComponent",
+            "position" : {
+              "x" : 49.8800010681152,
+              "y" : 0.000566482543945313,
+              "z" : 57.1699981689453
+            },
+            "scale" : {
+              "x" : 0.331799983978271,
+              "y" : 0.331799983978271,
+              "z" : 0.331799983978271
+            },
+            "orientation" : {
+              "x" : 0,
+              "y" : -1,
+              "z" : 0,
+              "w" : 6.25848713298183E-07
+            },
+            "inheritOnlyPosition" : false
+          },
+          {
+            "type" : "TerrainDefinitionComponent",
+            "name" : "terrain_TerrainDefinitionComponent"
+          },
+          {
+            "type" : "ModelDefinitionComponent",
+            "name" : "terrain_ModelDefinitionComponent",
+            "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.model",
+            "visibleLayers" : 1,
+            "lightMask" : 19,
+            "shadowMask" : 3,
+            "ghostShadows" : false,
+            "floorModel" : false,
+            "terrainBlendEnableYUpBlend" : false,
+            "terrainBlendMode" : 1
+          },
+          {
+            "type" : "PhysicsBodyDefinitionComponent",
+            "name" : "terrain_PhysicsBodyDefinitionComponent",
+            "bodytype" : "static",
+            "fixturedefs" : [
+              {
+                "type" : "PhysicsFixtureDefinition",
+                "name" : "physicsFixtureDefinition",
+                "shapetype" : {
+                  "type" : "PhysicsFileDefinition",
+                  "name" : "physicsFileDefinition",
+                  "filename" : "data/hd/env/preset/act2/maggot/magE/terrain.physics"
+                },
+                "friction" : 0.600000023841858,
+                "restitution" : 0,
+                "rollingresistance" : 0.200000002980232,
+                "impulsefactor" : 1,
+                "explosionfactor" : 1,
+                "explosionliftfactor" : 1,
+                "windfactor" : 0,
+                "dragfactor" : 0,
+                "liftfactor" : 1,
+                "density" : 37.5,
+                "boneindex" : -1
+              }
+            ],
+            "filter" : "floor",
+            "allowTransition" : true,
+            "removeOnDeath" : true,
+            "lineardamping" : 0,
+            "angulardamping" : 0,
+            "gravityscale" : 1
           }
         ]
       }
