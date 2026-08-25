@@ -1,0 +1,265 @@
+{
+    "dependencies": {
+        "particles": [
+            {"path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles"},
+            {"path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall_vampire.particles"},
+            {"path": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small.particles"},
+            {"path": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small_firestorm.particles"},
+            {"path": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small_WD.particles"},
+            {"path": "data/hd/vfx/particles/missiles/meteor/vfx_meteor_fire.particles"},
+            {"path": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_zenith.particles"}
+        ],
+        "models": [
+            {"path": "data/hd/vfx/meshes/fx_mesh_fire_cylinder.model"},
+            {"path": "data/hd/vfx/meshes/fx_mesh_polarDiscLump.model"},
+            {"path": "data/hd/vfx/meshes/missiles/ground_fire_big/fx_mesh_groundFireCylinder.model"}
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {"path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"},
+            {"path": "data/hd/vfx/textures/decal/T_FX_burning_ash_E.texture"},
+            {"path": "data/hd/vfx/textures/gradient/T_FX_ExpoGrad_BtmTop02.texture"},
+            {"path": "data/hd/vfx/textures/gradient/T_FX_flame_gradient_09.texture"},
+            {"path": "data/hd/vfx/textures/gradient/T_FX_scortch_gradient.texture"}
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "ground_fire_small",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 241800524,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx1",
+            "id": 1113901572,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "component_transform1",
+                    "position": {"x": 0.0, "y": 0.0, "z": 0.0},
+                    "orientation": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0},
+                    "scale": {"x": 1.0, "y": 1.0, "z": 1.0},
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx1_UnitSourceSkillFilter",
+                    "sourceSkill": ""
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_firewall",
+            "id": 1067929435,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_firewall_UnitSourceSkillFilter",
+                    "sourceSkill": "Fire Wall"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_firewall_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_meteor",
+            "id": 1575758708,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_meteor_UnitSourceSkillFilter",
+                    "sourceSkill": "Meteor"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_meteor_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/meteor/vfx_meteor_fire.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_moltenBoulder",
+            "id": 2275705299,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_moltenBoulder_UnitSourceSkillFilter",
+                    "sourceSkill": "Molten Boulder"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_moltenBoulder_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_wakeofDest",
+            "id": 2164103922,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_wakeofDest_UnitSourceSkillFilter",
+                    "sourceSkill": "Wake of Destruction Sentry"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_wakeofDest_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small_WD.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_Firestorm",
+            "id": 3264835183,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_Firestorm_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_small/vfx_ground_fire_small_firestorm.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_Firestorm_UnitSourceSkillFilter",
+                    "sourceSkill": "Firestorm"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_blaze",
+            "id": 2444521877,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_blaze_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_blaze_UnitSourceSkillFilter",
+                    "sourceSkill": "blaze"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_immolationArrow",
+            "id": 3415626485,
+            "components": [
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_immolationArrow_UnitSourceSkillFilter",
+                    "sourceSkill": "Immolation Arrow"
+                },
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_immolationArrow_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles",
+                    "hardKillOnDestroy": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_VampireFirewall",
+            "id": 1243263682,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "new_entity_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall_vampire.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "new_entity_UnitSourceSkillFilter",
+                    "sourceSkill": "VampireFirewall"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_VampireMeteor",
+            "id": 3139770762,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_VampireMeteor_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_firewall.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_VampireMeteor_UnitSourceSkillFilter",
+                    "sourceSkill": "VampireMeteor"
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_vfx_Zenith",
+            "id": 3264835184,
+            "components": [
+                {
+                    "type": "VfxDefinitionComponent",
+                    "name": "entity_vfx_Zenith_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/ground_fire_big/vfx_ground_fire_zenith.particles",
+                    "hardKillOnDestroy": false
+                },
+                {
+                    "type": "UnitSourceSkillFilterComponent",
+                    "name": "entity_vfx_Zenith_UnitSourceSkillFilter",
+                    "sourceSkill": "Zenith"
+                }
+            ]
+        }
+    ]
+}
