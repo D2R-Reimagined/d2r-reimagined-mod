@@ -16,7 +16,7 @@ spiritwolf	att-skill		435	35	1																										att-skill		435	35	1					
 fenris	att-skill		436	35	1																										att-skill		436	35	1																										att-skill		436	35	1																										0
 druidbear	att-skill		437	35	1																										att-skill		437	35	1																										att-skill		437	35	1																										0
 speed_slow_monprop																																																													prop_mon_move			40	40																										0
-death_stygian_monprop	death-skill		441	100	1																										death-skill		441	100	8																										death-skill		441	100	18																										0
+death_stygian_monprop	death-skill		441	100	1																										death-skill		441	100	8																										death-skill		441	100	18	pierce-immunity-all	100		500	500																					0
 speed_fast_monprop																																																													prop_mon_move			80	80																										0
 death_nova_monprop																																																													death-skill		487	20	31																										0
 death_curse_monprop																																																													death-skill		87	5	10	death-skill		91	5	3	death-skill		72	5	10																0
@@ -29,9 +29,11 @@ splash_monprop	hit-skill		434	100	1	dmg2%			-50	-50																					hit-skil
 fire_splash_monprop	hit-skill		484	100	1																										hit-skill		484	100	1																										hit-skill		484	100	1																										0
 shadow_monprop	res-all/lvl		6																												res-all/lvl		6																												res-all/lvl		6																												0
 dclone_monprop																																																													cast1			50	50	swing1			50	50	aura		489	1	1	att-skill		488	5	1											0
-fast	swing1			100	100	cast1			100	100																					cast2			15	15	swing2			15	15																					cast2			30	30	swing2			30	30																					0
-labmummy	death-skill		490	100	1																																																																																						0
-labaura1	aura	100	492	1	1																																																																																						0
-labaura2	aura	100	493	1	1																																																																																						0
-skeleking_monprop	att-skill	100	494	50	1																										att-skill	100	494	100	1																										att-skill	100	494	100	1																										0
-nakrul_monprop	att-skill	100	46	100	50																																																																																						0
+fast																																																													swing1			100	100	cast1			100	100	pierce-immunity-all	100		500	500																0
+labmummy																																																													death-skill		490	100	1	pierce-immunity-all	100		500	500																					0
+labaura1																																																													aura	100	492	1	1	pierce-immunity-all	100		500	500																					0
+labaura2																																																													aura	100	493	1	1	pierce-immunity-all	100		500	500																					0
+skeleking_monprop																																																													att-skill	100	494	100	1	pierce-immunity-all	100		500	500																					0
+nakrul_monprop																																																													att-skill	100	46	100	50	pierce-immunity-all	100		500	500																					0
+labprop1																																																													swing1			100	100	cast1			100	100	pierce-immunity-all	100		500	500																0
+labprop2																																																													swing1			100	100	cast1			100	100	pierce-immunity-all	100		500	500	state	fullsetgeneric	1	1												0
