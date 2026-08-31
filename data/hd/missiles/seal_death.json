@@ -1,10 +1,18 @@
 {
     "dependencies": {
-        "particles": [],
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/missiles/seal_rancor/vfx_seal_rancor.particles"
+            }
+        ],
         "models": [],
         "skeletons": [],
         "animations": [],
-        "textures": [],
+        "textures": [
+            {
+                "path": "data/hd/vfx/textures/graphic/T_FX_WarlockSkillIcon_SealRancor_Mask_low.texture"
+            }
+        ],
         "physics": [],
         "json": [],
         "variantdata": [],
@@ -12,16 +20,16 @@
         "other": []
     },
     "type": "UnitDefinition",
-    "name": "warcryextra",
+    "name": "seal_rancor",
     "entities": [
         {
             "type": "Entity",
             "name": "entity_root",
-            "id": 777654545,
+            "id": 1780552912,
             "components": [
                 {
                     "type": "UnitRootComponent",
-                    "name": "component_root",
+                    "name": "entity_root_UnitRoot",
                     "state_machine_filename": "",
                     "doNotInheritRotation": false,
                     "rotationOverride": {
@@ -40,21 +48,21 @@
         {
             "type": "Entity",
             "name": "entity_vfx1",
-            "id": 765345454,
+            "id": 3823002074,
             "components": [
                 {
                     "type": "VfxDefinitionComponent",
-                    "name": "component_vfx1",
-                    "filename": "data/hd/vfx/particles/character/enemy/sandmaggot1/vfx_sandmaggot_skill1.particles",
+                    "name": "entity_vfx1_VfxDefinition",
+                    "filename": "data/hd/vfx/particles/missiles/seal_rancor/vfx_seal_rancor.particles",
                     "hardKillOnDestroy": false
                 },
                 {
                     "type": "TransformDefinitionComponent",
-                    "name": "component_transform1",
+                    "name": "entity_vfx1_TransformDefinition",
                     "position": {
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 7.0
+                        "z": 0.0
                     },
                     "orientation": {
                         "x": 0.0,
