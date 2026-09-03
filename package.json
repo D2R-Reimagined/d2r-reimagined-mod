@@ -1,0 +1,13 @@
+{
+    "name": "d2r-reimagined-mod-source",
+    "private": true,
+    "engines": { "node": ">=22" },
+    "scripts": {
+        "build": "node scripts/build.mjs --all",
+        "build:standard": "node scripts/build.mjs --profile standard",
+        "build:d2rl": "node scripts/build.mjs --profile d2rl",
+        "check:strings": "node scripts/check-strings.mjs --profile standard",
+        "diff:profiles": "node scripts/diff-builds.mjs",
+        "test": "node --test scripts/tests/*.test.mjs"
+    }
+}

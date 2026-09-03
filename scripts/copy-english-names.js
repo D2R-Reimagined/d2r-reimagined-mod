@@ -1,4 +1,5 @@
 const fs = require('fs');
+throw new Error('Edit translations in source/strings/item-names/records. This flattened-JSON writer is retired; see docs/source-workflow.md.');
 const jsonPath = '../data/local/lng/strings/item-names.json';
 const file = fs.readFileSync(jsonPath, 'utf8').replace(/^\uFEFF/, '');
 let json = JSON.parse(file);

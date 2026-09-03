@@ -363,4 +363,4 @@ def main():
         print(f"Dry run completed. Would have updated {total_translations} items.")
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit("This flattened-JSON translation writer is retired for the JSON source pilot. Edit source/strings/item-names/records; see docs/source-workflow.md.")

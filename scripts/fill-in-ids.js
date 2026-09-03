@@ -1,4 +1,5 @@
 // node fill-in-ids.js
+throw new Error('IDs now belong to source/strings records. Automatic renumbering is disabled; see docs/source-workflow.md.');
 
 const fs = require('fs');
 const path = require('path');

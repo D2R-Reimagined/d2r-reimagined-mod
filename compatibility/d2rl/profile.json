@@ -1,0 +1,17 @@
+{
+    "schemaVersion": 1,
+    "id": "d2rl",
+    "stringMode": "full",
+    "description": "D2RLoader output. Uses full translations and explicit runtime overrides.",
+    "tableOverrides": [],
+    "assetOverrides": [
+        {
+            "scope": "mod",
+            "source": "assets/d2rloader/metadata.json",
+            "target": "d2rloader/metadata.json",
+            "transform": "json-template",
+            "expectSha256": null,
+            "reason": "D2RLoader reads mod compatibility metadata from beside Reimagined.mpq."
+        }
+    ]
+}

@@ -16,9 +16,26 @@ Want to be apart of this mission? Join our Discord Server https://discord.gg/9zZ
 3) Open up a pull request targeting the `next` branch.
 4) Reach out to me on discord (collin.h) to discuss your changes.
 
+## JSON source pilot
+
+On this branch, unique items, treasure classes, item ratios, experience, and all eight translation catalogs are authored as individual JSON records under `source/`. Remaining tables and assets stay in `data/`. Standard and D2RLoader outputs are generated from the same source. The D2RLoader profile currently adds its metadata file; no table-value overrides are enabled yet.
+
+Requires Node.js 22 or later, with no dependency installation:
+
+```powershell
+node scripts/build.mjs --all
+node scripts/diff-builds.mjs
+node scripts/check-strings.mjs --profile standard
+node --test scripts/tests/*.test.mjs
+```
+
+Inspect `source/tables/uniqueitems/records/row-00000-the-gnasher.json` for an editable item. Full mod output is written to `build/standard/mods/Reimagined/` and `build/d2rl/mods/Reimagined/`. **Install from generated output; the repository's `data/` alone is no longer a complete mod.**
+
+See [the source workflow](docs/source-workflow.md) for runtime overrides, compact translations, spreadsheet export/import, migration checks, and the limits of the current string measurements.
+
 ## Available Tools
 This repository contains a number of tools that can be used to help develop the mod. These tools are located in the `scripts` directory.
-These tools include the ability to compare key entries for strings between two files, copying english names to other languages, and copying the files from this git repository into your d2r install directory.
+The source workflow documents the active tools. Legacy flattened-string mutation scripts are disabled during the JSON pilot to prevent edits to generated data or accidental ID renumbering.
 
 ### Launcher
 A beta launcher for this mod can be found here [https://github.com/D2R-Reimagined/reimagined-launcher](https://github.com/D2R-Reimagined/reimagined-launcher)

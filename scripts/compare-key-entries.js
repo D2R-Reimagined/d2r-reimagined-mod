@@ -1,4 +1,5 @@
 const fs = require('fs');
+throw new Error('Build a runtime profile and compare its generated translation JSON. Source entries now live under source/strings; see docs/source-workflow.md.');
 
 // Read the files
 const file1 = fs.readFileSync('../data/local/lng/strings/ui.json', 'utf8').replace(/^\uFEFF/, '');
