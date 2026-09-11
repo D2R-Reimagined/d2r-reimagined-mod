@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { assert, inside, loadTable, readJson, writeJson, encodeTable, readTsv, cellsFromRecord, clone } from './source.mjs';
+import { assert, inside, loadTable, readJson, writeJson, replaceJson, encodeTable, readTsv, cellsFromRecord, clone, resolveString, sha256, locales } from './source.mjs';
 
 export function exportTable(root, tableName, relative) {
     const table = loadTable(inside(root, `source/tables/${tableName}`));
@@ -60,6 +60,34 @@ export function importTable(root, relative) {
         if (JSON.stringify(updated.fields) !== JSON.stringify(current.fields) || updated.columnCount !== current.columnCount) writes.push({ file: current.file, record: updated });
     }
     assert(conflicts.length === 0, `Import conflicts; no source files were changed:\n${conflicts.join('\n')}`);
-    for (const write of writes) writeJson(write.file, write.record);
+    if (table.recordsFile && writes.length > 0) {
+        const updates = new Map(writes.map(write => [write.record.sourceId, write.record]));
+        const records = table.records.map(({ file, ...record }) => updates.get(record.sourceId) ?? record);
+        // Replace the complete table only after every edited cell has been checked.
+        replaceJson(table.recordsFile, records);
+    } else {
+        for (const write of writes) writeJson(write.file, write.record);
+    }
     return changes;
+}
+
+export function reviewString(root, relative, id) {
+    assert(/^source\/strings\/[a-z0-9-]+\/records\.json$/.test(relative), 'Use source/strings/<category>/records.json and a numeric --id.');
+    assert(Number.isInteger(id) && id >= 0 && id <= 65535, 'A valid numeric string --id is required.');
+    const file = inside(root, relative);
+    const records = readJson(file);
+    assert(Array.isArray(records), 'Expected an array of string records.');
+    const matches = records.filter(record => record.id === id);
+    assert(matches.length === 1, `Expected exactly one string with ID ${id}.`);
+    const record = matches[0];
+    const compact = Object.keys(record.standardTranslations ?? {});
+    assert(compact.length > 0, 'No compact translations to mark as reviewed.');
+    record.standardReviewedAgainst ??= {};
+    for (const locale of compact) {
+        assert(typeof record.translations[locale] === 'string', `Missing full ${locale} translation.`);
+        record.standardReviewedAgainst[locale] = sha256(record.translations[locale]);
+    }
+    resolveString(record, 'standard', locales, `${relative} (ID ${id})`);
+    replaceJson(file, records);
+    return { key: record.Key, locales: compact };
 }

@@ -1,0 +1,6892 @@
+[
+    {
+        "sourceId": "row-00000",
+        "order": 0,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac",
+            "*Id": "0",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "armorclass",
+            "*Tooltip": "+# Defense",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00001",
+        "order": 1,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac-miss",
+            "*Id": "1",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "armorclass_vs_missile",
+            "*Tooltip": "+# Defense vs. Missile",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00002",
+        "order": 2,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac-hth",
+            "*Id": "2",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "armorclass_vs_hth",
+            "*Tooltip": "+# Defense vs. Melee",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00003",
+        "order": 3,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-dmg",
+            "*Id": "3",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "normal_damage_reduction",
+            "*Tooltip": "Damage Reduced by #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00004",
+        "order": 4,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-dmg%",
+            "*Id": "4",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "damageresist",
+            "*Tooltip": "Damage Reduced by #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00005",
+        "order": 5,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac%",
+            "*Id": "5",
+            "*Enabled": "1",
+            "func1": "2",
+            "stat1": "item_armor_percent",
+            "*Tooltip": "+#% Enhanced Defense",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00006",
+        "order": 6,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-mag",
+            "*Id": "6",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "magic_damage_reduction",
+            "*Tooltip": "Magic Damage Reduced by #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00007",
+        "order": 7,
+        "columnCount": 38,
+        "fields": {
+            "code": "str",
+            "*Id": "7",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "strength",
+            "*Tooltip": "+# to Strength",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00008",
+        "order": 8,
+        "columnCount": 38,
+        "fields": {
+            "code": "dex",
+            "*Id": "8",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "dexterity",
+            "*Tooltip": "+# to Dexterity",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00009",
+        "order": 9,
+        "columnCount": 38,
+        "fields": {
+            "code": "vit",
+            "*Id": "9",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "vitality",
+            "*Tooltip": "+# to Vitality",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00010",
+        "order": 10,
+        "columnCount": 38,
+        "fields": {
+            "code": "enr",
+            "*Id": "10",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "energy",
+            "*Tooltip": "+# to Energy",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00011",
+        "order": 11,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana",
+            "*Id": "11",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxmana",
+            "*Tooltip": "+# to Mana",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00012",
+        "order": 12,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana%",
+            "*Id": "12",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_maxmana_percent",
+            "*Tooltip": "Increase Maximum Mana #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00013",
+        "order": 13,
+        "columnCount": 38,
+        "fields": {
+            "code": "hp",
+            "*Id": "13",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxhp",
+            "*Tooltip": "+# to Life",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00014",
+        "order": 14,
+        "columnCount": 38,
+        "fields": {
+            "code": "hp%",
+            "*Id": "14",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_maxhp_percent",
+            "*Tooltip": "Increase Maximum Life #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00015",
+        "order": 15,
+        "columnCount": 38,
+        "fields": {
+            "code": "att",
+            "*Id": "15",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "tohit",
+            "*Tooltip": "+# to Attack Rating",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00016",
+        "order": 16,
+        "columnCount": 38,
+        "fields": {
+            "code": "block",
+            "*Id": "16",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "toblock",
+            "*Tooltip": "#% Increased Chance of Blocking",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00017",
+        "order": 17,
+        "columnCount": 38,
+        "fields": {
+            "code": "cold-min",
+            "*Id": "17",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "coldmindam",
+            "*Tooltip": "+# to Minimum Cold Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00018",
+        "order": 18,
+        "columnCount": 38,
+        "fields": {
+            "code": "cold-max",
+            "*Id": "18",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "coldmaxdam",
+            "*Tooltip": "+# to Maximum Cold Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00019",
+        "order": 19,
+        "columnCount": 38,
+        "fields": {
+            "code": "cold-len",
+            "*Id": "19",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "coldlength",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "# of Frames (25 Frames = 1 Second)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00020",
+        "order": 20,
+        "columnCount": 38,
+        "fields": {
+            "code": "fire-min",
+            "*Id": "20",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "firemindam",
+            "*Tooltip": "+# to Minimum Fire Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00021",
+        "order": 21,
+        "columnCount": 38,
+        "fields": {
+            "code": "fire-max",
+            "*Id": "21",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "firemaxdam",
+            "*Tooltip": "+# to Maximum Fire Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00022",
+        "order": 22,
+        "columnCount": 38,
+        "fields": {
+            "code": "ltng-min",
+            "*Id": "22",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "lightmindam",
+            "*Tooltip": "+# to Minimum Lightning Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00023",
+        "order": 23,
+        "columnCount": 38,
+        "fields": {
+            "code": "ltng-max",
+            "*Id": "23",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "lightmaxdam",
+            "*Tooltip": "+# to Maximum Lightning Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00024",
+        "order": 24,
+        "columnCount": 38,
+        "fields": {
+            "code": "pois-min",
+            "*Id": "24",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "poisonmindam",
+            "*Tooltip": "+# to Minimum Poison Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00025",
+        "order": 25,
+        "columnCount": 38,
+        "fields": {
+            "code": "pois-max",
+            "*Id": "25",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "poisonmaxdam",
+            "*Tooltip": "+# to Maximum Poison Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00026",
+        "order": 26,
+        "columnCount": 38,
+        "fields": {
+            "code": "pois-len",
+            "*Id": "26",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "poisonlength",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "# of Frames (25 Frames = 1 Second)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00027",
+        "order": 27,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min",
+            "*Id": "27",
+            "*Enabled": "1",
+            "func1": "5",
+            "*Tooltip": "+# to Minimum Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00028",
+        "order": 28,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-max",
+            "*Id": "28",
+            "*Enabled": "1",
+            "func1": "6",
+            "*Tooltip": "+# to Maximum Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00029",
+        "order": 29,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg%",
+            "*Id": "29",
+            "*Enabled": "1",
+            "func1": "7",
+            "*Tooltip": "+#% Enhanced Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00030",
+        "order": 30,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-to-mana",
+            "*Id": "30",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_damagetomana",
+            "*Tooltip": "#% Damage Taken Goes To Mana",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00031",
+        "order": 31,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-fire",
+            "*Id": "31",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "fireresist",
+            "*Tooltip": "Fire Resist +#%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00032",
+        "order": 32,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-fire-max",
+            "*Id": "32",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxfireresist",
+            "*Tooltip": "+#% to Maximum Fire Resist",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00033",
+        "order": 33,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-ltng",
+            "*Id": "33",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "lightresist",
+            "*Tooltip": "Lightning Resist +#%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00034",
+        "order": 34,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-ltng-max",
+            "*Id": "34",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxlightresist",
+            "*Tooltip": "+#% to Maximum Lightning Resist",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00035",
+        "order": 35,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-cold",
+            "*Id": "35",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "coldresist",
+            "*Tooltip": "Cold Resist +#%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00036",
+        "order": 36,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-cold-max",
+            "*Id": "36",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxcoldresist",
+            "*Tooltip": "+#% to Maximum Cold Resist",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00037",
+        "order": 37,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-mag",
+            "*Id": "37",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "magicresist",
+            "*Tooltip": "Magic Resist +#%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00038",
+        "order": 38,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-mag-max",
+            "*Id": "38",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxmagicresist",
+            "*Tooltip": "+#% to Maximum Magic Resist",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00039",
+        "order": 39,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois",
+            "*Id": "39",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "poisonresist",
+            "*Tooltip": "Poison Resist +#%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00040",
+        "order": 40,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois-max",
+            "*Id": "40",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxpoisonresist",
+            "*Tooltip": "+#% to Maximum Poison Resist",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00041",
+        "order": 41,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-all",
+            "*Id": "41",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "fireresist",
+            "func2": "3",
+            "stat2": "lightresist",
+            "func3": "3",
+            "stat3": "coldresist",
+            "func4": "3",
+            "stat4": "poisonresist",
+            "*Tooltip": "All Resistances +#",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00042",
+        "order": 42,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-all-max",
+            "*Id": "42",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxfireresist",
+            "func2": "3",
+            "stat2": "maxlightresist",
+            "func3": "3",
+            "stat3": "maxcoldresist",
+            "func4": "3",
+            "stat4": "maxpoisonresist",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "#% All Maximum Resistances",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00043",
+        "order": 43,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-fire%",
+            "*Id": "43",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorbfire_percent",
+            "*Tooltip": "+# Fire Absorb",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00044",
+        "order": 44,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-fire",
+            "*Id": "44",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorbfire",
+            "*Tooltip": "Fire Absorb #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00045",
+        "order": 45,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-ltng%",
+            "*Id": "45",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorblight_percent",
+            "*Tooltip": "+# Lightning Absorb",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00046",
+        "order": 46,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-ltng",
+            "*Id": "46",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorblight",
+            "*Tooltip": "Lightning Absorb #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00047",
+        "order": 47,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-mag%",
+            "*Id": "47",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorbmagic_percent",
+            "*Tooltip": "+# Magic Absorb",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00048",
+        "order": 48,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-mag",
+            "*Id": "48",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorbmagic",
+            "*Tooltip": "Magic Absorb #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00049",
+        "order": 49,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-cold%",
+            "*Id": "49",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorbcold_percent",
+            "*Tooltip": "+# Cold Absorb",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00050",
+        "order": 50,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-cold",
+            "*Id": "50",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_absorbcold",
+            "*Tooltip": "Cold Absorb #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00051",
+        "order": 51,
+        "columnCount": 38,
+        "fields": {
+            "code": "dur",
+            "*Id": "51",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxdurability",
+            "*Tooltip": "Durability: # of #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00052",
+        "order": 52,
+        "columnCount": 38,
+        "fields": {
+            "code": "dur%",
+            "*Id": "52",
+            "*Enabled": "1",
+            "func1": "13",
+            "stat1": "item_maxdurability_percent",
+            "*Tooltip": "Increase Maximum Durability #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00053",
+        "order": 53,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen",
+            "*Id": "53",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "hpregen",
+            "*Tooltip": "Replenish Life +#",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00054",
+        "order": 54,
+        "columnCount": 38,
+        "fields": {
+            "code": "thorns",
+            "*Id": "54",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_attackertakesdamage",
+            "*Tooltip": "Attacker Takes Damage of #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00055",
+        "order": 55,
+        "columnCount": 38,
+        "fields": {
+            "code": "swing1",
+            "*Id": "55",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fasterattackrate",
+            "*Tooltip": "+#% Increased Attack Speed",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00056",
+        "order": 56,
+        "columnCount": 38,
+        "fields": {
+            "code": "swing2",
+            "*Id": "56",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fasterattackrate",
+            "*Tooltip": "+#% Increased Attack Speed",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00057",
+        "order": 57,
+        "columnCount": 38,
+        "fields": {
+            "code": "swing3",
+            "*Id": "57",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fasterattackrate",
+            "*Tooltip": "+#% Increased Attack Speed",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00058",
+        "order": 58,
+        "columnCount": 38,
+        "fields": {
+            "code": "gold%",
+            "*Id": "58",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_goldbonus",
+            "*Tooltip": "#% Extra Gold from Monsters",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00059",
+        "order": 59,
+        "columnCount": 38,
+        "fields": {
+            "code": "mag%",
+            "*Id": "59",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_magicbonus",
+            "*Tooltip": "#% Better Chance of Getting Magic Items",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00060",
+        "order": 60,
+        "columnCount": 38,
+        "fields": {
+            "code": "knock",
+            "*Id": "60",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_knockback",
+            "*Tooltip": "Knockback",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00061",
+        "order": 61,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen-stam",
+            "*Id": "61",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "staminarecoverybonus",
+            "*Tooltip": "Heal Stamina Plus #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00062",
+        "order": 62,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen-mana",
+            "*Id": "62",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "manarecoverybonus",
+            "*Tooltip": "Regenerate Mana #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00063",
+        "order": 63,
+        "columnCount": 38,
+        "fields": {
+            "code": "stam",
+            "*Id": "63",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxstamina",
+            "*Tooltip": "+# Maximum Stamina",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00064",
+        "order": 64,
+        "columnCount": 38,
+        "fields": {
+            "code": "time",
+            "*Id": "64",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_timeduration",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00065",
+        "order": 65,
+        "columnCount": 38,
+        "fields": {
+            "code": "manasteal",
+            "*Id": "65",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "manadrainmindam",
+            "*Tooltip": "#% Mana stolen per hit",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00066",
+        "order": 66,
+        "columnCount": 38,
+        "fields": {
+            "code": "lifesteal",
+            "*Id": "66",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "lifedrainmindam",
+            "*Tooltip": "#% Life stolen per hit",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00067",
+        "order": 67,
+        "columnCount": 38,
+        "fields": {
+            "code": "ama",
+            "*Id": "67",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "0",
+            "*Tooltip": "+# to Amazon Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00068",
+        "order": 68,
+        "columnCount": 38,
+        "fields": {
+            "code": "pal",
+            "*Id": "68",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "3",
+            "*Tooltip": "+# to Paladin Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00069",
+        "order": 69,
+        "columnCount": 38,
+        "fields": {
+            "code": "nec",
+            "*Id": "69",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "2",
+            "*Tooltip": "+# to Necromancer Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00070",
+        "order": 70,
+        "columnCount": 38,
+        "fields": {
+            "code": "sor",
+            "*Id": "70",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "1",
+            "*Tooltip": "+# to Sorceress Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00071",
+        "order": 71,
+        "columnCount": 38,
+        "fields": {
+            "code": "bar",
+            "*Id": "71",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "4",
+            "*Tooltip": "+#  to Barbarian Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00072",
+        "order": 72,
+        "columnCount": 38,
+        "fields": {
+            "code": "herb",
+            "*Id": "72",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_doubleherbduration",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00073",
+        "order": 73,
+        "columnCount": 38,
+        "fields": {
+            "code": "light",
+            "*Id": "73",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_lightradius",
+            "*Tooltip": "+# to Light Radius",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00074",
+        "order": 74,
+        "columnCount": 38,
+        "fields": {
+            "code": "color",
+            "*Id": "74",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_lightcolor",
+            "set1": "1",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00075",
+        "order": 75,
+        "columnCount": 38,
+        "fields": {
+            "code": "ease",
+            "*Id": "75",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_req_percent",
+            "*Tooltip": "Requirements -#%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00076",
+        "order": 76,
+        "columnCount": 38,
+        "fields": {
+            "code": "move1",
+            "*Id": "76",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastermovevelocity",
+            "*Tooltip": "+#% Faster Run/Walk",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00077",
+        "order": 77,
+        "columnCount": 38,
+        "fields": {
+            "code": "move2",
+            "*Id": "77",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastermovevelocity",
+            "*Tooltip": "+#% Faster Run/Walk",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00078",
+        "order": 78,
+        "columnCount": 38,
+        "fields": {
+            "code": "move3",
+            "*Id": "78",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastermovevelocity",
+            "*Tooltip": "+#% Faster Run/Walk",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00079",
+        "order": 79,
+        "columnCount": 38,
+        "fields": {
+            "code": "balance1",
+            "*Id": "79",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastergethitrate",
+            "*Tooltip": "+#% Faster Hit Recovery",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00080",
+        "order": 80,
+        "columnCount": 38,
+        "fields": {
+            "code": "balance2",
+            "*Id": "80",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastergethitrate",
+            "*Tooltip": "+#% Faster Hit Recovery",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00081",
+        "order": 81,
+        "columnCount": 38,
+        "fields": {
+            "code": "balance3",
+            "*Id": "81",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastergethitrate",
+            "*Tooltip": "+#% Faster Hit Recovery",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00082",
+        "order": 82,
+        "columnCount": 38,
+        "fields": {
+            "code": "block1",
+            "*Id": "82",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fasterblockrate",
+            "*Tooltip": "+#% Faster Block Rate",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00083",
+        "order": 83,
+        "columnCount": 38,
+        "fields": {
+            "code": "block2",
+            "*Id": "83",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fasterblockrate",
+            "*Tooltip": "+#% Faster Block Rate",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00084",
+        "order": 84,
+        "columnCount": 38,
+        "fields": {
+            "code": "block3",
+            "*Id": "84",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fasterblockrate",
+            "*Tooltip": "+#% Faster Block Rate",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00085",
+        "order": 85,
+        "columnCount": 38,
+        "fields": {
+            "code": "cast1",
+            "*Id": "85",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastercastrate",
+            "*Tooltip": "+#% Faster Cast Rate",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00086",
+        "order": 86,
+        "columnCount": 38,
+        "fields": {
+            "code": "cast2",
+            "*Id": "86",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastercastrate",
+            "*Tooltip": "+#% Faster Cast Rate",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00087",
+        "order": 87,
+        "columnCount": 38,
+        "fields": {
+            "code": "cast3",
+            "*Id": "87",
+            "*Enabled": "1",
+            "func1": "8",
+            "stat1": "item_fastercastrate",
+            "*Tooltip": "+#% Faster Cast Rate",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00088",
+        "order": 88,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois-len",
+            "*Id": "88",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_poisonlengthresist",
+            "*Tooltip": "Poison Length Reduced by #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00089",
+        "order": 89,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg",
+            "*Id": "89",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_normaldamage",
+            "*Tooltip": "Damage +#",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00090",
+        "order": 90,
+        "columnCount": 38,
+        "fields": {
+            "code": "howl",
+            "*Id": "90",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_howl",
+            "*Tooltip": "Hit Causes Monster to Flee #%",
+            "*Min": "Min %/128",
+            "*Max": "Max %/128",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00091",
+        "order": 91,
+        "columnCount": 38,
+        "fields": {
+            "code": "stupidity",
+            "*Id": "91",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_stupidity",
+            "*Tooltip": "Hit Blinds Target +#",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00092",
+        "order": 92,
+        "columnCount": 38,
+        "fields": {
+            "code": "ignore-ac",
+            "*Id": "92",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_ignoretargetac",
+            "*Tooltip": "Ignore Target's Defense",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00093",
+        "order": 93,
+        "columnCount": 38,
+        "fields": {
+            "code": "reduce-ac",
+            "*Id": "93",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_fractionaltargetac",
+            "*Tooltip": "-#% Target Defense",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00094",
+        "order": 94,
+        "columnCount": 38,
+        "fields": {
+            "code": "noheal",
+            "*Id": "94",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_preventheal",
+            "*Tooltip": "Prevent Monster Heal",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00095",
+        "order": 95,
+        "columnCount": 38,
+        "fields": {
+            "code": "half-freeze",
+            "*Id": "95",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_halffreezeduration",
+            "*Tooltip": "Half Freeze Duration",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00096",
+        "order": 96,
+        "columnCount": 38,
+        "fields": {
+            "code": "att%",
+            "*Id": "96",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_tohit_percent",
+            "*Tooltip": "#% Bonus to Attack Rating",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00097",
+        "order": 97,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-ac",
+            "*Id": "97",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_damagetargetac",
+            "*Tooltip": "-# to Monster Defense Per Hit",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00098",
+        "order": 98,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-demon",
+            "*Id": "98",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_demondamage_percent",
+            "*Tooltip": "+#% Damage to Demons",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00099",
+        "order": 99,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-undead",
+            "*Id": "99",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_undeaddamage_percent",
+            "*Tooltip": "+#% Damage to Undead",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00100",
+        "order": 100,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-demon",
+            "*Id": "100",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_demon_tohit",
+            "*Tooltip": "+# to Attack Rating against Demons",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00101",
+        "order": 101,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-undead",
+            "*Id": "101",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_undead_tohit",
+            "*Tooltip": "+# to Attack Rating against Undead",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00102",
+        "order": 102,
+        "columnCount": 38,
+        "fields": {
+            "code": "throw",
+            "*Id": "102",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_throwable",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00103",
+        "order": 103,
+        "columnCount": 38,
+        "fields": {
+            "code": "fireskill",
+            "*Id": "103",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_elemskill",
+            "val1": "1",
+            "func2": "3",
+            "stat2": "item_elemskillfire",
+            "*Tooltip": "+# to Fire Skills",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00104",
+        "order": 104,
+        "columnCount": 38,
+        "fields": {
+            "code": "allskills",
+            "*Id": "104",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_allskills",
+            "*Tooltip": "+# to All Skills",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00105",
+        "order": 105,
+        "columnCount": 38,
+        "fields": {
+            "code": "light-thorns",
+            "*Id": "105",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_attackertakeslightdamage",
+            "*Tooltip": "Attacker Takes Lightning Damage of #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00106",
+        "order": 106,
+        "columnCount": 38,
+        "fields": {
+            "code": "freeze",
+            "*Id": "106",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_freeze",
+            "*Tooltip": "Freezes Target +#",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00107",
+        "order": 107,
+        "columnCount": 38,
+        "fields": {
+            "code": "openwounds",
+            "*Id": "107",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_openwounds",
+            "*Tooltip": "#% Chance of Open Wounds",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00108",
+        "order": 108,
+        "columnCount": 38,
+        "fields": {
+            "code": "crush",
+            "*Id": "108",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_crushingblow",
+            "*Tooltip": "#% Chance of Crushing Blow",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00109",
+        "order": 109,
+        "columnCount": 38,
+        "fields": {
+            "code": "kick",
+            "*Id": "109",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_kickdamage",
+            "*Tooltip": "+# Kick Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00110",
+        "order": 110,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana-kill",
+            "*Id": "110",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_manaafterkill",
+            "*Tooltip": "+# to Mana after each Kill",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00111",
+        "order": 111,
+        "columnCount": 38,
+        "fields": {
+            "code": "demon-heal",
+            "*Id": "111",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_healafterdemonkill",
+            "*Tooltip": "+# Life after each Demon Kill",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00112",
+        "order": 112,
+        "columnCount": 38,
+        "fields": {
+            "code": "bloody",
+            "*Id": "112",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_extrablood",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Visuals Only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00113",
+        "order": 113,
+        "columnCount": 38,
+        "fields": {
+            "code": "deadly",
+            "*Id": "113",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_deadlystrike",
+            "*Tooltip": "#% Deadly Strike",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00114",
+        "order": 114,
+        "columnCount": 38,
+        "fields": {
+            "code": "slow",
+            "*Id": "114",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_slow",
+            "*Tooltip": "Slows Target by #%",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00115",
+        "order": 115,
+        "columnCount": 38,
+        "fields": {
+            "code": "nofreeze",
+            "*Id": "115",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_cannotbefrozen",
+            "*Tooltip": "Cannot Be Frozen",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00116",
+        "order": 116,
+        "columnCount": 38,
+        "fields": {
+            "code": "stamdrain",
+            "*Id": "116",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_staminadrainpct",
+            "*Tooltip": "#% Slower Stamina Drain",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00117",
+        "order": 117,
+        "columnCount": 38,
+        "fields": {
+            "code": "reanimate",
+            "*Id": "117",
+            "*Enabled": "1",
+            "func1": "24",
+            "stat1": "item_reanimate",
+            "*Tooltip": "Reanimate As: [Returned]",
+            "*Parameter": "monstats.txt hcIdx",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00118",
+        "order": 118,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce",
+            "*Id": "118",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce",
+            "*Tooltip": "Piercing Attack",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00119",
+        "order": 119,
+        "columnCount": 38,
+        "fields": {
+            "code": "magicarrow",
+            "*Id": "119",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_magicarrow",
+            "*Tooltip": "Fires Magic Arrows",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00120",
+        "order": 120,
+        "columnCount": 38,
+        "fields": {
+            "code": "explosivearrow",
+            "*Id": "120",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_explosivearrow",
+            "*Tooltip": "Fires Explosive Arrows or Bolts",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00121",
+        "order": 121,
+        "columnCount": 38,
+        "fields": {
+            "code": "Expansion",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00122",
+        "order": 122,
+        "columnCount": 38,
+        "fields": {
+            "code": "dru",
+            "*Id": "121",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "5",
+            "*Tooltip": "+# to Druid Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00123",
+        "order": 123,
+        "columnCount": 38,
+        "fields": {
+            "code": "ass",
+            "*Id": "122",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "6",
+            "*Tooltip": "+# to Assassin Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00124",
+        "order": 124,
+        "columnCount": 38,
+        "fields": {
+            "code": "skill",
+            "*Id": "123",
+            "*Enabled": "1",
+            "func1": "22",
+            "stat1": "item_singleskill",
+            "uiRangeType": "5",
+            "*Tooltip": "+# to [Skill] ([Class] only)",
+            "*Parameter": "Skill",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00125",
+        "order": 125,
+        "columnCount": 38,
+        "fields": {
+            "code": "skilltab",
+            "*Id": "124",
+            "*Enabled": "1",
+            "func1": "10",
+            "stat1": "item_addskill_tab",
+            "*Tooltip": "+# to [Class Skill Tab] Skills",
+            "*Parameter": "Class Skill Tab ID",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "[Class Skill Tab ID] = (Amazon = 0-2, Sorceress = 3-5, Necromancer = 6-8, Paladin = 9-11, Barbarian = 12-14, Druid = 15-17,  Assassin = 18-20)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00126",
+        "order": 126,
+        "columnCount": 38,
+        "fields": {
+            "code": "aura",
+            "*Id": "125",
+            "*Enabled": "1",
+            "func1": "22",
+            "stat1": "item_aura",
+            "*Tooltip": "Level # [Skill] Aura When Equipped",
+            "*Parameter": "Skill",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00127",
+        "order": 127,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-skill",
+            "*Id": "126",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_skillonattack",
+            "uiRangeType": "7",
+            "*Tooltip": "#% Chance to cast level # [Skill] on attack",
+            "*Parameter": "Skill",
+            "*Min": "% Chance (If 0, then default to 5)",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00128",
+        "order": 128,
+        "columnCount": 38,
+        "fields": {
+            "code": "hit-skill",
+            "*Id": "127",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_skillonhit",
+            "uiRangeType": "7",
+            "*Tooltip": "#% Chance to cast level # [Skill] on striking",
+            "*Parameter": "Skill",
+            "*Min": "% Chance (If 0, then default to 5)",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00129",
+        "order": 129,
+        "columnCount": 38,
+        "fields": {
+            "code": "gethit-skill",
+            "*Id": "128",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_skillongethit",
+            "uiRangeType": "7",
+            "*Tooltip": "#% Chance to cast level # [Skill] when struck",
+            "*Parameter": "Skill",
+            "*Min": "% Chance (If 0, then default to 5)",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00130",
+        "order": 130,
+        "columnCount": 38,
+        "fields": {
+            "code": "gembonus",
+            "*Id": "129",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00131",
+        "order": 131,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen-dur",
+            "*Id": "130",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00132",
+        "order": 132,
+        "columnCount": 38,
+        "fields": {
+            "code": "fire-fx",
+            "*Id": "131",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00133",
+        "order": 133,
+        "columnCount": 38,
+        "fields": {
+            "code": "ltng-fx",
+            "*Id": "132",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00134",
+        "order": 134,
+        "columnCount": 38,
+        "fields": {
+            "code": "sock",
+            "*Id": "133",
+            "*Enabled": "1",
+            "func1": "14",
+            "stat1": "item_numsockets",
+            "*Tooltip": "Socketed (#)",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00135",
+        "order": 135,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-fire",
+            "*Id": "134",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "firemindam",
+            "func2": "16",
+            "stat2": "firemaxdam",
+            "*Tooltip": "Adds #-# Fire Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00136",
+        "order": 136,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-ltng",
+            "*Id": "135",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "lightmindam",
+            "func2": "16",
+            "stat2": "lightmaxdam",
+            "*Tooltip": "Adds #-# Lightning Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00137",
+        "order": 137,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-mag",
+            "*Id": "136",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "magicmindam",
+            "func2": "16",
+            "stat2": "magicmaxdam",
+            "*Tooltip": "Adds #-# Magic Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00138",
+        "order": 138,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-cold",
+            "*Id": "137",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "coldmindam",
+            "func2": "16",
+            "stat2": "coldmaxdam",
+            "func3": "17",
+            "stat3": "coldlength",
+            "*Tooltip": "Adds #-# Cold Damage",
+            "*Parameter": "Length (Frames)",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "# of Frames (25 Frames = 1 Second)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00139",
+        "order": 139,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-pois",
+            "*Id": "138",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "poisonmindam",
+            "func2": "16",
+            "stat2": "poisonmaxdam",
+            "func3": "17",
+            "stat3": "poisonlength",
+            "*Tooltip": "Adds #-# Poison Damage Over # Seconds",
+            "*Parameter": "Length (Frames)",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "# of Frames (25 Frames = 1 Second)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00140",
+        "order": 140,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-throw",
+            "*Id": "139",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "item_throw_mindamage",
+            "func2": "16",
+            "stat2": "item_throw_maxdamage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00141",
+        "order": 141,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-norm",
+            "*Id": "140",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "mindamage",
+            "func2": "16",
+            "stat2": "maxdamage",
+            "*Tooltip": "Adds #-# Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00142",
+        "order": 142,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac/lvl",
+            "*Id": "141",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_armor_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# Defense (Based on Character Level)",
+            "*Parameter": "ac/lvl (8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00143",
+        "order": 143,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac%/lvl",
+            "*Id": "142",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_armorpercent_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+#% Enhanced Defense (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00144",
+        "order": 144,
+        "columnCount": 38,
+        "fields": {
+            "code": "hp/lvl",
+            "*Id": "143",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_hp_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Life (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00145",
+        "order": 145,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana/lvl",
+            "*Id": "144",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mana_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Mana (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00146",
+        "order": 146,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg/lvl",
+            "*Id": "145",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_maxdamage_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Maximum Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00147",
+        "order": 147,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg%/lvl",
+            "*Id": "146",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_maxdamage_percent_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+#% Enhanced Maximum Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00148",
+        "order": 148,
+        "columnCount": 38,
+        "fields": {
+            "code": "str/lvl",
+            "*Id": "147",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_strength_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Strength (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00149",
+        "order": 149,
+        "columnCount": 38,
+        "fields": {
+            "code": "dex/lvl",
+            "*Id": "148",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_dexterity_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Dexterity (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00150",
+        "order": 150,
+        "columnCount": 38,
+        "fields": {
+            "code": "enr/lvl",
+            "*Id": "149",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_energy_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Energy (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00151",
+        "order": 151,
+        "columnCount": 38,
+        "fields": {
+            "code": "vit/lvl",
+            "*Id": "150",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_vitality_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Vitality (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00152",
+        "order": 152,
+        "columnCount": 38,
+        "fields": {
+            "code": "att/lvl",
+            "*Id": "151",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohit_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Attack Rating (Based on Character Level)",
+            "*Parameter": "#/2 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00153",
+        "order": 153,
+        "columnCount": 38,
+        "fields": {
+            "code": "att%/lvl",
+            "*Id": "152",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohitpercent_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "#% Bonus to Attack Rating (Based on Character Level)",
+            "*Parameter": "#/2 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00154",
+        "order": 154,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-cold/lvl",
+            "*Id": "153",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_cold_damagemax_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Maximum Cold Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00155",
+        "order": 155,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-fire/lvl",
+            "*Id": "154",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fire_damagemax_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Maximum Fire Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00156",
+        "order": 156,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-ltng/lvl",
+            "*Id": "155",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_ltng_damagemax_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Maximum Lightning Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00157",
+        "order": 157,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-pois/lvl",
+            "*Id": "156",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_pois_damagemax_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Maximum Poison Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00158",
+        "order": 158,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-cold/lvl",
+            "*Id": "157",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_resist_cold_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Cold Resist +#% (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00159",
+        "order": 159,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-fire/lvl",
+            "*Id": "158",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_resist_fire_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Fire Resist +#% (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00160",
+        "order": 160,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-ltng/lvl",
+            "*Id": "159",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_resist_ltng_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Lightning Resist +#% (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00161",
+        "order": 161,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois/lvl",
+            "*Id": "160",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_resist_pois_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Poison Resist +#% (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00162",
+        "order": 162,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-cold/lvl",
+            "*Id": "161",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_absorb_cold_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Absorbs Cold Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00163",
+        "order": 163,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-fire/lvl",
+            "*Id": "162",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_absorb_fire_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Absorbs Fire Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00164",
+        "order": 164,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-ltng/lvl",
+            "*Id": "163",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_absorb_ltng_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Absorbs Lightning Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00165",
+        "order": 165,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-pois/lvl",
+            "*Id": "164",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_absorb_pois_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Absorbs Poison Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00166",
+        "order": 166,
+        "columnCount": 38,
+        "fields": {
+            "code": "thorns/lvl",
+            "*Id": "165",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_thorns_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Attacker Takes Damage of # (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00167",
+        "order": 167,
+        "columnCount": 38,
+        "fields": {
+            "code": "gold%/lvl",
+            "*Id": "166",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_find_gold_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "#% Extra Gold from Monsters (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00168",
+        "order": 168,
+        "columnCount": 38,
+        "fields": {
+            "code": "mag%/lvl",
+            "*Id": "167",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_find_magic_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "#% Better Chance of Getting Magic Items (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00169",
+        "order": 169,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen-stam/lvl",
+            "*Id": "168",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_regenstamina_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "Heal Stamina Plus #% (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00170",
+        "order": 170,
+        "columnCount": 38,
+        "fields": {
+            "code": "stam/lvl",
+            "*Id": "169",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_stamina_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# Maximum Stamina (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00171",
+        "order": 171,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-dem/lvl",
+            "*Id": "170",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_damage_demon_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+#% Damage to Demons (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00172",
+        "order": 172,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-und/lvl",
+            "*Id": "171",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_damage_undead_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+#% Damage to Undead (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00173",
+        "order": 173,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-dem/lvl",
+            "*Id": "172",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohit_demon_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Attack Rating against Demons (Based on Character Level)",
+            "*Parameter": "#/2 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00174",
+        "order": 174,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-und/lvl",
+            "*Id": "173",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohit_undead_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# to Attack Rating against Undead (Based on Character Level)",
+            "*Parameter": "#/2 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00175",
+        "order": 175,
+        "columnCount": 38,
+        "fields": {
+            "code": "crush/lvl",
+            "*Id": "174",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_crushingblow_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "#% Chance of Crushing Blow (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00176",
+        "order": 176,
+        "columnCount": 38,
+        "fields": {
+            "code": "wounds/lvl",
+            "*Id": "175",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_openwounds_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "#% Chance of Open Wounds (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00177",
+        "order": 177,
+        "columnCount": 38,
+        "fields": {
+            "code": "kick/lvl",
+            "*Id": "176",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_kick_damage_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "+# Kick Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00178",
+        "order": 178,
+        "columnCount": 38,
+        "fields": {
+            "code": "deadly/lvl",
+            "*Id": "177",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_deadlystrike_perlevel",
+            "uiRangeType": "1",
+            "*Tooltip": "#% Deadly Strike (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00179",
+        "order": 179,
+        "columnCount": 38,
+        "fields": {
+            "code": "gems%/lvl",
+            "*Id": "178",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00180",
+        "order": 180,
+        "columnCount": 38,
+        "fields": {
+            "code": "rep-dur",
+            "*Id": "179",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_replenish_durability",
+            "*Tooltip": "Repairs 1 durability in # seconds",
+            "*Parameter": "Repair Speed",
+            "*Notes": "Repair 1 Durability every 100/[Repair Speed] seconds",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00181",
+        "order": 181,
+        "columnCount": 38,
+        "fields": {
+            "code": "rep-quant",
+            "*Id": "180",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_replenish_quantity",
+            "*Tooltip": "Replenishes quantity",
+            "*Parameter": "Repair Speed",
+            "*Notes": "Replenish 1 Quantity every 100/[Repair Speed] seconds",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00182",
+        "order": 182,
+        "columnCount": 38,
+        "fields": {
+            "code": "stack",
+            "*Id": "181",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_extra_stack",
+            "*Tooltip": "Increased Stack Size",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00183",
+        "order": 183,
+        "columnCount": 38,
+        "fields": {
+            "code": "item%",
+            "*Id": "182",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00184",
+        "order": 184,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-slash",
+            "*Id": "183",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00185",
+        "order": 185,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-slash%",
+            "*Id": "184",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00186",
+        "order": 186,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-crush",
+            "*Id": "185",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00187",
+        "order": 187,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-crush%",
+            "*Id": "186",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00188",
+        "order": 188,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-thrust",
+            "*Id": "187",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00189",
+        "order": 189,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-thrust%",
+            "*Id": "188",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00190",
+        "order": 190,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-slash",
+            "*Id": "189",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00191",
+        "order": 191,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-crush",
+            "*Id": "190",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00192",
+        "order": 192,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-thrust",
+            "*Id": "191",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00193",
+        "order": 193,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-slash%",
+            "*Id": "192",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00194",
+        "order": 194,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-crush%",
+            "*Id": "193",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00195",
+        "order": 195,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-thrust%",
+            "*Id": "194",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00196",
+        "order": 196,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac/time",
+            "*Id": "195",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_armor_bytime",
+            "*Tooltip": "+# Defense (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00197",
+        "order": 197,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac%/time",
+            "*Id": "196",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_armorpercent_bytime",
+            "*Tooltip": "+#% Enhanced Defense (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00198",
+        "order": 198,
+        "columnCount": 38,
+        "fields": {
+            "code": "hp/time",
+            "*Id": "197",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_hp_bytime",
+            "*Tooltip": "+# to Life (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00199",
+        "order": 199,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana/time",
+            "*Id": "198",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_mana_bytime",
+            "*Tooltip": "+# to Mana (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00200",
+        "order": 200,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg/time",
+            "*Id": "199",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_maxdamage_bytime",
+            "*Tooltip": "+# to Maximum Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00201",
+        "order": 201,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg%/time",
+            "*Id": "200",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_maxdamage_percent_bytime",
+            "*Tooltip": "+#% Enhanced Maximum Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00202",
+        "order": 202,
+        "columnCount": 38,
+        "fields": {
+            "code": "str/time",
+            "*Id": "201",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_strength_bytime",
+            "*Tooltip": "+# to Strength (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00203",
+        "order": 203,
+        "columnCount": 38,
+        "fields": {
+            "code": "dex/time",
+            "*Id": "202",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_dexterity_bytime",
+            "*Tooltip": "+# to Dexterity (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00204",
+        "order": 204,
+        "columnCount": 38,
+        "fields": {
+            "code": "enr/time",
+            "*Id": "203",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_energy_bytime",
+            "*Tooltip": "+# to Energy (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00205",
+        "order": 205,
+        "columnCount": 38,
+        "fields": {
+            "code": "vit/time",
+            "*Id": "204",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_vitality_bytime",
+            "*Tooltip": "+# to Vitality (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00206",
+        "order": 206,
+        "columnCount": 38,
+        "fields": {
+            "code": "att/time",
+            "*Id": "205",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_tohit_bytime",
+            "*Tooltip": "+# to Attack Rating (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00207",
+        "order": 207,
+        "columnCount": 38,
+        "fields": {
+            "code": "att%/time",
+            "*Id": "206",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_tohitpercent_bytime",
+            "*Tooltip": "#% Bonus to Attack Rating (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00208",
+        "order": 208,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-cold/time",
+            "*Id": "207",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_cold_damagemax_bytime",
+            "*Tooltip": "+# to Maximum Cold Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00209",
+        "order": 209,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-fire/time",
+            "*Id": "208",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_fire_damagemax_bytime",
+            "*Tooltip": "+# to Maximum Fire Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00210",
+        "order": 210,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-ltng/time",
+            "*Id": "209",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_ltng_damagemax_bytime",
+            "*Tooltip": "+# to Maximum Lightning Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00211",
+        "order": 211,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-pois/time",
+            "*Id": "210",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_pois_damagemax_bytime",
+            "*Tooltip": "+# to Maximum Poison Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00212",
+        "order": 212,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-cold/time",
+            "*Id": "211",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_resist_cold_bytime",
+            "*Tooltip": "Cold Resist +#% (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00213",
+        "order": 213,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-fire/time",
+            "*Id": "212",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_resist_fire_bytime",
+            "*Tooltip": "Fire Resist +#% (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00214",
+        "order": 214,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-ltng/time",
+            "*Id": "213",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_resist_ltng_bytime",
+            "*Tooltip": "Lightning Resist +#% (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00215",
+        "order": 215,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois/time",
+            "*Id": "214",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_resist_pois_bytime",
+            "*Tooltip": "Poison Resist +#% (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00216",
+        "order": 216,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-cold/time",
+            "*Id": "215",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_absorb_cold_bytime",
+            "*Tooltip": "Absorbs Cold Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00217",
+        "order": 217,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-fire/time",
+            "*Id": "216",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_absorb_fire_bytime",
+            "*Tooltip": "Absorbs Fire Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00218",
+        "order": 218,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-ltng/time",
+            "*Id": "217",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_absorb_ltng_bytime",
+            "*Tooltip": "Absorbs Lightning Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00219",
+        "order": 219,
+        "columnCount": 38,
+        "fields": {
+            "code": "abs-pois/time",
+            "*Id": "218",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_absorb_pois_bytime",
+            "*Tooltip": "Absorbs Poison Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00220",
+        "order": 220,
+        "columnCount": 38,
+        "fields": {
+            "code": "gold%/time",
+            "*Id": "219",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_find_gold_bytime",
+            "*Tooltip": "#% Extra Gold from Monsters (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00221",
+        "order": 221,
+        "columnCount": 38,
+        "fields": {
+            "code": "mag%/time",
+            "*Id": "220",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_find_magic_bytime",
+            "*Tooltip": "#% Better Chance of Getting Magic Items (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00222",
+        "order": 222,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen-stam/time",
+            "*Id": "221",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_regenstamina_bytime",
+            "*Tooltip": "Heal Stamina Plus #% (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00223",
+        "order": 223,
+        "columnCount": 38,
+        "fields": {
+            "code": "stam/time",
+            "*Id": "222",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_stamina_bytime",
+            "*Tooltip": "+# Maximum Stamina (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00224",
+        "order": 224,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-dem/time",
+            "*Id": "223",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_damage_demon_bytime",
+            "*Tooltip": "+#% Damage to Demons (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00225",
+        "order": 225,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-und/time",
+            "*Id": "224",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_damage_undead_bytime",
+            "*Tooltip": "+#% Damage to Undead (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00226",
+        "order": 226,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-dem/time",
+            "*Id": "225",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_tohit_demon_bytime",
+            "*Tooltip": "+# to Attack Rating against Demons (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00227",
+        "order": 227,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-und/time",
+            "*Id": "226",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_tohit_undead_bytime",
+            "*Tooltip": "+# to Attack Rating against Undead (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00228",
+        "order": 228,
+        "columnCount": 38,
+        "fields": {
+            "code": "crush/time",
+            "*Id": "227",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_crushingblow_bytime",
+            "*Tooltip": "#% Chance of Crushing Blow (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00229",
+        "order": 229,
+        "columnCount": 38,
+        "fields": {
+            "code": "wounds/time",
+            "*Id": "228",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_openwounds_bytime",
+            "*Tooltip": "#% Chance of Open Wounds (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00230",
+        "order": 230,
+        "columnCount": 38,
+        "fields": {
+            "code": "kick/time",
+            "*Id": "229",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_kick_damage_bytime",
+            "*Tooltip": "+# Kick Damage (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00231",
+        "order": 231,
+        "columnCount": 38,
+        "fields": {
+            "code": "deadly/time",
+            "*Id": "230",
+            "*Enabled": "1",
+            "func1": "18",
+            "stat1": "item_deadlystrike_bytime",
+            "*Tooltip": "#% Deadly Strike (Increases near [Day/Dusk/Night/Dawn])",
+            "*Parameter": "Time Period for Max value",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*Notes": "(0=Day, 1=Dusk, 2=Night, 3=Dawn) Min value starts at opposite Time Period (Linear Increase) Currently Not Being Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00232",
+        "order": 232,
+        "columnCount": 38,
+        "fields": {
+            "code": "gems%/time",
+            "*Id": "231",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00233",
+        "order": 233,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-fire",
+            "*Id": "232",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_fire_pierce",
+            "*Tooltip": "-#% to Enemy Fire Resistance",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00234",
+        "order": 234,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-ltng",
+            "*Id": "233",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_ltng_pierce",
+            "*Tooltip": "-#% to Enemy Lightning Resistance",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00235",
+        "order": 235,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-cold",
+            "*Id": "234",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_cold_pierce",
+            "*Tooltip": "-#% to Enemy Cold Resistance",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00236",
+        "order": 236,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-pois",
+            "*Id": "235",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_pois_pierce",
+            "*Tooltip": "-#% to Enemy Poison Resistance",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00237",
+        "order": 237,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-mon",
+            "*Id": "236",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00238",
+        "order": 238,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg%-mon",
+            "*Id": "237",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00239",
+        "order": 239,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-mon",
+            "*Id": "238",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00240",
+        "order": 240,
+        "columnCount": 38,
+        "fields": {
+            "code": "att%-mon",
+            "*Id": "239",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00241",
+        "order": 241,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac-mon",
+            "*Id": "240",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00242",
+        "order": 242,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac%-mon",
+            "*Id": "241",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00243",
+        "order": 243,
+        "columnCount": 38,
+        "fields": {
+            "code": "indestruct",
+            "*Id": "242",
+            "*Enabled": "1",
+            "func1": "20",
+            "*Tooltip": "Indestructible",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00244",
+        "order": 244,
+        "columnCount": 38,
+        "fields": {
+            "code": "charged",
+            "*Id": "243",
+            "*Enabled": "1",
+            "func1": "19",
+            "stat1": "item_charged_skill",
+            "uiRangeType": "6",
+            "*Tooltip": "Level # [Skill] (#/# Charges)",
+            "*Parameter": "Skill",
+            "*Min": "# of Max Charges",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00245",
+        "order": 245,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-fire",
+            "*Id": "244",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_fire_mastery",
+            "*Tooltip": "+#% to Fire Skill Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00246",
+        "order": 246,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-ltng",
+            "*Id": "245",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_ltng_mastery",
+            "*Tooltip": "+#% to Lightning Skill Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00247",
+        "order": 247,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-cold",
+            "*Id": "246",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_cold_mastery",
+            "*Tooltip": "+#% to Cold Skill Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00248",
+        "order": 248,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-pois",
+            "*Id": "247",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_pois_mastery",
+            "*Tooltip": "+#% to Poison Skill Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00249",
+        "order": 249,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-elem",
+            "*Id": "248",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "firemindam",
+            "func2": "16",
+            "stat2": "firemaxdam",
+            "func3": "15",
+            "stat3": "lightmindam",
+            "func4": "16",
+            "stat4": "lightmaxdam",
+            "func5": "15",
+            "stat5": "coldmindam",
+            "func6": "16",
+            "stat6": "coldmaxdam",
+            "func7": "17",
+            "stat7": "coldlength",
+            "*Tooltip": "Adds #-# Fire/Lightning/Cold Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00250",
+        "order": 250,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-elem-min",
+            "*Id": "249",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "firemindam",
+            "func2": "3",
+            "stat2": "lightmindam",
+            "func3": "3",
+            "stat3": "coldmindam",
+            "*Tooltip": "+# to Minimum Fire/Lightning/Cold Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00251",
+        "order": 251,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-elem-max",
+            "*Id": "250",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "firemaxdam",
+            "func2": "3",
+            "stat2": "lightmaxdam",
+            "func3": "3",
+            "stat3": "coldmaxdam",
+            "func4": "17",
+            "stat4": "coldlength",
+            "*Tooltip": "+# to Maximum Fire/Lightning/Cold Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00252",
+        "order": 252,
+        "columnCount": 38,
+        "fields": {
+            "code": "all-stats",
+            "*Id": "251",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "strength",
+            "func2": "3",
+            "stat2": "energy",
+            "func3": "3",
+            "stat3": "dexterity",
+            "func4": "3",
+            "stat4": "vitality",
+            "*Tooltip": "+# to all Attributes",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00253",
+        "order": 253,
+        "columnCount": 38,
+        "fields": {
+            "code": "addxp",
+            "*Id": "252",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_addexperience",
+            "*Tooltip": "+#% to Experience Gained",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00254",
+        "order": 254,
+        "columnCount": 38,
+        "fields": {
+            "code": "heal-kill",
+            "*Id": "253",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_healafterkill",
+            "*Tooltip": "+# Life after each Kill",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00255",
+        "order": 255,
+        "columnCount": 38,
+        "fields": {
+            "code": "cheap",
+            "*Id": "254",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_reducedprices",
+            "*Tooltip": "Reduces all Vendor Prices #%",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00256",
+        "order": 256,
+        "columnCount": 38,
+        "fields": {
+            "code": "rip",
+            "*Id": "255",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_restinpeace",
+            "*Tooltip": "Slain Monsters Rest in Peace",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00257",
+        "order": 257,
+        "columnCount": 38,
+        "fields": {
+            "code": "att-mon%",
+            "*Id": "256",
+            "*Enabled": "1",
+            "func1": "24",
+            "stat1": "attack_vs_montype",
+            "*Tooltip": "#% to Attack Rating versus [Monster Type]",
+            "*Parameter": "monstats.txt MonType",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00258",
+        "order": 258,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-mon%",
+            "*Id": "257",
+            "*Enabled": "1",
+            "func1": "24",
+            "stat1": "damage_vs_montype",
+            "*Tooltip": "#% to Damage versus [Monster Type]",
+            "*Parameter": "monstats.txt MonType",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00259",
+        "order": 259,
+        "columnCount": 38,
+        "fields": {
+            "code": "kill-skill",
+            "*Id": "258",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_skillonkill",
+            "uiRangeType": "7",
+            "*Tooltip": "#% Chance to cast level # [Skill] when you Kill an Enemy",
+            "*Parameter": "Skill",
+            "*Min": "% Chance (If 0, then default to 5)",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00260",
+        "order": 260,
+        "columnCount": 38,
+        "fields": {
+            "code": "death-skill",
+            "*Id": "259",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_skillondeath",
+            "uiRangeType": "7",
+            "*Tooltip": "#% Chance to cast level # [Skill] when you Die",
+            "*Parameter": "Skill",
+            "*Min": "% Chance (If 0, then default to 5)",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00261",
+        "order": 261,
+        "columnCount": 38,
+        "fields": {
+            "code": "levelup-skill",
+            "*Id": "260",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_skillonlevelup",
+            "uiRangeType": "7",
+            "*Tooltip": "#% Chance to cast level # [Skill] when you Level-Up",
+            "*Parameter": "Skill",
+            "*Min": "% Chance (If 0, then default to 5)",
+            "*Max": "Skill Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00262",
+        "order": 262,
+        "columnCount": 38,
+        "fields": {
+            "code": "skill-rand",
+            "*Id": "261",
+            "*Enabled": "1",
+            "func1": "12",
+            "stat1": "item_singleskill",
+            "uiRangeType": "2",
+            "*Tooltip": "+# to [Skill] ([Class] only)",
+            "*Parameter": "Skill Level",
+            "*Min": "Min Skill ID",
+            "*Max": "Max Skill ID",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00263",
+        "order": 263,
+        "columnCount": 38,
+        "fields": {
+            "code": "fade",
+            "*Id": "262",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "fade",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "Visuals Only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00264",
+        "order": 264,
+        "columnCount": 38,
+        "fields": {
+            "code": "levelreq",
+            "*Id": "263",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_levelreq",
+            "*Tooltip": "Required Level: #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00265",
+        "order": 265,
+        "columnCount": 38,
+        "fields": {
+            "code": "ethereal",
+            "*Id": "264",
+            "*Enabled": "1",
+            "func1": "23",
+            "*Tooltip": "Ethereal",
+            "*Min": "1",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00266",
+        "order": 266,
+        "columnCount": 38,
+        "fields": {
+            "code": "oskill",
+            "*Id": "265",
+            "*Enabled": "1",
+            "func1": "22",
+            "stat1": "item_nonclassskill_display",
+            "func2": "24",
+            "stat2": "item_nonclassskill",
+            "uiRangeType": "5",
+            "*Tooltip": "+# to [Skill]",
+            "*Parameter": "Skill",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00267",
+        "order": 267,
+        "columnCount": 38,
+        "fields": {
+            "code": "state",
+            "*Id": "266",
+            "*Enabled": "1",
+            "func1": "24",
+            "stat1": "state",
+            "*Parameter": "State",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "Applies a State on the unit",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00268",
+        "order": 268,
+        "columnCount": 38,
+        "fields": {
+            "code": "randclassskill",
+            "*Id": "267",
+            "*Enabled": "1",
+            "func1": "12",
+            "stat1": "item_addclassskills",
+            "*Tooltip": "+# to [Class] Skill Levels",
+            "*Min": "Min Class ID",
+            "*Max": "Max Class ID",
+            "*Notes": "val1 = # of Skill levels",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00269",
+        "order": 269,
+        "columnCount": 38,
+        "fields": {
+            "code": "noconsume",
+            "*Id": "268",
+            "func1": "1",
+            "stat1": "item_noconsume",
+            "*Tooltip": "+# to not Consume Quantity",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00270",
+        "order": 270,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-immunity-cold",
+            "*Id": "269",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce_cold_immunity",
+            "*Tooltip": "Monster Cold Immunity is Sundered",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00271",
+        "order": 271,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-immunity-fire",
+            "*Id": "270",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce_fire_immunity",
+            "*Tooltip": "Monster Fire Immunity is Sundered",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00272",
+        "order": 272,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-immunity-light",
+            "*Id": "271",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce_light_immunity",
+            "*Tooltip": "Monster Lightning Immunity is Sundered",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00273",
+        "order": 273,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-immunity-poison",
+            "*Id": "272",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce_poison_immunity",
+            "*Tooltip": "Monster Poison Immunity is Sundered",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00274",
+        "order": 274,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-immunity-damage",
+            "*Id": "273",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce_damage_immunity",
+            "*Tooltip": "Monster Physical Immunity is Sundered",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00275",
+        "order": 275,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-immunity-magic",
+            "*Id": "274",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_pierce_magic_immunity",
+            "*Tooltip": "Monster Magic Immunity is Sundered",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00276",
+        "order": 276,
+        "columnCount": 38,
+        "fields": {
+            "code": "charge-noconsume",
+            "*Id": "275",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_charge_noconsume",
+            "*Tooltip": "+#% chance for finishing moves to not consume charges",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00277",
+        "order": 277,
+        "columnCount": 38,
+        "fields": {
+            "code": "war",
+            "*Id": "276",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_addclassskills",
+            "val1": "7",
+            "*Tooltip": "+# to Warlock Skill Levels",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00278",
+        "order": 278,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-mag/lvl",
+            "*Id": "277",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_magic_damagemax_perlevel",
+            "*Tooltip": "+# to Maximum Cold Damage (Based on Character Level)",
+            "*Parameter": "#/8 per Level",
+            "*Notes": "Currently Not Used",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00279",
+        "order": 279,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-mag",
+            "*Id": "278",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_mag_pierce",
+            "*Tooltip": "-#% to Enemy Fire Resistance",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00280",
+        "order": 280,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-dmg",
+            "*Id": "279",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_dmg_pierce",
+            "*Tooltip": "-#% to Enemy Lightning Resistance",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00281",
+        "order": 281,
+        "columnCount": 38,
+        "fields": {
+            "code": "affix-rand",
+            "*Id": "280",
+            "*Enabled": "1",
+            "func1": "25",
+            "*Tooltip": "Add random affix from property",
+            "*Parameter": "Index of property to use",
+            "*Min": "Min Value for affix",
+            "*Max": "Max Value for affix",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00282",
+        "order": 282,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-skill-dmg%-rand",
+            "*Id": "281",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_fire_mastery",
+            "func2": "1",
+            "stat2": "passive_ltng_mastery",
+            "func3": "1",
+            "stat3": "passive_cold_mastery",
+            "func4": "1",
+            "stat4": "passive_pois_mastery",
+            "func5": "1",
+            "stat5": "passive_mag_mastery",
+            "func6": "7",
+            "stat6": "dmg%",
+            "*Tooltip": "used to with affix-rand to roll a random stat",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00283",
+        "order": 283,
+        "columnCount": 38,
+        "fields": {
+            "code": "war-tab-rand",
+            "*Id": "282",
+            "*Enabled": "1",
+            "func1": "10",
+            "stat1": "item_addskill_tab",
+            "val1": "21",
+            "func2": "10",
+            "stat2": "item_addskill_tab",
+            "val2": "22",
+            "func3": "10",
+            "stat3": "item_addskill_tab",
+            "val3": "23",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00284",
+        "order": 284,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-mag",
+            "*Id": "283",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_mag_mastery",
+            "*Tooltip": "+#% to Magic Skill Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00285",
+        "order": 285,
+        "columnCount": 38,
+        "fields": {
+            "code": "str%",
+            "*Id": "284",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_strength_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00286",
+        "order": 286,
+        "columnCount": 38,
+        "fields": {
+            "code": "dex%",
+            "*Id": "285",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_dexterity_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00287",
+        "order": 287,
+        "columnCount": 38,
+        "fields": {
+            "code": "vit%",
+            "*Id": "286",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_vitality_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00288",
+        "order": 288,
+        "columnCount": 38,
+        "fields": {
+            "code": "enr%",
+            "*Id": "287",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_energy_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00289",
+        "order": 289,
+        "columnCount": 38,
+        "fields": {
+            "code": "str%/lvl",
+            "*Id": "288",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_strengthpercent_perlevel",
+            "*Tooltip": "Strength per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00290",
+        "order": 290,
+        "columnCount": 38,
+        "fields": {
+            "code": "dex%/lvl",
+            "*Id": "289",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_dexteritypercent_perlevel",
+            "*Tooltip": "Dexterity per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00291",
+        "order": 291,
+        "columnCount": 38,
+        "fields": {
+            "code": "enr%/lvl",
+            "*Id": "290",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_energypercent_perlevel",
+            "*Tooltip": "Energy per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00292",
+        "order": 292,
+        "columnCount": 38,
+        "fields": {
+            "code": "vit%/lvl",
+            "*Id": "291",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_vitalitypercent_perlevel",
+            "*Tooltip": "Vitality per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00293",
+        "order": 293,
+        "columnCount": 38,
+        "fields": {
+            "code": "thorns-blind",
+            "*Id": "292",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_attackergetsblind",
+            "*Tooltip": "attacker gets blinded",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "armour only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00294",
+        "order": 294,
+        "columnCount": 38,
+        "fields": {
+            "code": "thorns-flee",
+            "*Id": "293",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_attackerflees",
+            "*Tooltip": "attacker runs away",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "armour only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00295",
+        "order": 295,
+        "columnCount": 38,
+        "fields": {
+            "code": "fire-thorns",
+            "*Id": "294",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_attackertakesfiredamage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00296",
+        "order": 296,
+        "columnCount": 38,
+        "fields": {
+            "code": "cold-thorns",
+            "*Id": "295",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_attackertakescolddamage",
+            "uiRangeType": "6",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00297",
+        "order": 297,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-max/str",
+            "*Id": "296",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_maxdamage_perstr",
+            "uiRangeType": "6",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00298",
+        "order": 298,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-max/dex",
+            "*Id": "297",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_maxdamage_perdex",
+            "uiRangeType": "6",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00299",
+        "order": 299,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min/lvl",
+            "*Id": "298",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_perlvl",
+            "uiRangeType": "2",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00300",
+        "order": 300,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min/str",
+            "*Id": "299",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_perstr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00301",
+        "order": 301,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min/dex",
+            "*Id": "300",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00302",
+        "order": 302,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-max%/str",
+            "*Id": "301",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_maxdamage_percent_perstr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00303",
+        "order": 303,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-max%/dex",
+            "*Id": "302",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_maxdamage_percent_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00304",
+        "order": 304,
+        "columnCount": 38,
+        "fields": {
+            "code": "wounds/dex",
+            "*Id": "303",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_openwounds_perdex",
+            "func2": "1",
+            "stat2": "item_extrablood",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00305",
+        "order": 305,
+        "columnCount": 38,
+        "fields": {
+            "code": "deadly/dex",
+            "*Id": "304",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_deadlystrike_perdex",
+            "uiRangeType": "3",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00306",
+        "order": 306,
+        "columnCount": 38,
+        "fields": {
+            "code": "wounds/str",
+            "*Id": "305",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_openwounds_perstr",
+            "func2": "1",
+            "stat2": "item_extrablood",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00307",
+        "order": 307,
+        "columnCount": 38,
+        "fields": {
+            "code": "deadly/str",
+            "*Id": "306",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_deadlystrike_perstr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00308",
+        "order": 308,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac/str",
+            "*Id": "307",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_armor_perstr",
+            "*Tooltip": "armour per strength",
+            "*Parameter": "(8ths)",
+            "*Notes": "armour only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00309",
+        "order": 309,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac/dex",
+            "*Id": "308",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_armor_perdex",
+            "*Tooltip": "armour class per dex",
+            "*Parameter": "(8ths)",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "armour only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00310",
+        "order": 310,
+        "columnCount": 38,
+        "fields": {
+            "code": "att/str",
+            "*Id": "309",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohit_perstr",
+            "*Tooltip": "to hit per dex",
+            "*Parameter": "(8ths)",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "weap only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00311",
+        "order": 311,
+        "columnCount": 38,
+        "fields": {
+            "code": "att/dex",
+            "*Id": "310",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohit_perDex",
+            "*Tooltip": "to hit per dex",
+            "*Parameter": "(8ths)",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "weap only",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00312",
+        "order": 312,
+        "columnCount": 38,
+        "fields": {
+            "code": "hp/vit",
+            "*Id": "311",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_hp_pervitality",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00313",
+        "order": 313,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana/enr",
+            "*Id": "312",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mana_perenr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00314",
+        "order": 314,
+        "columnCount": 38,
+        "fields": {
+            "code": "cast/enr",
+            "*Id": "313",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fastercastrate_perenr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00315",
+        "order": 315,
+        "columnCount": 38,
+        "fields": {
+            "code": "block/dex",
+            "*Id": "314",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterblockrate_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00316",
+        "order": 316,
+        "columnCount": 38,
+        "fields": {
+            "code": "move/vit",
+            "*Id": "315",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fastermovevelocity_pervitality",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00317",
+        "order": 317,
+        "columnCount": 38,
+        "fields": {
+            "code": "swing/str",
+            "*Id": "316",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterswingvelocity_perstrength",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00318",
+        "order": 318,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min%/str",
+            "*Id": "317",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_percent_perstr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00319",
+        "order": 319,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min%/dex",
+            "*Id": "318",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_percent_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00320",
+        "order": 320,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg-min%/lvl",
+            "*Id": "319",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_percent_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00321",
+        "order": 321,
+        "columnCount": 38,
+        "fields": {
+            "code": "crush/str",
+            "*Id": "320",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_crushingblow_perstr",
+            "*Tooltip": "+% Chance of Crushing Blow per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00322",
+        "order": 322,
+        "columnCount": 38,
+        "fields": {
+            "code": "crush/dex",
+            "*Id": "321",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_crushingblow_perdex",
+            "*Tooltip": "+% Chance of Crushing Blow per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00323",
+        "order": 323,
+        "columnCount": 38,
+        "fields": {
+            "code": "coldskill",
+            "*Id": "322",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_elemskill",
+            "val1": "4",
+            "func2": "3",
+            "stat2": "item_elemskillcold",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00324",
+        "order": 324,
+        "columnCount": 38,
+        "fields": {
+            "code": "lightningskill",
+            "*Id": "323",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_elemskill",
+            "val1": "2",
+            "func2": "3",
+            "stat2": "item_elemskilllight",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00325",
+        "order": 325,
+        "columnCount": 38,
+        "fields": {
+            "code": "poisonskill",
+            "*Id": "324",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_elemskill",
+            "val1": "5",
+            "func2": "3",
+            "stat2": "item_elemskillpoison",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00326",
+        "order": 326,
+        "columnCount": 38,
+        "fields": {
+            "code": "magicskill",
+            "*Id": "325",
+            "*Enabled": "1",
+            "func1": "21",
+            "stat1": "item_elemskill",
+            "val1": "3",
+            "func2": "3",
+            "stat2": "item_elemskillmagic",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00327",
+        "order": 327,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac%/str",
+            "*Id": "326",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_armorpercent_perstr",
+            "*Tooltip": "AC% per Player Level",
+            "*Parameter": "ac%/lvl (8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00328",
+        "order": 328,
+        "columnCount": 38,
+        "fields": {
+            "code": "ac%/dex",
+            "*Id": "327",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_armorpercent_perdex",
+            "*Tooltip": "AC% per Player Level",
+            "*Parameter": "ac%/lvl (8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00329",
+        "order": 329,
+        "columnCount": 38,
+        "fields": {
+            "code": "att%/str",
+            "*Id": "328",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohitpercent_perstr",
+            "*Tooltip": "Attack% per Player Level",
+            "*Parameter": "att%/lvl (8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00330",
+        "order": 330,
+        "columnCount": 38,
+        "fields": {
+            "code": "att%/dex",
+            "*Id": "329",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_tohitpercent_perdex",
+            "*Tooltip": "Attack% per Player Level",
+            "*Parameter": "att%/lvl (8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00331",
+        "order": 331,
+        "columnCount": 38,
+        "fields": {
+            "code": "swing/dex",
+            "*Id": "330",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterswingvelocity_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00332",
+        "order": 332,
+        "columnCount": 38,
+        "fields": {
+            "code": "swing/lvl",
+            "*Id": "331",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterswingvelocity_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00333",
+        "order": 333,
+        "columnCount": 38,
+        "fields": {
+            "code": "block/str",
+            "*Id": "332",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterblockrate_perstr",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00334",
+        "order": 334,
+        "columnCount": 38,
+        "fields": {
+            "code": "block/lvl",
+            "*Id": "333",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterblockrate_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00335",
+        "order": 335,
+        "columnCount": 38,
+        "fields": {
+            "code": "move/dex",
+            "*Id": "334",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fastermovevelocity_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00336",
+        "order": 336,
+        "columnCount": 38,
+        "fields": {
+            "code": "move/lvl",
+            "*Id": "335",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fastermovevelocity_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00337",
+        "order": 337,
+        "columnCount": 38,
+        "fields": {
+            "code": "cast/lvl",
+            "*Id": "336",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fastercastrate_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00338",
+        "order": 338,
+        "columnCount": 38,
+        "fields": {
+            "code": "balance/vit",
+            "*Id": "337",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterhitrecovery_pervit",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00339",
+        "order": 339,
+        "columnCount": 38,
+        "fields": {
+            "code": "balance/lvl",
+            "*Id": "338",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterhitrecovery_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00340",
+        "order": 340,
+        "columnCount": 38,
+        "fields": {
+            "code": "block%/dex",
+            "*Id": "339",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_increasedblock_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00341",
+        "order": 341,
+        "columnCount": 38,
+        "fields": {
+            "code": "block%/lvl",
+            "*Id": "340",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_increasedblock_perlvl",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00342",
+        "order": 342,
+        "columnCount": 38,
+        "fields": {
+            "code": "addxp/lvl",
+            "*Id": "341",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_addexperience_perlvl",
+            "*Tooltip": "additional xp gain",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00343",
+        "order": 343,
+        "columnCount": 38,
+        "fields": {
+            "code": "addxp/enr",
+            "*Id": "342",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_addexperience_perenr",
+            "*Tooltip": "additional xp gain",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00344",
+        "order": 344,
+        "columnCount": 38,
+        "fields": {
+            "code": "cheap/lvl",
+            "*Id": "343",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_reducedprices_perlvl",
+            "*Tooltip": "reduces vendor prices",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00345",
+        "order": 345,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce/lvl",
+            "*Id": "344",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_pierce_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00346",
+        "order": 346,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce/str",
+            "*Id": "345",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_pierce_perstr",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00347",
+        "order": 347,
+        "columnCount": 38,
+        "fields": {
+            "code": "all-zero-display",
+            "*Id": "346",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "resmax_display_all_zero",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00348",
+        "order": 348,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-all-hidden",
+            "*Id": "347",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "magicresist_hidden",
+            "func2": "3",
+            "stat2": "fireresist_hidden",
+            "func3": "3",
+            "stat3": "lightresist_hidden",
+            "func4": "3",
+            "stat4": "coldresist_hidden",
+            "func5": "3",
+            "stat5": "poisonresist_hidden",
+            "func6": "3",
+            "stat6": "hiddenresist_dummy",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00349",
+        "order": 349,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-all-max-hidden",
+            "*Id": "348",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxmagicresist_hidden",
+            "func2": "3",
+            "stat2": "maxfireresist_hidden",
+            "func3": "3",
+            "stat3": "maxlightresist_hidden",
+            "func4": "3",
+            "stat4": "maxcoldresist_hidden",
+            "func5": "3",
+            "stat5": "maxpoisonresist_hidden",
+            "func6": "3",
+            "stat6": "hiddenresist_dummy",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00350",
+        "order": 350,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-all-max%",
+            "*Id": "349",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "maxmagres_percent",
+            "func2": "3",
+            "stat2": "maxfireres_percent",
+            "func3": "3",
+            "stat3": "maxlightres_percent",
+            "func4": "3",
+            "stat4": "maxcoldres_percent",
+            "func5": "3",
+            "stat5": "maxpoisres_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00351",
+        "order": 351,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-all/lvl",
+            "*Id": "350",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_resist_cold_perlevel",
+            "func2": "3",
+            "stat2": "item_resist_ltng_perlevel",
+            "func3": "3",
+            "stat3": "item_resist_fire_perlevel",
+            "func4": "3",
+            "stat4": "item_resist_pois_perlevel",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00352",
+        "order": 352,
+        "columnCount": 38,
+        "fields": {
+            "code": "slow/lvl",
+            "*Id": "351",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_slow_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00353",
+        "order": 353,
+        "columnCount": 38,
+        "fields": {
+            "code": "kick/str",
+            "*Id": "352",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_kick_damage_perstr",
+            "*Tooltip": "Kick Damage per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00354",
+        "order": 354,
+        "columnCount": 38,
+        "fields": {
+            "code": "kick/dex",
+            "*Id": "353",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_kick_damage_perdex",
+            "*Tooltip": "Kick Damage per Player Level",
+            "*Parameter": "(8ths)",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00355",
+        "order": 355,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-dmg%/lvl",
+            "*Id": "354",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "damageresist_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00356",
+        "order": 356,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-dmg%/vit",
+            "*Id": "355",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "damageresist_pervit",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00357",
+        "order": 357,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-mag/lvl",
+            "*Id": "356",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "magic_damage_reduction_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00358",
+        "order": 358,
+        "columnCount": 38,
+        "fields": {
+            "code": "red-mag/enr",
+            "*Id": "357",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "magic_damage_reduction_perenr",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00359",
+        "order": 359,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-mag%/lvl",
+            "*Id": "358",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "magicresist_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00360",
+        "order": 360,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-mag%/enr",
+            "*Id": "359",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "magicresist_perenr",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00361",
+        "order": 361,
+        "columnCount": 38,
+        "fields": {
+            "code": "stupidity/lvl",
+            "*Id": "360",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_stupidity_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00362",
+        "order": 362,
+        "columnCount": 38,
+        "fields": {
+            "code": "freeze/lvl",
+            "*Id": "361",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_freeze_perlvl",
+            "*Parameter": "chance in 128",
+            "*Min": "length in frames",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00363",
+        "order": 363,
+        "columnCount": 38,
+        "fields": {
+            "code": "freeze/enr",
+            "*Id": "362",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_freeze_perenr",
+            "*Parameter": "chance in 128",
+            "*Min": "length in frames",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00364",
+        "order": 364,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois-len/lvl",
+            "*Id": "363",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_poisonlengthresist_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00365",
+        "order": 365,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-pois-len/vit",
+            "*Id": "364",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_poisonlengthresist_pervit",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00366",
+        "order": 366,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-curse/lvl",
+            "*Id": "365",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "curse_resistance_perlvl",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00367",
+        "order": 367,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-curse/enr",
+            "*Id": "366",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "curse_resistance_perenr",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00368",
+        "order": 368,
+        "columnCount": 38,
+        "fields": {
+            "code": "res-curse-len",
+            "*Id": "367",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "curse_resistance_length",
+            "func2": "1",
+            "stat2": "curse_resistance",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00369",
+        "order": 369,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana-kill/lvl",
+            "*Id": "368",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_manaafterkill_perlvl",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00370",
+        "order": 370,
+        "columnCount": 38,
+        "fields": {
+            "code": "mana-kill/enr",
+            "*Id": "369",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_manaafterkill_perenr",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00371",
+        "order": 371,
+        "columnCount": 38,
+        "fields": {
+            "code": "balance/dex",
+            "*Id": "370",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_fasterhitrecovery_perdex",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00372",
+        "order": 372,
+        "columnCount": 38,
+        "fields": {
+            "code": "splash",
+            "*Id": "371",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_splashonhit",
+            "*Tooltip": "splash",
+            "*Parameter": "proc_SplashDamage",
+            "*Min": "100",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00373",
+        "order": 373,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg2%",
+            "*Id": "372",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "pl_mindamage_percent",
+            "func2": "16",
+            "stat2": "pl_maxdamage_percent",
+            "*Tooltip": "Adds #-# Damage",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00374",
+        "order": 374,
+        "columnCount": 38,
+        "fields": {
+            "code": "regen2",
+            "*Id": "373",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "hpregen_perlevel",
+            "*Tooltip": "Replenish Life Plus #% (Based on Character Level)",
+            "*Parameter": "# per Level",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00375",
+        "order": 375,
+        "columnCount": 38,
+        "fields": {
+            "code": "corrupted",
+            "*Id": "374",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_corrupted",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00376",
+        "order": 376,
+        "columnCount": 38,
+        "fields": {
+            "code": "corruptedDummy",
+            "*Id": "375",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "item_corruptedDummy",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00377",
+        "order": 377,
+        "columnCount": 38,
+        "fields": {
+            "code": "healperhit",
+            "*Id": "376",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "heal_afterhit",
+            "*Tooltip": "Life gained after each hit",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00378",
+        "order": 378,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/terror-key",
+            "*Id": "377",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "stacked_terror_key",
+            "*Tooltip": "# Terror Keys",
+            "*Notes": "Used to determined stack size of keys in keychain",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00379",
+        "order": 379,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/hate-key",
+            "*Id": "378",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "stacked_hate_key",
+            "*Tooltip": "# Hate Keys",
+            "*Notes": "Used to determined stack size of keys in keychain",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00380",
+        "order": 380,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/destruction-key",
+            "*Id": "379",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "stacked_destruction_key",
+            "*Tooltip": "# Destuction Keys",
+            "*Notes": "Used to determined stack size of keys in keychain",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00381",
+        "order": 381,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/topaz",
+            "*Id": "380",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_topaz",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00382",
+        "order": 382,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/amethyst",
+            "*Id": "381",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_amethyst",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00383",
+        "order": 383,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/sapphire",
+            "*Id": "382",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_sapphire",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00384",
+        "order": 384,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/diamond",
+            "*Id": "383",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_diamond",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00385",
+        "order": 385,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/emerald",
+            "*Id": "384",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_emerald",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00386",
+        "order": 386,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/ruby",
+            "*Id": "385",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_ruby",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00387",
+        "order": 387,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem/skull",
+            "*Id": "386",
+            "*Enabled": "0",
+            "func1": "17",
+            "stat1": "stacked_gem_skull",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of perfect gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00388",
+        "order": 388,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_bonespears",
+            "*Id": "387",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_bonespears",
+            "*Tooltip": "+# Bone Spear Projectiles",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00389",
+        "order": 389,
+        "columnCount": 38,
+        "fields": {
+            "code": "item-qty",
+            "*Id": "388",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "quantity",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00390",
+        "order": 390,
+        "columnCount": 38,
+        "fields": {
+            "code": "splashtwo",
+            "*Id": "389",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_splashonhit_two",
+            "*Tooltip": "splashtwo",
+            "*Parameter": "proc_SplashDamage_Two",
+            "*Min": "100",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00391",
+        "order": 391,
+        "columnCount": 38,
+        "fields": {
+            "code": "splashthree",
+            "*Id": "390",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_splashonhit_three",
+            "*Tooltip": "splashthree",
+            "*Parameter": "proc_SplashDamage_Three",
+            "*Min": "100",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00392",
+        "order": 392,
+        "columnCount": 38,
+        "fields": {
+            "code": "splashfour",
+            "*Id": "391",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_splashonhit_four",
+            "*Tooltip": "splashfour",
+            "*Parameter": "proc_SplashDamage_Four",
+            "*Min": "100",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00393",
+        "order": 393,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_holybolt",
+            "*Id": "392",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_holybolt",
+            "*Tooltip": "+# Holy Bolt Projectiles",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00394",
+        "order": 394,
+        "columnCount": 38,
+        "fields": {
+            "code": "splashfive",
+            "*Id": "393",
+            "*Enabled": "1",
+            "func1": "11",
+            "stat1": "item_splashonhit_five",
+            "*Tooltip": "splashfive",
+            "*Parameter": "proc_SplashDamage_Five",
+            "*Min": "100",
+            "*Max": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00395",
+        "order": 395,
+        "columnCount": 38,
+        "fields": {
+            "code": "prop_mon_move",
+            "*Id": "394",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "velocitypercent",
+            "*Tooltip": "+#% Faster Run/Walk",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00396",
+        "order": 396,
+        "columnCount": 38,
+        "fields": {
+            "code": "charm-property",
+            "*Id": "395",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "charm_weight",
+            "*Tooltip": "Charm Weight: #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00397",
+        "order": 397,
+        "columnCount": 38,
+        "fields": {
+            "code": "stacked/gem",
+            "*Id": "396",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "stacked_gem",
+            "*Tooltip": "# Gems",
+            "*Notes": "Used to determined stack size of gems in storage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00398",
+        "order": 398,
+        "columnCount": 38,
+        "fields": {
+            "code": "oskill_hide",
+            "*Id": "397",
+            "*Enabled": "1",
+            "func1": "22",
+            "stat1": "item_nonclassskill",
+            "*Tooltip": "+# to [Skill]",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00399",
+        "order": 399,
+        "columnCount": 38,
+        "fields": {
+            "code": "ravensetwolf",
+            "*Id": "398",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "ravensetwolf",
+            "*Tooltip": "+ Max Ravens, - Max Wolves",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "Increased Max Ravens, decreased Max Wolves",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00400",
+        "order": 400,
+        "columnCount": 38,
+        "fields": {
+            "code": "ravendmg",
+            "*Id": "399",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "ravendmg",
+            "*Tooltip": "+50% Increase Raven Dmg",
+            "*Min": "1",
+            "*Max": "1",
+            "*Notes": "+50% to Raven DMG",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00401",
+        "order": 401,
+        "columnCount": 38,
+        "fields": {
+            "code": "ravenhits",
+            "*Id": "400",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "ravenhits",
+            "*Tooltip": "increases max raven hits",
+            "*Min": "1",
+            "*Max": "10",
+            "*Notes": "increases max raven hits",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00402",
+        "order": 402,
+        "columnCount": 38,
+        "fields": {
+            "code": "flat-dmg/lvl",
+            "*Id": "401",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "item_mindamage_perlvl",
+            "func2": "17",
+            "stat2": "item_maxdamage_perlevel",
+            "*Tooltip": "+Min/Max Dmg Flat Per Level",
+            "*Parameter": "(8ths)",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00403",
+        "order": 403,
+        "columnCount": 38,
+        "fields": {
+            "code": "upgrade/minor",
+            "*Id": "402",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "upgrade_minor",
+            "val7": "# Upgrades",
+            "*Min": "0",
+            "*Max": "2",
+            "*Notes": "Used to determine number of upgrades on certain items",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00404",
+        "order": 404,
+        "columnCount": 38,
+        "fields": {
+            "code": "upgrade/medium",
+            "*Id": "403",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "upgrade_medium",
+            "val7": "# Upgrades",
+            "*Min": "0",
+            "*Max": "3",
+            "*Notes": "Used to determine number of upgrades on certain items",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00405",
+        "order": 405,
+        "columnCount": 38,
+        "fields": {
+            "code": "upgrade/major",
+            "*Id": "404",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "upgrade_major",
+            "val7": "# Upgrades",
+            "*Min": "0",
+            "*Max": "5",
+            "*Notes": "Used to determine number of upgrades on certain items",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00406",
+        "order": 406,
+        "columnCount": 38,
+        "fields": {
+            "code": "upgrade/uber",
+            "*Id": "405",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "upgrade_uber",
+            "val7": "# Upgrades",
+            "*Min": "0",
+            "*Max": "10",
+            "*Notes": "Used to determine number of upgrades on certain items",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00407",
+        "order": 407,
+        "columnCount": 38,
+        "fields": {
+            "code": "ubertorch-property",
+            "*Id": "406",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "torch_weight",
+            "*Tooltip": "Uber Charm Weight: #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "May only carry one Torch at a time",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00408",
+        "order": 408,
+        "columnCount": 38,
+        "fields": {
+            "code": "uberstone-property",
+            "*Id": "407",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "soulstone_weight",
+            "*Tooltip": "Uber Charm Weight: #",
+            "*Min": "Min #",
+            "*Max": "Max #",
+            "*Notes": "May only carry one Soulstone at a time",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00409",
+        "order": 409,
+        "columnCount": 38,
+        "fields": {
+            "code": "tab-rand",
+            "*Id": "408",
+            "*Enabled": "1",
+            "func1": "12",
+            "stat1": "item_addskill_tab",
+            "*Tooltip": "+# random class skill tab",
+            "*Parameter": "Level",
+            "*Min": "min Skill #",
+            "*Max": "max Skill #",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00410",
+        "order": 410,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra-elem",
+            "*Id": "409",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_fire_mastery",
+            "func2": "3",
+            "stat2": "passive_ltng_mastery",
+            "func3": "3",
+            "stat3": "passive_cold_mastery",
+            "func4": "3",
+            "stat4": "passive_pois_mastery",
+            "*Tooltip": "+# % All Elemental Damage",
+            "*Min": "Min %",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00411",
+        "order": 411,
+        "columnCount": 38,
+        "fields": {
+            "code": "pierce-elem",
+            "*Id": "410",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "passive_fire_pierce",
+            "func2": "3",
+            "stat2": "passive_ltng_pierce",
+            "func3": "3",
+            "stat3": "passive_cold_pierce",
+            "func4": "3",
+            "stat4": "passive_pois_pierce",
+            "*Tooltip": "-# % Enemy Elemental Resistances",
+            "*Min": "Min%",
+            "*Max": "Max %",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00412",
+        "order": 412,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-White",
+            "*Id": "411",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_White",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00413",
+        "order": 413,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Black",
+            "*Id": "412",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Black",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00414",
+        "order": 414,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Blue",
+            "*Id": "413",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Blue",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00415",
+        "order": 415,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Red",
+            "*Id": "414",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Red",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00416",
+        "order": 416,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Green",
+            "*Id": "415",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Green",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00417",
+        "order": 417,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Yellow",
+            "*Id": "416",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Yellow",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00418",
+        "order": 418,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Purple",
+            "*Id": "417",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Purple",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00419",
+        "order": 419,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Orange",
+            "*Id": "418",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Orange",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00420",
+        "order": 420,
+        "columnCount": 38,
+        "fields": {
+            "code": "Dye-Tracker",
+            "*Id": "419",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "Dye_Tracker",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00421",
+        "order": 421,
+        "columnCount": 38,
+        "fields": {
+            "code": "dmg3%",
+            "*Id": "420",
+            "*Enabled": "1",
+            "func1": "15",
+            "stat1": "pl_minthrowdmg_percent",
+            "func2": "16",
+            "stat2": "pl_maxthrowdmg_percent",
+            "*Tooltip": "+#% Extra Throwing Weapon Damage",
+            "*Min": "-100",
+            "*Max": "411",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00422",
+        "order": 422,
+        "columnCount": 38,
+        "fields": {
+            "code": "upgrade/uberCharmSmall",
+            "*Id": "421",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "upgrade_uber_charm_small",
+            "val7": "# Upgrades",
+            "*Min": "0",
+            "*Max": "5",
+            "*Notes": "Used to determine number of upgrades on certain items",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00423",
+        "order": 423,
+        "columnCount": 38,
+        "fields": {
+            "code": "upgrade/uberCharmLarge",
+            "*Id": "422",
+            "*Enabled": "1",
+            "func1": "17",
+            "stat1": "upgrade_uber_charm_large",
+            "val7": "# Upgrades",
+            "*Min": "0",
+            "*Max": "10",
+            "*Notes": "Used to determine number of upgrades on certain items",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00424",
+        "order": 424,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_traps",
+            "*Id": "423",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_traps",
+            "*Tooltip": "+# to max traps",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00425",
+        "order": 425,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_shadow_masters",
+            "*Id": "424",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_shadow_masters",
+            "*Tooltip": "+# to Max Shadow Masters",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00426",
+        "order": 426,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_ravens",
+            "*Id": "425",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_ravens",
+            "*Tooltip": "+# to Max Ravens",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00427",
+        "order": 427,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_spirit_wolves",
+            "*Id": "426",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_spirit_wolves",
+            "*Tooltip": "+# to Max Spirit Wolves",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00428",
+        "order": 428,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_dire_wolves",
+            "*Id": "427",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_dire_wolves",
+            "*Tooltip": "+# to Max Dire Wolves",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00429",
+        "order": 429,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_firegolems",
+            "*Id": "428",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_firegolems",
+            "*Tooltip": "+# to Max Fire Golems",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00430",
+        "order": 430,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_skelewarriors",
+            "*Id": "429",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_skelewarriors",
+            "*Tooltip": "+# to Max Skeleton Warriors",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00431",
+        "order": 431,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_skelemages",
+            "*Id": "430",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_skelemages",
+            "*Tooltip": "+# to Max Skeletal Mages",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00432",
+        "order": 432,
+        "columnCount": 38,
+        "fields": {
+            "code": "extra_grizzly_bears",
+            "*Id": "431",
+            "*Enabled": "1",
+            "func1": "1",
+            "stat1": "extra_grizzly_bears",
+            "*Tooltip": "+# to Max Grizzly Bears",
+            "*Min": "min",
+            "*Max": "max",
+            "*Notes": "none",
+            "*eol": "0"
+        }
+    }
+]

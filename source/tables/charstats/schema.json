@@ -1,0 +1,357 @@
+{
+    "schemaVersion": 1,
+    "name": "charstats",
+    "targets": [
+        "global/excel/charstats.txt",
+        "global/excel/base/charstats.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "class",
+            "header": "class"
+        },
+        {
+            "key": "str",
+            "header": "str"
+        },
+        {
+            "key": "dex",
+            "header": "dex"
+        },
+        {
+            "key": "int",
+            "header": "int"
+        },
+        {
+            "key": "vit",
+            "header": "vit"
+        },
+        {
+            "key": "stamina",
+            "header": "stamina"
+        },
+        {
+            "key": "hpadd",
+            "header": "hpadd"
+        },
+        {
+            "key": "ManaRegen",
+            "header": "ManaRegen"
+        },
+        {
+            "key": "ToHitFactor",
+            "header": "ToHitFactor"
+        },
+        {
+            "key": "WalkVelocity",
+            "header": "WalkVelocity"
+        },
+        {
+            "key": "RunVelocity",
+            "header": "RunVelocity"
+        },
+        {
+            "key": "RunDrain",
+            "header": "RunDrain"
+        },
+        {
+            "key": "*Comment",
+            "header": "*Comment"
+        },
+        {
+            "key": "LifePerLevel",
+            "header": "LifePerLevel"
+        },
+        {
+            "key": "StaminaPerLevel",
+            "header": "StaminaPerLevel"
+        },
+        {
+            "key": "ManaPerLevel",
+            "header": "ManaPerLevel"
+        },
+        {
+            "key": "LifePerVitality",
+            "header": "LifePerVitality"
+        },
+        {
+            "key": "StaminaPerVitality",
+            "header": "StaminaPerVitality"
+        },
+        {
+            "key": "ManaPerMagic",
+            "header": "ManaPerMagic"
+        },
+        {
+            "key": "StatPerLevel",
+            "header": "StatPerLevel"
+        },
+        {
+            "key": "SkillsPerLevel",
+            "header": "SkillsPerLevel"
+        },
+        {
+            "key": "LightRadius",
+            "header": "LightRadius"
+        },
+        {
+            "key": "BlockFactor",
+            "header": "BlockFactor"
+        },
+        {
+            "key": "MinimumCastingDelay",
+            "header": "MinimumCastingDelay"
+        },
+        {
+            "key": "StartSkill",
+            "header": "StartSkill"
+        },
+        {
+            "key": "Skill 1",
+            "header": "Skill 1"
+        },
+        {
+            "key": "Skill 2",
+            "header": "Skill 2"
+        },
+        {
+            "key": "Skill 3",
+            "header": "Skill 3"
+        },
+        {
+            "key": "Skill 4",
+            "header": "Skill 4"
+        },
+        {
+            "key": "Skill 5",
+            "header": "Skill 5"
+        },
+        {
+            "key": "Skill 6",
+            "header": "Skill 6"
+        },
+        {
+            "key": "Skill 7",
+            "header": "Skill 7"
+        },
+        {
+            "key": "Skill 8",
+            "header": "Skill 8"
+        },
+        {
+            "key": "Skill 9",
+            "header": "Skill 9"
+        },
+        {
+            "key": "Skill 10",
+            "header": "Skill 10"
+        },
+        {
+            "key": "StrAllSkills",
+            "header": "StrAllSkills"
+        },
+        {
+            "key": "StrSkillTab1",
+            "header": "StrSkillTab1"
+        },
+        {
+            "key": "StrSkillTab2",
+            "header": "StrSkillTab2"
+        },
+        {
+            "key": "StrSkillTab3",
+            "header": "StrSkillTab3"
+        },
+        {
+            "key": "StrClassOnly",
+            "header": "StrClassOnly"
+        },
+        {
+            "key": "HealthPotionPercent",
+            "header": "HealthPotionPercent"
+        },
+        {
+            "key": "ManaPotionPercent",
+            "header": "ManaPotionPercent"
+        },
+        {
+            "key": "baseWClass",
+            "header": "baseWClass"
+        },
+        {
+            "key": "item1",
+            "header": "item1"
+        },
+        {
+            "key": "item1loc",
+            "header": "item1loc"
+        },
+        {
+            "key": "item1count",
+            "header": "item1count"
+        },
+        {
+            "key": "item1quality",
+            "header": "item1quality"
+        },
+        {
+            "key": "item2",
+            "header": "item2"
+        },
+        {
+            "key": "item2loc",
+            "header": "item2loc"
+        },
+        {
+            "key": "item2count",
+            "header": "item2count"
+        },
+        {
+            "key": "item2quality",
+            "header": "item2quality"
+        },
+        {
+            "key": "item3",
+            "header": "item3"
+        },
+        {
+            "key": "item3loc",
+            "header": "item3loc"
+        },
+        {
+            "key": "item3count",
+            "header": "item3count"
+        },
+        {
+            "key": "item3quality",
+            "header": "item3quality"
+        },
+        {
+            "key": "item4",
+            "header": "item4"
+        },
+        {
+            "key": "item4loc",
+            "header": "item4loc"
+        },
+        {
+            "key": "item4count",
+            "header": "item4count"
+        },
+        {
+            "key": "item4quality",
+            "header": "item4quality"
+        },
+        {
+            "key": "item5",
+            "header": "item5"
+        },
+        {
+            "key": "item5loc",
+            "header": "item5loc"
+        },
+        {
+            "key": "item5count",
+            "header": "item5count"
+        },
+        {
+            "key": "item5quality",
+            "header": "item5quality"
+        },
+        {
+            "key": "item6",
+            "header": "item6"
+        },
+        {
+            "key": "item6loc",
+            "header": "item6loc"
+        },
+        {
+            "key": "item6count",
+            "header": "item6count"
+        },
+        {
+            "key": "item6quality",
+            "header": "item6quality"
+        },
+        {
+            "key": "item7",
+            "header": "item7"
+        },
+        {
+            "key": "item7loc",
+            "header": "item7loc"
+        },
+        {
+            "key": "item7count",
+            "header": "item7count"
+        },
+        {
+            "key": "item7quality",
+            "header": "item7quality"
+        },
+        {
+            "key": "item8",
+            "header": "item8"
+        },
+        {
+            "key": "item8loc",
+            "header": "item8loc"
+        },
+        {
+            "key": "item8count",
+            "header": "item8count"
+        },
+        {
+            "key": "item8quality",
+            "header": "item8quality"
+        },
+        {
+            "key": "item9",
+            "header": "item9"
+        },
+        {
+            "key": "item9loc",
+            "header": "item9loc"
+        },
+        {
+            "key": "item9count",
+            "header": "item9count"
+        },
+        {
+            "key": "item9quality",
+            "header": "item9quality"
+        },
+        {
+            "key": "item10",
+            "header": "item10"
+        },
+        {
+            "key": "item10loc",
+            "header": "item10loc"
+        },
+        {
+            "key": "item10count",
+            "header": "item10count"
+        },
+        {
+            "key": "item10quality",
+            "header": "item10quality"
+        },
+        {
+            "key": "TwoHandedOffHandRestrictItemType",
+            "header": "TwoHandedOffHandRestrictItemType"
+        },
+        {
+            "key": "TwoHandedDamageAsOneHanded",
+            "header": "TwoHandedDamageAsOneHanded"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 9,
+    "identitySha256": "3ca6c0d4823bc3186e672d51981cf4a0169ac7e481c25c86c81898178826ded9"
+}

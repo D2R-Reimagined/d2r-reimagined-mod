@@ -1,0 +1,37 @@
+{
+    "schemaVersion": 1,
+    "name": "itemuicategories",
+    "targets": [
+        "global/excel/itemuicategories.txt",
+        "global/excel/base/itemuicategories.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "Name",
+            "header": "Name"
+        },
+        {
+            "key": "isEquipment",
+            "header": "isEquipment"
+        },
+        {
+            "key": "ParentCategory",
+            "header": "ParentCategory"
+        },
+        {
+            "key": "QualityFilter",
+            "header": "QualityFilter"
+        },
+        {
+            "key": "NumColumns",
+            "header": "NumColumns"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 48,
+    "identitySha256": "d5cc08045346db81eac2f3f20aee47fd52f4b18b4488ba34ee6aabae182fa71c"
+}

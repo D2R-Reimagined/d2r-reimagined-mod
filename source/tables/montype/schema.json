@@ -1,0 +1,45 @@
+{
+    "schemaVersion": 1,
+    "name": "montype",
+    "targets": [
+        "global/excel/montype.txt",
+        "global/excel/base/montype.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "type",
+            "header": "type"
+        },
+        {
+            "key": "equiv1",
+            "header": "equiv1"
+        },
+        {
+            "key": "equiv2",
+            "header": "equiv2"
+        },
+        {
+            "key": "equiv3",
+            "header": "equiv3"
+        },
+        {
+            "key": "strplur",
+            "header": "strplur"
+        },
+        {
+            "key": "element",
+            "header": "element"
+        },
+        {
+            "key": "*eol",
+            "header": "*eol"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 67,
+    "identitySha256": "4455269c498a9f09c43fc3f81ffdf2c2b60f3127e94912595c5226feaa4507c7"
+}

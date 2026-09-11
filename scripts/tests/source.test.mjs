@@ -30,6 +30,69 @@ function fixture(t) {
     return root;
 }
 
+function consolidateFixture(root) {
+    const directory = path.join(root, 'source/tables/uniqueitems');
+    const table = loadTable(directory);
+    const file = path.join(directory, 'records.json');
+    writeJson(file, table.records.map(({ file, ...record }) => record));
+    for (const record of table.records) fs.unlinkSync(record.file);
+    fs.rmdirSync(path.join(directory, 'records'));
+    return file;
+}
+
+test('single table source builds identical banks and rejects ambiguous or invalid records', t => {
+    const root = fixture(t);
+    const file = consolidateFixture(root);
+    const directory = path.dirname(file);
+    for (const profile of ['standard', 'd2rl']) {
+        buildProfile(root, profile);
+        for (const bank of ['global/excel/uniqueitems.txt', 'global/excel/base/uniqueitems.txt']) {
+            assert.deepEqual(fs.readFileSync(path.join(root, `build/${profile}/mods/Reimagined/Reimagined.mpq/data/${bank}`)), Buffer.from(text));
+        }
+    }
+    fs.mkdirSync(path.join(directory, 'records'));
+    assert.throws(() => loadTable(directory), /two record sources/);
+    fs.rmdirSync(path.join(directory, 'records'));
+    const records = JSON.parse(fs.readFileSync(file));
+    writeJson(file, [...records, records[0]]);
+    assert.throws(() => loadTable(directory), /missing or duplicate/);
+    writeJson(file, {});
+    assert.throws(() => loadTable(directory), /expected an array/);
+});
+
+test('single table import updates multiple rows, preserves newer cells and is idempotent', t => {
+    const root = fixture(t);
+    const file = consolidateFixture(root);
+    const exported = exportTable(root, 'uniqueitems', 'build/edit/items.txt');
+    const records = JSON.parse(fs.readFileSync(file));
+    records[0].fields.min1 = '25';
+    writeJson(file, records);
+    fs.writeFileSync(exported, text.replace('\t160\t', '\t180\t').replace('Expansion', 'Expansion edited'));
+    assert.equal(importTable(root, 'build/edit/items.txt').length, 2);
+    const result = JSON.parse(fs.readFileSync(file));
+    assert.equal(result[0].fields.min1, '25');
+    assert.equal(result[0].fields.max1, '180');
+    assert.equal(result[2].fields.index, 'Expansion edited');
+    assert.deepEqual(result[1], records[1]);
+    assert(result.every(record => !Object.hasOwn(record, 'file')));
+    const before = fs.readFileSync(file);
+    assert.equal(importTable(root, 'build/edit/items.txt').length, 0);
+    assert.deepEqual(fs.readFileSync(file), before);
+});
+
+test('single table conflict leaves the whole source untouched', t => {
+    const root = fixture(t);
+    const file = consolidateFixture(root);
+    const exported = exportTable(root, 'uniqueitems', 'build/edit/items.txt');
+    const records = JSON.parse(fs.readFileSync(file));
+    records[0].fields.max1 = '175';
+    writeJson(file, records);
+    const before = fs.readFileSync(file);
+    fs.writeFileSync(exported, text.replace('\t160\t', '\t180\t').replace('Expansion', 'Expansion edited'));
+    assert.throws(() => importTable(root, 'build/edit/items.txt'), /Import conflicts/);
+    assert.deepEqual(fs.readFileSync(file), before);
+});
+
 test('TSV preserves BOM, CRLF, blank versus zero, separators, short rows and trailing cells', () => {
     const table = tableFrom(text);
     assert.deepEqual(encodeTable(table), Buffer.from(text));

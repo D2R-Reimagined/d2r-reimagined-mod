@@ -1,0 +1,309 @@
+{
+    "schemaVersion": 1,
+    "name": "inventory",
+    "targets": [
+        "global/excel/inventory.txt",
+        "global/excel/base/inventory.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "class",
+            "header": "class"
+        },
+        {
+            "key": "invLeft",
+            "header": "invLeft"
+        },
+        {
+            "key": "invRight",
+            "header": "invRight"
+        },
+        {
+            "key": "invTop",
+            "header": "invTop"
+        },
+        {
+            "key": "invBottom",
+            "header": "invBottom"
+        },
+        {
+            "key": "gridX",
+            "header": "gridX"
+        },
+        {
+            "key": "gridY",
+            "header": "gridY"
+        },
+        {
+            "key": "gridLeft",
+            "header": "gridLeft"
+        },
+        {
+            "key": "gridRight",
+            "header": "gridRight"
+        },
+        {
+            "key": "gridTop",
+            "header": "gridTop"
+        },
+        {
+            "key": "gridBottom",
+            "header": "gridBottom"
+        },
+        {
+            "key": "gridBoxWidth",
+            "header": "gridBoxWidth"
+        },
+        {
+            "key": "gridBoxHeight",
+            "header": "gridBoxHeight"
+        },
+        {
+            "key": "rArmLeft",
+            "header": "rArmLeft"
+        },
+        {
+            "key": "rArmRight",
+            "header": "rArmRight"
+        },
+        {
+            "key": "rArmTop",
+            "header": "rArmTop"
+        },
+        {
+            "key": "rArmBottom",
+            "header": "rArmBottom"
+        },
+        {
+            "key": "rArmWidth",
+            "header": "rArmWidth"
+        },
+        {
+            "key": "rArmHeight",
+            "header": "rArmHeight"
+        },
+        {
+            "key": "torsoLeft",
+            "header": "torsoLeft"
+        },
+        {
+            "key": "torsoRight",
+            "header": "torsoRight"
+        },
+        {
+            "key": "torsoTop",
+            "header": "torsoTop"
+        },
+        {
+            "key": "torsoBottom",
+            "header": "torsoBottom"
+        },
+        {
+            "key": "torsoWidth",
+            "header": "torsoWidth"
+        },
+        {
+            "key": "torsoHeight",
+            "header": "torsoHeight"
+        },
+        {
+            "key": "lArmLeft",
+            "header": "lArmLeft"
+        },
+        {
+            "key": "lArmRight",
+            "header": "lArmRight"
+        },
+        {
+            "key": "lArmTop",
+            "header": "lArmTop"
+        },
+        {
+            "key": "lArmBottom",
+            "header": "lArmBottom"
+        },
+        {
+            "key": "lArmWidth",
+            "header": "lArmWidth"
+        },
+        {
+            "key": "lArmHeight",
+            "header": "lArmHeight"
+        },
+        {
+            "key": "headLeft",
+            "header": "headLeft"
+        },
+        {
+            "key": "headRight",
+            "header": "headRight"
+        },
+        {
+            "key": "headTop",
+            "header": "headTop"
+        },
+        {
+            "key": "headBottom",
+            "header": "headBottom"
+        },
+        {
+            "key": "headWidth",
+            "header": "headWidth"
+        },
+        {
+            "key": "headHeight",
+            "header": "headHeight"
+        },
+        {
+            "key": "neckLeft",
+            "header": "neckLeft"
+        },
+        {
+            "key": "neckRight",
+            "header": "neckRight"
+        },
+        {
+            "key": "neckTop",
+            "header": "neckTop"
+        },
+        {
+            "key": "neckBottom",
+            "header": "neckBottom"
+        },
+        {
+            "key": "neckWidth",
+            "header": "neckWidth"
+        },
+        {
+            "key": "neckHeight",
+            "header": "neckHeight"
+        },
+        {
+            "key": "rHandLeft",
+            "header": "rHandLeft"
+        },
+        {
+            "key": "rHandRight",
+            "header": "rHandRight"
+        },
+        {
+            "key": "rHandTop",
+            "header": "rHandTop"
+        },
+        {
+            "key": "rHandBottom",
+            "header": "rHandBottom"
+        },
+        {
+            "key": "rHandWidth",
+            "header": "rHandWidth"
+        },
+        {
+            "key": "rHandHeight",
+            "header": "rHandHeight"
+        },
+        {
+            "key": "lHandLeft",
+            "header": "lHandLeft"
+        },
+        {
+            "key": "lHandRight",
+            "header": "lHandRight"
+        },
+        {
+            "key": "lHandTop",
+            "header": "lHandTop"
+        },
+        {
+            "key": "lHandBottom",
+            "header": "lHandBottom"
+        },
+        {
+            "key": "lHandWidth",
+            "header": "lHandWidth"
+        },
+        {
+            "key": "lHandHeight",
+            "header": "lHandHeight"
+        },
+        {
+            "key": "beltLeft",
+            "header": "beltLeft"
+        },
+        {
+            "key": "beltRight",
+            "header": "beltRight"
+        },
+        {
+            "key": "beltTop",
+            "header": "beltTop"
+        },
+        {
+            "key": "beltBottom",
+            "header": "beltBottom"
+        },
+        {
+            "key": "beltWidth",
+            "header": "beltWidth"
+        },
+        {
+            "key": "beltHeight",
+            "header": "beltHeight"
+        },
+        {
+            "key": "feetLeft",
+            "header": "feetLeft"
+        },
+        {
+            "key": "feetRight",
+            "header": "feetRight"
+        },
+        {
+            "key": "feetTop",
+            "header": "feetTop"
+        },
+        {
+            "key": "feetBottom",
+            "header": "feetBottom"
+        },
+        {
+            "key": "feetWidth",
+            "header": "feetWidth"
+        },
+        {
+            "key": "feetHeight",
+            "header": "feetHeight"
+        },
+        {
+            "key": "glovesLeft",
+            "header": "glovesLeft"
+        },
+        {
+            "key": "glovesRight",
+            "header": "glovesRight"
+        },
+        {
+            "key": "glovesTop",
+            "header": "glovesTop"
+        },
+        {
+            "key": "glovesBottom",
+            "header": "glovesBottom"
+        },
+        {
+            "key": "glovesWidth",
+            "header": "glovesWidth"
+        },
+        {
+            "key": "glovesHeight",
+            "header": "glovesHeight"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 31,
+    "identitySha256": "57e7c78927871fad2fb206ef51a5b2a86e167d4efe1f8a6e1f3f0697fb1c8b1f"
+}

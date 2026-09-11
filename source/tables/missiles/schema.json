@@ -1,0 +1,705 @@
+{
+    "schemaVersion": 1,
+    "name": "missiles",
+    "targets": [
+        "global/excel/missiles.txt",
+        "global/excel/base/missiles.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "Missile",
+            "header": "Missile"
+        },
+        {
+            "key": "*ID",
+            "header": "*ID"
+        },
+        {
+            "key": "pCltDoFunc",
+            "header": "pCltDoFunc"
+        },
+        {
+            "key": "pCltHitFunc",
+            "header": "pCltHitFunc"
+        },
+        {
+            "key": "pSrvDoFunc",
+            "header": "pSrvDoFunc"
+        },
+        {
+            "key": "pSrvHitFunc",
+            "header": "pSrvHitFunc"
+        },
+        {
+            "key": "pSrvDmgFunc",
+            "header": "pSrvDmgFunc"
+        },
+        {
+            "key": "SrvCalc1",
+            "header": "SrvCalc1"
+        },
+        {
+            "key": "*srv calc 1 desc",
+            "header": "*srv calc 1 desc"
+        },
+        {
+            "key": "Param1",
+            "header": "Param1"
+        },
+        {
+            "key": "*param1 desc",
+            "header": "*param1 desc"
+        },
+        {
+            "key": "Param2",
+            "header": "Param2"
+        },
+        {
+            "key": "*param2 desc",
+            "header": "*param2 desc"
+        },
+        {
+            "key": "Param3",
+            "header": "Param3"
+        },
+        {
+            "key": "*param3 desc",
+            "header": "*param3 desc"
+        },
+        {
+            "key": "Param4",
+            "header": "Param4"
+        },
+        {
+            "key": "*param4 desc",
+            "header": "*param4 desc"
+        },
+        {
+            "key": "Param5",
+            "header": "Param5"
+        },
+        {
+            "key": "*param5 desc",
+            "header": "*param5 desc"
+        },
+        {
+            "key": "CltCalc1",
+            "header": "CltCalc1"
+        },
+        {
+            "key": "*client calc 1 desc",
+            "header": "*client calc 1 desc"
+        },
+        {
+            "key": "CltParam1",
+            "header": "CltParam1"
+        },
+        {
+            "key": "*client param1 desc",
+            "header": "*client param1 desc"
+        },
+        {
+            "key": "CltParam2",
+            "header": "CltParam2"
+        },
+        {
+            "key": "*client param2 desc",
+            "header": "*client param2 desc"
+        },
+        {
+            "key": "CltParam3",
+            "header": "CltParam3"
+        },
+        {
+            "key": "*client param3 desc",
+            "header": "*client param3 desc"
+        },
+        {
+            "key": "CltParam4",
+            "header": "CltParam4"
+        },
+        {
+            "key": "*client param4 desc",
+            "header": "*client param4 desc"
+        },
+        {
+            "key": "CltParam5",
+            "header": "CltParam5"
+        },
+        {
+            "key": "*client param5 desc",
+            "header": "*client param5 desc"
+        },
+        {
+            "key": "SHitCalc1",
+            "header": "SHitCalc1"
+        },
+        {
+            "key": "*server hit calc 1 desc",
+            "header": "*server hit calc 1 desc"
+        },
+        {
+            "key": "sHitPar1",
+            "header": "sHitPar1"
+        },
+        {
+            "key": "*server hit param1 desc",
+            "header": "*server hit param1 desc"
+        },
+        {
+            "key": "sHitPar2",
+            "header": "sHitPar2"
+        },
+        {
+            "key": "*server hit param2 desc",
+            "header": "*server hit param2 desc"
+        },
+        {
+            "key": "sHitPar3",
+            "header": "sHitPar3"
+        },
+        {
+            "key": "*server hit param3 desc",
+            "header": "*server hit param3 desc"
+        },
+        {
+            "key": "CHitCalc1",
+            "header": "CHitCalc1"
+        },
+        {
+            "key": "*client hit calc1 desc",
+            "header": "*client hit calc1 desc"
+        },
+        {
+            "key": "cHitPar1",
+            "header": "cHitPar1"
+        },
+        {
+            "key": "*client hit param1 desc",
+            "header": "*client hit param1 desc"
+        },
+        {
+            "key": "cHitPar2",
+            "header": "cHitPar2"
+        },
+        {
+            "key": "*client hit param2 desc",
+            "header": "*client hit param2 desc"
+        },
+        {
+            "key": "cHitPar3",
+            "header": "cHitPar3"
+        },
+        {
+            "key": "*client hit param3 desc",
+            "header": "*client hit param3 desc"
+        },
+        {
+            "key": "DmgCalc1",
+            "header": "DmgCalc1"
+        },
+        {
+            "key": "*damage calc 1",
+            "header": "*damage calc 1"
+        },
+        {
+            "key": "dParam1",
+            "header": "dParam1"
+        },
+        {
+            "key": "*damage param1 desc",
+            "header": "*damage param1 desc"
+        },
+        {
+            "key": "dParam2",
+            "header": "dParam2"
+        },
+        {
+            "key": "*damage param2 desc",
+            "header": "*damage param2 desc"
+        },
+        {
+            "key": "Vel",
+            "header": "Vel"
+        },
+        {
+            "key": "MaxVel",
+            "header": "MaxVel"
+        },
+        {
+            "key": "VelLev",
+            "header": "VelLev"
+        },
+        {
+            "key": "Accel",
+            "header": "Accel"
+        },
+        {
+            "key": "Range",
+            "header": "Range"
+        },
+        {
+            "key": "Radius",
+            "header": "Radius"
+        },
+        {
+            "key": "Light",
+            "header": "Light"
+        },
+        {
+            "key": "Flicker",
+            "header": "Flicker"
+        },
+        {
+            "key": "Red",
+            "header": "Red"
+        },
+        {
+            "key": "Green",
+            "header": "Green"
+        },
+        {
+            "key": "Blue",
+            "header": "Blue"
+        },
+        {
+            "key": "InitSteps",
+            "header": "InitSteps"
+        },
+        {
+            "key": "Activate",
+            "header": "Activate"
+        },
+        {
+            "key": "LoopAnim",
+            "header": "LoopAnim"
+        },
+        {
+            "key": "CelFile",
+            "header": "CelFile"
+        },
+        {
+            "key": "animrate",
+            "header": "animrate"
+        },
+        {
+            "key": "AnimLen",
+            "header": "AnimLen"
+        },
+        {
+            "key": "AnimSpeed",
+            "header": "AnimSpeed"
+        },
+        {
+            "key": "RandStart",
+            "header": "RandStart"
+        },
+        {
+            "key": "SubLoop",
+            "header": "SubLoop"
+        },
+        {
+            "key": "SubStart",
+            "header": "SubStart"
+        },
+        {
+            "key": "SubStop",
+            "header": "SubStop"
+        },
+        {
+            "key": "CollideType",
+            "header": "CollideType"
+        },
+        {
+            "key": "CollideKill",
+            "header": "CollideKill"
+        },
+        {
+            "key": "CollideFriend",
+            "header": "CollideFriend"
+        },
+        {
+            "key": "LastCollide",
+            "header": "LastCollide"
+        },
+        {
+            "key": "Collision",
+            "header": "Collision"
+        },
+        {
+            "key": "ClientCol",
+            "header": "ClientCol"
+        },
+        {
+            "key": "CollisionOverlap",
+            "header": "CollisionOverlap"
+        },
+        {
+            "key": "ClientSend",
+            "header": "ClientSend"
+        },
+        {
+            "key": "NextHit",
+            "header": "NextHit"
+        },
+        {
+            "key": "NextDelay",
+            "header": "NextDelay"
+        },
+        {
+            "key": "xoffset",
+            "header": "xoffset"
+        },
+        {
+            "key": "yoffset",
+            "header": "yoffset"
+        },
+        {
+            "key": "zoffset",
+            "header": "zoffset"
+        },
+        {
+            "key": "Size",
+            "header": "Size"
+        },
+        {
+            "key": "SrcTown",
+            "header": "SrcTown"
+        },
+        {
+            "key": "CltSrcTown",
+            "header": "CltSrcTown"
+        },
+        {
+            "key": "CanDestroy",
+            "header": "CanDestroy"
+        },
+        {
+            "key": "ToHit",
+            "header": "ToHit"
+        },
+        {
+            "key": "AlwaysExplode",
+            "header": "AlwaysExplode"
+        },
+        {
+            "key": "Explosion",
+            "header": "Explosion"
+        },
+        {
+            "key": "Town",
+            "header": "Town"
+        },
+        {
+            "key": "NoUniqueMod",
+            "header": "NoUniqueMod"
+        },
+        {
+            "key": "NoMultiShot",
+            "header": "NoMultiShot"
+        },
+        {
+            "key": "Holy",
+            "header": "Holy"
+        },
+        {
+            "key": "CanSlow",
+            "header": "CanSlow"
+        },
+        {
+            "key": "ReturnFire",
+            "header": "ReturnFire"
+        },
+        {
+            "key": "GetHit",
+            "header": "GetHit"
+        },
+        {
+            "key": "SoftHit",
+            "header": "SoftHit"
+        },
+        {
+            "key": "KnockBack",
+            "header": "KnockBack"
+        },
+        {
+            "key": "Trans",
+            "header": "Trans"
+        },
+        {
+            "key": "Pierce",
+            "header": "Pierce"
+        },
+        {
+            "key": "MissileSkill",
+            "header": "MissileSkill"
+        },
+        {
+            "key": "Skill",
+            "header": "Skill"
+        },
+        {
+            "key": "ResultFlags",
+            "header": "ResultFlags"
+        },
+        {
+            "key": "HitFlags",
+            "header": "HitFlags"
+        },
+        {
+            "key": "HitShift",
+            "header": "HitShift"
+        },
+        {
+            "key": "ApplyMastery",
+            "header": "ApplyMastery"
+        },
+        {
+            "key": "SrcDamage",
+            "header": "SrcDamage"
+        },
+        {
+            "key": "Half2HSrc",
+            "header": "Half2HSrc"
+        },
+        {
+            "key": "SrcMissDmg",
+            "header": "SrcMissDmg"
+        },
+        {
+            "key": "MinDamage",
+            "header": "MinDamage"
+        },
+        {
+            "key": "MinLevDam1",
+            "header": "MinLevDam1"
+        },
+        {
+            "key": "MinLevDam2",
+            "header": "MinLevDam2"
+        },
+        {
+            "key": "MinLevDam3",
+            "header": "MinLevDam3"
+        },
+        {
+            "key": "MinLevDam4",
+            "header": "MinLevDam4"
+        },
+        {
+            "key": "MinLevDam5",
+            "header": "MinLevDam5"
+        },
+        {
+            "key": "MaxDamage",
+            "header": "MaxDamage"
+        },
+        {
+            "key": "MaxLevDam1",
+            "header": "MaxLevDam1"
+        },
+        {
+            "key": "MaxLevDam2",
+            "header": "MaxLevDam2"
+        },
+        {
+            "key": "MaxLevDam3",
+            "header": "MaxLevDam3"
+        },
+        {
+            "key": "MaxLevDam4",
+            "header": "MaxLevDam4"
+        },
+        {
+            "key": "MaxLevDam5",
+            "header": "MaxLevDam5"
+        },
+        {
+            "key": "DmgSymPerCalc",
+            "header": "DmgSymPerCalc"
+        },
+        {
+            "key": "EType",
+            "header": "EType"
+        },
+        {
+            "key": "EMin",
+            "header": "EMin"
+        },
+        {
+            "key": "MinELev1",
+            "header": "MinELev1"
+        },
+        {
+            "key": "MinELev2",
+            "header": "MinELev2"
+        },
+        {
+            "key": "MinELev3",
+            "header": "MinELev3"
+        },
+        {
+            "key": "MinELev4",
+            "header": "MinELev4"
+        },
+        {
+            "key": "MinELev5",
+            "header": "MinELev5"
+        },
+        {
+            "key": "EMax",
+            "header": "EMax"
+        },
+        {
+            "key": "MaxELev1",
+            "header": "MaxELev1"
+        },
+        {
+            "key": "MaxELev2",
+            "header": "MaxELev2"
+        },
+        {
+            "key": "MaxELev3",
+            "header": "MaxELev3"
+        },
+        {
+            "key": "MaxELev4",
+            "header": "MaxELev4"
+        },
+        {
+            "key": "MaxELev5",
+            "header": "MaxELev5"
+        },
+        {
+            "key": "EDmgSymPerCalc",
+            "header": "EDmgSymPerCalc"
+        },
+        {
+            "key": "ELen",
+            "header": "ELen"
+        },
+        {
+            "key": "ELevLen1",
+            "header": "ELevLen1"
+        },
+        {
+            "key": "ELevLen2",
+            "header": "ELevLen2"
+        },
+        {
+            "key": "ELevLen3",
+            "header": "ELevLen3"
+        },
+        {
+            "key": "HitClass",
+            "header": "HitClass"
+        },
+        {
+            "key": "NumDirections",
+            "header": "NumDirections"
+        },
+        {
+            "key": "LocalBlood",
+            "header": "LocalBlood"
+        },
+        {
+            "key": "DamageRate",
+            "header": "DamageRate"
+        },
+        {
+            "key": "TravelSound",
+            "header": "TravelSound"
+        },
+        {
+            "key": "HitSound",
+            "header": "HitSound"
+        },
+        {
+            "key": "OnDiedSound",
+            "header": "OnDiedSound"
+        },
+        {
+            "key": "ProgSound",
+            "header": "ProgSound"
+        },
+        {
+            "key": "ProgOverlay",
+            "header": "ProgOverlay"
+        },
+        {
+            "key": "ExplosionMissile",
+            "header": "ExplosionMissile"
+        },
+        {
+            "key": "SubMissile1",
+            "header": "SubMissile1"
+        },
+        {
+            "key": "SubMissile2",
+            "header": "SubMissile2"
+        },
+        {
+            "key": "SubMissile3",
+            "header": "SubMissile3"
+        },
+        {
+            "key": "HitSubMissile1",
+            "header": "HitSubMissile1"
+        },
+        {
+            "key": "HitSubMissile2",
+            "header": "HitSubMissile2"
+        },
+        {
+            "key": "HitSubMissile3",
+            "header": "HitSubMissile3"
+        },
+        {
+            "key": "HitSubMissile4",
+            "header": "HitSubMissile4"
+        },
+        {
+            "key": "CltSubMissile1",
+            "header": "CltSubMissile1"
+        },
+        {
+            "key": "CltSubMissile2",
+            "header": "CltSubMissile2"
+        },
+        {
+            "key": "CltSubMissile3",
+            "header": "CltSubMissile3"
+        },
+        {
+            "key": "CltHitSubMissile1",
+            "header": "CltHitSubMissile1"
+        },
+        {
+            "key": "CltHitSubMissile2",
+            "header": "CltHitSubMissile2"
+        },
+        {
+            "key": "CltHitSubMissile3",
+            "header": "CltHitSubMissile3"
+        },
+        {
+            "key": "CltHitSubMissile4",
+            "header": "CltHitSubMissile4"
+        },
+        {
+            "key": "MissileWeaponVFX",
+            "header": "MissileWeaponVFX"
+        },
+        {
+            "key": "*eol",
+            "header": "*eol"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 923,
+    "identitySha256": "a51a5d606e5df11cebc73ecb67bcb15d6a17ba3e2a655eb048199ffb889addfd"
+}

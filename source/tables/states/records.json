@@ -1,0 +1,3837 @@
+[
+    {
+        "sourceId": "row-00000",
+        "order": 0,
+        "columnCount": 75,
+        "fields": {
+            "state": "none",
+            "*ID": "0",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00001",
+        "order": 1,
+        "columnCount": 75,
+        "fields": {
+            "state": "freeze",
+            "*ID": "1",
+            "curable": "1",
+            "monstaydeath": "1",
+            "hide": "1",
+            "shatter": "1",
+            "udead": "1",
+            "colorpri": "100",
+            "colorshift": "108",
+            "light-r": "150",
+            "light-g": "215",
+            "light-b": "255",
+            "onsound": "impact_bluemotize_1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00002",
+        "order": 2,
+        "columnCount": 75,
+        "fields": {
+            "state": "poison",
+            "*ID": "2",
+            "curable": "1",
+            "life": "1",
+            "green": "1",
+            "castoverlay": "poisonhit",
+            "colorpri": "95",
+            "colorshift": "104",
+            "light-r": "128",
+            "light-g": "255",
+            "light-b": "128",
+            "onsound": "impact_poison_1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00003",
+        "order": 3,
+        "columnCount": 75,
+        "fields": {
+            "state": "resistfire",
+            "*ID": "3",
+            "aura": "1",
+            "rfblue": "1",
+            "overlay1": "aura_resistfire",
+            "castoverlay": "cast_resistfire",
+            "stat": "fireresist",
+            "onsound": "paladin_aura_resistfire",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00004",
+        "order": 4,
+        "columnCount": 75,
+        "fields": {
+            "state": "resistcold",
+            "*ID": "4",
+            "aura": "1",
+            "rcblue": "1",
+            "overlay1": "aura_resistcold",
+            "castoverlay": "cast_resistcold",
+            "stat": "coldresist",
+            "onsound": "paladin_aura_resistcold",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00005",
+        "order": 5,
+        "columnCount": 75,
+        "fields": {
+            "state": "resistlight",
+            "*ID": "5",
+            "aura": "1",
+            "rlblue": "1",
+            "overlay1": "aura_resistlight",
+            "castoverlay": "cast_resistlight",
+            "stat": "lightresist",
+            "onsound": "paladin_aura_resistlightning",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00006",
+        "order": 6,
+        "columnCount": 75,
+        "fields": {
+            "state": "resistmagic",
+            "*ID": "6",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00007",
+        "order": 7,
+        "columnCount": 75,
+        "fields": {
+            "state": "playerbody",
+            "*ID": "7",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00008",
+        "order": 8,
+        "columnCount": 75,
+        "fields": {
+            "state": "resistall",
+            "*ID": "8",
+            "aura": "1",
+            "rfblue": "1",
+            "rlblue": "1",
+            "rcblue": "1",
+            "overlay1": "aura_resistall_front",
+            "overlay2": "aura_resistall_back",
+            "castoverlay": "cast_resistall",
+            "stat": "lightresist",
+            "onsound": "paladin_aura_salvation",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00009",
+        "order": 9,
+        "columnCount": 75,
+        "fields": {
+            "state": "amplifydamage",
+            "*ID": "9",
+            "curable": "1",
+            "curse": "1",
+            "overlay1": "curseamplifydamage",
+            "castoverlay": "curse_hit",
+            "stat": "damageresist",
+            "onsound": "necromancer_amplifydamage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00010",
+        "order": 10,
+        "columnCount": 75,
+        "fields": {
+            "state": "frozenarmor",
+            "*ID": "10",
+            "group": "1",
+            "armblue": "1",
+            "overlay1": "frozenarmor",
+            "stat": "skill_armor_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00011",
+        "order": 11,
+        "columnCount": 75,
+        "fields": {
+            "state": "cold",
+            "*ID": "11",
+            "curable": "1",
+            "stat": "velocitypercent",
+            "colorpri": "100",
+            "colorshift": "108",
+            "light-r": "150",
+            "light-g": "215",
+            "light-b": "255",
+            "onsound": "impact_bluemotize_1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00012",
+        "order": 12,
+        "columnCount": 75,
+        "fields": {
+            "state": "inferno",
+            "*ID": "12",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00013",
+        "order": 13,
+        "columnCount": 75,
+        "fields": {
+            "state": "blaze",
+            "*ID": "13",
+            "setfunc": "3",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00014",
+        "order": 14,
+        "columnCount": 75,
+        "fields": {
+            "state": "bonearmor",
+            "*ID": "14",
+            "group": "1",
+            "nooverlays": "1",
+            "noclear": "1",
+            "overlay1": "bonearmor_front",
+            "overlay2": "bonearmor_back",
+            "overlay3": "bonearmor_null1",
+            "overlay4": "bonearmor_null2",
+            "castoverlay": "bonearmor_cast",
+            "setfunc": "6",
+            "remfunc": "3",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00015",
+        "order": 15,
+        "columnCount": 75,
+        "fields": {
+            "state": "concentrate",
+            "*ID": "15",
+            "armblue": "1",
+            "stat": "skill_armor_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00016",
+        "order": 16,
+        "columnCount": 75,
+        "fields": {
+            "state": "enchant",
+            "*ID": "16",
+            "attblue": "1",
+            "castoverlay": "enchant",
+            "stat": "skill_enchant",
+            "itemtype": "weap",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00017",
+        "order": 17,
+        "columnCount": 75,
+        "fields": {
+            "state": "innersight",
+            "*ID": "17",
+            "armred": "1",
+            "overlay1": "innersight",
+            "stat": "armorclass",
+            "sunder-res-reduce": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00018",
+        "order": 18,
+        "columnCount": 75,
+        "fields": {
+            "state": "skill_move",
+            "*ID": "18",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00019",
+        "order": 19,
+        "columnCount": 75,
+        "fields": {
+            "state": "weaken",
+            "*ID": "19",
+            "curable": "1",
+            "curse": "1",
+            "damred": "1",
+            "overlay1": "curseweaken",
+            "castoverlay": "curse_hit",
+            "stat": "damagepercent",
+            "onsound": "necromancer_weaken",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00020",
+        "order": 20,
+        "columnCount": 75,
+        "fields": {
+            "state": "chillingarmor",
+            "*ID": "20",
+            "group": "1",
+            "armblue": "1",
+            "overlay1": "chillarmor",
+            "stat": "skill_armor_percent",
+            "cltevent": "hitbymissile",
+            "clteventfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00021",
+        "order": 21,
+        "columnCount": 75,
+        "fields": {
+            "state": "stunned",
+            "*ID": "21",
+            "overlay1": "stun",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00022",
+        "order": 22,
+        "columnCount": 75,
+        "fields": {
+            "state": "spiderlay",
+            "*ID": "22",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00023",
+        "order": 23,
+        "columnCount": 75,
+        "fields": {
+            "state": "dimvision",
+            "*ID": "23",
+            "curable": "1",
+            "overlay1": "cursedimvision",
+            "castoverlay": "curse_hit",
+            "onsound": "necromancer_dimvision",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00024",
+        "order": 24,
+        "columnCount": 75,
+        "fields": {
+            "state": "slowed",
+            "*ID": "24",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00025",
+        "order": 25,
+        "columnCount": 75,
+        "fields": {
+            "state": "fetishaura",
+            "*ID": "25",
+            "overlay1": "fetish_aura",
+            "stat": "attackrate",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00026",
+        "order": 26,
+        "columnCount": 75,
+        "fields": {
+            "state": "shout",
+            "*ID": "26",
+            "aura": "1",
+            "armblue": "1",
+            "overlay1": "shout",
+            "castoverlay": "shoutstart",
+            "stat": "skill_armor_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00027",
+        "order": 27,
+        "columnCount": 75,
+        "fields": {
+            "state": "taunt",
+            "*ID": "27",
+            "curable": "1",
+            "curse": "1",
+            "attblue": "1",
+            "damblue": "1",
+            "overlay1": "taunt",
+            "onsound": "barbarian_battlecry_state",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00028",
+        "order": 28,
+        "columnCount": 75,
+        "fields": {
+            "state": "conviction",
+            "*ID": "28",
+            "aura": "1",
+            "overlay1": "convictionfront",
+            "overlay2": "convictionback",
+            "onsound": "paladin_aura_purification",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00029",
+        "order": 29,
+        "columnCount": 75,
+        "fields": {
+            "state": "convicted",
+            "*ID": "29",
+            "aura": "1",
+            "armred": "1",
+            "rfred": "1",
+            "rlred": "1",
+            "rcred": "1",
+            "overlay1": "convictionfront",
+            "overlay2": "convictionback",
+            "stat": "skill_conviction",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00030",
+        "order": 30,
+        "columnCount": 75,
+        "fields": {
+            "state": "energyshield",
+            "*ID": "30",
+            "overlay1": "energyshield",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00031",
+        "order": 31,
+        "columnCount": 75,
+        "fields": {
+            "state": "venomclaws",
+            "*ID": "31",
+            "stat": "poisonmindam",
+            "itemtype": "mele",
+            "itemtrans": "cgrn",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00032",
+        "order": 32,
+        "columnCount": 75,
+        "fields": {
+            "state": "battleorders",
+            "*ID": "32",
+            "aura": "1",
+            "overlay1": "battleorders",
+            "castoverlay": "battleorderscast",
+            "stat": "maxmana",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00033",
+        "order": 33,
+        "columnCount": 75,
+        "fields": {
+            "state": "might",
+            "*ID": "33",
+            "aura": "1",
+            "damblue": "1",
+            "overlay1": "aura_might_front",
+            "overlay2": "aura_might_back",
+            "stat": "damagepercent",
+            "onsound": "paladin_aura_might",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00034",
+        "order": 34,
+        "columnCount": 75,
+        "fields": {
+            "state": "prayer",
+            "*ID": "34",
+            "aura": "1",
+            "overlay1": "aura_prayer_front",
+            "overlay2": "aura_prayer_back",
+            "onsound": "paladin_aura_prayer",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00035",
+        "order": 35,
+        "columnCount": 75,
+        "fields": {
+            "state": "holyfire",
+            "*ID": "35",
+            "aura": "1",
+            "overlay1": "aura_holyfire_front",
+            "overlay2": "aura_holyfire_back",
+            "onsound": "paladin_aura_holyfire",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00036",
+        "order": 36,
+        "columnCount": 75,
+        "fields": {
+            "state": "thorns",
+            "*ID": "36",
+            "aura": "1",
+            "overlay1": "aura_thorns_front",
+            "overlay2": "aura_thorns_back",
+            "onsound": "paladin_aura_thorns",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00037",
+        "order": 37,
+        "columnCount": 75,
+        "fields": {
+            "state": "defiance",
+            "*ID": "37",
+            "aura": "1",
+            "armblue": "1",
+            "overlay1": "aura_defiance_front",
+            "overlay2": "aura_defiance_back",
+            "stat": "skill_armor_percent",
+            "onsound": "paladin_aura_defiance",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00038",
+        "order": 38,
+        "columnCount": 75,
+        "fields": {
+            "state": "thunderstorm",
+            "*ID": "38",
+            "overlay2": "thunderstormback",
+            "castoverlay": "thunderstormcast",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00039",
+        "order": 39,
+        "columnCount": 75,
+        "fields": {
+            "state": "lightningbolt",
+            "*ID": "39",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00040",
+        "order": 40,
+        "columnCount": 75,
+        "fields": {
+            "state": "blessedaim",
+            "*ID": "40",
+            "aura": "1",
+            "attblue": "1",
+            "overlay1": "blessedaimfront",
+            "overlay2": "blessedaimback",
+            "stat": "item_tohit_percent",
+            "onsound": "paladin_aura_blessedaim",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00041",
+        "order": 41,
+        "columnCount": 75,
+        "fields": {
+            "state": "stamina",
+            "*ID": "41",
+            "aura": "1",
+            "overlay1": "staminafront",
+            "overlay2": "staminaback",
+            "stat": "maxstamina",
+            "onsound": "paladin_aura_stamina",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00042",
+        "order": 42,
+        "columnCount": 75,
+        "fields": {
+            "state": "concentration",
+            "*ID": "42",
+            "aura": "1",
+            "damblue": "1",
+            "overlay1": "concentrationfront",
+            "overlay2": "concentrationback",
+            "stat": "damagepercent",
+            "onsound": "paladin_aura_concentration",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00043",
+        "order": 43,
+        "columnCount": 75,
+        "fields": {
+            "state": "holywind",
+            "*ID": "43",
+            "aura": "1",
+            "overlay1": "holyfreeze",
+            "onsound": "paladin_aura_holywind",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00044",
+        "order": 44,
+        "columnCount": 75,
+        "fields": {
+            "state": "holywindcold",
+            "*ID": "44",
+            "aura": "1",
+            "overlay1": "null",
+            "castoverlay": "ice_explode",
+            "stat": "velocitypercent",
+            "colorpri": "100",
+            "colorshift": "108",
+            "light-r": "150",
+            "light-g": "215",
+            "light-b": "255",
+            "onsound": "impact_bluemotize_1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00045",
+        "order": 45,
+        "columnCount": 75,
+        "fields": {
+            "state": "cleansing",
+            "*ID": "45",
+            "aura": "1",
+            "overlay1": "cleansingfront",
+            "overlay2": "cleansingback",
+            "onsound": "paladin_aura_cleansing",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00046",
+        "order": 46,
+        "columnCount": 75,
+        "fields": {
+            "state": "holyshock",
+            "*ID": "46",
+            "aura": "1",
+            "overlay1": "holyshockfront",
+            "overlay2": "holyshockback",
+            "stat": "lightmaxdam",
+            "onsound": "paladin_aura_holylight",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00047",
+        "order": 47,
+        "columnCount": 75,
+        "fields": {
+            "state": "sanctuary",
+            "*ID": "47",
+            "aura": "1",
+            "active": "1",
+            "overlay1": "sanctuaryfront",
+            "overlay2": "sanctuaryback",
+            "stat": "skill_staminapercent",
+            "onsound": "paladin_aura_sanctuary",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00048",
+        "order": 48,
+        "columnCount": 75,
+        "fields": {
+            "state": "meditation",
+            "*ID": "48",
+            "aura": "1",
+            "overlay1": "meditationfront",
+            "overlay2": "meditationback",
+            "onsound": "paladin_aura_meditation",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00049",
+        "order": 49,
+        "columnCount": 75,
+        "fields": {
+            "state": "fanaticism",
+            "*ID": "49",
+            "aura": "1",
+            "attblue": "1",
+            "damblue": "1",
+            "overlay1": "fanaticismfront",
+            "overlay2": "fanaticismback",
+            "stat": "attackrate",
+            "onsound": "paladin_aura_fanatacism",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00050",
+        "order": 50,
+        "columnCount": 75,
+        "fields": {
+            "state": "redemption",
+            "*ID": "50",
+            "aura": "1",
+            "overlay1": "redemptionfront",
+            "overlay2": "redemptionback",
+            "onsound": "paladin_aura_redemption",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00051",
+        "order": 51,
+        "columnCount": 75,
+        "fields": {
+            "state": "battlecommand",
+            "*ID": "51",
+            "aura": "1",
+            "overlay1": "battlecommand",
+            "castoverlay": "battlecommandcast",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00052",
+        "order": 52,
+        "columnCount": 75,
+        "fields": {
+            "state": "preventheal",
+            "*ID": "52",
+            "life": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00053",
+        "order": 53,
+        "columnCount": 75,
+        "fields": {
+            "state": "conversion",
+            "*ID": "53",
+            "exp": "1",
+            "overlay1": "conversionaura",
+            "onsound": "paladin_conversion",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00054",
+        "order": 54,
+        "columnCount": 75,
+        "fields": {
+            "state": "uninterruptable",
+            "*ID": "54",
+            "remfunc": "7",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00055",
+        "order": 55,
+        "columnCount": 75,
+        "fields": {
+            "state": "ironmaiden",
+            "*ID": "55",
+            "curable": "1",
+            "curse": "1",
+            "overlay1": "curseironmaiden",
+            "castoverlay": "curse_hit",
+            "onsound": "necromancer_ironmaiden",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00056",
+        "order": 56,
+        "columnCount": 75,
+        "fields": {
+            "state": "terror",
+            "*ID": "56",
+            "curable": "1",
+            "curse": "1",
+            "overlay1": "curseterror",
+            "castoverlay": "curse_hit",
+            "onsound": "necromancer_taint",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00057",
+        "order": 57,
+        "columnCount": 75,
+        "fields": {
+            "state": "attract",
+            "*ID": "57",
+            "curable": "1",
+            "curse": "1",
+            "exp": "1",
+            "overlay1": "curseattract",
+            "castoverlay": "curse_hit",
+            "onsound": "necromancer_attract",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00058",
+        "order": 58,
+        "columnCount": 75,
+        "fields": {
+            "state": "lifetap",
+            "*ID": "58",
+            "curable": "1",
+            "curse": "1",
+            "overlay1": "cursereversevampire",
+            "castoverlay": "curse_hit",
+            "onsound": "necromancer_reversevampire",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00059",
+        "order": 59,
+        "columnCount": 75,
+        "fields": {
+            "state": "confuse",
+            "*ID": "59",
+            "group": "8",
+            "curable": "1",
+            "curse": "1",
+            "exp": "1",
+            "overlay1": "curseconfuse",
+            "castoverlay": "curse_hit",
+            "onsound": "necromancer_confuse",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00060",
+        "order": 60,
+        "columnCount": 75,
+        "fields": {
+            "state": "decrepify",
+            "*ID": "60",
+            "curable": "1",
+            "curse": "1",
+            "damred": "1",
+            "overlay1": "cursedecrepify",
+            "castoverlay": "curse_hit",
+            "stat": "skill_decrepify",
+            "onsound": "necromancer_decrepify",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00061",
+        "order": 61,
+        "columnCount": 75,
+        "fields": {
+            "state": "lowerresist",
+            "*ID": "61",
+            "curable": "1",
+            "curse": "1",
+            "rfred": "1",
+            "rlred": "1",
+            "rcred": "1",
+            "rpred": "1",
+            "overlay1": "curselowerresist",
+            "castoverlay": "curse_hit",
+            "stat": "lightresist",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00062",
+        "order": 62,
+        "columnCount": 75,
+        "fields": {
+            "state": "openwounds",
+            "*ID": "62",
+            "active": "1",
+            "life": "1",
+            "cltactivefunc": "85",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00063",
+        "order": 63,
+        "columnCount": 75,
+        "fields": {
+            "state": "dopplezon",
+            "*ID": "63",
+            "transform": "1",
+            "disguise": "1",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "hide": "1",
+            "hidedead": "1",
+            "udead": "1",
+            "bossinv": "1",
+            "gfxtype": "2",
+            "gfxclass": "0",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00064",
+        "order": 64,
+        "columnCount": 75,
+        "fields": {
+            "state": "criticalstrike",
+            "*ID": "64",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00065",
+        "order": 65,
+        "columnCount": 75,
+        "fields": {
+            "state": "dodge",
+            "*ID": "65",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00066",
+        "order": 66,
+        "columnCount": 75,
+        "fields": {
+            "state": "avoid",
+            "*ID": "66",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00067",
+        "order": 67,
+        "columnCount": 75,
+        "fields": {
+            "state": "penetrate",
+            "*ID": "67",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00068",
+        "order": 68,
+        "columnCount": 75,
+        "fields": {
+            "state": "evade",
+            "*ID": "68",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00069",
+        "order": 69,
+        "columnCount": 75,
+        "fields": {
+            "state": "pierce",
+            "*ID": "69",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00070",
+        "order": 70,
+        "columnCount": 75,
+        "fields": {
+            "state": "warmth",
+            "*ID": "70",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00071",
+        "order": 71,
+        "columnCount": 75,
+        "fields": {
+            "state": "firemastery",
+            "*ID": "71",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00072",
+        "order": 72,
+        "columnCount": 75,
+        "fields": {
+            "state": "lightningmastery",
+            "*ID": "72",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00073",
+        "order": 73,
+        "columnCount": 75,
+        "fields": {
+            "state": "coldmastery",
+            "*ID": "73",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00074",
+        "order": 74,
+        "columnCount": 75,
+        "fields": {
+            "state": "blademastery",
+            "*ID": "74",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00075",
+        "order": 75,
+        "columnCount": 75,
+        "fields": {
+            "state": "axemastery",
+            "*ID": "75",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00076",
+        "order": 76,
+        "columnCount": 75,
+        "fields": {
+            "state": "macemastery",
+            "*ID": "76",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00077",
+        "order": 77,
+        "columnCount": 75,
+        "fields": {
+            "state": "polearmmastery",
+            "*ID": "77",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00078",
+        "order": 78,
+        "columnCount": 75,
+        "fields": {
+            "state": "throwingmastery",
+            "*ID": "78",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00079",
+        "order": 79,
+        "columnCount": 75,
+        "fields": {
+            "state": "spearmastery",
+            "*ID": "79",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00080",
+        "order": 80,
+        "columnCount": 75,
+        "fields": {
+            "state": "increasedstamina",
+            "*ID": "80",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00081",
+        "order": 81,
+        "columnCount": 75,
+        "fields": {
+            "state": "ironskin",
+            "*ID": "81",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00082",
+        "order": 82,
+        "columnCount": 75,
+        "fields": {
+            "state": "increasedspeed",
+            "*ID": "82",
+            "stat": "velocitypercent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00083",
+        "order": 83,
+        "columnCount": 75,
+        "fields": {
+            "state": "naturalresistance",
+            "*ID": "83",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00084",
+        "order": 84,
+        "columnCount": 75,
+        "fields": {
+            "state": "fingermagecurse",
+            "*ID": "84",
+            "overlay1": "fingermagecurse",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00085",
+        "order": 85,
+        "columnCount": 75,
+        "fields": {
+            "state": "nomanaregen",
+            "*ID": "85",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00086",
+        "order": 86,
+        "columnCount": 75,
+        "fields": {
+            "state": "justhit",
+            "*ID": "86",
+            "group": "1",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00087",
+        "order": 87,
+        "columnCount": 75,
+        "fields": {
+            "state": "slowmissiles",
+            "*ID": "87",
+            "overlay1": "innersight",
+            "stat": "skill_handofathena",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00088",
+        "order": 88,
+        "columnCount": 75,
+        "fields": {
+            "state": "shiverarmor",
+            "*ID": "88",
+            "group": "1",
+            "active": "1",
+            "armblue": "1",
+            "overlay1": "shiverarmor",
+            "stat": "skill_armor_percent",
+            "cltactivefunc": "87",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00089",
+        "order": 89,
+        "columnCount": 75,
+        "fields": {
+            "state": "battlecry",
+            "*ID": "89",
+            "damblue": "1",
+            "armblue": "1",
+            "overlay1": "battlecry",
+            "stat": "skill_armor_percent",
+            "onsound": "barbarian_battlecry_state",
+            "sunder-res-reduce": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00090",
+        "order": 90,
+        "columnCount": 75,
+        "fields": {
+            "state": "blue",
+            "*ID": "90",
+            "colorpri": "100",
+            "colorshift": "108",
+            "light-r": "150",
+            "light-g": "215",
+            "light-b": "255",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00091",
+        "order": 91,
+        "columnCount": 75,
+        "fields": {
+            "state": "red",
+            "*ID": "91",
+            "colorpri": "70",
+            "colorshift": "100",
+            "light-r": "255",
+            "light-g": "255",
+            "light-b": "255",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00092",
+        "order": 92,
+        "columnCount": 75,
+        "fields": {
+            "state": "death_delay",
+            "*ID": "92",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00093",
+        "order": 93,
+        "columnCount": 75,
+        "fields": {
+            "state": "valkyrie",
+            "*ID": "93",
+            "transform": "1",
+            "disguise": "1",
+            "overlay1": "valkyrie",
+            "castoverlay": "valkyriestart",
+            "gfxtype": "2",
+            "gfxclass": "0",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00094",
+        "order": 94,
+        "columnCount": 75,
+        "fields": {
+            "state": "frenzy",
+            "*ID": "94",
+            "overlay2": "frenzy",
+            "stat": "skill_frenzy",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00095",
+        "order": 95,
+        "columnCount": 75,
+        "fields": {
+            "state": "berserk",
+            "*ID": "95",
+            "armblue": "1",
+            "overlay1": "berserkfront",
+            "overlay2": "berserkback",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00096",
+        "order": 96,
+        "columnCount": 75,
+        "fields": {
+            "state": "revive",
+            "*ID": "96",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "udead": "1",
+            "setfunc": "15",
+            "colorpri": "85",
+            "colorshift": "73",
+            "light-r": "255",
+            "light-g": "255",
+            "light-b": "255",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00097",
+        "order": 97,
+        "columnCount": 75,
+        "fields": {
+            "state": "skel_mastery",
+            "*ID": "97",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00098",
+        "order": 98,
+        "columnCount": 75,
+        "fields": {
+            "state": "sourceunit",
+            "*ID": "98",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "setfunc": "4",
+            "remfunc": "2",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00099",
+        "order": 99,
+        "columnCount": 75,
+        "fields": {
+            "state": "redeemed",
+            "*ID": "99",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "hide": "1",
+            "udead": "1",
+            "setfunc": "10",
+            "skill": "redemption",
+            "onsound": "paladin_redeemed_soul",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00100",
+        "order": 100,
+        "columnCount": 75,
+        "fields": {
+            "state": "healthpot",
+            "*ID": "100",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00101",
+        "order": 101,
+        "columnCount": 75,
+        "fields": {
+            "state": "holyshield",
+            "*ID": "101",
+            "transform": "1",
+            "stat": "skill_armor_percent",
+            "skill": "Holy Shield",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00102",
+        "order": 102,
+        "columnCount": 75,
+        "fields": {
+            "state": "just_portaled",
+            "*ID": "102",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00103",
+        "order": 103,
+        "columnCount": 75,
+        "fields": {
+            "state": "monfrenzy",
+            "*ID": "103",
+            "overlay2": "monfrenzy",
+            "stat": "skill_frenzy",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00104",
+        "order": 104,
+        "columnCount": 75,
+        "fields": {
+            "state": "corpse_nodraw",
+            "*ID": "104",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "hide": "1",
+            "udead": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00105",
+        "order": 105,
+        "columnCount": 75,
+        "fields": {
+            "state": "alignment",
+            "*ID": "105",
+            "plrstaydeath": "1",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00106",
+        "order": 106,
+        "columnCount": 75,
+        "fields": {
+            "state": "manapot",
+            "*ID": "106",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00107",
+        "order": 107,
+        "columnCount": 75,
+        "fields": {
+            "state": "shatter",
+            "*ID": "107",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "hide": "1",
+            "shatter": "1",
+            "udead": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00108",
+        "order": 108,
+        "columnCount": 75,
+        "fields": {
+            "state": "sync_warped",
+            "*ID": "108",
+            "plrstaydeath": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00109",
+        "order": 109,
+        "columnCount": 75,
+        "fields": {
+            "state": "conversion_save",
+            "*ID": "109",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00110",
+        "order": 110,
+        "columnCount": 75,
+        "fields": {
+            "state": "pregnant",
+            "*ID": "110",
+            "overlay1": "impregnated",
+            "remfunc": "10",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00111",
+        "order": 111,
+        "columnCount": 75,
+        "fields": {
+            "state": "golem_mastery",
+            "*ID": "111",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00112",
+        "order": 112,
+        "columnCount": 75,
+        "fields": {
+            "state": "rabies",
+            "*ID": "112",
+            "group": "10",
+            "overlay1": "rabiesplague",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00113",
+        "order": 113,
+        "columnCount": 75,
+        "fields": {
+            "state": "defense_curse",
+            "*ID": "113",
+            "curable": "1",
+            "curse": "1",
+            "armred": "1",
+            "overlay1": "defense_curse",
+            "stat": "skill_armor_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00114",
+        "order": 114,
+        "columnCount": 75,
+        "fields": {
+            "state": "blood_mana",
+            "*ID": "114",
+            "aura": "1",
+            "overlay1": "blood_mana",
+            "stat": "passive_mag_mastery",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00115",
+        "order": 115,
+        "columnCount": 75,
+        "fields": {
+            "state": "burning",
+            "*ID": "115",
+            "overlay1": "burning",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00116",
+        "order": 116,
+        "columnCount": 75,
+        "fields": {
+            "state": "dragonflight",
+            "*ID": "116",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00117",
+        "order": 117,
+        "columnCount": 75,
+        "fields": {
+            "state": "maul",
+            "*ID": "117",
+            "group": "3",
+            "damblue": "1",
+            "nooverlays": "1",
+            "overlay1": "maul1",
+            "overlay2": "maul5",
+            "overlay3": "maul1back",
+            "overlay4": "maul5back",
+            "stat": "damagepercent",
+            "setfunc": "16",
+            "remfunc": "11",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00118",
+        "order": 118,
+        "columnCount": 75,
+        "fields": {
+            "state": "corpse_noselect",
+            "*ID": "118",
+            "plrstaydeath": "1",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "udead": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00119",
+        "order": 119,
+        "columnCount": 75,
+        "fields": {
+            "state": "shadowwarrior",
+            "*ID": "119",
+            "transform": "1",
+            "disguise": "1",
+            "hide": "1",
+            "udead": "1",
+            "gfxtype": "2",
+            "gfxclass": "6",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00120",
+        "order": 120,
+        "columnCount": 75,
+        "fields": {
+            "state": "feralrage",
+            "*ID": "120",
+            "group": "3",
+            "nooverlays": "1",
+            "overlay1": "feralrage1",
+            "overlay2": "feralrage5",
+            "overlay3": "feralrage1back",
+            "overlay4": "feralrage5back",
+            "stat": "attackrate",
+            "setfunc": "16",
+            "remfunc": "11",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00121",
+        "order": 121,
+        "columnCount": 75,
+        "fields": {
+            "state": "skilldelay",
+            "*ID": "121",
+            "setfunc": "19",
+            "remfunc": "12",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00122",
+        "order": 122,
+        "columnCount": 75,
+        "fields": {
+            "state": "progressive_damage",
+            "*ID": "122",
+            "pgsv": "1",
+            "pgsvoverlay": "progressive_damage_1",
+            "stat": "progressive_damage",
+            "setfunc": "1",
+            "remfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00123",
+        "order": 123,
+        "columnCount": 75,
+        "fields": {
+            "state": "progressive_steal",
+            "*ID": "123",
+            "pgsv": "1",
+            "pgsvoverlay": "progressive_steal_1",
+            "stat": "progressive_steal",
+            "setfunc": "1",
+            "remfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00124",
+        "order": 124,
+        "columnCount": 75,
+        "fields": {
+            "state": "progressive_other",
+            "*ID": "124",
+            "pgsv": "1",
+            "pgsvoverlay": "progressive_other_1",
+            "stat": "progressive_other",
+            "setfunc": "1",
+            "remfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00125",
+        "order": 125,
+        "columnCount": 75,
+        "fields": {
+            "state": "progressive_fire",
+            "*ID": "125",
+            "pgsv": "1",
+            "pgsvoverlay": "progressive_fire_1",
+            "stat": "progressive_fire",
+            "setfunc": "1",
+            "remfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00126",
+        "order": 126,
+        "columnCount": 75,
+        "fields": {
+            "state": "progressive_cold",
+            "*ID": "126",
+            "pgsv": "1",
+            "pgsvoverlay": "progressive_cold_1",
+            "stat": "progressive_cold",
+            "setfunc": "1",
+            "remfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00127",
+        "order": 127,
+        "columnCount": 75,
+        "fields": {
+            "state": "progressive_lightning",
+            "*ID": "127",
+            "pgsv": "1",
+            "pgsvoverlay": "progressive_lightning_1",
+            "stat": "progressive_lightning",
+            "setfunc": "1",
+            "remfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00128",
+        "order": 128,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_armor",
+            "*ID": "128",
+            "armblue": "1",
+            "overlay1": "shrine_armor",
+            "overlay2": "shrine_shimmer00",
+            "stat": "armorclass",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00129",
+        "order": 129,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_combat",
+            "*ID": "129",
+            "attblue": "1",
+            "damblue": "1",
+            "overlay1": "shrine_combat",
+            "overlay2": "shrine_shimmer00",
+            "stat": "tohit",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00130",
+        "order": 130,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_resist_lightning",
+            "*ID": "130",
+            "rlblue": "1",
+            "overlay1": "shrine_resist_lightning",
+            "overlay2": "shrine_shimmer01",
+            "stat": "lightresist",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00131",
+        "order": 131,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_resist_fire",
+            "*ID": "131",
+            "rfblue": "1",
+            "overlay1": "shrine_resist_fire",
+            "overlay2": "shrine_shimmer00",
+            "stat": "fireresist",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00132",
+        "order": 132,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_resist_cold",
+            "*ID": "132",
+            "rcblue": "1",
+            "overlay1": "shrine_resist_cold",
+            "overlay2": "shrine_shimmer01",
+            "stat": "coldresist",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00133",
+        "order": 133,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_resist_poison",
+            "*ID": "133",
+            "rpblue": "1",
+            "overlay1": "shrine_resist_poison",
+            "overlay2": "shrine_shimmer01",
+            "stat": "poisonresist",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00134",
+        "order": 134,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_skill",
+            "*ID": "134",
+            "overlay1": "shrine_skill",
+            "overlay2": "shrine_shimmer00",
+            "setfunc": "9",
+            "remfunc": "6",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00135",
+        "order": 135,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_mana_regen",
+            "*ID": "135",
+            "overlay1": "shrine_mana_regen",
+            "overlay2": "shrine_shimmer01",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00136",
+        "order": 136,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_stamina",
+            "*ID": "136",
+            "stambarblue": "1",
+            "overlay1": "shrine_stamina",
+            "overlay2": "shrine_shimmer01",
+            "stat": "stamina",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00137",
+        "order": 137,
+        "columnCount": 75,
+        "fields": {
+            "state": "shrine_experience",
+            "*ID": "137",
+            "overlay1": "shrine_experience",
+            "overlay2": "shrine_shimmer00",
+            "canstack": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00138",
+        "order": 138,
+        "columnCount": 75,
+        "fields": {
+            "state": "fenris_rage",
+            "*ID": "138",
+            "overlay1": "direwolfcharged",
+            "overlay2": "direwolfcharged",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00139",
+        "order": 139,
+        "columnCount": 75,
+        "fields": {
+            "state": "wolf",
+            "*ID": "139",
+            "group": "3",
+            "transform": "1",
+            "restrict": "1",
+            "disguise": "1",
+            "attblue": "1",
+            "meleeonly": "1",
+            "setfunc": "14",
+            "onsound": "druid_morph",
+            "offsound": "druid_morph",
+            "gfxtype": "1",
+            "gfxclass": "430",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00140",
+        "order": 140,
+        "columnCount": 75,
+        "fields": {
+            "state": "bear",
+            "*ID": "140",
+            "group": "3",
+            "transform": "1",
+            "restrict": "1",
+            "disguise": "1",
+            "damblue": "1",
+            "armblue": "1",
+            "meleeonly": "1",
+            "setfunc": "14",
+            "onsound": "druid_morph",
+            "offsound": "druid_morph",
+            "gfxtype": "1",
+            "gfxclass": "431",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00141",
+        "order": 141,
+        "columnCount": 75,
+        "fields": {
+            "state": "bloodlust",
+            "*ID": "141",
+            "curse": "1",
+            "overlay1": "bloodlust_state",
+            "overlay2": "bloodlust_state",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00142",
+        "order": 142,
+        "columnCount": 75,
+        "fields": {
+            "state": "changeclass",
+            "*ID": "142",
+            "setfunc": "5",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00143",
+        "order": 143,
+        "columnCount": 75,
+        "fields": {
+            "state": "attached",
+            "*ID": "143",
+            "active": "1",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "udead": "1",
+            "setfunc": "13",
+            "remfunc": "9",
+            "cltactivefunc": "88",
+            "srvactivefunc": "147",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00144",
+        "order": 144,
+        "columnCount": 75,
+        "fields": {
+            "state": "hurricane",
+            "*ID": "144",
+            "active": "1",
+            "setfunc": "7",
+            "remfunc": "4",
+            "cltactivefunc": "90",
+            "srvactivefunc": "145",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00145",
+        "order": 145,
+        "columnCount": 75,
+        "fields": {
+            "state": "armageddon",
+            "*ID": "145",
+            "srvactivefunc": "146",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00146",
+        "order": 146,
+        "columnCount": 75,
+        "fields": {
+            "state": "invis",
+            "*ID": "146",
+            "setfunc": "12",
+            "remfunc": "8",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00147",
+        "order": 147,
+        "columnCount": 75,
+        "fields": {
+            "state": "barbs",
+            "*ID": "147",
+            "aura": "1",
+            "overlay2": "spirit_of_barbs",
+            "sunder-res-reduce": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00148",
+        "order": 148,
+        "columnCount": 75,
+        "fields": {
+            "state": "wolverine",
+            "*ID": "148",
+            "aura": "1",
+            "attblue": "1",
+            "damblue": "1",
+            "overlay2": "heart_of_wolverine",
+            "stat": "item_tohit_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00149",
+        "order": 149,
+        "columnCount": 75,
+        "fields": {
+            "state": "oaksage",
+            "*ID": "149",
+            "aura": "1",
+            "overlay2": "oak_sage",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00150",
+        "order": 150,
+        "columnCount": 75,
+        "fields": {
+            "state": "vine_beast",
+            "*ID": "150",
+            "active": "1",
+            "setfunc": "11",
+            "cltactivefunc": "89",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00151",
+        "order": 151,
+        "columnCount": 75,
+        "fields": {
+            "state": "cyclonearmor",
+            "*ID": "151",
+            "nooverlays": "1",
+            "noclear": "1",
+            "overlay1": "cyclonearmor1front",
+            "overlay2": "cyclonearmor2front",
+            "overlay3": "cyclonearmor3front",
+            "setfunc": "8",
+            "remfunc": "5",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00152",
+        "order": 152,
+        "columnCount": 75,
+        "fields": {
+            "state": "clawmastery",
+            "*ID": "152",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00153",
+        "order": 153,
+        "columnCount": 75,
+        "fields": {
+            "state": "cloak_of_shadows",
+            "*ID": "153",
+            "remhit": "1",
+            "armblue": "1",
+            "setfunc": "2",
+            "onsound": "assassin_cloakofdarkness",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00154",
+        "order": 154,
+        "columnCount": 75,
+        "fields": {
+            "state": "recycled",
+            "*ID": "154",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "hide": "1",
+            "udead": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00155",
+        "order": 155,
+        "columnCount": 75,
+        "fields": {
+            "state": "weaponblock",
+            "*ID": "155",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00156",
+        "order": 156,
+        "columnCount": 75,
+        "fields": {
+            "state": "cloaked",
+            "*ID": "156",
+            "curse": "1",
+            "armred": "1",
+            "overlay1": "cloaked",
+            "stat": "skill_armor_percent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00157",
+        "order": 157,
+        "columnCount": 75,
+        "fields": {
+            "state": "quickness",
+            "*ID": "157",
+            "group": "2",
+            "aura": "1",
+            "overlay1": "quickness",
+            "stat": "attackrate",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00158",
+        "order": 158,
+        "columnCount": 75,
+        "fields": {
+            "state": "bladeshield",
+            "*ID": "158",
+            "overlay1": "bladeshield",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00159",
+        "order": 159,
+        "columnCount": 75,
+        "fields": {
+            "state": "fade",
+            "*ID": "159",
+            "group": "2",
+            "rfblue": "1",
+            "rlblue": "1",
+            "rcblue": "1",
+            "rpblue": "1",
+            "overlay1": "fade",
+            "stat": "poisonresist",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00160",
+        "order": 160,
+        "columnCount": 75,
+        "fields": {
+            "state": "summonresist",
+            "*ID": "160",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00161",
+        "order": 161,
+        "columnCount": 75,
+        "fields": {
+            "state": "oaksagecontrol",
+            "*ID": "161",
+            "aura": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00162",
+        "order": 162,
+        "columnCount": 75,
+        "fields": {
+            "state": "wolverinecontrol",
+            "*ID": "162",
+            "aura": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00163",
+        "order": 163,
+        "columnCount": 75,
+        "fields": {
+            "state": "barbscontrol",
+            "*ID": "163",
+            "aura": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00164",
+        "order": 164,
+        "columnCount": 75,
+        "fields": {
+            "state": "debugcontrol",
+            "*ID": "164",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00165",
+        "order": 165,
+        "columnCount": 75,
+        "fields": {
+            "state": "itemset1",
+            "*ID": "165",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00166",
+        "order": 166,
+        "columnCount": 75,
+        "fields": {
+            "state": "itemset2",
+            "*ID": "166",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00167",
+        "order": 167,
+        "columnCount": 75,
+        "fields": {
+            "state": "itemset3",
+            "*ID": "167",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00168",
+        "order": 168,
+        "columnCount": 75,
+        "fields": {
+            "state": "itemset4",
+            "*ID": "168",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00169",
+        "order": 169,
+        "columnCount": 75,
+        "fields": {
+            "state": "itemset5",
+            "*ID": "169",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00170",
+        "order": 170,
+        "columnCount": 75,
+        "fields": {
+            "state": "itemset6",
+            "*ID": "170",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00171",
+        "order": 171,
+        "columnCount": 75,
+        "fields": {
+            "state": "runeword",
+            "*ID": "171",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00172",
+        "order": 172,
+        "columnCount": 75,
+        "fields": {
+            "state": "restinpeace",
+            "*ID": "172",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "udead": "1",
+            "notondead": "1",
+            "setfunc": "17",
+            "missile": "redemption",
+            "onsound": "paladin_redeemed_soul",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00173",
+        "order": 173,
+        "columnCount": 75,
+        "fields": {
+            "state": "corpseexp",
+            "*ID": "173",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "hide": "1",
+            "udead": "1",
+            "notondead": "1",
+            "setfunc": "18",
+            "missile": "corpseexplosion",
+            "onsound": "necromancer_corpseexp_1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00174",
+        "order": 174,
+        "columnCount": 75,
+        "fields": {
+            "state": "whirlwind",
+            "*ID": "174",
+            "overlay1": "whirlwind",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00175",
+        "order": 175,
+        "columnCount": 75,
+        "fields": {
+            "state": "fullsetgeneric",
+            "*ID": "175",
+            "overlay1": "aura_fanatic",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00176",
+        "order": 176,
+        "columnCount": 75,
+        "fields": {
+            "state": "monsterset",
+            "*ID": "176",
+            "group": "3",
+            "transform": "1",
+            "disguise": "1",
+            "castoverlay": "fire_cast_2",
+            "gfxtype": "1",
+            "gfxclass": "135",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00177",
+        "order": 177,
+        "columnCount": 75,
+        "fields": {
+            "state": "delerium",
+            "*ID": "177",
+            "group": "3",
+            "transform": "1",
+            "restrict": "1",
+            "disguise": "1",
+            "castoverlay": "teleport",
+            "removerlay": "teleport",
+            "gfxtype": "1",
+            "gfxclass": "212",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00178",
+        "order": 178,
+        "columnCount": 75,
+        "fields": {
+            "state": "antidote",
+            "*ID": "178",
+            "rpblue": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00179",
+        "order": 179,
+        "columnCount": 75,
+        "fields": {
+            "state": "thawing",
+            "*ID": "179",
+            "rcblue": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00180",
+        "order": 180,
+        "columnCount": 75,
+        "fields": {
+            "state": "staminapot",
+            "*ID": "180",
+            "stambarblue": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00181",
+        "order": 181,
+        "columnCount": 75,
+        "fields": {
+            "state": "passive_resistfire",
+            "*ID": "181",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00182",
+        "order": 182,
+        "columnCount": 75,
+        "fields": {
+            "state": "passive_resistcold",
+            "*ID": "182",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00183",
+        "order": 183,
+        "columnCount": 75,
+        "fields": {
+            "state": "passive_resistltng",
+            "*ID": "183",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00184",
+        "order": 184,
+        "columnCount": 75,
+        "fields": {
+            "state": "uberminion",
+            "*ID": "184",
+            "monstaydeath": "1",
+            "hide": "1",
+            "shatter": "1",
+            "udead": "1",
+            "onsound": "impact_bluemotize_1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00185",
+        "order": 185,
+        "columnCount": 75,
+        "fields": {
+            "state": "cooldown",
+            "*ID": "185",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00186",
+        "order": 186,
+        "columnCount": 75,
+        "fields": {
+            "state": "sharedstash",
+            "*ID": "186",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00187",
+        "order": 187,
+        "columnCount": 75,
+        "fields": {
+            "state": "hidedead",
+            "*ID": "187",
+            "plrstaydeath": "1",
+            "monstaydeath": "1",
+            "hidedead": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00188",
+        "order": 188,
+        "columnCount": 75,
+        "fields": {
+            "state": "impale",
+            "*ID": "188",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00189",
+        "order": 189,
+        "columnCount": 75,
+        "fields": {
+            "state": "desecrated",
+            "*ID": "189",
+            "monstaydeath": "1",
+            "bossstaydeath": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00190",
+        "order": 190,
+        "columnCount": 75,
+        "fields": {
+            "state": "markbear",
+            "*ID": "190",
+            "group": "4",
+            "noclear": "1",
+            "overlay1": "bloodlust_state",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00191",
+        "order": 191,
+        "columnCount": 75,
+        "fields": {
+            "state": "markwolf",
+            "*ID": "191",
+            "group": "5",
+            "attblue": "1",
+            "noclear": "1",
+            "overlay1": "impregnated",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00192",
+        "order": 192,
+        "columnCount": 75,
+        "fields": {
+            "state": "sigillethargy",
+            "*ID": "192",
+            "castoverlay": "curse_hit",
+            "colorpri": "90",
+            "colorshift": "103",
+            "onsound": "Warlock_Skill_Seal_Lethargy_Hit",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00193",
+        "order": 193,
+        "columnCount": 75,
+        "fields": {
+            "state": "sigilrancor",
+            "*ID": "193",
+            "group": "8",
+            "castoverlay": "curse_hit",
+            "colorpri": "90",
+            "colorshift": "106",
+            "onsound": "Warlock_Skill_Seal_Rancor_Hit",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00194",
+        "order": 194,
+        "columnCount": 75,
+        "fields": {
+            "state": "sigildeath",
+            "*ID": "194",
+            "castoverlay": "curse_hit",
+            "colorpri": "90",
+            "colorshift": "107",
+            "onsound": "Warlock_Skill_Seal_Death_Hit",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00195",
+        "order": 195,
+        "columnCount": 75,
+        "fields": {
+            "state": "bloodoath",
+            "*ID": "195",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00196",
+        "order": 196,
+        "columnCount": 75,
+        "fields": {
+            "state": "demonic_mastery",
+            "*ID": "196",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00197",
+        "order": 197,
+        "columnCount": 75,
+        "fields": {
+            "state": "levitate_mastery",
+            "*ID": "197",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00198",
+        "order": 198,
+        "columnCount": 75,
+        "fields": {
+            "state": "hexbane",
+            "*ID": "198",
+            "group": "6",
+            "castoverlay": "hex_enchant",
+            "itemtype": "mele",
+            "vfxweaponstate": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00199",
+        "order": 199,
+        "columnCount": 75,
+        "fields": {
+            "state": "hexbanedebuff",
+            "*ID": "199",
+            "group": "7",
+            "aura": "1",
+            "curable": "1",
+            "overlay1": "hexbanedebuff",
+            "castoverlay": "curse_hit",
+            "onsound": "Warlock_Skill_Hex_Bane_Hit",
+            "vfxweaponstate": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00200",
+        "order": 200,
+        "columnCount": 75,
+        "fields": {
+            "state": "hexsiphon",
+            "*ID": "200",
+            "group": "6",
+            "attblue": "1",
+            "castoverlay": "hex_enchant",
+            "itemtype": "mele",
+            "vfxweaponstate": "2",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00201",
+        "order": 201,
+        "columnCount": 75,
+        "fields": {
+            "state": "hexsiphondebuff",
+            "*ID": "201",
+            "group": "7",
+            "aura": "1",
+            "curable": "1",
+            "overlay1": "hexsyphondebuff",
+            "castoverlay": "curse_hit",
+            "onsound": "Warlock_Skill_Hex_Siphon_Hit",
+            "vfxweaponstate": "2",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00202",
+        "order": 202,
+        "columnCount": 75,
+        "fields": {
+            "state": "hexpurge",
+            "*ID": "202",
+            "group": "6",
+            "attblue": "1",
+            "castoverlay": "hex_enchant",
+            "itemtype": "mele",
+            "vfxweaponstate": "4",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00203",
+        "order": 203,
+        "columnCount": 75,
+        "fields": {
+            "state": "mindbarrier",
+            "*ID": "203",
+            "group": "1",
+            "overlay1": "bladeshield",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00204",
+        "order": 204,
+        "columnCount": 75,
+        "fields": {
+            "state": "shadow_mastery",
+            "*ID": "204",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00205",
+        "order": 205,
+        "columnCount": 75,
+        "fields": {
+            "state": "sigil",
+            "*ID": "205",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00206",
+        "order": 206,
+        "columnCount": 75,
+        "fields": {
+            "state": "psychicward",
+            "*ID": "206",
+            "group": "1",
+            "overlay1": "psychicward",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00207",
+        "order": 207,
+        "columnCount": 75,
+        "fields": {
+            "state": "bind_demon",
+            "*ID": "207",
+            "overlay1": "warlockdemonground",
+            "overlay2": "warlockdemontorso",
+            "setfunc": "19",
+            "colorpri": "70",
+            "colorshift": "130",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00208",
+        "order": 208,
+        "columnCount": 75,
+        "fields": {
+            "state": "consume",
+            "*ID": "208",
+            "group": "9",
+            "overlay1": "warlockconsume",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00209",
+        "order": 209,
+        "columnCount": 75,
+        "fields": {
+            "state": "advancedstash",
+            "*ID": "209",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00210",
+        "order": 210,
+        "columnCount": 75,
+        "fields": {
+            "state": "healthlink",
+            "*ID": "210",
+            "overlay1": "healthlink",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00211",
+        "order": 211,
+        "columnCount": 75,
+        "fields": {
+            "state": "engorge",
+            "*ID": "211",
+            "overlay1": "engorgestate",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00212",
+        "order": 212,
+        "columnCount": 75,
+        "fields": {
+            "state": "death_mark",
+            "*ID": "212",
+            "overlay1": "death_mark",
+            "onsound": "Warlock_Skill_Death_Mark_01",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00213",
+        "order": 213,
+        "columnCount": 75,
+        "fields": {
+            "state": "healthlinkcaster",
+            "*ID": "213",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00214",
+        "order": 214,
+        "columnCount": 75,
+        "fields": {
+            "state": "warlockdemonground",
+            "*ID": "214",
+            "aura": "1",
+            "overlay1": "warlockdemonground",
+            "colorpri": "70",
+            "colorshift": "130",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00215",
+        "order": 215,
+        "columnCount": 75,
+        "fields": {
+            "state": "warlockdemontorso",
+            "*ID": "215",
+            "aura": "1",
+            "overlay1": "warlockdemontorso",
+            "colorpri": "70",
+            "colorshift": "130",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00216",
+        "order": 216,
+        "columnCount": 75,
+        "fields": {
+            "state": "skill_channeling",
+            "*ID": "216",
+            "nosend": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00217",
+        "order": 217,
+        "columnCount": 75,
+        "fields": {
+            "state": "hexpurgedebuff",
+            "*ID": "217",
+            "group": "7",
+            "aura": "1",
+            "curable": "1",
+            "overlay1": "hexpurgedebuff",
+            "castoverlay": "curse_hit",
+            "onsound": "Warlock_Skill_Hex_Purge_Hit",
+            "vfxweaponstate": "4",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00218",
+        "order": 218,
+        "columnCount": 75,
+        "fields": {
+            "state": "chroniclebacklight",
+            "*ID": "218",
+            "overlay1": "chronicle_backlight",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00219",
+        "order": 219,
+        "columnCount": 75,
+        "fields": {
+            "state": "chroniclefootprints",
+            "*ID": "219",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00220",
+        "order": 220,
+        "columnCount": 75,
+        "fields": {
+            "state": "chronicleportal",
+            "*ID": "220",
+            "stat": "customization_index",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00221",
+        "order": 221,
+        "columnCount": 75,
+        "fields": {
+            "state": "eldritchblastperiodic",
+            "*ID": "221",
+            "active": "1",
+            "overlay1": "eldritchblastperiodic",
+            "cltactivefunc": "107",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00222",
+        "order": 222,
+        "columnCount": 75,
+        "fields": {
+            "state": "lightningenchant",
+            "*ID": "222",
+            "attblue": "1",
+            "damred": "1",
+            "castoverlay": "lightningenchant",
+            "stat": "skill_enchant",
+            "itemtype": "weap",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00223",
+        "order": 223,
+        "columnCount": 75,
+        "fields": {
+            "state": "coldenchant",
+            "*ID": "223",
+            "attblue": "1",
+            "damred": "1",
+            "castoverlay": "coldenchant",
+            "stat": "skill_enchant",
+            "itemtype": "weap",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00224",
+        "order": 224,
+        "columnCount": 75,
+        "fields": {
+            "state": "talicfirepierce",
+            "*ID": "224",
+            "aura": "1",
+            "rfred": "1",
+            "overlay1": "talicfirepierce",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00225",
+        "order": 225,
+        "columnCount": 75,
+        "fields": {
+            "state": "madawclightpierce",
+            "*ID": "225",
+            "aura": "1",
+            "rlred": "1",
+            "overlay1": "madawclightpierce",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00226",
+        "order": 226,
+        "columnCount": 75,
+        "fields": {
+            "state": "korliccoldpierce",
+            "*ID": "226",
+            "aura": "1",
+            "rcred": "1",
+            "overlay1": "korliccoldpierce",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00227",
+        "order": 227,
+        "columnCount": 75,
+        "fields": {
+            "state": "bind_demon_underling",
+            "*ID": "227",
+            "setfunc": "19",
+            "colorpri": "70",
+            "colorshift": "130",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00228",
+        "order": 228,
+        "columnCount": 75,
+        "fields": {
+            "state": "herald",
+            "*ID": "228",
+            "overlay1": "herald",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00229",
+        "order": 229,
+        "columnCount": 75,
+        "fields": {
+            "state": "apocalypse",
+            "*ID": "229",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00230",
+        "order": 230,
+        "columnCount": 75,
+        "fields": {
+            "state": "missilelimit",
+            "*ID": "230",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00231",
+        "order": 231,
+        "columnCount": 75,
+        "fields": {
+            "state": "primeevil_threat",
+            "*ID": "231",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00232",
+        "order": 232,
+        "columnCount": 75,
+        "fields": {
+            "state": "monsterset1",
+            "*ID": "232",
+            "group": "3",
+            "transform": "1",
+            "disguise": "1",
+            "castoverlay": "fire_cast_2",
+            "gfxtype": "1",
+            "gfxclass": "362",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00233",
+        "order": 233,
+        "columnCount": 75,
+        "fields": {
+            "state": "monsterset2",
+            "*ID": "233",
+            "group": "3",
+            "transform": "1",
+            "disguise": "1",
+            "castoverlay": "fire_cast_2",
+            "gfxtype": "1",
+            "gfxclass": "256",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00234",
+        "order": 234,
+        "columnCount": 75,
+        "fields": {
+            "state": "monsterset3",
+            "*ID": "234",
+            "group": "3",
+            "transform": "1",
+            "disguise": "1",
+            "castoverlay": "fire_cast_2",
+            "gfxtype": "1",
+            "gfxclass": "40",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00235",
+        "order": 235,
+        "columnCount": 75,
+        "fields": {
+            "state": "monsterset4",
+            "*ID": "235",
+            "group": "3",
+            "transform": "1",
+            "disguise": "1",
+            "castoverlay": "fire_cast_2",
+            "gfxtype": "1",
+            "gfxclass": "156",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00236",
+        "order": 236,
+        "columnCount": 75,
+        "fields": {
+            "state": "carrionvine",
+            "*ID": "236",
+            "aura": "1",
+            "stat": "hitpoints",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00237",
+        "order": 237,
+        "columnCount": 75,
+        "fields": {
+            "state": "charm_weight",
+            "*ID": "237",
+            "aura": "1",
+            "stat": "mana_control",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00238",
+        "order": 238,
+        "columnCount": 75,
+        "fields": {
+            "state": "slam_state",
+            "*ID": "238",
+            "stat": "damagepercent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00239",
+        "order": 239,
+        "columnCount": 75,
+        "fields": {
+            "state": "firegolemaura_state",
+            "*ID": "239",
+            "aura": "1",
+            "overlay1": "aura_holyfire_front",
+            "overlay2": "aura_holyfire_back",
+            "stat": "firemindam",
+            "onsound": "paladin_aura_holyfire",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00240",
+        "order": 240,
+        "columnCount": 75,
+        "fields": {
+            "state": "mfpot1state",
+            "*ID": "240",
+            "overlay1": "aura_fanatic",
+            "stat": "item_magicbonus",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00241",
+        "order": 241,
+        "columnCount": 75,
+        "fields": {
+            "state": "xppot1state",
+            "*ID": "241",
+            "overlay1": "shrine_experience",
+            "stat": "item_addexperience",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00242",
+        "order": 242,
+        "columnCount": 75,
+        "fields": {
+            "state": "potionsunderfire",
+            "*ID": "242",
+            "overlay1": "aura_resistfire",
+            "stat": "item_pierce_fire_immunity",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00243",
+        "order": 243,
+        "columnCount": 75,
+        "fields": {
+            "state": "potionsundercold",
+            "*ID": "243",
+            "overlay1": "aura_resistcold",
+            "stat": "item_pierce_cold_immunity",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00244",
+        "order": 244,
+        "columnCount": 75,
+        "fields": {
+            "state": "potionsunderlightning",
+            "*ID": "244",
+            "overlay1": "aura_resistlight",
+            "stat": "item_pierce_light_immunity",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00245",
+        "order": 245,
+        "columnCount": 75,
+        "fields": {
+            "state": "potionsunderpoison",
+            "*ID": "245",
+            "overlay1": "convictionfront",
+            "overlay2": "convictionback",
+            "stat": "item_pierce_poison_immunity",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00246",
+        "order": 246,
+        "columnCount": 75,
+        "fields": {
+            "state": "potionsundermagic",
+            "*ID": "246",
+            "overlay1": "aura_resistall_front",
+            "stat": "item_pierce_magic_immunity",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00247",
+        "order": 247,
+        "columnCount": 75,
+        "fields": {
+            "state": "potionsunderphysical",
+            "*ID": "247",
+            "overlay1": "redemptionfront",
+            "overlay2": "spirit_of_barbs",
+            "stat": "item_pierce_damage_immunity",
+            "setfunc": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00248",
+        "order": 248,
+        "columnCount": 75,
+        "fields": {
+            "state": "torch_weight",
+            "*ID": "248",
+            "aura": "1",
+            "stat": "uber_control",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00249",
+        "order": 249,
+        "columnCount": 75,
+        "fields": {
+            "state": "soulstone_weight",
+            "*ID": "249",
+            "aura": "1",
+            "stat": "uber_control",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00250",
+        "order": 250,
+        "columnCount": 75,
+        "fields": {
+            "state": "veng_elements",
+            "*ID": "250",
+            "aura": "1",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00251",
+        "order": 251,
+        "columnCount": 75,
+        "fields": {
+            "state": "polarbear",
+            "*ID": "251",
+            "group": "3",
+            "transform": "1",
+            "aura": "1",
+            "restrict": "1",
+            "disguise": "1",
+            "damblue": "1",
+            "armblue": "1",
+            "meleeonly": "1",
+            "colorpri": "10",
+            "colorshift": "50",
+            "light-r": "255",
+            "light-g": "255",
+            "light-b": "255",
+            "onsound": "druid_morph",
+            "offsound": "druid_morph",
+            "gfxtype": "1",
+            "gfxclass": "428",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00252",
+        "order": 252,
+        "columnCount": 75,
+        "fields": {
+            "state": "cowkingelite",
+            "*ID": "252",
+            "group": "3",
+            "transform": "1",
+            "aura": "1",
+            "disguise": "1",
+            "damblue": "1",
+            "armblue": "1",
+            "meleeonly": "1",
+            "light-r": "255",
+            "light-g": "255",
+            "light-b": "255",
+            "onsound": "druid_morph",
+            "offsound": "druid_morph",
+            "gfxtype": "1",
+            "gfxclass": "752",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00253",
+        "order": 253,
+        "columnCount": 75,
+        "fields": {
+            "state": "barb_ancient",
+            "*ID": "253",
+            "group": "3",
+            "transform": "1",
+            "aura": "1",
+            "attblue": "1",
+            "damblue": "1",
+            "overlay1": "valkyrie_blue",
+            "overlay2": "rabiesplague_blue",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00254",
+        "order": 254,
+        "columnCount": 75,
+        "fields": {
+            "state": "kings_charisma",
+            "*ID": "254",
+            "attblue": "1",
+            "castoverlay": "kingscharisma",
+            "stat": "skill_enchant",
+            "itemtype": "weap",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00255",
+        "order": 255,
+        "columnCount": 75,
+        "fields": {
+            "state": "titanscovenant",
+            "*ID": "255",
+            "aura": "1",
+            "damblue": "1",
+            "overlay1": "titanscovenant",
+            "stat": "damagepercent",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00256",
+        "order": 256,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_White",
+            "*ID": "256",
+            "itemtype": "weap",
+            "itemtrans": "bwht",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00257",
+        "order": 257,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Black",
+            "*ID": "257",
+            "itemtype": "weap",
+            "itemtrans": "blac",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00258",
+        "order": 258,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Blue",
+            "*ID": "258",
+            "itemtype": "weap",
+            "itemtrans": "cblu",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00259",
+        "order": 259,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Red",
+            "*ID": "259",
+            "itemtype": "weap",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00260",
+        "order": 260,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Green",
+            "*ID": "260",
+            "itemtype": "weap",
+            "itemtrans": "dgrn",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00261",
+        "order": 261,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Yellow",
+            "*ID": "261",
+            "itemtype": "weap",
+            "itemtrans": "dyel",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00262",
+        "order": 262,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Purple",
+            "*ID": "262",
+            "itemtype": "weap",
+            "itemtrans": "dpur",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00263",
+        "order": 263,
+        "columnCount": 75,
+        "fields": {
+            "state": "Weapon_Orange",
+            "*ID": "263",
+            "itemtype": "weap",
+            "itemtrans": "oran",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00264",
+        "order": 264,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_White",
+            "*ID": "264",
+            "itemtype": "helm",
+            "itemtrans": "bwht",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00265",
+        "order": 265,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Black",
+            "*ID": "265",
+            "itemtype": "helm",
+            "itemtrans": "blac",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00266",
+        "order": 266,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Blue",
+            "*ID": "266",
+            "itemtype": "helm",
+            "itemtrans": "cblu",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00267",
+        "order": 267,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Red",
+            "*ID": "267",
+            "itemtype": "helm",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00268",
+        "order": 268,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Green",
+            "*ID": "268",
+            "itemtype": "helm",
+            "itemtrans": "dgrn",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00269",
+        "order": 269,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Yellow",
+            "*ID": "269",
+            "itemtype": "helm",
+            "itemtrans": "dyel",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00270",
+        "order": 270,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Purple",
+            "*ID": "270",
+            "itemtype": "helm",
+            "itemtrans": "dpur",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00271",
+        "order": 271,
+        "columnCount": 75,
+        "fields": {
+            "state": "Helm_Orange",
+            "*ID": "271",
+            "itemtype": "helm",
+            "itemtrans": "oran",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00272",
+        "order": 272,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_White",
+            "*ID": "272",
+            "itemtype": "shld",
+            "itemtrans": "bwht",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00273",
+        "order": 273,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Black",
+            "*ID": "273",
+            "itemtype": "shld",
+            "itemtrans": "blac",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00274",
+        "order": 274,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Blue",
+            "*ID": "274",
+            "itemtype": "shld",
+            "itemtrans": "cblu",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00275",
+        "order": 275,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Red",
+            "*ID": "275",
+            "itemtype": "shld",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00276",
+        "order": 276,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Green",
+            "*ID": "276",
+            "itemtype": "shld",
+            "itemtrans": "dgrn",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00277",
+        "order": 277,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Yellow",
+            "*ID": "277",
+            "itemtype": "shld",
+            "itemtrans": "lyel",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00278",
+        "order": 278,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Purple",
+            "*ID": "278",
+            "itemtype": "shld",
+            "itemtrans": "dpur",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00279",
+        "order": 279,
+        "columnCount": 75,
+        "fields": {
+            "state": "Shield_Orange",
+            "*ID": "279",
+            "itemtype": "shld",
+            "itemtrans": "oran",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00280",
+        "order": 280,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_White",
+            "*ID": "280",
+            "itemtype": "tors",
+            "itemtrans": "bwht",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00281",
+        "order": 281,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Black",
+            "*ID": "281",
+            "itemtype": "tors",
+            "itemtrans": "blac",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00282",
+        "order": 282,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Blue",
+            "*ID": "282",
+            "itemtype": "tors",
+            "itemtrans": "cblu",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00283",
+        "order": 283,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Red",
+            "*ID": "283",
+            "itemtype": "tors",
+            "itemtrans": "cred",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00284",
+        "order": 284,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Green",
+            "*ID": "284",
+            "itemtype": "tors",
+            "itemtrans": "cgrn",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00285",
+        "order": 285,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Yellow",
+            "*ID": "285",
+            "itemtype": "tors",
+            "itemtrans": "lyel",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00286",
+        "order": 286,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Purple",
+            "*ID": "286",
+            "itemtype": "tors",
+            "itemtrans": "dpur",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00287",
+        "order": 287,
+        "columnCount": 75,
+        "fields": {
+            "state": "Armor_Orange",
+            "*ID": "287",
+            "itemtype": "tors",
+            "itemtrans": "oran",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00288",
+        "order": 288,
+        "columnCount": 75,
+        "fields": {
+            "state": "elementalcovenant",
+            "*ID": "288",
+            "aura": "1",
+            "rfred": "1",
+            "rlred": "1",
+            "rcred": "1",
+            "rpred": "1",
+            "overlay1": "elementalcovenant",
+            "stat": "lightresist",
+            "*eol": "0"
+        }
+    },
+    {
+        "sourceId": "row-00289",
+        "order": 289,
+        "columnCount": 75,
+        "fields": {
+            "state": "fangs",
+            "*ID": "289",
+            "group": "10",
+            "overlay1": "rabiesplague",
+            "*eol": "0"
+        }
+    }
+]

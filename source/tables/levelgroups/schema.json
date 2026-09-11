@@ -1,0 +1,41 @@
+{
+    "schemaVersion": 1,
+    "name": "levelgroups",
+    "targets": [
+        "global/excel/levelgroups.txt",
+        "global/excel/base/levelgroups.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "LevelGroupId",
+            "header": "LevelGroupId"
+        },
+        {
+            "key": "ParentLevelGroupId",
+            "header": "ParentLevelGroupId"
+        },
+        {
+            "key": "CompleteThreshold",
+            "header": "CompleteThreshold"
+        },
+        {
+            "key": "Effect",
+            "header": "Effect"
+        },
+        {
+            "key": "*Name",
+            "header": "*Name"
+        },
+        {
+            "key": "NameString",
+            "header": "NameString"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 101,
+    "identitySha256": "6f5eb8e4bf530f85eddcf727b96b1fd9257e30ed1b86631bd0427d9af335fa33"
+}

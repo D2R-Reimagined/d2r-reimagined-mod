@@ -1,0 +1,525 @@
+{
+    "schemaVersion": 1,
+    "name": "monstats2",
+    "targets": [
+        "global/excel/monstats2.txt",
+        "global/excel/base/monstats2.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "Id",
+            "header": "Id"
+        },
+        {
+            "key": "*hcIdx",
+            "header": "*hcIdx"
+        },
+        {
+            "key": "Height",
+            "header": "Height"
+        },
+        {
+            "key": "OverlayHeight",
+            "header": "OverlayHeight"
+        },
+        {
+            "key": "pixHeight",
+            "header": "pixHeight"
+        },
+        {
+            "key": "SizeX",
+            "header": "SizeX"
+        },
+        {
+            "key": "SizeY",
+            "header": "SizeY"
+        },
+        {
+            "key": "spawnCol",
+            "header": "spawnCol"
+        },
+        {
+            "key": "MeleeRng",
+            "header": "MeleeRng"
+        },
+        {
+            "key": "BaseW",
+            "header": "BaseW"
+        },
+        {
+            "key": "HitClass",
+            "header": "HitClass"
+        },
+        {
+            "key": "HDv",
+            "header": "HDv"
+        },
+        {
+            "key": "TRv",
+            "header": "TRv"
+        },
+        {
+            "key": "LGv",
+            "header": "LGv"
+        },
+        {
+            "key": "Rav",
+            "header": "Rav"
+        },
+        {
+            "key": "Lav",
+            "header": "Lav"
+        },
+        {
+            "key": "RHv",
+            "header": "RHv"
+        },
+        {
+            "key": "LHv",
+            "header": "LHv"
+        },
+        {
+            "key": "SHv",
+            "header": "SHv"
+        },
+        {
+            "key": "S1v",
+            "header": "S1v"
+        },
+        {
+            "key": "S2v",
+            "header": "S2v"
+        },
+        {
+            "key": "S3v",
+            "header": "S3v"
+        },
+        {
+            "key": "S4v",
+            "header": "S4v"
+        },
+        {
+            "key": "S5v",
+            "header": "S5v"
+        },
+        {
+            "key": "S6v",
+            "header": "S6v"
+        },
+        {
+            "key": "S7v",
+            "header": "S7v"
+        },
+        {
+            "key": "S8v",
+            "header": "S8v"
+        },
+        {
+            "key": "HD",
+            "header": "HD"
+        },
+        {
+            "key": "TR",
+            "header": "TR"
+        },
+        {
+            "key": "LG",
+            "header": "LG"
+        },
+        {
+            "key": "RA",
+            "header": "RA"
+        },
+        {
+            "key": "LA",
+            "header": "LA"
+        },
+        {
+            "key": "RH",
+            "header": "RH"
+        },
+        {
+            "key": "LH",
+            "header": "LH"
+        },
+        {
+            "key": "SH",
+            "header": "SH"
+        },
+        {
+            "key": "S1",
+            "header": "S1"
+        },
+        {
+            "key": "S2",
+            "header": "S2"
+        },
+        {
+            "key": "S3",
+            "header": "S3"
+        },
+        {
+            "key": "S4",
+            "header": "S4"
+        },
+        {
+            "key": "S5",
+            "header": "S5"
+        },
+        {
+            "key": "S6",
+            "header": "S6"
+        },
+        {
+            "key": "S7",
+            "header": "S7"
+        },
+        {
+            "key": "S8",
+            "header": "S8"
+        },
+        {
+            "key": "TotalPieces",
+            "header": "TotalPieces"
+        },
+        {
+            "key": "mDT",
+            "header": "mDT"
+        },
+        {
+            "key": "mNU",
+            "header": "mNU"
+        },
+        {
+            "key": "mWL",
+            "header": "mWL"
+        },
+        {
+            "key": "mGH",
+            "header": "mGH"
+        },
+        {
+            "key": "mA1",
+            "header": "mA1"
+        },
+        {
+            "key": "mA2",
+            "header": "mA2"
+        },
+        {
+            "key": "mBL",
+            "header": "mBL"
+        },
+        {
+            "key": "mSC",
+            "header": "mSC"
+        },
+        {
+            "key": "mS1",
+            "header": "mS1"
+        },
+        {
+            "key": "mS2",
+            "header": "mS2"
+        },
+        {
+            "key": "mS3",
+            "header": "mS3"
+        },
+        {
+            "key": "mS4",
+            "header": "mS4"
+        },
+        {
+            "key": "mDD",
+            "header": "mDD"
+        },
+        {
+            "key": "mKB",
+            "header": "mKB"
+        },
+        {
+            "key": "mSQ",
+            "header": "mSQ"
+        },
+        {
+            "key": "mRN",
+            "header": "mRN"
+        },
+        {
+            "key": "dDT",
+            "header": "dDT"
+        },
+        {
+            "key": "dNU",
+            "header": "dNU"
+        },
+        {
+            "key": "dWL",
+            "header": "dWL"
+        },
+        {
+            "key": "dGH",
+            "header": "dGH"
+        },
+        {
+            "key": "dA1",
+            "header": "dA1"
+        },
+        {
+            "key": "dA2",
+            "header": "dA2"
+        },
+        {
+            "key": "dBL",
+            "header": "dBL"
+        },
+        {
+            "key": "dSC",
+            "header": "dSC"
+        },
+        {
+            "key": "dS1",
+            "header": "dS1"
+        },
+        {
+            "key": "dS2",
+            "header": "dS2"
+        },
+        {
+            "key": "dS3",
+            "header": "dS3"
+        },
+        {
+            "key": "dS4",
+            "header": "dS4"
+        },
+        {
+            "key": "dDD",
+            "header": "dDD"
+        },
+        {
+            "key": "dKB",
+            "header": "dKB"
+        },
+        {
+            "key": "dSQ",
+            "header": "dSQ"
+        },
+        {
+            "key": "dRN",
+            "header": "dRN"
+        },
+        {
+            "key": "A1mv",
+            "header": "A1mv"
+        },
+        {
+            "key": "A2mv",
+            "header": "A2mv"
+        },
+        {
+            "key": "SCmv",
+            "header": "SCmv"
+        },
+        {
+            "key": "S1mv",
+            "header": "S1mv"
+        },
+        {
+            "key": "S2mv",
+            "header": "S2mv"
+        },
+        {
+            "key": "S3mv",
+            "header": "S3mv"
+        },
+        {
+            "key": "S4mv",
+            "header": "S4mv"
+        },
+        {
+            "key": "noGfxHitTest",
+            "header": "noGfxHitTest"
+        },
+        {
+            "key": "htTop",
+            "header": "htTop"
+        },
+        {
+            "key": "htLeft",
+            "header": "htLeft"
+        },
+        {
+            "key": "htWidth",
+            "header": "htWidth"
+        },
+        {
+            "key": "htHeight",
+            "header": "htHeight"
+        },
+        {
+            "key": "restore",
+            "header": "restore"
+        },
+        {
+            "key": "automapCel",
+            "header": "automapCel"
+        },
+        {
+            "key": "noMap",
+            "header": "noMap"
+        },
+        {
+            "key": "noOvly",
+            "header": "noOvly"
+        },
+        {
+            "key": "isSel",
+            "header": "isSel"
+        },
+        {
+            "key": "alSel",
+            "header": "alSel"
+        },
+        {
+            "key": "noSel",
+            "header": "noSel"
+        },
+        {
+            "key": "shiftSel",
+            "header": "shiftSel"
+        },
+        {
+            "key": "corpseSel",
+            "header": "corpseSel"
+        },
+        {
+            "key": "isAtt",
+            "header": "isAtt"
+        },
+        {
+            "key": "revive",
+            "header": "revive"
+        },
+        {
+            "key": "limitCorpses",
+            "header": "limitCorpses"
+        },
+        {
+            "key": "critter",
+            "header": "critter"
+        },
+        {
+            "key": "small",
+            "header": "small"
+        },
+        {
+            "key": "large",
+            "header": "large"
+        },
+        {
+            "key": "soft",
+            "header": "soft"
+        },
+        {
+            "key": "inert",
+            "header": "inert"
+        },
+        {
+            "key": "objCol",
+            "header": "objCol"
+        },
+        {
+            "key": "deadCol",
+            "header": "deadCol"
+        },
+        {
+            "key": "unflatDead",
+            "header": "unflatDead"
+        },
+        {
+            "key": "Shadow",
+            "header": "Shadow"
+        },
+        {
+            "key": "noUniqueShift",
+            "header": "noUniqueShift"
+        },
+        {
+            "key": "compositeDeath",
+            "header": "compositeDeath"
+        },
+        {
+            "key": "localBlood",
+            "header": "localBlood"
+        },
+        {
+            "key": "Bleed",
+            "header": "Bleed"
+        },
+        {
+            "key": "Light",
+            "header": "Light"
+        },
+        {
+            "key": "light-r",
+            "header": "light-r"
+        },
+        {
+            "key": "light-g",
+            "header": "light-g"
+        },
+        {
+            "key": "light-b",
+            "header": "light-b"
+        },
+        {
+            "key": "Utrans",
+            "header": "Utrans"
+        },
+        {
+            "key": "Utrans(N)",
+            "header": "Utrans(N)"
+        },
+        {
+            "key": "Utrans(H)",
+            "header": "Utrans(H)"
+        },
+        {
+            "key": "InfernoLen",
+            "header": "InfernoLen"
+        },
+        {
+            "key": "InfernoAnim",
+            "header": "InfernoAnim"
+        },
+        {
+            "key": "InfernoRollback",
+            "header": "InfernoRollback"
+        },
+        {
+            "key": "ResurrectMode",
+            "header": "ResurrectMode"
+        },
+        {
+            "key": "ResurrectSkill",
+            "header": "ResurrectSkill"
+        },
+        {
+            "key": "SpawnUniqueMod",
+            "header": "SpawnUniqueMod"
+        },
+        {
+            "key": "*eol",
+            "header": "*eol"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 646,
+    "identitySha256": "3dd134d48d5b64a1624b27a0aa2b5b102c2d3116afe969bad6e3acb36bc8515b"
+}

@@ -1,0 +1,1109 @@
+{
+    "schemaVersion": 1,
+    "name": "monstats",
+    "targets": [
+        "global/excel/monstats.txt",
+        "global/excel/base/monstats.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "Id",
+            "header": "Id"
+        },
+        {
+            "key": "*hcIdx",
+            "header": "*hcIdx"
+        },
+        {
+            "key": "BaseId",
+            "header": "BaseId"
+        },
+        {
+            "key": "NextInClass",
+            "header": "NextInClass"
+        },
+        {
+            "key": "TransLvl",
+            "header": "TransLvl"
+        },
+        {
+            "key": "NameStr",
+            "header": "NameStr"
+        },
+        {
+            "key": "MonStatsEx",
+            "header": "MonStatsEx"
+        },
+        {
+            "key": "MonProp",
+            "header": "MonProp"
+        },
+        {
+            "key": "MonType",
+            "header": "MonType"
+        },
+        {
+            "key": "AI",
+            "header": "AI"
+        },
+        {
+            "key": "DescStr",
+            "header": "DescStr"
+        },
+        {
+            "key": "Code",
+            "header": "Code"
+        },
+        {
+            "key": "enabled",
+            "header": "enabled"
+        },
+        {
+            "key": "rangedtype",
+            "header": "rangedtype"
+        },
+        {
+            "key": "placespawn",
+            "header": "placespawn"
+        },
+        {
+            "key": "spawn",
+            "header": "spawn"
+        },
+        {
+            "key": "spawnx",
+            "header": "spawnx"
+        },
+        {
+            "key": "spawny",
+            "header": "spawny"
+        },
+        {
+            "key": "spawnmode",
+            "header": "spawnmode"
+        },
+        {
+            "key": "minion1",
+            "header": "minion1"
+        },
+        {
+            "key": "minion2",
+            "header": "minion2"
+        },
+        {
+            "key": "SetBoss",
+            "header": "SetBoss"
+        },
+        {
+            "key": "BossXfer",
+            "header": "BossXfer"
+        },
+        {
+            "key": "PartyMin",
+            "header": "PartyMin"
+        },
+        {
+            "key": "PartyMax",
+            "header": "PartyMax"
+        },
+        {
+            "key": "MinGrp",
+            "header": "MinGrp"
+        },
+        {
+            "key": "MaxGrp",
+            "header": "MaxGrp"
+        },
+        {
+            "key": "sparsePopulate",
+            "header": "sparsePopulate"
+        },
+        {
+            "key": "Velocity",
+            "header": "Velocity"
+        },
+        {
+            "key": "Run",
+            "header": "Run"
+        },
+        {
+            "key": "Rarity",
+            "header": "Rarity"
+        },
+        {
+            "key": "Level",
+            "header": "Level"
+        },
+        {
+            "key": "Level(N)",
+            "header": "Level(N)"
+        },
+        {
+            "key": "Level(H)",
+            "header": "Level(H)"
+        },
+        {
+            "key": "MonSound",
+            "header": "MonSound"
+        },
+        {
+            "key": "UMonSound",
+            "header": "UMonSound"
+        },
+        {
+            "key": "threat",
+            "header": "threat"
+        },
+        {
+            "key": "aidel",
+            "header": "aidel"
+        },
+        {
+            "key": "aidel(N)",
+            "header": "aidel(N)"
+        },
+        {
+            "key": "aidel(H)",
+            "header": "aidel(H)"
+        },
+        {
+            "key": "aidist",
+            "header": "aidist"
+        },
+        {
+            "key": "aidist(N)",
+            "header": "aidist(N)"
+        },
+        {
+            "key": "aidist(H)",
+            "header": "aidist(H)"
+        },
+        {
+            "key": "aip1",
+            "header": "aip1"
+        },
+        {
+            "key": "aip1(N)",
+            "header": "aip1(N)"
+        },
+        {
+            "key": "aip1(H)",
+            "header": "aip1(H)"
+        },
+        {
+            "key": "aip2",
+            "header": "aip2"
+        },
+        {
+            "key": "aip2(N)",
+            "header": "aip2(N)"
+        },
+        {
+            "key": "aip2(H)",
+            "header": "aip2(H)"
+        },
+        {
+            "key": "aip3",
+            "header": "aip3"
+        },
+        {
+            "key": "aip3(N)",
+            "header": "aip3(N)"
+        },
+        {
+            "key": "aip3(H)",
+            "header": "aip3(H)"
+        },
+        {
+            "key": "aip4",
+            "header": "aip4"
+        },
+        {
+            "key": "aip4(N)",
+            "header": "aip4(N)"
+        },
+        {
+            "key": "aip4(H)",
+            "header": "aip4(H)"
+        },
+        {
+            "key": "aip5",
+            "header": "aip5"
+        },
+        {
+            "key": "aip5(N)",
+            "header": "aip5(N)"
+        },
+        {
+            "key": "aip5(H)",
+            "header": "aip5(H)"
+        },
+        {
+            "key": "aip6",
+            "header": "aip6"
+        },
+        {
+            "key": "aip6(N)",
+            "header": "aip6(N)"
+        },
+        {
+            "key": "aip6(H)",
+            "header": "aip6(H)"
+        },
+        {
+            "key": "aip7",
+            "header": "aip7"
+        },
+        {
+            "key": "aip7(N)",
+            "header": "aip7(N)"
+        },
+        {
+            "key": "aip7(H)",
+            "header": "aip7(H)"
+        },
+        {
+            "key": "aip8",
+            "header": "aip8"
+        },
+        {
+            "key": "aip8(N)",
+            "header": "aip8(N)"
+        },
+        {
+            "key": "aip8(H)",
+            "header": "aip8(H)"
+        },
+        {
+            "key": "MissA1",
+            "header": "MissA1"
+        },
+        {
+            "key": "MissA2",
+            "header": "MissA2"
+        },
+        {
+            "key": "MissS1",
+            "header": "MissS1"
+        },
+        {
+            "key": "MissS2",
+            "header": "MissS2"
+        },
+        {
+            "key": "MissS3",
+            "header": "MissS3"
+        },
+        {
+            "key": "MissS4",
+            "header": "MissS4"
+        },
+        {
+            "key": "MissC",
+            "header": "MissC"
+        },
+        {
+            "key": "MissSQ",
+            "header": "MissSQ"
+        },
+        {
+            "key": "Align",
+            "header": "Align"
+        },
+        {
+            "key": "isSpawn",
+            "header": "isSpawn"
+        },
+        {
+            "key": "isMelee",
+            "header": "isMelee"
+        },
+        {
+            "key": "npc",
+            "header": "npc"
+        },
+        {
+            "key": "interact",
+            "header": "interact"
+        },
+        {
+            "key": "inventory",
+            "header": "inventory"
+        },
+        {
+            "key": "inTown",
+            "header": "inTown"
+        },
+        {
+            "key": "lUndead",
+            "header": "lUndead"
+        },
+        {
+            "key": "hUndead",
+            "header": "hUndead"
+        },
+        {
+            "key": "demon",
+            "header": "demon"
+        },
+        {
+            "key": "flying",
+            "header": "flying"
+        },
+        {
+            "key": "opendoors",
+            "header": "opendoors"
+        },
+        {
+            "key": "boss",
+            "header": "boss"
+        },
+        {
+            "key": "primeevil",
+            "header": "primeevil"
+        },
+        {
+            "key": "killable",
+            "header": "killable"
+        },
+        {
+            "key": "switchai",
+            "header": "switchai"
+        },
+        {
+            "key": "noAura",
+            "header": "noAura"
+        },
+        {
+            "key": "nomultishot",
+            "header": "nomultishot"
+        },
+        {
+            "key": "nopreventmonsterheal",
+            "header": "nopreventmonsterheal"
+        },
+        {
+            "key": "neverCount",
+            "header": "neverCount"
+        },
+        {
+            "key": "petIgnore",
+            "header": "petIgnore"
+        },
+        {
+            "key": "deathDmg",
+            "header": "deathDmg"
+        },
+        {
+            "key": "genericSpawn",
+            "header": "genericSpawn"
+        },
+        {
+            "key": "zoo",
+            "header": "zoo"
+        },
+        {
+            "key": "CannotDesecrate",
+            "header": "CannotDesecrate"
+        },
+        {
+            "key": "CannotHerald",
+            "header": "CannotHerald"
+        },
+        {
+            "key": "rightArmItemType",
+            "header": "rightArmItemType"
+        },
+        {
+            "key": "leftArmItemType",
+            "header": "leftArmItemType"
+        },
+        {
+            "key": "canNotUseTwoHandedItems",
+            "header": "canNotUseTwoHandedItems"
+        },
+        {
+            "key": "SendSkills",
+            "header": "SendSkills"
+        },
+        {
+            "key": "Skill1",
+            "header": "Skill1"
+        },
+        {
+            "key": "Sk1mode",
+            "header": "Sk1mode"
+        },
+        {
+            "key": "Sk1lvl",
+            "header": "Sk1lvl"
+        },
+        {
+            "key": "Skill2",
+            "header": "Skill2"
+        },
+        {
+            "key": "Sk2mode",
+            "header": "Sk2mode"
+        },
+        {
+            "key": "Sk2lvl",
+            "header": "Sk2lvl"
+        },
+        {
+            "key": "Skill3",
+            "header": "Skill3"
+        },
+        {
+            "key": "Sk3mode",
+            "header": "Sk3mode"
+        },
+        {
+            "key": "Sk3lvl",
+            "header": "Sk3lvl"
+        },
+        {
+            "key": "Skill4",
+            "header": "Skill4"
+        },
+        {
+            "key": "Sk4mode",
+            "header": "Sk4mode"
+        },
+        {
+            "key": "Sk4lvl",
+            "header": "Sk4lvl"
+        },
+        {
+            "key": "Skill5",
+            "header": "Skill5"
+        },
+        {
+            "key": "Sk5mode",
+            "header": "Sk5mode"
+        },
+        {
+            "key": "Sk5lvl",
+            "header": "Sk5lvl"
+        },
+        {
+            "key": "Skill6",
+            "header": "Skill6"
+        },
+        {
+            "key": "Sk6mode",
+            "header": "Sk6mode"
+        },
+        {
+            "key": "Sk6lvl",
+            "header": "Sk6lvl"
+        },
+        {
+            "key": "Skill7",
+            "header": "Skill7"
+        },
+        {
+            "key": "Sk7mode",
+            "header": "Sk7mode"
+        },
+        {
+            "key": "Sk7lvl",
+            "header": "Sk7lvl"
+        },
+        {
+            "key": "Skill8",
+            "header": "Skill8"
+        },
+        {
+            "key": "Sk8mode",
+            "header": "Sk8mode"
+        },
+        {
+            "key": "Sk8lvl",
+            "header": "Sk8lvl"
+        },
+        {
+            "key": "Drain",
+            "header": "Drain"
+        },
+        {
+            "key": "Drain(N)",
+            "header": "Drain(N)"
+        },
+        {
+            "key": "Drain(H)",
+            "header": "Drain(H)"
+        },
+        {
+            "key": "coldeffect",
+            "header": "coldeffect"
+        },
+        {
+            "key": "coldeffect(N)",
+            "header": "coldeffect(N)"
+        },
+        {
+            "key": "coldeffect(H)",
+            "header": "coldeffect(H)"
+        },
+        {
+            "key": "ResDm",
+            "header": "ResDm"
+        },
+        {
+            "key": "ResMa",
+            "header": "ResMa"
+        },
+        {
+            "key": "ResFi",
+            "header": "ResFi"
+        },
+        {
+            "key": "ResLi",
+            "header": "ResLi"
+        },
+        {
+            "key": "ResCo",
+            "header": "ResCo"
+        },
+        {
+            "key": "ResPo",
+            "header": "ResPo"
+        },
+        {
+            "key": "ResDm(N)",
+            "header": "ResDm(N)"
+        },
+        {
+            "key": "ResMa(N)",
+            "header": "ResMa(N)"
+        },
+        {
+            "key": "ResFi(N)",
+            "header": "ResFi(N)"
+        },
+        {
+            "key": "ResLi(N)",
+            "header": "ResLi(N)"
+        },
+        {
+            "key": "ResCo(N)",
+            "header": "ResCo(N)"
+        },
+        {
+            "key": "ResPo(N)",
+            "header": "ResPo(N)"
+        },
+        {
+            "key": "ResDm(H)",
+            "header": "ResDm(H)"
+        },
+        {
+            "key": "ResMa(H)",
+            "header": "ResMa(H)"
+        },
+        {
+            "key": "ResFi(H)",
+            "header": "ResFi(H)"
+        },
+        {
+            "key": "ResLi(H)",
+            "header": "ResLi(H)"
+        },
+        {
+            "key": "ResCo(H)",
+            "header": "ResCo(H)"
+        },
+        {
+            "key": "ResPo(H)",
+            "header": "ResPo(H)"
+        },
+        {
+            "key": "DamageRegen",
+            "header": "DamageRegen"
+        },
+        {
+            "key": "SkillDamage",
+            "header": "SkillDamage"
+        },
+        {
+            "key": "noRatio",
+            "header": "noRatio"
+        },
+        {
+            "key": "ShieldBlockOverride",
+            "header": "ShieldBlockOverride"
+        },
+        {
+            "key": "ToBlock",
+            "header": "ToBlock"
+        },
+        {
+            "key": "ToBlock(N)",
+            "header": "ToBlock(N)"
+        },
+        {
+            "key": "ToBlock(H)",
+            "header": "ToBlock(H)"
+        },
+        {
+            "key": "Crit",
+            "header": "Crit"
+        },
+        {
+            "key": "minHP",
+            "header": "minHP"
+        },
+        {
+            "key": "maxHP",
+            "header": "maxHP"
+        },
+        {
+            "key": "AC",
+            "header": "AC"
+        },
+        {
+            "key": "Exp",
+            "header": "Exp"
+        },
+        {
+            "key": "A1MinD",
+            "header": "A1MinD"
+        },
+        {
+            "key": "A1MaxD",
+            "header": "A1MaxD"
+        },
+        {
+            "key": "A1TH",
+            "header": "A1TH"
+        },
+        {
+            "key": "A2MinD",
+            "header": "A2MinD"
+        },
+        {
+            "key": "A2MaxD",
+            "header": "A2MaxD"
+        },
+        {
+            "key": "A2TH",
+            "header": "A2TH"
+        },
+        {
+            "key": "S1MinD",
+            "header": "S1MinD"
+        },
+        {
+            "key": "S1MaxD",
+            "header": "S1MaxD"
+        },
+        {
+            "key": "S1TH",
+            "header": "S1TH"
+        },
+        {
+            "key": "MinHP(N)",
+            "header": "MinHP(N)"
+        },
+        {
+            "key": "MaxHP(N)",
+            "header": "MaxHP(N)"
+        },
+        {
+            "key": "AC(N)",
+            "header": "AC(N)"
+        },
+        {
+            "key": "Exp(N)",
+            "header": "Exp(N)"
+        },
+        {
+            "key": "A1MinD(N)",
+            "header": "A1MinD(N)"
+        },
+        {
+            "key": "A1MaxD(N)",
+            "header": "A1MaxD(N)"
+        },
+        {
+            "key": "A1TH(N)",
+            "header": "A1TH(N)"
+        },
+        {
+            "key": "A2MinD(N)",
+            "header": "A2MinD(N)"
+        },
+        {
+            "key": "A2MaxD(N)",
+            "header": "A2MaxD(N)"
+        },
+        {
+            "key": "A2TH(N)",
+            "header": "A2TH(N)"
+        },
+        {
+            "key": "S1MinD(N)",
+            "header": "S1MinD(N)"
+        },
+        {
+            "key": "S1MaxD(N)",
+            "header": "S1MaxD(N)"
+        },
+        {
+            "key": "S1TH(N)",
+            "header": "S1TH(N)"
+        },
+        {
+            "key": "MinHP(H)",
+            "header": "MinHP(H)"
+        },
+        {
+            "key": "MaxHP(H)",
+            "header": "MaxHP(H)"
+        },
+        {
+            "key": "AC(H)",
+            "header": "AC(H)"
+        },
+        {
+            "key": "Exp(H)",
+            "header": "Exp(H)"
+        },
+        {
+            "key": "A1MinD(H)",
+            "header": "A1MinD(H)"
+        },
+        {
+            "key": "A1MaxD(H)",
+            "header": "A1MaxD(H)"
+        },
+        {
+            "key": "A1TH(H)",
+            "header": "A1TH(H)"
+        },
+        {
+            "key": "A2MinD(H)",
+            "header": "A2MinD(H)"
+        },
+        {
+            "key": "A2MaxD(H)",
+            "header": "A2MaxD(H)"
+        },
+        {
+            "key": "A2TH(H)",
+            "header": "A2TH(H)"
+        },
+        {
+            "key": "S1MinD(H)",
+            "header": "S1MinD(H)"
+        },
+        {
+            "key": "S1MaxD(H)",
+            "header": "S1MaxD(H)"
+        },
+        {
+            "key": "S1TH(H)",
+            "header": "S1TH(H)"
+        },
+        {
+            "key": "El1Mode",
+            "header": "El1Mode"
+        },
+        {
+            "key": "El1Type",
+            "header": "El1Type"
+        },
+        {
+            "key": "El1Pct",
+            "header": "El1Pct"
+        },
+        {
+            "key": "El1MinD",
+            "header": "El1MinD"
+        },
+        {
+            "key": "El1MaxD",
+            "header": "El1MaxD"
+        },
+        {
+            "key": "El1Dur",
+            "header": "El1Dur"
+        },
+        {
+            "key": "El1Pct(N)",
+            "header": "El1Pct(N)"
+        },
+        {
+            "key": "El1MinD(N)",
+            "header": "El1MinD(N)"
+        },
+        {
+            "key": "El1MaxD(N)",
+            "header": "El1MaxD(N)"
+        },
+        {
+            "key": "El1Dur(N)",
+            "header": "El1Dur(N)"
+        },
+        {
+            "key": "El1Pct(H)",
+            "header": "El1Pct(H)"
+        },
+        {
+            "key": "El1MinD(H)",
+            "header": "El1MinD(H)"
+        },
+        {
+            "key": "El1MaxD(H)",
+            "header": "El1MaxD(H)"
+        },
+        {
+            "key": "El1Dur(H)",
+            "header": "El1Dur(H)"
+        },
+        {
+            "key": "El2Mode",
+            "header": "El2Mode"
+        },
+        {
+            "key": "El2Type",
+            "header": "El2Type"
+        },
+        {
+            "key": "El2Pct",
+            "header": "El2Pct"
+        },
+        {
+            "key": "El2MinD",
+            "header": "El2MinD"
+        },
+        {
+            "key": "El2MaxD",
+            "header": "El2MaxD"
+        },
+        {
+            "key": "El2Dur",
+            "header": "El2Dur"
+        },
+        {
+            "key": "El2Pct(N)",
+            "header": "El2Pct(N)"
+        },
+        {
+            "key": "El2MinD(N)",
+            "header": "El2MinD(N)"
+        },
+        {
+            "key": "El2MaxD(N)",
+            "header": "El2MaxD(N)"
+        },
+        {
+            "key": "El2Dur(N)",
+            "header": "El2Dur(N)"
+        },
+        {
+            "key": "El2Pct(H)",
+            "header": "El2Pct(H)"
+        },
+        {
+            "key": "El2MinD(H)",
+            "header": "El2MinD(H)"
+        },
+        {
+            "key": "El2MaxD(H)",
+            "header": "El2MaxD(H)"
+        },
+        {
+            "key": "El2Dur(H)",
+            "header": "El2Dur(H)"
+        },
+        {
+            "key": "El3Mode",
+            "header": "El3Mode"
+        },
+        {
+            "key": "El3Type",
+            "header": "El3Type"
+        },
+        {
+            "key": "El3Pct",
+            "header": "El3Pct"
+        },
+        {
+            "key": "El3MinD",
+            "header": "El3MinD"
+        },
+        {
+            "key": "El3MaxD",
+            "header": "El3MaxD"
+        },
+        {
+            "key": "El3Dur",
+            "header": "El3Dur"
+        },
+        {
+            "key": "El3Pct(N)",
+            "header": "El3Pct(N)"
+        },
+        {
+            "key": "El3MinD(N)",
+            "header": "El3MinD(N)"
+        },
+        {
+            "key": "El3MaxD(N)",
+            "header": "El3MaxD(N)"
+        },
+        {
+            "key": "El3Dur(N)",
+            "header": "El3Dur(N)"
+        },
+        {
+            "key": "El3Pct(H)",
+            "header": "El3Pct(H)"
+        },
+        {
+            "key": "El3MinD(H)",
+            "header": "El3MinD(H)"
+        },
+        {
+            "key": "El3MaxD(H)",
+            "header": "El3MaxD(H)"
+        },
+        {
+            "key": "El3Dur(H)",
+            "header": "El3Dur(H)"
+        },
+        {
+            "key": "TreasureClass",
+            "header": "TreasureClass"
+        },
+        {
+            "key": "TreasureClassChamp",
+            "header": "TreasureClassChamp"
+        },
+        {
+            "key": "TreasureClassUnique",
+            "header": "TreasureClassUnique"
+        },
+        {
+            "key": "TreasureClassQuest",
+            "header": "TreasureClassQuest"
+        },
+        {
+            "key": "TreasureClassDesecrated",
+            "header": "TreasureClassDesecrated"
+        },
+        {
+            "key": "TreasureClassDesecratedChamp",
+            "header": "TreasureClassDesecratedChamp"
+        },
+        {
+            "key": "TreasureClassDesecratedUnique",
+            "header": "TreasureClassDesecratedUnique"
+        },
+        {
+            "key": "TreasureClassHerald",
+            "header": "TreasureClassHerald"
+        },
+        {
+            "key": "TreasureClass(N)",
+            "header": "TreasureClass(N)"
+        },
+        {
+            "key": "TreasureClassChamp(N)",
+            "header": "TreasureClassChamp(N)"
+        },
+        {
+            "key": "TreasureClassUnique(N)",
+            "header": "TreasureClassUnique(N)"
+        },
+        {
+            "key": "TreasureClassQuest(N)",
+            "header": "TreasureClassQuest(N)"
+        },
+        {
+            "key": "TreasureClassDesecrated(N)",
+            "header": "TreasureClassDesecrated(N)"
+        },
+        {
+            "key": "TreasureClassDesecratedChamp(N)",
+            "header": "TreasureClassDesecratedChamp(N)"
+        },
+        {
+            "key": "TreasureClassDesecratedUnique(N)",
+            "header": "TreasureClassDesecratedUnique(N)"
+        },
+        {
+            "key": "TreasureClassHerald(N)",
+            "header": "TreasureClassHerald(N)"
+        },
+        {
+            "key": "TreasureClass(H)",
+            "header": "TreasureClass(H)"
+        },
+        {
+            "key": "TreasureClassChamp(H)",
+            "header": "TreasureClassChamp(H)"
+        },
+        {
+            "key": "TreasureClassUnique(H)",
+            "header": "TreasureClassUnique(H)"
+        },
+        {
+            "key": "TreasureClassQuest(H)",
+            "header": "TreasureClassQuest(H)"
+        },
+        {
+            "key": "TreasureClassDesecrated(H)",
+            "header": "TreasureClassDesecrated(H)"
+        },
+        {
+            "key": "TreasureClassDesecratedChamp(H)",
+            "header": "TreasureClassDesecratedChamp(H)"
+        },
+        {
+            "key": "TreasureClassDesecratedUnique(H)",
+            "header": "TreasureClassDesecratedUnique(H)"
+        },
+        {
+            "key": "TreasureClassHerald(H)",
+            "header": "TreasureClassHerald(H)"
+        },
+        {
+            "key": "TCQuestId",
+            "header": "TCQuestId"
+        },
+        {
+            "key": "TCQuestCP",
+            "header": "TCQuestCP"
+        },
+        {
+            "key": "SplEndDeath",
+            "header": "SplEndDeath"
+        },
+        {
+            "key": "SplGetModeChart",
+            "header": "SplGetModeChart"
+        },
+        {
+            "key": "SplEndGeneric",
+            "header": "SplEndGeneric"
+        },
+        {
+            "key": "SplClientEnd",
+            "header": "SplClientEnd"
+        },
+        {
+            "key": "*eol",
+            "header": "*eol"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 774,
+    "identitySha256": "4708497931d3b2df0cbbc3ebc344e1c2939191cc34c39ecc9050f033a291f191"
+}

@@ -1,0 +1,1305 @@
+{
+    "schemaVersion": 1,
+    "name": "skills",
+    "targets": [
+        "global/excel/skills.txt",
+        "global/excel/base/skills.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "skill",
+            "header": "skill"
+        },
+        {
+            "key": "*Id",
+            "header": "*Id"
+        },
+        {
+            "key": "charclass",
+            "header": "charclass"
+        },
+        {
+            "key": "skilldesc",
+            "header": "skilldesc"
+        },
+        {
+            "key": "srvstfunc",
+            "header": "srvstfunc"
+        },
+        {
+            "key": "srvdofunc",
+            "header": "srvdofunc"
+        },
+        {
+            "key": "srvstopfunc",
+            "header": "srvstopfunc"
+        },
+        {
+            "key": "prgstack",
+            "header": "prgstack"
+        },
+        {
+            "key": "srvprgfunc1",
+            "header": "srvprgfunc1"
+        },
+        {
+            "key": "srvprgfunc2",
+            "header": "srvprgfunc2"
+        },
+        {
+            "key": "srvprgfunc3",
+            "header": "srvprgfunc3"
+        },
+        {
+            "key": "prgcalc1",
+            "header": "prgcalc1"
+        },
+        {
+            "key": "prgcalc2",
+            "header": "prgcalc2"
+        },
+        {
+            "key": "prgcalc3",
+            "header": "prgcalc3"
+        },
+        {
+            "key": "prgdam",
+            "header": "prgdam"
+        },
+        {
+            "key": "srvmissile",
+            "header": "srvmissile"
+        },
+        {
+            "key": "decquant",
+            "header": "decquant"
+        },
+        {
+            "key": "lob",
+            "header": "lob"
+        },
+        {
+            "key": "srvmissilea",
+            "header": "srvmissilea"
+        },
+        {
+            "key": "srvmissileb",
+            "header": "srvmissileb"
+        },
+        {
+            "key": "srvmissilec",
+            "header": "srvmissilec"
+        },
+        {
+            "key": "useServerMissilesOnRemoteClients",
+            "header": "useServerMissilesOnRemoteClients"
+        },
+        {
+            "key": "srvoverlay",
+            "header": "srvoverlay"
+        },
+        {
+            "key": "aurafilter",
+            "header": "aurafilter"
+        },
+        {
+            "key": "aurastate",
+            "header": "aurastate"
+        },
+        {
+            "key": "auratargetstate",
+            "header": "auratargetstate"
+        },
+        {
+            "key": "auralencalc",
+            "header": "auralencalc"
+        },
+        {
+            "key": "aurarangecalc",
+            "header": "aurarangecalc"
+        },
+        {
+            "key": "aurastat1",
+            "header": "aurastat1"
+        },
+        {
+            "key": "aurastatcalc1",
+            "header": "aurastatcalc1"
+        },
+        {
+            "key": "aurastat2",
+            "header": "aurastat2"
+        },
+        {
+            "key": "aurastatcalc2",
+            "header": "aurastatcalc2"
+        },
+        {
+            "key": "aurastat3",
+            "header": "aurastat3"
+        },
+        {
+            "key": "aurastatcalc3",
+            "header": "aurastatcalc3"
+        },
+        {
+            "key": "aurastat4",
+            "header": "aurastat4"
+        },
+        {
+            "key": "aurastatcalc4",
+            "header": "aurastatcalc4"
+        },
+        {
+            "key": "aurastat5",
+            "header": "aurastat5"
+        },
+        {
+            "key": "aurastatcalc5",
+            "header": "aurastatcalc5"
+        },
+        {
+            "key": "aurastat6",
+            "header": "aurastat6"
+        },
+        {
+            "key": "aurastatcalc6",
+            "header": "aurastatcalc6"
+        },
+        {
+            "key": "auraevent1",
+            "header": "auraevent1"
+        },
+        {
+            "key": "auraeventfunc1",
+            "header": "auraeventfunc1"
+        },
+        {
+            "key": "auraevent2",
+            "header": "auraevent2"
+        },
+        {
+            "key": "auraeventfunc2",
+            "header": "auraeventfunc2"
+        },
+        {
+            "key": "auraevent3",
+            "header": "auraevent3"
+        },
+        {
+            "key": "auraeventfunc3",
+            "header": "auraeventfunc3"
+        },
+        {
+            "key": "auraevent4",
+            "header": "auraevent4"
+        },
+        {
+            "key": "auraeventfunc4",
+            "header": "auraeventfunc4"
+        },
+        {
+            "key": "passivestate",
+            "header": "passivestate"
+        },
+        {
+            "key": "passiveitype",
+            "header": "passiveitype"
+        },
+        {
+            "key": "passivereqweaponcount",
+            "header": "passivereqweaponcount"
+        },
+        {
+            "key": "passivestat1",
+            "header": "passivestat1"
+        },
+        {
+            "key": "passivecalc1",
+            "header": "passivecalc1"
+        },
+        {
+            "key": "passivestat2",
+            "header": "passivestat2"
+        },
+        {
+            "key": "passivecalc2",
+            "header": "passivecalc2"
+        },
+        {
+            "key": "passivestat3",
+            "header": "passivestat3"
+        },
+        {
+            "key": "passivecalc3",
+            "header": "passivecalc3"
+        },
+        {
+            "key": "passivestat4",
+            "header": "passivestat4"
+        },
+        {
+            "key": "passivecalc4",
+            "header": "passivecalc4"
+        },
+        {
+            "key": "passivestat5",
+            "header": "passivestat5"
+        },
+        {
+            "key": "passivecalc5",
+            "header": "passivecalc5"
+        },
+        {
+            "key": "passivestat6",
+            "header": "passivestat6"
+        },
+        {
+            "key": "passivecalc6",
+            "header": "passivecalc6"
+        },
+        {
+            "key": "passivestat7",
+            "header": "passivestat7"
+        },
+        {
+            "key": "passivecalc7",
+            "header": "passivecalc7"
+        },
+        {
+            "key": "passivestat8",
+            "header": "passivestat8"
+        },
+        {
+            "key": "passivecalc8",
+            "header": "passivecalc8"
+        },
+        {
+            "key": "passivestat9",
+            "header": "passivestat9"
+        },
+        {
+            "key": "passivecalc9",
+            "header": "passivecalc9"
+        },
+        {
+            "key": "passivestat10",
+            "header": "passivestat10"
+        },
+        {
+            "key": "passivecalc10",
+            "header": "passivecalc10"
+        },
+        {
+            "key": "passivestat11",
+            "header": "passivestat11"
+        },
+        {
+            "key": "passivecalc11",
+            "header": "passivecalc11"
+        },
+        {
+            "key": "passivestat12",
+            "header": "passivestat12"
+        },
+        {
+            "key": "passivecalc12",
+            "header": "passivecalc12"
+        },
+        {
+            "key": "passivestat13",
+            "header": "passivestat13"
+        },
+        {
+            "key": "passivecalc13",
+            "header": "passivecalc13"
+        },
+        {
+            "key": "passivestat14",
+            "header": "passivestat14"
+        },
+        {
+            "key": "passivecalc14",
+            "header": "passivecalc14"
+        },
+        {
+            "key": "summon",
+            "header": "summon"
+        },
+        {
+            "key": "pettype",
+            "header": "pettype"
+        },
+        {
+            "key": "petmax",
+            "header": "petmax"
+        },
+        {
+            "key": "requirespettype",
+            "header": "requirespettype"
+        },
+        {
+            "key": "summode",
+            "header": "summode"
+        },
+        {
+            "key": "sumskill1",
+            "header": "sumskill1"
+        },
+        {
+            "key": "sumsk1calc",
+            "header": "sumsk1calc"
+        },
+        {
+            "key": "sumskill2",
+            "header": "sumskill2"
+        },
+        {
+            "key": "sumsk2calc",
+            "header": "sumsk2calc"
+        },
+        {
+            "key": "sumskill3",
+            "header": "sumskill3"
+        },
+        {
+            "key": "sumsk3calc",
+            "header": "sumsk3calc"
+        },
+        {
+            "key": "sumskill4",
+            "header": "sumskill4"
+        },
+        {
+            "key": "sumsk4calc",
+            "header": "sumsk4calc"
+        },
+        {
+            "key": "sumskill5",
+            "header": "sumskill5"
+        },
+        {
+            "key": "sumsk5calc",
+            "header": "sumsk5calc"
+        },
+        {
+            "key": "sumumod",
+            "header": "sumumod"
+        },
+        {
+            "key": "sumoverlay",
+            "header": "sumoverlay"
+        },
+        {
+            "key": "stsuccessonly",
+            "header": "stsuccessonly"
+        },
+        {
+            "key": "stsound",
+            "header": "stsound"
+        },
+        {
+            "key": "stsoundclass",
+            "header": "stsoundclass"
+        },
+        {
+            "key": "stsounddelay",
+            "header": "stsounddelay"
+        },
+        {
+            "key": "weaponsnd",
+            "header": "weaponsnd"
+        },
+        {
+            "key": "dosound",
+            "header": "dosound"
+        },
+        {
+            "key": "dosound a",
+            "header": "dosound a"
+        },
+        {
+            "key": "dosound b",
+            "header": "dosound b"
+        },
+        {
+            "key": "tgtoverlay",
+            "header": "tgtoverlay"
+        },
+        {
+            "key": "tgtsound",
+            "header": "tgtsound"
+        },
+        {
+            "key": "prgoverlay",
+            "header": "prgoverlay"
+        },
+        {
+            "key": "prgsound",
+            "header": "prgsound"
+        },
+        {
+            "key": "castoverlay",
+            "header": "castoverlay"
+        },
+        {
+            "key": "cltoverlaya",
+            "header": "cltoverlaya"
+        },
+        {
+            "key": "cltoverlayb",
+            "header": "cltoverlayb"
+        },
+        {
+            "key": "cltstfunc",
+            "header": "cltstfunc"
+        },
+        {
+            "key": "cltdofunc",
+            "header": "cltdofunc"
+        },
+        {
+            "key": "cltstopfunc",
+            "header": "cltstopfunc"
+        },
+        {
+            "key": "cltprgfunc1",
+            "header": "cltprgfunc1"
+        },
+        {
+            "key": "cltprgfunc2",
+            "header": "cltprgfunc2"
+        },
+        {
+            "key": "cltprgfunc3",
+            "header": "cltprgfunc3"
+        },
+        {
+            "key": "cltmissile",
+            "header": "cltmissile"
+        },
+        {
+            "key": "cltmissilea",
+            "header": "cltmissilea"
+        },
+        {
+            "key": "cltmissileb",
+            "header": "cltmissileb"
+        },
+        {
+            "key": "cltmissilec",
+            "header": "cltmissilec"
+        },
+        {
+            "key": "cltmissiled",
+            "header": "cltmissiled"
+        },
+        {
+            "key": "cltcalc1",
+            "header": "cltcalc1"
+        },
+        {
+            "key": "*cltcalc1 desc",
+            "header": "*cltcalc1 desc"
+        },
+        {
+            "key": "cltcalc2",
+            "header": "cltcalc2"
+        },
+        {
+            "key": "*cltcalc2 desc",
+            "header": "*cltcalc2 desc"
+        },
+        {
+            "key": "cltcalc3",
+            "header": "cltcalc3"
+        },
+        {
+            "key": "*cltcalc3 desc",
+            "header": "*cltcalc3 desc"
+        },
+        {
+            "key": "warp",
+            "header": "warp"
+        },
+        {
+            "key": "immediate",
+            "header": "immediate"
+        },
+        {
+            "key": "enhanceable",
+            "header": "enhanceable"
+        },
+        {
+            "key": "attackrank",
+            "header": "attackrank"
+        },
+        {
+            "key": "noammo",
+            "header": "noammo"
+        },
+        {
+            "key": "range",
+            "header": "range"
+        },
+        {
+            "key": "weapsel",
+            "header": "weapsel"
+        },
+        {
+            "key": "requiresweapon",
+            "header": "requiresweapon"
+        },
+        {
+            "key": "itypea1",
+            "header": "itypea1"
+        },
+        {
+            "key": "itypea2",
+            "header": "itypea2"
+        },
+        {
+            "key": "itypea3",
+            "header": "itypea3"
+        },
+        {
+            "key": "etypea1",
+            "header": "etypea1"
+        },
+        {
+            "key": "etypea2",
+            "header": "etypea2"
+        },
+        {
+            "key": "itypeb1",
+            "header": "itypeb1"
+        },
+        {
+            "key": "itypeb2",
+            "header": "itypeb2"
+        },
+        {
+            "key": "itypeb3",
+            "header": "itypeb3"
+        },
+        {
+            "key": "etypeb1",
+            "header": "etypeb1"
+        },
+        {
+            "key": "etypeb2",
+            "header": "etypeb2"
+        },
+        {
+            "key": "anim",
+            "header": "anim"
+        },
+        {
+            "key": "seqtrans",
+            "header": "seqtrans"
+        },
+        {
+            "key": "monanim",
+            "header": "monanim"
+        },
+        {
+            "key": "seqnum",
+            "header": "seqnum"
+        },
+        {
+            "key": "seqinput",
+            "header": "seqinput"
+        },
+        {
+            "key": "durability",
+            "header": "durability"
+        },
+        {
+            "key": "UseAttackRate",
+            "header": "UseAttackRate"
+        },
+        {
+            "key": "LineOfSight",
+            "header": "LineOfSight"
+        },
+        {
+            "key": "TargetableOnly",
+            "header": "TargetableOnly"
+        },
+        {
+            "key": "SearchEnemyXY",
+            "header": "SearchEnemyXY"
+        },
+        {
+            "key": "SearchEnemyNear",
+            "header": "SearchEnemyNear"
+        },
+        {
+            "key": "SearchOpenXY",
+            "header": "SearchOpenXY"
+        },
+        {
+            "key": "SelectProc",
+            "header": "SelectProc"
+        },
+        {
+            "key": "TargetCorpse",
+            "header": "TargetCorpse"
+        },
+        {
+            "key": "TargetPet",
+            "header": "TargetPet"
+        },
+        {
+            "key": "TargetAlly",
+            "header": "TargetAlly"
+        },
+        {
+            "key": "TargetItem",
+            "header": "TargetItem"
+        },
+        {
+            "key": "AttackNoMana",
+            "header": "AttackNoMana"
+        },
+        {
+            "key": "TgtPlaceCheck",
+            "header": "TgtPlaceCheck"
+        },
+        {
+            "key": "KeepCursorStateOnKill",
+            "header": "KeepCursorStateOnKill"
+        },
+        {
+            "key": "ContinueCastUnselected",
+            "header": "ContinueCastUnselected"
+        },
+        {
+            "key": "ClearSelectedOnHold",
+            "header": "ClearSelectedOnHold"
+        },
+        {
+            "key": "ItemEffect",
+            "header": "ItemEffect"
+        },
+        {
+            "key": "ItemCltEffect",
+            "header": "ItemCltEffect"
+        },
+        {
+            "key": "ItemTgtDo",
+            "header": "ItemTgtDo"
+        },
+        {
+            "key": "ItemTarget",
+            "header": "ItemTarget"
+        },
+        {
+            "key": "ItemUseRestrict",
+            "header": "ItemUseRestrict"
+        },
+        {
+            "key": "ItemCheckStart",
+            "header": "ItemCheckStart"
+        },
+        {
+            "key": "ItemCltCheckStart",
+            "header": "ItemCltCheckStart"
+        },
+        {
+            "key": "ItemCastSound",
+            "header": "ItemCastSound"
+        },
+        {
+            "key": "ItemCastOverlay",
+            "header": "ItemCastOverlay"
+        },
+        {
+            "key": "skpoints",
+            "header": "skpoints"
+        },
+        {
+            "key": "reqlevel",
+            "header": "reqlevel"
+        },
+        {
+            "key": "maxlvl",
+            "header": "maxlvl"
+        },
+        {
+            "key": "reqstr",
+            "header": "reqstr"
+        },
+        {
+            "key": "reqdex",
+            "header": "reqdex"
+        },
+        {
+            "key": "reqint",
+            "header": "reqint"
+        },
+        {
+            "key": "reqvit",
+            "header": "reqvit"
+        },
+        {
+            "key": "reqskill1",
+            "header": "reqskill1"
+        },
+        {
+            "key": "reqskill2",
+            "header": "reqskill2"
+        },
+        {
+            "key": "reqskill3",
+            "header": "reqskill3"
+        },
+        {
+            "key": "restrict",
+            "header": "restrict"
+        },
+        {
+            "key": "State1",
+            "header": "State1"
+        },
+        {
+            "key": "State2",
+            "header": "State2"
+        },
+        {
+            "key": "State3",
+            "header": "State3"
+        },
+        {
+            "key": "localdelay",
+            "header": "localdelay"
+        },
+        {
+            "key": "globaldelay",
+            "header": "globaldelay"
+        },
+        {
+            "key": "leftskill",
+            "header": "leftskill"
+        },
+        {
+            "key": "rightskill",
+            "header": "rightskill"
+        },
+        {
+            "key": "repeat",
+            "header": "repeat"
+        },
+        {
+            "key": "alwayshit",
+            "header": "alwayshit"
+        },
+        {
+            "key": "usemanaondo",
+            "header": "usemanaondo"
+        },
+        {
+            "key": "startmana",
+            "header": "startmana"
+        },
+        {
+            "key": "minmana",
+            "header": "minmana"
+        },
+        {
+            "key": "manashift",
+            "header": "manashift"
+        },
+        {
+            "key": "mana",
+            "header": "mana"
+        },
+        {
+            "key": "lvlmana",
+            "header": "lvlmana"
+        },
+        {
+            "key": "interrupt",
+            "header": "interrupt"
+        },
+        {
+            "key": "InTown",
+            "header": "InTown"
+        },
+        {
+            "key": "aura",
+            "header": "aura"
+        },
+        {
+            "key": "periodic",
+            "header": "periodic"
+        },
+        {
+            "key": "perdelay",
+            "header": "perdelay"
+        },
+        {
+            "key": "periodicClearAura",
+            "header": "periodicClearAura"
+        },
+        {
+            "key": "finishing",
+            "header": "finishing"
+        },
+        {
+            "key": "prgchargestocast",
+            "header": "prgchargestocast"
+        },
+        {
+            "key": "prgchargesconsumed",
+            "header": "prgchargesconsumed"
+        },
+        {
+            "key": "passive",
+            "header": "passive"
+        },
+        {
+            "key": "progressive",
+            "header": "progressive"
+        },
+        {
+            "key": "scroll",
+            "header": "scroll"
+        },
+        {
+            "key": "calc1",
+            "header": "calc1"
+        },
+        {
+            "key": "*calc1 desc",
+            "header": "*calc1 desc"
+        },
+        {
+            "key": "calc2",
+            "header": "calc2"
+        },
+        {
+            "key": "*calc2 desc",
+            "header": "*calc2 desc"
+        },
+        {
+            "key": "calc3",
+            "header": "calc3"
+        },
+        {
+            "key": "*calc3 desc",
+            "header": "*calc3 desc"
+        },
+        {
+            "key": "calc4",
+            "header": "calc4"
+        },
+        {
+            "key": "*calc4 desc",
+            "header": "*calc4 desc"
+        },
+        {
+            "key": "calc5",
+            "header": "calc5"
+        },
+        {
+            "key": "*calc5 desc",
+            "header": "*calc5 desc"
+        },
+        {
+            "key": "calc6",
+            "header": "calc6"
+        },
+        {
+            "key": "*calc6 desc",
+            "header": "*calc6 desc"
+        },
+        {
+            "key": "calc7",
+            "header": "calc7"
+        },
+        {
+            "key": "*calc7desc",
+            "header": "*calc7desc"
+        },
+        {
+            "key": "calc8",
+            "header": "calc8"
+        },
+        {
+            "key": "*calc8desc",
+            "header": "*calc8desc"
+        },
+        {
+            "key": "calc9",
+            "header": "calc9"
+        },
+        {
+            "key": "*calc9desc",
+            "header": "*calc9desc"
+        },
+        {
+            "key": "calc10",
+            "header": "calc10"
+        },
+        {
+            "key": "*calc10desc",
+            "header": "*calc10desc"
+        },
+        {
+            "key": "Param1",
+            "header": "Param1"
+        },
+        {
+            "key": "*Param1 Description",
+            "header": "*Param1 Description"
+        },
+        {
+            "key": "Param2",
+            "header": "Param2"
+        },
+        {
+            "key": "*Param2 Description",
+            "header": "*Param2 Description"
+        },
+        {
+            "key": "Param3",
+            "header": "Param3"
+        },
+        {
+            "key": "*Param3 Description",
+            "header": "*Param3 Description"
+        },
+        {
+            "key": "Param4",
+            "header": "Param4"
+        },
+        {
+            "key": "*Param4 Description",
+            "header": "*Param4 Description"
+        },
+        {
+            "key": "Param5",
+            "header": "Param5"
+        },
+        {
+            "key": "*Param5 Description",
+            "header": "*Param5 Description"
+        },
+        {
+            "key": "Param6",
+            "header": "Param6"
+        },
+        {
+            "key": "*Param6 Description",
+            "header": "*Param6 Description"
+        },
+        {
+            "key": "Param7",
+            "header": "Param7"
+        },
+        {
+            "key": "*Param7 Description",
+            "header": "*Param7 Description"
+        },
+        {
+            "key": "Param8",
+            "header": "Param8"
+        },
+        {
+            "key": "*Param8 Description",
+            "header": "*Param8 Description"
+        },
+        {
+            "key": "Param9",
+            "header": "Param9"
+        },
+        {
+            "key": "*Param9 Description",
+            "header": "*Param9 Description"
+        },
+        {
+            "key": "Param10",
+            "header": "Param10"
+        },
+        {
+            "key": "*Param10 Description2",
+            "header": "*Param10 Description2"
+        },
+        {
+            "key": "Param11",
+            "header": "Param11"
+        },
+        {
+            "key": "*Param11 Description",
+            "header": "*Param11 Description"
+        },
+        {
+            "key": "Param12",
+            "header": "Param12"
+        },
+        {
+            "key": "*Param12 Description",
+            "header": "*Param12 Description"
+        },
+        {
+            "key": "Param13",
+            "header": "Param13"
+        },
+        {
+            "key": "*Param13Description",
+            "header": "*Param13Description"
+        },
+        {
+            "key": "Param14",
+            "header": "Param14"
+        },
+        {
+            "key": "*Param14Description",
+            "header": "*Param14Description"
+        },
+        {
+            "key": "Param15",
+            "header": "Param15"
+        },
+        {
+            "key": "*Param15Description",
+            "header": "*Param15Description"
+        },
+        {
+            "key": "Param16",
+            "header": "Param16"
+        },
+        {
+            "key": "*Param16Description",
+            "header": "*Param16Description"
+        },
+        {
+            "key": "Param17",
+            "header": "Param17"
+        },
+        {
+            "key": "*Param17Description",
+            "header": "*Param17Description"
+        },
+        {
+            "key": "Param18",
+            "header": "Param18"
+        },
+        {
+            "key": "*Param18Description",
+            "header": "*Param18Description"
+        },
+        {
+            "key": "Param19",
+            "header": "Param19"
+        },
+        {
+            "key": "*Param19Description",
+            "header": "*Param19Description"
+        },
+        {
+            "key": "Param20",
+            "header": "Param20"
+        },
+        {
+            "key": "*Param20Description",
+            "header": "*Param20Description"
+        },
+        {
+            "key": "InGame",
+            "header": "InGame"
+        },
+        {
+            "key": "ToHit",
+            "header": "ToHit"
+        },
+        {
+            "key": "LevToHit",
+            "header": "LevToHit"
+        },
+        {
+            "key": "ToHitCalc",
+            "header": "ToHitCalc"
+        },
+        {
+            "key": "ResultFlags",
+            "header": "ResultFlags"
+        },
+        {
+            "key": "HitFlags",
+            "header": "HitFlags"
+        },
+        {
+            "key": "HitClass",
+            "header": "HitClass"
+        },
+        {
+            "key": "Kick",
+            "header": "Kick"
+        },
+        {
+            "key": "HitShift",
+            "header": "HitShift"
+        },
+        {
+            "key": "SrcDam",
+            "header": "SrcDam"
+        },
+        {
+            "key": "MinDam",
+            "header": "MinDam"
+        },
+        {
+            "key": "MinLevDam1",
+            "header": "MinLevDam1"
+        },
+        {
+            "key": "MinLevDam2",
+            "header": "MinLevDam2"
+        },
+        {
+            "key": "MinLevDam3",
+            "header": "MinLevDam3"
+        },
+        {
+            "key": "MinLevDam4",
+            "header": "MinLevDam4"
+        },
+        {
+            "key": "MinLevDam5",
+            "header": "MinLevDam5"
+        },
+        {
+            "key": "MaxDam",
+            "header": "MaxDam"
+        },
+        {
+            "key": "MaxLevDam1",
+            "header": "MaxLevDam1"
+        },
+        {
+            "key": "MaxLevDam2",
+            "header": "MaxLevDam2"
+        },
+        {
+            "key": "MaxLevDam3",
+            "header": "MaxLevDam3"
+        },
+        {
+            "key": "MaxLevDam4",
+            "header": "MaxLevDam4"
+        },
+        {
+            "key": "MaxLevDam5",
+            "header": "MaxLevDam5"
+        },
+        {
+            "key": "DmgSymPerCalc",
+            "header": "DmgSymPerCalc"
+        },
+        {
+            "key": "EType",
+            "header": "EType"
+        },
+        {
+            "key": "EMin",
+            "header": "EMin"
+        },
+        {
+            "key": "EMinLev1",
+            "header": "EMinLev1"
+        },
+        {
+            "key": "EMinLev2",
+            "header": "EMinLev2"
+        },
+        {
+            "key": "EMinLev3",
+            "header": "EMinLev3"
+        },
+        {
+            "key": "EMinLev4",
+            "header": "EMinLev4"
+        },
+        {
+            "key": "EMinLev5",
+            "header": "EMinLev5"
+        },
+        {
+            "key": "EMax",
+            "header": "EMax"
+        },
+        {
+            "key": "EMaxLev1",
+            "header": "EMaxLev1"
+        },
+        {
+            "key": "EMaxLev2",
+            "header": "EMaxLev2"
+        },
+        {
+            "key": "EMaxLev3",
+            "header": "EMaxLev3"
+        },
+        {
+            "key": "EMaxLev4",
+            "header": "EMaxLev4"
+        },
+        {
+            "key": "EMaxLev5",
+            "header": "EMaxLev5"
+        },
+        {
+            "key": "EDmgSymPerCalc",
+            "header": "EDmgSymPerCalc"
+        },
+        {
+            "key": "ELen",
+            "header": "ELen"
+        },
+        {
+            "key": "ELevLen1",
+            "header": "ELevLen1"
+        },
+        {
+            "key": "ELevLen2",
+            "header": "ELevLen2"
+        },
+        {
+            "key": "ELevLen3",
+            "header": "ELevLen3"
+        },
+        {
+            "key": "ELenSymPerCalc",
+            "header": "ELenSymPerCalc"
+        },
+        {
+            "key": "aitype",
+            "header": "aitype"
+        },
+        {
+            "key": "aibonus",
+            "header": "aibonus"
+        },
+        {
+            "key": "cost mult",
+            "header": "cost mult"
+        },
+        {
+            "key": "cost add",
+            "header": "cost add"
+        },
+        {
+            "key": "*eol",
+            "header": "*eol"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 490,
+    "identitySha256": "1d158bf549d180ba4a4f1f0d57e2187fb1c616e76ca499037cadd7c299b9060d"
+}

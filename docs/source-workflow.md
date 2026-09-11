@@ -1,8 +1,10 @@
-# JSON source pilot
+# JSON source workflow
 
-This branch converts **uniqueitems**, **treasureclassex**, **itemratio**, **experience**, and **all eight translation catalogs** to editable JSON entries. Both runtime profiles currently generate the same gameplay and translations. No balance values or descriptions have been changed, and no files have been installed into the game.
+All 55 Excel table types and all eight translation catalogs are authored as consolidated JSON arrays. There are 56 table sources because the two treasure-class banks differ. Both runtime profiles currently generate the same gameplay and translations. No balance values or descriptions have been changed, and no files have been installed into the game.
 
-The remaining TXT tables and game assets stay under `data/` during the pilot. They are copied into each generated mod. There is one editable source for each migrated file: do not recreate its old file under `data/`.
+Each `source/tables/<table>/` and `source/strings/<catalog>/` folder contains a `schema.json` and `records.json`. The schema describes output layout; the array holds editable records, with one field per line. All 110 Excel TXT outputs are generated. `source/text/dataversionbuild.json` holds the plain version string, preserving its exact text when generating `global/dataversionbuild.txt`. The TXT files under `lint/` are historical diagnostic logs, not editable game data.
+
+Other game assets remain under `data/` and are copied into each generated mod. There is one editable source for each migrated file: do not recreate its old TXT or translation JSON under `data/`. Unrelated game JSON assets, such as presets and UI layouts, retain their native formats.
 
 ## Build and inspect
 
@@ -28,7 +30,7 @@ Manual installation uses the generated `mods` folder. Never copy the repository'
 
 ## Edit a unique item
 
-Open `source/tables/uniqueitems/records/row-00000-the-gnasher.json` for a real example:
+Open `source/tables/uniqueitems/records.json` and search for `The Gnasher`. This file contains an array of all 1,484 existing rows, with each field on its own line. Each array entry looks like this:
 
 ```json
 {
@@ -45,15 +47,19 @@ Open `source/tables/uniqueitems/records/row-00000-the-gnasher.json` for a real e
 
 This abbreviated example omits the item's other fields. Edit named fields in the real file. All TSV cell values are strings. An omitted field means an empty cell, which differs from `"0"`. Empty cells are omitted to keep records readable; the compiler restores all columns and trailing empty cells.
 
-Keep the `sourceId`, `order`, filename prefix and existing `*ID` stable. The filename suffix is a search aid; it need not change when an item is renamed. The compiler preserves physical rows, including separators. Physical row slots are not necessarily the game's item IDs.
+Keep the `sourceId`, `order` and existing `*ID` stable. Keep entries in output order and fields in schema order to minimize noisy diffs. The compiler preserves physical rows, including separators. Physical row slots are not necessarily the game's item IDs.
+
+All tables and translation catalogs now use the consolidated layout. The reader retains compatibility with old `records/` folders, but rejects both missing and duplicate record sources. Spreadsheet imports update one consolidated table file after checking all cells for conflicts and preserve newer independent source edits.
 
 `schema.json` defines headers, output encoding, newline style, protected original row identities, and output paths. The original main and `excel/base` unique-item files are identical on this branch; the same records generate both paths. `itemratio` and `experience` also share records across their identical banks.
+
+The 51 newly migrated table types also share their identical main/base banks. Their schemas preserve physical row slots, headers (including duplicate or blank headers), short rows, separator rows, trailing cells, BOM and line endings. Their `identityColumns` arrays are initially empty: table-specific runtime ID, reference, formula and value constraints still need to be defined for the editor. Existing identity rules on the original pilot tables remain enforced. A successful build proves structural validity, not the gameplay correctness of a new edit.
 
 The two original treasure-class banks are not identical: the main bank has 1,547 rows and `excel/base` has 1,552 rows with a different early row sequence. They are therefore modeled as `source/tables/treasureclassex` and `source/tables/treasureclassex-base`. This preserves each bank exactly instead of incorrectly consolidating them.
 
 The original `*ID` value `1439` appears on both Chaos Onyx Grabber and The Ossuary Almanac. The schema records those exact existing rows as a legacy exception. This migration preserves it; adding a new duplicate fails. The comment-column ID is not a substitute for preserving actual row placement.
 
-For a new item, append the next source row slot and use a new unused `*ID`; do not insert or renumber existing rows. Copying an existing JSON record requires changing its source ID, order, filename prefix, and game ID. Keep the table's structural rules in mind. Deleting original rows or altering protected IDs fails the build. An intentional identity migration requires explicit review of `protectedRows`/`identitySha256`, not simply clearing the guard.
+For a new item, append an entry with the next source row slot and use a new unused `*ID`; do not insert or renumber existing rows. Copying an existing JSON record requires changing its source ID, order, and game ID. Concurrent additions can still choose the same slot or ID and must be reconciled before building. Keep the table's structural rules in mind. Deleting original rows or altering protected IDs fails the build. An intentional identity migration requires explicit review of `protectedRows`/`identitySha256`, not simply clearing the guard.
 
 ## Author a runtime override
 
@@ -72,13 +78,13 @@ Create a JSON file beneath `compatibility/d2rl/`, then list its relative path in
 
 An override applies to both output banks by default. Supply `targets` containing exact paths from the table schema to select a single bank. It changes only the named fields. If the shared value changes, its `expect` check fails instead of silently preserving an outdated exception. Competing overrides for the same cell and changes to identity columns fail.
 
-The available table names are `uniqueitems`, `treasureclassex`, `treasureclassex-base`, `itemratio`, and `experience`. Treasure-class overrides affect one bank because the banks have separate source records. Item-ratio and experience overrides affect both identical banks unless a rule supplies a single exact `targets` path.
+Every directory name under `source/tables/` is an available table name, including `armor`, `weapons`, `skills`, `cubemain`, and `monstats`. Treasure-class overrides affect one bank because the banks have separate source records. Other tables affect both identical banks unless a rule supplies a single exact `targets` path.
 
 Disabled examples for the newly migrated tables live under `docs/examples/`. Copy a reviewed rule beneath `compatibility/d2rl/tables/` and add its relative path to `compatibility/d2rl/profile.json` to enable it. The D2RLoader build manifest and profile-diff report will then identify every changed cell and its reason.
 
 ## Edit translations
 
-Each file under `source/strings/<catalog>/records/` holds its existing numeric `id`, exact `Key`, output order, and all 13 locale values under `translations`. Keep these identities stable. Original keys are case-sensitive. The catalog schema determines its output JSON filename.
+Each entry in `source/strings/<catalog>/records.json` holds its existing numeric `id`, exact `Key`, output order, and all 13 locale values under `translations`. Keep these identities stable. Original keys are case-sensitive. The catalog schema determines its output JSON filename.
 
 Add only the compact locale values needed for Standard:
 
@@ -93,10 +99,10 @@ Standard inherits the full value for any locale without an alternative. D2RLoade
 After reviewing the compact wording and its formatting, record the review:
 
 ```powershell
-node scripts/review-strings.mjs --file source/strings/item-names/records/<filename>.json
+node scripts/review-strings.mjs --file source/strings/item-names/records.json --id <numeric-id>
 ```
 
-The command records hashes of the reviewed full values and checks placeholders. A later edit to a full value makes its compact alternative require review again. Placeholder checks cannot prove equivalent meaning or correct color/grammar controls; those still require human review. Build validates compact alternatives even when building D2RLoader, so broken source cannot hide in the other profile.
+Replace `<numeric-id>` with the entry's existing `id`. The command updates only that entry's review hashes within the catalog and checks placeholders. A later edit to a full value makes its compact alternative require review again. Placeholder checks cannot prove equivalent meaning or correct color/grammar controls; those still require human review. Build validates compact alternatives even when building D2RLoader, so broken source cannot hide in the other profile.
 
 No compact alternatives have been applied to current content. Choose those after reviewing the generated measurements.
 
@@ -105,10 +111,10 @@ No compact alternatives have been applied to current content. Choose those after
 ```powershell
 node scripts/export-tsv.mjs --table treasureclassex --out build/edit/treasureclassex.txt
 # Edit the TXT using a TSV editor; keep its .source.json snapshot alongside it.
-node scripts/import-tsv.mjs --file build/edit/uniques.txt
+node scripts/import-tsv.mjs --file build/edit/treasureclassex.txt
 ```
 
-Export operates on shared source, before runtime overrides. Import compares exported values, edited values, and current source. Independent newer changes are preserved. A competing edit reports a conflict before any source file is changed. It does not infer row additions, deletions, or reordering; those are rejected. Existing export files are never overwritten by the exporter.
+Export works for every table and operates on shared source, before runtime overrides. Import compares exported values, edited values, and current source. Independent newer changes are preserved. A competing edit reports a conflict before any source file is changed. Row additions and deletions are rejected. Never sort exported rows: reordering is only detectable through configured identity columns, and those are not yet defined for the newly migrated tables. Existing export files are never overwritten by the exporter.
 
 ## Assets specific to a runtime
 
@@ -146,6 +152,8 @@ node scripts/build.mjs --all --verify-migration
 
 This audit command checks the initial conversion and is expected to stop matching after intentional content edits. Checkout line-ending conversion can also affect byte hashes. Regular builds/tests do not require the original content hashes to stay fixed.
 
-`migrate-source.mjs` is the original one-time importer used to start this pilot. It refuses to overwrite `source/` and is retained for provenance; it is not a generic converter for the remaining tables. Each later conversion is validated against hashes in `source/migration.json` before its old `data/` copy is removed.
+`migrate-source.mjs` is the original one-time importer used to start the pilot. It refuses to overwrite `source/` and is retained for provenance. `migrate-all-source.mjs` performs the full consolidation and remaining TXT migration. It previews by default; `--write` applies a validated migration. It validates proposed source in an isolated build folder, checks byte-exact table/text round trips and unchanged catalog output for both string modes, and refuses to discard TXT or runtime translation JSON that disagrees with existing authored source. All migrated TXT hashes are recorded in `source/migration.json`. Unsupported text formats fail rather than being coerced.
 
-The old ID-renumbering and flattened-string mutation utilities now stop with an explanation. Edit source entries directly. `copy-files.bat` builds the chosen profile and prints its output path instead of copying an incomplete source tree. The bundled lint configuration targets the generated Standard tables; build Standard before using it.
+The largest tables are `sounds` and `cubemain`. The future editor should virtualize their table views and save without reordering unrelated fields or rows. This migration establishes the source format and compiler; it does not implement the editor or comprehensive game-data semantics.
+
+The old ID-renumbering, flattened-string mutation and `a_copy_excel_base.bat` utilities stop with an explanation. Edit source entries directly; the compiler emits shared banks automatically. `copy-files.bat` builds the chosen profile and prints its output path instead of copying an incomplete source tree. The bundled lint configuration targets the generated Standard tables; build Standard before using it.

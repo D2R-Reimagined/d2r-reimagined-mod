@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { assert, inside, files, posix, readJson, writeJson, loadTables, applyTableOverrides, encodeTable, loadStrings, stringReport, sha256 } from './source.mjs';
+import { assert, inside, files, posix, readJson, writeJson, loadTables, applyTableOverrides, encodeTable, loadStrings, loadTextAssets, stringReport, sha256 } from './source.mjs';
 
 export function encodeStrings(category) {
     const { schema, rows } = category;
@@ -64,6 +64,7 @@ export function buildProfile(root, profileId, { verifyMigration = false } = {}) 
         changes.push(...category.changes);
     }
 
+    for (const asset of loadTextAssets(root)) add(asset.target, asset.content, asset.owner);
     const payload = new Map(generated);
     const dataRoot = inside(root, 'data');
     for (const file of files(dataRoot)) {

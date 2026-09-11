@@ -1,0 +1,689 @@
+{
+    "schemaVersion": 1,
+    "name": "armor",
+    "targets": [
+        "global/excel/armor.txt",
+        "global/excel/base/armor.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "name",
+            "header": "name"
+        },
+        {
+            "key": "version",
+            "header": "version"
+        },
+        {
+            "key": "compactsave",
+            "header": "compactsave"
+        },
+        {
+            "key": "rarity",
+            "header": "rarity"
+        },
+        {
+            "key": "spawnable",
+            "header": "spawnable"
+        },
+        {
+            "key": "DropConditionCalc",
+            "header": "DropConditionCalc"
+        },
+        {
+            "key": "minac",
+            "header": "minac"
+        },
+        {
+            "key": "maxac",
+            "header": "maxac"
+        },
+        {
+            "key": "speed",
+            "header": "speed"
+        },
+        {
+            "key": "reqstr",
+            "header": "reqstr"
+        },
+        {
+            "key": "reqdex",
+            "header": "reqdex"
+        },
+        {
+            "key": "block",
+            "header": "block"
+        },
+        {
+            "key": "durability",
+            "header": "durability"
+        },
+        {
+            "key": "nodurability",
+            "header": "nodurability"
+        },
+        {
+            "key": "level",
+            "header": "level"
+        },
+        {
+            "key": "ShowLevel",
+            "header": "ShowLevel"
+        },
+        {
+            "key": "levelreq",
+            "header": "levelreq"
+        },
+        {
+            "key": "cost",
+            "header": "cost"
+        },
+        {
+            "key": "gamble cost",
+            "header": "gamble cost"
+        },
+        {
+            "key": "code",
+            "header": "code"
+        },
+        {
+            "key": "namestr",
+            "header": "namestr"
+        },
+        {
+            "key": "magic lvl",
+            "header": "magic lvl"
+        },
+        {
+            "key": "auto prefix",
+            "header": "auto prefix"
+        },
+        {
+            "key": "alternategfx",
+            "header": "alternategfx"
+        },
+        {
+            "key": "normcode",
+            "header": "normcode"
+        },
+        {
+            "key": "ubercode",
+            "header": "ubercode"
+        },
+        {
+            "key": "ultracode",
+            "header": "ultracode"
+        },
+        {
+            "key": "component",
+            "header": "component"
+        },
+        {
+            "key": "invwidth",
+            "header": "invwidth"
+        },
+        {
+            "key": "invheight",
+            "header": "invheight"
+        },
+        {
+            "key": "hasinv",
+            "header": "hasinv"
+        },
+        {
+            "key": "gemsockets",
+            "header": "gemsockets"
+        },
+        {
+            "key": "gemapplytype",
+            "header": "gemapplytype"
+        },
+        {
+            "key": "flippyfile",
+            "header": "flippyfile"
+        },
+        {
+            "key": "invfile",
+            "header": "invfile"
+        },
+        {
+            "key": "uniqueinvfile",
+            "header": "uniqueinvfile"
+        },
+        {
+            "key": "setinvfile",
+            "header": "setinvfile"
+        },
+        {
+            "key": "rArm",
+            "header": "rArm"
+        },
+        {
+            "key": "lArm",
+            "header": "lArm"
+        },
+        {
+            "key": "Torso",
+            "header": "Torso"
+        },
+        {
+            "key": "Legs",
+            "header": "Legs"
+        },
+        {
+            "key": "rSPad",
+            "header": "rSPad"
+        },
+        {
+            "key": "lSPad",
+            "header": "lSPad"
+        },
+        {
+            "key": "useable",
+            "header": "useable"
+        },
+        {
+            "key": "stackable",
+            "header": "stackable"
+        },
+        {
+            "key": "minstack",
+            "header": "minstack"
+        },
+        {
+            "key": "maxstack",
+            "header": "maxstack"
+        },
+        {
+            "key": "spawnstack",
+            "header": "spawnstack"
+        },
+        {
+            "key": "Transmogrify",
+            "header": "Transmogrify"
+        },
+        {
+            "key": "TMogType",
+            "header": "TMogType"
+        },
+        {
+            "key": "TMogMin",
+            "header": "TMogMin"
+        },
+        {
+            "key": "TMogMax",
+            "header": "TMogMax"
+        },
+        {
+            "key": "type",
+            "header": "type"
+        },
+        {
+            "key": "type2",
+            "header": "type2"
+        },
+        {
+            "key": "dropsound",
+            "header": "dropsound"
+        },
+        {
+            "key": "dropsfxframe",
+            "header": "dropsfxframe"
+        },
+        {
+            "key": "usesound",
+            "header": "usesound"
+        },
+        {
+            "key": "unique",
+            "header": "unique"
+        },
+        {
+            "key": "transparent",
+            "header": "transparent"
+        },
+        {
+            "key": "transtbl",
+            "header": "transtbl"
+        },
+        {
+            "key": "*quivered",
+            "header": "*quivered"
+        },
+        {
+            "key": "lightradius",
+            "header": "lightradius"
+        },
+        {
+            "key": "belt",
+            "header": "belt"
+        },
+        {
+            "key": "quest",
+            "header": "quest"
+        },
+        {
+            "key": "questdiffcheck",
+            "header": "questdiffcheck"
+        },
+        {
+            "key": "missiletype",
+            "header": "missiletype"
+        },
+        {
+            "key": "durwarning",
+            "header": "durwarning"
+        },
+        {
+            "key": "qntwarning",
+            "header": "qntwarning"
+        },
+        {
+            "key": "mindam",
+            "header": "mindam"
+        },
+        {
+            "key": "maxdam",
+            "header": "maxdam"
+        },
+        {
+            "key": "StrBonus",
+            "header": "StrBonus"
+        },
+        {
+            "key": "DexBonus",
+            "header": "DexBonus"
+        },
+        {
+            "key": "gemoffset",
+            "header": "gemoffset"
+        },
+        {
+            "key": "bitfield1",
+            "header": "bitfield1"
+        },
+        {
+            "key": "CharsiMin",
+            "header": "CharsiMin"
+        },
+        {
+            "key": "CharsiMax",
+            "header": "CharsiMax"
+        },
+        {
+            "key": "CharsiMagicMin",
+            "header": "CharsiMagicMin"
+        },
+        {
+            "key": "CharsiMagicMax",
+            "header": "CharsiMagicMax"
+        },
+        {
+            "key": "CharsiMagicLvl",
+            "header": "CharsiMagicLvl"
+        },
+        {
+            "key": "GheedMin",
+            "header": "GheedMin"
+        },
+        {
+            "key": "GheedMax",
+            "header": "GheedMax"
+        },
+        {
+            "key": "GheedMagicMin",
+            "header": "GheedMagicMin"
+        },
+        {
+            "key": "GheedMagicMax",
+            "header": "GheedMagicMax"
+        },
+        {
+            "key": "GheedMagicLvl",
+            "header": "GheedMagicLvl"
+        },
+        {
+            "key": "AkaraMin",
+            "header": "AkaraMin"
+        },
+        {
+            "key": "AkaraMax",
+            "header": "AkaraMax"
+        },
+        {
+            "key": "AkaraMagicMin",
+            "header": "AkaraMagicMin"
+        },
+        {
+            "key": "AkaraMagicMax",
+            "header": "AkaraMagicMax"
+        },
+        {
+            "key": "AkaraMagicLvl",
+            "header": "AkaraMagicLvl"
+        },
+        {
+            "key": "FaraMin",
+            "header": "FaraMin"
+        },
+        {
+            "key": "FaraMax",
+            "header": "FaraMax"
+        },
+        {
+            "key": "FaraMagicMin",
+            "header": "FaraMagicMin"
+        },
+        {
+            "key": "FaraMagicMax",
+            "header": "FaraMagicMax"
+        },
+        {
+            "key": "FaraMagicLvl",
+            "header": "FaraMagicLvl"
+        },
+        {
+            "key": "LysanderMin",
+            "header": "LysanderMin"
+        },
+        {
+            "key": "LysanderMax",
+            "header": "LysanderMax"
+        },
+        {
+            "key": "LysanderMagicMin",
+            "header": "LysanderMagicMin"
+        },
+        {
+            "key": "LysanderMagicMax",
+            "header": "LysanderMagicMax"
+        },
+        {
+            "key": "LysanderMagicLvl",
+            "header": "LysanderMagicLvl"
+        },
+        {
+            "key": "DrognanMin",
+            "header": "DrognanMin"
+        },
+        {
+            "key": "DrognanMax",
+            "header": "DrognanMax"
+        },
+        {
+            "key": "DrognanMagicMin",
+            "header": "DrognanMagicMin"
+        },
+        {
+            "key": "DrognanMagicMax",
+            "header": "DrognanMagicMax"
+        },
+        {
+            "key": "DrognanMagicLvl",
+            "header": "DrognanMagicLvl"
+        },
+        {
+            "key": "HratliMin",
+            "header": "HratliMin"
+        },
+        {
+            "key": "HratliMax",
+            "header": "HratliMax"
+        },
+        {
+            "key": "HratliMagicMin",
+            "header": "HratliMagicMin"
+        },
+        {
+            "key": "HratliMagicMax",
+            "header": "HratliMagicMax"
+        },
+        {
+            "key": "HratliMagicLvl",
+            "header": "HratliMagicLvl"
+        },
+        {
+            "key": "AlkorMin",
+            "header": "AlkorMin"
+        },
+        {
+            "key": "AlkorMax",
+            "header": "AlkorMax"
+        },
+        {
+            "key": "AlkorMagicMin",
+            "header": "AlkorMagicMin"
+        },
+        {
+            "key": "AlkorMagicMax",
+            "header": "AlkorMagicMax"
+        },
+        {
+            "key": "AlkorMagicLvl",
+            "header": "AlkorMagicLvl"
+        },
+        {
+            "key": "OrmusMin",
+            "header": "OrmusMin"
+        },
+        {
+            "key": "OrmusMax",
+            "header": "OrmusMax"
+        },
+        {
+            "key": "OrmusMagicMin",
+            "header": "OrmusMagicMin"
+        },
+        {
+            "key": "OrmusMagicMax",
+            "header": "OrmusMagicMax"
+        },
+        {
+            "key": "OrmusMagicLvl",
+            "header": "OrmusMagicLvl"
+        },
+        {
+            "key": "ElzixMin",
+            "header": "ElzixMin"
+        },
+        {
+            "key": "ElzixMax",
+            "header": "ElzixMax"
+        },
+        {
+            "key": "ElzixMagicMin",
+            "header": "ElzixMagicMin"
+        },
+        {
+            "key": "ElzixMagicMax",
+            "header": "ElzixMagicMax"
+        },
+        {
+            "key": "ElzixMagicLvl",
+            "header": "ElzixMagicLvl"
+        },
+        {
+            "key": "AshearaMin",
+            "header": "AshearaMin"
+        },
+        {
+            "key": "AshearaMax",
+            "header": "AshearaMax"
+        },
+        {
+            "key": "AshearaMagicMin",
+            "header": "AshearaMagicMin"
+        },
+        {
+            "key": "AshearaMagicMax",
+            "header": "AshearaMagicMax"
+        },
+        {
+            "key": "AshearaMagicLvl",
+            "header": "AshearaMagicLvl"
+        },
+        {
+            "key": "CainMin",
+            "header": "CainMin"
+        },
+        {
+            "key": "CainMax",
+            "header": "CainMax"
+        },
+        {
+            "key": "CainMagicMin",
+            "header": "CainMagicMin"
+        },
+        {
+            "key": "CainMagicMax",
+            "header": "CainMagicMax"
+        },
+        {
+            "key": "CainMagicLvl",
+            "header": "CainMagicLvl"
+        },
+        {
+            "key": "HalbuMin",
+            "header": "HalbuMin"
+        },
+        {
+            "key": "HalbuMax",
+            "header": "HalbuMax"
+        },
+        {
+            "key": "HalbuMagicMin",
+            "header": "HalbuMagicMin"
+        },
+        {
+            "key": "HalbuMagicMax",
+            "header": "HalbuMagicMax"
+        },
+        {
+            "key": "HalbuMagicLvl",
+            "header": "HalbuMagicLvl"
+        },
+        {
+            "key": "JamellaMin",
+            "header": "JamellaMin"
+        },
+        {
+            "key": "JamellaMax",
+            "header": "JamellaMax"
+        },
+        {
+            "key": "JamellaMagicMin",
+            "header": "JamellaMagicMin"
+        },
+        {
+            "key": "JamellaMagicMax",
+            "header": "JamellaMagicMax"
+        },
+        {
+            "key": "JamellaMagicLvl",
+            "header": "JamellaMagicLvl"
+        },
+        {
+            "key": "LarzukMin",
+            "header": "LarzukMin"
+        },
+        {
+            "key": "LarzukMax",
+            "header": "LarzukMax"
+        },
+        {
+            "key": "LarzukMagicMin",
+            "header": "LarzukMagicMin"
+        },
+        {
+            "key": "LarzukMagicMax",
+            "header": "LarzukMagicMax"
+        },
+        {
+            "key": "LarzukMagicLvl",
+            "header": "LarzukMagicLvl"
+        },
+        {
+            "key": "MalahMin",
+            "header": "MalahMin"
+        },
+        {
+            "key": "MalahMax",
+            "header": "MalahMax"
+        },
+        {
+            "key": "MalahMagicMin",
+            "header": "MalahMagicMin"
+        },
+        {
+            "key": "MalahMagicMax",
+            "header": "MalahMagicMax"
+        },
+        {
+            "key": "MalahMagicLvl",
+            "header": "MalahMagicLvl"
+        },
+        {
+            "key": "AnyaMin",
+            "header": "AnyaMin"
+        },
+        {
+            "key": "AnyaMax",
+            "header": "AnyaMax"
+        },
+        {
+            "key": "AnyaMagicMin",
+            "header": "AnyaMagicMin"
+        },
+        {
+            "key": "AnyaMagicMax",
+            "header": "AnyaMagicMax"
+        },
+        {
+            "key": "AnyaMagicLvl",
+            "header": "AnyaMagicLvl"
+        },
+        {
+            "key": "Transform",
+            "header": "Transform"
+        },
+        {
+            "key": "InvTrans",
+            "header": "InvTrans"
+        },
+        {
+            "key": "SkipName",
+            "header": "SkipName"
+        },
+        {
+            "key": "NightmareUpgrade",
+            "header": "NightmareUpgrade"
+        },
+        {
+            "key": "HellUpgrade",
+            "header": "HellUpgrade"
+        },
+        {
+            "key": "Nameable",
+            "header": "Nameable"
+        },
+        {
+            "key": "PermStoreItem",
+            "header": "PermStoreItem"
+        },
+        {
+            "key": "UICatOverride",
+            "header": "UICatOverride"
+        },
+        {
+            "key": "diablocloneweight",
+            "header": "diablocloneweight"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 218,
+    "identitySha256": "5ebffa0d8bd1053f2fe6c183a536e8ee8d0a995c251af969b624641b8eec088e"
+}

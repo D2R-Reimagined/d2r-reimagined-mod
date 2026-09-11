@@ -1,0 +1,605 @@
+{
+    "schemaVersion": 1,
+    "name": "objects",
+    "targets": [
+        "global/excel/objects.txt",
+        "global/excel/base/objects.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "Class",
+            "header": "Class"
+        },
+        {
+            "key": "Name",
+            "header": "Name"
+        },
+        {
+            "key": "*Description",
+            "header": "*Description"
+        },
+        {
+            "key": "*ID",
+            "header": "*ID"
+        },
+        {
+            "key": "Token",
+            "header": "Token"
+        },
+        {
+            "key": "Selectable0",
+            "header": "Selectable0"
+        },
+        {
+            "key": "Selectable1",
+            "header": "Selectable1"
+        },
+        {
+            "key": "Selectable2",
+            "header": "Selectable2"
+        },
+        {
+            "key": "Selectable3",
+            "header": "Selectable3"
+        },
+        {
+            "key": "Selectable4",
+            "header": "Selectable4"
+        },
+        {
+            "key": "Selectable5",
+            "header": "Selectable5"
+        },
+        {
+            "key": "Selectable6",
+            "header": "Selectable6"
+        },
+        {
+            "key": "Selectable7",
+            "header": "Selectable7"
+        },
+        {
+            "key": "SizeX",
+            "header": "SizeX"
+        },
+        {
+            "key": "SizeY",
+            "header": "SizeY"
+        },
+        {
+            "key": "FrameCnt0",
+            "header": "FrameCnt0"
+        },
+        {
+            "key": "FrameCnt1",
+            "header": "FrameCnt1"
+        },
+        {
+            "key": "FrameCnt2",
+            "header": "FrameCnt2"
+        },
+        {
+            "key": "FrameCnt3",
+            "header": "FrameCnt3"
+        },
+        {
+            "key": "FrameCnt4",
+            "header": "FrameCnt4"
+        },
+        {
+            "key": "FrameCnt5",
+            "header": "FrameCnt5"
+        },
+        {
+            "key": "FrameCnt6",
+            "header": "FrameCnt6"
+        },
+        {
+            "key": "FrameCnt7",
+            "header": "FrameCnt7"
+        },
+        {
+            "key": "FrameDelta0",
+            "header": "FrameDelta0"
+        },
+        {
+            "key": "FrameDelta1",
+            "header": "FrameDelta1"
+        },
+        {
+            "key": "FrameDelta2",
+            "header": "FrameDelta2"
+        },
+        {
+            "key": "FrameDelta3",
+            "header": "FrameDelta3"
+        },
+        {
+            "key": "FrameDelta4",
+            "header": "FrameDelta4"
+        },
+        {
+            "key": "FrameDelta5",
+            "header": "FrameDelta5"
+        },
+        {
+            "key": "FrameDelta6",
+            "header": "FrameDelta6"
+        },
+        {
+            "key": "FrameDelta7",
+            "header": "FrameDelta7"
+        },
+        {
+            "key": "CycleAnim0",
+            "header": "CycleAnim0"
+        },
+        {
+            "key": "CycleAnim1",
+            "header": "CycleAnim1"
+        },
+        {
+            "key": "CycleAnim2",
+            "header": "CycleAnim2"
+        },
+        {
+            "key": "CycleAnim3",
+            "header": "CycleAnim3"
+        },
+        {
+            "key": "CycleAnim4",
+            "header": "CycleAnim4"
+        },
+        {
+            "key": "CycleAnim5",
+            "header": "CycleAnim5"
+        },
+        {
+            "key": "CycleAnim6",
+            "header": "CycleAnim6"
+        },
+        {
+            "key": "CycleAnim7",
+            "header": "CycleAnim7"
+        },
+        {
+            "key": "Lit0",
+            "header": "Lit0"
+        },
+        {
+            "key": "Lit1",
+            "header": "Lit1"
+        },
+        {
+            "key": "Lit2",
+            "header": "Lit2"
+        },
+        {
+            "key": "Lit3",
+            "header": "Lit3"
+        },
+        {
+            "key": "Lit4",
+            "header": "Lit4"
+        },
+        {
+            "key": "Lit5",
+            "header": "Lit5"
+        },
+        {
+            "key": "Lit6",
+            "header": "Lit6"
+        },
+        {
+            "key": "Lit7",
+            "header": "Lit7"
+        },
+        {
+            "key": "BlocksLight0",
+            "header": "BlocksLight0"
+        },
+        {
+            "key": "BlocksLight1",
+            "header": "BlocksLight1"
+        },
+        {
+            "key": "BlocksLight2",
+            "header": "BlocksLight2"
+        },
+        {
+            "key": "BlocksLight3",
+            "header": "BlocksLight3"
+        },
+        {
+            "key": "BlocksLight4",
+            "header": "BlocksLight4"
+        },
+        {
+            "key": "BlocksLight5",
+            "header": "BlocksLight5"
+        },
+        {
+            "key": "BlocksLight6",
+            "header": "BlocksLight6"
+        },
+        {
+            "key": "BlocksLight7",
+            "header": "BlocksLight7"
+        },
+        {
+            "key": "HasCollision0",
+            "header": "HasCollision0"
+        },
+        {
+            "key": "HasCollision1",
+            "header": "HasCollision1"
+        },
+        {
+            "key": "HasCollision2",
+            "header": "HasCollision2"
+        },
+        {
+            "key": "HasCollision3",
+            "header": "HasCollision3"
+        },
+        {
+            "key": "HasCollision4",
+            "header": "HasCollision4"
+        },
+        {
+            "key": "HasCollision5",
+            "header": "HasCollision5"
+        },
+        {
+            "key": "HasCollision6",
+            "header": "HasCollision6"
+        },
+        {
+            "key": "HasCollision7",
+            "header": "HasCollision7"
+        },
+        {
+            "key": "IsAttackable0",
+            "header": "IsAttackable0"
+        },
+        {
+            "key": "Start0",
+            "header": "Start0"
+        },
+        {
+            "key": "Start1",
+            "header": "Start1"
+        },
+        {
+            "key": "Start2",
+            "header": "Start2"
+        },
+        {
+            "key": "Start3",
+            "header": "Start3"
+        },
+        {
+            "key": "Start4",
+            "header": "Start4"
+        },
+        {
+            "key": "Start5",
+            "header": "Start5"
+        },
+        {
+            "key": "Start6",
+            "header": "Start6"
+        },
+        {
+            "key": "Start7",
+            "header": "Start7"
+        },
+        {
+            "key": "EnvEffect",
+            "header": "EnvEffect"
+        },
+        {
+            "key": "IsDoor",
+            "header": "IsDoor"
+        },
+        {
+            "key": "BlocksVis",
+            "header": "BlocksVis"
+        },
+        {
+            "key": "Orientation",
+            "header": "Orientation"
+        },
+        {
+            "key": "OrderFlag0",
+            "header": "OrderFlag0"
+        },
+        {
+            "key": "OrderFlag1",
+            "header": "OrderFlag1"
+        },
+        {
+            "key": "OrderFlag2",
+            "header": "OrderFlag2"
+        },
+        {
+            "key": "OrderFlag3",
+            "header": "OrderFlag3"
+        },
+        {
+            "key": "OrderFlag4",
+            "header": "OrderFlag4"
+        },
+        {
+            "key": "OrderFlag5",
+            "header": "OrderFlag5"
+        },
+        {
+            "key": "OrderFlag6",
+            "header": "OrderFlag6"
+        },
+        {
+            "key": "OrderFlag7",
+            "header": "OrderFlag7"
+        },
+        {
+            "key": "PreOperate",
+            "header": "PreOperate"
+        },
+        {
+            "key": "Mode0",
+            "header": "Mode0"
+        },
+        {
+            "key": "Mode1",
+            "header": "Mode1"
+        },
+        {
+            "key": "Mode2",
+            "header": "Mode2"
+        },
+        {
+            "key": "Mode3",
+            "header": "Mode3"
+        },
+        {
+            "key": "Mode4",
+            "header": "Mode4"
+        },
+        {
+            "key": "Mode5",
+            "header": "Mode5"
+        },
+        {
+            "key": "Mode6",
+            "header": "Mode6"
+        },
+        {
+            "key": "Mode7",
+            "header": "Mode7"
+        },
+        {
+            "key": "Yoffset",
+            "header": "Yoffset"
+        },
+        {
+            "key": "Xoffset",
+            "header": "Xoffset"
+        },
+        {
+            "key": "Draw",
+            "header": "Draw"
+        },
+        {
+            "key": "Red",
+            "header": "Red"
+        },
+        {
+            "key": "Green",
+            "header": "Green"
+        },
+        {
+            "key": "Blue",
+            "header": "Blue"
+        },
+        {
+            "key": "HD",
+            "header": "HD"
+        },
+        {
+            "key": "TR",
+            "header": "TR"
+        },
+        {
+            "key": "LG",
+            "header": "LG"
+        },
+        {
+            "key": "RA",
+            "header": "RA"
+        },
+        {
+            "key": "LA",
+            "header": "LA"
+        },
+        {
+            "key": "RH",
+            "header": "RH"
+        },
+        {
+            "key": "LH",
+            "header": "LH"
+        },
+        {
+            "key": "SH",
+            "header": "SH"
+        },
+        {
+            "key": "S1",
+            "header": "S1"
+        },
+        {
+            "key": "S2",
+            "header": "S2"
+        },
+        {
+            "key": "S3",
+            "header": "S3"
+        },
+        {
+            "key": "S4",
+            "header": "S4"
+        },
+        {
+            "key": "S5",
+            "header": "S5"
+        },
+        {
+            "key": "S6",
+            "header": "S6"
+        },
+        {
+            "key": "S7",
+            "header": "S7"
+        },
+        {
+            "key": "S8",
+            "header": "S8"
+        },
+        {
+            "key": "TotalPieces",
+            "header": "TotalPieces"
+        },
+        {
+            "key": "SubClass",
+            "header": "SubClass"
+        },
+        {
+            "key": "Xspace",
+            "header": "Xspace"
+        },
+        {
+            "key": "Yspace",
+            "header": "Yspace"
+        },
+        {
+            "key": "NameOffset",
+            "header": "NameOffset"
+        },
+        {
+            "key": "MonsterOK",
+            "header": "MonsterOK"
+        },
+        {
+            "key": "ShrineFunction",
+            "header": "ShrineFunction"
+        },
+        {
+            "key": "Restore",
+            "header": "Restore"
+        },
+        {
+            "key": "Parm0",
+            "header": "Parm0"
+        },
+        {
+            "key": "Parm1",
+            "header": "Parm1"
+        },
+        {
+            "key": "Parm2",
+            "header": "Parm2"
+        },
+        {
+            "key": "Parm3",
+            "header": "Parm3"
+        },
+        {
+            "key": "Parm4",
+            "header": "Parm4"
+        },
+        {
+            "key": "Lockable",
+            "header": "Lockable"
+        },
+        {
+            "key": "Gore",
+            "header": "Gore"
+        },
+        {
+            "key": "Sync",
+            "header": "Sync"
+        },
+        {
+            "key": "Damage",
+            "header": "Damage"
+        },
+        {
+            "key": "Overlay",
+            "header": "Overlay"
+        },
+        {
+            "key": "CollisionSubst",
+            "header": "CollisionSubst"
+        },
+        {
+            "key": "Left",
+            "header": "Left"
+        },
+        {
+            "key": "Top",
+            "header": "Top"
+        },
+        {
+            "key": "Width",
+            "header": "Width"
+        },
+        {
+            "key": "Height",
+            "header": "Height"
+        },
+        {
+            "key": "OperateFn",
+            "header": "OperateFn"
+        },
+        {
+            "key": "PopulateFn",
+            "header": "PopulateFn"
+        },
+        {
+            "key": "InitFn",
+            "header": "InitFn"
+        },
+        {
+            "key": "ClientFn",
+            "header": "ClientFn"
+        },
+        {
+            "key": "RestoreVirgins",
+            "header": "RestoreVirgins"
+        },
+        {
+            "key": "BlockMissile",
+            "header": "BlockMissile"
+        },
+        {
+            "key": "DrawUnder",
+            "header": "DrawUnder"
+        },
+        {
+            "key": "OpenWarp",
+            "header": "OpenWarp"
+        },
+        {
+            "key": "AutoMap",
+            "header": "AutoMap"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 588,
+    "identitySha256": "3f3e340ea47902adebdef6367a2b86e795131f619824182f4f1b590679e48ada"
+}

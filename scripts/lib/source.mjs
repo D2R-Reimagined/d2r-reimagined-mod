@@ -113,12 +113,23 @@ export function loadTable(directory) {
     for (const column of schema.columns) assert(typeof column.key === 'string' && typeof column.header === 'string' && !/[\t\r\n]/.test(column.header), 'Invalid schema column.');
     assert(['\n', '\r\n', '\r'].includes(schema.newline), 'Invalid TSV newline.');
     assert(Array.isArray(schema.targets) && schema.targets.length > 0, 'Missing table targets.');
-    const records = files(path.join(directory, 'records')).map(file => {
-        assert(file.endsWith('.json'), `Unexpected record file: ${file}`);
-        const record = readJson(file);
-        assert(path.basename(file).startsWith(record.sourceId + '-'), `${file}: filename must retain sourceId prefix.`);
-        return { ...record, file };
-    }).sort((a, b) => a.order - b.order);
+    const recordsFile = inside(directory, 'records.json');
+    const recordDirectory = path.join(directory, 'records');
+    assert(fs.existsSync(recordsFile) !== fs.existsSync(recordDirectory), `${schema.name}: missing or two record sources; keep records.json or records/, not both.`);
+    let records;
+    if (fs.existsSync(recordsFile)) {
+        const values = readJson(recordsFile);
+        assert(Array.isArray(values), `${recordsFile}: expected an array of records.`);
+        records = values.map(record => ({ ...record, file: recordsFile }));
+    } else {
+        records = files(recordDirectory).map(file => {
+            assert(file.endsWith('.json'), `Unexpected record file: ${file}`);
+            const record = readJson(file);
+            assert(path.basename(file).startsWith(record.sourceId + '-'), `${file}: filename must retain sourceId prefix.`);
+            return { ...record, file };
+        });
+    }
+    records.sort((a, b) => a.order - b.order);
     records.forEach((record, index) => {
         assert(record.order === index, `${schema.name}: missing or duplicate row slot ${index}. Keep disabled/separator rows; append new slots.`);
         cellsFromRecord(record, schema);
@@ -155,7 +166,7 @@ export function loadTable(directory) {
             assert(JSON.stringify(ids) === JSON.stringify(schema.legacyDuplicateIdentityTuples?.[key]), `${schema.name}: new duplicate identity (${identityColumns.join(', ')})=${key}.`);
         }
     }
-    return { schema, records };
+    return { schema, records, recordsFile: fs.existsSync(recordsFile) ? recordsFile : null };
 }
 
 export function loadTables(root) {
@@ -229,12 +240,19 @@ export function loadStrings(root, mode) {
         assert(schema.schemaVersion === 1 && schema.category === category, `Invalid string schema: ${category}`);
         assert(Array.isArray(schema.locales) && schema.locales.join('|') === locales.join('|'), `Preserve all supported locales in ${category}.`);
         const keys = new Set();
-        const entries = files(path.join(location, 'records')).map(file => ({ record: readJson(file), file }))
+        const recordsFile = inside(location, 'records.json');
+        const recordDirectory = path.join(location, 'records');
+        const consolidated = fs.existsSync(recordsFile);
+        assert(consolidated !== fs.existsSync(recordDirectory), `${category}: missing or two record sources; keep records.json or records/, not both.`);
+        const values = consolidated ? readJson(recordsFile) : null;
+        assert(!consolidated || Array.isArray(values), `${recordsFile}: expected an array of records.`);
+        const entries = (consolidated ? values.map(record => ({ record, file: recordsFile }))
+            : files(recordDirectory).map(file => ({ record: readJson(file), file })))
             .sort((a, b) => a.record.order - b.record.order);
         const changes = [];
         const rows = entries.map(({ record, file }, index) => {
             assert(record.order === index, `${file}: missing or duplicate string order ${index}.`);
-            assert(path.basename(file).startsWith(`string-${String(record.id).padStart(5, '0')}-`), `${file}: filename/ID mismatch.`);
+            assert(consolidated || path.basename(file).startsWith(`string-${String(record.id).padStart(5, '0')}-`), `${file}: filename/ID mismatch.`);
             assert(!globalIds.has(record.id), `${file}: duplicate numeric string ID ${record.id}.`);
             assert(!keys.has(record.Key), `${file}: duplicate key ${record.Key} in ${category}.`);
             globalIds.add(record.id);
@@ -244,6 +262,34 @@ export function loadStrings(root, mode) {
             return resolved.output;
         });
         return { schema, rows, changes };
+    });
+}
+
+export function replaceJson(file, value) {
+    const temporary = file + '.tmp';
+    // A leftover temporary file is evidence of an interrupted write; never overwrite it.
+    fs.writeFileSync(temporary, JSON.stringify(value, null, 4) + '\n', { flag: 'wx' });
+    try {
+        fs.renameSync(temporary, file);
+    } finally {
+        if (fs.existsSync(temporary)) fs.unlinkSync(temporary);
+    }
+}
+
+// Plain runtime text is separate from TSV tables: no invented header or cell types.
+export function encodeTextAsset(asset) {
+    assert(asset.schemaVersion === 1 && typeof asset.content === 'string', 'Invalid text asset.');
+    assert(Object.keys(asset).every(key => ['schemaVersion', 'target', 'content'].includes(key)), 'Unknown text asset field.');
+    assert(asset.target === 'global/dataversionbuild.txt', `Unsupported text asset target: ${asset.target}`);
+    assert(/^\d+(?:\r\n|\n|\r)?$/.test(asset.content), 'Data version must contain digits and an optional final newline.');
+    return Buffer.from(asset.content, 'utf8');
+}
+
+export function loadTextAssets(root) {
+    return files(path.join(root, 'source/text')).map(file => {
+        assert(file.endsWith('.json'), `Unexpected text source: ${file}`);
+        const asset = readJson(file);
+        return { target: asset.target, content: encodeTextAsset(asset), owner: posix(path.relative(root, file)) };
     });
 }
 

@@ -16,9 +16,9 @@ Want to be apart of this mission? Join our Discord Server https://discord.gg/9zZ
 3) Open up a pull request targeting the `next` branch.
 4) Reach out to me on discord (collin.h) to discuss your changes.
 
-## JSON source pilot
+## JSON source workflow
 
-On this branch, unique items, treasure classes, item ratios, experience, and all eight translation catalogs are authored as individual JSON records under `source/`. Remaining tables and assets stay in `data/`. Standard and D2RLoader outputs are generated from the same source. The D2RLoader profile currently adds its metadata file; no table-value overrides are enabled yet.
+All 55 Excel table types and all eight translation catalogs are authored in consolidated JSON files under `source/`. Each table or catalog has a `records.json` array and a separate `schema.json`. Identical main/base banks share records; the differing treasure-class banks remain separate, giving 56 table sources. `source/text/dataversionbuild.json` generates the plain runtime version TXT. Other game assets stay in `data/`. Standard and D2RLoader outputs are generated from the same source. The D2RLoader profile currently adds its metadata file; no table-value overrides are enabled yet.
 
 Requires Node.js 22 or later, with no dependency installation:
 
@@ -29,7 +29,7 @@ node scripts/check-strings.mjs --profile standard
 node --test scripts/tests/*.test.mjs
 ```
 
-Inspect `source/tables/uniqueitems/records/row-00000-the-gnasher.json` for an editable item. Full mod output is written to `build/standard/mods/Reimagined/` and `build/d2rl/mods/Reimagined/`. **Install from generated output; the repository's `data/` alone is no longer a complete mod.**
+Open `source/tables/uniqueitems/records.json` and search for `The Gnasher` for an editable item. Full mod output is written to `build/standard/mods/Reimagined/` and `build/d2rl/mods/Reimagined/`. **Install from generated output; the repository's `data/` alone is no longer a complete mod.**
 
 See [the source workflow](docs/source-workflow.md) for runtime overrides, compact translations, spreadsheet export/import, migration checks, and the limits of the current string measurements.
 

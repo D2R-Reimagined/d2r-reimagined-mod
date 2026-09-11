@@ -1,0 +1,769 @@
+{
+    "schemaVersion": 1,
+    "name": "levels",
+    "targets": [
+        "global/excel/levels.txt",
+        "global/excel/base/levels.txt"
+    ],
+    "identityColumns": [],
+    "identityPolicy": "Physical row slots are preserved. Table-specific runtime identity and reference rules are not yet defined.",
+    "columns": [
+        {
+            "key": "Name",
+            "header": "Name"
+        },
+        {
+            "key": "*StringName",
+            "header": "*StringName"
+        },
+        {
+            "key": "Id",
+            "header": "Id"
+        },
+        {
+            "key": "Pal",
+            "header": "Pal"
+        },
+        {
+            "key": "Act",
+            "header": "Act"
+        },
+        {
+            "key": "QuestFlag",
+            "header": "QuestFlag"
+        },
+        {
+            "key": "QuestFlagEx",
+            "header": "QuestFlagEx"
+        },
+        {
+            "key": "Layer",
+            "header": "Layer"
+        },
+        {
+            "key": "SizeX",
+            "header": "SizeX"
+        },
+        {
+            "key": "SizeY",
+            "header": "SizeY"
+        },
+        {
+            "key": "SizeX(N)",
+            "header": "SizeX(N)"
+        },
+        {
+            "key": "SizeY(N)",
+            "header": "SizeY(N)"
+        },
+        {
+            "key": "SizeX(H)",
+            "header": "SizeX(H)"
+        },
+        {
+            "key": "SizeY(H)",
+            "header": "SizeY(H)"
+        },
+        {
+            "key": "OffsetX",
+            "header": "OffsetX"
+        },
+        {
+            "key": "OffsetY",
+            "header": "OffsetY"
+        },
+        {
+            "key": "CompletionTotalRoomsOverride",
+            "header": "CompletionTotalRoomsOverride"
+        },
+        {
+            "key": "Depend",
+            "header": "Depend"
+        },
+        {
+            "key": "Teleport",
+            "header": "Teleport"
+        },
+        {
+            "key": "Rain",
+            "header": "Rain"
+        },
+        {
+            "key": "Mud",
+            "header": "Mud"
+        },
+        {
+            "key": "NoPer",
+            "header": "NoPer"
+        },
+        {
+            "key": "LOSDraw",
+            "header": "LOSDraw"
+        },
+        {
+            "key": "FloorFilter",
+            "header": "FloorFilter"
+        },
+        {
+            "key": "BlankScreen",
+            "header": "BlankScreen"
+        },
+        {
+            "key": "DrawEdges",
+            "header": "DrawEdges"
+        },
+        {
+            "key": "*IsInside",
+            "header": "*IsInside"
+        },
+        {
+            "key": "DrlgType",
+            "header": "DrlgType"
+        },
+        {
+            "key": "LevelType",
+            "header": "LevelType"
+        },
+        {
+            "key": "SubType",
+            "header": "SubType"
+        },
+        {
+            "key": "SubTheme",
+            "header": "SubTheme"
+        },
+        {
+            "key": "SubWaypoint",
+            "header": "SubWaypoint"
+        },
+        {
+            "key": "SubShrine",
+            "header": "SubShrine"
+        },
+        {
+            "key": "Vis0",
+            "header": "Vis0"
+        },
+        {
+            "key": "Vis1",
+            "header": "Vis1"
+        },
+        {
+            "key": "Vis2",
+            "header": "Vis2"
+        },
+        {
+            "key": "Vis3",
+            "header": "Vis3"
+        },
+        {
+            "key": "Vis4",
+            "header": "Vis4"
+        },
+        {
+            "key": "Vis5",
+            "header": "Vis5"
+        },
+        {
+            "key": "Vis6",
+            "header": "Vis6"
+        },
+        {
+            "key": "Vis7",
+            "header": "Vis7"
+        },
+        {
+            "key": "Warp0",
+            "header": "Warp0"
+        },
+        {
+            "key": "Warp1",
+            "header": "Warp1"
+        },
+        {
+            "key": "Warp2",
+            "header": "Warp2"
+        },
+        {
+            "key": "Warp3",
+            "header": "Warp3"
+        },
+        {
+            "key": "Warp4",
+            "header": "Warp4"
+        },
+        {
+            "key": "Warp5",
+            "header": "Warp5"
+        },
+        {
+            "key": "Warp6",
+            "header": "Warp6"
+        },
+        {
+            "key": "Warp7",
+            "header": "Warp7"
+        },
+        {
+            "key": "Intensity",
+            "header": "Intensity"
+        },
+        {
+            "key": "Red",
+            "header": "Red"
+        },
+        {
+            "key": "Green",
+            "header": "Green"
+        },
+        {
+            "key": "Blue",
+            "header": "Blue"
+        },
+        {
+            "key": "Portal",
+            "header": "Portal"
+        },
+        {
+            "key": "Position",
+            "header": "Position"
+        },
+        {
+            "key": "SaveMonsters",
+            "header": "SaveMonsters"
+        },
+        {
+            "key": "Quest",
+            "header": "Quest"
+        },
+        {
+            "key": "WarpDist",
+            "header": "WarpDist"
+        },
+        {
+            "key": "MonLvl",
+            "header": "MonLvl"
+        },
+        {
+            "key": "MonLvl(N)",
+            "header": "MonLvl(N)"
+        },
+        {
+            "key": "MonLvl(H)",
+            "header": "MonLvl(H)"
+        },
+        {
+            "key": "MonLvlEx",
+            "header": "MonLvlEx"
+        },
+        {
+            "key": "MonLvlEx(N)",
+            "header": "MonLvlEx(N)"
+        },
+        {
+            "key": "MonLvlEx(H)",
+            "header": "MonLvlEx(H)"
+        },
+        {
+            "key": "MonDen",
+            "header": "MonDen"
+        },
+        {
+            "key": "MonDen(N)",
+            "header": "MonDen(N)"
+        },
+        {
+            "key": "MonDen(H)",
+            "header": "MonDen(H)"
+        },
+        {
+            "key": "MonUMin",
+            "header": "MonUMin"
+        },
+        {
+            "key": "MonUMax",
+            "header": "MonUMax"
+        },
+        {
+            "key": "MonUMin(N)",
+            "header": "MonUMin(N)"
+        },
+        {
+            "key": "MonUMax(N)",
+            "header": "MonUMax(N)"
+        },
+        {
+            "key": "MonUMin(H)",
+            "header": "MonUMin(H)"
+        },
+        {
+            "key": "MonUMax(H)",
+            "header": "MonUMax(H)"
+        },
+        {
+            "key": "MonWndr",
+            "header": "MonWndr"
+        },
+        {
+            "key": "MonSpcWalk",
+            "header": "MonSpcWalk"
+        },
+        {
+            "key": "NumMon",
+            "header": "NumMon"
+        },
+        {
+            "key": "mon1",
+            "header": "mon1"
+        },
+        {
+            "key": "mon2",
+            "header": "mon2"
+        },
+        {
+            "key": "mon3",
+            "header": "mon3"
+        },
+        {
+            "key": "mon4",
+            "header": "mon4"
+        },
+        {
+            "key": "mon5",
+            "header": "mon5"
+        },
+        {
+            "key": "mon6",
+            "header": "mon6"
+        },
+        {
+            "key": "mon7",
+            "header": "mon7"
+        },
+        {
+            "key": "mon8",
+            "header": "mon8"
+        },
+        {
+            "key": "mon9",
+            "header": "mon9"
+        },
+        {
+            "key": "mon10",
+            "header": "mon10"
+        },
+        {
+            "key": "mon11",
+            "header": "mon11"
+        },
+        {
+            "key": "mon12",
+            "header": "mon12"
+        },
+        {
+            "key": "mon13",
+            "header": "mon13"
+        },
+        {
+            "key": "mon14",
+            "header": "mon14"
+        },
+        {
+            "key": "mon15",
+            "header": "mon15"
+        },
+        {
+            "key": "mon16",
+            "header": "mon16"
+        },
+        {
+            "key": "mon17",
+            "header": "mon17"
+        },
+        {
+            "key": "mon18",
+            "header": "mon18"
+        },
+        {
+            "key": "mon19",
+            "header": "mon19"
+        },
+        {
+            "key": "mon20",
+            "header": "mon20"
+        },
+        {
+            "key": "mon21",
+            "header": "mon21"
+        },
+        {
+            "key": "mon22",
+            "header": "mon22"
+        },
+        {
+            "key": "mon23",
+            "header": "mon23"
+        },
+        {
+            "key": "mon24",
+            "header": "mon24"
+        },
+        {
+            "key": "mon25",
+            "header": "mon25"
+        },
+        {
+            "key": "rangedspawn",
+            "header": "rangedspawn"
+        },
+        {
+            "key": "nmon1",
+            "header": "nmon1"
+        },
+        {
+            "key": "nmon2",
+            "header": "nmon2"
+        },
+        {
+            "key": "nmon3",
+            "header": "nmon3"
+        },
+        {
+            "key": "nmon4",
+            "header": "nmon4"
+        },
+        {
+            "key": "nmon5",
+            "header": "nmon5"
+        },
+        {
+            "key": "nmon6",
+            "header": "nmon6"
+        },
+        {
+            "key": "nmon7",
+            "header": "nmon7"
+        },
+        {
+            "key": "nmon8",
+            "header": "nmon8"
+        },
+        {
+            "key": "nmon9",
+            "header": "nmon9"
+        },
+        {
+            "key": "nmon10",
+            "header": "nmon10"
+        },
+        {
+            "key": "nmon11",
+            "header": "nmon11"
+        },
+        {
+            "key": "nmon12",
+            "header": "nmon12"
+        },
+        {
+            "key": "nmon13",
+            "header": "nmon13"
+        },
+        {
+            "key": "nmon14",
+            "header": "nmon14"
+        },
+        {
+            "key": "nmon15",
+            "header": "nmon15"
+        },
+        {
+            "key": "nmon16",
+            "header": "nmon16"
+        },
+        {
+            "key": "nmon17",
+            "header": "nmon17"
+        },
+        {
+            "key": "nmon18",
+            "header": "nmon18"
+        },
+        {
+            "key": "nmon19",
+            "header": "nmon19"
+        },
+        {
+            "key": "nmon20",
+            "header": "nmon20"
+        },
+        {
+            "key": "nmon21",
+            "header": "nmon21"
+        },
+        {
+            "key": "nmon22",
+            "header": "nmon22"
+        },
+        {
+            "key": "nmon23",
+            "header": "nmon23"
+        },
+        {
+            "key": "nmon24",
+            "header": "nmon24"
+        },
+        {
+            "key": "nmon25",
+            "header": "nmon25"
+        },
+        {
+            "key": "umon1",
+            "header": "umon1"
+        },
+        {
+            "key": "umon2",
+            "header": "umon2"
+        },
+        {
+            "key": "umon3",
+            "header": "umon3"
+        },
+        {
+            "key": "umon4",
+            "header": "umon4"
+        },
+        {
+            "key": "umon5",
+            "header": "umon5"
+        },
+        {
+            "key": "umon6",
+            "header": "umon6"
+        },
+        {
+            "key": "umon7",
+            "header": "umon7"
+        },
+        {
+            "key": "umon8",
+            "header": "umon8"
+        },
+        {
+            "key": "umon9",
+            "header": "umon9"
+        },
+        {
+            "key": "umon10",
+            "header": "umon10"
+        },
+        {
+            "key": "umon11",
+            "header": "umon11"
+        },
+        {
+            "key": "umon12",
+            "header": "umon12"
+        },
+        {
+            "key": "umon13",
+            "header": "umon13"
+        },
+        {
+            "key": "umon14",
+            "header": "umon14"
+        },
+        {
+            "key": "umon15",
+            "header": "umon15"
+        },
+        {
+            "key": "umon16",
+            "header": "umon16"
+        },
+        {
+            "key": "umon17",
+            "header": "umon17"
+        },
+        {
+            "key": "umon18",
+            "header": "umon18"
+        },
+        {
+            "key": "umon19",
+            "header": "umon19"
+        },
+        {
+            "key": "umon20",
+            "header": "umon20"
+        },
+        {
+            "key": "umon21",
+            "header": "umon21"
+        },
+        {
+            "key": "umon22",
+            "header": "umon22"
+        },
+        {
+            "key": "umon23",
+            "header": "umon23"
+        },
+        {
+            "key": "umon24",
+            "header": "umon24"
+        },
+        {
+            "key": "umon25",
+            "header": "umon25"
+        },
+        {
+            "key": "cmon1",
+            "header": "cmon1"
+        },
+        {
+            "key": "cmon2",
+            "header": "cmon2"
+        },
+        {
+            "key": "cmon3",
+            "header": "cmon3"
+        },
+        {
+            "key": "cmon4",
+            "header": "cmon4"
+        },
+        {
+            "key": "cpct1",
+            "header": "cpct1"
+        },
+        {
+            "key": "cpct2",
+            "header": "cpct2"
+        },
+        {
+            "key": "cpct3",
+            "header": "cpct3"
+        },
+        {
+            "key": "cpct4",
+            "header": "cpct4"
+        },
+        {
+            "key": "camt1",
+            "header": "camt1"
+        },
+        {
+            "key": "camt2",
+            "header": "camt2"
+        },
+        {
+            "key": "camt3",
+            "header": "camt3"
+        },
+        {
+            "key": "camt4",
+            "header": "camt4"
+        },
+        {
+            "key": "Themes",
+            "header": "Themes"
+        },
+        {
+            "key": "SoundEnv",
+            "header": "SoundEnv"
+        },
+        {
+            "key": "Waypoint",
+            "header": "Waypoint"
+        },
+        {
+            "key": "LevelName",
+            "header": "LevelName"
+        },
+        {
+            "key": "LevelWarp",
+            "header": "LevelWarp"
+        },
+        {
+            "key": "LevelEntry",
+            "header": "LevelEntry"
+        },
+        {
+            "key": "ObjGrp0",
+            "header": "ObjGrp0"
+        },
+        {
+            "key": "ObjGrp1",
+            "header": "ObjGrp1"
+        },
+        {
+            "key": "ObjGrp2",
+            "header": "ObjGrp2"
+        },
+        {
+            "key": "ObjGrp3",
+            "header": "ObjGrp3"
+        },
+        {
+            "key": "ObjGrp4",
+            "header": "ObjGrp4"
+        },
+        {
+            "key": "ObjGrp5",
+            "header": "ObjGrp5"
+        },
+        {
+            "key": "ObjGrp6",
+            "header": "ObjGrp6"
+        },
+        {
+            "key": "ObjGrp7",
+            "header": "ObjGrp7"
+        },
+        {
+            "key": "ObjPrb0",
+            "header": "ObjPrb0"
+        },
+        {
+            "key": "ObjPrb1",
+            "header": "ObjPrb1"
+        },
+        {
+            "key": "ObjPrb2",
+            "header": "ObjPrb2"
+        },
+        {
+            "key": "ObjPrb3",
+            "header": "ObjPrb3"
+        },
+        {
+            "key": "ObjPrb4",
+            "header": "ObjPrb4"
+        },
+        {
+            "key": "ObjPrb5",
+            "header": "ObjPrb5"
+        },
+        {
+            "key": "ObjPrb6",
+            "header": "ObjPrb6"
+        },
+        {
+            "key": "ObjPrb7",
+            "header": "ObjPrb7"
+        },
+        {
+            "key": "LevelGroup",
+            "header": "LevelGroup"
+        },
+        {
+            "key": "PreventTownPortal",
+            "header": "PreventTownPortal"
+        }
+    ],
+    "bom": false,
+    "newline": "\r\n",
+    "finalNewline": true,
+    "protectedRows": 139,
+    "identitySha256": "140370da0722cf9506a904b565f69cb017ea51292de972fe9d06ee6ad3f71ea8"
+}
