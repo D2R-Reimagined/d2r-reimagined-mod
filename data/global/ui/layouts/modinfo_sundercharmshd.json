@@ -177,18 +177,450 @@
                         },
                         {
                             "type": "TableRowWidget",
-                            "name": "SunderCharmsRecipeRow",
+                            "name": "SunderCharmsRecipeRow1",
                             "fields": {
                                 "rect": {
-                                    "height": 420
+                                    "height": 80
                                 }
                             },
                             "children": [
                                 {
                                     "type": "TextBoxWidget",
-                                    "name": "SunderCharmsRecipeText",
+                                    "name": "SunderCharmsRecipeText1",
                                     "fields": {
-                                        "text": "Renew and reset recipes:\n\nLatent Flame Rift + Unique Jewel + SUR Rune + Orb of Conversion + Deep Worldstone Shard = Renewed Flame Rift\nLatent Cold Rupture + Unique Jewel + SUR Rune + Orb of Conversion + Eastern Worldstone Shard = Renewed Cold Rupture\nLatent Crack of the Heavens + Unique Jewel + SUR Rune + Orb of Conversion + Southern Worldstone Shard = Renewed Crack of the Heavens\nLatent Rotting Fissure + Unique Jewel + SUR Rune + Orb of Conversion + Western Worldstone Shard = Renewed Rotting Fissure\nLatent Bone Break + Unique Jewel + SUR Rune + Orb of Conversion + Northern Worldstone Shard = Renewed Bone Break\nLatent Black Cleft + Unique Jewel + SUR Rune + Orb of Conversion + Northern Worldstone Shard + Southern Worldstone Shard + Deep Worldstone Shard = Renewed Black Cleft\n\nRenewed Sunder Charm Any Type + HEL Rune + Orb of Conversion = Latent Charm of the same type",
+                                        "text": "\nLatent Flame Rift + Unique Jewel + SUR Rune + Orb of Conversion + Deep Worldstone Shard = Renewed Flame Rift\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsRecipeRow2",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsRecipeText2",
+                                    "fields": {
+                                        "text": "\nLatent Cold Rupture + Unique Jewel + SUR Rune + Orb of Conversion + Eastern Worldstone Shard = Renewed Cold Rupture\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsRecipeRow3",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsRecipeText3",
+                                    "fields": {
+                                        "text": "\nLatent Crack of the Heavens + Unique Jewel + SUR Rune + Orb of Conversion + Southern Worldstone Shard = Renewed Crack of the Heavens\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsRecipeRow4",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsRecipeText4",
+                                    "fields": {
+                                        "text": "\nLatent Rotting Fissure + Unique Jewel + SUR Rune + Orb of Conversion + Western Worldstone Shard = Renewed Rotting Fissure\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsRecipeRow5",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsRecipeText5",
+                                    "fields": {
+                                        "text": "\nLatent Bone Break + Unique Jewel + SUR Rune + Orb of Conversion + Northern Worldstone Shard = Renewed Bone Break\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsRecipeRow6",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsRecipeText6",
+                                    "fields": {
+                                        "text": "\nLatent Black Cleft + Unique Jewel + SUR Rune + Orb of Conversion + Northern Worldstone Shard + Southern Worldstone Shard + Deep Worldstone Shard = Renewed Black Cleft\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsRecipeRow7",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsRecipeText7",
+                                    "fields": {
+                                        "text": "\nRenewed Sunder Charm Any Type + HEL Rune + Orb of Conversion = Latent Charm of the same type\n",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeTitleRow",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeTitleText",
+                                    "fields": {
+                                        "text": "Facet Jewel Recipes",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget",
+                                            "name": "SunderCharmsFacetRecipeDivider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeRow1",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeText1",
+                                    "fields": {
+                                        "text": "\n\nFlame Rift Sunder Charm + Unique Jewel + Gem Bag (100 Gems) = Summer Facet Unique Jewel",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeRow2",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeText2",
+                                    "fields": {
+                                        "text": "\n\nCold Rupture Sunder Charm + Unique Jewel + Gem Bag (100 Gems) = Winter Facet Unique Jewel",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeRow3",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeText3",
+                                    "fields": {
+                                        "text": "\n\nCrack of the Heavens Sunder Charm + Unique Jewel + Gem Bag (100 Gems) = Spring Facet Unique Jewel",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeRow4",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeText4",
+                                    "fields": {
+                                        "text": "\n\nRotting Fissure Sunder Charm + Unique Jewel + Gem Bag (100 Gems) = Autumn Facet Unique Jewel",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeRow5",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeText5",
+                                    "fields": {
+                                        "text": "\n\nBone Break Sunder Charm + Unique Jewel + Gem Bag (100 Gems) = Star Facet Unique Jewel",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "SunderCharmsFacetRecipeRow6",
+                            "fields": {
+                                "rect": {
+                                    "height": 80
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "SunderCharmsFacetRecipeText6",
+                                    "fields": {
+                                        "text": "\n\nBlack Cleft Sunder Charm + Unique Jewel (2x) + Gem Bag (100 Gems) = Heaven Facet Unique Jewel",
                                         "style": {
                                             "pointSize": 28,
                                             "spacing": {
