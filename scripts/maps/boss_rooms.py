@@ -77,16 +77,32 @@ def _stock(rel):
     return cached
 
 
+# automap.txt cell drawn for a Warden. D2R draws any monster whose MonStats2
+# row carries an automapCel (the Act 5 barricade tower is the stock example),
+# so this is the only data needed for a boss marker. 305 is the Compelling Orb
+# icon: a plain dot until dedicated skull art is added to the automap sprite.
+BOSS_AUTOMAP_CEL = "305"
+
+
 def generate(api, plans, levels, presets, monsters):
     places = api.Table(api.EXCEL / "monpreset.txt")
     places.drop_tagged(places.col("Place"), "rmap_")
     next_slot = sum(r[places.col("Act")] == "5" for r in places.rows)
+    # Map monsters share their source monster's MonStats2 row. A Warden gets
+    # its own copy so the automap marker is not inherited by every monster
+    # of that archetype in the rest of the game.
+    stats2 = api.Table(api.EXCEL / "monstats2.txt")
+    stats2.drop_tagged(stats2.col("Id"), "rmap_")
     assets = {}
     for p in plans:
         code = p["item_code"]
         boss = list(monsters.find(monsters.col("Id"), f"rmap_{code}_0"))
+        marker = list(stats2.find(stats2.col("Id"), boss[monsters.col("MonStatsEx")]))
+        api.set_cells(marker, stats2, {"Id": f"rmap_{code}_boss", "automapCel": BOSS_AUTOMAP_CEL})
+        stats2.append(marker)
         api.set_cells(boss, monsters, {
             "Id": f"rmap_{code}_boss", "*hcIdx": str(len(monsters.rows)),
+            "MonStatsEx": f"rmap_{code}_boss",
             "MinGrp": "1", "MaxGrp": "1", "boss": "1", "primeevil": "0",
             "NameStr": f"RMapBoss{code}",
         })
@@ -119,4 +135,4 @@ def generate(api, plans, levels, presets, monsters):
         level[levels.col("NumMon")] = "0"
     if next_slot > 256:
         raise ValueError("Act 5 preset slots exceed 8-bit range")
-    return places, assets
+    return [places, stats2], assets

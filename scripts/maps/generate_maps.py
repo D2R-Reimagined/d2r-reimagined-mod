@@ -837,11 +837,11 @@ def main() -> int:
         gen_cubemain(plans),
     ]
     combat, runtime = endgame.generate(sys.modules[__name__], plans, tables[0])
-    places, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
+    rooms, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
     import presentation
     assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1]))
     tables.extend(combat)
-    tables.append(places)
+    tables.extend(rooms)
     # The two banks have different existing treasure classes. Generate against
     # each independently rather than copying RotW loot over the base bank.
     for path in (EXCEL / "treasureclassex.txt", EXCEL / "base" / "treasureclassex.txt"):
