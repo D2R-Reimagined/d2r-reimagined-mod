@@ -59,49 +59,82 @@ MONLVL_FLAT_XP = True
 # --------------------------------------------------------------------------
 # Themes
 # --------------------------------------------------------------------------
-# Each theme clones an ADJACENT PAIR of existing Forsaken Labyrinth levels:
-# a maze body and the preset room it already warps into. Cloning a working
-# pair means the tileset, the warp ids, the preset .ds1 files and the Act 5
-# monpreset wiring are all combinations the mod already ships and runs.
+# A theme is a maze body plus a Warden arena, each described by an existing
+# level whose rows already run in this mod or in stock D2R. Nothing here
+# requires the two to be neighbours anywhere else: the generator links them
+# itself and validates the link against the tileset's own warp pieces.
 #
-#   body_template  maze level whose layout and tileset the map body reuses
-#   boss_template  preset level whose .ds1 (and therefore its boss) is reused
+#   body_template   maze level (DrlgType 1) whose layout and tileset the body
+#                   reuses. lvlmaze.txt must carry a row for it.
+#   body_exits      (Vis slot, lvlwarp id) pairs that become the stairs down
+#                   into the arena. Maze DRLG only places a warp piece when the
+#                   tileset ships one for that slot, so these are taken from a
+#                   stock level with the same transition, not invented.
+#   arena_template  preset level (DrlgType 2) whose levels.txt/lvlprest.txt
+#                   rows supply LevelType, palette, size, Dt1Mask and flags.
+#   arena_ds1       the room to clone. A repo path under data/global/tiles/,
+#                   or "stock:<path>" for an unmodified D2R file (see
+#                   STOCK_DATA). A list selects one file per tier.
+#   arena_return    (Vis slot, lvlwarp id) the arena DS1's warp tile answers
+#                   to. The player arrives on that tile and can leave by it.
 #
-# The generator asserts that body_template warps to boss_template, so a bad
-# pairing fails loudly instead of producing a map with no exit.
+# The arena_ds1 must contain at least one monster record: the Warden replaces
+# the monster nearest the room centre, which is a known walkable position.
 
 THEMES = [
     {
-        "key": "dungeon",
-        "name": "Forgotten Dungeon",
-        "body_template": 146,   # Forsaken Labyrinth 08, LevelType 24 maze
-        "boss_template": 147,   # Forsaken Labyrinth 09, LevelType 24 presets
+        "key": "desert",
+        "name": "Sandswept Tomb",
+        "body_template": 66,     # Tal Rasha's Tomb, LevelType 17 maze
+        "body_exits": [(4, 46)], # Act 2 Tomb Down, slot 4 (as Claw Viper 1 -> 2)
+        "arena_template": 138,   # Labyrinth 00: Duriel.ds1 with a slot-2 warp
+        "arena_ds1": "Labyrinth/Duriel.ds1",
+        "arena_return": (2, 83),
     },
     {
-        "key": "anguish",
-        "name": "Halls of Anguish",
-        "body_template": 151,   # Forsaken Labyrinth 13, LevelType 32 maze
-        "boss_template": 152,   # Forsaken Labyrinth 14, NihlS.ds1
+        "key": "kurast",
+        "name": "Corrupted Durance",
+        "body_template": 100,    # Durance of Hate 1, LevelType 22 maze
+        "body_exits": [(0, 67), (1, 68)],  # Durance Down L/R, as Durance 1 -> 2
+        "arena_template": 148,   # Labyrinth 10: MephComp.ds1 with a slot-2 warp
+        "arena_ds1": "Labyrinth/MephComp.ds1",
+        "arena_return": (2, 83),
     },
     {
         "key": "catacombs",
         "name": "Forsaken Catacombs",
-        "body_template": 157,   # Forsaken Labyrinth 19, LevelType 10 maze
-        "boss_template": 158,   # Forsaken Labyrinth 20, Cathy3.ds1
+        "body_template": 157,    # Forsaken Labyrinth 19, LevelType 10 maze
+        "body_exits": [(1, 18)], # Act 1 Catacombs Down
+        "arena_template": 158,   # Forsaken Labyrinth 20, Cathy3.ds1
+        "arena_ds1": "Labyrinth/Cathy3.ds1",
+        "arena_return": (1, 15),
     },
     {
         "key": "frozen",
         "name": "Frozen Depths",
-        "body_template": 159,   # Forsaken Labyrinth 21, LevelType 33 maze
-        "boss_template": 160,   # Forsaken Labyrinth 21-2, icecave poolrooms
+        "body_template": 159,    # Forsaken Labyrinth 21, LevelType 33 maze
+        "body_exits": [(2, 75)], # Act 5 Ice Caves Down Floor
+        "arena_template": 160,   # Forsaken Labyrinth 21-2, ice pool rooms
+        # One stock pool room per tier. Each carries the Ice Caves Up warp
+        # the Cellar of Pity family answers to, so no DS1 editing is needed.
+        "arena_ds1": [f"stock:expansion/icecave/poolroom0{n}a.ds1" for n in range(1, 7)],
+        "arena_return": (0, 73),
     },
     {
         "key": "worldstone",
         "name": "Worldstone Keep",
-        "body_template": 164,   # Forsaken Labyrinth 24, LevelType 34 maze
-        "boss_template": 165,   # Forsaken Labyrinth 25, Heart.ds1
+        "body_template": 164,    # Forsaken Labyrinth 24, LevelType 34 maze
+        "body_exits": [(1, 82)], # Act 5 Baal Temple Down
+        "arena_template": 165,   # Forsaken Labyrinth 25, Heart.ds1
+        "arena_ds1": "Labyrinth/Heart.ds1",
+        "arena_return": (0, 83),
     },
 ]
+
+# Unmodified D2R files referenced with "stock:". The generator copies each one
+# it uses into scripts/maps/stock/ (committed) so a checkout without the
+# extracted game data still regenerates. Override with D2R_STOCK_DATA.
+STOCK_DATA = r"C:\dev\d2r\base-files\data\data"
 
 # --------------------------------------------------------------------------
 # Map items
@@ -112,8 +145,8 @@ THEMES = [
 
 ITEM_CODE_PREFIX = "m"
 THEME_CODE_LETTERS = {
-    "dungeon": "d",
-    "anguish": "a",
+    "desert": "d",
+    "kurast": "k",
     "catacombs": "c",
     "frozen": "f",
     "worldstone": "w",
@@ -271,8 +304,8 @@ TEST_RECIPES = False
 # Mapping has its own combat population; Labyrinth monsters depend on its
 # resistance-breaking mechanics and deliberately do not carry normal loot.
 MAP_MONSTERS = {
-    "dungeon": ["vampire5", "unraveler5", "councilmember3"],
-    "anguish": ["slinger6", "pantherwoman4", "sandraider5"],
+    "desert": ["clawviper5", "unraveler5", "scarab5", "wraith5"],
+    "kurast": ["councilmember3", "vampire4", "blunderbore4", "zealot3"],
     "catacombs": ["mummy5", "sk_archer5"],
     "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "willowisp3"],
     "worldstone": ["hellbovine", "willowisp3"],

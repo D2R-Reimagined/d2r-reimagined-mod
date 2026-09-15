@@ -142,18 +142,33 @@ def gen_levels(plans: list[dict]) -> Table:
     for p in plans:
         theme = p["theme"]
         body_tpl = t.find(c_id, str(theme["body_template"]))
-        boss_tpl = t.find(c_id, str(theme["boss_template"]))
-
-        # Establish that the template pair really is connected, and reuse the
-        # exact slot and lvlwarp id that already links them.
-        fwd = [i for i in range(8) if body_tpl[vis[i]] == str(theme["boss_template"])]
-        back = [i for i in range(8) if boss_tpl[vis[i]] == str(theme["body_template"])]
-        if not fwd or not back:
+        boss_tpl = t.find(c_id, str(theme["arena_template"]))
+        if body_tpl[t.col("DrlgType")] != "1" or boss_tpl[t.col("DrlgType")] != "2":
             raise SystemExit(
-                f"theme {theme['key']}: levels {theme['body_template']} and "
-                f"{theme['boss_template']} are not warp-connected; pick an "
-                f"adjacent pair from the Forsaken chain")
-        fwd_slot, back_slot = fwd[0], back[0]
+                f"theme {theme['key']}: body_template must be a maze (DrlgType 1) "
+                f"and arena_template a preset level (DrlgType 2)")
+
+        # The stairs down are placed by the maze DRLG only where the tileset
+        # ships a warp piece for that exact slot. Demand that some maze of the
+        # same tileset already uses the slot with that lvlwarp, so a typo
+        # cannot produce a body with no way into the arena.
+        c_type, c_drlg = t.col("LevelType"), t.col("DrlgType")
+        siblings = [r for r in t.rows
+                    if r[c_type] == body_tpl[c_type] and r[c_drlg] == "1"
+                    and not r[c_name].startswith(cfg.ROW_TAG)]
+        for slot, warp_id in theme["body_exits"]:
+            if not any(r[warp[slot]] == str(warp_id) and r[vis[slot]] != "0"
+                       for r in siblings):
+                raise SystemExit(
+                    f"theme {theme['key']}: no LevelType {body_tpl[c_type]} maze "
+                    f"links slot {slot} through lvlwarp {warp_id}; body_exits must "
+                    f"mirror a stock transition of that tileset")
+        ret_slot, ret_warp = theme["arena_return"]
+        if boss_tpl[warp[ret_slot]] != str(ret_warp) or boss_tpl[vis[ret_slot]] == "0":
+            raise SystemExit(
+                f"theme {theme['key']}: level {theme['arena_template']} does not "
+                f"answer slot {ret_slot} with lvlwarp {ret_warp}; arena_return must "
+                f"match a warp tile the arena DS1 actually contains")
 
         body = list(body_tpl)
         boss = list(boss_tpl)
@@ -179,7 +194,11 @@ def gen_levels(plans: list[dict]) -> Table:
                 row[t.col(col)] = umax
             # Maps are self-contained instances: no waypoint, monsters do not
             # persist, and quest state must not leak in from the template.
+            # Every map lives in Act 5 whatever tileset it borrows, as the
+            # Labyrinth does: the cube portal opens from Harrogath and a town
+            # portal inside must lead back there, not to the tileset's act.
             set_cells(row, t, {
+                "Act": "4",
                 "Waypoint": "255",
                 "SaveMonsters": "1",
                 "QuestFlag": "",
@@ -193,13 +212,14 @@ def gen_levels(plans: list[dict]) -> Table:
             "Id": str(p["body_id"]),
             # LevelName/LevelWarp/LevelEntry are the columns D2R actually
             # reads. Without these the clone keeps the template's keys and
-            # every map is announced as "Forsaken Labyrinth Level".
+            # every map is announced as the template level.
             "LevelName": p["body_key"],
             "LevelWarp": f"RMap{theme['key'].capitalize()}Warp",
             "LevelEntry": f"RMap{theme['key'].capitalize()}Entry",
         })
-        body[vis[fwd_slot]] = str(p["boss_id"])
-        body[warp[fwd_slot]] = body_tpl[warp[fwd_slot]]
+        for slot, warp_id in theme["body_exits"]:
+            body[vis[slot]] = str(p["boss_id"])
+            body[warp[slot]] = str(warp_id)
 
         set_cells(boss, t, {
             "Name": f"{cfg.ROW_TAG} {theme['key']} T{p['tier']} boss",
@@ -209,8 +229,8 @@ def gen_levels(plans: list[dict]) -> Table:
             "LevelWarp": f"RMap{theme['key'].capitalize()}WarpBoss",
             "LevelEntry": f"RMap{theme['key'].capitalize()}Entry",
         })
-        boss[vis[back_slot]] = str(p["body_id"])
-        boss[warp[back_slot]] = boss_tpl[warp[back_slot]]
+        boss[vis[ret_slot]] = str(p["body_id"])
+        boss[warp[ret_slot]] = str(ret_warp)
 
         t.append(body)
         t.append(boss)
@@ -246,7 +266,7 @@ def gen_lvlprest(plans: list[dict]) -> Table:
     c_name, c_level, c_def = t.col("Name"), t.col("LevelId"), t.col("Def")
     t.drop_tagged(c_name, cfg.ROW_TAG)
     for p in plans:
-        tpl = t.find(c_level, str(p["theme"]["boss_template"]))
+        tpl = t.find(c_level, str(p["theme"]["arena_template"]))
         row = list(tpl)
         set_cells(row, t, {
             "Name": f"{cfg.ROW_TAG} {p['theme']['key']} T{p['tier']} boss",

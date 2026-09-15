@@ -14,6 +14,30 @@ checkout. `--check` compares every generated table, bank copy, localization,
 boss DS1 and plugin header without writing. Test recipes default to disabled;
 set `TEST_RECIPES` locally when needed, then regenerate before release.
 
+## Themes and layouts
+
+Each theme in `maps_config.py` names a maze body template, the Vis slot(s)
+and lvlwarp its tileset uses for stairs down, a preset arena template, the
+arena DS1 to clone and the warp tile the arena answers to. Bodies and arenas
+no longer need to be neighbours in the Forsaken Labyrinth; the generator
+links them itself and refuses a slot/warp pair that no stock maze of that
+tileset uses. Current themes: Sandswept Tomb (Tal Rasha's Tomb maze,
+Duriel arena), Corrupted Durance (Durance of Hate maze, Mephisto arena),
+Forsaken Catacombs, Frozen Depths (ice-cave maze, one stock pool room per
+tier) and Worldstone Keep. Every map level is Act 5 regardless of tileset so
+the Harrogath portal and town portals stay in one act.
+
+`stock:` arena paths refer to unmodified D2R files. The generator copies each
+one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)
+into `scripts/maps/stock/`, which is committed so regeneration does not need
+the extracted data. An arena DS1 must contain a monster record; the Warden
+replaces the one nearest the room centre.
+
+The generator emits `data/hd/env/preset/maps/<code>_boss.json` next to every
+cloned `Maps/<code>_boss.ds1`. D2R resolves the HD scene by DS1 path, and the
+scene JSON only references stock terrain assets by absolute path, so the
+source arena's JSON is copied verbatim. The deploy script ships these.
+
 `presentation.py` also generates the HD monster lookup entries for every map-owned monster ID, including Wardens and late-Hell drop variants. The lookup is included in `--check` and the deployment script.
 
 Approved folded-parchment sprites use Roman numerals I–VI at the bottom right. Sources and exact image-generation prompts are in `art/v4/`; `preview.html` displays converted art at inventory sizes. Rebuild using `python scripts/maps/build_sprites.py --source scripts/maps/art/v4 --neutral-matte`. The explicit matte option converts the generated neutral preview background into alpha; transparent inputs need no option. Both 98px and 49px RGBA-v31 sprites are generated. `presentation.py` binds all 30 map codes and supplies a shipped charm ground-model fallback. The deploy script includes these 19 HD artifacts. Legacy inventory artwork remains inherited from the small charm.
@@ -48,7 +72,6 @@ The character selected by the user is stored as `Trangsgender.d2s` in the
 
 Prioritize runtime calibration, penalty/MF state application and expiration,
 native auras, Warden placement/drop bundles, and all body/warden return warps.
-Frozen Depths uses the shipped NihlS Warden arena pending authored ice-room
-assets. Treat the installed files as a test build until these checks pass.
+Treat the installed files as a test build until these checks pass.
 
 Rare-capable map quality now matches rings and amulets: Magic=1, Rare=1, Normal=0 in both banks. The former Normal=1 setting was incorrect, and subsequently clearing Magic as well also diverged from working misc items. The regression compares these flags against both ring and amulet rows. Generated maps have no inherited charm automagic. Native spawn tests use the observed letter option typ=r, not numeric typ=6. Live creation still needs confirmation.

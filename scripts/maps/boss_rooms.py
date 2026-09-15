@@ -3,7 +3,14 @@
 Only the object block changes; tiles, warps and trailing substitution/NPC
 records remain byte-for-byte intact. Source Labyrinth files are never written.
 """
+import os
+import shutil
 import struct
+from pathlib import Path
+
+import maps_config as cfg
+
+STOCK_CACHE = Path(__file__).resolve().parent / "stock"
 
 
 def objects(data):
@@ -40,6 +47,36 @@ def clone(data, preset):
     return bytes(header) + block + data[offset + 4 + len(rows) * 20:]
 
 
+def arena_source(repo, theme, tier):
+    """The on-disk DS1 and HD preset JSON to clone for one map."""
+    spec = theme["arena_ds1"]
+    if isinstance(spec, (list, tuple)):
+        spec = spec[(tier - 1) % len(spec)]
+    if spec.startswith("stock:"):
+        rel = spec[len("stock:"):]
+        ds1 = _stock(Path("global/tiles") / rel)
+        hd = _stock(Path("hd/env/preset") / (rel[:-len(".ds1")].lower() + ".json"))
+    else:
+        ds1 = repo / "data/global/tiles" / spec
+        hd = repo / "data/hd/env/preset" / (spec[:-len(".ds1")].lower() + ".json")
+    return ds1, hd
+
+
+def _stock(rel):
+    """Return a committed copy of an unmodified D2R file, fetching it from the
+    extracted game data the first time it is referenced."""
+    cached = STOCK_CACHE / rel
+    if not cached.exists():
+        source = Path(os.environ.get("D2R_STOCK_DATA", cfg.STOCK_DATA)) / rel
+        if not source.exists():
+            raise FileNotFoundError(
+                f"{rel} is neither cached under {STOCK_CACHE} nor present in the "
+                f"extracted game data at {source.parent}; set D2R_STOCK_DATA")
+        cached.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, cached)
+    return cached
+
+
 def generate(api, plans, levels, presets, monsters):
     places = api.Table(api.EXCEL / "monpreset.txt")
     places.drop_tagged(places.col("Place"), "rmap_")
@@ -65,25 +102,14 @@ def generate(api, plans, levels, presets, monsters):
 
         preset = presets.find(presets.col("LevelId"), str(p["boss_id"]))
         level = levels.find(levels.col("Id"), str(p["boss_id"]))
-        # The stock ice pool DS1s are not shipped in this repo and have no
-        # guaranteed boss. Use the shipped NihlS arena until ice arenas can be
-        # authored, keeping the Frozen Depths body and its own monster roster.
-        if p["theme"]["key"] == "frozen":
-            template = levels.find(levels.col("Id"), "152")
-            source_preset = presets.find(presets.col("LevelId"), "152")
-            for col in ("Pal", "DrlgType", "LevelType", "SizeX", "SizeY", "SizeX(N)", "SizeY(N)", "SizeX(H)", "SizeY(H)"):
-                level[levels.col(col)] = template[levels.col(col)]
-            for i in range(8):
-                level[levels.col(f"Vis{i}")] = str(p["body_id"]) if template[levels.col(f"Vis{i}")] == "151" else "0"
-                level[levels.col(f"Warp{i}")] = template[levels.col(f"Warp{i}")] if template[levels.col(f"Vis{i}")] == "151" else "-1"
-            for col in ("Outdoors", "Animate", "KillEdge", "FillBlanks", "SizeX", "SizeY", "Dt1Mask"):
-                preset[presets.col(col)] = source_preset[presets.col(col)]
-            source = "Labyrinth/NihlS.ds1"
-        else:
-            source = preset[presets.col("File1")]
-        data = (api.REPO / "data/global/tiles" / source).read_bytes()
+        ds1, hd = arena_source(api.REPO, p["theme"], p["tier"])
         target = f"Maps/{code}_boss.ds1"
-        assets[api.REPO / "data/global/tiles" / target] = clone(data, next_slot)
+        assets[api.REPO / "data/global/tiles" / target] = clone(ds1.read_bytes(), next_slot)
+        # D2R resolves the HD scene by the DS1 path, so a cloned room needs its
+        # own hd/env/preset entry or it renders without HD geometry. The JSON
+        # only references stock terrain assets by absolute path; a verbatim
+        # copy is the correct scene for the copied tiles.
+        assets[api.REPO / "data/hd/env/preset/maps" / f"{code}_boss.json"] = hd.read_bytes()
         next_slot += 1
         api.set_cells(preset, presets, {"Populate": "0", "Files": "1", "File1": target,
                                        **{f"File{i}": "0" for i in range(2, 7)}})

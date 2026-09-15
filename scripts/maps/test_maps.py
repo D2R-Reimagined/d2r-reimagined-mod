@@ -69,7 +69,7 @@ class MappingContract(unittest.TestCase):
             for i, source in enumerate(sources):
                 self.assertEqual(models[f"rmap_{p['item_code']}_{i}"], models[source])
             self.assertEqual(models[f"rmap_{p['item_code']}_boss"], models[sources[0]])
-        self.assertEqual(models['rmap_md1_0'], models['vampire5'])
+        self.assertEqual(models['rmap_md1_0'], models['clawviper5'])
 
     @classmethod
     def setUpClass(cls):
@@ -126,6 +126,51 @@ class MappingContract(unittest.TestCase):
             for diff in ('', ' (N)', ' (H)'):
                 self.assertEqual(prop[self.props.col('chance1' + diff)], '100')
                 self.assertEqual(int(prop[self.props.col('min1' + diff)]), 25 * p['tier'])
+
+    def test_bodies_and_arenas_are_linked_through_their_tileset_warps(self):
+        c_id = self.levels.col('Id')
+        vis = [self.levels.col(f'Vis{i}') for i in range(8)]
+        warp = [self.levels.col(f'Warp{i}') for i in range(8)]
+        for p in self.plans:
+            theme = p['theme']
+            body = self.levels.find(c_id, str(p['body_id']))
+            boss = self.levels.find(c_id, str(p['boss_id']))
+            template = self.levels.find(c_id, str(theme['body_template']))
+            arena = self.levels.find(c_id, str(theme['arena_template']))
+            for col in ('LevelType', 'Pal', 'DrlgType'):
+                self.assertEqual(body[self.levels.col(col)], template[self.levels.col(col)])
+                self.assertEqual(boss[self.levels.col(col)], arena[self.levels.col(col)])
+            self.assertEqual(body[self.levels.col('DrlgType')], '1')
+            self.assertEqual(boss[self.levels.col('DrlgType')], '2')
+            # Both levels are Act 5 so the Harrogath portal and any town portal
+            # taken inside stay in one act, whatever tileset is borrowed.
+            self.assertEqual(body[self.levels.col('Act')], '4')
+            self.assertEqual(boss[self.levels.col('Act')], '4')
+            exits = {(i, int(body[warp[i]])) for i in range(8) if body[vis[i]] == str(p['boss_id'])}
+            self.assertEqual(exits, set(theme['body_exits']))
+            self.assertFalse(any(body[vis[i]] not in ('0', str(p['boss_id'])) for i in range(8)))
+            returns = {(i, int(boss[warp[i]])) for i in range(8) if boss[vis[i]] != '0'}
+            self.assertEqual(returns, {tuple(theme['arena_return'])})
+            self.assertEqual(boss[vis[theme['arena_return'][0]]], str(p['body_id']))
+
+    def test_themes_use_distinct_tilesets(self):
+        c_id = self.levels.col('Id')
+        types = [self.levels.find(c_id, str(t['body_template']))[self.levels.col('LevelType')]
+                 for t in cfg.THEMES]
+        self.assertEqual(len(set(types)), len(types))
+
+    def test_each_arena_ships_its_hd_preset(self):
+        presets = gen.Table(gen.EXCEL / 'lvlprest.txt')
+        for p in self.plans:
+            preset = presets.find(presets.col('LevelId'), str(p['boss_id']))
+            self.assertEqual(preset[presets.col('Files')], '1')
+            ds1 = preset[presets.col('File1')]
+            self.assertEqual(ds1, f"Maps/{p['item_code']}_boss.ds1")
+            hd = gen.REPO / 'data/hd/env/preset/maps' / f"{p['item_code']}_boss.json"
+            scene = json.loads(hd.read_text(encoding='utf-8-sig'))
+            self.assertEqual(scene['type'], 'Preset')
+            _, source_hd = boss_rooms.arena_source(gen.REPO, p['theme'], p['tier'])
+            self.assertEqual(hd.read_bytes(), source_hd.read_bytes())
 
     def test_each_boss_room_has_exactly_one_matching_warden(self):
         places = gen.Table(gen.EXCEL / 'monpreset.txt')
