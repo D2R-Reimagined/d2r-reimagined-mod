@@ -185,6 +185,46 @@ class MappingContract(unittest.TestCase):
             mon = self.monsters.find(self.monsters.col('Id'), act5[mons[0][1]])
             self.assertEqual(mon[self.monsters.col('TreasureClass(H)')], f"RMap T{p['tier']} Boss")
 
+    def test_arena_objects_resolve_in_the_act5_namespace_without_hub_furniture(self):
+        objpreset = gen.Table(gen.EXCEL / 'objpreset.txt')
+        act5 = {r[objpreset.col('Index')]: r[objpreset.col('ObjectClass')]
+                for r in objpreset.rows if r[objpreset.col('Act')] == '5'}
+        for p in self.plans:
+            source, _ = boss_rooms.arena_source(gen.REPO, p['theme'], p['tier'])
+            source_data = source.read_bytes()
+            source_act = struct.unpack_from('<I', source_data, 12)[0] + 1
+            native = {r[objpreset.col('Index')]: r[objpreset.col('ObjectClass')]
+                      for r in objpreset.rows if r[objpreset.col('Act')] == str(source_act)}
+            _, source_rows, _, _ = boss_rooms.objects(source_data)
+            expected = sorted(native[str(r[1])] for r in source_rows
+                              if r[0] == 2 and native[str(r[1])] not in boss_rooms.ARENA_EXCLUDED_OBJECTS)
+            data = (gen.REPO / 'data/global/tiles/Maps' / (p['item_code'] + '_boss.ds1')).read_bytes()
+            _, rows, _, _ = boss_rooms.objects(data)
+            # Every kept object is the same class as in the source room, now
+            # resolved through Act 5 (the namespace the clone header selects).
+            self.assertEqual(sorted(act5[str(r[1])] for r in rows if r[0] == 2), expected, p['item_code'])
+            self.assertNotIn('Bank', {act5[str(r[1])] for r in rows if r[0] == 2})
+        self.assertEqual(gen.Table(gen.EXCEL / 'base' / 'objpreset.txt').to_bytes(), objpreset.to_bytes())
+
+    def test_every_warden_has_its_own_marker_row_and_death_portal(self):
+        stats2 = gen.Table(gen.EXCEL / 'monstats2.txt')
+        skills = gen.Table(gen.EXCEL / 'skills.txt')
+        skills.find(skills.col('skill'), boss_rooms.BOSS_DEATH_SKILL)
+        for p in self.plans:
+            name = 'rmap_' + p['item_code'] + '_boss'
+            mon = self.monsters.find(self.monsters.col('Id'), name)
+            self.assertEqual(mon[self.monsters.col('MonStatsEx')], name)
+            marker = stats2.find(stats2.col('Id'), name)
+            self.assertEqual(marker[stats2.col('automapCel')], boss_rooms.BOSS_AUTOMAP_CEL)
+            death = [(mon[self.monsters.col(f'Sk{i}mode')], mon[self.monsters.col(f'Sk{i}lvl')])
+                     for i in range(1, 9) if mon[self.monsters.col(f'Skill{i}')] == boss_rooms.BOSS_DEATH_SKILL]
+            self.assertEqual(death, [('DT', '1')], name)
+            # Ordinary map monsters must not inherit either.
+            body = self.monsters.find(self.monsters.col('Id'), 'rmap_' + p['item_code'] + '_0')
+            self.assertNotEqual(body[self.monsters.col('MonStatsEx')], name)
+            self.assertNotIn(boss_rooms.BOSS_DEATH_SKILL,
+                             [body[self.monsters.col(f'Skill{i}')] for i in range(1, 9)])
+
     def test_rewards_sustain_and_increase_in_both_banks(self):
         for path in (gen.EXCEL / 'treasureclassex.txt', gen.EXCEL / 'base/treasureclassex.txt'):
             table = gen.Table(path)

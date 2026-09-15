@@ -31,7 +31,59 @@ def objects(data):
     return offset, rows, width, height
 
 
-def clone(data, preset):
+OBJECT_TAG = "rmap_object"
+
+# Labyrinth hub furniture that a cloned arena must not keep: a stash has no
+# place in a boss room, and a waypoint object in a level without a waypoint
+# row is broken.
+ARENA_EXCLUDED_OBJECTS = {"Bank", "WaypointAct2"}
+
+
+class ObjectPresets:
+    """objpreset.txt: DS1 object ids are indices into one act's rows. A cloned
+    room is stamped Act 5 so its Warden resolves through the Act 5 MonPreset
+    namespace, which also moves every object record into the Act 5 object
+    namespace: Heart.ds1's Act 4 Hellfire torches became Act 5 Standards and
+    its light shafts became Banks, which put stashes in the Worldstone arena.
+    Each object is therefore re-pointed at the Act 5 row of the same class,
+    appended (and tagged for regeneration) when Act 5 has none."""
+
+    def __init__(self, api):
+        self.table = api.Table(api.EXCEL / "objpreset.txt")
+        self.api = api
+        self.index, self.act, self.cls, self.notes = (
+            self.table.col(c) for c in ("Index", "Act", "ObjectClass", "*Notes"))
+        self.table.drop_tagged(self.notes, OBJECT_TAG)
+
+    def object_class(self, act, object_id):
+        cls = next((r[self.cls] for r in self.table.rows
+                    if r[self.act] == str(act) and r[self.index] == str(object_id)), None)
+        if cls is None:
+            raise ValueError(f"objpreset has no Act {act} object {object_id}")
+        return cls
+
+    def remap(self, source_act, object_id):
+        """Act 5 index for the object `object_id` of `source_act` (1-based),
+        or None when the arena must not keep it."""
+        cls = self.object_class(source_act, object_id)
+        if cls in ARENA_EXCLUDED_OBJECTS:
+            return None
+        if source_act == 5:
+            return object_id
+        rows = self.table.rows
+        for r in rows:
+            if r[self.act] == "5" and r[self.cls] == cls:
+                return int(r[self.index])
+        index = 1 + max(int(r[self.index]) for r in rows if r[self.act] == "5")
+        row = self.table.blank_row()
+        self.api.set_cells(row, self.table, {
+            "Index": str(index), "Act": "5", "ObjectClass": cls, "*Notes": OBJECT_TAG, "*eol": "0",
+        })
+        self.table.append(row)
+        return index
+
+
+def clone(data, preset, presets=None):
     offset, rows, width, height = objects(data)
     points = [(r[2], r[3]) for r in rows if r[0] == 1]
     # Existing monster locations are known walkable positions. NihlS has no
@@ -39,7 +91,17 @@ def clone(data, preset):
     x, y = min(points, key=lambda p: (p[0] - width * 2.5)**2 + (p[1] - height * 2.5)**2) if points else (211, 211)
     if not (0 <= x <= width * 5 and 0 <= y <= height * 5):
         raise ValueError("Boss outside DS1")
-    kept = [r for r in rows if r[0] != 1]
+    source_act = struct.unpack_from("<I", data, 12)[0] + 1
+    kept = []
+    for r in rows:
+        if r[0] == 1:
+            continue
+        if r[0] == 2 and presets is not None:
+            index = presets.remap(source_act, r[1])
+            if index is None:
+                continue
+            r = (2, index, r[2], r[3], r[4])
+        kept.append(r)
     kept.append((1, preset, x, y, 0))
     header = bytearray(data[:offset])
     struct.pack_into("<I", header, 12, 4)  # Act 5 MonPreset namespace
@@ -83,6 +145,22 @@ def _stock(rel):
 # icon: a plain dot until dedicated skull art is added to the automap sprite.
 BOSS_AUTOMAP_CEL = "305"
 
+# Cast by the Warden in death mode (Sk<n>mode = DT), so its corpse opens a town
+# portal. This is the stock scroll skill (srvdofunc 113); a monster caster has
+# no player portal list, so this must be confirmed live before it is relied on.
+BOSS_DEATH_SKILL = "Book of Townportal"
+
+
+def add_death_skill(api, monsters, row, skill):
+    """Put `skill` in the first free Skill slot of `row`, cast on death."""
+    for slot in range(1, 9):
+        if not row[monsters.col(f"Skill{slot}")]:
+            api.set_cells(row, monsters, {
+                f"Skill{slot}": skill, f"Sk{slot}mode": "DT", f"Sk{slot}lvl": "1",
+            })
+            return
+    raise ValueError(f"{row[monsters.col('Id')]}: no free skill slot for {skill}")
+
 
 def generate(api, plans, levels, presets, monsters):
     places = api.Table(api.EXCEL / "monpreset.txt")
@@ -93,6 +171,7 @@ def generate(api, plans, levels, presets, monsters):
     # of that archetype in the rest of the game.
     stats2 = api.Table(api.EXCEL / "monstats2.txt")
     stats2.drop_tagged(stats2.col("Id"), "rmap_")
+    object_presets = ObjectPresets(api)
     assets = {}
     for p in plans:
         code = p["item_code"]
@@ -106,6 +185,7 @@ def generate(api, plans, levels, presets, monsters):
             "MinGrp": "1", "MaxGrp": "1", "boss": "1", "primeevil": "0",
             "NameStr": f"RMapBoss{code}",
         })
+        add_death_skill(api, monsters, boss, BOSS_DEATH_SKILL)
         for col in monsters.header:
             if col.lower().startswith(("minhp", "maxhp")):
                 boss[monsters.col(col)] = str(int(boss[monsters.col(col)] or 0) * 12)
@@ -120,7 +200,7 @@ def generate(api, plans, levels, presets, monsters):
         level = levels.find(levels.col("Id"), str(p["boss_id"]))
         ds1, hd = arena_source(api.REPO, p["theme"], p["tier"])
         target = f"Maps/{code}_boss.ds1"
-        assets[api.REPO / "data/global/tiles" / target] = clone(ds1.read_bytes(), next_slot)
+        assets[api.REPO / "data/global/tiles" / target] = clone(ds1.read_bytes(), next_slot, object_presets)
         # D2R resolves the HD scene by the DS1 path, so a cloned room needs its
         # own hd/env/preset entry or it renders without HD geometry. The JSON
         # only references stock terrain assets by absolute path; a verbatim
@@ -135,4 +215,4 @@ def generate(api, plans, levels, presets, monsters):
         level[levels.col("NumMon")] = "0"
     if next_slot > 256:
         raise ValueError("Act 5 preset slots exceed 8-bit range")
-    return [places, stats2], assets
+    return [places, stats2, object_presets.table], assets

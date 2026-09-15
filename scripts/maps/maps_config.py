@@ -70,6 +70,17 @@ MONLVL_FLAT_XP = True
 #                   into the arena. Maze DRLG only places a warp piece when the
 #                   tileset ships one for that slot, so these are taken from a
 #                   stock level with the same transition, not invented.
+#
+#                   The tileset must also place its stairs-down room for ANY
+#                   level id. Several maze routines hardcode that by level id
+#                   (D2MOO DrlgMaze.cpp): Act 2 Tomb only for ids 55-58
+#                   (DRLGMAZE_PlaceAct2TombStuff), Durance of Hate only for
+#                   ids 100-101 (DRLGMAZE_PlaceAct3MephistoStuff), Act 2/3
+#                   Sewers only for their stock ids. A body cloned from those
+#                   generates with no way into the arena, whatever Vis/Warp
+#                   says. Unconditional: Act 1 Catacombs, Act 2 Maggot Lair,
+#                   Act 3 Flayer Dungeon/Swampy Pit, Act 5 Ice Caves, Act 5
+#                   Baal Temple.
 #   arena_template  preset level (DrlgType 2) whose levels.txt/lvlprest.txt
 #                   rows supply LevelType, palette, size, Dt1Mask and flags.
 #   arena_ds1       the room to clone. A repo path under data/global/tiles/,
@@ -85,8 +96,11 @@ THEMES = [
     {
         "key": "desert",
         "name": "Sandswept Tomb",
-        "body_template": 66,     # Tal Rasha's Tomb, LevelType 17 maze
-        "body_exits": [(4, 46)], # Act 2 Tomb Down, slot 4 (as Claw Viper 1 -> 2)
+        # Maggot Lair, LevelType 18. The Tomb tileset (Tal Rasha's Tomb, 66)
+        # only places its stairs down for stock ids 55-58, so it left the
+        # arena unreachable; the Lair places them for every level.
+        "body_template": 62,     # Maggot Lair 1, LevelType 18 maze
+        "body_exits": [(1, 49)], # Act 2 Lair Down, slot 1 (as Lair 1 -> 2)
         "arena_template": 138,   # Labyrinth 00: Duriel.ds1 with a slot-2 warp
         "arena_ds1": "Labyrinth/Duriel.ds1",
         "arena_return": (2, 83),
@@ -94,8 +108,10 @@ THEMES = [
     {
         "key": "kurast",
         "name": "Corrupted Durance",
-        "body_template": 100,    # Durance of Hate 1, LevelType 22 maze
-        "body_exits": [(0, 67), (1, 68)],  # Durance Down L/R, as Durance 1 -> 2
+        # Flayer Dungeon, LevelType 24. Durance of Hate (100) only places its
+        # stairs down for stock ids 100-101, same problem as the Tomb.
+        "body_template": 88,     # Flayer Dungeon 1, LevelType 24 maze
+        "body_exits": [(0, 56)], # Act 3 Dungeon Down, slot 0 (as Flayer 1 -> 2)
         "arena_template": 148,   # Labyrinth 10: MephComp.ds1 with a slot-2 warp
         "arena_ds1": "Labyrinth/MephComp.ds1",
         "arena_return": (2, 83),
