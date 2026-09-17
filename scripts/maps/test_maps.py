@@ -47,6 +47,27 @@ class MappingContract(unittest.TestCase):
                 alpha = data[43::4]
                 self.assertEqual((min(alpha), max(alpha)), (0, 255))
 
+    def test_horadric_orb_has_dedicated_hd_sprite_and_ground_binding(self):
+        entries = json.loads((gen.REPO / 'data/hd/items/items.json').read_text())
+        lookup = {code: value for entry in entries for code, value in entry.items()}
+        self.assertEqual(lookup['mor']['asset'], 'powerorbs/horadric_orb')
+        ground = gen.REPO / 'data/hd/items/misc/powerorbs/horadric_orb.json'
+        definition = json.loads(ground.read_text())
+        self.assertTrue(definition['dependencies']['models'])
+        itemtypes = gen.Table(gen.EXCEL / 'itemtypes.txt')
+        currency = itemtypes.find(itemtypes.col('Code'), 'mcur')
+        variants = int(currency[itemtypes.col('VarInvGfx')])
+        self.assertEqual(variants, 3)
+        for variant in ('', '2', '3'):
+            for size, suffix in ((98, ''), (49, '.lowend')):
+                sprite = gen.REPO / f'data/hd/global/ui/items/misc/powerorbs/horadric_orb{variant}{suffix}.sprite'
+                data = sprite.read_bytes()
+                self.assertEqual(struct.unpack('<4sHH8I', data[:40]),
+                                 (b'SpA1', 31, size, size, size, 0, 1, 0, 0, size*size*4, 4))
+                self.assertEqual(len(data), 40+size*size*4)
+                alpha = data[43::4]
+                self.assertEqual((min(alpha), max(alpha)), (0, 255))
+
     def test_native_rare_quality_pool_does_not_grant_carried_stats(self):
         for kind in ('prefix', 'suffix'):
             table = gen.Table(gen.EXCEL / f'magic{kind}.txt')
