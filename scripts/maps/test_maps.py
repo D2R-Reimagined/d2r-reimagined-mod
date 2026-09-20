@@ -8,52 +8,44 @@ import boss_rooms
 
 
 class MappingContract(unittest.TestCase):
-    def test_catacombs_cast_animation_has_an_action_frame(self):
-        # A mode being present in MonStats2 does not make it a casting animation.
-        data = (gen.REPO / 'data/global/animdata.d2').read_bytes()
-        offset, records = 0, {}
-        for _ in range(256):
-            count = struct.unpack_from('<I', data, offset)[0]
-            offset += 4
-            for _ in range(count):
-                row = data[offset:offset + 160]
-                offset += 160
-                records[row[:8].rstrip(b'\0')] = row
-        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
-            skills = gen.Table(bank / 'skills.txt')
-            for name in ('rmap_plague_warning', 'rmap_plague_nova'):
-                skill = skills.find(skills.col('skill'), name)
-                key = ('MM' + skill[skills.col('monanim')] + 'HTH').encode()
-                row = records[key]
-                frames = struct.unpack_from('<I', row, 8)[0]
-                self.assertIn(1, row[16:16 + frames], key)
-        self.assertNotIn(1, records[b'MMS1HTH'][16:])
-
-    def test_catacombs_nova_is_scoped_and_keeps_the_return_skill(self):
+    def test_catacombs_nova_is_cast_from_the_greater_mummy_skill_slot(self):
+        import catacombs
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles, props = [gen.Table(bank / (name + '.txt'))
                 for name in ('monstats', 'skills', 'missiles', 'monprop')]
             nova = skills.find(skills.col('skill'), 'rmap_plague_nova')
             self.assertEqual(nova[skills.col('srvdofunc')], '22')
-            self.assertEqual(nova[skills.col('monanim')], 'A2')
+            self.assertEqual(nova[skills.col('srvmissilea')], 'rmap_plague_nova')
+            self.assertEqual(nova[skills.col('aura')], '')
+            self.assertEqual(nova[skills.col('charclass')], '')
             self.assertEqual(nova[skills.col('ELen')], '75')
             self.assertEqual(nova[skills.col('EDmgSymPerCalc')], '')
             missile = missiles.find(missiles.col('Missile'), 'rmap_plague_nova')
             self.assertEqual(missile[missiles.col('Skill')], 'rmap_plague_nova')
             self.assertEqual(missile[missiles.col('Range')], '18')
             self.assertEqual(missiles.find(missiles.col('Missile'), 'poisonnova')[missiles.col('Range')], '30')
+            # Same shape as labunraveler: GreaterMummy AI, cast slot 3 in SC.
+            lab = monsters.find(monsters.col('Id'), 'labunraveler')
+            self.assertEqual((lab[monsters.col('AI')], lab[monsters.col('Sk3mode')]), ('GreaterMummy', 'SC'))
             owners = []
             for row in monsters.rows:
-                uses = [(row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')]) for i in range(1, 9)]
-                if ('rmap_plague_nova', 'A2') in uses:
+                if not row[0].startswith('rmap_') or not row[0].endswith('_boss'):
+                    continue
+                uses = [(row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')]) for i in range(1, 9)]
+                if row[0].startswith('rmap_mc'):
                     owners.append(row[0])
-                    self.assertIn(('rmap_plague_warning', 'A2'), uses)
-                    self.assertIn((boss_rooms.BOSS_DEATH_SKILL, 'DT'), uses)
+                    tier = row[0][7]
+                    self.assertEqual(row[monsters.col('AI')], 'GreaterMummy')
+                    self.assertEqual(row[monsters.col('BaseId')], 'unraveler1')
+                    self.assertEqual(uses[catacombs.NOVA_SLOT - 1], ('rmap_plague_nova', 'SC', tier))
+                    self.assertIn(boss_rooms.BOSS_DEATH_SKILL, [u[0] for u in uses])
                     self.assertEqual(row[monsters.col('El1Dur(H)')], '75')
                     prop = props.find(props.col('Id'), row[0])
                     for diff in ('', ' (N)', ' (H)'):
-                        self.assertEqual(prop[props.col('prop5' + diff)], '')
-                        self.assertEqual(prop[props.col('prop6' + diff)], '')
+                        for slot in (4, 5, 6):
+                            self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
+                else:
+                    self.assertNotIn('rmap_plague_nova', [u[0] for u in uses])
             self.assertEqual(owners, [f'rmap_mc{tier}_boss' for tier in range(1, 7)])
 
     def test_runtime_monster_ids_use_compiled_order_not_text_line_numbers(self):
@@ -192,10 +184,14 @@ class MappingContract(unittest.TestCase):
         currency = itemtypes.find(itemtypes.col('Code'), 'mcur')
         variants = int(currency[itemtypes.col('VarInvGfx')])
         self.assertEqual(variants, 3)
-        for variant in ('', '2', '3'):
+        # Runtime requests numbered variants 1..VarInvGfx, including orb1.
+        # Keep the unnumbered fallback and make every variant visually identical.
+        for variant in ('', *(str(i) for i in range(1, variants + 1))):
             for size, suffix in ((98, ''), (49, '.lowend')):
                 sprite = gen.REPO / f'data/hd/global/ui/items/misc/powerorbs/horadric_orb{variant}{suffix}.sprite'
                 data = sprite.read_bytes()
+                fallback = gen.REPO / f'data/hd/global/ui/items/misc/powerorbs/horadric_orb{suffix}.sprite'
+                self.assertEqual(data, fallback.read_bytes())
                 self.assertEqual(struct.unpack('<4sHH8I', data[:40]),
                                  (b'SpA1', 31, size, size, size, 0, 1, 0, 0, size*size*4, 4))
                 self.assertEqual(len(data), 40+size*size*4)

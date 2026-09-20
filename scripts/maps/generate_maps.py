@@ -838,8 +838,6 @@ def gen_plugin_header(plans: list[dict], path: Path, runtime: dict, write=True) 
     expansion.header(out, plans, runtime)
     import treasure
     treasure.header(out, runtime)
-    import catacombs
-    catacombs.header(out, runtime)
     out.append('inline constexpr uint16_t WardenMonsterIds[] = { ' + ', '.join(map(str, runtime['warden_ids'])) + ' };')
     out.append("")
     out.append("}")

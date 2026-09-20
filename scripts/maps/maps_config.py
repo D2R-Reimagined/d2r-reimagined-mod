@@ -322,7 +322,10 @@ TEST_RECIPES = False
 MAP_MONSTERS = {
     "desert": ["clawviper5", "unraveler5", "scarab5", "wraith5"],
     "kurast": ["councilmember3", "vampire4", "blunderbore4", "zealot3"],
-    "catacombs": ["mummy5", "sk_archer5"],
+    # The greater mummy leads so the Warden inherits its GreaterMummy AI, which
+    # casts Skill3 natively (labunraveler pattern). The Mummy AI never uses its
+    # skill slots, so a mummy5 Warden cannot cast anything.
+    "catacombs": ["unraveler5", "mummy5", "sk_archer5"],
     "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "willowisp3"],
     "worldstone": ["hellbovine", "willowisp3"],
 }
@@ -377,7 +380,10 @@ WARDENS = {
     },
     "catacombs": {
         "aura": None,
-        "on_attack": None,  # Native timed Plague Pulse replaces random procs.
+        # Plague Pulse: catacombs.py puts a poison nova in Skill3/SC, the slot
+        # the GreaterMummy AI casts (labunraveler uses it for labUnHolyBolt).
+        # No aura or random procs.
+        "on_attack": None,
         "on_struck": None,
         "escort": ("mummy5", "sk_archer5", 3, 5),
         "melee": ("pois", 120, 120, 75),
