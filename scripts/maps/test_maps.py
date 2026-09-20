@@ -8,13 +8,34 @@ import boss_rooms
 
 
 class MappingContract(unittest.TestCase):
+    def test_catacombs_cast_animation_has_an_action_frame(self):
+        # A mode being present in MonStats2 does not make it a casting animation.
+        data = (gen.REPO / 'data/global/animdata.d2').read_bytes()
+        offset, records = 0, {}
+        for _ in range(256):
+            count = struct.unpack_from('<I', data, offset)[0]
+            offset += 4
+            for _ in range(count):
+                row = data[offset:offset + 160]
+                offset += 160
+                records[row[:8].rstrip(b'\0')] = row
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            skills = gen.Table(bank / 'skills.txt')
+            for name in ('rmap_plague_warning', 'rmap_plague_nova'):
+                skill = skills.find(skills.col('skill'), name)
+                key = ('MM' + skill[skills.col('monanim')] + 'HTH').encode()
+                row = records[key]
+                frames = struct.unpack_from('<I', row, 8)[0]
+                self.assertIn(1, row[16:16 + frames], key)
+        self.assertNotIn(1, records[b'MMS1HTH'][16:])
+
     def test_catacombs_nova_is_scoped_and_keeps_the_return_skill(self):
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles, props = [gen.Table(bank / (name + '.txt'))
                 for name in ('monstats', 'skills', 'missiles', 'monprop')]
             nova = skills.find(skills.col('skill'), 'rmap_plague_nova')
             self.assertEqual(nova[skills.col('srvdofunc')], '22')
-            self.assertEqual(nova[skills.col('monanim')], 'S1')
+            self.assertEqual(nova[skills.col('monanim')], 'A2')
             self.assertEqual(nova[skills.col('ELen')], '75')
             self.assertEqual(nova[skills.col('EDmgSymPerCalc')], '')
             missile = missiles.find(missiles.col('Missile'), 'rmap_plague_nova')
@@ -24,9 +45,9 @@ class MappingContract(unittest.TestCase):
             owners = []
             for row in monsters.rows:
                 uses = [(row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')]) for i in range(1, 9)]
-                if ('rmap_plague_nova', 'S1') in uses:
+                if ('rmap_plague_nova', 'A2') in uses:
                     owners.append(row[0])
-                    self.assertIn(('rmap_plague_warning', 'S1'), uses)
+                    self.assertIn(('rmap_plague_warning', 'A2'), uses)
                     self.assertIn((boss_rooms.BOSS_DEATH_SKILL, 'DT'), uses)
                     self.assertEqual(row[monsters.col('El1Dur(H)')], '75')
                     prop = props.find(props.col('Id'), row[0])
@@ -44,6 +65,8 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(len(table.rows) - len(names), 1)
             count = int(re.search(r'TreasureMonsterTableCount = (\d+)', header)[1])
             self.assertEqual(count, len(names))
+            wardens = list(map(int, re.search(r'WardenMonsterIds\[\] = \{([^}]+)', header)[1].split(',')))
+            self.assertEqual([names[i] for i in wardens], [f"rmap_{p['item_code']}_boss" for p in self.plans])
             ids = list(map(int, re.search(r'TreasureMonsterIds\[\] = \{([^}]+)', header)[1].split(',')))
             self.assertEqual([names[i] for i in ids],
                              [f"rmap_treasure_{tier}_{kind}" for tier in range(1, 7)
@@ -211,11 +234,32 @@ class MappingContract(unittest.TestCase):
         cls.props = gen.Table(gen.EXCEL / "monprop.txt")
         cls.uniques = gen.Table(gen.EXCEL / "superuniques.txt")
 
+    def test_area_levels_cover_bodies_bosses_and_all_monster_variants(self):
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            levels, monsters = gen.Table(bank / 'levels.txt'), gen.Table(bank / 'monstats.txt')
+            for p in self.plans:
+                expected = str(99 + p['tier'])
+                for lid in (p['body_id'], p['boss_id']):
+                    row = levels.find(levels.col('Id'), str(lid))
+                    for col in ('MonLvl', 'MonLvl(N)', 'MonLvl(H)',
+                                'MonLvlEx', 'MonLvlEx(N)', 'MonLvlEx(H)'):
+                        self.assertEqual(row[levels.col(col)], expected)
+                population = [row for row in monsters.rows
+                              if row[0].startswith(f"rmap_{p['item_code']}_")]
+                self.assertTrue(population)
+                for row in population:
+                    for diff in ('', '(N)', '(H)'):
+                        self.assertEqual(row[monsters.col('Level' + diff)], expected, row[0])
+            for row in monsters.rows:
+                if row[0].startswith('rmap_treasure_'):
+                    for diff in ('', '(N)', '(H)'):
+                        self.assertEqual(int(row[monsters.col('Level' + diff)]), 99 + int(row[0].split('_')[2]))
+
     def test_maps_have_independent_combat_population_and_persistent_kills(self):
         for p in self.plans:
             level = self.levels.find(self.levels.col("Id"), str(p["body_id"]))
             self.assertEqual(level[self.levels.col("SaveMonsters")], "1")
-            self.assertEqual(int(level[self.levels.col("MonLvlEx(H)")]), 85 + p["tier"])
+            self.assertEqual(int(level[self.levels.col("MonLvlEx(H)")]), 99 + p["tier"])
             for i in range(1, int(level[self.levels.col("NumMon")]) + 1):
                 name = level[self.levels.col(f"nmon{i}")]
                 self.assertTrue(name.startswith("rmap_"))

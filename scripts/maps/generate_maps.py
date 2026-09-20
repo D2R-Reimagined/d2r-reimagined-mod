@@ -840,6 +840,7 @@ def gen_plugin_header(plans: list[dict], path: Path, runtime: dict, write=True) 
     treasure.header(out, runtime)
     import catacombs
     catacombs.header(out, runtime)
+    out.append('inline constexpr uint16_t WardenMonsterIds[] = { ' + ', '.join(map(str, runtime['warden_ids'])) + ' };')
     out.append("")
     out.append("}")
     out.append("")
@@ -878,6 +879,8 @@ def main() -> int:
     rooms, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
     import treasure
     treasure.generate(sys.modules[__name__], combat[-1], combat[2], rooms[1], runtime)
+    native_monsters = monster_indices(combat[-1])
+    runtime['warden_ids'] = [native_monsters[f"rmap_{p['item_code']}_boss"] for p in plans]
     import catacombs
     plague_missiles = catacombs.generate(sys.modules[__name__], plans, combat, runtime)
     import presentation

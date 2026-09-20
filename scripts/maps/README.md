@@ -97,3 +97,5 @@ native auras, Warden placement/drop bundles, and all body/warden return warps.
 Treat the installed files as a test build until these checks pass.
 
 Rare-capable map quality now matches rings and amulets: Magic=1, Rare=1, Normal=0 in both banks. The former Normal=1 setting was incorrect, and subsequently clearing Magic as well also diverged from working misc items. The regression compares these flags against both ring and amulet rows. Generated maps have no inherited charm automagic. Native spawn tests use the observed letter option typ=r, not numeric typ=6. Live creation still needs confirmation.
+
+Map tiers 1-6 use area levels 100, 101, 102, 103, 104 and 105 in both map bodies and Warden arenas. Base populations, affix variants, Wardens and treasure carriers use matching tier levels in both data banks. Existing tier multipliers remain; the higher monster levels also use the existing higher-level MonLvl stats. Shared MonLvl rows and Labyrinth levels are unchanged.

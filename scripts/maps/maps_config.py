@@ -326,7 +326,7 @@ MAP_MONSTERS = {
     "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "willowisp3"],
     "worldstone": ["hellbovine", "willowisp3"],
 }
-MAP_AREA_LEVEL = 86
+MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 
 # --------------------------------------------------------------------------
 # Wardens
