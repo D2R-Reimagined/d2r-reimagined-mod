@@ -4,7 +4,7 @@ import json
 import maps_config as cfg
 
 
-def generate(api, plans, monsters):
+def generate(api, plans, monsters, runtime=None):
     path = api.REPO / 'data/hd/character/monsters.json'
     models = json.loads(path.read_text(encoding='utf-8-sig'))
     models = {key: value for key, value in models.items() if not key.startswith('rmap_')}
@@ -18,6 +18,7 @@ def generate(api, plans, monsters):
         name = row[monsters.col('Id')]
         if name.startswith('rmap_e_'):
             sources[name] = name.removeprefix('rmap_e_')
+    sources.update((runtime or {}).get('expansion_models', {}))
     for name, source in sources.items():
         if source not in models:
             raise ValueError(f'No HD monster binding for {source} (used by {name})')
@@ -25,11 +26,12 @@ def generate(api, plans, monsters):
     assets = {path: (json.dumps(models, indent=4, ensure_ascii=False) + '\n').encode('utf-8')}
     item_path = api.REPO / 'data/hd/items/items.json'
     items = json.loads(item_path.read_text(encoding='utf-8-sig'))
-    codes = {p['item_code'] for p in plans}
+    codes = {code for p in plans for code in (p['item_code'], cfg.expansion_code(p['item_code']))}
     items = [entry for entry in items if not codes.intersection(entry)]
     for p in plans:
         code = p['item_code']
         items.append({code: {'asset': f'map/map_t{code[-1]}'}})
+        items.append({cfg.expansion_code(code): {'asset': f'map/map_t{code[-1]}'}})
     # Keep the existing compact one-item-per-line formatting.
     lines = ['  ' + json.dumps(entry, separators=(', ', ': ')).replace('{', '{ ').replace('}', ' }')
              for entry in items]

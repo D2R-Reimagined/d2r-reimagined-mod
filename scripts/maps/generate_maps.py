@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import maps_config as cfg  # noqa: E402
 import endgame
 import boss_rooms
+import expansion
 
 REPO = Path(__file__).resolve().parents[2]
 EXCEL = REPO / "data" / "global" / "excel"
@@ -95,6 +96,13 @@ class Table:
 def set_cells(row: list[str], table: Table, values: dict[str, str]) -> None:
     for name, value in values.items():
         row[table.col(name)] = value
+
+
+def monster_indices(table: Table) -> dict[str, int]:
+    """Native MonStats IDs exclude the TXT Expansion separator (*hcIdx is a comment)."""
+    names = (row[table.col('Id')] for row in table.rows)
+    return {name: index for index, name in enumerate(
+        name for name in names if name.lower() != 'expansion')}
 
 
 # ---------------------------------------------------------------------------
@@ -434,6 +442,10 @@ def gen_misc(plans: list[dict]) -> Table:
              MAP_ITEM_TYPE)
     for cur in cfg.CURRENCY:
         make(cur["code"], cur["name"], cur["code"], cur["level"], MAP_CURRENCY_TYPE)
+    for p in plans:
+        make(cfg.expansion_code(p["item_code"]),
+             f"{p['theme']['name']} T{p['tier']} V2", cfg.expansion_code(p["item_code"]),
+             cfg.MAP_ITEM_LEVEL[p["tier"]], MAP_ITEM_TYPE)
     return t
 
 
@@ -541,13 +553,13 @@ def gen_cubemain(plans: list[dict]) -> Table:
         t.append(recipe(
             f"upgrade {p['theme']['key']} T{p['tier']}",
             [p["item_code"], "mor"],
-            higher["item_code"],
+            cfg.expansion_code(higher["item_code"]),
             2,
         ))
 
     for p in plans:
         t.append(recipe(f"reroll {p['theme']['key']} T{p['tier']}",
-                        [p["item_code"], "mrl"], p["item_code"], 2))
+                        [p["item_code"], "mrl"], cfg.expansion_code(p["item_code"]), 2))
 
     for p in plans:
         if p["tier"] != 5:
@@ -556,9 +568,20 @@ def gen_cubemain(plans: list[dict]) -> Table:
         t.append(recipe(
             f"corrupt {p['theme']['key']}",
             [p["item_code"], "mws"],
-            corrupted["item_code"],
+            cfg.expansion_code(corrupted["item_code"]),
             2,
         ))
+
+    # Alias recipes point at the same levels; item codes carry only roll schema.
+    originals = list(t.rows)
+    aliases = {p["item_code"]: cfg.expansion_code(p["item_code"]) for p in plans}
+    for original in originals:
+        if not original[c_desc].startswith(cfg.CUBE_TAG + " ") or original[c_in[0]] not in aliases:
+            continue
+        row = list(original)
+        row[c_desc] += " V2"
+        row[c_in[0]] = aliases[row[c_in[0]]]
+        t.append(row)
 
     if getattr(cfg, "TEST_RECIPES", False):
         first = cfg.THEMES[0]["key"]
@@ -660,7 +683,7 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     out["levels.json"] = levels
 
     items = load_strings("item-names.json")
-    known = {p["item_code"] for p in plans} | {c["code"] for c in cfg.CURRENCY}
+    known = {code for p in plans for code in (p["item_code"], cfg.expansion_code(p["item_code"]))} | {c["code"] for c in cfg.CURRENCY}
     quality_names = {f"{cfg.AFFIX_TAG}_quality_prefix": "Charted",
                      f"{cfg.AFFIX_TAG}_quality_suffix": "of Exploration"}
     known.update(quality_names)
@@ -674,16 +697,23 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     for cur in cfg.CURRENCY:
         items.append(string_entry(next_id, cur["code"], cur["name"]))
         next_id += 1
+    for p in plans:
+        items.append(string_entry(next_id, cfg.expansion_code(p["item_code"]),
+                                  f"{p['theme']['name']} Map (Tier {p['tier']})"))
+        next_id += 1
     for key, text in quality_names.items():
         items.append(string_entry(next_id, key, text))
         next_id += 1
     out["item-names.json"] = items
     monsters = load_strings("monsters.json")
-    monsters = [e for e in monsters if not str(e.get("Key", "")).startswith("RMapBoss")]
+    monsters = [e for e in monsters if not str(e.get("Key", "")).startswith(("RMapBoss", "RMapTreasure"))]
     next_id = max(int(e["id"]) for e in monsters) + 1
     for p in plans:
         monsters.append(string_entry(next_id, f"RMapBoss{p['item_code']}",
                                      f"{p['theme']['name']} Warden"))
+        next_id += 1
+    for spec in cfg.TREASURE_MONSTERS:
+        monsters.append(string_entry(next_id, 'RMapTreasure' + spec['key'], spec['name']))
         next_id += 1
     out["monsters.json"] = monsters
     return out
@@ -798,10 +828,18 @@ def gen_plugin_header(plans: list[dict], path: Path, runtime: dict, write=True) 
     out.append(f"inline constexpr uint32_t MagicFindPerStrength = {cfg.MAP_MF_PER_STRENGTH};")
     out.append("inline constexpr uint32_t MapMonProps[] = { " +
                ", ".join(map(str, runtime["prop_indices"])) + " };")
+    out.append("// Warden rows: slot 1 is the same MF aura, slots 4-6 hold the Warden's procs.")
+    out.append("inline constexpr uint32_t WardenMonProps[] = { " +
+               ", ".join(map(str, runtime["warden_prop_indices"])) + " };")
     out.append("inline constexpr uint32_t AffixSkills[] = { " + ", ".join(
-        str(runtime["skills"].get(a["key"], 0)) for a in cfg.AFFIX_PREFIXES + cfg.AFFIX_SUFFIXES) + " };")
+        str(runtime["skills"].get(a["key"], 0)) for a in cfg.all_affixes()) + " };")
     out.append("inline constexpr uint8_t AffixFamilies[] = { " +
-               ", ".join(map(str, cfg.AFFIX_FAMILIES)) + " };")
+               ", ".join(map(str, cfg.AFFIX_FAMILIES + [a["family"] for a in cfg.EXPANSION_AFFIXES])) + " };")
+    expansion.header(out, plans, runtime)
+    import treasure
+    treasure.header(out, runtime)
+    import catacombs
+    catacombs.header(out, runtime)
     out.append("")
     out.append("}")
     out.append("")
@@ -838,10 +876,15 @@ def main() -> int:
     ]
     combat, runtime = endgame.generate(sys.modules[__name__], plans, tables[0])
     rooms, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
+    import treasure
+    treasure.generate(sys.modules[__name__], combat[-1], combat[2], rooms[1], runtime)
+    import catacombs
+    plague_missiles = catacombs.generate(sys.modules[__name__], plans, combat, runtime)
     import presentation
-    assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1]))
+    assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1], runtime))
     tables.extend(combat)
     tables.extend(rooms)
+    tables.append(plague_missiles)
     # The two banks have different existing treasure classes. Generate against
     # each independently rather than copying RotW loot over the base bank.
     for path in (EXCEL / "treasureclassex.txt", EXCEL / "base" / "treasureclassex.txt"):

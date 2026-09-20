@@ -327,11 +327,168 @@ MAP_MONSTERS = {
     "worldstone": ["hellbovine", "willowisp3"],
 }
 MAP_AREA_LEVEL = 86
+
+# --------------------------------------------------------------------------
+# Wardens
+# --------------------------------------------------------------------------
+# A Warden is a superunique built on the theme's first MAP_MONSTERS archetype
+# with its own combat kit. Everything here is applied through channels that do
+# not depend on the archetype's AI: monprop entries (an aura, plus att-skill
+# and gethit-skill procs that fire when the Warden attacks or is struck), the
+# El1 melee element, and a superuniques.txt escort. The superunique route is
+# what places the escort: minion1/minion2 on a monstats row only spawn for
+# level-population monsters, and a DS1-preset monster skips that path (stock
+# Diablo lists leviathan and never brings one). Bishibosh, Corpsefire, the Cow
+# King and this mod's own Skeleton King all spawn their packs this way. A
+# skill-slot aura (Duriel's pattern) was tried first and did not activate on
+# these AIs, so the aura is a monprop entry like the map affix auras.
+#
+# The Warden's monprop row keeps slot 1 for the plugin's combat-MF aura and
+# slots 2-3 for the map's rolled affix auras; slot 4 is the Warden's aura and
+# the procs occupy slots 5-6. With the penalty hook installed a roll carries at
+# most three aura affixes (one per family); the third is dropped on the Warden
+# alone and its escort still carries it.
+#
+#   aura       skills.txt name and base level; +WARDEN_AURA_PER_TIER per tier
+#   on_attack  (skill, chance %, base level); level +WARDEN_SKILL_PER_TIER
+#   on_struck  (skill, chance %, base level)
+#   escort     (minion1 archetype, minion2 archetype, min, max) drawn from the
+#              theme's MAP_MONSTERS; counts grow by WARDEN_ESCORT_PER_TIER
+#   melee      El1 override: (type, hell min, hell max, duration) or None to
+#              keep the archetype's own element
+#   drain      life drain override, or None
+
+WARDENS = {
+    "desert": {
+        "aura": ("MonHolyShock", 8),
+        "on_attack": ("Dust Devils", 25, 12),
+        "on_struck": ("Chain Lightning", 6, 20),
+        "escort": ("clawviper5", "unraveler5", 2, 3),
+        "melee": ("cold", 110, 185, 150),
+        "drain": None,
+    },
+    "kurast": {
+        "aura": ("MonHolyFire", 8),
+        "on_attack": ("CountessFirewall", 20, 12),
+        "on_struck": ("Lower Resist", 5, 10),
+        "escort": ("councilmember3", "councilmember3", 2, 2),
+        "melee": ("fire", 90, 160, 0),
+        "drain": None,
+    },
+    "catacombs": {
+        "aura": None,
+        "on_attack": None,  # Native timed Plague Pulse replaces random procs.
+        "on_struck": None,
+        "escort": ("mummy5", "sk_archer5", 3, 5),
+        "melee": ("pois", 120, 120, 75),
+        "drain": 100,
+    },
+    "frozen": {
+        "aura": ("MonHolyFreeze", 8),
+        "on_attack": ("MadawcFrozenOrb", 20, 12),
+        "on_struck": ("Summoner Frost Nova", 5, 12),
+        "escort": ("frozenhorror5", "snowyeti4", 2, 4),
+        "melee": ("cold", 90, 160, 150),
+        "drain": None,
+    },
+    "worldstone": {
+        "aura": ("Fanaticism", 8),
+        "on_attack": ("Siege Beast Stomp", 25, 12),
+        "on_struck": ("Baal Nova", 5, 12),
+        "escort": ("hellbovine", "willowisp3", 4, 6),
+        "melee": ("stun", 0, 0, 30),
+        "drain": None,
+    },
+}
+# Warden health is a per-tier ratio independent of the archetype: Hell Bovine
+# carries three times the base health of the other archetypes, which made the
+# Worldstone Warden a 3x outlier under the old 12x-archetype rule. The ratio
+# goes through the same 1.5 x tier scale as the population, then this
+# multiplier. Hell uniques receive a further +100% (monumod constant 9), so 6
+# here lands where 12x used to for a mid archetype.
+WARDEN_HP_RATIO = (300, 360)
+WARDEN_HP_MULTIPLIER = 6
+# Regeneration is a share of max health per frame, so it grew with the health
+# multiplier. Act bosses run 0; Wardens do too.
+WARDEN_DAMAGE_REGEN = 0
+WARDEN_UTRANS = 3               # superunique palette shift
+WARDEN_AURA_SLOT = 4            # monprop slot for the Warden's own aura
+WARDEN_FIRST_PROC_SLOT = 5      # monprop slots 5-6 are never written by the plugin
+WARDEN_AURA_PER_TIER = 2
+WARDEN_SKILL_PER_TIER = 4
+WARDEN_ESCORT_PER_TIER = 1      # applied to both min and max from tier 2 on
+WARDEN_TIER6_ESCORT_BONUS = 2   # the corruption cliff, on top of the per-tier step
+# Source archetypes carry 99% immunities; a Warden is capped so no build is
+# locked out of a theme. Escorts keep their native values.
+WARDEN_RESIST_CAP = 75
 MAP_MF_PER_TIER = 25
 MAP_MF_PER_STRENGTH = 5
 # Same affix family cannot occur twice; this also prevents two penalties
 # targeting the same aura state from competing.
 AFFIX_FAMILIES = [0, 0, 1, 1, 2, 2, 3, 4, 5, 6, 7, 7, 8]
+
+# Version 2 uses distinct item codes so saved legacy maps keep their exact
+# deterministic rolls. Existing layouts and their level IDs remain shared.
+EXPANSION_ITEM_PREFIX = "x"
+LEGACY_AFFIX_COUNT = 13
+EXPANSION_AFFIXES = [
+    dict(key="bovine", display="Bovine Incursion", kind="population", strength=2,
+         tiers=[1, 2, 3, 4, 5, 6], family=9, population=1, weight=10,
+         description="Bovine Incursion: some native packs replaced by Hell Bovines"),
+    dict(key="coven", display="Witch Coven", kind="population", strength=3,
+         tiers=[2, 3, 4, 5, 6], family=9, population=2, weight=10,
+         description="Witch Coven: some native packs replaced by Succubi"),
+    dict(key="legion", display="Restless Legion", kind="population", strength=2,
+         tiers=[1, 2, 3, 4, 5, 6], family=9, population=3, weight=10,
+         description="Restless Legion: some native packs replaced by skeletal archers"),
+    dict(key="frenzy", display="Blood Frenzy", kind="monster", strength=3,
+         tiers=[2, 3, 4, 5, 6], family=10, weight=8,
+         monster_props=[("move2", 0, 15, 15), ("swing2", 0, 15, 15)],
+         description="Blood Frenzy: body monsters gain 15% movement and attack speed"),
+    dict(key="fire_pact", display="Flame Pact", kind="monster", strength=3,
+         tiers=[1, 2, 3, 4, 5, 6], family=11, weight=4,
+         monster_props=[("dmg-fire", 0, 20, 40)], scale_with_tier=True,
+         description="Flame Pact: body monsters add 20-40 fire attack damage per tier"),
+    dict(key="cold_pact", display="Frost Pact", kind="monster", strength=3,
+         tiers=[1, 2, 3, 4, 5, 6], family=11, weight=4,
+         monster_props=[("dmg-cold", 25, 15, 30)], scale_with_tier=True,
+         description="Frost Pact: body monsters add 15-30 cold attack damage per tier"),
+    dict(key="light_pact", display="Storm Pact", kind="monster", strength=3,
+         tiers=[1, 2, 3, 4, 5, 6], family=11, weight=4,
+         monster_props=[("dmg-ltng", 0, 5, 60)], scale_with_tier=True,
+         description="Storm Pact: body monsters add 5-60 lightning attack damage per tier"),
+    dict(key="gilded", display="Gilded", kind="reward", strength=0,
+         tiers=[1, 2, 3, 4, 5, 6], family=12, reward=1, weight=8,
+         description="Gilded: elite bonus drop chance for gold, gems and mapping currency"),
+    dict(key="artificer", display="Artificer's", kind="reward", strength=0,
+         tiers=[1, 2, 3, 4, 5, 6], family=12, reward=2, weight=8,
+         description="Artificer's: elite bonus drop chance for gems, jewels and equipment"),
+]
+
+# Each profile preserves the native number of population slots and substitutes
+# only the final slot. No resurrection, on-death spawning, or death damage.
+EXPANSION_POPULATIONS = [None, "hellbovine", "succubus5", "sk_archer5"]
+EXPANSION_REWARDS = [None, "Gilded", "Artificer"]
+
+# One native group is replaced by a single treasure carrier. The plugin owns
+# occurrence; these monsters must never enter a random population or summon pool.
+TREASURE_MONSTERS = [
+    dict(key="jewel", name="Jewel Hoarder", source="goatman5", palette=8,
+         item="jew", rare=0),
+    dict(key="amulet", name="Amulet Collector", source="corruptrogue5", palette=12,
+         item="amu", rare=1024),
+]
+TREASURE_DROPS = 6
+TREASURE_DEFAULT_CHANCE = 8  # Combined encounter chance: one per 12.5 maps on average.
+TREASURE_RELEASE_CHANCE = 8
+
+
+def all_affixes():
+    return AFFIX_PREFIXES + AFFIX_SUFFIXES + EXPANSION_AFFIXES
+
+
+def expansion_code(code):
+    return EXPANSION_ITEM_PREFIX + code[1:]
 
 
 # --------------------------------------------------------------------------

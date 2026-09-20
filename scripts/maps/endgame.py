@@ -82,12 +82,47 @@ def generate(api, plans, levels):
                 probe[props.col(f"{field}{i}{diff}")] = str(11 + d * 6 + i)
     props.append(probe)
 
+    def skill_id(name):
+        return int(skills.find(skills.col("skill"), name)[skills.col("*Id")])
+
+    def warden_property_row(p):
+        """Slot 1 is the combat-MF aura the plugin rewrites, slots 2-3 stay
+        free for the rolled affix auras it adds, slot 4 is the Warden's own
+        aura and its procs sit in slots 5-6; the plugin never writes 4-6."""
+        row = property_row(f"rmap_{p['item_code']}_boss",
+                           [(skill_ids["fortune"], p["tier"] * cfg.MAP_MF_PER_TIER)])
+        kit = cfg.WARDENS[p["theme"]["key"]]
+        step = p["tier"] - 1
+        entries = []
+        if kit["aura"]:
+            skill, level = kit["aura"]
+            level += cfg.WARDEN_AURA_PER_TIER * step
+            entries.append((cfg.WARDEN_AURA_SLOT, "aura", skill, level, level))
+        for slot, (prop, spec) in enumerate(
+                [("att-skill", kit["on_attack"]), ("gethit-skill", kit["on_struck"])],
+                cfg.WARDEN_FIRST_PROC_SLOT):
+            if spec is None:
+                continue
+            skill, chance, level = spec
+            entries.append((slot, prop, skill, chance, level + cfg.WARDEN_SKILL_PER_TIER * step))
+        for slot, prop, skill, lo, hi in entries:
+            for diff in ("", " (N)", " (H)"):
+                set_cells(row, props, {
+                    f"prop{slot}{diff}": prop, f"chance{slot}{diff}": "100",
+                    f"par{slot}{diff}": str(skill_id(skill)),
+                    f"min{slot}{diff}": str(lo), f"max{slot}{diff}": str(hi),
+                })
+        return row
+
     prop_indices = []
+    warden_prop_indices = []
     for p in plans:
         idx = len(props.rows)
         prop_indices.append(idx)
         props.append(property_row(f"rmap_{p['item_code']}",
                                   [(skill_ids["fortune"], p["tier"] * cfg.MAP_MF_PER_TIER)]))
+        warden_prop_indices.append(len(props.rows))
+        props.append(warden_property_row(p))
         codes = cfg.MAP_MONSTERS[p["theme"]["key"]]
         for i, code in enumerate(codes):
             source = monsters.find(monsters.col("Id"), code)
@@ -137,7 +172,8 @@ def generate(api, plans, levels):
             for col in ("MonLvl", "MonLvl(N)", "MonLvl(H)", "MonLvlEx", "MonLvlEx(N)", "MonLvlEx(H)"):
                 level[levels.col(col)] = str(cfg.MAP_AREA_LEVEL + p["tier"] - 1)
 
-    metadata = {"prop_indices": prop_indices, "probe_index": probe_index,
+    metadata = {"prop_indices": prop_indices, "warden_prop_indices": warden_prop_indices,
+                "probe_index": probe_index,
                 "fortune_skill": skill_ids["fortune"], "skills": skill_ids,
                 "prop_count": len(props.rows)}
     # Isolate entry drops by level population rather than shared TC groups:
@@ -166,6 +202,8 @@ def generate(api, plans, levels):
                     monsters.append(row)
                 level[col] = f"rmap_e_{code}"
     metadata["entry_classes"] = [entry for values in entries.values() for entry in values]
+    import expansion
+    expansion.generate(api, plans, monsters, props, metadata)
     return [skills, states, props, monsters], metadata
 
 
@@ -173,6 +211,8 @@ def treasure_classes(api, plans, path, runtime):
     t = api.Table(path)
     key = t.col("Treasure Class")
     t.drop_tagged(key, "RMap ")
+    import treasure
+    treasure.classes(api, t)
 
     def tc(name, picks, drops, nodrop=0):
         row = t.blank_row()
@@ -183,7 +223,7 @@ def treasure_classes(api, plans, path, runtime):
         t.append(row)
 
     for tier in range(1, 6):
-        tc(f"RMap Tier {tier}", 1, [(p["item_code"], 1) for p in plans if p["tier"] == tier])
+        tc(f"RMap Tier {tier}", 1, [(cfg.expansion_code(p["item_code"]), 1) for p in plans if p["tier"] == tier])
     tc("RMap Currency", 1, [("mor", 5), ("mrl", 4), ("mws", 1)])
     tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249)
     # Remove only the previous generated entry slot, if this is an upgrade
@@ -200,6 +240,16 @@ def treasure_classes(api, plans, path, runtime):
         t.find(key, original)  # bank-specific reference must exist
         tc(name, -2, [(original, 1), ("RMap Entry", 1)])
     for tier in range(1, 7):
+        # One bounded bonus attempt on elites only. These tables do not wrap
+        # the sustain table and never multiply its chance or the Warden loot.
+        tc(f"RMap T{tier} Gilded Bonus", 1,
+           [("Gold 1x", 60), ("gpg", 10), ("gpb", 10), ("mor", 2), ("mrl", 2)], 168)
+        tc(f"RMap T{tier} Artificer Bonus", 1,
+           [("jew", 20), ("gpg", 10), ("gpb", 10), ("Act 5 (H) Equip C", 44)], 168)
+        for reward in ("Gilded", "Artificer"):
+            tc(f"RMap T{tier} {reward}", -5,
+               [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1),
+                (f"RMap T{tier} {reward} Bonus", 1)])
         # No group: these rows must never auto-upgrade into another tier's TC.
         tc(f"RMap T{tier} Sustain", 1,
            [(f"RMap Tier {min(tier, 5)}", 8), ("RMap Currency", 5)]

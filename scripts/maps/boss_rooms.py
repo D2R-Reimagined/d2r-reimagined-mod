@@ -151,21 +151,82 @@ BOSS_AUTOMAP_CEL = "305"
 BOSS_DEATH_SKILL = "Book of Townportal"
 
 
-def add_death_skill(api, monsters, row, skill):
-    """Put `skill` in the first free Skill slot of `row`, cast on death."""
+def add_skill(api, monsters, row, skill, mode, level=1):
+    """Put `skill` in the first free Skill slot of `row`."""
     for slot in range(1, 9):
         if not row[monsters.col(f"Skill{slot}")]:
             api.set_cells(row, monsters, {
-                f"Skill{slot}": skill, f"Sk{slot}mode": "DT", f"Sk{slot}lvl": "1",
+                f"Skill{slot}": skill, f"Sk{slot}mode": mode, f"Sk{slot}lvl": str(level),
             })
             return
     raise ValueError(f"{row[monsters.col('Id')]}: no free skill slot for {skill}")
+
+
+def add_death_skill(api, monsters, row, skill):
+    """Put `skill` in the first free Skill slot of `row`, cast on death."""
+    add_skill(api, monsters, row, skill, "DT")
+
+
+def apply_kit(api, monsters, boss, p):
+    """Give a Warden its theme kit from cfg.WARDENS. The aura and procs live
+    in the Warden's own monprop row (see endgame.py) and the escort in
+    superuniques.txt; this handles everything on the monstats row itself."""
+    kit = cfg.WARDENS[p["theme"]["key"]]
+    tier, code = p["tier"], p["item_code"]
+    step = tier - 1
+    api.set_cells(boss, monsters, {"MonProp": f"rmap_{code}_boss",
+                                   "DamageRegen": str(cfg.WARDEN_DAMAGE_REGEN)})
+    lo, hi = cfg.WARDEN_HP_RATIO
+    factor = 1.5 * p["spec"]["scale"] * cfg.WARDEN_HP_MULTIPLIER
+    for diff in ("", "(N)", "(H)"):
+        for stem, ratio in (("MinHP", lo), ("MaxHP", hi)):
+            target = stem + diff
+            if target not in monsters.header:
+                target = target[0].lower() + target[1:]
+            boss[monsters.col(target)] = str(round(ratio * factor))
+    if kit["melee"]:
+        el_type, lo, hi, dur = kit["melee"]
+        cells = {"El1Mode": "A1", "El1Type": el_type}
+        for diff in ("", "(N)", "(H)"):
+            cells.update({f"El1Pct{diff}": "100", f"El1Dur{diff}": str(dur) if dur else "",
+                          f"El1MinD{diff}": str(lo) if lo else "",
+                          f"El1MaxD{diff}": str(hi) if hi else ""})
+        api.set_cells(boss, monsters, cells)
+    if kit["drain"] is not None:
+        api.set_cells(boss, monsters, {f"Drain{d}": str(kit["drain"]) for d in ("", "(N)", "(H)")})
+    archetypes = cfg.MAP_MONSTERS[p["theme"]["key"]]
+    first, second, lo, hi = kit["escort"]
+    bonus = cfg.WARDEN_ESCORT_PER_TIER * step + (cfg.WARDEN_TIER6_ESCORT_BONUS if tier == 6 else 0)
+    api.set_cells(boss, monsters, {
+        "minion1": f"rmap_{code}_{archetypes.index(first)}",
+        "minion2": f"rmap_{code}_{archetypes.index(second)}",
+        "MinGrp": str(lo + bonus), "MaxGrp": str(hi + bonus),
+    })
+    for col in monsters.header:
+        if col.startswith("Res") and col[3:5] in ("Dm", "Ma", "Fi", "Li", "Co", "Po"):
+            value = int(boss[monsters.col(col)] or 0)
+            if value > cfg.WARDEN_RESIST_CAP:
+                boss[monsters.col(col)] = str(cfg.WARDEN_RESIST_CAP)
+
+
+def escort_count(p):
+    """Superunique MinGrp/MaxGrp for a Warden: the theme's escort plus the
+    per-tier step and the tier 6 cliff."""
+    _, _, lo, hi = cfg.WARDENS[p["theme"]["key"]]["escort"]
+    bonus = cfg.WARDEN_ESCORT_PER_TIER * (p["tier"] - 1)
+    if p["tier"] == 6:
+        bonus += cfg.WARDEN_TIER6_ESCORT_BONUS
+    return lo + bonus, hi + bonus
 
 
 def generate(api, plans, levels, presets, monsters):
     places = api.Table(api.EXCEL / "monpreset.txt")
     places.drop_tagged(places.col("Place"), "rmap_")
     next_slot = sum(r[places.col("Act")] == "5" for r in places.rows)
+    # The Warden is placed as a superunique so its escort spawns with it.
+    uniques = api.Table(api.EXCEL / "superuniques.txt")
+    uniques.drop_tagged(uniques.col("Superunique"), "rmap_")
+    next_hc = 1 + max(int(r[uniques.col("hcIdx")] or 0) for r in uniques.rows)
     # Map monsters share their source monster's MonStats2 row. A Warden gets
     # its own copy so the automap marker is not inherited by every monster
     # of that archetype in the rest of the game.
@@ -186,14 +247,27 @@ def generate(api, plans, levels, presets, monsters):
             "NameStr": f"RMapBoss{code}",
         })
         add_death_skill(api, monsters, boss, BOSS_DEATH_SKILL)
+        apply_kit(api, monsters, boss, p)
         for col in monsters.header:
-            if col.lower().startswith(("minhp", "maxhp")):
-                boss[monsters.col(col)] = str(int(boss[monsters.col(col)] or 0) * 12)
             if col.startswith("TreasureClass"):
                 boss[monsters.col(col)] = f"RMap T{p['tier']} Boss"
         monsters.append(boss)
+        unique = uniques.blank_row()
+        lo, hi = escort_count(p)
+        api.set_cells(unique, uniques, {
+            "Superunique": f"rmap_{code}_warden", "Name": f"RMapBoss{code}",
+            "Class": f"rmap_{code}_boss", "hcIdx": str(next_hc),
+            "Mod1": "0", "Mod2": "0", "Mod3": "0",
+            "MinGrp": str(lo), "MaxGrp": str(hi), "AutoPos": "0", "Stacks": "0",
+            "Utrans": str(cfg.WARDEN_UTRANS), "Utrans(N)": str(cfg.WARDEN_UTRANS),
+            "Utrans(H)": str(cfg.WARDEN_UTRANS),
+            **{col: f"RMap T{p['tier']} Boss" for col in uniques.header if col.startswith("TC")},
+            "*eol": "0",
+        })
+        uniques.append(unique)
+        next_hc += 1
         row = places.blank_row()
-        api.set_cells(row, places, {"Act": "5", "Place": f"rmap_{code}_boss", "* DS1 ID#": str(next_slot)})
+        api.set_cells(row, places, {"Act": "5", "Place": f"rmap_{code}_warden", "* DS1 ID#": str(next_slot)})
         places.append(row)
 
         preset = presets.find(presets.col("LevelId"), str(p["boss_id"]))
@@ -215,4 +289,4 @@ def generate(api, plans, levels, presets, monsters):
         level[levels.col("NumMon")] = "0"
     if next_slot > 256:
         raise ValueError("Act 5 preset slots exceed 8-bit range")
-    return [places, stats2, object_presets.table], assets
+    return [places, stats2, uniques, object_presets.table], assets

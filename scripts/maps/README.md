@@ -1,5 +1,13 @@
 # Mapping generation and validation
 
+The 0.3.0 expansion generates the affix catalog and 360 population/reward profiles through `expansion.py`. New `x*` item codes share existing map levels while preserving old `m*` rolls. Drops and cube upgrades/rerolls produce the new codes; both versions activate normally. The first seven new concepts exclude Fortified and on-death mechanics. Interactive events and new themes remain pending native runtime work.
+
+Version 0.4.0 adds `treasure.py`: twelve tier-scaled Jewel Hoarder/Amulet Collector rows, isolated MonProp/MonStats2 identities, names, HD bindings, and two six-item treasure classes. The plugin replaces one native ordinary group with one carrier; these rows never enter population, summon, or minion pools. The Collector uses Rare=1024 with normal set/unique opportunities, as requested. Only carrier corpse selection/revival is disabled.
+
+The test default is 100% in `maps_config.py` and the plugin's `maps.toml`; `treasure_chance_percent` is configurable from 0 to 100. Lower the shipped setting and generated fallback default to 8 before release. This is one decision per newly cube-prepared map, including legacy items, without changing any affix rolls. Native placement and drops require in-game acceptance with the matching DLL/data bundle.
+
+After regeneration, run `python scripts/maps/test_maps.py` and `python scripts/maps/generate_maps.py --check`, then rebuild/test the maps plugin with its matching generated header. This validates local data and code; native population selection, combat properties, and drops still need a fresh in-game test.
+
 Edit `maps_config.py`, `endgame.py`, `boss_rooms.py` or `presentation.py`, then run from the mod root:
 
 ```
@@ -37,6 +45,20 @@ The generator emits `data/hd/env/preset/maps/<code>_boss.json` next to every
 cloned `Maps/<code>_boss.ds1`. D2R resolves the HD scene by DS1 path, and the
 scene JSON only references stock terrain assets by absolute path, so the
 source arena's JSON is copied verbatim. The deploy script ships these.
+
+Wardens are superuniques (`rmap_<code>_warden`, the monpreset Place the arena
+DS1 points at) whose class is the `rmap_<code>_boss` monstats row. They take
+their combat kit from `WARDENS` in `maps_config.py`: an `aura` entry in slot 4
+and `att-skill`/`gethit-skill` procs in slots 5-6 of a dedicated
+`rmap_<code>_boss` monprop row (slot 1 is the plugin's combat-MF aura, slots
+2-3 are left free for its rolled affix auras), an `El1` melee element, an
+escort from the theme's `MAP_MONSTERS` sized by the superunique's
+MinGrp/MaxGrp, per-tier health from `WARDEN_HP_RATIO`, zero regeneration and
+a 75 resistance cap. Levels and escort counts scale per tier. The generated
+header exports `WardenMonProps[]` beside `MapMonProps[]`; the plugin must be
+rebuilt with it. Two things were confirmed live and drove this shape: a
+monstats `minion1/minion2` pair never spawns for a DS1-preset monster, and a
+skill-slot aura in mode `NU` does not activate on these AIs.
 
 `presentation.py` also generates the HD monster lookup entries for every map-owned monster ID, including Wardens and late-Hell drop variants. The lookup is included in `--check` and the deployment script.
 
