@@ -30,14 +30,12 @@ FIRST_LEVEL_ID = 166
 # lvlprest.txt Def ids. The labyrinth presets used 1092-1104.
 FIRST_PREST_DEF = 1105
 
-# levels.txt Layer ids, one per generated body. Layer is the client's
-# automap key, not Id: levels sharing a Layer share discovered automap
-# cells, so a T2 body cloned with its template's Layer showed the T1 body's
-# explored layout. Stock and Labyrinth layers stop at 99. Arenas keep their
-# template's Layer: every tier uses the same arena DS1, so a shared automap
-# is correct there, and the Cathedral-tileset arena crashed on entry when
-# moved off Layer 0 (the Act 1 overworld layer its tileset belongs to).
-FIRST_LAYER = 100
+# The native automap save routine uses a fixed 100-entry DWORD directory.
+# Layer is an array index, not an extensible level ID. Using 100+ reads past
+# that directory and can hang when an area is saved during a transition.
+# Both bodies and arenas retain their stock template's layer. Independent
+# exploration across tiers needs a separately validated runtime solution.
+AUTOMAP_LAYER_COUNT = 100
 
 # --------------------------------------------------------------------------
 # Tiers

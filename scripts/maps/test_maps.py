@@ -8,6 +8,84 @@ import boss_rooms
 
 
 class MappingContract(unittest.TestCase):
+    def test_map_layers_fit_native_automap_directory(self):
+        # Live hang: native RVA 0xd5fe0 reads a fixed 0x190-byte directory,
+        # then indexes it by Layer. Catacombs T1 layer 112 read stack garbage.
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            levels=gen.Table(bank / 'levels.txt')
+            for p in self.plans:
+                for role in ('body','boss'):
+                    row=levels.find(levels.col('Id'),str(p[role+'_id']))
+                    key='body_template' if role=='body' else 'arena_template'
+                    template=levels.find(levels.col('Id'),str(p['theme'][key]))
+                    layer=int(row[levels.col('Layer')])
+                    self.assertGreaterEqual(layer,0)
+                    self.assertLess(layer,100)
+                    self.assertEqual(layer,int(template[levels.col('Layer')]))
+
+    def test_starter_events_own_population_rewards_and_interactive_objects(self):
+        import starter_events
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, stats2, objects, uniques, tcs = [gen.Table(bank / (n + '.txt'))
+                for n in ('monstats', 'monstats2', 'objects', 'superuniques', 'treasureclassex')]
+            members = [r for r in monsters.rows if r[0].startswith('rmap_event_')]
+            self.assertEqual(len(members), 162)
+            for row in members:
+                marker=stats2.find(stats2.col('Id'), row[monsters.col('MonStatsEx')])
+                self.assertEqual(marker[stats2.col('revive')], '0')
+                self.assertEqual(row[monsters.col('deathDmg')], '0')
+                for diff in ('', '(N)', '(H)'):
+                    self.assertIn(int(row[monsters.col('Level'+diff)]), range(100,106))
+                if row[0].startswith(('rmap_event_wave_', 'rmap_event_guard_')):
+                    for col in monsters.header:
+                        if col.startswith('TreasureClass'): self.assertEqual(row[monsters.col(col)], '')
+            for name in ('RMapEventSigil','RMapEventCache'):
+                obj=objects.find(objects.col('Name'),name)
+                self.assertEqual(obj[objects.col('OperateFn')],'6')
+                self.assertEqual(obj[objects.col('InitFn')],'0')
+                self.assertEqual(obj[objects.col('Lockable')],'0')
+                self.assertEqual(obj[objects.col('Selectable2')],'1')
+                # Golden quest-chest glow so the object is easy to spot.
+                self.assertEqual(obj[objects.col('Overlay')],'1')
+            self.assertEqual(len(objects.rows)-len(starter_events.native_rows(objects)),1)
+            self.assertEqual(len(uniques.rows)-len(starter_events.native_rows(uniques)),1)
+            # Header IDs must be compiled ordinals, never TXT line ordinals or hcIdx.
+            native_objects=starter_events.native_rows(objects)
+            self.assertEqual([r[objects.col('Name')] for r in native_objects[-2:]],
+                             ['RMapEventSigil','RMapEventCache'])
+            header=(gen.REPO.parent / 'd2rl-plugins/plugins/maps/src/map_tables.gen.h').read_text()
+            def ids(name): return list(map(int,re.search(name+r'\[\] = \{([^}]+)',header)[1].split(',')))
+            self.assertEqual([native_objects[i][objects.col('Name')] for i in ids('EventObjectIds')],
+                             ['RMapEventSigil','RMapEventCache'])
+            native_uniques=starter_events.native_rows(uniques)
+            self.assertEqual([native_uniques[i][uniques.col('Superunique')] for i in ids('EventSuperUniqueIds')],
+                             [f"rmap_event_challenger_{p['item_code']}" for p in self.plans])
+            hc=[r[uniques.col('hcIdx')] for r in uniques.rows if r[uniques.col('hcIdx')]]
+            self.assertEqual(len(hc),len(set(hc)))
+            for p in self.plans:
+                boss=uniques.find(uniques.col('Superunique'),f"rmap_event_challenger_{p['item_code']}")
+                for n in range(1,4): self.assertEqual(boss[uniques.col(f'Mod{n}')],'0')
+            for tier in range(1,7):
+                for kind in ('Raiders','Challenger','Crafting','Equipment','Maps'):
+                    tc=tcs.find(tcs.col('Treasure Class'),f'RMap Event {kind} {tier}')
+                    self.assertEqual(tc[tcs.col('NoDrop')],'0')
+                    self.assertLess(int(tc[tcs.col('Picks')]),0)
+                tc=tcs.find(tcs.col('Treasure Class'),f'RMap Event Challenger {tier}')
+                self.assertEqual(tc[tcs.col('Item3')],'RMap Currency')
+                self.assertEqual(tc[tcs.col('Prob3')],'1')
+                tc=tcs.find(tcs.col('Treasure Class'),f'RMap Event Raiders {tier}')
+                self.assertEqual([tc[tcs.col(f'Item{i}')] for i in range(1,5)],
+                                 [f'RMap T{tier} Loot',f'RMap T{tier} Sustain','RMap Currency','jew'])
+            # A nested treasure class only resolves if its row was parsed earlier
+            # in the file; the loader otherwise asserts and leaves the slot empty.
+            key=tcs.col('Treasure Class')
+            defined=set()
+            for row in tcs.rows:
+                for i in range(1,11):
+                    item=row[tcs.col(f'Item{i}')]
+                    if item.startswith('RMap '): self.assertIn(item,defined,f"{row[key]} Item{i}")
+                defined.add(row[key])
+
     def test_catacombs_nova_is_cast_from_the_greater_mummy_skill_slot(self):
         import catacombs
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):

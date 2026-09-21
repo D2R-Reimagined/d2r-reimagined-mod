@@ -123,7 +123,6 @@ def plan() -> list[dict]:
                 "spec": spec,
                 "body_id": level_id,
                 "boss_id": level_id + 1,
-                "body_layer": cfg.FIRST_LAYER + len(plans),
                 "prest_def": prest_def,
                 "body_key": f"RMap{theme['key'].capitalize()}T{tier}",
                 "boss_key": f"RMap{theme['key'].capitalize()}T{tier}Boss",
@@ -214,12 +213,13 @@ def gen_levels(plans: list[dict]) -> Table:
                 "QuestFlagEx": "",
                 "Quest": "0",
             })
+            if not 0 <= int(row[t.col('Layer')]) < cfg.AUTOMAP_LAYER_COUNT:
+                raise ValueError(f"Map template has an unsafe automap Layer: {row[t.col('Layer')]}")
 
         set_cells(body, t, {
             "Name": f"{cfg.ROW_TAG} {theme['key']} T{p['tier']}",
             "*StringName": p["body_key"],
             "Id": str(p["body_id"]),
-            "Layer": str(p["body_layer"]),
             # LevelName/LevelWarp/LevelEntry are the columns D2R actually
             # reads. Without these the clone keeps the template's keys and
             # every map is announced as the template level.
@@ -707,7 +707,7 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
         items.append(string_entry(next_id, key, text))
         next_id += 1
     out["item-names.json"] = items
-    monsters = load_strings("monsters.json")
+    monsters = [e for e in load_strings("monsters.json") if not e.get("Key", "").startswith("RMapEvent")]
     monsters = [e for e in monsters if not str(e.get("Key", "")).startswith(("RMapBoss", "RMapTreasure"))]
     next_id = max(int(e["id"]) for e in monsters) + 1
     for p in plans:
@@ -717,6 +717,9 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     for spec in cfg.TREASURE_MONSTERS:
         monsters.append(string_entry(next_id, 'RMapTreasure' + spec['key'], spec['name']))
         next_id += 1
+    import starter_events
+    for key, text in starter_events.NAMES.items():
+        monsters.append(string_entry(next_id, key, text)); next_id += 1
     out["monsters.json"] = monsters
     return out
 
@@ -840,6 +843,10 @@ def gen_plugin_header(plans: list[dict], path: Path, runtime: dict, write=True) 
     expansion.header(out, plans, runtime)
     import treasure
     treasure.header(out, runtime)
+    import starter_events
+    starter_events.header(out, runtime)
+    out.append('inline constexpr uint32_t MapBaseAutomapLayers[][2] = { ' + ', '.join(
+        '{' + ','.join(map(str, layers)) + '}' for layers in runtime['automap_layers']) + ' };')
     out.append('inline constexpr uint16_t WardenMonsterIds[] = { ' + ', '.join(map(str, runtime['warden_ids'])) + ' };')
     out.append("")
     out.append("}")
@@ -879,6 +886,12 @@ def main() -> int:
     rooms, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
     import treasure
     treasure.generate(sys.modules[__name__], combat[-1], combat[2], rooms[1], runtime)
+    import starter_events
+    event_objects = starter_events.generate(sys.modules[__name__], plans, combat[-1], combat[2], rooms[1], rooms[2], runtime)
+    tables.append(event_objects)
+    levels=tables[0]
+    runtime['automap_layers']=[[int(levels.find(levels.col('Id'), str(p[key]))[levels.col('Layer')])
+                              for key in ('body_id','boss_id')] for p in plans]
     native_monsters = monster_indices(combat[-1])
     runtime['warden_ids'] = [native_monsters[f"rmap_{p['item_code']}_boss"] for p in plans]
     import catacombs
