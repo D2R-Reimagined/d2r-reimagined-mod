@@ -477,7 +477,14 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(boss[self.levels.col('Act')], '4')
             exits = {(i, int(body[warp[i]])) for i in range(8) if body[vis[i]] == str(p['boss_id'])}
             self.assertEqual(exits, set(theme['body_exits']))
-            self.assertFalse(any(body[vis[i]] not in ('0', str(p['boss_id'])) for i in range(8)))
+            # The entry stairs are a live warp that points at the body itself:
+            # that is what makes the portal land there instead of at the
+            # arena stairs. Nothing else may link out of the body.
+            entries = {(i, int(body[warp[i]])) for i in range(8) if body[vis[i]] == str(p['body_id'])}
+            self.assertEqual(entries, {tuple(theme['body_entry'])})
+            self.assertFalse(any(body[vis[i]] not in ('0', str(p['boss_id']), str(p['body_id']))
+                                 for i in range(8)))
+            self.assertTrue(all(body[warp[i]] == '-1' for i in range(8) if body[vis[i]] == '0'))
             returns = {(i, int(boss[warp[i]])) for i in range(8) if boss[vis[i]] != '0'}
             self.assertEqual(returns, {tuple(theme['arena_return'])})
             self.assertEqual(boss[vis[theme['arena_return'][0]]], str(p['body_id']))

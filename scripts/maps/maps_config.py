@@ -95,6 +95,35 @@ MONLVL_FLAT_XP = True
 #                   STOCK_DATA). A list selects one file per tier.
 #   arena_return    (Vis slot, lvlwarp id) the arena DS1's warp tile answers
 #                   to. The player arrives on that tile and can leave by it.
+#   body_entry      (Vis slot, lvlwarp id) the room the cube portal drops the
+#                   player in. Its Vis points at the body itself, so the
+#                   stairs are a live warp that goes nowhere.
+#
+#                   Why a warp at all: the red portal lands on the first room
+#                   of the level's room list that owns a warp tile whose Vis
+#                   slot has a lvlwarp (D2MOO DrlgDrlgWarp.cpp, sub_6FD788D0,
+#                   the DUNGEON_FindActSpawnLocation path). A body whose only
+#                   live warp is the arena stairs therefore starts the player
+#                   beside the Warden's door. In-game (2026-09-21) D2R picks
+#                   the special room whose preset the maze routine ASSIGNED
+#                   first, which is not the 1.10 list order D2MOO shows, so
+#                   the entry slot is that room per DrlgMaze routine:
+#                     Baal Temple / Catacombs  Prev, the origin room at the
+#                                              level centre; Next is a leaf.
+#                     Maggot Lair              Next (trapdoor), then Prev.
+#                     Flayer Dungeon           Prev, then Next.
+#                     Ice Caves                Prev, then Next, then Down.
+#                   Only the origin-room cases guarantee real distance; the
+#                   leaf cases give two random leaves, which body_rooms makes
+#                   worth walking between.
+#   body_rooms      optional (normal, nightmare, hell) room counts replacing
+#                   the template's lvlmaze Rooms before the per-tier growth.
+#   body_rooms_per_tier
+#                   optional rooms added per tier above 1 (default 4). Room
+#                   footprints differ per tileset (Lair 10x10, Ice 16x16), so
+#                   this is how themes are kept to a similar walkable area.
+#                   Every body is 200x200 tiles, so even 10x10 rooms have space
+#                   for a few hundred.
 #
 # The arena_ds1 must contain at least one monster record: the Warden replaces
 # the monster nearest the room centre, which is a known walkable position.
@@ -107,7 +136,16 @@ THEMES = [
         # only places its stairs down for stock ids 55-58, so it left the
         # arena unreachable; the Lair places them for every level.
         "body_template": 62,     # Maggot Lair 1, LevelType 18 maze
-        "body_exits": [(1, 49)], # Act 2 Lair Down, slot 1 (as Lair 1 -> 2)
+        # Lair assigns its Next trapdoor room first, so that is where the
+        # portal lands; the arena hangs off the Prev room's stairs up.
+        "body_exits": [(0, 48)], # Act 2 Lair Up, slot 0 (as Lair 2 -> 1)
+        "body_entry": (1, 49),   # Act 2 Lair Down: the Next room's trapdoor
+        # Lair rooms are 10x10 against 16x16 for the Act 5 tilesets, so the
+        # stock 18 rooms made a T1 body a third of a Frozen Depths. 80 rooms
+        # (+14 per tier) is ~8,000 tiles at T1 and ~15,000 at T6, on par with
+        # the Worldstone Keep body at the same tier.
+        "body_rooms": (80, 80, 80),
+        "body_rooms_per_tier": 14,
         "arena_template": 138,   # Labyrinth 00: Duriel.ds1 with a slot-2 warp
         "arena_ds1": "Labyrinth/Duriel.ds1",
         "arena_return": (2, 83),
@@ -118,7 +156,13 @@ THEMES = [
         # Flayer Dungeon, LevelType 24. Durance of Hate (100) only places its
         # stairs down for stock ids 100-101, same problem as the Tomb.
         "body_template": 88,     # Flayer Dungeon 1, LevelType 24 maze
+        # Dungeon assigns its Prev room first, so the portal lands there and
+        # the arena keeps the Next trapdoor.
         "body_exits": [(0, 56)], # Act 3 Dungeon Down, slot 0 (as Flayer 1 -> 2)
+        "body_entry": (1, 55),   # Act 3 Dungeon Up: the Prev room's stairs
+        # Flayer Dungeon 1 is a four-room maze; the Warden was never more than
+        # a doorway away. Match the Labyrinth-derived bodies instead.
+        "body_rooms": (12, 18, 24),
         "arena_template": 148,   # Labyrinth 10: MephComp.ds1 with a slot-2 warp
         "arena_ds1": "Labyrinth/MephComp.ds1",
         "arena_return": (2, 83),
@@ -128,6 +172,8 @@ THEMES = [
         "name": "Forsaken Catacombs",
         "body_template": 157,    # Forsaken Labyrinth 19, LevelType 10 maze
         "body_exits": [(1, 18)], # Act 1 Catacombs Down
+        # Catacombs makes the origin room the Prev room: level centre.
+        "body_entry": (0, 17),   # Act 1 Catacombs Up (as Catacombs 2 -> 1)
         "arena_template": 158,   # Forsaken Labyrinth 20, Cathy3.ds1
         "arena_ds1": "Labyrinth/Cathy3.ds1",
         "arena_return": (1, 15),
@@ -136,7 +182,10 @@ THEMES = [
         "key": "frozen",
         "name": "Frozen Depths",
         "body_template": 159,    # Forsaken Labyrinth 21, LevelType 33 maze
+        # Ice assigns Prev, then Next, then Down, so the portal lands in the
+        # Prev room and the arena keeps the Down floor warp. Next stays dead.
         "body_exits": [(2, 75)], # Act 5 Ice Caves Down Floor
+        "body_entry": (0, 73),   # Act 5 Ice Caves Up: the Prev room's stairs
         "arena_template": 160,   # Forsaken Labyrinth 21-2, ice pool rooms
         # One stock pool room per tier. Each carries the Ice Caves Up warp
         # the Cellar of Pity family answers to, so no DS1 editing is needed.
@@ -148,6 +197,8 @@ THEMES = [
         "name": "Worldstone Keep",
         "body_template": 164,    # Forsaken Labyrinth 24, LevelType 34 maze
         "body_exits": [(1, 82)], # Act 5 Baal Temple Down
+        # Baal Temple makes the origin room the Prev room: level centre.
+        "body_entry": (0, 81),   # Act 5 Baal Temple Up
         "arena_template": 165,   # Forsaken Labyrinth 25, Heart.ds1
         "arena_ds1": "Labyrinth/Heart.ds1",
         "arena_return": (0, 83),

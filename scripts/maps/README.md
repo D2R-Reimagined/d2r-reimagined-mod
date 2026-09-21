@@ -35,6 +35,27 @@ Forsaken Catacombs, Frozen Depths (ice-cave maze, one stock pool room per
 tier) and Worldstone Keep. Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
 
+### Where the portal lands
+
+The red portal drops the player in the first room of the level's room list
+that owns a warp tile whose Vis slot carries a lvlwarp (D2MOO
+`DrlgDrlgWarp.cpp`, `sub_6FD788D0`, reached through
+`DUNGEON_FindActSpawnLocation`). With the arena stairs as the body's only
+live warp that room was the arena doorway. Each theme therefore also names a
+`body_entry` warp: the tileset's stairs-up (or trapdoor) piece, whose Vis
+points at the body itself so it counts as live without opening a second way
+into the arena or leaving a clickable warp with no destination. In-game D2R
+lands on the special room whose preset the maze routine assigned first (the
+1.10 list order in D2MOO predicted otherwise for the leaf tilesets and was
+wrong twice), so the entry slot per tileset is that room: the Prev room for
+Baal Temple, Catacombs, Flayer Dungeon and Ice Caves, the Next trapdoor for
+the Maggot Lair, whose arena therefore hangs off the Prev room's stairs up.
+Baal Temple and Catacombs make Prev the origin room at the level centre, a
+real distance from the leaf that holds the arena stairs; the other three give
+two random leaves. Corrupted Durance also gets `body_rooms` because the
+four-room Flayer Dungeon template could not put any distance between the two.
+The self-linked entry stairs are expected to do nothing when clicked.
+
 `stock:` arena paths refer to unmodified D2R files. The generator copies each
 one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)
 into `scripts/maps/stock/`, which is committed so regeneration does not need

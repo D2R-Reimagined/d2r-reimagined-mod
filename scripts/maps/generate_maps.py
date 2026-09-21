@@ -164,13 +164,18 @@ def gen_levels(plans: list[dict]) -> Table:
         siblings = [r for r in t.rows
                     if r[c_type] == body_tpl[c_type] and r[c_drlg] == "1"
                     and not r[c_name].startswith(cfg.ROW_TAG)]
-        for slot, warp_id in theme["body_exits"]:
+        entry_slot, entry_warp = theme["body_entry"]
+        if entry_slot in {slot for slot, _ in theme["body_exits"]}:
+            raise SystemExit(
+                f"theme {theme['key']}: body_entry slot {entry_slot} is also an "
+                f"arena exit; the entry room must be a different warp piece")
+        for slot, warp_id in [*theme["body_exits"], (entry_slot, entry_warp)]:
             if not any(r[warp[slot]] == str(warp_id) and r[vis[slot]] != "0"
                        for r in siblings):
                 raise SystemExit(
                     f"theme {theme['key']}: no LevelType {body_tpl[c_type]} maze "
-                    f"links slot {slot} through lvlwarp {warp_id}; body_exits must "
-                    f"mirror a stock transition of that tileset")
+                    f"links slot {slot} through lvlwarp {warp_id}; body_exits and "
+                    f"body_entry must mirror a stock transition of that tileset")
         ret_slot, ret_warp = theme["arena_return"]
         if boss_tpl[warp[ret_slot]] != str(ret_warp) or boss_tpl[vis[ret_slot]] == "0":
             raise SystemExit(
@@ -230,6 +235,14 @@ def gen_levels(plans: list[dict]) -> Table:
         for slot, warp_id in theme["body_exits"]:
             body[vis[slot]] = str(p["boss_id"])
             body[warp[slot]] = str(warp_id)
+        # The entry stairs point at the body itself. The portal lands on the
+        # first room in the level's list that owns a live warp, and this room
+        # is placed before the arena stairs by the tileset's maze routine (see
+        # body_entry in maps_config.py). Pointing the Vis at another level
+        # would either open a second way into the arena or leave a clickable
+        # warp with no destination room; a self-link resolves to its own tile.
+        body[vis[entry_slot]] = str(p["body_id"])
+        body[warp[entry_slot]] = str(entry_warp)
 
         set_cells(boss, t, {
             "Name": f"{cfg.ROW_TAG} {theme['key']} T{p['tier']} boss",
@@ -263,10 +276,14 @@ def gen_lvlmaze(plans: list[dict]) -> Table:
             "Level": str(p["body_id"]),
         })
         # Higher tiers are physically larger, which is most of why they take
-        # longer and drop more.
-        for col in ("Rooms", "Rooms(N)", "Rooms(H)"):
-            base = int(tpl[t.col(col)] or 0)
-            row[t.col(col)] = str(base + (p["tier"] - 1) * 4)
+        # longer and drop more. A theme may replace the template's base count
+        # when the stock maze is too small to put any distance between the
+        # entry and the arena stairs.
+        base_rooms = p["theme"].get("body_rooms")
+        per_tier = p["theme"].get("body_rooms_per_tier", 4)
+        for i, col in enumerate(("Rooms", "Rooms(N)", "Rooms(H)")):
+            base = base_rooms[i] if base_rooms else int(tpl[t.col(col)] or 0)
+            row[t.col(col)] = str(base + (p["tier"] - 1) * per_tier)
         t.append(row)
     return t
 
