@@ -123,6 +123,7 @@ def plan() -> list[dict]:
                 "spec": spec,
                 "body_id": level_id,
                 "boss_id": level_id + 1,
+                "body_layer": cfg.FIRST_LAYER + len(plans),
                 "prest_def": prest_def,
                 "body_key": f"RMap{theme['key'].capitalize()}T{tier}",
                 "boss_key": f"RMap{theme['key'].capitalize()}T{tier}Boss",
@@ -218,6 +219,7 @@ def gen_levels(plans: list[dict]) -> Table:
             "Name": f"{cfg.ROW_TAG} {theme['key']} T{p['tier']}",
             "*StringName": p["body_key"],
             "Id": str(p["body_id"]),
+            "Layer": str(p["body_layer"]),
             # LevelName/LevelWarp/LevelEntry are the columns D2R actually
             # reads. Without these the clone keeps the template's keys and
             # every map is announced as the template level.

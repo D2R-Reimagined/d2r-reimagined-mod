@@ -246,17 +246,21 @@ def treasure_classes(api, plans, path, runtime):
            [("Gold 1x", 60), ("gpg", 10), ("gpb", 10), ("mor", 2), ("mrl", 2)], 168)
         tc(f"RMap T{tier} Artificer Bonus", 1,
            [("jew", 20), ("gpg", 10), ("gpb", 10), ("Act 5 (H) Equip C", 44)], 168)
-        for reward in ("Gilded", "Artificer"):
-            tc(f"RMap T{tier} {reward}", -5,
-               [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1),
-                (f"RMap T{tier} {reward} Bonus", 1)])
         # No group: these rows must never auto-upgrade into another tier's TC.
+        # D2 resolves a TC referenced as an item only if that row was parsed
+        # earlier in the file, so Sustain and Loot precede every row that
+        # nests them; the loader asserts "Couldn't parse treasure class item"
+        # and leaves the slot empty otherwise.
         tc(f"RMap T{tier} Sustain", 1,
            [(f"RMap Tier {min(tier, 5)}", 8), ("RMap Currency", 5)]
            + ([(f"RMap Tier {tier+1}", 2)] if tier < 5 else []), 985)
         tc(f"RMap T{tier} Loot", 1,
            [("Act 5 (H) Equip C", 25), ("Act 5 (H) Good", 5),
             ("Gold 1x", 8), ("Super Potion", 4)], max(0, 42 - tier * 6))
+        for reward in ("Gilded", "Artificer"):
+            tc(f"RMap T{tier} {reward}", -5,
+               [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1),
+                (f"RMap T{tier} {reward} Bonus", 1)])
         # Independent sustain attempt plus tier-scaled loot. Negative picks
         # ensure a map/currency roll cannot consume the equipment reward.
         tc(f"RMap T{tier} Normal", -2,
