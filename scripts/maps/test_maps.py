@@ -29,7 +29,7 @@ class MappingContract(unittest.TestCase):
             monsters, stats2, objects, uniques, tcs = [gen.Table(bank / (n + '.txt'))
                 for n in ('monstats', 'monstats2', 'objects', 'superuniques', 'treasureclassex')]
             members = [r for r in monsters.rows if r[0].startswith('rmap_event_')]
-            self.assertEqual(len(members), 162)
+            self.assertEqual(len(members), 5 * len(self.plans) + 12)
             for row in members:
                 marker=stats2.find(stats2.col('Id'), row[monsters.col('MonStatsEx')])
                 self.assertEqual(marker[stats2.col('revive')], '0')
@@ -359,7 +359,7 @@ class MappingContract(unittest.TestCase):
     def test_recipes_are_hell_only_and_tier_six_cannot_be_upgraded(self):
         table = gen.Table(gen.EXCEL / 'cubemain.txt')
         recipes = [dict(zip(table.header, row)) for row in table.rows if row[0].startswith('rmap ')]
-        self.assertEqual(sum(r['description'].startswith('rmap reroll') for r in recipes), 60)
+        self.assertEqual(sum(r['description'].startswith('rmap reroll') for r in recipes), 2 * len(self.plans))
         for r in recipes:
             self.assertEqual(r['min diff'], '2')
             self.assertNotIn('test', r['description'])
@@ -433,7 +433,7 @@ class MappingContract(unittest.TestCase):
                     self.assertFalse(any('Sustain' in bonus[f'Item{i}'] or 'Tier 6' in bonus[f'Item{i}'] for i in range(1, 11)))
                 if tier <= 5:
                     drops = classes[f'RMap Tier {tier}']
-                    self.assertEqual([drops[f'Item{i}'] for i in range(1, 6)],
+                    self.assertEqual([drops[f'Item{i}'] for i in range(1, len(cfg.THEMES) + 1)],
                                      [cfg.expansion_code(p['item_code']) for p in self.plans if p['tier'] == tier])
 
     def test_expansion_catalog_excludes_fortified_and_on_death_effects(self):
@@ -469,7 +469,7 @@ class MappingContract(unittest.TestCase):
             for col in ('LevelType', 'Pal', 'DrlgType'):
                 self.assertEqual(body[self.levels.col(col)], template[self.levels.col(col)])
                 self.assertEqual(boss[self.levels.col(col)], arena[self.levels.col(col)])
-            self.assertEqual(body[self.levels.col('DrlgType')], '1')
+            self.assertEqual(body[self.levels.col('DrlgType')], '3' if theme.get('initializer') else '1')
             self.assertEqual(boss[self.levels.col('DrlgType')], '2')
             # Both levels are Act 5 so the Harrogath portal and any town portal
             # taken inside stay in one act, whatever tileset is borrowed.
@@ -481,7 +481,7 @@ class MappingContract(unittest.TestCase):
             # that is what makes the portal land there instead of at the
             # arena stairs. Nothing else may link out of the body.
             entries = {(i, int(body[warp[i]])) for i in range(8) if body[vis[i]] == str(p['body_id'])}
-            self.assertEqual(entries, {tuple(theme['body_entry'])})
+            self.assertEqual(entries, set(theme.get('body_entries', [tuple(theme['body_entry'])])))
             self.assertFalse(any(body[vis[i]] not in ('0', str(p['boss_id']), str(p['body_id']))
                                  for i in range(8)))
             self.assertTrue(all(body[warp[i]] == '-1' for i in range(8) if body[vis[i]] == '0'))

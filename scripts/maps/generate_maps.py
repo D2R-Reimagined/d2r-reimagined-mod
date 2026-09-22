@@ -151,7 +151,8 @@ def gen_levels(plans: list[dict]) -> Table:
         theme = p["theme"]
         body_tpl = t.find(c_id, str(theme["body_template"]))
         boss_tpl = t.find(c_id, str(theme["arena_template"]))
-        if body_tpl[t.col("DrlgType")] != "1" or boss_tpl[t.col("DrlgType")] != "2":
+        exterior = theme.get('exterior', False)
+        if body_tpl[t.col("DrlgType")] not in (("1","3") if exterior else ("1",)) or boss_tpl[t.col("DrlgType")] != "2":
             raise SystemExit(
                 f"theme {theme['key']}: body_template must be a maze (DrlgType 1) "
                 f"and arena_template a preset level (DrlgType 2)")
@@ -169,7 +170,7 @@ def gen_levels(plans: list[dict]) -> Table:
             raise SystemExit(
                 f"theme {theme['key']}: body_entry slot {entry_slot} is also an "
                 f"arena exit; the entry room must be a different warp piece")
-        for slot, warp_id in [*theme["body_exits"], (entry_slot, entry_warp)]:
+        for slot, warp_id in ([] if exterior else [*theme["body_exits"], (entry_slot, entry_warp)]):
             if not any(r[warp[slot]] == str(warp_id) and r[vis[slot]] != "0"
                        for r in siblings):
                 raise SystemExit(
@@ -212,6 +213,11 @@ def gen_levels(plans: list[dict]) -> Table:
             # portal inside must lead back there, not to the tileset's act.
             set_cells(row, t, {
                 "Act": "4",
+                # Act 5 has no default edge tile cache (native 0x327090).
+                # Borrowed Act 1/2/3 DrawEdges=1 asks the client to draw that
+                # null tile outside the visible rooms, even while standing
+                # inside a map. Keep authored perimeter tiles, as Act 5 does.
+                "DrawEdges": "0",
                 "Waypoint": "255",
                 "SaveMonsters": "1",
                 "QuestFlag": "",
@@ -241,8 +247,15 @@ def gen_levels(plans: list[dict]) -> Table:
         # body_entry in maps_config.py). Pointing the Vis at another level
         # would either open a second way into the arena or leave a clickable
         # warp with no destination room; a self-link resolves to its own tile.
-        body[vis[entry_slot]] = str(p["body_id"])
-        body[warp[entry_slot]] = str(entry_warp)
+        for slot, warp_id in theme.get('body_entries', [(entry_slot,entry_warp)]):
+            body[vis[slot]] = str(p["body_id"])
+            body[warp[slot]] = str(warp_id)
+        if exterior:
+            width,height=theme['body_size']
+            set_cells(body,t,{'Depend':'0','OffsetX':str(1400+(p['body_id']-226)*40),'OffsetY':'1000',
+                             'SubWaypoint':'-1','SubShrine':'-1'})
+            for suffix in ('','(N)','(H)'):
+                set_cells(body,t,{'SizeX'+suffix:str(width),'SizeY'+suffix:str(height)})
 
         set_cells(boss, t, {
             "Name": f"{cfg.ROW_TAG} {theme['key']} T{p['tier']} boss",
@@ -269,6 +282,7 @@ def gen_lvlmaze(plans: list[dict]) -> Table:
     c_name, c_level = t.col("Name"), t.col("Level")
     t.drop_tagged(c_name, cfg.ROW_TAG)
     for p in plans:
+        if p['theme'].get('initializer'): continue
         tpl = t.find(c_level, str(p["theme"]["body_template"]))
         row = list(tpl)
         set_cells(row, t, {
@@ -862,6 +876,8 @@ def gen_plugin_header(plans: list[dict], path: Path, runtime: dict, write=True) 
     treasure.header(out, runtime)
     import starter_events
     starter_events.header(out, runtime)
+    import exterior
+    exterior.header(out, runtime)
     out.append('inline constexpr uint32_t MapBaseAutomapLayers[][2] = { ' + ', '.join(
         '{' + ','.join(map(str, layers)) + '}' for layers in runtime['automap_layers']) + ' };')
     out.append('inline constexpr uint16_t WardenMonsterIds[] = { ' + ', '.join(map(str, runtime['warden_ids'])) + ' };')
@@ -901,6 +917,8 @@ def main() -> int:
     ]
     combat, runtime = endgame.generate(sys.modules[__name__], plans, tables[0])
     rooms, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
+    import exterior
+    assets.update(exterior.generate(sys.modules[__name__], plans, tables[2], runtime, tables[0]))
     import treasure
     treasure.generate(sys.modules[__name__], combat[-1], combat[2], rooms[1], runtime)
     import starter_events

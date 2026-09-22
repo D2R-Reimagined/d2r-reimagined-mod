@@ -224,7 +224,30 @@ THEME_CODE_LETTERS = {
     "catacombs": "c",
     "frozen": "f",
     "worldstone": "w",
+    "dunes": "s", "highlands": "h", "travincal": "t", "steppes": "e", "infernal": "i",
 }
+
+# Append only: the first thirty maps retain their IDs, codes and roll themes.
+THEMES += [
+    dict(key="dunes", name="Sunscar Dunes", body_template=42, exterior=True,
+         body_size=(80,80), body_entries=[(0,33),(1,34),(2,35),(3,36)], body_entry=(0,33),
+         body_exits=[(7,33)], exit_preset=388, initializer=0x3fbd10,
+         arena_template=138, arena_ds1="Labyrinth/Duriel.ds1", arena_return=(2,83)),
+    dict(key="highlands", name="Forsaken Highlands", body_template=7, exterior=True,
+         body_size=(80,80), body_entries=[(3,0),(4,1),(5,2),(6,3)], body_entry=(3,0),
+         body_exits=[(7,0)], exit_preset=24, initializer=0x3fac10,
+         arena_template=158, arena_ds1="Labyrinth/Cathy3.ds1", arena_return=(1,15)),
+    dict(key="travincal", name="Fallen Travincal", body_template=83, exterior=True,
+         body_size=(64,64), body_entry=(6,83), body_exits=[(0,64)], initializer=0x3fcbe0,
+         arena_template=148, arena_ds1="Labyrinth/MephComp.ds1", arena_return=(2,83)),
+    dict(key="steppes", name="Ashen Steppes", body_template=104, exterior=True,
+         body_size=(80,64), body_entry=(1,69), body_exits=[(7,69)], exit_preset=811,
+         initializer=0x3fdc00, arena_template=165, arena_ds1="Labyrinth/Heart.ds1", arena_return=(0,83)),
+    dict(key="infernal", name="Infernal Rift", body_template=125, exterior=True,
+         body_size=(200,200), body_rooms=(24,24,24), body_rooms_per_tier=3,
+         body_entry=(6,83), body_exits=[(7,83)], initializer=0,
+         arena_template=165, arena_ds1="Labyrinth/Heart.ds1", arena_return=(0,83)),
+]
 
 # Base item level per tier, used for item presentation and the item's own
 # required level.
@@ -386,6 +409,11 @@ MAP_MONSTERS = {
     "catacombs": ["unraveler5", "mummy5", "sk_archer5"],
     "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "willowisp3"],
     "worldstone": ["hellbovine", "willowisp3"],
+    "dunes": ["scarab5", "sandleaper5", "vulture4", "sandraider5"],
+    "highlands": ["goatman5", "corruptrogue5", "cr_archer5", "quillrat5"],
+    "travincal": ["councilmember3", "zealot3", "cantor3", "vampire4"],
+    "steppes": ["megademon1", "vilemother1", "fingermage1", "regurgitator1"],
+    "infernal": ["minion1", "succubus4", "overseer1", "imp5"],
 }
 MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 
@@ -420,6 +448,16 @@ MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 #   drain      life drain override, or None
 
 WARDENS = {
+    "dunes": dict(aura=("MonHolyShock",8), on_attack=("Dust Devils",20,12),
+                  on_struck=("Charged Bolt",10,16), escort=("scarab5","sandraider5",3,4), melee=("ltng",80,180,0), drain=None),
+    "highlands": dict(aura=("Might",8), on_attack=("Siege Beast Stomp",20,12),
+                      on_struck=None, escort=("goatman5","cr_archer5",3,5), melee=("stun",0,0,20), drain=None),
+    "travincal": dict(aura=("Fanaticism",6), on_attack=("CountessFirewall",20,12),
+                      on_struck=("Lower Resist",5,10), escort=("zealot3","cantor3",3,5), melee=("fire",90,160,0), drain=None),
+    "steppes": dict(aura=("MonHolyFire",8), on_attack=("Fire Wall",20,12),
+                    on_struck=("Terror",8,10), escort=("megademon1","fingermage1",3,4), melee=("fire",100,180,0), drain=None),
+    "infernal": dict(aura=("Might",8), on_attack=("Meteor",15,12),
+                     on_struck=("Baal Nova",5,12), escort=("minion1","succubus4",4,6), melee=("fire",120,190,0), drain=None),
     "desert": {
         "aura": ("MonHolyShock", 8),
         "on_attack": ("Dust Devils", 25, 12),
