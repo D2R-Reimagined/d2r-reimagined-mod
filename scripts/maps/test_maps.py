@@ -101,6 +101,9 @@ class MappingContract(unittest.TestCase):
             missile = missiles.find(missiles.col('Missile'), 'rmap_plague_nova')
             self.assertEqual(missile[missiles.col('Skill')], 'rmap_plague_nova')
             self.assertEqual(missile[missiles.col('Range')], '18')
+            for table, id_col in ((skills, '*Id'), (missiles, '*ID')):
+                ids = [row[table.col(id_col)] for row in table.rows if row[table.col(id_col)].isdigit()]
+                self.assertEqual(len(ids), len(set(ids)), f'duplicate {id_col} in {bank}')
             self.assertEqual(missiles.find(missiles.col('Missile'), 'poisonnova')[missiles.col('Range')], '30')
             # Same shape as labunraveler: GreaterMummy AI, cast slot 3 in SC.
             lab = monsters.find(monsters.col('Id'), 'labunraveler')

@@ -21,7 +21,8 @@ def generate(api, plans, combat, runtime):
     missiles.drop_tagged(missiles.col('Missile'), 'rmap_plague_')
     nova = 'rmap_plague_nova'
     row = list(skills.find(skills.col('skill'), 'Poison Nova'))
-    api.set_cells(row, skills, {'skill': nova, '*Id': str(len(skills.rows)),
+    next_skill_id = max(int(r[skills.col('*Id')]) for r in skills.rows if r[skills.col('*Id')].isdigit()) + 1
+    api.set_cells(row, skills, {'skill': nova, '*Id': str(next_skill_id),
         'charclass': '', 'skilldesc': '', 'reqskill1': '', 'reqlevel': '1',
         'srvmissilea': nova, 'cltmissilea': nova,
         'mana': '0', 'minmana': '0', 'startmana': '0', 'lvlmana': '0',
@@ -30,7 +31,8 @@ def generate(api, plans, combat, runtime):
         **{f'E{kind}Lev{i}': '8' for kind in ('Min', 'Max') for i in range(1, 6)}})
     skills.append(row)
     missile = list(missiles.find(missiles.col('Missile'), 'poisonnova'))
-    api.set_cells(missile, missiles, {'Missile': nova, '*ID': str(len(missiles.rows)),
+    next_missile_id = max(int(r[missiles.col('*ID')]) for r in missiles.rows if r[missiles.col('*ID')].isdigit()) + 1
+    api.set_cells(missile, missiles, {'Missile': nova, '*ID': str(next_missile_id),
         'Skill': nova, 'Range': '18'})
     missiles.append(missile)
     for plan in plans:
