@@ -1,0 +1,74 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/env/model/tests/test_cloth/cloth04_lod3.model"
+            }
+        ],
+        "skeletons": [],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/nakrul/textures/bloodlord_axe_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/bloodlord1/textures/bloodlord_axe_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/bloodlord1/textures/bloodlord_axe_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [],
+        "variantdata": [],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "blood_lord_dbl_axe",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "root_entity",
+            "id": 3282754740,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "root_entity_UnitRootComponent",
+                    "state_machine_filename": "",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "model_entity",
+            "id": 3831844161,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "model_entity_ModelDefinitionComponent",
+                    "filename": "data/hd/env/model/tests/test_cloth/cloth04_lod3.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        }
+    ]
+}
