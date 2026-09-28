@@ -7,12 +7,25 @@ from __future__ import annotations
 import maps_config as cfg
 
 
+def elite_class(p):
+    """Each map owns its elite table. The plugin adds the rolled Gilded or
+    Artificer bonus to it when the map is prepared, so reward affixes need no
+    monster copies; open maps never share the table."""
+    return f"RMap {p['item_code']} Elite"
+
+
+def monster_class(p, elite):
+    return elite_class(p) if elite else f"RMap T{p['tier']} Normal"
+
+
 def generate(api, plans, levels):
     Table, set_cells, EXCEL = api.Table, api.set_cells, api.EXCEL
     skills = Table(EXCEL / "skills.txt")
     states = Table(EXCEL / "states.txt")
     props = Table(EXCEL / "monprop.txt")
     monsters = Table(EXCEL / "monstats.txt")
+    import normal_shamans
+    normal_shamans.remove_generated(monsters)
     for table, key in ((skills, "skill"), (states, "state"),
                        (props, "Id"), (monsters, "Id")):
         table.drop_tagged(table.col(key), "rmap_")
@@ -124,6 +137,8 @@ def generate(api, plans, levels):
         warden_prop_indices.append(len(props.rows))
         props.append(warden_property_row(p))
         codes = cfg.MAP_MONSTERS[p["theme"]["key"]]
+        if not 0 < len(codes) <= cfg.MAP_MONSTER_LIMIT or len(set(codes)) != len(codes):
+            raise ValueError(f"{p['theme']['key']}: MAP_MONSTERS needs 1-{cfg.MAP_MONSTER_LIMIT} distinct types")
         for i, code in enumerate(codes):
             source = monsters.find(monsters.col("Id"), code)
             row = list(source)
@@ -133,7 +148,8 @@ def generate(api, plans, levels):
                 "MonProp": f"rmap_{p['item_code']}", "noAura": "0",
                 "noRatio": "0", "boss": "0", "primeevil": "0",
                 "MinGrp": "3", "MaxGrp": "5", "enabled": "1",
-                "spawn": "", "minion1": "", "minion2": "",
+                "spawn": source[monsters.col("spawn")] if code in cfg.MAP_KEEP_SPAWN else "",
+                "minion1": "", "minion2": "",
                 "TCQuestId": "", "TCQuestCP": "",
             })
             # Native Hell ratios retain the archetype; tiers raise both physical
@@ -159,8 +175,7 @@ def generate(api, plans, levels):
                     row[monsters.col(resistance + diff)] = source[monsters.col(resistance + "(H)")]
                 for kind in ("", "Champ", "Unique", "Quest", "Desecrated",
                              "DesecratedChamp", "DesecratedUnique", "Herald"):
-                    reward = "Elite" if kind else "Normal"
-                    row[monsters.col("TreasureClass" + kind + diff)] = f"RMap T{p['tier']} {reward}"
+                    row[monsters.col("TreasureClass" + kind + diff)] = monster_class(p, bool(kind))
             monsters.append(row)
         body = levels.find(levels.col("Id"), str(p["body_id"]))
         for group in ("mon", "nmon", "umon"):
@@ -257,16 +272,22 @@ def treasure_classes(api, plans, path, runtime):
         tc(f"RMap T{tier} Loot", 1,
            [("Act 5 (H) Equip C", 25), ("Act 5 (H) Good", 5),
             ("Gold 1x", 8), ("Super Potion", 4)], max(0, 42 - tier * 6))
-        for reward in ("Gilded", "Artificer"):
-            tc(f"RMap T{tier} {reward}", -5,
-               [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1),
-                (f"RMap T{tier} {reward} Bonus", 1)])
         # Independent sustain attempt plus tier-scaled loot. Negative picks
         # ensure a map/currency roll cannot consume the equipment reward.
         tc(f"RMap T{tier} Normal", -2,
            [(f"RMap T{tier} Loot", 1), (f"RMap T{tier} Sustain", 1)])
         tc(f"RMap T{tier} Elite", -4,
            [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1)])
+        # Per-map elite tables. Negative picks drop entries in order, each
+        # Prob times, until |Picks| drops: at -4 the third entry is never
+        # reached, so the baseline equals RMap T<n> Elite. For a Gilded or
+        # Artificer roll the plugin sets Picks to -5 and points the third
+        # entry at that tier's bonus table; RewardClasses in the header.
+        for p in plans:
+            if p["tier"] == tier:
+                tc(elite_class(p), -4,
+                   [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1),
+                    (f"RMap T{tier} Gilded Bonus", 1)])
         tc(f"RMap T{tier} Boss", -6,
            [(f"RMap T{tier} Loot", 4), (f"RMap Tier {min(tier, 5)}", 1),
             ("RMap Currency", 1)])

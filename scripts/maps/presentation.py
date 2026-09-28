@@ -2,12 +2,14 @@
 import json
 
 import maps_config as cfg
+import normal_shamans
 
 
 def generate(api, plans, monsters, runtime=None):
     path = api.REPO / 'data/hd/character/monsters.json'
     models = json.loads(path.read_text(encoding='utf-8-sig'))
-    models = {key: value for key, value in models.items() if not key.startswith('rmap_')}
+    models = {key: value for key, value in models.items()
+              if not key.startswith('rmap_') and key not in normal_shamans.REPLACEMENTS.values()}
     sources = {}
     for p in plans:
         codes = cfg.MAP_MONSTERS[p['theme']['key']]

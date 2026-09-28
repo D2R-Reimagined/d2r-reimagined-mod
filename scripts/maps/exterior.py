@@ -191,7 +191,36 @@ def generate(api,plans,presets,runtime,levels):
                 int(levels.find(levels.col('Id'),str(theme['body_template']))[levels.col('LevelType')]),
                 width,height,1400+(p['body_id']-226)*40,1000,theme['initializer'],exit_id,theme_index))
     runtime['exterior_layouts']=layouts;runtime['exterior_presets']=mappings
+    runtime['maze_presets']=maze_presets(plans,presets,levels)
     return assets
+
+def maze_presets(plans,presets,levels):
+    """Per-body lvlprest swaps for maze themes (THEMES body_presets).
+
+    The same construction hook applies them. A swap may only exchange rooms
+    the maze routine could have placed in either spot: identical rows apart
+    from name, Def and files, so size, door side, Scan and Dt1Mask agree.
+    """
+    swaps=[]
+    stock={r[presets.col('Def')]:r for r in presets.rows if r[presets.col('Def')]}
+    ignored={presets.col(c) for c in ('Name','Def',*(f'File{i}' for i in range(1,7)))}
+    for theme in cfg.THEMES:
+        table=theme.get('body_presets')
+        if not table:continue
+        if theme.get('exterior'):raise ValueError(f"{theme['key']}: body_presets is for maze bodies")
+        for source,replacement in table.items():
+            if table.get(replacement)!=source:
+                raise ValueError(f"{theme['key']}: body_presets {source}->{replacement} is not a swap")
+            a,b=stock[str(source)],stock[str(replacement)]
+            if any(a[i]!=b[i] for i in range(len(a)) if i not in ignored):
+                raise ValueError(f"{theme['key']}: presets {source} and {replacement} differ beyond their files")
+        body_type=levels.find(levels.col('Id'),str(theme['body_template']))[levels.col('LevelType')]
+        for p in plans:
+            if p['theme'] is not theme:continue
+            if levels.find(levels.col('Id'),str(p['body_id']))[levels.col('LevelType')]!=body_type:
+                raise ValueError(f"{theme['key']}: body LevelType differs from its template")
+            swaps+=[(p['body_id'],body_type,source,replacement) for source,replacement in sorted(table.items())]
+    return swaps
 
 def header(out,runtime):
     out += ['struct ExteriorLayout { uint32_t level, source, type, width, height, x, y; uintptr_t initializer; uint32_t exitPreset, theme; };',
@@ -200,4 +229,8 @@ def header(out,runtime):
     out += ['};','struct ExteriorPreset { uint32_t theme, source, replacement; };',
             'inline constexpr ExteriorPreset ExteriorPresets[] {']
     out += [' {'+', '.join(str(v) for v in r)+'},' for r in runtime['exterior_presets']]
+    out += ['};','// Maze bodies whose arrival room needs the other special-room piece.',
+            'struct MazePresetSwap { uint32_t level, type, source, replacement; };',
+            'inline constexpr MazePresetSwap MazePresetSwaps[] {']
+    out += [' {'+', '.join(str(v) for v in r)+'},' for r in runtime['maze_presets']]
     out += ['};']

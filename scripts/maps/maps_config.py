@@ -116,6 +116,11 @@ MONLVL_FLAT_XP = True
 #                   Only the origin-room cases guarantee real distance; the
 #                   leaf cases give two random leaves, which body_rooms makes
 #                   worth walking between.
+#   body_presets    optional {lvlprest Def: Def} applied when a body room is
+#                   constructed (plugin hook; the maze routine and campaign
+#                   levels are untouched). Used where the tileset's first
+#                   assigned room is the wrong piece for an arrival point.
+#                   Swapped rows must match in size, door side and flags.
 #   body_rooms      optional (normal, nightmare, hell) room counts replacing
 #                   the template's lvlmaze Rooms before the per-tier growth.
 #   body_rooms_per_tier
@@ -136,10 +141,19 @@ THEMES = [
         # only places its stairs down for stock ids 55-58, so it left the
         # arena unreachable; the Lair places them for every level.
         "body_template": 62,     # Maggot Lair 1, LevelType 18 maze
-        # Lair assigns its Next trapdoor room first, so that is where the
-        # portal lands; the arena hangs off the Prev room's stairs up.
-        "body_exits": [(0, 48)], # Act 2 Lair Up, slot 0 (as Lair 2 -> 1)
-        "body_entry": (1, 49),   # Act 2 Lair Down: the Next room's trapdoor
+        # Lair assigns its Next room first, so that is where the portal
+        # lands. Stock, that room holds the trapdoor down and the arena hung
+        # off the Prev room's stairs up: players arrived at a way down and
+        # left through a way up. body_presets swaps the two rooms' DS1s at
+        # construction (both are 10x10 with the same door side and flags),
+        # so the first room now carries the stairs up (slot 0) and the other
+        # carries the trapdoor (slot 1) down into the arena.
+        "body_exits": [(1, 49)], # Act 2 Lair Down: the trapdoor, as Lair 1 -> 2
+        "body_entry": (0, 48),   # Act 2 Lair Up: stairs, in the first-assigned room
+        # lvlprest Def swaps, Prev W/E/S/N <-> Next W/E/S/N, applied only to
+        # this theme's bodies by the plugin's preset-construction hook.
+        "body_presets": {497: 501, 498: 502, 499: 503, 500: 504,
+                         501: 497, 502: 498, 503: 499, 504: 500},
         # Lair rooms are 10x10 against 16x16 for the Act 5 tilesets, so the
         # stock 18 rooms made a T1 body a third of a Frozen Depths. 80 rooms
         # (+14 per tier) is ~8,000 tiles at T1 and ~15,000 at T6, on par with
@@ -400,21 +414,45 @@ TEST_RECIPES = False
 
 # Mapping has its own combat population; Labyrinth monsters depend on its
 # resistance-breaking mechanics and deliberately do not carry normal loot.
+#
+# Every listed type spawns in every body (NumMon = list length). The native
+# monster region holds at most 13 types, so keep lists to 10 or fewer; the
+# first entry is the Warden's archetype, the Warden escort must be listed, and
+# the last entry is the one population affixes replace. Picks come from each
+# theme's source areas in levels.txt, preferring types no other theme uses.
 MAP_MONSTERS = {
-    "desert": ["clawviper5", "unraveler5", "scarab5", "wraith5"],
-    "kurast": ["councilmember3", "vampire4", "blunderbore4", "zealot3"],
+    # Tal Rasha's tombs, Claw Viper Temple and the Maggot Lair.
+    "desert": ["clawviper5", "unraveler5", "sandmaggot5", "swarm4", "scarab5",
+               "mummy4", "skmage_pois5", "batdemon5", "wraith5"],
+    # Durance of Hate, Flayer Dungeon and the Kurast sewers.
+    "kurast": ["councilmember3", "vampire4", "blunderbore4", "bonefetish5",
+               "fetishshaman5", "frogdemon3", "thornhulk4", "zealot3"],
     # The greater mummy leads so the Warden inherits its GreaterMummy AI, which
     # casts Skill3 natively (labunraveler pattern). The Mummy AI never uses its
     # skill slots, so a mummy5 Warden cannot cast anything.
-    "catacombs": ["unraveler5", "mummy5", "sk_archer5"],
-    "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "willowisp3"],
-    "worldstone": ["hellbovine", "willowisp3"],
-    "dunes": ["scarab5", "sandleaper5", "vulture4", "sandraider5"],
-    "highlands": ["goatman5", "corruptrogue5", "cr_archer5", "quillrat5"],
-    "travincal": ["councilmember3", "zealot3", "cantor3", "vampire4"],
-    "steppes": ["megademon1", "vilemother1", "fingermage1", "regurgitator1"],
-    "infernal": ["minion1", "succubus4", "overseer1", "imp5"],
+    "catacombs": ["unraveler5", "mummy5", "sk_archer5", "vampire5", "bighead4",
+                  "skmage_fire4", "zombie5", "arach4", "corruptrogue4"],
+    "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "skmage_cold5",
+               "succubuswitch6", "bloodlord3", "wraith6", "cr_lancer7", "willowisp3"],
+    "worldstone": ["hellbovine", "willowisp3", "minion11", "bloodlord5", "vampire7",
+                   "dkmag2", "skmage_ltng6", "cr_lancer8", "wraith8"],
+    "dunes": ["scarab5", "sandleaper5", "vulture4", "pantherwoman5", "slinger5",
+              "sandmaggot4", "brute4", "sandraider5"],
+    "highlands": ["goatman5", "corruptrogue5", "cr_archer5", "cr_lancer5", "fallen5",
+                  "fallenshaman5", "skmage_fire6", "brute5", "quillrat5"],
+    "travincal": ["councilmember3", "zealot3", "cantor3", "baboon5", "fetish5",
+                  "fetishblow5", "arach5", "mosquito3", "vampire4"],
+    "steppes": ["megademon1", "vilemother1", "fingermage1", "doomknight1", "doomknight2",
+                "bighead5", "batdemon4", "regurgitator1"],
+    "infernal": ["minion1", "succubus4", "overseer1", "megademon4", "blunderbore6",
+                 "vampire6", "bonefetish6", "skmage_ltng5", "imp5"],
 }
+# Sand maggots lay eggs that hatch into larvae; that is the Maggot Lair. Their
+# native spawn column is kept (eggs/larvae are stock rows with no map loot).
+# Every other map row clears spawn so no new offspring mechanic appears.
+MAP_KEEP_SPAWN = {"sandmaggot4", "sandmaggot5"}
+# The monster region the native population routine fills has 13 entries.
+MAP_MONSTER_LIMIT = 10
 MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 
 # --------------------------------------------------------------------------

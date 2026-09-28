@@ -931,6 +931,8 @@ def main() -> int:
     runtime['warden_ids'] = [native_monsters[f"rmap_{p['item_code']}_boss"] for p in plans]
     import catacombs
     plague_missiles = catacombs.generate(sys.modules[__name__], plans, combat, runtime)
+    import normal_shamans
+    normal_shamans.generate(sys.modules[__name__], combat[-1], levels, runtime)
     import presentation
     assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1], runtime))
     tables.extend(combat)

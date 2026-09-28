@@ -7,7 +7,52 @@ import maps_config as cfg
 import boss_rooms
 
 
+def profile_row_name(plan, population, reward, slot):
+    """Rewards live in the map's elite table, so they never change a row; a
+    population affix replaces only the last slot, with one row per map."""
+    last = len(cfg.MAP_MONSTERS[plan['theme']['key']]) - 1
+    if population and slot == last:
+        return f"rmap_v2_{plan['item_code']}_{population}"
+    return f"rmap_{plan['item_code']}_{slot}"
+
+
 class MappingContract(unittest.TestCase):
+    def test_sandswept_arrives_on_stairs_up_and_leaves_by_trapdoor(self):
+        # The Lair assigns its Next room first and the portal lands there. The
+        # plugin builds that room from the Prev DS1 (stairs up, slot 0) and the
+        # Prev room from the Next DS1 (trapdoor, slot 1) into the arena.
+        import exterior
+        header = gen.DEFAULT_PLUGIN_HEADER.read_text(encoding='utf-8')
+        body = header.split('MazePresetSwaps[] {', 1)[1].split('};', 1)[0]
+        swaps = {tuple(map(int, s.split(','))) for s in re.findall(r'\{([\d, ]+)\}', body)}
+        presets = gen.Table(gen.EXCEL / 'lvlprest.txt')
+        for p in self.plans:
+            row = self.levels.find(self.levels.col('Id'), str(p['body_id']))
+            if p['theme']['key'] != 'desert':
+                self.assertFalse(any(s[0] == p['body_id'] for s in swaps))
+                continue
+            self.assertEqual((row[self.levels.col('Vis0')], row[self.levels.col('Warp0')]), (str(p['body_id']), '48'))
+            self.assertEqual((row[self.levels.col('Vis1')], row[self.levels.col('Warp1')]), (str(p['boss_id']), '49'))
+            for side, (prev, nxt) in zip('WESN', ((497, 501), (498, 502), (499, 503), (500, 504))):
+                self.assertIn((p['body_id'], 18, nxt, prev), swaps)
+                self.assertIn((p['body_id'], 18, prev, nxt), swaps)
+                for def_id, slot in ((prev, 0), (nxt, 1)):
+                    rel = presets.find(presets.col('Def'), str(def_id))[presets.col('File1')]
+                    data = boss_rooms._stock(gen.Path('global/tiles') / rel).read_bytes()
+                    self.assertEqual({s for _, _, s in exterior.warp_markers(data)}, {slot}, rel)
+
+    def test_map_populations_are_varied_and_fit_the_native_region(self):
+        for key, codes in cfg.MAP_MONSTERS.items():
+            self.assertGreaterEqual(len(codes), 6, key)
+            self.assertLessEqual(len(codes), cfg.MAP_MONSTER_LIMIT, key)
+            self.assertNotIn(codes[-1], cfg.EXPANSION_POPULATIONS, key)
+        for p in self.plans:
+            row = self.levels.find(self.levels.col('Id'), str(p['body_id']))
+            self.assertEqual(int(row[self.levels.col('NumMon')]), len(cfg.MAP_MONSTERS[p['theme']['key']]))
+        self.assertIn('sandmaggot5', cfg.MAP_MONSTERS['desert'])
+        maggot = self.monsters.find(self.monsters.col('Id'), 'rmap_md1_2')
+        self.assertEqual(maggot[self.monsters.col('spawn')], 'maggotegg5')
+
     def test_map_layers_fit_native_automap_directory(self):
         # Live hang: native RVA 0xd5fe0 reads a fixed 0x190-byte directory,
         # then indexes it by Layer. Catacombs T1 layer 112 read stack garbage.
@@ -144,15 +189,13 @@ class MappingContract(unittest.TestCase):
             self.assertEqual([names[i] for i in ids],
                              [f"rmap_treasure_{tier}_{kind}" for tier in range(1, 7)
                               for kind in ('jewel', 'amulet')])
-            body = header.split('PopulationProfiles[][PopulationProfileCount][4] = {', 1)[1].split('};', 1)[0]
+            body = header.split('PopulationProfiles[][PopulationProfileCount][PopulationSlotCapacity] = {', 1)[1].split('};', 1)[0]
             groups = re.findall(r'\{ ([\d, ]+) \}', body)
             expected = []
             for plan in self.plans:
                 for population in range(len(cfg.EXPANSION_POPULATIONS)):
                     for reward in range(len(cfg.EXPANSION_REWARDS)):
-                        expected.append([
-                            f"rmap_{plan['item_code']}_{slot}" if population == reward == 0
-                            else f"rmap_v2_{plan['item_code']}_{population}_{reward}_{slot}"
+                        expected.append([profile_row_name(plan, population, reward, slot)
                             for slot in range(len(cfg.MAP_MONSTERS[plan['theme']['key']]))])
             self.assertEqual([[names[int(i)] for i in group.split(',')] for group in groups], expected)
 
@@ -400,7 +443,7 @@ class MappingContract(unittest.TestCase):
                     for slot, source in enumerate(native):
                         if replacement and slot == len(native) - 1:
                             source = replacement
-                        name = f"rmap_v2_{p['item_code']}_{population}_{reward}_{slot}"
+                        name = profile_row_name(p, population, reward, slot)
                         row = lookup[name]
                         self.assertEqual(models[name], models[source])
                         self.assertEqual(row[monsters.col('AI')], lookup[source][monsters.col('AI')])
@@ -408,11 +451,13 @@ class MappingContract(unittest.TestCase):
                         for diff in ('', '(N)', '(H)'):
                             self.assertEqual(row[monsters.col('TreasureClass' + diff)], f"RMap T{p['tier']} Normal")
                             self.assertEqual(row[monsters.col('TreasureClassUnique' + diff)],
-                                             f"RMap T{p['tier']} {reward_name or 'Elite'}")
+                                             f"RMap {p['item_code']} Elite")
                             for res in ('Dm', 'Ma', 'Fi', 'Li', 'Co', 'Po'):
                                 self.assertEqual(row[monsters.col('Res' + res + diff)], lookup[source][monsters.col('Res' + res + '(H)')])
-                        # No new death-mode skill, resurrection, or offspring.
-                        self.assertFalse(row[monsters.col('spawn')])
+                        # No new death-mode skill, resurrection, or offspring;
+                        # sand maggots keep only their own native egg laying.
+                        self.assertEqual(row[monsters.col('spawn')],
+                                         lookup[source][monsters.col('spawn')] if source in cfg.MAP_KEEP_SPAWN else '')
                         for index in range(1, 9):
                             self.assertNotEqual(row[monsters.col(f'Sk{index}mode')], 'DT')
 
@@ -424,13 +469,20 @@ class MappingContract(unittest.TestCase):
                 boss = classes[f'RMap T{tier} Boss']
                 self.assertEqual(boss['Picks'], '-6')
                 self.assertEqual(boss['Item2'], f'RMap Tier {min(tier, 5)}')
-                for reward in ('Gilded', 'Artificer'):
-                    row = classes[f'RMap T{tier} {reward}']
-                    self.assertEqual(row['Picks'], '-5')
+                for p in (p for p in self.plans if p['tier'] == tier):
+                    # Baseline -4 never reaches the bonus; the plugin sets -5
+                    # and repoints Item3 for a Gilded/Artificer roll.
+                    row = classes[f"RMap {p['item_code']} Elite"]
+                    self.assertEqual(row['Picks'], '-4')
                     self.assertEqual((row['Item1'], row['Prob1']), (f'RMap T{tier} Loot', '3'))
                     self.assertEqual((row['Item2'], row['Prob2']), (f'RMap T{tier} Sustain', '1'))
-                    self.assertEqual((row['Item3'], row['Prob3']), (f'RMap T{tier} {reward} Bonus', '1'))
-                    bonus = classes[row['Item3']]
+                    self.assertEqual((row['Item3'], row['Prob3']), (f'RMap T{tier} Gilded Bonus', '1'))
+                    self.assertFalse(row['Item4'])
+                    names = list(classes)
+                    for nested in ('Loot', 'Sustain', 'Gilded Bonus', 'Artificer Bonus'):
+                        self.assertLess(names.index(f'RMap T{tier} {nested}'), names.index(row['Treasure Class']))
+                for reward in ('Gilded', 'Artificer'):
+                    bonus = classes[f'RMap T{tier} {reward} Bonus']
                     self.assertEqual(bonus['Picks'], '1')
                     self.assertGreater(int(bonus['NoDrop']), 0)
                     self.assertFalse(any('Sustain' in bonus[f'Item{i}'] or 'Tier 6' in bonus[f'Item{i}'] for i in range(1, 11)))

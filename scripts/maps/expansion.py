@@ -7,61 +7,58 @@ def generate(api, plans, monsters, props, runtime):
     sources = {}
     compiled_ids = api.monster_indices(monsters)
     next_id = len(compiled_ids)
+    import endgame
     for p in plans:
         native = cfg.MAP_MONSTERS[p['theme']['key']]
-        profiles = []
-        for population, replacement in enumerate(cfg.EXPANSION_POPULATIONS):
-            for reward, reward_name in enumerate(cfg.EXPANSION_REWARDS):
-                ids = []
-                for slot, source in enumerate(native):
-                    baseline = monsters.find(monsters.col('Id'), f"rmap_{p['item_code']}_{slot}")
-                    if not population and not reward:
-                        ids.append(compiled_ids[baseline[monsters.col('Id')]])
-                        continue
-                    # Replacement monsters reuse their already generated, scaled
-                    # counterpart if present; otherwise generate the same ratios.
-                    if replacement and slot == len(native) - 1:
-                        source = replacement
-                        original = monsters.find(monsters.col('Id'), source)
-                        row = list(original)
-                        for diff in ('', '(N)', '(H)'):
-                            row[monsters.col('Level' + diff)] = str(cfg.MAP_AREA_LEVEL + p['tier'] - 1)
-                            for stem in ('MinHP', 'MaxHP', 'AC', 'Exp', 'A1MinD', 'A1MaxD',
-                                         'A1TH', 'A2MinD', 'A2MaxD', 'A2TH', 'S1MinD', 'S1MaxD',
-                                         'S1TH', 'El1MinD', 'El1MaxD', 'El2MinD', 'El2MaxD', 'El3MinD', 'El3MaxD'):
-                                target = stem + diff
-                                if target not in monsters.header:
-                                    target = target[0].lower() + target[1:]
-                                factor = 1.0 if stem in ('Exp', 'AC', 'A1TH', 'A2TH', 'S1TH') else p['spec']['scale']
-                                if stem in ('MinHP', 'MaxHP'):
-                                    factor *= 1.5
-                                row[monsters.col(target)] = str(round(int(original[monsters.col(stem + '(H)')] or 0) * factor))
-                            for res in ('Dm', 'Ma', 'Fi', 'Li', 'Co', 'Po'):
-                                row[monsters.col('Res' + res + diff)] = original[monsters.col('Res' + res + '(H)')]
-                    else:
-                        row = list(baseline)
-                    name = f"rmap_v2_{p['item_code']}_{population}_{reward}_{slot}"
-                    index = next_id
-                    next_id += 1
-                    api.set_cells(row, monsters, {
-                        'Id': name, '*hcIdx': str(index), 'NextInClass': '',
-                        'MonProp': f"rmap_{p['item_code']}", 'noAura': '0',
-                        'noRatio': '0', 'boss': '0', 'primeevil': '0',
-                        'MinGrp': '3', 'MaxGrp': '5', 'enabled': '1',
-                        'spawn': '', 'minion1': '', 'minion2': '',
-                        'TCQuestId': '', 'TCQuestCP': '',
-                    })
-                    for diff in ('', '(N)', '(H)'):
-                        for kind in ('', 'Champ', 'Unique', 'Quest', 'Desecrated',
-                                     'DesecratedChamp', 'DesecratedUnique', 'Herald'):
-                            elite = bool(kind)
-                            suffix = (reward_name if reward_name and elite else 'Elite' if elite else 'Normal')
-                            row[monsters.col('TreasureClass' + kind + diff)] = f"RMap T{p['tier']} {suffix}"
-                    monsters.append(row)
-                    sources[name] = source
-                    ids.append(index)
-                profiles.append(ids)
-        population_profiles.append(profiles)
+        last = len(native) - 1
+        base = [compiled_ids[f"rmap_{p['item_code']}_{slot}"] for slot in range(len(native))]
+        # Reward affixes change no monster: every elite already drops from the
+        # map's own table, which the plugin gives the rolled bonus. A
+        # population affix replaces only the last slot, so each map gains one
+        # row per replacement monster and every other slot keeps its base row.
+        replaced = {}
+        for population, source in enumerate(cfg.EXPANSION_POPULATIONS):
+            if not source:
+                continue
+            original = monsters.find(monsters.col('Id'), source)
+            row = list(original)
+            for diff in ('', '(N)', '(H)'):
+                row[monsters.col('Level' + diff)] = str(cfg.MAP_AREA_LEVEL + p['tier'] - 1)
+                for stem in ('MinHP', 'MaxHP', 'AC', 'Exp', 'A1MinD', 'A1MaxD',
+                             'A1TH', 'A2MinD', 'A2MaxD', 'A2TH', 'S1MinD', 'S1MaxD',
+                             'S1TH', 'El1MinD', 'El1MaxD', 'El2MinD', 'El2MaxD', 'El3MinD', 'El3MaxD'):
+                    target = stem + diff
+                    if target not in monsters.header:
+                        target = target[0].lower() + target[1:]
+                    factor = 1.0 if stem in ('Exp', 'AC', 'A1TH', 'A2TH', 'S1TH') else p['spec']['scale']
+                    if stem in ('MinHP', 'MaxHP'):
+                        factor *= 1.5
+                    row[monsters.col(target)] = str(round(int(original[monsters.col(stem + '(H)')] or 0) * factor))
+                for res in ('Dm', 'Ma', 'Fi', 'Li', 'Co', 'Po'):
+                    row[monsters.col('Res' + res + diff)] = original[monsters.col('Res' + res + '(H)')]
+            name = f"rmap_v2_{p['item_code']}_{population}"
+            index = next_id
+            next_id += 1
+            api.set_cells(row, monsters, {
+                'Id': name, '*hcIdx': str(index), 'NextInClass': '',
+                'MonProp': f"rmap_{p['item_code']}", 'noAura': '0',
+                'noRatio': '0', 'boss': '0', 'primeevil': '0',
+                'MinGrp': '3', 'MaxGrp': '5', 'enabled': '1',
+                'spawn': '', 'minion1': '', 'minion2': '',
+                'TCQuestId': '', 'TCQuestCP': '',
+            })
+            for diff in ('', '(N)', '(H)'):
+                for kind in ('', 'Champ', 'Unique', 'Quest', 'Desecrated',
+                             'DesecratedChamp', 'DesecratedUnique', 'Herald'):
+                    row[monsters.col('TreasureClass' + kind + diff)] = endgame.monster_class(p, bool(kind))
+            monsters.append(row)
+            sources[name] = source
+            replaced[population] = index
+        # Profile shape stays population x reward so rolls index it unchanged.
+        population_profiles.append([
+            base[:last] + [replaced[population]] if population in replaced else list(base)
+            for population in range(len(cfg.EXPANSION_POPULATIONS))
+            for _ in cfg.EXPANSION_REWARDS])
     runtime['population_profiles'] = population_profiles
     runtime['expansion_models'] = sources
 
@@ -135,9 +132,22 @@ def header(out, plans, runtime):
         'inline constexpr bool PopulationAvailable[][4] = { ' + ', '.join(
             '{ ' + ', '.join('true' if replacement is None or replacement != cfg.MAP_MONSTERS[p['theme']['key']][-1] else 'false'
                              for replacement in cfg.EXPANSION_POPULATIONS) + ' }' for p in plans) + ' };',
-        'inline constexpr uint16_t PopulationProfiles[][PopulationProfileCount][4] = {'])
+        f'inline constexpr uint32_t PopulationSlotCapacity = {cfg.MAP_MONSTER_LIMIT};',
+        'inline constexpr uint16_t PopulationProfiles[][PopulationProfileCount][PopulationSlotCapacity] = {'])
     for profiles in runtime['population_profiles']:
         out.append(' { ' + ', '.join('{ ' + ', '.join(map(str, ids)) + ' }' for ids in profiles) + ' },')
+    import endgame
+    out.extend(['};',
+        '// Reward affixes: the map\'s elite table is Picks -4 over [Loot x3,',
+        '// Sustain x1, <bonus> x1]; reward r sets Picks -5 and the third entry',
+        '// to RewardBonusClasses[tier-1][r-1]. Names are TXT Treasure Class keys.',
+        'struct RewardClass { const char* elite; const char* loot; const char* sustain; };',
+        'inline constexpr RewardClass RewardClasses[] = {'])
+    out.extend(f' {{ "{endgame.elite_class(p)}", "RMap T{p["tier"]} Loot", "RMap T{p["tier"]} Sustain" }},'
+               for p in plans)
+    out.extend(['};', 'inline constexpr const char* RewardBonusClasses[][2] = {'])
+    out.extend(f' {{ "RMap T{tier} Gilded Bonus", "RMap T{tier} Artificer Bonus" }},'
+               for tier in range(1, len(cfg.TIERS) + 1))
     out.extend(['};', f'inline constexpr uint32_t ExpansionPropertyProbe = {runtime["expansion_probe"]};',
                 'inline constexpr MonsterEffect ExpansionProbeProperties[] = {'])
     out.extend(' { ' + ', '.join(map(str, values)) + ' },' for values in runtime['expansion_probe_properties'])
