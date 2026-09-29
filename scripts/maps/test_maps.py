@@ -612,7 +612,8 @@ class MappingContract(unittest.TestCase):
         import exterior
         custom = [p for p in self.plans
                   if boss_rooms.arena_spec(p['theme'], p['tier']).startswith('custom:')]
-        self.assertEqual({p['theme']['key'] for p in custom}, {'desert'})
+        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen'})
+        presets = gen.Table(gen.EXCEL / 'lvlprest.txt')
         for p in custom:
             ds1, hd = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
             width, height = struct.unpack_from('<2I', ds1, 4)
@@ -620,9 +621,14 @@ class MappingContract(unittest.TestCase):
             for diff in ('', '(N)', '(H)'):
                 self.assertEqual(level[self.levels.col('SizeX' + diff)], str(width))
                 self.assertEqual(level[self.levels.col('SizeY' + diff)], str(height))
-            # One return warp, on the slot the level links back to the body.
+            preset = presets.find(presets.col('LevelId'), str(p['boss_id']))
+            self.assertIn((preset[presets.col('SizeX')], preset[presets.col('SizeY')]),
+                          (('0', '0'), (str(width), str(height))))
+            # One return warp (a portal tile, or the two tiles of a stairway),
+            # on the slot the level links back to the body.
             warps = list(exterior.warp_markers(ds1))
-            self.assertEqual([slot for _, _, slot in warps], [p['theme']['arena_return'][0]])
+            self.assertIn(len(warps), (1, 2))
+            self.assertEqual({slot for _, _, slot in warps}, {p['theme']['arena_return'][0]})
             # The Warden's placeholder and the arrival tile stand on floor.
             cells_x, _, _, floors, _ = exterior.layer_info(ds1)
             floor = lambda x, y: struct.unpack_from('<I', ds1, floors + 4 * (y * cells_x + x))[0]
@@ -632,7 +638,9 @@ class MappingContract(unittest.TestCase):
                 self.assertEqual(floor(x, y) & 0xff, 0xc2)
             # The HD scene covers the room, stays inside it and loads what it uses.
             scene = json.loads(hd)
-            self.assertEqual(scene['biomeFilename'], 'data/hd/env/biome/act2_tomb.json')
+            self.assertEqual(scene['biomeFilename'], {'desert': 'data/hd/env/biome/act2_tomb.json',
+                                                      'frozen': 'data/hd/env/biome/expansion_icecave.json'}
+                             [p['theme']['key']])
             ids = [e['id'] for e in scene['entities']]
             self.assertEqual(len(ids), len(set(ids)))
             scale = next(c for c in scene['terrain']['components'] if 'scale' in c)['scale']

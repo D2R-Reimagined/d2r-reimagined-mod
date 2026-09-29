@@ -207,10 +207,12 @@ THEMES = [
         # Prev room and the arena keeps the Down floor warp. Next stays dead.
         "body_exits": [(2, 75)], # Act 5 Ice Caves Down Floor
         "body_entry": (0, 73),   # Act 5 Ice Caves Up: the Prev room's stairs
-        "arena_template": 160,   # Forsaken Labyrinth 21-2, ice pool rooms
-        # One stock pool room per tier. Each carries the Ice Caves Up warp
-        # the Cellar of Pity family answers to, so no DS1 editing is needed.
-        "arena_ds1": [f"stock:expansion/icecave/poolroom0{n}a.ds1" for n in range(1, 7)],
+        # The Warden's glacier hall is purpose-built (arenas.py), 20x20 in the
+        # Ice Caves tileset. Level 160 only supplies the row: LevelType 33,
+        # Dt1Mask 1 and the slot-0 Ice Caves Up stairs (lvlwarp 73), which
+        # the room carries in its north wall.
+        "arena_template": 160,
+        "arena_ds1": "custom:frozen",
         "arena_return": (0, 73),
     },
     {

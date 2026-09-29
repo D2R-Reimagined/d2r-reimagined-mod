@@ -312,6 +312,14 @@ def generate(api, plans, levels, presets, monsters):
             api.set_cells(level, levels, {f"Size{axis}{diff}": str(size)
                                           for axis, size in (("X", width), ("Y", height))
                                           for diff in ("", "(N)", "(H)")})
+            # A template preset may pin its own room's size (the ice pool
+            # rooms say 32x32); 0 means "the DS1's", which stays as it is.
+            if preset[presets.col("SizeX")] not in ("", "0"):
+                api.set_cells(preset, presets, {"SizeX": str(width), "SizeY": str(height)})
+            # KillEdge drops a preset's last row and column (stock rooms leave
+            # them empty to share with a neighbour); a custom room's front
+            # walls live there.
+            api.set_cells(preset, presets, {"KillEdge": "0"})
         next_slot += 1
         api.set_cells(preset, presets, {"Populate": "0", "Files": "1", "File1": target,
                                        **{f"File{i}": "0" for i in range(2, 7)}})

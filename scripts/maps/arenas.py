@@ -29,6 +29,7 @@ import copy
 import json
 import math
 import random
+import re
 import struct
 import zlib
 from pathlib import Path
@@ -106,14 +107,17 @@ class Kit:
     """Entity templates and dependencies harvested from stock HD scenes."""
 
     def __init__(self, folder, scenes, terrain_scene):
-        self.templates, self.deps = {}, {}
+        self.templates, self.named, self.scenes, self.deps = {}, {}, {}, {}
         for name in scenes:
-            scene = _load_scene(f"{folder}/{name}")
+            scene = self.scenes[name] = _load_scene(f"{folder}/{name}")
             self.merge(scene["dependencies"])
             for entity in scene["entities"]:
                 key = _template_key(entity)
                 if key and key not in self.templates:
                     self.templates[key] = entity
+                # Stamps that share a mask differ only by layer; their entity
+                # names ("icecave_icesheet01_04") tell them apart.
+                self.named.setdefault(re.sub(r"_\d+$", "", entity["name"]), entity)
         # Only the terrain is taken from its scene, with its own mesh files.
         self.terrain = _load_scene(terrain_scene)["terrain"]
         for comp in self.terrain["components"]:
@@ -211,6 +215,19 @@ class Scene:
         replaces the template's orientation; None keeps it."""
         return self._place(copy.deepcopy(self.kit.templates[key]), key, x, z, yaw, y, scale)
 
+    def add_named(self, name, x, z, yaw=None, y=None):
+        """Place the stock entity named `name` (minus its _NN suffix)."""
+        return self._place(copy.deepcopy(self.kit.named[name]), name, x, z, yaw, y, None)
+
+    def copy_region(self, scene, keep, dx, dz):
+        """Clone every entity of kit scene `scene` for which keep(name, x, z)
+        holds, shifted by (dx, dz), keeping its height, rotation and scale."""
+        for entity in self.kit.scenes[scene]["entities"]:
+            position = _transform(entity)["position"] if _has_transform(entity) else None
+            if position and keep(entity["name"], position["x"], position["z"]):
+                self._place(copy.deepcopy(entity), re.sub(r"_\d+$", "", entity["name"]),
+                            position["x"] + dx, position["z"] + dz, None, None, None)
+
     def prefab(self, path, x, z, yaw=0):
         """Place the stock prefab at `path` (a data/hd/... path)."""
         return self._place(self.kit.prefab(path), path.rsplit("/", 1)[-1], x, z, yaw, None, None)
@@ -261,6 +278,11 @@ class Scene:
         return (json.dumps(scene, separators=(",", ":")) + "\n").encode()
 
 
+def _has_transform(entity):
+    return any(c["type"] in ("TransformDefinitionComponent", "TransformVariationDefinitionComponent")
+               for c in entity["components"])
+
+
 def _transform(entity):
     for comp in entity["components"]:
         if comp["type"] in ("TransformDefinitionComponent", "TransformVariationDefinitionComponent"):
@@ -271,9 +293,9 @@ def _transform(entity):
 class Room:
     """A v18 DS1 with one wall layer, one floor layer and no substitutions."""
 
-    def __init__(self, cells_x, cells_y, act, files):
+    def __init__(self, cells_x, cells_y, act, files, void=VOID):
         self.w, self.h, self.act, self.files = cells_x, cells_y, act, files
-        self.floor = [VOID] * (cells_x * cells_y)
+        self.floor = [void] * (cells_x * cells_y)
         self.wall = [0] * (cells_x * cells_y)
         self.orient = [0] * (cells_x * cells_y)
         self.objects = []
@@ -573,7 +595,195 @@ def build_sandswept():
     return room.to_bytes(), scene.to_bytes()
 
 
-BUILDERS = {"sandswept": build_sandswept}
+# --------------------------------------------------------------------------
+# Frozen Depths: the Warden's glacier hall
+# --------------------------------------------------------------------------
+# Act 5 Ice Caves (LevelType 33, Dt1Mask 1: Interior.dt1 only). Measured from
+# the stock ice rooms (icewback01, icee02, iceew03, poolroom01a ...):
+#
+# * Back-wall pieces are ~20 units long and pivot on the wall line at their
+#   east (north wall) or south (west wall) end, yaw 0: the direction is in
+#   the model, *01 running along z and *02/*03 along x. Stock rooms overlap
+#   them freely; one per tile, as here, keeps the rock face unbroken.
+# * Wall runs end in endcaps (endcap04 at a north run's east end);
+#   column02/column03 stand at the room's far ends.
+# * The floor texture comes from the floor tiles through the ice tile masks
+#   (tile_masks.json): main 1 sub 1 is the plain base floor, main 5 tiles
+#   paint path shapes. Variation here comes from the stock stamps instead.
+# * Stairs up (lvlwarp 73, Vis slot 0) are two orientation 11 main 0 warp
+#   tiles in a north wall under one wall_doorway01, pivot at the far tile's
+#   east edge, dressed with timber (icewback01).
+ICE_FLOOR = 0x1001C2
+ICE_BACK_SUBS = (2, 5, 6, 13, 14, 15, 21, 22)   # straight full-edge pieces
+ICE_CORNER = 0x000481                           # orientation 3 main 0 sub 4
+ICE_FRONT_TOP_SUBS = (2, 4, 5, 6)               # orientation 2 main 1
+ICE_FRONT_LEFT_SUBS = (1, 2, 4, 5, 6)           # orientation 1 main 1
+ICE_FRONT_END = 0x100181                        # orientations 5/6/7 main 1 sub 1
+# Orientation 12 main 2 columns and the model each carries in stock rooms.
+ICE_COLUMNS = {0: ("column_small02.model", 2.0, 4.0),
+               1: ("column_icechunk01.model", 3.3, 1.4),
+               2: ("column_small03.model", 2.3, 2.6)}
+ICE_DT1S = [r"\d2\data\global\tiles\expansion\icecave\interior.dt1"]
+ICE_SCENES = ("poolroom01a", "icewback01", "icenway", "iceeahead01", "icesew01")
+
+# Act 5 objpreset indices (the room is stamped Act 5 already).
+OBJ_ICE_BRAZIER = 75           # IceCaveTorch1
+OBJ_ICE_TORCH = 76             # IceCaveTorch2, the stock rooms' wall-side torch
+OBJ_ICE_JARS = (67, 68, 69, 70, 71)
+OBJ_DEAD_BARBARIAN = 73        # lootable frozen corpse
+OBJ_FOG = 5
+
+FROZEN = {
+    # Same footprint as the Sandswept sanctum: 20x20, walls outside it.
+    "lo": 3, "hi": 22,
+    "ring": (7, 18), "ring_gaps": (10, 15),
+    "court": (9, 16),                   # the frozen pool, inclusive
+    "stairs": 17,                       # stairs up on tiles 17-18 of the north wall
+    "torches_north": (5, 10, 14, 21),
+    "torches_west": (5, 10, 15, 20),
+    "ice_chunks": ((5, 13), (13, 5), (20, 11), (11, 20)),
+    "warden": (62, 62),
+    "seed": 1123,
+}
+
+
+def build_frozen():
+    s = FROZEN
+    lo, hi = s["lo"], s["hi"]
+    back, front = lo - 1, hi + 1
+    cells = front + 1
+    rng = random.Random(s["seed"])
+    room = Room(cells, cells, 4, ICE_DT1S, void=0)
+    kit = Kit("expansion/icecave", ICE_SCENES, TERRAIN_SCENE)
+    scene = Scene(kit, "data/hd/env/biome/expansion_icecave.json", cells, cells)
+    stairs = (s["stairs"], s["stairs"] + 1)
+
+    # ---- floor and legacy walls ------------------------------------------
+    for y in range(back, front):
+        for x in range(back, front):
+            room.set_floor(x, y, ICE_FLOOR)
+    room.set_wall(back, back, ORIENT_CORNER, ICE_CORNER)
+    for i, t in enumerate(range(lo, hi + 1)):
+        sub = ICE_BACK_SUBS[i % len(ICE_BACK_SUBS)] << 8
+        if t in stairs:
+            room.set_wall(t, back, ORIENT_WARP, 0x81 | (t - stairs[0]) << 8)
+        else:
+            room.set_wall(t, back, ORIENT_TOP, 0x81 | sub)
+        room.set_wall(back, t, ORIENT_LEFT, 0x81 | sub)
+        room.set_wall(t, front, ORIENT_TOP, 0x100081 | ICE_FRONT_TOP_SUBS[i % 4] << 8)
+        room.set_wall(front, t, ORIENT_LEFT, 0x100081 | ICE_FRONT_LEFT_SUBS[i % 5] << 8)
+    room.set_wall(front, back, ORIENT_EAST_END, ICE_FRONT_END)
+    room.set_wall(back, front, ORIENT_WEST_END, ICE_FRONT_END)
+    room.set_wall(front, front, ORIENT_SOUTH_CORNER, ICE_FRONT_END)
+
+    # ---- HD walls --------------------------------------------------------
+    # All four sides are full rock walls, as the Sandswept sanctum's are.
+    along_x = ("wall_ice02.model", "wall_long02.model", "wall_bare03.model")
+    along_z = ("wall_ice01.model", "wall_long01.model", "wall_bare01.model")
+    for t in range(back, hi + 1):
+        if t not in stairs:
+            scene.add(rng.choice(along_x), 10 * (t + 1), 10 * back, 0)
+        scene.add(rng.choice(along_z), 10 * back, 10 * (t + 1), 0)
+        scene.add(rng.choice(along_x), 10 * (t + 1), 10 * front, 0)
+        scene.add(rng.choice(along_z), 10 * front, 10 * (t + 1), 0)
+    scene.add("corner_wall_ice01.model", 10 * back, 10 * back, 0)
+    scene.add("wall_endcap04.model", 10 * front, 10 * back, 0)
+    scene.add("column02.model", 10 * front + 1, 10 * back + 1, 0)
+    scene.add("column03.model", 10 * back + 2, 10 * front + 2, 0)
+    scene.add("column03.model", 10 * front + 2, 10 * front + 2, 0)
+
+    # ---- stairs up (the return warp) -------------------------------------
+    door = 10 * (stairs[1] + 1)
+    scene.add("wall_endcap04.model", 10 * stairs[0], 10 * back, 0)
+    scene.add("wall_doorway01.model", door, 10 * back, 0)
+    # icewback01's doorway stands at (120, 10); bring its timber props along.
+    scene.copy_region("icewback01", lambda name, x, z: name.startswith("wood_snowy")
+                      and 88 <= x <= 132 and 8 <= z <= 36, door - 120, 10 * back - 10)
+
+    # ---- torches along the back walls ------------------------------------
+    for t in s["torches_north"]:
+        room.add_object(2, OBJ_ICE_TORCH, 5 * t + 2, 5 * back + 2)
+    for t in s["torches_west"]:
+        room.add_object(2, OBJ_ICE_TORCH, 5 * back + 2, 5 * t + 2)
+
+    # ---- pillar ring and ice chunks --------------------------------------
+    a, b = s["ring"]
+    g1, g2 = s["ring_gaps"]
+    pillars = [(a, g1), (a, g2), (b, g1), (b, g2), (g1, a), (g2, a), (g1, b), (g2, b)]
+    for i, (x, y) in enumerate(pillars):
+        sub = (0, 2)[i % 2]
+        model, dx, dz = ICE_COLUMNS[sub]
+        room.set_wall(x, y, ORIENT_COLUMN, 0x200081 | sub << 8)
+        scene.add(model, 10 * x + dx, 10 * y + dz, 0)
+        scene.add("snow_mound03.model", 10 * x + dx, 10 * y + dz + 2, rng.uniform(0, 360))
+    for x, y in s["ice_chunks"]:
+        model, dx, dz = ICE_COLUMNS[1]
+        room.set_wall(x, y, ORIENT_COLUMN, 0x200181)
+        scene.add(model, 10 * x + dx, 10 * y + dz, 0)
+    for x, y in ((a, a), (b, a), (a, b), (b, b)):
+        room.add_object(2, OBJ_ICE_BRAZIER, 5 * x + 2, 5 * y + 2)
+
+    # ---- the frozen pool -------------------------------------------------
+    # Cracked-ice stamps (layer 6) sheet the court; frozen dead lie in it and
+    # ice craters ring its edge.
+    c0, c1 = s["court"]
+    span = 10 * (c1 + 1 - c0)
+    for i in range(3):
+        for j in range(3):
+            scene.add_named("icecave_icesheet01", 10 * c0 + span * (2 * i + 1) / 6,
+                            10 * c0 + span * (2 * j + 1) / 6, rng.choice((0, 90, 180, 270)))
+    for _ in range(4):
+        scene.add_named("icecave_icerough01", rng.uniform(10 * c0, 10 * c1 + 10),
+                        rng.uniform(10 * c0, 10 * c1 + 10), rng.uniform(0, 360))
+    for model, x, z in (("corpse_frozen01.model", 10 * c0 + 22, 10 * c0 + 30),
+                        ("corpse_frozen02.model", 10 * c1 - 12, 10 * c0 + 18),
+                        ("corpse_frozen01.model", 10 * c0 + 40, 10 * c1 - 8)):
+        scene.add(model, x, z, rng.uniform(0, 360))
+    for x, z in ((10 * c0 - 4, 10 * c0 + 34), (10 * c1 + 8, 10 * c0 + 44),
+                 (10 * c0 + 30, 10 * c1 + 9), (10 * c0 + 52, 10 * c0 - 5)):
+        scene.add("crater01.model", x, z, rng.uniform(0, 360))
+    wx, wy = s["warden"]
+    for dx, dy in ((-12, 0), (12, 0), (0, -12), (0, 12)):
+        room.add_object(2, OBJ_FOG, wx + dx, wy + dy)
+
+    # ---- snow, remains and loot ------------------------------------------
+    for t in range(lo, hi + 1, 3):
+        scene.add_named("icecave_snow_dusty01", 10 * t + 5, 10 * lo + 4, rng.uniform(0, 360))
+        scene.add_named("icecave_snow_dusty01", 10 * lo + 4, 10 * t + 5, rng.uniform(0, 360))
+        scene.add_named("icacave_snow_straight03_STAMP", 10 * t + 5, 10 * hi + 6, 0)
+        scene.add_named("icacave_snow_straight03_STAMP", 10 * hi + 6, 10 * t + 5, 90)
+    for t in range(lo, hi + 1, 2):
+        for x, z in ((10 * t + rng.uniform(2, 8), 10 * lo + rng.uniform(0, 3)),
+                     (10 * lo + rng.uniform(0, 3), 10 * t + rng.uniform(2, 8))):
+            if rng.random() < 0.6 and not (z < 10 * lo + 5 and 10 * stairs[0] - 5 < x < door + 5):
+                scene.add("snow_mound03.model", x, z, rng.uniform(0, 360))
+    for cx, cz in ((10 * lo + 8, 10 * lo + 8), (10 * hi, 10 * hi), (10 * lo + 6, 10 * hi),
+                   (10 * hi, 10 * lo + 8)):
+        scene.add_named("icecave_snow01", cx, cz, rng.uniform(0, 360))
+    for cx, cz in ((10 * lo + 22, 10 * hi - 12), (10 * hi - 14, 10 * lo + 24),
+                   (10 * lo + 40, 10 * lo + 16)):
+        scene.add("remains_scattered01.model", cx + rng.uniform(-3, 3), cz + rng.uniform(-3, 3),
+                  rng.uniform(0, 360))
+    for sx, sy in ((5 * lo + 3, 5 * hi + 2), (5 * lo + 5, 5 * hi + 3), (5 * hi + 2, 5 * lo + 3),
+                   (5 * hi + 3, 5 * lo + 6), (5 * lo + 3, 5 * lo + 4)):
+        room.add_object(2, rng.choice(OBJ_ICE_JARS), sx, sy)
+    room.add_object(2, OBJ_DEAD_BARBARIAN, 5 * lo + 11, 5 * hi - 6)
+    room.add_object(2, OBJ_DEAD_BARBARIAN, 5 * hi - 6, 5 * lo + 13)
+
+    # ---- atmosphere ------------------------------------------------------
+    for _ in range(8):
+        scene.add("FX_Act5Icecave_fog_20x20.particles",
+                  rng.uniform(10 * lo, 10 * hi + 10), rng.uniform(10 * lo, 10 * hi + 10))
+    for _ in range(5):
+        scene.add("FX_Act5Icecave_mist_20x20.particles",
+                  rng.uniform(10 * lo, 10 * hi + 10), rng.uniform(10 * lo, 10 * hi + 10))
+
+    # Placeholder monster: boss_rooms.clone replaces it with the Warden.
+    room.add_object(1, 0, wx, wy)
+    return room.to_bytes(), scene.to_bytes()
+
+
+BUILDERS = {"sandswept": build_sandswept, "frozen": build_frozen}
 _cache = {}
 
 

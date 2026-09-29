@@ -31,8 +31,8 @@ no longer need to be neighbours in the Forsaken Labyrinth; the generator
 links them itself and refuses a slot/warp pair that no stock maze of that
 tileset uses. Current themes: Sandswept Tomb (Maggot Lair maze,
 purpose-built tomb sanctum), Corrupted Durance (Durance of Hate maze, Mephisto arena),
-Forsaken Catacombs, Frozen Depths (ice-cave maze, one stock pool room per
-tier) and Worldstone Keep. Every map level is Act 5 regardless of tileset so
+Forsaken Catacombs, Frozen Depths (ice-cave maze, purpose-built
+glacier hall) and Worldstone Keep. Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
 
 ### Where the portal lands
@@ -87,7 +87,25 @@ grave-goods corner line the two back walls; sand drifts, bones, breakable
 urns and two lootable skeletons fill the aisles. The player arrives by the
 same slot-2 red portal as the Labyrinth rooms (lvlwarp 83) in the south
 corner, a diagonal walk from the court. The layout and its seed live in
-`SANDSWEPT`; the other themes still clone Labyrinth rooms.
+`SANDSWEPT`. Its south and east walls are full-height rock like the back
+walls (low fences left the room open to the void), and plain segments stand
+behind the torch and alcove prefabs, which otherwise leave gaps in game.
+
+Frozen Depths' glacier hall (`FROZEN`) has the same 20x20 footprint in the
+Ice Caves tileset. Ice wall pieces are ~20 units long, pivot at their
+east/south end on the wall line with yaw 0 (direction lives in the model:
+`*01` along z, `*02`/`*03` along x) and are placed one per tile with rock
+columns at the far corners; all four sides are full walls. Ice pillars on
+column tiles ring a frozen pool of cracked-ice stamps where the Warden waits
+among frozen dead and ice craters; ice braziers mark the ring's corners,
+ice-cave torches line the back walls, and snow drifts, remains, jars and two
+lootable frozen barbarians fill the aisles. The player arrives by the Ice
+Caves stairs up (two slot-0 warp tiles under `wall_doorway01`, with the stock
+timber dressing) in the north wall. The ice floor texture follows the floor
+tiles' tile masks, so the room uses the plain base floor and gets its
+variation from stamps. A custom arena's `lvlprest` size follows the room when
+the template pins one (the pool rooms said 32x32). The remaining themes still
+clone Labyrinth rooms.
 
 `stock:` arena paths refer to unmodified D2R files. The generator copies each
 one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)
