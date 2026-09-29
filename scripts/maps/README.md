@@ -29,8 +29,8 @@ and lvlwarp its tileset uses for stairs down, a preset arena template, the
 arena DS1 to clone and the warp tile the arena answers to. Bodies and arenas
 no longer need to be neighbours in the Forsaken Labyrinth; the generator
 links them itself and refuses a slot/warp pair that no stock maze of that
-tileset uses. Current themes: Sandswept Tomb (Tal Rasha's Tomb maze,
-Duriel arena), Corrupted Durance (Durance of Hate maze, Mephisto arena),
+tileset uses. Current themes: Sandswept Tomb (Maggot Lair maze,
+purpose-built tomb sanctum), Corrupted Durance (Durance of Hate maze, Mephisto arena),
 Forsaken Catacombs, Frozen Depths (ice-cave maze, one stock pool room per
 tier) and Worldstone Keep. Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
@@ -62,6 +62,33 @@ two random leaves. Corrupted Durance also gets `body_rooms` because the
 four-room Flayer Dungeon template could not put any distance between the two.
 The self-linked entry stairs are expected to do nothing when clicked.
 
+### Custom arenas
+
+`custom:<name>` arenas are built by `arenas.py` instead of cloned: one layout
+emits both the DS1 (floor, walls, collision, objects, return warp, Warden
+spot) and its HD scene, so the two cannot disagree. The scene is made only of
+entities cloned from the tileset's stock HD scenes (walls, low front walls,
+pillars, statues, wall-dressing and pavement prefabs, terrain stamps, FX),
+repositioned on the DS1 grid: one tile is 10 HD units, tile (x, y) spanning HD
+x 10x..10x+10 and z 10y..10y+10. Every placement offset was measured from the
+stock rooms against their DS1s. The floor is a stock flat plane (the
+10x10-quad grid of Palace `celSE3`, all of 170x170) scaled over the room;
+Tomb floors are textured by the biome and stamps, not by the mesh or legacy
+floor tiles. A room's own terrain only covers its walkable floor (`tombnsew`'s
+is a cross), which left the arena's corners without ground in game, so the
+builder rejects any terrain whose mesh is not a full flat square. The level keeps the `arena_template` row
+(LevelType, Dt1Mask, return warp) but takes its size from the room.
+
+Sandswept Tomb's sanctum is a 20x20 Tomb hall (DS1 24x24; first tried at 26x26): eight pillars ring
+an open, paved court where the Warden waits under a ceiling light shaft,
+ritual candles at the court corners and tall braziers at the ring's open
+corners. Wall torches, pharaoh and priestess statues, alcoves, pots and a
+grave-goods corner line the two back walls; sand drifts, bones, breakable
+urns and two lootable skeletons fill the aisles. The player arrives by the
+same slot-2 red portal as the Labyrinth rooms (lvlwarp 83) in the south
+corner, a diagonal walk from the court. The layout and its seed live in
+`SANDSWEPT`; the other themes still clone Labyrinth rooms.
+
 `stock:` arena paths refer to unmodified D2R files. The generator copies each
 one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)
 into `scripts/maps/stock/`, which is committed so regeneration does not need
@@ -87,7 +114,7 @@ rebuilt with it. Two things were confirmed live and drove this shape: a
 monstats `minion1/minion2` pair never spawns for a DS1-preset monster, and a
 skill-slot aura in mode `NU` does not activate on these AIs.
 
-`presentation.py` also generates the HD monster lookup entries for every map-owned monster ID, including Wardens and late-Hell drop variants. The lookup is included in `--check` and the deployment script.
+`presentation.py` also generates the HD monster lookup entries for every map-owned monster ID, including Wardens and late-Hell drop variants. Wardens bind to `rmap_warden_<model>.json`, a copy of their archetype's stock HD model scaled by `WARDEN_MODEL_SCALE` at the root. The lookup is included in `--check` and the deployment script.
 
 Approved folded-parchment sprites use Roman numerals I–VI at the bottom right. Sources and exact image-generation prompts are in `art/v4/`; `preview.html` displays converted art at inventory sizes. Rebuild using `python scripts/maps/build_sprites.py --source scripts/maps/art/v4 --neutral-matte`. The explicit matte option converts the generated neutral preview background into alpha; transparent inputs need no option. Both 98px and 49px RGBA-v31 sprites are generated. `presentation.py` binds all 30 map codes and supplies a shipped charm ground-model fallback. The deploy script includes these 19 HD artifacts. Legacy inventory artwork remains inherited from the small charm.
 

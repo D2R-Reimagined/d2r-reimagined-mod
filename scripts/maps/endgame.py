@@ -266,9 +266,11 @@ def treasure_classes(api, plans, path, runtime):
         # earlier in the file, so Sustain and Loot precede every row that
         # nests them; the loader asserts "Couldn't parse treasure class item"
         # and leaves the slot empty otherwise.
-        tc(f"RMap T{tier} Sustain", 1,
-           [(f"RMap Tier {min(tier, 5)}", 8), ("RMap Currency", 5)]
-           + ([(f"RMap Tier {tier+1}", 2)] if tier < 5 else []), 985)
+        # Out of 1000: map weights halved from 8/2, currency unchanged.
+        sustain = ([(f"RMap Tier {min(tier, 5)}", 4), ("RMap Currency", 5)]
+                   + ([(f"RMap Tier {tier+1}", 1)] if tier < 5 else []))
+        tc(f"RMap T{tier} Sustain", 1, sustain,
+           1000 - sum(weight for _, weight in sustain))
         tc(f"RMap T{tier} Loot", 1,
            [("Act 5 (H) Equip C", 25), ("Act 5 (H) Good", 5),
             ("Gold 1x", 8), ("Super Potion", 4)], max(0, 42 - tier * 6))

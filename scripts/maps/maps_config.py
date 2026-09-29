@@ -93,6 +93,10 @@ MONLVL_FLAT_XP = True
 #   arena_ds1       the room to clone. A repo path under data/global/tiles/,
 #                   or "stock:<path>" for an unmodified D2R file (see
 #                   STOCK_DATA). A list selects one file per tier.
+#                   "custom:<name>" is a purpose-built room from arenas.py
+#                   (DS1 and HD scene generated together); its level size
+#                   comes from the room, the rest of the row from
+#                   arena_template.
 #   arena_return    (Vis slot, lvlwarp id) the arena DS1's warp tile answers
 #                   to. The player arrives on that tile and can leave by it.
 #   body_entry      (Vis slot, lvlwarp id) the room the cube portal drops the
@@ -160,8 +164,11 @@ THEMES = [
         # the Worldstone Keep body at the same tier.
         "body_rooms": (80, 80, 80),
         "body_rooms_per_tier": 14,
-        "arena_template": 138,   # Labyrinth 00: Duriel.ds1 with a slot-2 warp
-        "arena_ds1": "Labyrinth/Duriel.ds1",
+        # The Warden's sanctum is purpose-built (arenas.py): a 26x26 tomb hall
+        # in the Tomb tileset. Level 138 only supplies the row: LevelType 17,
+        # Dt1Mask 639 and the slot-2 red portal (lvlwarp 83) the room keeps.
+        "arena_template": 138,
+        "arena_ds1": "custom:sandswept",
         "arena_return": (2, 83),
     },
     {
@@ -257,9 +264,18 @@ THEMES += [
     dict(key="steppes", name="Ashen Steppes", body_template=104, exterior=True,
          body_size=(80,64), body_entry=(1,69), body_exits=[(7,69)], exit_preset=811,
          initializer=0x3fdc00, arena_template=165, arena_ds1="Labyrinth/Heart.ds1", arena_return=(0,83)),
+    # Abaddon's own maze routine (LevelType 35) ignores lvlmaze Rooms and
+    # always builds three rooms in a line, so bodies generate as LevelType 28
+    # instead: River of Flame's lava maze, same Act 4 lava tiles, grown to
+    # Rooms by the native basic maze. The engine keeps the maze's bounding
+    # box within 200x200 (8x8 rooms of 24x24) wherever it drifts, which always
+    # leaves room for both stairs up to 32 rooms. The plugin
+    # then adds River of Flame's stairs room (stairs_preset, one doorway,
+    # north) twice: the self-linked entry, and the Warden exit as far from it
+    # as the maze allows. Both are real DT1 warps, visible and clickable.
     dict(key="infernal", name="Infernal Rift", body_template=125, exterior=True,
-         body_size=(200,200), body_rooms=(24,24,24), body_rooms_per_tier=3,
-         body_entry=(6,83), body_exits=[(7,83)], initializer=0,
+         body_level_type=28, body_size=(200,200), body_rooms=(22,22,22), body_rooms_per_tier=2,
+         body_entry=(6,70), body_exits=[(7,70)], stairs_preset=852, initializer=0,
          arena_template=165, arena_ds1="Labyrinth/Heart.ds1", arena_return=(0,83)),
 ]
 
@@ -545,13 +561,21 @@ WARDENS = {
 # Worldstone Warden a 3x outlier under the old 12x-archetype rule. The ratio
 # goes through the same 1.5 x tier scale as the population, then this
 # multiplier. Hell uniques receive a further +100% (monumod constant 9), so 6
-# here lands where 12x used to for a mid archetype.
+# here lands where 12x used to for a mid archetype; raised 50% to 9 after
+# feedback that Wardens were too easy.
 WARDEN_HP_RATIO = (300, 360)
-WARDEN_HP_MULTIPLIER = 6
+WARDEN_HP_MULTIPLIER = 9
+# Applied on top of the archetype's tier-scaled physical and elemental attacks,
+# including the WARDENS melee override. Proc and aura skills are unaffected.
+WARDEN_DAMAGE_MULTIPLIER = 1.2
 # Regeneration is a share of max health per frame, so it grew with the health
 # multiplier. Act bosses run 0; Wardens do too.
 WARDEN_DAMAGE_REGEN = 0
 WARDEN_UTRANS = 3               # superunique palette shift
+# HD model scale, relative to the archetype's own model, so a Warden stands out
+# from its escort and the population. presentation.py writes a scaled copy of
+# the archetype's model for the Warden; hit box and pathing are unchanged.
+WARDEN_MODEL_SCALE = 2.0
 WARDEN_AURA_SLOT = 4            # monprop slot for the Warden's own aura
 WARDEN_FIRST_PROC_SLOT = 5      # monprop slots 5-6 are never written by the plugin
 WARDEN_AURA_PER_TIER = 2

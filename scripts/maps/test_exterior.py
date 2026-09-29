@@ -51,7 +51,7 @@ class ExteriorContract(unittest.TestCase):
                 # Except for intentional marker edits, all terrain layers stay
                 # identical. Every removed object was campaign-owned.
                 stock=boss_rooms._stock('global/tiles/'+source_rel).read_bytes()
-                if not variant and not (theme=='travincal' and source=='657') and not (theme=='infernal' and 1053<=int(source)<=1056):
+                if not variant and not (theme=='travincal' and source=='657'):
                     end=exterior.objects(stock)[0]
                     self.assertEqual(data[:12],stock[:12])
                     self.assertEqual(data[16:end],stock[16:end])
@@ -90,8 +90,6 @@ class ExteriorContract(unittest.TestCase):
         hidden=warps.find(warps.col('Id'),'83')
         self.assertEqual(hidden[warps.col('LitVersion')],'0')
         paths=[gen.REPO/'data/global/tiles/Maps/Exterior/travincal_657_1.ds1']
-        paths += [gen.REPO/f'data/global/tiles/Maps/Exterior/infernal_{source}_{variant}.ds1'
-                  for source in range(1053,1057) for variant in (1,2)]
         for path in paths:
             data=path.read_bytes();w,h,layers=exterior.wall_layers(data)
             found=0
@@ -117,9 +115,57 @@ class ExteriorContract(unittest.TestCase):
             self.assertEqual(slots(data),{7})
             self.assertNotIn(7,slots((tiles/f'{key}_{source}_1.ds1').read_bytes()))
         self.assertIn(6,slots((tiles/'travincal_657_1.ds1').read_bytes()))
-        for source in range(1053,1057):
-            self.assertEqual(slots((tiles/f'infernal_{source}_1.ds1').read_bytes()),{6})
-            self.assertEqual(slots((tiles/f'infernal_{source}_2.ds1').read_bytes()),{7})
+        for variant in (1,2):
+            self.assertEqual(slots((tiles/f'infernal_852_{variant}_entry.ds1').read_bytes()),{6})
+            self.assertEqual(slots((tiles/f'infernal_852_{variant}_exit.ds1').read_bytes()),{7})
+
+    def test_infernal_rift_is_a_grown_lava_maze_with_real_stairs(self):
+        # Abaddon's LevelType 35 routine always builds three rooms; River of
+        # Flame's LevelType 28 grows lvlmaze Rooms from the same lava tiles.
+        levels=gen.Table(gen.EXCEL/'levels.txt');maze=gen.Table(gen.EXCEL/'lvlmaze.txt')
+        presets=gen.Table(gen.EXCEL/'lvlprest.txt');warps=gen.Table(gen.EXCEL/'lvlwarp.txt')
+        infernal=[p for p in gen.plan() if p['theme']['key']=='infernal']
+        self.assertEqual(len(infernal),6)
+        for p in infernal:
+            body=levels.find(levels.col('Id'),str(p['body_id']))
+            self.assertEqual((body[levels.col('LevelType')],body[levels.col('DrlgType')]),('28','1'))
+            self.assertEqual((body[levels.col('Vis6')],body[levels.col('Warp6')]),(str(p['body_id']),'70'))
+            self.assertEqual((body[levels.col('Vis7')],body[levels.col('Warp7')]),(str(p['boss_id']),'70'))
+            rooms=int(maze.find(maze.col('Level'),str(p['body_id']))[maze.col('Rooms(H)')])
+            # The maze's bounding box may span 8x8 24x24 rooms (200x200); at
+            # most 32 grown rooms always leaves space for both stairs rooms.
+            self.assertEqual(rooms,22+2*(p['tier']-1))
+            self.assertLessEqual(rooms,32)
+        self.assertEqual(warps.find(warps.col('Id'),'70')[warps.col('Name')],'Act 4 Lava to Mesa')
+        stock=presets.find(presets.col('Def'),'852')
+        for role,slot in (('entry',6),('exit',7)):
+            row=presets.find(presets.col('Name'),f'RMAP Exterior infernal 852 {role}')
+            self.assertEqual(row[presets.col('Scan')],'1')
+            # River of Flame builds this room with LevelType 28's DT1 list.
+            self.assertEqual(row[presets.col('Dt1Mask')],stock[presets.col('Dt1Mask')])
+            for n in (1,2):
+                data=(gen.REPO/'data/global/tiles'/row[presets.col(f'File{n}')]).read_bytes()
+                source=boss_rooms._stock('global/tiles/'+stock[presets.col(f'File{n}')].replace(chr(92),'/')).read_bytes()
+                # River of Flame's own stairs: its authored stair art and the
+                # warp tile inside it, moved from slot 0. Only that slot
+                # field differs from stock; lvlwarp 70 gives the click box.
+                markers=list(exterior.warp_markers(data))
+                self.assertEqual([m[:2] for m in markers],[m[:2] for m in exterior.warp_markers(source)])
+                self.assertEqual([m[2] for m in markers],[slot])
+                # 2026-09-29 crash: with no special tile anywhere in the maze
+                # the red portal found no room. Only the entry carries
+                # Abaddon's hidden landing tile, where these stairs put an
+                # arriving player (warp tile + lvlwarp 70 ExitWalk 5,2).
+                w,_,layers=exterior.wall_layers(data)
+                landings=[(i%w,i//w,struct.unpack_from('<I',data,c+4*i)[0],struct.unpack_from('<I',data,t+4*i)[0])
+                          for c,t in layers for i in range(len(data[c:t])//4)
+                          if struct.unpack_from('<I',data,t+4*i)[0]&255 in (10,11)
+                          and struct.unpack_from('<I',data,c+4*i)[0]>>20&63==exterior.RED_PORTAL_LANDING]
+                wx,wy,_=markers[0]
+                self.assertEqual(landings,[(wx+1,wy,0x82100081,10)] if role=='entry' else [])
+                end=exterior.objects(source)[0]
+                changed=sum(data[i]!=source[i] for i in range(16,end))
+                self.assertEqual(changed,1 if role=='exit' else 1+sum(b!=0 for b in (0x81,0x00,0x10,0x82,0x0a)))
 
     def test_native_catalog_and_original_map_ids(self):
         plans=gen.plan()
@@ -139,6 +185,6 @@ class ExteriorContract(unittest.TestCase):
             if p['theme']['initializer']:
                 self.assertFalse(any(r[maze.col('Level')]==str(p['body_id']) for r in maze.rows))
             else:
-                self.assertGreaterEqual(int(maze.find(maze.col('Level'),str(p['body_id']))[maze.col('Rooms')]),24)
+                self.assertGreaterEqual(int(maze.find(maze.col('Level'),str(p['body_id']))[maze.col('Rooms')]),22)
 
 if __name__=='__main__':unittest.main()

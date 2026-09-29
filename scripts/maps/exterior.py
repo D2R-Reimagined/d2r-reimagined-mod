@@ -12,7 +12,14 @@ import maps_config as cfg
 
 RANGES = {'dunes': [(364,413)], 'highlands': [(4,51)],
           'travincal': [(653,658)], 'steppes': [(799,827)],
-          'infernal': [(836,851),(1053,1058)]}
+          'infernal': [(836,851)]}
+
+# A red portal lands on an orientation 10 special tile with main index 33: the
+# tile scanner (0x3e0ff9) files it as type 11, and the portal's spawn lookup
+# (0x3dac20, mode 11) accepts only that type. It uses the first special tile of
+# any kind if there is none, and no special tile at all gives a null room and a
+# crash. Abaddon's own entry rooms carry exactly this hidden tile (0x82100081).
+RED_PORTAL_LANDING = 33
 
 # These lair mouths carry slot 4, which Dry Hills maps do not link. Use a
 # same-size solid mesa (including its HD counterpart), not an orphan warp.
@@ -132,12 +139,13 @@ def sanitize(data, *, exit_slot=None, marker=None):
 
 def generate(api,plans,presets,runtime,levels):
     assets={}; mappings=[]; layouts=[]
+    warps=api.Table(api.EXCEL/'lvlwarp.txt')
     next_id=1+max(int(r[presets.col('Def')] or 0) for r in presets.rows)
     stock={int(r[presets.col('Def')]):r for r in presets.rows if r[presets.col('Def')]}
     for theme_index,theme in enumerate(cfg.THEMES):
         if not theme.get('exterior'):continue
-        key=theme['key']; exit_id=0
-        def clone(source,exit_copy=False):
+        key=theme['key']; exit_id=0; entry_id=0
+        def clone(source,role=None,warp_slot=None,landing_warp=None):
             nonlocal next_id
             original=stock[CLOSED_PRESETS.get((key,source),source)]
             if any(original[presets.col(c)]!=stock[source][presets.col(c)] for c in ('SizeX','SizeY')):
@@ -145,24 +153,22 @@ def generate(api,plans,presets,runtime,levels):
             row=list(original); target_id=next_id; next_id+=1
             files=int(row[presets.col('Files')] or 0)
             if not files:raise ValueError(f'Exterior preset {source} has no files')
-            api.set_cells(row,presets,{'Name':f'RMAP Exterior {key} {source}'+(' exit' if exit_copy else ''),
+            api.set_cells(row,presets,{'Name':f'RMAP Exterior {key} {source}'+(f' {role}' if role else ''),
                                      'Def':str(target_id),'LevelId':'0'})
             for file_index in range(1,files+1):
                 rel=original[presets.col(f'File{file_index}')].replace('\\','/')
                 path=boss_rooms._stock(Path('global/tiles')/rel)
                 data=path.read_bytes();marker=None
                 if key=='travincal' and source==657: marker=(15,20,6)
-                if key=='infernal' and 1053<=source<=1056:
-                    # File 2 has a consolation chest on the endpoint platform.
-                    # Both variants use that same platform; give the two forced
-                    # endpoint variants entry/exit warp markers there.
-                    chest_rel=original[presets.col('File2')].replace('\\','/')
-                    other=boss_rooms._stock(Path('global/tiles')/chest_rel).read_bytes()
-                    points=[r for r in objects(other)[1] if r[0]==2 and r[1]==53]
-                    if len(points)!=1:raise ValueError(f'{chest_rel}: expected consolation chest')
-                    marker=(points[0][2]//5,points[0][3]//5,6 if file_index==1 else 7)
-                target=f'Maps/Exterior/{key}_{source}_{file_index}'+('_exit' if exit_copy else '')
-                data=sanitize(data,exit_slot=7 if exit_copy else None,marker=marker)
+                if landing_warp is not None:
+                    # Where these stairs put a player arriving by them: the
+                    # warp tile plus the lvlwarp's ExitWalk (in subtiles).
+                    (wx,wy,_),=warp_markers(data)
+                    walk=warps.find(warps.col('Id'),str(landing_warp))
+                    marker=((wx*5+int(walk[warps.col('ExitWalkX')]))//5,
+                            (wy*5+int(walk[warps.col('ExitWalkY')]))//5,RED_PORTAL_LANDING)
+                target=f'Maps/Exterior/{key}_{source}_{file_index}'+(f'_{role}' if role else '')
+                data=sanitize(data,exit_slot=warp_slot,marker=marker)
                 if key=='travincal' and source==657:data=close_travincal_passage(data)
                 if any(warp_markers(data)):row[presets.col('Scan')]='1'
                 for _,_,slot in warp_markers(data):
@@ -183,13 +189,23 @@ def generate(api,plans,presets,runtime,levels):
             for source in range(lo,hi+1):
                 if int(stock[source][presets.col('Files')] or 0)>0:
                     mappings.append((theme_index,source,clone(source)))
-        if theme.get('exit_preset'):exit_id=clone(theme['exit_preset'],True)
+        if theme.get('exit_preset'):exit_id=clone(theme['exit_preset'],'exit',7)
+        if theme.get('stairs_preset'):
+            # Maze bodies: the plugin places one stairs room of each copy
+            # after the native maze has grown. River of Flame's stairs room
+            # has no special tile, so the entry copy gets the red portal
+            # landing; the exit copy must not, or the portal may land there.
+            (entry_slot,entry_warp),((exit_slot,_),)=theme['body_entry'],theme['body_exits']
+            entry_id=clone(theme['stairs_preset'],'entry',entry_slot,entry_warp)
+            exit_id=clone(theme['stairs_preset'],'exit',exit_slot)
         for p in plans:
             if p['theme'] is not theme:continue
             width,height=theme['body_size']
-            layouts.append((p['body_id'],theme['body_template'],
-                int(levels.find(levels.col('Id'),str(theme['body_template']))[levels.col('LevelType')]),
-                width,height,1400+(p['body_id']-226)*40,1000,theme['initializer'],exit_id,theme_index))
+            body_type=int(levels.find(levels.col('Id'),str(p['body_id']))[levels.col('LevelType')])
+            if body_type!=int(theme.get('body_level_type') or levels.find(levels.col('Id'),str(theme['body_template']))[levels.col('LevelType')]):
+                raise ValueError(f"{key}: body {p['body_id']} LevelType {body_type} is not the theme's")
+            layouts.append((p['body_id'],theme['body_template'],body_type,
+                width,height,1400+(p['body_id']-226)*40,1000,theme['initializer'],exit_id,theme_index,entry_id))
     runtime['exterior_layouts']=layouts;runtime['exterior_presets']=mappings
     runtime['maze_presets']=maze_presets(plans,presets,levels)
     return assets
@@ -223,7 +239,8 @@ def maze_presets(plans,presets,levels):
     return swaps
 
 def header(out,runtime):
-    out += ['struct ExteriorLayout { uint32_t level, source, type, width, height, x, y; uintptr_t initializer; uint32_t exitPreset, theme; };',
+    out += ['// entryPreset is set only for maze bodies; there exitPreset is also a stairs room.',
+            'struct ExteriorLayout { uint32_t level, source, type, width, height, x, y; uintptr_t initializer; uint32_t exitPreset, theme, entryPreset; };',
             'inline constexpr ExteriorLayout ExteriorLayouts[] {']
     out += [' {'+', '.join(str(v) for v in r)+'},' for r in runtime['exterior_layouts']]
     out += ['};','struct ExteriorPreset { uint32_t theme, source, replacement; };',

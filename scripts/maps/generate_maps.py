@@ -250,6 +250,9 @@ def gen_levels(plans: list[dict]) -> Table:
         for slot, warp_id in theme.get('body_entries', [(entry_slot,entry_warp)]):
             body[vis[slot]] = str(p["body_id"])
             body[warp[slot]] = str(warp_id)
+        if theme.get('body_level_type'):
+            # A maze generator of the same tiles; see the infernal theme.
+            body[c_type] = str(theme['body_level_type'])
         if exterior:
             width,height=theme['body_size']
             set_cells(body,t,{'Depend':'0','OffsetX':str(1400+(p['body_id']-226)*40),'OffsetY':'1000',

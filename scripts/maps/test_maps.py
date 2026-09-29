@@ -343,7 +343,12 @@ class MappingContract(unittest.TestCase):
             sources = cfg.MAP_MONSTERS[p['theme']['key']]
             for i, source in enumerate(sources):
                 self.assertEqual(models[f"rmap_{p['item_code']}_{i}"], models[source])
-            self.assertEqual(models[f"rmap_{p['item_code']}_boss"], models[sources[0]])
+            warden = models[f"rmap_{p['item_code']}_boss"]
+            self.assertEqual(warden, f"rmap_warden_{models[sources[0]]}")
+            model = json.loads((gen.REPO / f'data/hd/character/enemy/{warden}.json').read_text(encoding='utf-8'))
+            root = next(e for e in model['entities'] if e['name'] == 'entity_root')
+            scale = next(c['scale'] for c in root['components'] if c['type'] == 'TransformDefinitionComponent')
+            self.assertGreaterEqual(min(scale.values()), 1.5)
         self.assertEqual(models['rmap_md1_0'], models['clawviper5'])
 
     @classmethod
@@ -522,7 +527,10 @@ class MappingContract(unittest.TestCase):
             template = self.levels.find(c_id, str(theme['body_template']))
             arena = self.levels.find(c_id, str(theme['arena_template']))
             for col in ('LevelType', 'Pal', 'DrlgType'):
-                self.assertEqual(body[self.levels.col(col)], template[self.levels.col(col)])
+                expected = template[self.levels.col(col)]
+                if col == 'LevelType' and theme.get('body_level_type'):
+                    expected = str(theme['body_level_type'])
+                self.assertEqual(body[self.levels.col(col)], expected)
                 self.assertEqual(boss[self.levels.col(col)], arena[self.levels.col(col)])
             self.assertEqual(body[self.levels.col('DrlgType')], '3' if theme.get('initializer') else '1')
             self.assertEqual(boss[self.levels.col('DrlgType')], '2')
@@ -546,7 +554,8 @@ class MappingContract(unittest.TestCase):
 
     def test_themes_use_distinct_tilesets(self):
         c_id = self.levels.col('Id')
-        types = [self.levels.find(c_id, str(t['body_template']))[self.levels.col('LevelType')]
+        types = [str(t.get('body_level_type') or
+                     self.levels.find(c_id, str(t['body_template']))[self.levels.col('LevelType')])
                  for t in cfg.THEMES]
         self.assertEqual(len(set(types)), len(types))
 
@@ -560,8 +569,8 @@ class MappingContract(unittest.TestCase):
             hd = gen.REPO / 'data/hd/env/preset/maps' / f"{p['item_code']}_boss.json"
             scene = json.loads(hd.read_text(encoding='utf-8-sig'))
             self.assertEqual(scene['type'], 'Preset')
-            _, source_hd = boss_rooms.arena_source(gen.REPO, p['theme'], p['tier'])
-            self.assertEqual(hd.read_bytes(), source_hd.read_bytes())
+            _, source_hd = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
+            self.assertEqual(hd.read_bytes(), source_hd)
 
     def test_each_boss_room_has_exactly_one_matching_warden(self):
         places = gen.Table(gen.EXCEL / 'monpreset.txt')
@@ -584,8 +593,7 @@ class MappingContract(unittest.TestCase):
         act5 = {r[objpreset.col('Index')]: r[objpreset.col('ObjectClass')]
                 for r in objpreset.rows if r[objpreset.col('Act')] == '5'}
         for p in self.plans:
-            source, _ = boss_rooms.arena_source(gen.REPO, p['theme'], p['tier'])
-            source_data = source.read_bytes()
+            source_data, _ = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
             source_act = struct.unpack_from('<I', source_data, 12)[0] + 1
             native = {r[objpreset.col('Index')]: r[objpreset.col('ObjectClass')]
                       for r in objpreset.rows if r[objpreset.col('Act')] == str(source_act)}
@@ -599,6 +607,50 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(sorted(act5[str(r[1])] for r in rows if r[0] == 2), expected, p['item_code'])
             self.assertNotIn('Bank', {act5[str(r[1])] for r in rows if r[0] == 2})
         self.assertEqual(gen.Table(gen.EXCEL / 'base' / 'objpreset.txt').to_bytes(), objpreset.to_bytes())
+
+    def test_custom_arenas_agree_between_room_scene_and_level(self):
+        import exterior
+        custom = [p for p in self.plans
+                  if boss_rooms.arena_spec(p['theme'], p['tier']).startswith('custom:')]
+        self.assertEqual({p['theme']['key'] for p in custom}, {'desert'})
+        for p in custom:
+            ds1, hd = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
+            width, height = struct.unpack_from('<2I', ds1, 4)
+            level = self.levels.find(self.levels.col('Id'), str(p['boss_id']))
+            for diff in ('', '(N)', '(H)'):
+                self.assertEqual(level[self.levels.col('SizeX' + diff)], str(width))
+                self.assertEqual(level[self.levels.col('SizeY' + diff)], str(height))
+            # One return warp, on the slot the level links back to the body.
+            warps = list(exterior.warp_markers(ds1))
+            self.assertEqual([slot for _, _, slot in warps], [p['theme']['arena_return'][0]])
+            # The Warden's placeholder and the arrival tile stand on floor.
+            cells_x, _, _, floors, _ = exterior.layer_info(ds1)
+            floor = lambda x, y: struct.unpack_from('<I', ds1, floors + 4 * (y * cells_x + x))[0]
+            _, rows, _, _ = boss_rooms.objects(ds1)
+            (warden,) = [r for r in rows if r[0] == 1]
+            for x, y in ((warden[2] // 5, warden[3] // 5), warps[0][:2]):
+                self.assertEqual(floor(x, y) & 0xff, 0xc2)
+            # The HD scene covers the room, stays inside it and loads what it uses.
+            scene = json.loads(hd)
+            self.assertEqual(scene['biomeFilename'], 'data/hd/env/biome/act2_tomb.json')
+            ids = [e['id'] for e in scene['entities']]
+            self.assertEqual(len(ids), len(set(ids)))
+            scale = next(c for c in scene['terrain']['components'] if 'scale' in c)['scale']
+            self.assertAlmostEqual(scale['x'] * 170, (width + 1) * 10)
+            self.assertAlmostEqual(scale['z'] * 170, (height + 1) * 10)
+            deps = {d['path'].lower() for kind in ('models', 'particles') for d in scene['dependencies'][kind]}
+            for entity in scene['entities']:
+                for comp in entity['components']:
+                    if 'position' in comp:
+                        self.assertTrue(0 <= comp['position']['x'] <= (width + 1) * 10, entity['name'])
+                        self.assertTrue(0 <= comp['position']['z'] <= (height + 1) * 10, entity['name'])
+                    paths = [comp.get('filename')] + [v['filename'] for v in comp.get('variations', [])]
+                    for path in filter(None, paths):
+                        if path.endswith(('.model', '.particles')):
+                            self.assertIn(path.lower(), deps, entity['name'])
+                    if comp['type'] == 'PrefabPlacementDefinitionComponent':
+                        self.assertTrue((boss_rooms.STOCK_CACHE / comp['prefab'][len('data/'):]).exists(),
+                                        comp['prefab'])
 
     def test_every_warden_has_its_own_marker_row_and_death_portal(self):
         stats2 = gen.Table(gen.EXCEL / 'monstats2.txt')
@@ -659,6 +711,14 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(mon[self.monsters.col('DamageRegen')], str(cfg.WARDEN_DAMAGE_REGEN))
             self.assertEqual(int(mon[self.monsters.col('MinHP(H)')]),
                              round(cfg.WARDEN_HP_RATIO[0] * 1.5 * p['spec']['scale'] * cfg.WARDEN_HP_MULTIPLIER))
+            archetype = self.monsters.find(self.monsters.col('Id'), f'rmap_{code}_0')
+            for stem in ('A1MinD(H)', 'A1MaxD(H)', 'A2MinD(H)', 'A2MaxD(H)'):
+                base = archetype[self.monsters.col(stem)]
+                expected = str(round(int(base) * cfg.WARDEN_DAMAGE_MULTIPLIER)) if base else ''
+                self.assertEqual(mon[self.monsters.col(stem)], expected)
+            if kit['melee'] and kit['melee'][1]:
+                self.assertEqual(mon[self.monsters.col('El1MinD(H)')],
+                                 str(round(kit['melee'][1] * cfg.WARDEN_DAMAGE_MULTIPLIER)))
             self.assertNotIn(kit['aura'][0] if kit['aura'] else None,
                              [mon[self.monsters.col(f'Skill{i}')] for i in range(1, 9)])
             archetypes = cfg.MAP_MONSTERS[p['theme']['key']]

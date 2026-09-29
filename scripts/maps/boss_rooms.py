@@ -109,11 +109,29 @@ def clone(data, preset, presets=None):
     return bytes(header) + block + data[offset + 4 + len(rows) * 20:]
 
 
-def arena_source(repo, theme, tier):
-    """The on-disk DS1 and HD preset JSON to clone for one map."""
+def arena_spec(theme, tier):
     spec = theme["arena_ds1"]
     if isinstance(spec, (list, tuple)):
         spec = spec[(tier - 1) % len(spec)]
+    return spec
+
+
+def arena_bytes(repo, theme, tier):
+    """The DS1 and HD preset JSON to clone for one map, as bytes. A
+    "custom:<name>" arena is built by arenas.py rather than read from disk."""
+    spec = arena_spec(theme, tier)
+    if spec.startswith("custom:"):
+        import arenas
+        return arenas.build(spec[len("custom:"):])
+    ds1, hd = arena_source(repo, theme, tier)
+    return ds1.read_bytes(), hd.read_bytes()
+
+
+def arena_source(repo, theme, tier):
+    """The on-disk DS1 and HD preset JSON to clone for one map."""
+    spec = arena_spec(theme, tier)
+    if spec.startswith("custom:"):
+        raise ValueError(f"{spec} is built in memory; use arena_bytes")
     if spec.startswith("stock:"):
         rel = spec[len("stock:"):]
         ds1 = _stock(Path("global/tiles") / rel)
@@ -192,6 +210,12 @@ def apply_kit(api, monsters, boss, p):
                           f"El1MinD{diff}": str(lo) if lo else "",
                           f"El1MaxD{diff}": str(hi) if hi else ""})
         api.set_cells(boss, monsters, cells)
+    for diff in ("", "(N)", "(H)"):
+        for stem in ("A1MinD", "A1MaxD", "A2MinD", "A2MaxD", "S1MinD", "S1MaxD",
+                     "El1MinD", "El1MaxD", "El2MinD", "El2MaxD", "El3MinD", "El3MaxD"):
+            col = monsters.col(stem + diff)
+            if boss[col]:
+                boss[col] = str(round(int(boss[col]) * cfg.WARDEN_DAMAGE_MULTIPLIER))
     if kit["drain"] is not None:
         api.set_cells(boss, monsters, {f"Drain{d}": str(kit["drain"]) for d in ("", "(N)", "(H)")})
     archetypes = cfg.MAP_MONSTERS[p["theme"]["key"]]
@@ -272,14 +296,22 @@ def generate(api, plans, levels, presets, monsters):
 
         preset = presets.find(presets.col("LevelId"), str(p["boss_id"]))
         level = levels.find(levels.col("Id"), str(p["boss_id"]))
-        ds1, hd = arena_source(api.REPO, p["theme"], p["tier"])
+        ds1, hd = arena_bytes(api.REPO, p["theme"], p["tier"])
         target = f"Maps/{code}_boss.ds1"
-        assets[api.REPO / "data/global/tiles" / target] = clone(ds1.read_bytes(), next_slot, object_presets)
+        assets[api.REPO / "data/global/tiles" / target] = clone(ds1, next_slot, object_presets)
         # D2R resolves the HD scene by the DS1 path, so a cloned room needs its
         # own hd/env/preset entry or it renders without HD geometry. The JSON
         # only references stock terrain assets by absolute path; a verbatim
         # copy is the correct scene for the copied tiles.
-        assets[api.REPO / "data/hd/env/preset/maps" / f"{code}_boss.json"] = hd.read_bytes()
+        assets[api.REPO / "data/hd/env/preset/maps" / f"{code}_boss.json"] = hd
+        if arena_spec(p["theme"], p["tier"]).startswith("custom:"):
+            # The template's size belongs to the room it was made for. Stock
+            # preset levels use the DS1 header's size (one less than its
+            # cell count), e.g. Duriel's Lair 32x47.
+            width, height = struct.unpack_from("<2I", ds1, 4)
+            api.set_cells(level, levels, {f"Size{axis}{diff}": str(size)
+                                          for axis, size in (("X", width), ("Y", height))
+                                          for diff in ("", "(N)", "(H)")})
         next_slot += 1
         api.set_cells(preset, presets, {"Populate": "0", "Files": "1", "File1": target,
                                        **{f"File{i}": "0" for i in range(2, 7)}})

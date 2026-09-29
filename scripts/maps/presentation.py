@@ -1,8 +1,34 @@
 """HD asset bindings for every generated monster and map item."""
 import json
+from pathlib import Path
 
+import boss_rooms
 import maps_config as cfg
 import normal_shamans
+
+ENEMY_MODELS = Path('hd/character/enemy')
+
+
+def _scaled_model(api, name, factor):
+    """Return a stock monster model scaled by factor at its root entity."""
+    source = api.REPO / 'data' / ENEMY_MODELS / f'{name}.json'
+    if not source.exists():
+        source = boss_rooms._stock(ENEMY_MODELS / f'{name}.json')
+    model = json.loads(source.read_text(encoding='utf-8-sig'))
+    root = next(e for e in model['entities'] if e['name'] == 'entity_root')
+    transform = next((c for c in root['components']
+                      if c['type'] == 'TransformDefinitionComponent'), None)
+    if transform is None:
+        transform = {'type': 'TransformDefinitionComponent',
+                     'name': 'entity_root_TransformDefinition',
+                     'position': {'x': 0.0, 'y': 0.0, 'z': 0.0},
+                     'orientation': {'x': 0.0, 'y': 0.0, 'z': 0.0, 'w': 1.0},
+                     'scale': {'x': 1.0, 'y': 1.0, 'z': 1.0},
+                     'inheritOnlyPosition': False}
+        root['components'].append(transform)
+    transform['scale'] = {axis: round(value * factor, 4)
+                          for axis, value in transform['scale'].items()}
+    return (json.dumps(model, indent=2, ensure_ascii=False) + '\n').encode('utf-8')
 
 
 def generate(api, plans, monsters, runtime=None):
@@ -25,7 +51,16 @@ def generate(api, plans, monsters, runtime=None):
         if source not in models:
             raise ValueError(f'No HD monster binding for {source} (used by {name})')
         models[name] = models[source]
-    assets = {path: (json.dumps(models, indent=4, ensure_ascii=False) + '\n').encode('utf-8')}
+    assets = {}
+    # Wardens get an enlarged copy of their archetype's model.
+    for p in plans:
+        boss = f"rmap_{p['item_code']}_boss"
+        scaled = f'rmap_warden_{models[boss]}'
+        target = api.REPO / 'data' / ENEMY_MODELS / f'{scaled}.json'
+        if target not in assets:
+            assets[target] = _scaled_model(api, models[boss], cfg.WARDEN_MODEL_SCALE)
+        models[boss] = scaled
+    assets[path] = (json.dumps(models, indent=4, ensure_ascii=False) + '\n').encode('utf-8')
     item_path = api.REPO / 'data/hd/items/items.json'
     items = json.loads(item_path.read_text(encoding='utf-8-sig'))
     codes = {code for p in plans for code in (p['item_code'], cfg.expansion_code(p['item_code']))}
