@@ -32,7 +32,7 @@ links them itself and refuses a slot/warp pair that no stock maze of that
 tileset uses. Current themes: Sandswept Tomb (Maggot Lair maze,
 purpose-built tomb sanctum), Corrupted Durance (Durance of Hate maze, Mephisto arena),
 Forsaken Catacombs, Frozen Depths (ice-cave maze, purpose-built
-glacier hall) and Worldstone Keep. Every map level is Act 5 regardless of tileset so
+glacier hall) and Worldstone Keep (Baal Temple maze, purpose-built throne hall). Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
 
 ### Where the portal lands
@@ -106,6 +106,20 @@ tiles' tile masks, so the room uses the plain base floor and gets its
 variation from stamps. A custom arena's `lvlprest` size follows the room when
 the template pins one (the pool rooms said 32x32). The remaining themes still
 clone Labyrinth rooms.
+
+Worldstone Keep's throne hall (`WORLDSTONE`) uses the Keep's own tiles
+(LevelType 34). Its kit is tile-based like the tomb's: back-wall variants
+alternate between a `pillar01a` (even) and a `wall01a` panel with a trimmed
+pillar (odd), the back corner is `pillar_corner_wtrim`, and all four sides get
+the back recipes. The Throne of Destruction row (131) is the template, so the
+player arrives by the Baal Temple stairs up (slot 0, lvlwarp 81, `stairs_up01`
+over two warp tiles), the same transition the stock Keep makes. `arenas.PRESET`
+widens its Dt1Mask to Walls.dt1 + Floor.dt1 and `arenas.LEVEL` keeps automap
+layer 78 so the arena does not share the real Throne room's saved map. A ring
+of Keep pillars with Baal braziers at its corners surrounds a court where floor
+cracks spread from the Warden and Worldstone crystals erupt at the corners;
+torches stand on the back-wall pillars, and fallen bodies, rubble and hell
+spikes fill the aisles.
 
 `stock:` arena paths refer to unmodified D2R files. The generator copies each
 one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)

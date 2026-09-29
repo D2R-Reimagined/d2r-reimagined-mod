@@ -320,6 +320,10 @@ def generate(api, plans, levels, presets, monsters):
             # them empty to share with a neighbour); a custom room's front
             # walls live there.
             api.set_cells(preset, presets, {"KillEdge": "0"})
+            import arenas
+            name = arena_spec(p["theme"], p["tier"])[len("custom:"):]
+            api.set_cells(preset, presets, arenas.PRESET.get(name, {}))
+            api.set_cells(level, levels, arenas.LEVEL.get(name, {}))
         next_slot += 1
         api.set_cells(preset, presets, {"Populate": "0", "Files": "1", "File1": target,
                                        **{f"File{i}": "0" for i in range(2, 7)}})

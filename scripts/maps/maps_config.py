@@ -222,9 +222,14 @@ THEMES = [
         "body_exits": [(1, 82)], # Act 5 Baal Temple Down
         # Baal Temple makes the origin room the Prev room: level centre.
         "body_entry": (0, 81),   # Act 5 Baal Temple Up
-        "arena_template": 165,   # Forsaken Labyrinth 25, Heart.ds1
-        "arena_ds1": "Labyrinth/Heart.ds1",
-        "arena_return": (0, 83),
+        # The Warden's throne hall is purpose-built (arenas.py), 20x20 in the
+        # Keep's own tiles. The Throne of Destruction row (131) supplies the
+        # level: LevelType 34 and slot 0 = Baal Temple Up (lvlwarp 81), the
+        # same transition the stock Keep makes from its last maze level.
+        # arenas.PRESET widens its Dt1Mask to the Keep's walls and floor.
+        "arena_template": 131,
+        "arena_ds1": "custom:worldstone",
+        "arena_return": (0, 81),
     },
 ]
 
@@ -409,6 +414,25 @@ AFFIX_SUFFIXES = [
     },
 ]
 
+# Stock Conviction, Might and Fanaticism use one state as both aurastate and
+# auratargetstate, and a unit holds one stat list per state. A player's own
+# copy of the aura (Infinity, a paladin, a merc) therefore replaces the map
+# monster's list on that state and the monster aura silently stops working.
+# Map monsters carry clones on their own states instead. endgame.py builds the
+# clones from the stock rows; affix and Warden auras name the stock skill and
+# go through monster_aura().
+MONSTER_AURA_CLONES = {
+    "Conviction": "rmap_conviction",
+    "Might": "rmap_might",
+    "Fanaticism": "rmap_fanaticism",
+}
+
+
+def monster_aura(skill):
+    """skills.txt name a map monster actually carries for `skill`."""
+    return MONSTER_AURA_CLONES.get(skill, skill)
+
+
 # Every point of total affix strength adds this much on top of the tier's
 # baseline. The plugin applies these; offline they are simply not present.
 STRENGTH_DENSITY_PER_POINT = 40
@@ -494,7 +518,8 @@ MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 # most three aura affixes (one per family); the third is dropped on the Warden
 # alone and its escort still carries it.
 #
-#   aura       skills.txt name and base level; +WARDEN_AURA_PER_TIER per tier
+#   aura       skills.txt name and base level; +WARDEN_AURA_PER_TIER per tier.
+#              Names in MONSTER_AURA_CLONES are swapped for their clone.
 #   on_attack  (skill, chance %, base level); level +WARDEN_SKILL_PER_TIER
 #   on_struck  (skill, chance %, base level)
 #   escort     (minion1 archetype, minion2 archetype, min, max) drawn from the

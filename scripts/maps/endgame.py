@@ -67,11 +67,36 @@ def generate(api, plans, levels):
         skills.append(row)
         skill_ids[name] = sid
 
+    # Monster-only copies of stock auras (see MONSTER_AURA_CLONES). The skill
+    # and its states are copied whole so calcs, overlays and sounds match the
+    # stock aura; only the state names change. No charclass, so the clone never
+    # joins a class skill list or answers +skills.
+    for source_name, key in cfg.MONSTER_AURA_CLONES.items():
+        row = list(skills.find(skills.col("skill"), source_name))
+        renamed = {}
+        for col in ("aurastate", "auratargetstate"):
+            original = row[skills.col(col)]
+            if not original:
+                continue
+            if original not in renamed:
+                renamed[original] = key if not renamed else f"{key}_target"
+                state = list(states.find(states.col("state"), original))
+                set_cells(state, states, {"state": renamed[original],
+                                          "*ID": str(len(states.rows))})
+                states.append(state)
+            row[skills.col(col)] = renamed[original]
+        set_cells(row, skills, {"skill": key, "*Id": str(len(skills.rows)),
+                                "charclass": "", "reqskill1": "", "reqskill2": "",
+                                "reqskill3": ""})
+        skills.append(row)
+
+    def skill_id(name):
+        return int(skills.find(skills.col("skill"), cfg.monster_aura(name))[skills.col("*Id")])
+
     all_affixes = cfg.AFFIX_PREFIXES + cfg.AFFIX_SUFFIXES
     for affix in all_affixes:
         if affix["kind"] == "aura":
-            skill_ids[affix["key"]] = int(skills.find(
-                skills.col("skill"), affix["aura_skill"])[skills.col("*Id")])
+            skill_ids[affix["key"]] = skill_id(affix["aura_skill"])
 
     def property_row(name, entries):
         row = props.blank_row()
@@ -94,9 +119,6 @@ def generate(api, plans, levels):
             for field in ("min", "max"):
                 probe[props.col(f"{field}{i}{diff}")] = str(11 + d * 6 + i)
     props.append(probe)
-
-    def skill_id(name):
-        return int(skills.find(skills.col("skill"), name)[skills.col("*Id")])
 
     def warden_property_row(p):
         """Slot 1 is the combat-MF aura the plugin rewrites, slots 2-3 stay

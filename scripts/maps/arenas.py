@@ -142,7 +142,9 @@ class Kit:
 
     def prefab(self, path):
         """A placement entity for stock prefab `path`."""
-        entity = copy.deepcopy(self.templates["pf_tile_center01.json"])
+        entity = copy.deepcopy(self.templates.get("pf_tile_center01.json") or next(
+            t for t in self.templates.values()
+            if any(c["type"] == "PrefabPlacementDefinitionComponent" for c in t["components"])))
         for comp in entity["components"]:
             if comp["type"] == "PrefabPlacementDefinitionComponent":
                 comp["prefab"] = path
@@ -783,7 +785,186 @@ def build_frozen():
     return room.to_bytes(), scene.to_bytes()
 
 
-BUILDERS = {"sandswept": build_sandswept, "frozen": build_frozen}
+# --------------------------------------------------------------------------
+# Worldstone Keep: the Warden's throne hall
+# --------------------------------------------------------------------------
+# Act 5 Baal Temple tiles (LevelType 34: Walls.dt1 + Floor.dt1). The Keep's
+# kit is tile-based like the tomb's; per tile variant the stock rooms
+# (baalnsew01, baalnewup01 ...) carry a fixed recipe:
+#
+# * Back walls alternate variants 0-3: even variants carry a pillar01a at
+#   (+1.8, +1.5); odd ones a wall01a panel at (+0.3, +1.1) and a trimmed
+#   pillar02_wtrims_a, yaw 270 on a north wall, 0 on a west wall.
+# * The back corner is a pillar_corner_wtrim at (+1.8, +2.0).
+# * Stairs up (lvlwarp 81, Vis slot 0) are two orientation 11 main 0 warp
+#   tiles in a north wall under one stairs_up01 at (+12, +0.1) of the first
+#   tile, with pillars on the tiles either side.
+# * Floors are plain marble (biome layer 0, no tile masks).
+PRESET = {"worldstone": {"Dt1Mask": "3"}}      # Walls.dt1 + Floor.dt1
+# The Throne of Destruction's automap layer (98) would share the real Throne
+# room's saved map; keep the layer this arena has always used.
+LEVEL = {"worldstone": {"Layer": "78"}}
+
+KEEP_DT1S = [r"\d2\data\global\tiles\expansion\baallair\walls.dt1",
+             r"\d2\data\global\tiles\expansion\baallair\floor.dt1"]
+KEEP_SCENES = ("baalnewup01", "baalnsew01", "baale02", "baaledown01")
+KEEP_PREFABS = "data/hd/env/model/expansion/baallair"
+KEEP_FLOOR = 0x0000C2
+KEEP_CORNER = 0x000081              # orientation 3 main 0 sub 0
+KEEP_COLUMN = 0x000081              # orientation 12 main 0 sub 0: pillar01a
+
+OBJ_BAAL_TORCH = 94                 # BaalTorch1, on a back-wall pillar
+OBJ_BAAL_BRAZIER = 95               # BaalTorch2, freestanding
+
+WORLDSTONE = {
+    # Same footprint as the other sanctums: 20x20, walls outside it.
+    "lo": 3, "hi": 22,
+    "ring": (7, 18), "ring_gaps": (10, 15),
+    "court": (9, 16),
+    "stairs": 16,                   # stairs up on tiles 16-17 of the north wall
+    "torches_north": (5, 9, 13, 21),
+    "torches_west": (5, 9, 15, 19),
+    "warden": (62, 62),
+    "seed": 1159,
+}
+
+
+def _keep_wall(scene, t, line, north):
+    """HD recipe of back-wall tile t on a wall line (north: a row at z=10*line,
+    else a column at x=10*line); even tiles of the run are pillars."""
+    x, z = (10 * t, 10 * line) if north else (10 * line, 10 * t)
+    if t % 2 == 0:
+        scene.add("pillar01a.model", x + 1.8, z + 1.5, 0)
+    elif north:
+        scene.add("wall01a.model", x + 0.3, z + 1.1, 270)
+        scene.add("pillar02_wtrims_a.model", x + 1.1, z + 2.4, 270)
+    else:
+        scene.add("wall01a.model", x + 0.3, z + 1.1, 0)
+        scene.add("pillar02_wtrims_a.model", x + 2.3, z + 1.0, 0)
+
+
+def build_worldstone():
+    s = WORLDSTONE
+    lo, hi = s["lo"], s["hi"]
+    back, front = lo - 1, hi + 1
+    cells = front + 1
+    rng = random.Random(s["seed"])
+    room = Room(cells, cells, 4, KEEP_DT1S, void=0)
+    kit = Kit("expansion/baallair", KEEP_SCENES, TERRAIN_SCENE)
+    scene = Scene(kit, "data/hd/env/biome/expansion_baallair.json", cells, cells)
+    stairs = (s["stairs"], s["stairs"] + 1)
+
+    # ---- floor and legacy walls ------------------------------------------
+    # Variants follow the tile's parity so the legacy art matches the HD
+    # recipe: 0/2 pillar pieces on even tiles, 1/3 wall panels on odd ones.
+    for y in range(back, front):
+        for x in range(back, front):
+            room.set_floor(x, y, KEEP_FLOOR)
+    room.set_wall(back, back, ORIENT_CORNER, KEEP_CORNER)
+    for t in range(lo, hi + 1):
+        sub = (t % 4) << 8
+        if t in stairs:
+            room.set_wall(t, back, ORIENT_WARP, 0x81 | (t - stairs[0]) << 8)
+        else:
+            room.set_wall(t, back, ORIENT_TOP, 0x81 | sub)
+        room.set_wall(back, t, ORIENT_LEFT, 0x81 | sub)
+        room.set_wall(t, front, ORIENT_TOP, 0x100081 | (1 + t % 2) << 8)
+        room.set_wall(front, t, ORIENT_LEFT, 0x100081 | (1 + t % 2) << 8)
+    # The stock rooms end runs with front-wall variant 5 pieces.
+    room.set_wall(front, back, ORIENT_LEFT, 0x100581)
+    room.set_wall(back, front, ORIENT_TOP, 0x100581)
+    room.set_wall(front, front, ORIENT_SOUTH_CORNER, 0x100081)
+
+    # ---- HD walls: back recipes on all four sides --------------------------
+    scene.add("pillar_corner_wtrim.model", 10 * back + 1.8, 10 * back + 2.0, 0)
+    for t in range(lo, hi + 1):
+        if t not in stairs:
+            _keep_wall(scene, t, back, True)
+        _keep_wall(scene, t, back, False)
+        _keep_wall(scene, t, front, True)
+        _keep_wall(scene, t, front, False)
+    for x, y in ((front, back), (back, front)):
+        scene.add("pillar01a.model", 10 * x + 1.8, 10 * y + 1.5, 0)
+    scene.add("pillar_corner_wtrim.model", 10 * front + 1.8, 10 * front + 2.0, 0)
+
+    # ---- stairs up (the return warp) -------------------------------------
+    scene.add("stairs_up01.model", 10 * stairs[0] + 12, 10 * back + 0.1, 0)
+    # Pillars flank the stairs: the first stairs tile's own (its wall recipe
+    # is skipped) and the next tile's, unless its recipe is a pillar anyway.
+    scene.add("pillar01a.model", 10 * stairs[0] + 1.8, 10 * back + 1.5, 0)
+    if (stairs[1] + 1) % 2:
+        scene.add("pillar01a.model", 10 * (stairs[1] + 1) + 1.8, 10 * back + 1.5, 0)
+
+    # ---- torches on the back-wall pillars ----------------------------------
+    for t in s["torches_north"]:
+        room.add_object(2, OBJ_BAAL_TORCH, 5 * t, 5 * back + 3)
+    for t in s["torches_west"]:
+        room.add_object(2, OBJ_BAAL_TORCH, 5 * back + 3, 5 * t)
+
+    # ---- pillar ring -----------------------------------------------------
+    a, b = s["ring"]
+    g1, g2 = s["ring_gaps"]
+    for x, y in ((a, g1), (a, g2), (b, g1), (b, g2), (g1, a), (g2, a), (g1, b), (g2, b)):
+        room.set_wall(x, y, ORIENT_COLUMN, KEEP_COLUMN)
+        scene.add("pillar01a.model", 10 * x + 1.8, 10 * y + 1.5, 0)
+    for x, y in ((a, a), (b, a), (a, b), (b, b)):
+        room.add_object(2, OBJ_BAAL_BRAZIER, 5 * x + 2, 5 * y + 2)
+
+    # ---- the court: the Worldstone's corruption breaks through -----------
+    # Floor cracks spread from the Warden's feet (tile-aligned as in the
+    # Worldstone Chamber: +6.6/+6.7), worldstone crystals erupt at the
+    # court's corners and ritual candles burn between them.
+    c0, c1 = s["court"]
+    cracks = f"{KEEP_PREFABS}/Prefabs/floorTile_dam"
+    for i, (x, y) in enumerate(((c0 + 2, c0 + 2), (c0 + 4, c0 + 2), (c0 + 2, c0 + 4), (c0 + 4, c0 + 4),
+                                (c0 + 1, c0 + 5), (c0 + 5, c0 + 1), (c1 - 1, c1 - 1), (c0 + 3, c1))):
+        scene.prefab(f"{cracks}/pf_floor_cracks0{i % 4 + 1}.json", 10 * x + 6.6, 10 * y + 6.7,
+                     rng.choice((0, 90, 180, 270)))
+    for x, y in ((c0 - 1, c0 + 3), (c1 + 1, c0 + 5), (c0 + 5, c1 + 1), (c0 + 3, c0 - 1)):
+        scene.prefab(f"{cracks}/pf_floorTile_dam05.json", 10 * x + 6.6, 10 * y + 6.7, 0)
+    crystals = f"{KEEP_PREFABS}/Prefabs/crystals"
+    for i, (x, y) in enumerate(((c0, c0), (c1, c0), (c0, c1), (c1, c1))):
+        scene.prefab(f"{crystals}/pf_crystals0{i + 1}.json", 10 * x + 5, 10 * y + 5, rng.uniform(0, 360))
+    candles = f"{KEEP_PREFABS}/Prefabs/candles"
+    for x, y in ((c0 + 3, c0), (c0, c0 + 4), (c1, c0 + 3), (c0 + 4, c1)):
+        scene.prefab(f"{candles}/pf_candles0{rng.choice((1, 2))}.json", 10 * x + 5, 10 * y + 5,
+                     rng.uniform(0, 360))
+
+    # ---- the aisles: the fallen, rubble and hell spikes ------------------
+    bodies = f"{KEEP_PREFABS}/Prefabs/bodies"
+    for name, x, z in (("pf_body01", 10 * lo + 22, 10 * hi - 12), ("pf_body03", 10 * hi - 14, 10 * lo + 24),
+                       ("pf_arm01", 10 * lo + 40, 10 * lo + 16), ("pf_leg01_arm02", 10 * hi - 30, 10 * hi - 4),
+                       ("pf_body02", 10 * lo + 8, 10 * lo + 58)):
+        scene.prefab(f"{bodies}/{name}.json", x, z, rng.uniform(0, 360))
+    rubble = f"{KEEP_PREFABS}/expansion_baallair_rubble/prefab"
+    for i, (x, z) in enumerate(((10 * lo + 4, 10 * hi + 2), (10 * hi + 2, 10 * lo + 4),
+                                (10 * hi, 10 * hi), (10 * lo + 6, 10 * lo + 6))):
+        scene.prefab(f"{rubble}/pf_rubble_pile0{i + 1}.json", x, z, rng.uniform(0, 360))
+    spikes = f"{KEEP_PREFABS}/Prefabs/Spikes"
+    for i, (x, z) in enumerate(((10 * lo + 14, 10 * lo + 36), (10 * lo + 36, 10 * lo + 14),
+                                (10 * hi - 4, 10 * lo + 46), (10 * lo + 46, 10 * hi - 4))):
+        scene.prefab(f"{spikes}/pf_spikes0{(2, 4, 6, 3)[i]}.json", x, z, rng.uniform(0, 360))
+    # Corner rubble at the feet of back-wall pillars (stock: in the pillar's
+    # corner, turned away from the wall).
+    for t in range(lo + 1, hi + 1, 4):
+        if t not in stairs and t + 1 not in stairs:
+            scene.add("rubble_dirt01_cnr_conc01.model", 10 * t + 1.8, 10 * back + 2.0, 180)
+        scene.add("rubble_dirt01_cnr_conc01.model", 10 * back + 2.0, 10 * t + 1.8, 90)
+
+    # ---- atmosphere ------------------------------------------------------
+    for _ in range(8):
+        scene.add("FX_Act5BaalLair_fog_20x20.particles",
+                  rng.uniform(10 * lo, 10 * hi + 10), rng.uniform(10 * lo, 10 * hi + 10))
+    for _ in range(6):
+        scene.add("FX_Act5BaalLair_mist_20x20.particles",
+                  rng.uniform(10 * lo, 10 * hi + 10), rng.uniform(10 * lo, 10 * hi + 10))
+
+    # Placeholder monster: boss_rooms.clone replaces it with the Warden.
+    room.add_object(1, 0, *s["warden"])
+    return room.to_bytes(), scene.to_bytes()
+
+
+BUILDERS = {"sandswept": build_sandswept, "frozen": build_frozen, "worldstone": build_worldstone}
 _cache = {}
 
 

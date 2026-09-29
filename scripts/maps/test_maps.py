@@ -66,7 +66,12 @@ class MappingContract(unittest.TestCase):
                     layer=int(row[levels.col('Layer')])
                     self.assertGreaterEqual(layer,0)
                     self.assertLess(layer,100)
-                    self.assertEqual(layer,int(template[levels.col('Layer')]))
+                    expected=template[levels.col('Layer')]
+                    spec=boss_rooms.arena_spec(p['theme'],p['tier'])
+                    if role=='boss' and spec.startswith('custom:'):
+                        import arenas
+                        expected=arenas.LEVEL.get(spec[len('custom:'):],{}).get('Layer',expected)
+                    self.assertEqual(layer,int(expected))
 
     def test_starter_events_own_population_rewards_and_interactive_objects(self):
         import starter_events
@@ -516,6 +521,41 @@ class MappingContract(unittest.TestCase):
                 self.assertEqual(prop[self.props.col('chance1' + diff)], '100')
                 self.assertEqual(int(prop[self.props.col('min1' + diff)]), 25 * p['tier'])
 
+    def test_monster_auras_are_clones_on_their_own_states(self):
+        # A player's own Conviction/Might/Fanaticism must not share a state
+        # with the map monster's copy, or it replaces the monster's stat list.
+        header = (gen.REPO.parent / 'd2rl-plugins/plugins/maps/src/map_tables.gen.h').read_text(encoding='utf-8')
+        affix_skills = [int(x) for x in header.split('AffixSkills[] = { ')[1].split(' }')[0].split(', ')]
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            skills, states = gen.Table(bank / 'skills.txt'), gen.Table(bank / 'states.txt')
+            state_names = [r[states.col('state')] for r in states.rows]
+            self.assertEqual([r[states.col('*ID')] for r in states.rows],
+                             [str(i) for i in range(len(states.rows))])
+            for source_name, key in cfg.MONSTER_AURA_CLONES.items():
+                source = skills.find(skills.col('skill'), source_name)
+                clone = skills.find(skills.col('skill'), key)
+                self.assertEqual(clone[skills.col('*Id')], str(skills.rows.index(clone)))
+                self.assertEqual(clone[skills.col('charclass')], '')
+                for col in ('aurastate', 'auratargetstate'):
+                    self.assertTrue(clone[skills.col(col)].startswith(key))
+                    self.assertEqual(state_names.count(clone[skills.col(col)]), 1)
+                    original = states.find(states.col('state'), source[skills.col(col)])
+                    copied = states.find(states.col('state'), clone[skills.col(col)])
+                    for c, heading in enumerate(states.header):
+                        if heading not in ('state', '*ID'):
+                            self.assertEqual(copied[c], original[c], f'{key} {col} {heading}')
+                for c, heading in enumerate(skills.header):
+                    if heading not in ('skill', '*Id', 'charclass', 'reqskill1', 'reqskill2',
+                                       'reqskill3', 'aurastate', 'auratargetstate'):
+                        self.assertEqual(clone[c], source[c], f'{key} {heading}')
+        for affix, skill in zip(cfg.all_affixes(), affix_skills):
+            if affix['kind'] == 'aura':
+                self.assertEqual(skills.rows[skill][skills.col('skill')],
+                                 cfg.MONSTER_AURA_CLONES[affix['aura_skill']])
+        for kit in cfg.WARDENS.values():
+            if kit['aura']:
+                self.assertNotIn(cfg.monster_aura(kit['aura'][0]), cfg.MONSTER_AURA_CLONES)
+
     def test_bodies_and_arenas_are_linked_through_their_tileset_warps(self):
         c_id = self.levels.col('Id')
         vis = [self.levels.col(f'Vis{i}') for i in range(8)]
@@ -612,7 +652,7 @@ class MappingContract(unittest.TestCase):
         import exterior
         custom = [p for p in self.plans
                   if boss_rooms.arena_spec(p['theme'], p['tier']).startswith('custom:')]
-        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen'})
+        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen', 'worldstone'})
         presets = gen.Table(gen.EXCEL / 'lvlprest.txt')
         for p in custom:
             ds1, hd = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
@@ -639,7 +679,8 @@ class MappingContract(unittest.TestCase):
             # The HD scene covers the room, stays inside it and loads what it uses.
             scene = json.loads(hd)
             self.assertEqual(scene['biomeFilename'], {'desert': 'data/hd/env/biome/act2_tomb.json',
-                                                      'frozen': 'data/hd/env/biome/expansion_icecave.json'}
+                                                      'frozen': 'data/hd/env/biome/expansion_icecave.json',
+                                                      'worldstone': 'data/hd/env/biome/expansion_baallair.json'}
                              [p['theme']['key']])
             ids = [e['id'] for e in scene['entities']]
             self.assertEqual(len(ids), len(set(ids)))
@@ -712,7 +753,7 @@ class MappingContract(unittest.TestCase):
                     skill, level = kit['aura']
                     slot = cfg.WARDEN_AURA_SLOT
                     self.assertEqual(prop[props.col(f'prop{slot}{diff}')], 'aura')
-                    self.assertEqual(prop[props.col(f'par{slot}{diff}')], sid(skill))
+                    self.assertEqual(prop[props.col(f'par{slot}{diff}')], sid(cfg.monster_aura(skill)))
                     self.assertEqual(prop[props.col(f'max{slot}{diff}')], str(level + cfg.WARDEN_AURA_PER_TIER * (tier - 1)))
                 else:
                     self.assertEqual(prop[props.col(f'prop{cfg.WARDEN_AURA_SLOT}{diff}')], '')
