@@ -215,7 +215,7 @@ class MappingContract(unittest.TestCase):
                 frames[name] = [f for f in data[offset + 16:offset + 16 + length] if f]
                 offset += 160
         self.assertEqual(offset, len(data))
-        themes = {'catacombs': 'mc', 'infernal': 'mi', 'frozen': 'mf'}
+        themes = {'catacombs': 'mc', 'infernal': 'mi', 'frozen': 'mf', 'kurast': 'mk', 'travincal': 'mt'}
         self.assertEqual(len(themes), len(warden_kits.KITS))
         for prefix in themes.values():
             for tier in range(1, 7):
@@ -300,6 +300,55 @@ class MappingContract(unittest.TestCase):
             center = missiles.find(missiles.col('Missile'), frozen.BLIZZARD_CENTER)
             self.assertEqual(center[missiles.col('SubMissile1')], frozen.BLIZZARD_SHARD)
             self.assertEqual(missiles.find(missiles.col('Missile'), frozen.BLIZZARD_SHARD)[missiles.col('EType')], 'cold')
+
+    def test_durance_warden_controls_the_room_without_healing(self):
+        import durance
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_mk{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('HighPriest', 'HP'))
+                sentinel, delay = durance.TIERS[tier]
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                self.assertEqual(uses, {
+                    durance.SENTINEL_SLOT: (durance.SENTINEL if sentinel else durance.DIVIDE, 'S1', str(tier)),
+                    durance.DIVIDE_SLOT: (durance.DIVIDE, 'S1', str(tier)),
+                    durance.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
+                self.assertEqual(row[monsters.col('aip3(H)')], str(delay))
+                # Nothing in the Warden's pack heals it any more.
+                for minion in ('minion1', 'minion2'):
+                    escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
+                    self.assertNotIn('ZakarumHeal', [escort[monsters.col(f'Skill{i}')] for i in range(1, 9)])
+                    self.assertNotEqual(escort[monsters.col('AI')], 'HighPriest')
+            self.assertEqual([t for t in range(1, 7) if durance.TIERS[t][0]], [3, 4, 5, 6])
+            sentinel = skills.find(skills.col('skill'), durance.SENTINEL)
+            self.assertEqual((sentinel[skills.col('summon')], sentinel[skills.col('sumskill1')], sentinel[skills.col('petmax')]),
+                             ('hydra1', durance.SENTINEL_SHOT, durance.SENTINEL_MAX))
+            self.assertEqual((sentinel[skills.col('charclass')], sentinel[skills.col('passivestat1')], sentinel[skills.col('sumskill2')]), ('', '', ''))
+            self.assertEqual(skills.find(skills.col('skill'), durance.SENTINEL_SHOT)[skills.col('srvmissile')], durance.SENTINEL_BOLT)
+            self.assertEqual(missiles.find(missiles.col('Missile'), durance.SENTINEL_BOLT)[missiles.col('Skill')], durance.SENTINEL)
+            divide = skills.find(skills.col('skill'), durance.DIVIDE)
+            self.assertEqual((divide[skills.col('srvmissilea')], divide[skills.col('srvmissileb')]), (durance.DIVIDE_MAKER, durance.DIVIDE_WALL))
+            self.assertEqual(missiles.find(missiles.col('Missile'), durance.DIVIDE_MAKER)[missiles.col('SubMissile1')], durance.DIVIDE_WALL)
+            wall = missiles.find(missiles.col('Missile'), durance.DIVIDE_WALL)
+            self.assertEqual((wall[missiles.col('Range')], wall[missiles.col('EType')]), (str(durance.DIVIDE_FRAMES), 'fire'))
+
+    def test_travincal_warden_no_longer_heals(self):
+        import travincal
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters = gen.Table(bank / 'monstats.txt')
+            source = monsters.find(monsters.col('Id'), 'councilmember3')
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_mt{tier}_boss')
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                self.assertEqual(uses, {
+                    1: ('Hydra', 'S1', source[monsters.col('Sk1lvl')]),
+                    travincal.BOLT_SLOT: ('ZakarumLightning', 'S1', str(travincal.BOLT_LEVEL)),
+                    travincal.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
+                for i in range(1, 9):
+                    self.assertEqual(row[monsters.col(f'aip{i}(H)')], source[monsters.col(f'aip{i}(H)')])
 
     def test_warden_haste_is_a_self_aura_on_monster_speed_stats(self):
         skills = gen.Table(gen.EXCEL / 'skills.txt')

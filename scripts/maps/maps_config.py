@@ -578,9 +578,13 @@ WARDENS = {
         "drain": None,
     },
     "kurast": {
-        "aura": ("MonHolyFire", 8),
-        "on_attack": ("CountessFirewall", 20, 12),
-        "escort": ("councilmember3", "councilmember3", 2, 2),
+        # The Pyre Hierarch: durance.py keeps the Council's HighPriest AI and
+        # swaps its Hydra/heal for Flame Sentinel and Burning Divide. The Holy
+        # Fire aura, firewall proc and healing Council escort are gone; Zealots
+        # and Maulers pin you in the fire instead.
+        "aura": None,
+        "on_attack": None,
+        "escort": ("zealot3", "blunderbore4", 2, 3),
         "melee": ("fire", 90, 160, 0),
         "drain": None,
     },

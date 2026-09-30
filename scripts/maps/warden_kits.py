@@ -11,10 +11,12 @@ import json
 import re
 
 import catacombs
+import durance
 import frozen
 import infernal
+import travincal
 
-KITS = (catacombs, infernal, frozen)
+KITS = (catacombs, infernal, frozen, durance, travincal)
 
 
 class Kit:
@@ -43,13 +45,14 @@ class Kit:
 
 def layout(api, monsters, boss, ai, slots, aips):
     """Give `boss` the AI, exactly the Skill slots in `slots` ({slot: (skill,
-    mode, level)}) and aip1-8 for every difficulty. The death portal the
-    boss rooms placed is kept in the slot the caller names for it."""
+    mode, level)}) and aip1-8 for every difficulty (None keeps the row's
+    own). The death portal the boss rooms placed is kept in the slot the
+    caller names for it."""
     cells = {'AI': ai}
     for i in range(1, 9):
         skill, mode, level = slots.get(i, ('', '', ''))
         cells.update({f'Skill{i}': skill, f'Sk{i}mode': mode, f'Sk{i}lvl': str(level)})
-    for i, value in enumerate(aips, 1):
+    for i, value in enumerate(aips or (), 1):
         cells.update({f'aip{i}{diff}': str(value) for diff in ('', '(N)', '(H)')})
     api.set_cells(boss, monsters, cells)
 
