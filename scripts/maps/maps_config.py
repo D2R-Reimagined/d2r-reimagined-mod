@@ -596,11 +596,16 @@ WARDENS = {
         "drain": None,
     },
     "frozen": {
-        "aura": ("MonHolyFreeze", 8),
-        "on_attack": ("MadawcFrozenOrb", 20, 12),
+        # The Rime Matron: frozen.py runs a Dominus on the ZakarumPriest AI
+        # (Glacial Orb, Blink, Blizzard, Glacial Mend by tier). The permanent
+        # Holy Freeze and the random Frozen Orb proc are gone; the cold melee
+        # chills for 3 s instead of 6.
+        "aura": None,
+        "on_attack": None,
         "escort": ("frozenhorror5", "snowyeti4", 2, 4),
-        "melee": ("cold", 90, 160, 150),
+        "melee": ("cold", 90, 160, 75),
         "drain": None,
+        "body": "succubuswitch6",
     },
     "worldstone": {
         "aura": ("Fanaticism", 8),

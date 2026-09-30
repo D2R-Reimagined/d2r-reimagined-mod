@@ -11,9 +11,15 @@ switched on by bit flags in aip5 (1 = Skill1, 2 = Skill2, 4 = Skill3):
 
 aip1 is the melee chance, aip2 the chance to use a skill, aip3 the active range
 and aip4 the spell chance. There are no cooldown timers, so aip2 is what paces
-Brimstone. Skill4 stays empty and the death portal sits in Skill5, outside the
-slots the AI reads. The stock Infernal vampire6 casts all three (aip5 = 7) and
+Brimstone. The stock Infernal vampire6 casts all three (aip5 = 7) and
 labvampire casts custom SC skills from these slots.
+
+Every stock Vampire-AI row fills Skill1-4 with a real spell (labvampire repeats
+its fireball in Skill4), so Skill4 repeats the kit's bolt (Brimstone before
+tier 3). The first live test (tier 5, 2026-09-30) had Skill4 empty and the
+DT-mode death portal in Skill5, and the Warden died at full life mid-fight:
+consistent with the AI casting the death-mode skill. The portal now sits in
+Skill8, as far from the AI's slots as the row allows.
 
 The Balrog body has no SC animation; it casts in S1 (DMS1HTH, action frame 8)
 and swings A1. Every Vampire AI row in the game casts in SC, so S1 is the first
@@ -24,7 +30,7 @@ import warden_kits
 AI = 'Vampire'
 BODY_CODE = 'DM'
 CAST = 'S1'
-HELLFIRE_SLOT, MAGMA_SLOT, BRIMSTONE_SLOT, DEATH_SLOT = 1, 2, 3, 5
+HELLFIRE_SLOT, MAGMA_SLOT, BRIMSTONE_SLOT, REPEAT_SLOT, DEATH_SLOT = 1, 2, 3, 4, 8
 FLAGS = {HELLFIRE_SLOT: 1, MAGMA_SLOT: 2, BRIMSTONE_SLOT: 4}
 
 HELLFIRE = 'rmap_hellfire'
@@ -97,6 +103,7 @@ def generate(api, plans, kit, monsters):
         assert boss[monsters.col('Code')] == BODY_CODE, boss[monsters.col('Code')]
         spells, use_skill = TIERS[tier]
         slots = {SLOTS[s]: (s, CAST, tier) for s in spells}
+        slots[REPEAT_SLOT] = (HELLFIRE if HELLFIRE in spells else BRIMSTONE, CAST, tier)
         slots[DEATH_SLOT] = (warden_kits.death_skill(monsters, boss), 'DT', 1)
         flags = sum(FLAGS[SLOTS[s]] for s in spells)
         warden_kits.layout(api, monsters, boss, AI, slots,

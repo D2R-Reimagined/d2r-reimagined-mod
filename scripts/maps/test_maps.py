@@ -215,12 +215,12 @@ class MappingContract(unittest.TestCase):
                 frames[name] = [f for f in data[offset + 16:offset + 16 + length] if f]
                 offset += 160
         self.assertEqual(offset, len(data))
-        themes = {'catacombs': 'mc', 'infernal': 'mi'}
+        themes = {'catacombs': 'mc', 'infernal': 'mi', 'frozen': 'mf'}
         self.assertEqual(len(themes), len(warden_kits.KITS))
         for prefix in themes.values():
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_{prefix}{tier}_boss')
-                token = row[monsters.col('Code')]
+                token = row[monsters.col('Code')].upper()
                 weapon = stats2.find(stats2.col('Id'), row[monsters.col('MonStatsEx')])[stats2.col('BaseW')].upper()
                 modes = {row[monsters.col(f'Sk{i}mode')] for i in range(1, 9) if row[monsters.col(f'Skill{i}')]} - {'DT'}
                 if row[monsters.col('AI')] != 'Summoner':
@@ -239,10 +239,12 @@ class MappingContract(unittest.TestCase):
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
                 expected = {infernal.SLOTS[s]: (s, 'S1', str(tier)) for s in spells}
+                expected[infernal.REPEAT_SLOT] = (infernal.HELLFIRE if tier >= 3 else infernal.BRIMSTONE, 'S1', str(tier))
                 expected[infernal.DEATH_SLOT] = (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')
                 self.assertEqual(uses, expected, row[0])
-                # The Vampire AI reads Skill1-4; aip5 switches spells on by bit.
-                self.assertGreater(infernal.DEATH_SLOT, 4)
+                # Like every stock Vampire-AI row, Skill1-4 all hold a real spell,
+                # and the death-mode portal is as far from them as it can be.
+                self.assertEqual(infernal.DEATH_SLOT, 8)
                 flags = sum(infernal.FLAGS[infernal.SLOTS[s]] for s in spells)
                 self.assertEqual(row[monsters.col('aip5(H)')], str(flags))
                 self.assertEqual(row[monsters.col('aip2(H)')], str(use_skill))
@@ -261,6 +263,43 @@ class MappingContract(unittest.TestCase):
                              (infernal.BRIMSTONE, infernal.BRIMSTONE_FIRE))
             for name in (infernal.HELLFIRE_BOLT, infernal.MAGMA_WALL, infernal.BRIMSTONE_FIRE):
                 self.assertEqual(missiles.find(missiles.col('Missile'), name)[missiles.col('EType')], 'fire')
+
+    def test_frozen_warden_is_a_dominus_on_the_zakarum_priest_ai(self):
+        import frozen
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_mf{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('ZakarumPriest', '0C'))
+                blizzard, blink, mend = frozen.TIERS[tier]
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                expected = {frozen.ORB_SLOT: (frozen.ORB, 'S2', str(tier)),
+                            frozen.BLINK_SLOT: (frozen.BLINK, 'S2', '1'),
+                            frozen.BLIZZARD_SLOT: (frozen.BLIZZARD if blizzard else frozen.ORB, 'S2', str(tier)),
+                            frozen.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}
+                if mend:
+                    expected[frozen.MEND_SLOT] = (frozen.MEND, 'S2', str(frozen.MEND_LEVEL))
+                self.assertEqual(uses, expected, row[0])
+                self.assertEqual(frozen.DEATH_SLOT, 8)
+                self.assertEqual(row[monsters.col('aip5(H)')], str(blink))
+                self.assertEqual(row[monsters.col('aip6(H)')], str(frozen.MEND_RANGE if mend else 0))
+                self.assertEqual(row[monsters.col('El1Dur(H)')], '75')
+            # Mend (and so any chance of self-healing) only arrives at tier 5.
+            self.assertEqual([t for t in range(1, 7) if frozen.TIERS[t][2]], [5, 6])
+            orb = skills.find(skills.col('skill'), frozen.ORB)
+            self.assertEqual((orb[skills.col('srvdofunc')], orb[skills.col('srvmissilea')], orb[skills.col('EType')]),
+                             ('73', frozen.ORB_BALL, 'cold'))
+            ball = missiles.find(missiles.col('Missile'), frozen.ORB_BALL)
+            self.assertEqual((ball[missiles.col('SubMissile1')], ball[missiles.col('HitSubMissile1')]),
+                             (frozen.ORB_BOLT, frozen.ORB_NOVA))
+            for name in (frozen.ORB_BOLT, frozen.ORB_NOVA):
+                self.assertEqual(missiles.find(missiles.col('Missile'), name)[missiles.col('Skill')], frozen.ORB)
+            blizzard = skills.find(skills.col('skill'), frozen.BLIZZARD)
+            self.assertEqual(blizzard[skills.col('srvmissilea')], frozen.BLIZZARD_CENTER)
+            center = missiles.find(missiles.col('Missile'), frozen.BLIZZARD_CENTER)
+            self.assertEqual(center[missiles.col('SubMissile1')], frozen.BLIZZARD_SHARD)
+            self.assertEqual(missiles.find(missiles.col('Missile'), frozen.BLIZZARD_SHARD)[missiles.col('EType')], 'cold')
 
     def test_warden_haste_is_a_self_aura_on_monster_speed_stats(self):
         skills = gen.Table(gen.EXCEL / 'skills.txt')

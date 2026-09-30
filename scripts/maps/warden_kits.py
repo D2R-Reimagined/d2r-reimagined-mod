@@ -11,9 +11,10 @@ import json
 import re
 
 import catacombs
+import frozen
 import infernal
 
-KITS = (catacombs, infernal)
+KITS = (catacombs, infernal, frozen)
 
 
 class Kit:
