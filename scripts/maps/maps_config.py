@@ -493,9 +493,9 @@ MAP_MONSTERS = {
     # Durance of Hate, Flayer Dungeon and the Kurast sewers.
     "kurast": ["councilmember3", "vampire4", "blunderbore4", "bonefetish5",
                "fetishshaman5", "frogdemon3", "thornhulk4", "zealot3"],
-    # The greater mummy leads so the Warden inherits its GreaterMummy AI, which
-    # casts Skill3 natively (labunraveler pattern). The Mummy AI never uses its
-    # skill slots, so a mummy5 Warden cannot cast anything.
+    # The greater mummy leads so the Warden gets its body, whose SC cast has an
+    # action frame; catacombs.py then runs it on the Summoner AI. The Mummy AI
+    # never uses its skill slots, so a mummy5 Warden cannot cast anything.
     "catacombs": ["unraveler5", "mummy5", "sk_archer5", "vampire5", "bighead4",
                   "skmage_fire4", "zombie5", "arach4", "corruptrogue4"],
     "frozen": ["frozenhorror5", "succubus5", "snowyeti4", "skmage_cold5",
@@ -524,11 +524,13 @@ MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 # --------------------------------------------------------------------------
 # Wardens
 # --------------------------------------------------------------------------
-# A Warden is a superunique built on the theme's first MAP_MONSTERS archetype
-# with its own combat kit. Everything here is applied through channels that do
-# not depend on the archetype's AI: monprop entries (an aura, plus att-skill
-# and gethit-skill procs that fire when the Warden attacks or is struck), the
-# El1 melee element, and a superuniques.txt escort. The superunique route is
+# A Warden is a superunique built on one of the theme's MAP_MONSTERS archetypes
+# (the first, unless the kit names a `body`) with its own combat kit. Most kits
+# are applied through channels that do not depend on the archetype's AI:
+# monprop entries (an aura, plus an att-skill proc that fires when the Warden
+# attacks), the El1 melee element, and a superuniques.txt escort. Themes in
+# warden_kits.KITS go further and move the Warden onto a stock caster AI with a
+# per-tier skill kit. The superunique route is
 # what places the escort: minion1/minion2 on a monstats row only spawn for
 # level-population monsters, and a DS1-preset monster skips that path (stock
 # Diablo lists leviathan and never brings one). Bishibosh, Corpsefire, the Cow
@@ -537,36 +539,40 @@ MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 # these AIs, so the aura is a monprop entry like the map affix auras.
 #
 # The Warden's monprop row keeps slot 1 for the plugin's combat-MF aura and
-# slots 2-3 for the map's rolled affix auras; slot 4 is the Warden's aura and
-# the procs occupy slots 5-6. With the penalty hook installed a roll carries at
-# most three aura affixes (one per family); the third is dropped on the Warden
-# alone and its escort still carries it.
+# slots 2-3 for the map's rolled affix auras; slot 4 is the Warden's aura, slot
+# 5 its attack proc and slot 6 the Warden haste aura. The plugin fills any
+# slot left empty with rolled affix auras, and every Warden keeps at least two.
+# The random when-struck procs were removed on 2026-09-30 to make room for the
+# haste aura; bosses get deliberate casts instead (warden_kits.py).
 #
-#   aura       skills.txt name and base level; +WARDEN_AURA_PER_TIER per tier.
-#              Names in MONSTER_AURA_CLONES are swapped for their clone.
-#   on_attack  (skill, chance %, base level); level +WARDEN_SKILL_PER_TIER
-#   on_struck  (skill, chance %, base level)
-#   escort     (minion1 archetype, minion2 archetype, min, max) drawn from the
-#              theme's MAP_MONSTERS; counts grow by WARDEN_ESCORT_PER_TIER
-#   melee      El1 override: (type, hell min, hell max, duration) or None to
-#              keep the archetype's own element
-#   drain      life drain override, or None
+#   aura         skills.txt name and base level; +WARDEN_AURA_PER_TIER per tier.
+#                Names in MONSTER_AURA_CLONES are swapped for their clone.
+#   on_attack    (skill, chance %, base level); level +WARDEN_SKILL_PER_TIER
+#   escort       (minion1 archetype, minion2 archetype, min, max) drawn from the
+#                theme's MAP_MONSTERS; counts grow by WARDEN_ESCORT_PER_TIER
+#   melee        El1 override: (type, hell min, hell max, duration) or None to
+#                keep the archetype's own element
+#   drain        life drain override, or None
+#   body         optional MAP_MONSTERS archetype to build the Warden on
+#   model_scale  optional HD model scale instead of WARDEN_MODEL_SCALE
 
 WARDENS = {
     "dunes": dict(aura=("MonHolyShock",8), on_attack=("Dust Devils",20,12),
-                  on_struck=("Charged Bolt",10,16), escort=("scarab5","sandraider5",3,4), melee=("ltng",80,180,0), drain=None),
+                  escort=("scarab5","sandraider5",3,4), melee=("ltng",80,180,0), drain=None),
     "highlands": dict(aura=("Might",8), on_attack=("Siege Beast Stomp",20,12),
-                      on_struck=None, escort=("goatman5","cr_archer5",3,5), melee=("stun",0,0,20), drain=None),
+                      escort=("goatman5","cr_archer5",3,5), melee=("stun",0,0,20), drain=None),
     "travincal": dict(aura=("Fanaticism",6), on_attack=("CountessFirewall",20,12),
-                      on_struck=("Lower Resist",5,10), escort=("zealot3","cantor3",3,5), melee=("fire",90,160,0), drain=None),
+                      escort=("zealot3","cantor3",3,5), melee=("fire",90,160,0), drain=None),
     "steppes": dict(aura=("MonHolyFire",8), on_attack=("Fire Wall",20,12),
-                    on_struck=("Terror",8,10), escort=("megademon1","fingermage1",3,4), melee=("fire",100,180,0), drain=None),
-    "infernal": dict(aura=("Might",8), on_attack=("Meteor",15,12),
-                     on_struck=("Baal Nova",5,12), escort=("minion1","succubus4",4,6), melee=("fire",120,190,0), drain=None),
+                    escort=("megademon1","fingermage1",3,4), melee=("fire",100,180,0), drain=None),
+    # The Forgemaster: infernal.py runs a Balrog on the Vampire AI (melee plus
+    # Brimstone, Hellfire Bolt and Magma Rift by tier). Its fire melee stays;
+    # the Might aura and random procs are gone. Imps teleport in beside it.
+    "infernal": dict(aura=None, on_attack=None, escort=("minion1","imp5",4,6),
+                     melee=("fire",120,190,0), drain=None, body="megademon4", model_scale=1.4),
     "desert": {
         "aura": ("MonHolyShock", 8),
         "on_attack": ("Dust Devils", 25, 12),
-        "on_struck": ("Chain Lightning", 6, 20),
         "escort": ("clawviper5", "unraveler5", 2, 3),
         "melee": ("cold", 110, 185, 150),
         "drain": None,
@@ -574,26 +580,24 @@ WARDENS = {
     "kurast": {
         "aura": ("MonHolyFire", 8),
         "on_attack": ("CountessFirewall", 20, 12),
-        "on_struck": ("Lower Resist", 5, 10),
         "escort": ("councilmember3", "councilmember3", 2, 2),
         "melee": ("fire", 90, 160, 0),
         "drain": None,
     },
     "catacombs": {
         "aura": None,
-        # Plague Pulse: catacombs.py puts a poison nova in Skill3/SC, the slot
-        # the GreaterMummy AI casts (labunraveler uses it for labUnHolyBolt).
-        # No aura or random procs.
+        # The Plague Abbot: catacombs.py gives it the Summoner AI and a cast
+        # kit (Blight Bolt, Plague Pulse, Miasma, Lower Resist). That AI never
+        # melees, so there is no melee element, drain, aura or proc. Greater
+        # mummy escorts revive the fallen mummies around it.
         "on_attack": None,
-        "on_struck": None,
-        "escort": ("mummy5", "sk_archer5", 3, 5),
-        "melee": ("pois", 120, 120, 75),
-        "drain": 100,
+        "escort": ("unraveler5", "mummy5", 3, 5),
+        "melee": None,
+        "drain": None,
     },
     "frozen": {
         "aura": ("MonHolyFreeze", 8),
         "on_attack": ("MadawcFrozenOrb", 20, 12),
-        "on_struck": ("Summoner Frost Nova", 5, 12),
         "escort": ("frozenhorror5", "snowyeti4", 2, 4),
         "melee": ("cold", 90, 160, 150),
         "drain": None,
@@ -601,7 +605,6 @@ WARDENS = {
     "worldstone": {
         "aura": ("Fanaticism", 8),
         "on_attack": ("Siege Beast Stomp", 25, 12),
-        "on_struck": ("Baal Nova", 5, 12),
         "escort": ("hellbovine", "willowisp3", 4, 6),
         "melee": ("stun", 0, 0, 30),
         "drain": None,
@@ -619,6 +622,17 @@ WARDEN_HP_MULTIPLIER = 9
 # Applied on top of the archetype's tier-scaled physical and elemental attacks,
 # including the WARDENS melee override. Proc and aura skills are unaffected.
 WARDEN_DAMAGE_MULTIPLIER = 1.2
+# Attack rating (A1TH/A2TH/S1TH) multiplier: +20% at tier 1 and +10% more per
+# tier (x1.2 ... x1.7), after reports that Wardens rarely hit high-defence
+# characters.
+WARDEN_ACCURACY_BASE = 1.2
+WARDEN_ACCURACY_PER_TIER = 0.1
+# Wardens swing and cast this much faster: a self aura (radius 1) raising
+# attackrate and other_animrate, the two stats monster Frenzy speeds up and Holy
+# Freeze slows down. The item IAS/FCR stats are player breakpoint stats.
+WARDEN_HASTE_PERCENT = 20
+WARDEN_HASTE_SKILL = "rmap_warden_haste"
+WARDEN_HASTE_SLOT = 6
 # Regeneration is a share of max health per frame, so it grew with the health
 # multiplier. Act bosses run 0; Wardens do too.
 WARDEN_DAMAGE_REGEN = 0
@@ -628,7 +642,7 @@ WARDEN_UTRANS = 3               # superunique palette shift
 # the archetype's model for the Warden; hit box and pathing are unchanged.
 WARDEN_MODEL_SCALE = 2.0
 WARDEN_AURA_SLOT = 4            # monprop slot for the Warden's own aura
-WARDEN_FIRST_PROC_SLOT = 5      # monprop slots 5-6 are never written by the plugin
+WARDEN_PROC_SLOT = 5            # monprop slot for the Warden's attack proc
 WARDEN_AURA_PER_TIER = 2
 WARDEN_SKILL_PER_TIER = 4
 WARDEN_ESCORT_PER_TIER = 1      # applied to both min and max from tier 2 on
@@ -636,6 +650,11 @@ WARDEN_TIER6_ESCORT_BONUS = 2   # the corruption cliff, on top of the per-tier s
 # Source archetypes carry 99% immunities; a Warden is capped so no build is
 # locked out of a theme. Escorts keep their native values.
 WARDEN_RESIST_CAP = 75
+
+
+def warden_body(theme_key):
+    """MAP_MONSTERS archetype a theme's Warden is built on."""
+    return WARDENS[theme_key].get("body", MAP_MONSTERS[theme_key][0])
 MAP_MF_PER_TIER = 25
 MAP_MF_PER_STRENGTH = 5
 # Same affix family cannot occur twice; this also prevents two penalties

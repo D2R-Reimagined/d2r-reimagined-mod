@@ -185,6 +185,11 @@ def add_death_skill(api, monsters, row, skill):
     add_skill(api, monsters, row, skill, "DT")
 
 
+def warden_accuracy(tier):
+    """Attack rating multiplier for a Warden of `tier`."""
+    return cfg.WARDEN_ACCURACY_BASE + cfg.WARDEN_ACCURACY_PER_TIER * (tier - 1)
+
+
 def apply_kit(api, monsters, boss, p):
     """Give a Warden its theme kit from cfg.WARDENS. The aura and procs live
     in the Warden's own monprop row (see endgame.py) and the escort in
@@ -216,6 +221,10 @@ def apply_kit(api, monsters, boss, p):
             col = monsters.col(stem + diff)
             if boss[col]:
                 boss[col] = str(round(int(boss[col]) * cfg.WARDEN_DAMAGE_MULTIPLIER))
+        for stem in ("A1TH", "A2TH", "S1TH"):
+            col = monsters.col(stem + diff)
+            if boss[col]:
+                boss[col] = str(round(int(boss[col]) * warden_accuracy(tier)))
     if kit["drain"] is not None:
         api.set_cells(boss, monsters, {f"Drain{d}": str(kit["drain"]) for d in ("", "(N)", "(H)")})
     archetypes = cfg.MAP_MONSTERS[p["theme"]["key"]]
@@ -260,7 +269,8 @@ def generate(api, plans, levels, presets, monsters):
     assets = {}
     for p in plans:
         code = p["item_code"]
-        boss = list(monsters.find(monsters.col("Id"), f"rmap_{code}_0"))
+        body = cfg.MAP_MONSTERS[p["theme"]["key"]].index(cfg.warden_body(p["theme"]["key"]))
+        boss = list(monsters.find(monsters.col("Id"), f"rmap_{code}_{body}"))
         marker = list(stats2.find(stats2.col("Id"), boss[monsters.col("MonStatsEx")]))
         api.set_cells(marker, stats2, {"Id": f"rmap_{code}_boss", "automapCel": BOSS_AUTOMAP_CEL})
         stats2.append(marker)

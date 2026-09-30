@@ -90,6 +90,27 @@ def generate(api, plans, levels):
                                 "reqskill3": ""})
         skills.append(row)
 
+    # Warden haste: attackrate and other_animrate are the stats monster Frenzy
+    # raises and Holy Freeze lowers. Might's ally filter and a 1-subtile radius
+    # keep it on the Warden (an escort pressed against it may share it). Added
+    # after the clones so the skill IDs the plugin header carries do not move.
+    key = cfg.WARDEN_HASTE_SKILL
+    state = states.blank_row()
+    set_cells(state, states, {"state": key, "*ID": str(len(states.rows)), "aura": "1", "*eol": "0"})
+    states.append(state)
+    row = skills.blank_row()
+    set_cells(row, skills, {
+        "skill": key, "*Id": str(len(skills.rows)), "srvdofunc": "65",
+        "aurafilter": skills.find(skills.col("skill"), "Might")[skills.col("aurafilter")],
+        "aurastate": key, "auratargetstate": key, "aurarangecalc": "1",
+        "auralencalc": "50", "immediate": "1", "range": "none",
+        "monanim": "xx", "aura": "1", "perdelay": "25",
+        "InGame": "1", "HitShift": "8", "*eol": "0",
+        "aurastat1": "attackrate", "aurastatcalc1": str(cfg.WARDEN_HASTE_PERCENT),
+        "aurastat2": "other_animrate", "aurastatcalc2": str(cfg.WARDEN_HASTE_PERCENT),
+    })
+    skills.append(row)
+
     def skill_id(name):
         return int(skills.find(skills.col("skill"), cfg.monster_aura(name))[skills.col("*Id")])
 
@@ -123,7 +144,8 @@ def generate(api, plans, levels):
     def warden_property_row(p):
         """Slot 1 is the combat-MF aura the plugin rewrites, slots 2-3 stay
         free for the rolled affix auras it adds, slot 4 is the Warden's own
-        aura and its procs sit in slots 5-6; the plugin never writes 4-6."""
+        aura, slot 5 its attack proc and slot 6 the haste aura. The plugin
+        only writes slots left empty here."""
         row = property_row(f"rmap_{p['item_code']}_boss",
                            [(skill_ids["fortune"], p["tier"] * cfg.MAP_MF_PER_TIER)])
         kit = cfg.WARDENS[p["theme"]["key"]]
@@ -133,13 +155,11 @@ def generate(api, plans, levels):
             skill, level = kit["aura"]
             level += cfg.WARDEN_AURA_PER_TIER * step
             entries.append((cfg.WARDEN_AURA_SLOT, "aura", skill, level, level))
-        for slot, (prop, spec) in enumerate(
-                [("att-skill", kit["on_attack"]), ("gethit-skill", kit["on_struck"])],
-                cfg.WARDEN_FIRST_PROC_SLOT):
-            if spec is None:
-                continue
-            skill, chance, level = spec
-            entries.append((slot, prop, skill, chance, level + cfg.WARDEN_SKILL_PER_TIER * step))
+        if kit["on_attack"]:
+            skill, chance, level = kit["on_attack"]
+            entries.append((cfg.WARDEN_PROC_SLOT, "att-skill", skill, chance,
+                            level + cfg.WARDEN_SKILL_PER_TIER * step))
+        entries.append((cfg.WARDEN_HASTE_SLOT, "aura", cfg.WARDEN_HASTE_SKILL, 1, 1))
         for slot, prop, skill, lo, hi in entries:
             for diff in ("", " (N)", " (H)"):
                 set_cells(row, props, {

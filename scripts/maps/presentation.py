@@ -41,7 +41,7 @@ def generate(api, plans, monsters, runtime=None):
         codes = cfg.MAP_MONSTERS[p['theme']['key']]
         for i, code in enumerate(codes):
             sources[f"rmap_{p['item_code']}_{i}"] = code
-        sources[f"rmap_{p['item_code']}_boss"] = codes[0]
+        sources[f"rmap_{p['item_code']}_boss"] = cfg.warden_body(p['theme']['key'])
     for row in monsters.rows:
         name = row[monsters.col('Id')]
         if name.startswith('rmap_e_'):
@@ -52,13 +52,17 @@ def generate(api, plans, monsters, runtime=None):
             raise ValueError(f'No HD monster binding for {source} (used by {name})')
         models[name] = models[source]
     assets = {}
-    # Wardens get an enlarged copy of their archetype's model.
+    # Wardens get an enlarged copy of their archetype's model. A kit's own
+    # scale gets its own file, since two themes can share a model.
     for p in plans:
         boss = f"rmap_{p['item_code']}_boss"
+        scale = cfg.WARDENS[p['theme']['key']].get('model_scale', cfg.WARDEN_MODEL_SCALE)
         scaled = f'rmap_warden_{models[boss]}'
+        if scale != cfg.WARDEN_MODEL_SCALE:
+            scaled += f'_x{round(scale * 100)}'
         target = api.REPO / 'data' / ENEMY_MODELS / f'{scaled}.json'
         if target not in assets:
-            assets[target] = _scaled_model(api, models[boss], cfg.WARDEN_MODEL_SCALE)
+            assets[target] = _scaled_model(api, models[boss], scale)
         models[boss] = scaled
     assets[path] = (json.dumps(models, indent=4, ensure_ascii=False) + '\n').encode('utf-8')
     item_path = api.REPO / 'data/hd/items/items.json'

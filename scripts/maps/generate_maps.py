@@ -932,15 +932,16 @@ def main() -> int:
                               for key in ('body_id','boss_id')] for p in plans]
     native_monsters = monster_indices(combat[-1])
     runtime['warden_ids'] = [native_monsters[f"rmap_{p['item_code']}_boss"] for p in plans]
-    import catacombs
-    plague_missiles = catacombs.generate(sys.modules[__name__], plans, combat, runtime)
+    import warden_kits
+    kit_missiles, hd_missiles = warden_kits.generate(sys.modules[__name__], plans, combat)
+    assets.update([hd_missiles])
     import normal_shamans
     normal_shamans.generate(sys.modules[__name__], combat[-1], levels, runtime)
     import presentation
     assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1], runtime))
     tables.extend(combat)
     tables.extend(rooms)
-    tables.append(plague_missiles)
+    tables.append(kit_missiles)
     # The two banks have different existing treasure classes. Generate against
     # each independently rather than copying RotW loot over the base bank.
     for path in (EXCEL / "treasureclassex.txt", EXCEL / "base" / "treasureclassex.txt"):

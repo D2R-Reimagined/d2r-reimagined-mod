@@ -136,48 +136,151 @@ class MappingContract(unittest.TestCase):
                     if item.startswith('RMap '): self.assertIn(item,defined,f"{row[key]} Item{i}")
                 defined.add(row[key])
 
-    def test_catacombs_nova_is_cast_from_the_greater_mummy_skill_slot(self):
+    def test_catacombs_warden_casts_its_kit_from_the_summoner_slots(self):
         import catacombs
+        kit = {catacombs.NOVA, catacombs.BOLT, catacombs.MIASMA}
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles, props = [gen.Table(bank / (name + '.txt'))
                 for name in ('monstats', 'skills', 'missiles', 'monprop')]
-            nova = skills.find(skills.col('skill'), 'rmap_plague_nova')
-            self.assertEqual(nova[skills.col('srvdofunc')], '22')
-            self.assertEqual(nova[skills.col('srvmissilea')], 'rmap_plague_nova')
-            self.assertEqual(nova[skills.col('aura')], '')
-            self.assertEqual(nova[skills.col('charclass')], '')
-            self.assertEqual(nova[skills.col('ELen')], '75')
-            self.assertEqual(nova[skills.col('EDmgSymPerCalc')], '')
-            missile = missiles.find(missiles.col('Missile'), 'rmap_plague_nova')
-            self.assertEqual(missile[missiles.col('Skill')], 'rmap_plague_nova')
-            self.assertEqual(missile[missiles.col('Range')], '18')
+            for name, dofunc, missile in ((catacombs.NOVA, '22', catacombs.NOVA),
+                                          (catacombs.BOLT, '8', catacombs.BOLT),
+                                          (catacombs.MIASMA, '28', catacombs.MIASMA_BALL)):
+                skill = skills.find(skills.col('skill'), name)
+                self.assertEqual(skill[skills.col('srvdofunc')], dofunc, name)
+                self.assertEqual(skill[skills.col('srvmissilea')], missile, name)
+                self.assertEqual((skill[skills.col('EType')], skill[skills.col('HitShift')]), ('pois', '4'), name)
+                self.assertEqual(skill[skills.col('charclass')], '', name)
+                self.assertEqual(skill[skills.col('EDmgSymPerCalc')], '', name)
+            bolt = skills.find(skills.col('skill'), catacombs.BOLT)
+            self.assertEqual(bolt[skills.col('calc1')], f'(lvl < {catacombs.BOLT_FAN_TIER}) ? 1 : 3')
+            self.assertEqual((bolt[skills.col('auralencalc')], bolt[skills.col('aurarangecalc')]), ('', ''))
+            # Damage comes from the skill through each damaging missile's Skill column.
+            for missile, skill in ((catacombs.NOVA, catacombs.NOVA), (catacombs.BOLT, catacombs.BOLT),
+                                   (catacombs.MIASMA_CLOUD, catacombs.MIASMA)):
+                self.assertEqual(missiles.find(missiles.col('Missile'), missile)[missiles.col('Skill')], skill)
+            ball = missiles.find(missiles.col('Missile'), catacombs.MIASMA_BALL)
+            self.assertEqual(ball[missiles.col('HitSubMissile1')], catacombs.MIASMA_CLOUD)
+            self.assertEqual(missiles.find(missiles.col('Missile'), catacombs.NOVA)[missiles.col('Range')], '18')
+            self.assertEqual(missiles.find(missiles.col('Missile'), 'poisonnova')[missiles.col('Range')], '30')
             for table, id_col in ((skills, '*Id'), (missiles, '*ID')):
                 ids = [row[table.col(id_col)] for row in table.rows if row[table.col(id_col)].isdigit()]
                 self.assertEqual(len(ids), len(set(ids)), f'duplicate {id_col} in {bank}')
-            self.assertEqual(missiles.find(missiles.col('Missile'), 'poisonnova')[missiles.col('Range')], '30')
-            # Same shape as labunraveler: GreaterMummy AI, cast slot 3 in SC.
-            lab = monsters.find(monsters.col('Id'), 'labunraveler')
-            self.assertEqual((lab[monsters.col('AI')], lab[monsters.col('Sk3mode')]), ('GreaterMummy', 'SC'))
             owners = []
             for row in monsters.rows:
                 if not row[0].startswith('rmap_') or not row[0].endswith('_boss'):
                     continue
-                uses = [(row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')]) for i in range(1, 9)]
-                if row[0].startswith('rmap_mc'):
-                    owners.append(row[0])
-                    tier = row[0][7]
-                    self.assertEqual(row[monsters.col('AI')], 'GreaterMummy')
-                    self.assertEqual(row[monsters.col('BaseId')], 'unraveler1')
-                    self.assertEqual(uses[catacombs.NOVA_SLOT - 1], ('rmap_plague_nova', 'SC', tier))
-                    self.assertIn(boss_rooms.BOSS_DEATH_SKILL, [u[0] for u in uses])
-                    self.assertEqual(row[monsters.col('El1Dur(H)')], '75')
-                    prop = props.find(props.col('Id'), row[0])
-                    for diff in ('', ' (N)', ' (H)'):
-                        for slot in (4, 5, 6):
-                            self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
-                else:
-                    self.assertNotIn('rmap_plague_nova', [u[0] for u in uses])
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                if not row[0].startswith('rmap_mc'):
+                    self.assertFalse(kit & {u[0] for u in uses.values()}, row[0])
+                    continue
+                owners.append(row[0])
+                tier = int(row[0][7])
+                nova_interval, miasma_interval, curse = catacombs.TIERS[tier]
+                expected = {catacombs.BOLT_SLOT: (catacombs.BOLT, 'SC', str(tier)),
+                            catacombs.NOVA_SLOT: (catacombs.NOVA, 'SC', str(tier)),
+                            catacombs.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}
+                if miasma_interval:
+                    expected[catacombs.MIASMA_SLOT] = (catacombs.MIASMA, 'SC', str(tier))
+                if curse:
+                    expected[catacombs.CURSE_SLOT] = (catacombs.CURSE, 'SC', str(curse))
+                self.assertEqual(uses, expected, row[0])
+                # The Summoner AI reads Skill1-5; the death portal must sit outside them.
+                self.assertGreater(catacombs.DEATH_SLOT, 5)
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('BaseId')]), ('Summoner', 'unraveler1'))
+                for diff in ('', '(N)', '(H)'):
+                    self.assertEqual(row[monsters.col(f'aip4{diff}')], str(nova_interval))
+                    self.assertEqual(row[monsters.col(f'aip5{diff}')], str(miasma_interval or 0))
+                    self.assertEqual(row[monsters.col(f'aip2{diff}')], str(catacombs.CURSE_CHANCE if curse else 0))
+                # No theme aura or proc; slot 6 is the shared haste aura.
+                prop = props.find(props.col('Id'), row[0])
+                for diff in ('', ' (N)', ' (H)'):
+                    for slot in (cfg.WARDEN_AURA_SLOT, cfg.WARDEN_PROC_SLOT):
+                        self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
             self.assertEqual(owners, [f'rmap_mc{tier}_boss' for tier in range(1, 7)])
+
+    def test_kit_warden_cast_and_melee_modes_have_action_frames(self):
+        # A cast animation without an action frame never releases its skill
+        # (0.5.3: MMS1HTH). Every mode a kit Warden casts or swings in needs one.
+        import warden_kits
+        monsters, stats2 = gen.Table(gen.EXCEL / 'monstats.txt'), gen.Table(gen.EXCEL / 'monstats2.txt')
+        data = (gen.REPO / 'data/global/animdata.d2').read_bytes()
+        offset, frames = 0, {}
+        for _ in range(256):
+            count = struct.unpack_from('<I', data, offset)[0]
+            offset += 4
+            for _ in range(count):
+                name = data[offset:offset + 8].split(b'\0')[0].decode().upper()
+                length = struct.unpack_from('<I', data, offset + 8)[0]
+                frames[name] = [f for f in data[offset + 16:offset + 16 + length] if f]
+                offset += 160
+        self.assertEqual(offset, len(data))
+        themes = {'catacombs': 'mc', 'infernal': 'mi'}
+        self.assertEqual(len(themes), len(warden_kits.KITS))
+        for prefix in themes.values():
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_{prefix}{tier}_boss')
+                token = row[monsters.col('Code')]
+                weapon = stats2.find(stats2.col('Id'), row[monsters.col('MonStatsEx')])[stats2.col('BaseW')].upper()
+                modes = {row[monsters.col(f'Sk{i}mode')] for i in range(1, 9) if row[monsters.col(f'Skill{i}')]} - {'DT'}
+                if row[monsters.col('AI')] != 'Summoner':
+                    modes.add('A1')
+                for mode in modes:
+                    self.assertTrue(frames.get(f'{token}{mode}{weapon}'), f'{token}{mode}{weapon} has no action frame')
+
+    def test_infernal_warden_is_a_balrog_on_the_vampire_ai(self):
+        import infernal
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_mi{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('Vampire', 'DM'))
+                spells, use_skill = infernal.TIERS[tier]
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                expected = {infernal.SLOTS[s]: (s, 'S1', str(tier)) for s in spells}
+                expected[infernal.DEATH_SLOT] = (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')
+                self.assertEqual(uses, expected, row[0])
+                # The Vampire AI reads Skill1-4; aip5 switches spells on by bit.
+                self.assertGreater(infernal.DEATH_SLOT, 4)
+                flags = sum(infernal.FLAGS[infernal.SLOTS[s]] for s in spells)
+                self.assertEqual(row[monsters.col('aip5(H)')], str(flags))
+                self.assertEqual(row[monsters.col('aip2(H)')], str(use_skill))
+                self.assertEqual(row[monsters.col('minion2')],
+                                 f"rmap_mi{tier}_{cfg.MAP_MONSTERS['infernal'].index('imp5')}")
+            self.assertEqual(infernal.TIERS[1][0], (infernal.BRIMSTONE,))
+            self.assertEqual(skills.find(skills.col('skill'), infernal.HELLFIRE)[skills.col('srvmissile')], infernal.HELLFIRE_BOLT)
+            magma = skills.find(skills.col('skill'), infernal.MAGMA)
+            self.assertEqual((magma[skills.col('srvmissilea')], magma[skills.col('srvmissileb')]),
+                             (infernal.MAGMA_MAKER, infernal.MAGMA_WALL))
+            self.assertEqual(missiles.find(missiles.col('Missile'), infernal.MAGMA_MAKER)[missiles.col('SubMissile1')], infernal.MAGMA_WALL)
+            brimstone = skills.find(skills.col('skill'), infernal.BRIMSTONE)
+            self.assertEqual(brimstone[skills.col('srvmissilea')], infernal.BRIMSTONE_CENTER)
+            center = missiles.find(missiles.col('Missile'), infernal.BRIMSTONE_CENTER)
+            self.assertEqual((center[missiles.col('Skill')], center[missiles.col('HitSubMissile1')]),
+                             (infernal.BRIMSTONE, infernal.BRIMSTONE_FIRE))
+            for name in (infernal.HELLFIRE_BOLT, infernal.MAGMA_WALL, infernal.BRIMSTONE_FIRE):
+                self.assertEqual(missiles.find(missiles.col('Missile'), name)[missiles.col('EType')], 'fire')
+
+    def test_warden_haste_is_a_self_aura_on_monster_speed_stats(self):
+        skills = gen.Table(gen.EXCEL / 'skills.txt')
+        haste = skills.find(skills.col('skill'), cfg.WARDEN_HASTE_SKILL)
+        self.assertEqual({(haste[skills.col(f'aurastat{i}')], haste[skills.col(f'aurastatcalc{i}')]) for i in (1, 2)},
+                         {('attackrate', str(cfg.WARDEN_HASTE_PERCENT)), ('other_animrate', str(cfg.WARDEN_HASTE_PERCENT))})
+        self.assertEqual(haste[skills.col('aurarangecalc')], '1')
+        self.assertEqual(haste[skills.col('charclass')], '')
+        # Appended after the plugin-visible aura skills, so their IDs never move.
+        clones = [int(skills.find(skills.col('skill'), c)[skills.col('*Id')]) for c in cfg.MONSTER_AURA_CLONES.values()]
+        self.assertGreater(int(haste[skills.col('*Id')]), max(clones))
+
+    def test_generated_missiles_have_hd_bindings(self):
+        # D2R draws a missile only through hd/missiles/missiles.json.
+        bindings = json.loads((gen.REPO / 'data/hd/missiles/missiles.json').read_text(encoding='utf-8-sig'))
+        missiles = gen.Table(gen.EXCEL / 'missiles.txt')
+        generated = [r[missiles.col('Missile')] for r in missiles.rows if r[missiles.col('Missile')].startswith('rmap_')]
+        self.assertTrue(generated)
+        for name in generated:
+            self.assertIn(name, bindings)
 
     def test_runtime_monster_ids_use_compiled_order_not_text_line_numbers(self):
         header = (gen.REPO.parent / 'd2rl-plugins/plugins/maps/src/map_tables.gen.h').read_text()
@@ -349,11 +452,13 @@ class MappingContract(unittest.TestCase):
             for i, source in enumerate(sources):
                 self.assertEqual(models[f"rmap_{p['item_code']}_{i}"], models[source])
             warden = models[f"rmap_{p['item_code']}_boss"]
-            self.assertEqual(warden, f"rmap_warden_{models[sources[0]]}")
+            wanted = cfg.WARDENS[p['theme']['key']].get('model_scale', cfg.WARDEN_MODEL_SCALE)
+            suffix = '' if wanted == cfg.WARDEN_MODEL_SCALE else f'_x{round(wanted * 100)}'
+            self.assertEqual(warden, f"rmap_warden_{models[cfg.warden_body(p['theme']['key'])]}{suffix}")
             model = json.loads((gen.REPO / f'data/hd/character/enemy/{warden}.json').read_text(encoding='utf-8'))
             root = next(e for e in model['entities'] if e['name'] == 'entity_root')
             scale = next(c['scale'] for c in root['components'] if c['type'] == 'TransformDefinitionComponent')
-            self.assertGreaterEqual(min(scale.values()), 1.5)
+            self.assertGreaterEqual(min(scale.values()), 0.75 * wanted)
         self.assertEqual(models['rmap_md1_0'], models['clawviper5'])
 
     @classmethod
@@ -747,20 +852,27 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(prop[props.col('Id')], f'rmap_{code}_boss')
             for diff in ('', ' (N)', ' (H)'):
                 # Slot 1 is the combat-MF aura, 2-3 stay free for the plugin, 4 is the
-                # Warden aura and 5-6 are the procs.
+                # Warden aura, 5 the attack proc and 6 the haste aura.
                 self.assertEqual(prop[props.col(f'prop1{diff}')], 'aura')
                 for slot in (2, 3):
                     self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
-                for slot, kind, key in ((5, 'att-skill', 'on_attack'), (6, 'gethit-skill', 'on_struck')):
-                    if kit[key] is None:
-                        self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
-                        continue
-                    skill, chance, level = kit[key]
-                    self.assertEqual(prop[props.col(f'prop{slot}{diff}')], kind)
+                slot = cfg.WARDEN_PROC_SLOT
+                if kit['on_attack'] is None:
+                    self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
+                else:
+                    skill, chance, level = kit['on_attack']
+                    self.assertEqual(prop[props.col(f'prop{slot}{diff}')], 'att-skill')
                     self.assertEqual(prop[props.col(f'par{slot}{diff}')], sid(skill))
                     self.assertEqual(prop[props.col(f'min{slot}{diff}')], str(chance))
                     self.assertEqual(prop[props.col(f'max{slot}{diff}')],
                                      str(level + cfg.WARDEN_SKILL_PER_TIER * (tier - 1)))
+                slot = cfg.WARDEN_HASTE_SLOT
+                self.assertEqual((prop[props.col(f'prop{slot}{diff}')], prop[props.col(f'par{slot}{diff}')]),
+                                 ('aura', sid(cfg.WARDEN_HASTE_SKILL)))
+                # A v2 roll fails map preparation when the Warden row runs out of
+                # slots; every Warden keeps at least the two it always had.
+                free = [s for s in range(2, 7) if prop[props.col(f'chance{s}{diff}')] in ('', '0')]
+                self.assertGreaterEqual(len(free), 2, f'rmap_{code}_boss')
                 if kit['aura']:
                     skill, level = kit['aura']
                     slot = cfg.WARDEN_AURA_SLOT
@@ -772,17 +884,24 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(mon[self.monsters.col('DamageRegen')], str(cfg.WARDEN_DAMAGE_REGEN))
             self.assertEqual(int(mon[self.monsters.col('MinHP(H)')]),
                              round(cfg.WARDEN_HP_RATIO[0] * 1.5 * p['spec']['scale'] * cfg.WARDEN_HP_MULTIPLIER))
-            archetype = self.monsters.find(self.monsters.col('Id'), f'rmap_{code}_0')
+            archetypes = cfg.MAP_MONSTERS[p['theme']['key']]
+            archetype = self.monsters.find(self.monsters.col('Id'),
+                f"rmap_{code}_{archetypes.index(cfg.warden_body(p['theme']['key']))}")
             for stem in ('A1MinD(H)', 'A1MaxD(H)', 'A2MinD(H)', 'A2MaxD(H)'):
                 base = archetype[self.monsters.col(stem)]
                 expected = str(round(int(base) * cfg.WARDEN_DAMAGE_MULTIPLIER)) if base else ''
                 self.assertEqual(mon[self.monsters.col(stem)], expected)
+            accuracy = cfg.WARDEN_ACCURACY_BASE + cfg.WARDEN_ACCURACY_PER_TIER * (tier - 1)
+            for stem in ('A1TH', 'A2TH', 'S1TH'):
+                for diff in ('', '(N)', '(H)'):
+                    base = archetype[self.monsters.col(stem + diff)]
+                    expected = str(round(int(base) * accuracy)) if base else ''
+                    self.assertEqual(mon[self.monsters.col(stem + diff)], expected, f'{code} {stem}{diff}')
             if kit['melee'] and kit['melee'][1]:
                 self.assertEqual(mon[self.monsters.col('El1MinD(H)')],
                                  str(round(kit['melee'][1] * cfg.WARDEN_DAMAGE_MULTIPLIER)))
             self.assertNotIn(kit['aura'][0] if kit['aura'] else None,
                              [mon[self.monsters.col(f'Skill{i}')] for i in range(1, 9)])
-            archetypes = cfg.MAP_MONSTERS[p['theme']['key']]
             first, second, lo, hi = kit['escort']
             bonus = cfg.WARDEN_ESCORT_PER_TIER * (tier - 1) + (cfg.WARDEN_TIER6_ESCORT_BONUS if tier == 6 else 0)
             self.assertEqual(mon[self.monsters.col('minion1')], f'rmap_{code}_{archetypes.index(first)}')
