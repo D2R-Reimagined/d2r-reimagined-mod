@@ -652,7 +652,7 @@ class MappingContract(unittest.TestCase):
         import exterior
         custom = [p for p in self.plans
                   if boss_rooms.arena_spec(p['theme'], p['tier']).startswith('custom:')]
-        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen', 'worldstone'})
+        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen', 'worldstone', 'catacombs'})
         presets = gen.Table(gen.EXCEL / 'lvlprest.txt')
         for p in custom:
             ds1, hd = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
@@ -680,7 +680,8 @@ class MappingContract(unittest.TestCase):
             scene = json.loads(hd)
             self.assertEqual(scene['biomeFilename'], {'desert': 'data/hd/env/biome/act2_tomb.json',
                                                       'frozen': 'data/hd/env/biome/expansion_icecave.json',
-                                                      'worldstone': 'data/hd/env/biome/expansion_baallair.json'}
+                                                      'worldstone': 'data/hd/env/biome/expansion_baallair.json',
+                                                      'catacombs': 'data/hd/env/biome/act1_catacombs.json'}
                              [p['theme']['key']])
             ids = [e['id'] for e in scene['entities']]
             self.assertEqual(len(ids), len(set(ids)))

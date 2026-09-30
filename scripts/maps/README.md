@@ -31,7 +31,7 @@ no longer need to be neighbours in the Forsaken Labyrinth; the generator
 links them itself and refuses a slot/warp pair that no stock maze of that
 tileset uses. Current themes: Sandswept Tomb (Maggot Lair maze,
 purpose-built tomb sanctum), Corrupted Durance (Durance of Hate maze, Mephisto arena),
-Forsaken Catacombs, Frozen Depths (ice-cave maze, purpose-built
+Forsaken Catacombs (Catacombs maze, purpose-built ossuary chapel), Frozen Depths (ice-cave maze, purpose-built
 glacier hall) and Worldstone Keep (Baal Temple maze, purpose-built throne hall). Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
 
@@ -120,6 +120,21 @@ of Keep pillars with Baal braziers at its corners surrounds a court where floor
 cracks spread from the Warden and Worldstone crystals erupt at the corners;
 torches stand on the back-wall pillars, and fallen bodies, rubble and hell
 spikes fill the aisles.
+
+Forsaken Catacombs' ossuary chapel (`CATACOMBS`) uses the Catacombs' tiles
+(LevelType 10), whose single full wall style walls every side in legacy too.
+Wall panels sit 2.5 units in from the wall line (`wall01`/painting/cabinet
+turn 90 on a north wall and 180 on a west wall, `wall_plain` 270/0), and
+`pillar01` + cap mark corners, run ends and column tiles. Catacombs 4 (37) is
+the template: slot 0 = Catacombs Up (lvlwarp 17, `stairs02` + `pf_stairs01`
+on the second of two warp tiles), the stock Catacombs 3 -> 4 transition, with
+its Dt1Mask (57) already covering walls, stairs and floor; `arenas.LEVEL`
+keeps automap layer 0 rather than Andariel's. Instead of a pillar ring, two
+rows of pillars form a nave from the stairs west to a bone throne on the west
+wall, arranged as in Andariel's lair (throne on the seam, bone banners either
+side) and turned to face east; the Warden waits before it among candles,
+braziers, a blood bath and gore. Torches stand between the nave pillars,
+bubbling blood pools lie in the nave and staked Rogue corpses in the aisles.
 
 `stock:` arena paths refer to unmodified D2R files. The generator copies each
 one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)

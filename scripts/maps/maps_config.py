@@ -49,13 +49,16 @@ FIRST_MONLVL_ROW = 111     # tier 1 lands here
 
 TIERS = [
     # tier, hp/dmg multiplier vs the level 110 row, density, unique min/max
-    {"tier": 1, "scale": 1.2, "density": 1100, "umin": 2,  "umax": 4},
-    {"tier": 2, "scale": 1.4, "density": 1250, "umin": 3,  "umax": 6},
-    {"tier": 3, "scale": 1.6, "density": 1400, "umin": 5,  "umax": 8},
-    {"tier": 4, "scale": 1.8, "density": 1550, "umin": 7,  "umax": 11},
-    {"tier": 5, "scale": 2.0, "density": 1700, "umin": 9,  "umax": 14},
+    # Elite packs are the whole Hell Worldstone Keep (Levels 1-3: 3 x 6-8 =
+    # 18-24), +10% per tier: +10% at tier 1, +60% at tier 6. Every theme of a
+    # tier gets the same count; a T1 body is roughly the size of the Keep.
+    {"tier": 1, "scale": 1.2, "density": 1100, "umin": 20, "umax": 26},
+    {"tier": 2, "scale": 1.4, "density": 1250, "umin": 22, "umax": 29},
+    {"tier": 3, "scale": 1.6, "density": 1400, "umin": 23, "umax": 31},
+    {"tier": 4, "scale": 1.8, "density": 1550, "umin": 25, "umax": 34},
+    {"tier": 5, "scale": 2.0, "density": 1700, "umin": 27, "umax": 36},
     # Corrupted. Deliberately a cliff, not a step.
-    {"tier": 6, "scale": 3.0, "density": 2000, "umin": 12, "umax": 18},
+    {"tier": 6, "scale": 3.0, "density": 2000, "umin": 29, "umax": 38},
 ]
 
 # Experience is held flat across the tier block so tiers scale difficulty and
@@ -195,9 +198,14 @@ THEMES = [
         "body_exits": [(1, 18)], # Act 1 Catacombs Down
         # Catacombs makes the origin room the Prev room: level centre.
         "body_entry": (0, 17),   # Act 1 Catacombs Up (as Catacombs 2 -> 1)
-        "arena_template": 158,   # Forsaken Labyrinth 20, Cathy3.ds1
-        "arena_ds1": "Labyrinth/Cathy3.ds1",
-        "arena_return": (1, 15),
+        # The Warden's ossuary chapel is purpose-built (arenas.py), 20x20 in
+        # the Catacombs' own tiles. Catacombs 4 (37, Andariel's Lair)
+        # supplies the level: LevelType 10, Dt1Mask 57 (base walls, stairs
+        # up, floor) and slot 0 = Catacombs Up (lvlwarp 17), the stock
+        # Catacombs 3 -> 4 transition the body's stairs down already use.
+        "arena_template": 37,
+        "arena_ds1": "custom:catacombs",
+        "arena_return": (0, 17),
     },
     {
         "key": "frozen",

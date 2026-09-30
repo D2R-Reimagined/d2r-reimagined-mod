@@ -803,7 +803,9 @@ def build_frozen():
 PRESET = {"worldstone": {"Dt1Mask": "3"}}      # Walls.dt1 + Floor.dt1
 # The Throne of Destruction's automap layer (98) would share the real Throne
 # room's saved map; keep the layer this arena has always used.
-LEVEL = {"worldstone": {"Layer": "78"}}
+LEVEL = {"worldstone": {"Layer": "78"},
+         # Andariel's layer (24) would share her lair's saved map; keep 0.
+         "catacombs": {"Layer": "0"}}
 
 KEEP_DT1S = [r"\d2\data\global\tiles\expansion\baallair\walls.dt1",
              r"\d2\data\global\tiles\expansion\baallair\floor.dt1"]
@@ -964,7 +966,176 @@ def build_worldstone():
     return room.to_bytes(), scene.to_bytes()
 
 
-BUILDERS = {"sandswept": build_sandswept, "frozen": build_frozen, "worldstone": build_worldstone}
+# --------------------------------------------------------------------------
+# Forsaken Catacombs: the Warden's ossuary chapel
+# --------------------------------------------------------------------------
+# Act 1 Catacombs tiles (LevelType 10). One full wall style (Basewalls main
+# 0) serves every side, so the legacy room is walled all round too. Per tile
+# the stock rooms (catewup, catnsew3, andy3 ...) carry:
+#
+# * A wall panel 2.5 units in from the wall line: (+7.5, +2.5) on a north
+#   wall, (+2.5, +7.5) on a west wall. Yaw depends on the model: the
+#   wall01/painting/cabinet family turns 90 (north) / 180 (west), wall_plain
+#   270 / 0.
+# * pillar01 + pillar_cap01 at (+2.5, +2.5) on corners, run ends and column
+#   tiles; the back corner adds corner_column01 at (+4, +4).
+# * Stairs up (lvlwarp 17, Vis slot 0): two orientation 11 main 0 warp tiles
+#   in a north wall, stairs02 + pf_stairs01 at (+2.5, +2.5) of the second.
+# * Andariel's Lair seats a bone throne on a north wall tile seam, 5 units
+#   out, with pf_bonebanner01/02 at 11 and 8 units either side.
+CAT_DT1S = [rf"\d2\data\global\tiles\act1\catacomb\{n}.dt1" for n in ("basewalls", "upstr", "floor")]
+CAT_SCENES = ("catewup", "andy3", "catnsew3", "catnsup", "catewup4")
+CAT_WALL = 0x000081                 # orientations 1/2/3/5/6/7/12, main 0 sub 0
+CAT_FLOOR = 0x0000C2
+# (model, north-wall yaw, west-wall yaw)
+CAT_PANELS = (("wall01.model", 90, 180), ("wall_plain.model", 270, 0))
+CAT_DRESSED = (("wall_painting01.model", 90, 180), ("wall_painting03.model", 90, 180),
+               ("wall_cabient03.model", 90, 180))
+CAT_PROPS = "data/hd/env/model/act1/catacomb/act1_catacomb_props"
+
+# Act 1 objpreset indices (the room is stamped Act 1; boss_rooms.clone moves
+# them into the Act 5 namespace by class).
+OBJ_CAT_TORCH = 1                   # TikiTorch1
+OBJ_CAT_BRAZIER = 17                # Brazier
+OBJ_CAT_CANDLES = (19, 20)          # Candles1, Candles2
+OBJ_BLOOD_POOL = 28                 # BubblingBloodPool
+OBJ_STAKED_ROGUES = (70, 71)        # RogueStakedCorpse1/2
+
+CATACOMBS = {
+    # Same footprint as the other sanctums: 20x20, walls outside it.
+    "lo": 3, "hi": 22,
+    # A nave runs from the stairs' side west to the throne between two rows
+    # of pillars; aisles lie north and south of it.
+    "pillar_rows": (7, 18), "pillar_cols": (8, 12, 16, 20),
+    "stairs": 17,                   # stairs up on tiles 17-18 of the north wall
+    "throne_seam": 13,              # the throne sits on the west wall at z = 10 * seam
+    "dressed_north": (5, 9, 13, 21),
+    "dressed_west": (5, 8, 17, 20),
+    "warden": (22, 64),             # subtiles: before the throne
+    "seed": 1117,
+}
+
+
+def _cat_panel(scene, choice, t, line, north):
+    model, north_yaw, west_yaw = choice
+    if north:
+        scene.add(model, 10 * t + 7.5, 10 * line + 2.5, north_yaw)
+    else:
+        scene.add(model, 10 * line + 2.5, 10 * t + 7.5, west_yaw)
+
+
+def _cat_pillar(scene, x, y):
+    scene.add("pillar01.model", 10 * x + 2.5, 10 * y + 2.5, 0)
+    scene.add("pillar_cap01.model", 10 * x + 2.5, 10 * y + 2.5, 0)
+
+
+def build_catacombs():
+    s = CATACOMBS
+    lo, hi = s["lo"], s["hi"]
+    back, front = lo - 1, hi + 1
+    cells = front + 1
+    rng = random.Random(s["seed"])
+    room = Room(cells, cells, 0, CAT_DT1S, void=0)
+    kit = Kit("act1/catacomb", CAT_SCENES, TERRAIN_SCENE)
+    scene = Scene(kit, "data/hd/env/biome/act1_catacombs.json", cells, cells)
+    stairs = (s["stairs"], s["stairs"] + 1)
+
+    # ---- floor and legacy walls ------------------------------------------
+    for y in range(back, front):
+        for x in range(back, front):
+            room.set_floor(x, y, CAT_FLOOR)
+    room.set_wall(back, back, ORIENT_CORNER, CAT_WALL)
+    room.set_wall(front, back, ORIENT_EAST_END, CAT_WALL)
+    room.set_wall(back, front, ORIENT_WEST_END, CAT_WALL)
+    room.set_wall(front, front, ORIENT_SOUTH_CORNER, CAT_WALL)
+    for t in range(lo, hi + 1):
+        if t in stairs:
+            room.set_wall(t, back, ORIENT_WARP, 0x81 | (t - stairs[0]) << 8)
+        else:
+            room.set_wall(t, back, ORIENT_TOP, CAT_WALL)
+        room.set_wall(back, t, ORIENT_LEFT, CAT_WALL)
+        room.set_wall(t, front, ORIENT_TOP, CAT_WALL)
+        room.set_wall(front, t, ORIENT_LEFT, CAT_WALL)
+
+    # ---- HD walls: all four sides full, the back ones dressed -------------
+    _cat_pillar(scene, back, back)
+    scene.add("corner_column01.model", 10 * back + 4, 10 * back + 4, 0)
+    _cat_panel(scene, CAT_PANELS[0], back, back, True)
+    _cat_panel(scene, CAT_PANELS[0], back, back, False)
+    for t in range(lo, hi + 1):
+        if t not in stairs:
+            dressed = t in s["dressed_north"]
+            _cat_panel(scene, rng.choice(CAT_DRESSED if dressed else CAT_PANELS), t, back, True)
+        dressed = t in s["dressed_west"]
+        _cat_panel(scene, rng.choice(CAT_DRESSED if dressed else CAT_PANELS), t, back, False)
+        _cat_panel(scene, rng.choice(CAT_PANELS), t, front, True)
+        _cat_panel(scene, rng.choice(CAT_PANELS), t, front, False)
+    for x, y in ((front, back), (back, front), (front, front)):
+        _cat_pillar(scene, x, y)
+    _cat_panel(scene, CAT_PANELS[1], back, front, True)      # south wall's first tile
+    _cat_panel(scene, CAT_PANELS[0], back, front, False)     # east wall's first tile
+
+    # ---- stairs up (the return warp) -------------------------------------
+    sx, sz = 10 * stairs[1] + 2.5, 10 * back + 2.5
+    scene.add("stairs02.model", sx, sz, 0)
+    scene.add("pf_stairs01.json", sx, sz, 0)
+
+    # ---- the throne ------------------------------------------------------
+    # Andariel's arrangement turned to face east from the west wall: throne
+    # 5 units out on the seam, banners 11 units north and 8 south of it.
+    tz = 10 * s["throne_seam"]
+    scene.add("bonethrone01.model", 10 * back + 5, tz, 90)
+    scene.add("pf_bonebanner01.json", 10 * back + 3, tz + 11, 90)
+    scene.add("pf_bonebanner02.json", 10 * back + 3, tz - 8, 90)
+    for dz in (-16, 16):
+        room.add_object(2, rng.choice(OBJ_CAT_CANDLES), 5 * back + 4, (tz + dz) // 2)
+    for dz in (-26, 26):
+        room.add_object(2, OBJ_CAT_BRAZIER, 5 * lo + 3, (tz + dz) // 2)
+    scene.add("bloodbath01.model", 10 * lo + 22, tz, 90)
+    for _ in range(5):
+        scene.add(rng.choice(("gore01.model", "gore02.model", "gore03.model")),
+                  10 * lo + rng.uniform(4, 30), tz + rng.uniform(-22, 22), rng.uniform(0, 360))
+
+    # ---- the nave --------------------------------------------------------
+    for y in s["pillar_rows"]:
+        for x in s["pillar_cols"]:
+            room.set_wall(x, y, ORIENT_COLUMN, CAT_WALL)
+            _cat_pillar(scene, x, y)
+    cols = s["pillar_cols"]
+    for x in cols[1:]:
+        for y in s["pillar_rows"]:
+            room.add_object(2, OBJ_CAT_TORCH, 5 * x - 8, 5 * y + 2)
+    for x, y in ((cols[1] + 2, s["throne_seam"]), (cols[3] - 2, s["throne_seam"] - 1)):
+        room.add_object(2, OBJ_BLOOD_POOL, 5 * x + 3, 5 * y + 3)
+
+    # ---- aisles: the Rogues who came before ------------------------------
+    rows = s["pillar_rows"]
+    for i, (x, y) in enumerate(((cols[0] + 2, lo + 1), (cols[2] + 1, lo + 2), (cols[1] + 1, rows[1] + 2),
+                                (cols[3] - 1, rows[1] + 3))):
+        room.add_object(2, OBJ_STAKED_ROGUES[i % 2], 5 * x + 2, 5 * y + 2)
+    for _ in range(6):
+        x = rng.uniform(10 * cols[0], 10 * hi + 5)
+        z = rng.choice((rng.uniform(10 * lo + 5, 10 * rows[0] - 5), rng.uniform(10 * rows[1] + 15, 10 * hi + 5)))
+        scene.add(rng.choice(("gore01.model", "gore02.model", "gore03.model", "gore04.model")),
+                  x, z, rng.uniform(0, 360))
+    for x, y in ((front - 1, front - 1), (front - 1, lo), (lo + 1, front - 1)):
+        room.add_object(2, OBJ_CAT_BRAZIER, 5 * x + 2, 5 * y + 2)
+
+    # ---- atmosphere ------------------------------------------------------
+    for _ in range(6):
+        scene.add("FX_Catacombs_FloorHaze_40x40.particles",
+                  rng.uniform(10 * lo, 10 * hi + 10), rng.uniform(10 * lo, 10 * hi + 10))
+    for _ in range(8):
+        scene.add("FX_Catacombs_DustMotes_20x20.particles",
+                  rng.uniform(10 * lo, 10 * hi + 10), rng.uniform(10 * lo, 10 * hi + 10))
+
+    # Placeholder monster: boss_rooms.clone replaces it with the Warden.
+    room.add_object(1, 0, *s["warden"])
+    return room.to_bytes(), scene.to_bytes()
+
+
+BUILDERS = {"sandswept": build_sandswept, "frozen": build_frozen, "worldstone": build_worldstone,
+            "catacombs": build_catacombs}
 _cache = {}
 
 
