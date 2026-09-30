@@ -571,7 +571,12 @@ class MappingContract(unittest.TestCase):
                 if col == 'LevelType' and theme.get('body_level_type'):
                     expected = str(theme['body_level_type'])
                 self.assertEqual(body[self.levels.col(col)], expected)
-                self.assertEqual(boss[self.levels.col(col)], arena[self.levels.col(col)])
+                spec = boss_rooms.arena_spec(theme, p['tier'])
+                overrides = {}
+                if spec.startswith('custom:'):
+                    import arenas
+                    overrides = arenas.LEVEL.get(spec[len('custom:'):], {})
+                self.assertEqual(boss[self.levels.col(col)], overrides.get(col, arena[self.levels.col(col)]))
             self.assertEqual(body[self.levels.col('DrlgType')], '3' if theme.get('initializer') else '1')
             self.assertEqual(boss[self.levels.col('DrlgType')], '2')
             # Both levels are Act 5 so the Harrogath portal and any town portal
@@ -652,7 +657,7 @@ class MappingContract(unittest.TestCase):
         import exterior
         custom = [p for p in self.plans
                   if boss_rooms.arena_spec(p['theme'], p['tier']).startswith('custom:')]
-        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen', 'worldstone', 'catacombs'})
+        self.assertEqual({p['theme']['key'] for p in custom}, {'desert', 'frozen', 'worldstone', 'catacombs', 'steppes', 'infernal', 'kurast', 'travincal', 'dunes', 'highlands'})
         presets = gen.Table(gen.EXCEL / 'lvlprest.txt')
         for p in custom:
             ds1, hd = boss_rooms.arena_bytes(gen.REPO, p['theme'], p['tier'])
@@ -681,7 +686,13 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(scene['biomeFilename'], {'desert': 'data/hd/env/biome/act2_tomb.json',
                                                       'frozen': 'data/hd/env/biome/expansion_icecave.json',
                                                       'worldstone': 'data/hd/env/biome/expansion_baallair.json',
-                                                      'catacombs': 'data/hd/env/biome/act1_catacombs.json'}
+                                                      'catacombs': 'data/hd/env/biome/act1_catacombs.json',
+                                                      'steppes': 'data/hd/env/biome/act4_mesa.json',
+                                                      'infernal': 'data/hd/env/biome/act4_lava.json',
+                                                      'kurast': 'data/hd/env/biome/act3_travincal.json',
+                                                      'travincal': 'data/hd/env/biome/act3_travincal_outdoors.json',
+                                                      'dunes': 'data/hd/env/biome/act2_outdoors.json',
+                                                      'highlands': 'data/hd/env/biome/act1_outdoors.json'}
                              [p['theme']['key']])
             ids = [e['id'] for e in scene['entities']]
             self.assertEqual(len(ids), len(set(ids)))

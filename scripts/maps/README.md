@@ -29,25 +29,22 @@ and lvlwarp its tileset uses for stairs down, a preset arena template, the
 arena DS1 to clone and the warp tile the arena answers to. Bodies and arenas
 no longer need to be neighbours in the Forsaken Labyrinth; the generator
 links them itself and refuses a slot/warp pair that no stock maze of that
-tileset uses. Current themes: Sandswept Tomb (Maggot Lair maze,
-purpose-built tomb sanctum), Corrupted Durance (Durance of Hate maze, Mephisto arena),
-Forsaken Catacombs (Catacombs maze, purpose-built ossuary chapel), Frozen Depths (ice-cave maze, purpose-built
-glacier hall) and Worldstone Keep (Baal Temple maze, purpose-built throne hall). Every map level is Act 5 regardless of tileset so
+tileset uses. Every theme has a purpose-built arena (see Custom arenas
+below); none clones a Labyrinth room any more.
+Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
 
 ### Where the portal lands
 
-The red portal drops the player in the first room of the level's room list
-that owns a warp tile whose Vis slot carries a lvlwarp (D2MOO
-`DrlgDrlgWarp.cpp`, `sub_6FD788D0`, reached through
-`DUNGEON_FindActSpawnLocation`). With the arena stairs as the body's only
-live warp that room was the arena doorway. Each theme therefore also names a
+The red portal drops the player in a room that owns a warp tile whose Vis
+slot carries a lvlwarp. With the arena stairs as the body's only live warp
+that room was the arena doorway. Each theme therefore also names a
 `body_entry` warp: the tileset's stairs-up (or trapdoor) piece, whose Vis
 points at the body itself so it counts as live without opening a second way
-into the arena or leaving a clickable warp with no destination. In-game D2R
-lands on the special room whose preset the maze routine assigned first (the
-1.10 list order in D2MOO predicted otherwise for the leaf tilesets and was
-wrong twice), so the entry slot per tileset is that room: the Prev room for
+into the arena or leaving a clickable warp with no destination. In game D2R
+lands on the special room whose preset the maze routine assigned first (not
+the first in the room list, which was wrong twice for the leaf tilesets), so
+the entry slot per tileset is that room: the Prev room for
 Baal Temple, Catacombs, Flayer Dungeon and Ice Caves, the Next room for the
 Maggot Lair. Stock, the Lair's Next room is a trapdoor down, so players
 arrived at a way down and reached the Warden through stairs up. Sandswept
@@ -104,8 +101,7 @@ Caves stairs up (two slot-0 warp tiles under `wall_doorway01`, with the stock
 timber dressing) in the north wall. The ice floor texture follows the floor
 tiles' tile masks, so the room uses the plain base floor and gets its
 variation from stamps. A custom arena's `lvlprest` size follows the room when
-the template pins one (the pool rooms said 32x32). The remaining themes still
-clone Labyrinth rooms.
+the template pins one (the pool rooms said 32x32).
 
 Worldstone Keep's throne hall (`WORLDSTONE`) uses the Keep's own tiles
 (LevelType 34). Its kit is tile-based like the tomb's: back-wall variants
@@ -135,6 +131,98 @@ wall, arranged as in Andariel's lair (throne on the seam, bone banners either
 side) and turned to face east; the Warden waits before it among candles,
 braziers, a blood bath and gore. Torches stand between the nave pillars,
 bubbling blood pools lie in the nave and staked Rogue corpses in the aisles.
+
+Ashen Steppes' ruined bastion (`STEPPES`) stands on the mesa (LevelType 27).
+No stock preset level uses the Mesa tiles, so the arena keeps level 165's row
+and its slot-0 red portal (lvlwarp 83) and `arenas.LEVEL` switches the
+LevelType and ambience; `arenas.PRESET` loads Floor, Brick_Walls and
+Surf_Struct (Dt1Mask 265). The walls are the Plains of Despair ruins:
+Brick_Walls main 13 with a ruined section (a 10-way model variation) and a
+`wall_pillars01` per tile on all four sides, `wall_pillars_corner01` at the
+corners, and `pillar02` on Surf_Struct column tiles for the ring. Hell
+braziers mark the ring's corners; bonfires, impaled Damned, skull piles, hell
+smoke and chained spikes fill the aisles, and the red portal stands in the
+south corner.
+
+Infernal Rift's hellforge (`INFERNAL`) is built in the fortress style of the
+Infernal Pit / Pit of Acheron / Abaddon rooms (`act4/expansion`). Their walls
+are Lava/Intwalls.dt1 main 22, already in level 165's Act 4 Lava tileset, so
+the row stays as is apart from `arenas.PRESET` adding Intwalls to its
+Dt1Mask (1631). Per tile: `wall01` at (+8.1, +3.2) yaw 180 on a north wall or
+(+3.1, +8.2) yaw 270 on a west wall, with `pillar01_staged01` on every other
+tile. Intwalls has no corner tile, so the back corner stacks both walls in two
+wall layers (`Room.set_wall(..., layer=1)`). The ring's pillars are
+`pillar02_blank` on Intwalls column tiles (12, 22, 1); Hell Brazier 4s mark
+its corners, the court's floor is shattered and glowing with hell crystals at
+its corners and floor braziers flanking the Warden, and skull pillars, wall
+spikes, hellfires and debris fill the aisles. The red portal stands in the
+south corner, as in the Steppes.
+
+Corrupted Durance's council chamber (`DURANCE`) is built in the Durance of
+Hate's tiles (LevelType 22; Travincal Walls.dt1 main 48 on Kurast's floor).
+Durance of Hate 3 (102) is the template, so the player arrives by the Durance's
+own stairs up (slot 2, lvlwarp 65), the stock Durance 2 -> 3 transition;
+Durance stairs on that slot exist only as west-wall warp tiles, so they stand
+in the west wall under `door_stairs_up01`. Walls alternate round-pillar tiles
+(`round_pillar01` + `pillar_top01`) with wall tiles (`wall01` twice, the second
+mirrored with scale z -1 so both faces are finished, plus `square_pillar01` and
+wall spikes), with `pillar_top_corner01/02` at the corners, on all four sides.
+Round pillars on Floors.dt1 column tiles (12, 46, 0) form the ring; floor
+braziers mark its and the court's corners, torches line the back walls,
+tortured corpses hang on them, and blood-soaked floors, severed limbs and gore
+cover the chamber under Durance fog.
+
+Fallen Travincal's High Council courtyard (`TRAVINCAL`) is a sunken stone court
+walled by the terraces Travincal is built on: Kurast Terraces.dt1 main 31
+(walk-blocking, not sight-blocking), added to level 148's Dt1Mask (53512) by
+`arenas.PRESET`. Across the stock Kurast and Travincal presets the terrace
+tiles carry `wall_elevation_stone01` + `wall_stone_buttress01` at (+7.5, +4.5)
+/ (+7.5, +4.0) yaw 90 on a north edge, (+4.5, +7.5) / (+4.0, +7.5) yaw 180 on a
+west edge, and `wall_stone_buttress_corner01` at the corners. Spiked stone
+pillars crown the back terraces and ring the court on Travincal column tiles;
+floor and jungle braziers, the Council's idols and offering bowls on gold
+ornaments, stone trims, blood and footprints, and jungle growth under
+Travincal fog, leaves and motes finish it. The arena keeps level 148's
+slot-2 red portal (encoded as the old Mephisto-chamber arena did, a hidden
+orientation 11 warp tile) in the south corner, and `arenas.LEVEL` gives it
+Travincal's outdoor ambience (SoundEnv 25).
+
+Sunscar Dunes' sun-scorched ruin (`DUNES`) is an open-air courtyard of the
+Lost City in the Act 2 desert tiles (LevelType 16). It keeps level 138's row
+and slot-2 red portal (lvlwarp 83) in the south corner; `arenas.LEVEL`
+switches the LevelType and the desert ambience (SoundEnv 13), and
+`arenas.PRESET` loads Town/Ground, Ruin/Ground, Ruin/Column and Village
+(Dt1Mask 50397185). The walls are the ruins' sandstone: Village.dt1 main 48
+(variants 15/16) carrying `wall01` (`act2_ruin_stone_walls`) at (+6.3, +2.4)
+yaw 0 on a north wall and (+2.6, +6.7) yaw 90 on a west wall, on all four
+sides. Village has no end pieces, so a model-less wall tile past the east wall
+seals the south-east corner. Two `statue01` colossi stand mid-way along the
+back walls on the Column.dt1 pieces the stock ruins lay under them (ruin2 and
+ruin10 for the yaw 90 one, ruin9 for the yaw 3 one). Sandstone pillars
+(`pillar_base01/mid01/top01`) on Column tiles (12, 36, 0) ring Tal Rasha's
+seal (the Canyon of the Magi dais) under the Warden, with two Horadric tablets
+on their own Column tiles. Tall braziers mark the ring's corners and tiki
+torches line the back walls; dunes, palms, fallen columns, desert scrub,
+bones, urns and jugs fill the aisles under sand ribbons and motes.
+
+Forsaken Highlands' war camp (`HIGHLANDS`) is a hollow in the Act 1
+wilderness (LevelType 2) where corrupted Rogues and the Fallen have made
+camp. It keeps level 158's row, but returns by its slot-2 red portal
+(lvlwarp 83) in the south corner instead of the Cathedral stairs the old
+Labyrinth room used; `arenas.LEVEL` switches the LevelType and ambience
+(SoundEnv 2) and `arenas.PRESET` loads Town/Floor, stonewall and Fallen
+(Dt1Mask 65541). The walls are the wilderness borders' dry stone:
+stonewall.dt1 main 2 sub 0 carrying the `act1_outdoors_stonewalls`
+`r_wall01` at (+3.0, +4.5) on a north wall and `l_wall01` at (+4.0, +3.5) on a
+west wall, on all four sides, with one more model past each run's end to
+close the corners. The Stony Field cliffs share those basenames, so the kit
+reads `bivouac` first. Fallen.dt1 main 14 supplies the camp exactly as the
+stock `fallcmp*` rooms lay it out: skull totems ring the clearing, two tents
+stand in the aisles (a prefab over three west-wall pieces), each with a
+campfire. Gibbets mark the ring's corners, Fallen torches light the clearing
+and the walls, and staked Rogues hang along the walls. Rogue corpses, the
+Fallen's loot piles, corrupted spears, dead trees, boulders and highland
+scrub fill the rest under ground fog.
 
 `stock:` arena paths refer to unmodified D2R files. The generator copies each
 one it uses from the extracted game data (`STOCK_DATA`, or `D2R_STOCK_DATA`)

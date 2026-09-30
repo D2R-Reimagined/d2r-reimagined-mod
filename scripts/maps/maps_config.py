@@ -82,11 +82,10 @@ MONLVL_FLAT_XP = True
 #                   stock level with the same transition, not invented.
 #
 #                   The tileset must also place its stairs-down room for ANY
-#                   level id. Several maze routines hardcode that by level id
-#                   (D2MOO DrlgMaze.cpp): Act 2 Tomb only for ids 55-58
-#                   (DRLGMAZE_PlaceAct2TombStuff), Durance of Hate only for
-#                   ids 100-101 (DRLGMAZE_PlaceAct3MephistoStuff), Act 2/3
-#                   Sewers only for their stock ids. A body cloned from those
+#                   level id. Several maze routines hardcode that by level id:
+#                   Act 2 Tomb only for ids 55-58, Durance of Hate only for
+#                   ids 100-101, Act 2/3 Sewers only for their stock ids.
+#                   A body cloned from those
 #                   generates with no way into the arena, whatever Vis/Warp
 #                   says. Unconditional: Act 1 Catacombs, Act 2 Maggot Lair,
 #                   Act 3 Flayer Dungeon/Swampy Pit, Act 5 Ice Caves, Act 5
@@ -108,13 +107,12 @@ MONLVL_FLAT_XP = True
 #
 #                   Why a warp at all: the red portal lands on the first room
 #                   of the level's room list that owns a warp tile whose Vis
-#                   slot has a lvlwarp (D2MOO DrlgDrlgWarp.cpp, sub_6FD788D0,
-#                   the DUNGEON_FindActSpawnLocation path). A body whose only
-#                   live warp is the arena stairs therefore starts the player
-#                   beside the Warden's door. In-game (2026-09-21) D2R picks
-#                   the special room whose preset the maze routine ASSIGNED
-#                   first, which is not the 1.10 list order D2MOO shows, so
-#                   the entry slot is that room per DrlgMaze routine:
+#                   slot has a lvlwarp. A body whose only live warp is the
+#                   arena stairs therefore starts the player beside the
+#                   Warden's door. In game (2026-09-21) D2R picks the special
+#                   room whose preset the maze routine ASSIGNED first, not the
+#                   first in the room list, so the entry slot is that room
+#                   per maze routine:
 #                     Baal Temple / Catacombs  Prev, the origin room at the
 #                                              level centre; Next is a leaf.
 #                     Maggot Lair              Next (trapdoor), then Prev.
@@ -187,9 +185,13 @@ THEMES = [
         # Flayer Dungeon 1 is a four-room maze; the Warden was never more than
         # a doorway away. Match the Labyrinth-derived bodies instead.
         "body_rooms": (12, 18, 24),
-        "arena_template": 148,   # Labyrinth 10: MephComp.ds1 with a slot-2 warp
-        "arena_ds1": "Labyrinth/MephComp.ds1",
-        "arena_return": (2, 83),
+        # The Warden's council chamber is purpose-built (arenas.py), 20x20 in
+        # the Durance of Hate's tiles. Durance of Hate 3 (102) supplies the
+        # row: LevelType 22, Dt1Mask 53256 and slot 2 = Mephisto Up (lvlwarp
+        # 65), the stock Durance 2 -> 3 stairs, on the room's west wall.
+        "arena_template": 102,
+        "arena_ds1": "custom:durance",
+        "arena_return": (2, 65),
     },
     {
         "key": "catacombs",
@@ -212,8 +214,10 @@ THEMES = [
         "name": "Frozen Depths",
         "body_template": 159,    # Forsaken Labyrinth 21, LevelType 33 maze
         # Ice assigns Prev, then Next, then Down, so the portal lands in the
-        # Prev room and the arena keeps the Down floor warp. Next stays dead.
-        "body_exits": [(2, 75)], # Act 5 Ice Caves Down Floor
+        # Prev room. Both ways down lead to the arena: left dead, the Next
+        # room's stairs looked like the arena entrance and could not be
+        # clicked (seen in game, 2026-09-30).
+        "body_exits": [(1, 74), (2, 75)],   # Ice Caves Down stairs, Down Floor
         "body_entry": (0, 73),   # Act 5 Ice Caves Up: the Prev room's stairs
         # The Warden's glacier hall is purpose-built (arenas.py), 20x20 in the
         # Ice Caves tileset. Level 160 only supplies the row: LevelType 33,
@@ -268,17 +272,26 @@ THEMES += [
     dict(key="dunes", name="Sunscar Dunes", body_template=42, exterior=True,
          body_size=(80,80), body_entries=[(0,33),(1,34),(2,35),(3,36)], body_entry=(0,33),
          body_exits=[(7,33)], exit_preset=388, initializer=0x3fbd10,
-         arena_template=138, arena_ds1="Labyrinth/Duriel.ds1", arena_return=(2,83)),
+         arena_template=138, arena_ds1="custom:dunes", arena_return=(2,83)),
     dict(key="highlands", name="Forsaken Highlands", body_template=7, exterior=True,
          body_size=(80,80), body_entries=[(3,0),(4,1),(5,2),(6,3)], body_entry=(3,0),
          body_exits=[(7,0)], exit_preset=24, initializer=0x3fac10,
-         arena_template=158, arena_ds1="Labyrinth/Cathy3.ds1", arena_return=(1,15)),
+         # Purpose-built Fallen war camp in the wilderness (arenas.py). Level
+         # 158 only supplies the row and its slot-2 red portal; arenas.LEVEL
+         # switches it to the Act 1 wilderness tiles.
+         arena_template=158, arena_ds1="custom:highlands", arena_return=(2,83)),
     dict(key="travincal", name="Fallen Travincal", body_template=83, exterior=True,
          body_size=(64,64), body_entry=(6,83), body_exits=[(0,64)], initializer=0x3fcbe0,
-         arena_template=148, arena_ds1="Labyrinth/MephComp.ds1", arena_return=(2,83)),
+         # Purpose-built High Council courtyard walled by Travincal's stone
+         # terraces (arenas.py). Level 148 supplies the row and its slot-2 red
+         # portal; arenas.PRESET adds Kurast's terraces to its Dt1Mask.
+         arena_template=148, arena_ds1="custom:travincal", arena_return=(2,83)),
     dict(key="steppes", name="Ashen Steppes", body_template=104, exterior=True,
          body_size=(80,64), body_entry=(1,69), body_exits=[(7,69)], exit_preset=811,
-         initializer=0x3fdc00, arena_template=165, arena_ds1="Labyrinth/Heart.ds1", arena_return=(0,83)),
+         # Purpose-built ruined bastion on the mesa (arenas.py). Level 165 only
+         # supplies the row and its slot-0 red portal; arenas.LEVEL switches it
+         # to the Mesa tileset.
+         initializer=0x3fdc00, arena_template=165, arena_ds1="custom:steppes", arena_return=(0,83)),
     # Abaddon's own maze routine (LevelType 35) ignores lvlmaze Rooms and
     # always builds three rooms in a line, so bodies generate as LevelType 28
     # instead: River of Flame's lava maze, same Act 4 lava tiles, grown to
@@ -291,7 +304,10 @@ THEMES += [
     dict(key="infernal", name="Infernal Rift", body_template=125, exterior=True,
          body_level_type=28, body_size=(200,200), body_rooms=(22,22,22), body_rooms_per_tier=2,
          body_entry=(6,70), body_exits=[(7,70)], stairs_preset=852, initializer=0,
-         arena_template=165, arena_ds1="Labyrinth/Heart.ds1", arena_return=(0,83)),
+         # Purpose-built hellforge in the Infernal Pit's fortress style
+         # (arenas.py). Level 165 supplies the row: Act 4 Lava tiles and its
+         # slot-0 red portal; arenas.PRESET adds Intwalls to its Dt1Mask.
+         arena_template=165, arena_ds1="custom:infernal", arena_return=(0,83)),
 ]
 
 # Base item level per tier, used for item presentation and the item's own
