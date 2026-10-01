@@ -14,9 +14,11 @@ import catacombs
 import durance
 import frozen
 import infernal
+import sandswept
 import travincal
+import worldstone
 
-KITS = (catacombs, infernal, frozen, durance, travincal)
+KITS = (catacombs, infernal, frozen, durance, travincal, sandswept, worldstone)
 
 
 class Kit:

@@ -571,8 +571,11 @@ WARDENS = {
     "infernal": dict(aura=None, on_attack=None, escort=("minion1","imp5",4,6),
                      melee=("fire",120,190,0), drain=None, body="megademon4", model_scale=1.4),
     "desert": {
-        "aura": ("MonHolyShock", 8),
-        "on_attack": ("Dust Devils", 25, 12),
+        # The Dune Serpent: sandswept.py runs the Claw Viper on the
+        # CorruptLancer AI (Sandstorm, Burrowing Rush by tier). The Holy Shock
+        # aura and the random Dust Devils proc are gone.
+        "aura": None,
+        "on_attack": None,
         "escort": ("clawviper5", "unraveler5", 2, 3),
         "melee": ("cold", 110, 185, 150),
         "drain": None,
@@ -612,10 +615,13 @@ WARDENS = {
         "body": "succubuswitch6",
     },
     "worldstone": {
-        "aura": ("Fanaticism", 8),
-        "on_attack": ("Siege Beast Stomp", 25, 12),
+        # The Worldbreaker: worldstone.py runs the Hell Bovine on the PinHead
+        # AI (Seismic Slam, Rift Wave by tier). Fanaticism, the random stomp
+        # proc and the repeated melee stun are gone; the melee is physical.
+        "aura": None,
+        "on_attack": None,
         "escort": ("hellbovine", "willowisp3", 4, 6),
-        "melee": ("stun", 0, 0, 30),
+        "melee": None,
         "drain": None,
     },
 }
