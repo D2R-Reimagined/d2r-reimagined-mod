@@ -11,14 +11,17 @@ import json
 import re
 
 import catacombs
+import dunes
 import durance
 import frozen
+import highlands
 import infernal
 import sandswept
+import steppes
 import travincal
 import worldstone
 
-KITS = (catacombs, infernal, frozen, durance, travincal, sandswept, worldstone)
+KITS = (catacombs, infernal, frozen, durance, travincal, sandswept, worldstone, dunes, highlands, steppes)
 
 
 class Kit:

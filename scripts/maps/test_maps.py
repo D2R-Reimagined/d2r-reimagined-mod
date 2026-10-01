@@ -215,7 +215,7 @@ class MappingContract(unittest.TestCase):
                 frames[name] = [f for f in data[offset + 16:offset + 16 + length] if f]
                 offset += 160
         self.assertEqual(offset, len(data))
-        themes = {'catacombs': 'mc', 'infernal': 'mi', 'frozen': 'mf', 'kurast': 'mk', 'travincal': 'mt', 'desert': 'md', 'worldstone': 'mw'}
+        themes = {'catacombs': 'mc', 'infernal': 'mi', 'frozen': 'mf', 'kurast': 'mk', 'travincal': 'mt', 'desert': 'md', 'worldstone': 'mw', 'dunes': 'ms', 'highlands': 'mh', 'steppes': 'me'}
         self.assertEqual(len(themes), len(warden_kits.KITS))
         for prefix in themes.values():
             for tier in range(1, 7):
@@ -336,21 +336,37 @@ class MappingContract(unittest.TestCase):
             wall = missiles.find(missiles.col('Missile'), durance.DIVIDE_WALL)
             self.assertEqual((wall[missiles.col('Range')], wall[missiles.col('EType')]), (str(durance.DIVIDE_FRAMES), 'fire'))
 
-    def test_travincal_warden_no_longer_heals(self):
+    def test_travincal_warden_is_a_lightning_commander(self):
         import travincal
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
-            monsters = gen.Table(bank / 'monstats.txt')
-            source = monsters.find(monsters.col('Id'), 'councilmember3')
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_mt{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('HighPriest', 'HP'))
+                wrath, wrath_chance, delay = travincal.TIERS[tier]
+                judgment = (travincal.JUDGMENT, 'S1', str(tier))
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
                 self.assertEqual(uses, {
-                    1: ('Hydra', 'S1', source[monsters.col('Sk1lvl')]),
-                    travincal.BOLT_SLOT: ('ZakarumLightning', 'S1', str(travincal.BOLT_LEVEL)),
+                    travincal.WRATH_SLOT: (travincal.WRATH, 'S1', str(tier)) if wrath else judgment,
+                    travincal.JUDGMENT_SLOT: judgment,
                     travincal.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                for i in range(1, 9):
-                    self.assertEqual(row[monsters.col(f'aip{i}(H)')], source[monsters.col(f'aip{i}(H)')])
+                self.assertEqual((row[monsters.col('aip3(H)')], row[monsters.col('aip4(H)')]), (str(delay), str(wrath_chance)))
+                self.assertEqual(row[monsters.col('El1Type')], 'ltng')
+                # Nothing in the pack heals: no Hydra/heal on the Warden, no Heirophants.
+                for minion in ('minion1', 'minion2'):
+                    escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
+                    self.assertNotIn('ZakarumHeal', [escort[monsters.col(f'Skill{i}')] for i in range(1, 9)])
+            judgment = skills.find(skills.col('skill'), travincal.JUDGMENT)
+            self.assertEqual((judgment[skills.col('srvdofunc')], judgment[skills.col('srvmissilea')], judgment[skills.col('calc1')],
+                              judgment[skills.col('charclass')]), ('26', travincal.JUDGMENT_BOLT, travincal.JUMPS, ''))
+            self.assertEqual(missiles.find(missiles.col('Missile'), travincal.JUDGMENT_BOLT)[missiles.col('Skill')], travincal.JUDGMENT)
+            wrath = skills.find(skills.col('skill'), travincal.WRATH)
+            self.assertEqual((wrath[skills.col('srvdofunc')], wrath[skills.col('srvmissilea')]), ('80', travincal.WRATH_STRIKE))
+            strike = missiles.find(missiles.col('Missile'), travincal.WRATH_STRIKE)
+            self.assertEqual((strike[missiles.col('Skill')], strike[missiles.col('HitSubMissile1')], strike[missiles.col('Range')]),
+                             (travincal.WRATH, travincal.WRATH_BOLT, str(travincal.WRATH_DELAY)))
+            self.assertEqual(missiles.find(missiles.col('Missile'), travincal.WRATH_BOLT)[missiles.col('EType')], 'ltng')
 
     def test_sandswept_warden_is_a_claw_viper_on_the_corrupt_lancer_ai(self):
         import sandswept
@@ -403,6 +419,97 @@ class MappingContract(unittest.TestCase):
                              ('8', worldstone.WAVE_MISSILE, worldstone.WAVES))
             missile = missiles.find(missiles.col('Missile'), worldstone.WAVE_MISSILE)
             self.assertEqual((missile[missiles.col('Skill')], missile[missiles.col('Vel')]), (worldstone.WAVE, str(worldstone.WAVE_SPEED)))
+
+    def test_dunes_warden_is_a_lightning_scarab_on_the_corrupt_lancer_ai(self):
+        import dunes
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_ms{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('CorruptLancer', 'SC'))
+                spells, spray_chance, pulse_chance = dunes.TIERS[tier]
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                expected = {slot: (dunes.SUNFALL, 'A2', str(tier)) for slot in dunes.SLOTS.values()}
+                expected.update({dunes.SLOTS[s]: (s, 'A2', str(tier)) for s in spells})
+                expected[dunes.DEATH_SLOT] = (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')
+                self.assertEqual(uses, expected, row[0])
+                # A repeat that only fills a slot is never rolled.
+                self.assertEqual((row[monsters.col('aip7(H)')], row[monsters.col('aip8(H)')]), (str(spray_chance), str(pulse_chance)))
+                self.assertEqual(spray_chance > 0, dunes.SPRAY in spells)
+                self.assertEqual(pulse_chance > 0, dunes.PULSE in spells)
+            ball = missiles.find(missiles.col('Missile'), dunes.SUNFALL_BALL)
+            self.assertEqual(ball[missiles.col('HitSubMissile1')], dunes.SUNFALL_BOLT)
+            for missile, skill in ((dunes.SUNFALL_BOLT, dunes.SUNFALL), (dunes.SPRAY_BOLT, dunes.SPRAY), (dunes.PULSE_RING, dunes.PULSE)):
+                self.assertEqual(missiles.find(missiles.col('Missile'), missile)[missiles.col('Skill')], skill)
+            for skill in (dunes.SUNFALL, dunes.SPRAY, dunes.PULSE):
+                self.assertEqual(skills.find(skills.col('skill'), skill)[skills.col('EType')], 'ltng')
+
+    def test_highlands_warden_is_a_corrupt_archer_with_volleys(self):
+        import highlands
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_mh{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('CorruptArcher', 'CR'))
+                cinder, cinder_chance = highlands.TIERS[tier]
+                volley = (highlands.VOLLEY, 'A1', str(tier))
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                self.assertEqual(uses, {
+                    highlands.VOLLEY_SLOT: volley, highlands.SPARE_SLOT: volley,
+                    highlands.CINDER_SLOT: (highlands.CINDER, 'A1', str(tier)) if cinder else volley,
+                    highlands.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
+                self.assertEqual((row[monsters.col('aip6(H)')], row[monsters.col('aip7(H)')]), (str(cinder_chance), '0'))
+                self.assertNotEqual(row[monsters.col('El1Type')], 'stun')
+                # Her escort is melee, so it screens her.
+                for minion in ('minion1', 'minion2'):
+                    escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
+                    self.assertNotEqual(escort[monsters.col('AI')], 'CorruptArcher')
+            for skill, missile, source in ((highlands.VOLLEY, highlands.VOLLEY_ARROW, 'firearrow'),
+                                           (highlands.CINDER, highlands.CINDER_ARROW, 'explodingarrow')):
+                row = skills.find(skills.col('skill'), skill)
+                self.assertEqual((row[skills.col('srvdofunc')], row[skills.col('srvmissilea')], row[skills.col('EType')]),
+                                 ('8', missile, 'fire'))
+                self.assertEqual(missiles.find(missiles.col('Missile'), missile)[missiles.col('Skill')], skill)
+            self.assertEqual(skills.find(skills.col('skill'), highlands.VOLLEY)[skills.col('calc1')], highlands.VOLLEY_ARROWS)
+
+    def test_steppes_warden_is_an_abyss_knight_that_wards_itself(self):
+        import steppes
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
+            for tier in range(1, 7):
+                row = monsters.find(monsters.col('Id'), f'rmap_me{tier}_boss')
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('AbyssKnight', 'UM'))
+                ward, skull_delay = steppes.TIERS[tier]
+                skull = (steppes.SKULL, 'S1', str(tier))
+                uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
+                        for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                self.assertEqual(uses, {
+                    steppes.SKULL_SLOT: skull, steppes.SPARE_SLOT: skull,
+                    steppes.WARD_SLOT: (steppes.WARD, 'S1', str(tier)) if ward else skull,
+                    steppes.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
+                self.assertEqual((row[monsters.col('aip1(H)')], row[monsters.col('aip2(H)')], row[monsters.col('aip6(H)')]),
+                                 (str(ward or 0), str(steppes.WARD_CHANCE if ward else 0), str(skull_delay)))
+                # No longer a second Balrog (the Infernal Forgemaster is one).
+                self.assertNotEqual(row[monsters.col('Code')], 'DM')
+            self.assertEqual([t for t in range(1, 7) if steppes.TIERS[t][0]], [3, 4, 5, 6])
+            ward = skills.find(skills.col('skill'), steppes.WARD)
+            self.assertEqual((ward[skills.col('auraevent1')], ward[skills.col('auraeventfunc1')], ward[skills.col('aurastat1')]),
+                             ('absorbdamage', '22', 'bonearmor'))
+            self.assertEqual((ward[skills.col('Param1')], ward[skills.col('Param2')]), tuple(map(str, steppes.WARD_POOL)))
+            skull = skills.find(skills.col('skill'), steppes.SKULL)
+            self.assertEqual((skull[skills.col('srvdofunc')], skull[skills.col('srvmissilea')]), ('148', steppes.SKULL_MISSILE))
+            self.assertEqual(missiles.find(missiles.col('Missile'), steppes.SKULL_MISSILE)[missiles.col('EType')], 'fire')
+
+    def test_kit_missiles_never_hit_their_own_side(self):
+        # CollideFriend = 1 lets a missile hit the caster and its allies (D2R
+        # data guide); the stock catapult charged bolts set it.
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            missiles = gen.Table(bank / 'missiles.txt')
+            for row in missiles.rows:
+                if row[missiles.col('Missile')].startswith('rmap_'):
+                    self.assertIn(row[missiles.col('CollideFriend')], ('', '0'), row[missiles.col('Missile')])
 
     def test_warden_haste_is_a_self_aura_on_monster_speed_stats(self):
         skills = gen.Table(gen.EXCEL / 'skills.txt')

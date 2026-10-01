@@ -557,14 +557,28 @@ MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 #   model_scale  optional HD model scale instead of WARDEN_MODEL_SCALE
 
 WARDENS = {
-    "dunes": dict(aura=("MonHolyShock",8), on_attack=("Dust Devils",20,12),
+    # The Sun Scarab: dunes.py runs the Scarab on the CorruptLancer AI
+    # (Sunfall, Static Spray, Scorch Pulse by tier). Holy Shock and the
+    # random Dust Devils proc are gone; the lightning melee stays.
+    "dunes": dict(aura=None, on_attack=None,
                   escort=("scarab5","sandraider5",3,4), melee=("ltng",80,180,0), drain=None),
-    "highlands": dict(aura=("Might",8), on_attack=("Siege Beast Stomp",20,12),
-                      escort=("goatman5","cr_archer5",3,5), melee=("stun",0,0,20), drain=None),
-    "travincal": dict(aura=("Fanaticism",6), on_attack=("CountessFirewall",20,12),
-                      escort=("zealot3","cantor3",3,5), melee=("fire",90,160,0), drain=None),
-    "steppes": dict(aura=("MonHolyFire",8), on_attack=("Fire Wall",20,12),
-                    escort=("megademon1","fingermage1",3,4), melee=("fire",100,180,0), drain=None),
+    # The Fallen Huntress: highlands.py keeps the Flesh Archer's CorruptArcher
+    # AI (Ember Volley, Cinder Shot by tier) while goatmen and rogues screen
+    # her. Might, the random stomp proc and the stun melee are gone.
+    "highlands": dict(aura=None, on_attack=None,
+                      escort=("goatman5","corruptrogue5",3,5), melee=None, drain=None, body="cr_archer5"),
+    # The High Inquisitor: travincal.py turns the Council Member into a
+    # lightning commander (Judgment, Heaven's Wrath by tier). Fanaticism stays
+    # on purpose: it drives the Zealot escort. The firewall proc and the
+    # healing Heirophants are gone; Temple Guards replace them.
+    "travincal": dict(aura=("Fanaticism",6), on_attack=None,
+                      escort=("zealot3","baboon5",3,5), melee=("ltng",90,160,0), drain=None),
+    # The Ashen Knight: steppes.py keeps the Abyss Knight's own AI (Ash Skull,
+    # Ash Ward by tier). Holy Fire and the random Fire Wall proc are gone;
+    # the Warden is no longer a second Balrog, but Balrogs still escort it.
+    "steppes": dict(aura=None, on_attack=None,
+                    escort=("megademon1","fingermage1",3,4), melee=("fire",100,180,0), drain=None,
+                    body="doomknight2"),
     # The Forgemaster: infernal.py runs a Balrog on the Vampire AI (melee plus
     # Brimstone, Hellfire Bolt and Magma Rift by tier). Its fire melee stays;
     # the Might aura and random procs are gone. Imps teleport in beside it.
