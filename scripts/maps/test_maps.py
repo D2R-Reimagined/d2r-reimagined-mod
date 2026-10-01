@@ -368,24 +368,26 @@ class MappingContract(unittest.TestCase):
                              (travincal.WRATH, travincal.WRATH_BOLT, str(travincal.WRATH_DELAY)))
             self.assertEqual(missiles.find(missiles.col('Missile'), travincal.WRATH_BOLT)[missiles.col('EType')], 'ltng')
 
-    def test_sandswept_warden_is_a_claw_viper_on_the_corrupt_lancer_ai(self):
+    def test_sandswept_warden_is_a_claw_viper_on_the_vampire_ai(self):
+        # A CorruptLancer Warden cast nothing live (tiers 1 and 5); the Vampire
+        # AI is the one seen casting from a non-SC mode (Infernal).
         import sandswept
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_md{tier}_boss')
-                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('CorruptLancer', 'SD'))
-                rush, rush_chance = sandswept.TIERS[tier]
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('Vampire', 'SD'))
+                rush, use_skill = sandswept.TIERS[tier]
                 sandstorm = (sandswept.SANDSTORM, 'A2', str(tier))
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
                 self.assertEqual(uses, {
-                    sandswept.SANDSTORM_SLOT: sandstorm, sandswept.SPARE_SLOT: sandstorm,
+                    sandswept.SANDSTORM_SLOT: sandstorm, sandswept.SPARE_SLOT: sandstorm, sandswept.REPEAT_SLOT: sandstorm,
                     sandswept.RUSH_SLOT: ('SerpentCharge', 'seq_serpentcharge', str(tier)) if rush else sandstorm,
                     sandswept.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                # Repeats that fill a slot are never rolled.
-                self.assertEqual(row[monsters.col('aip7(H)')], str(rush_chance))
-                self.assertEqual(row[monsters.col('aip8(H)')], '0')
+                # Skill1-4 all hold a real spell; aip5 bits switch Skill1-3 on.
+                self.assertEqual(row[monsters.col('aip5(H)')], str(1 | (2 if rush else 0)))
+                self.assertEqual(row[monsters.col('aip2(H)')], str(use_skill))
             self.assertEqual([t for t in range(1, 7) if sandswept.TIERS[t][0]], [3, 4, 5, 6])
             storm = skills.find(skills.col('skill'), sandswept.SANDSTORM)
             self.assertEqual((storm[skills.col('srvdofunc')], storm[skills.col('srvmissilea')], storm[skills.col('calc1')]),
@@ -420,24 +422,22 @@ class MappingContract(unittest.TestCase):
             missile = missiles.find(missiles.col('Missile'), worldstone.WAVE_MISSILE)
             self.assertEqual((missile[missiles.col('Skill')], missile[missiles.col('Vel')]), (worldstone.WAVE, str(worldstone.WAVE_SPEED)))
 
-    def test_dunes_warden_is_a_lightning_scarab_on_the_corrupt_lancer_ai(self):
+    def test_dunes_warden_is_a_lightning_scarab_on_the_vampire_ai(self):
         import dunes
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_ms{tier}_boss')
-                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('CorruptLancer', 'SC'))
-                spells, spray_chance, pulse_chance = dunes.TIERS[tier]
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('Vampire', 'SC'))
+                spells, use_skill = dunes.TIERS[tier]
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
-                expected = {slot: (dunes.SUNFALL, 'A2', str(tier)) for slot in dunes.SLOTS.values()}
+                expected = {slot: (dunes.SUNFALL, 'A2', str(tier)) for slot in (*dunes.SLOTS.values(), dunes.REPEAT_SLOT)}
                 expected.update({dunes.SLOTS[s]: (s, 'A2', str(tier)) for s in spells})
                 expected[dunes.DEATH_SLOT] = (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')
                 self.assertEqual(uses, expected, row[0])
-                # A repeat that only fills a slot is never rolled.
-                self.assertEqual((row[monsters.col('aip7(H)')], row[monsters.col('aip8(H)')]), (str(spray_chance), str(pulse_chance)))
-                self.assertEqual(spray_chance > 0, dunes.SPRAY in spells)
-                self.assertEqual(pulse_chance > 0, dunes.PULSE in spells)
+                self.assertEqual(row[monsters.col('aip5(H)')], str(sum(dunes.FLAGS[dunes.SLOTS[s]] for s in spells)))
+                self.assertEqual(row[monsters.col('aip2(H)')], str(use_skill))
             ball = missiles.find(missiles.col('Missile'), dunes.SUNFALL_BALL)
             self.assertEqual(ball[missiles.col('HitSubMissile1')], dunes.SUNFALL_BOLT)
             for missile, skill in ((dunes.SUNFALL_BOLT, dunes.SUNFALL), (dunes.SPRAY_BOLT, dunes.SPRAY), (dunes.PULSE_RING, dunes.PULSE)):

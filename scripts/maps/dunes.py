@@ -1,31 +1,37 @@
-"""Sunscar Dunes Warden, the Sun Scarab: a lightning Scarab on the CorruptLancer AI.
+"""Sunscar Dunes Warden, the Sun Scarab: a lightning Scarab on the Vampire AI.
 
-The Warden keeps the Scarab body. Its Scarab AI only jabs, so it runs the
-Dark Lancer's CorruptLancer AI, which D2R's monai.txt documents as melee plus
-three skills with their own chances (aip6-8) behind one use-skill roll (aip2)
-and an AI delay (aip3); Sandswept uses it too.
+The Warden keeps the Scarab body. Its Scarab AI only jabs. It first ran the
+Dark Lancer's CorruptLancer AI, and a Warden on that AI cast nothing in game
+(2026-09-30, tiers 1 and 5): every stock CorruptLancer
+skill is a melee attack. It now runs the Vampire AI, which D2R's monai.txt
+documents as melee plus three spells switched on by aip5 bit flags
+(1 = Skill1, 2 = Skill2, 4 = Skill3) and a Skill4, and which the Infernal
+Warden showed casting live from a non-SC mode:
 
-    Skill1  aip6 %   Sunfall, a lobbed charged ball that bursts into bolts
+    Skill1  flag 1   Sunfall, a lobbed charged ball that bursts into bolts
                      where the target stood (Catapult Charged Ball, the
                      lightning twin of the Catacombs Miasma lob); the signature
-    Skill2  aip7 %   Static Spray, a fan of erratic charged bolts (ImpBolt;
-                     tier 3+, repeats Sunfall with aip7 = 0 below)
-    Skill3  aip8 %   Scorch Pulse, a lightning nova around it that punishes
+    Skill2  flag 2   Static Spray, a fan of erratic charged bolts (ImpBolt;
+                     tier 3+, repeats Sunfall with the bit off below)
+    Skill3  flag 4   Scorch Pulse, a lightning nova around it that punishes
                      standing close (Storm Pulse; tier 5+, repeats Sunfall
-                     with aip8 = 0 below)
+                     with the bit off below)
+    Skill4           repeats Sunfall (every stock Vampire row fills Skill4)
 
-The Scarab swings A1 (action frame 8) and casts in A2 (frame 10). The stock
-catapult bolts set CollideFriend = 1, which per the D2R data guide lets them
-hit the caster and its allies; the clone sets it to 0. Holy Shock and the
-random Dust Devils proc are gone; the lightning melee stays. The DT-mode death
-portal sits in Skill8.
+aip1 is the melee chance, aip2 the chance to use a skill, aip3 the active
+range and aip4 the spell chance. The Scarab swings A1 (action frame 8) and
+casts in A2 (frame 10). The stock catapult bolts set CollideFriend = 1, which
+per the D2R data guide lets them hit the caster and its allies; the clone sets
+it to 0. Holy Shock and the random Dust Devils proc are gone; the lightning
+melee stays. The DT-mode death portal sits in Skill8.
 """
 import warden_kits
 
-AI = 'CorruptLancer'
+AI = 'Vampire'
 BODY_CODE = 'SC'
 CAST = 'A2'
-SUNFALL_SLOT, SPRAY_SLOT, PULSE_SLOT, DEATH_SLOT = 1, 2, 3, 8
+SUNFALL_SLOT, SPRAY_SLOT, PULSE_SLOT, REPEAT_SLOT, DEATH_SLOT = 1, 2, 3, 4, 8
+FLAGS = {SUNFALL_SLOT: 1, SPRAY_SLOT: 2, PULSE_SLOT: 4}
 
 SUNFALL = 'rmap_sunfall'
 SUNFALL_BALL = 'rmap_sunfall_ball'
@@ -35,20 +41,17 @@ SPRAY_BOLT = 'rmap_static_bolt'
 PULSE = 'rmap_scorch_pulse'
 PULSE_RING = 'rmap_scorch_ring'
 
-# Tier: (spells in the kit, aip7 spray chance, aip8 pulse chance).
+# Tier: (spells in the kit, aip2 use-skill chance).
 TIERS = {
-    1: ((SUNFALL,), 0, 0), 2: ((SUNFALL,), 0, 0),
-    3: ((SUNFALL, SPRAY), 30, 0), 4: ((SUNFALL, SPRAY), 30, 0),
-    5: ((SUNFALL, SPRAY, PULSE), 30, 25), 6: ((SUNFALL, SPRAY, PULSE), 30, 25),
+    1: ((SUNFALL,), 30), 2: ((SUNFALL,), 30),
+    3: ((SUNFALL, SPRAY), 35), 4: ((SUNFALL, SPRAY), 35),
+    5: ((SUNFALL, SPRAY, PULSE), 40), 6: ((SUNFALL, SPRAY, PULSE), 40),
 }
 SLOTS = {SUNFALL: SUNFALL_SLOT, SPRAY: SPRAY_SLOT, PULSE: PULSE_SLOT}
 SPRAY_BOLTS = '(lvl < 5) ? 4 : 6'   # calc1, level = tier
-APPROACH = 80          # aip1
-USE_SKILL = 20         # aip2
-AI_DELAY = 10          # aip3
-RUN = 60               # aip4
-RUN_RANGE = 10         # aip5
-SUNFALL_CHANCE = 35    # aip6
+MELEE_CHANCE = 80      # aip1
+ACTIVE_RANGE = 24      # aip3, the Infernal Warden's
+SPELL_CHANCE = 50      # aip4
 
 # Lightning damage per hit (HitShift 8, whole), level = tier.
 SUNFALL_DAMAGE = dict(min=120, max=220, per_level=(20, 35))
@@ -87,10 +90,11 @@ def generate(api, plans, kit, monsters):
         tier = plan['tier']
         boss = monsters.find(monsters.col('Id'), f"rmap_{plan['item_code']}_boss")
         assert boss[monsters.col('Code')] == BODY_CODE, boss[monsters.col('Code')]
-        spells, spray_chance, pulse_chance = TIERS[tier]
+        spells, use_skill = TIERS[tier]
         sunfall = (SUNFALL, CAST, tier)
-        slots = {slot: sunfall for slot in SLOTS.values()}
+        slots = {slot: sunfall for slot in (*SLOTS.values(), REPEAT_SLOT)}
         slots.update({SLOTS[s]: (s, CAST, tier) for s in spells})
         slots[DEATH_SLOT] = (warden_kits.death_skill(monsters, boss), 'DT', 1)
-        warden_kits.layout(api, monsters, boss, AI, slots, (
-            APPROACH, USE_SKILL, AI_DELAY, RUN, RUN_RANGE, SUNFALL_CHANCE, spray_chance, pulse_chance))
+        flags = sum(FLAGS[SLOTS[s]] for s in spells)
+        warden_kits.layout(api, monsters, boss, AI, slots,
+                           (MELEE_CHANCE, use_skill, ACTIVE_RANGE, SPELL_CHANCE, flags, '', '', ''))
