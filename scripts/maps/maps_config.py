@@ -271,11 +271,18 @@ THEME_CODE_LETTERS = {
 THEMES += [
     dict(key="dunes", name="Sunscar Dunes", body_template=42, exterior=True,
          body_size=(80,80), body_entries=[(0,33),(1,34),(2,35),(3,36)], body_entry=(0,33),
-         body_exits=[(7,33)], exit_preset=388, initializer=0x3fbd10,
+         # TombEnt1.ds1 only: the other three mounds' warp tiles use lvlwarps
+         # 34-36 (other click boxes and exit walks), not slot 7's 33.
+         body_exits=[(7,33)], exit_preset=388, exit_files=1, initializer=0x3fbd10,
          arena_template=138, arena_ds1="custom:dunes", arena_return=(2,83)),
     dict(key="highlands", name="Forsaken Highlands", body_template=7, exterior=True,
          body_size=(80,80), body_entries=[(3,0),(4,1),(5,2),(6,3)], body_entry=(3,0),
-         body_exits=[(7,0)], exit_preset=24, initializer=0x3fac10,
+         # The Warden exit is spawned in the open field, so it must be a
+         # freestanding piece: the DOE mound (52), as Blood Moor places it.
+         # The Wild Cliff Caves (24/25) are cliff-border segments whose HD
+         # plateau ends at the cell edge without neighbouring cliffs (seen
+         # 2026-10-01). DenEnt.ds1 only: its warp tile is Floor L (lvlwarp 2).
+         body_exits=[(7,2)], exit_preset=52, exit_files=1, initializer=0x3fac10,
          # Purpose-built Fallen war camp in the wilderness (arenas.py). Level
          # 158 only supplies the row and its slot-2 red portal; arenas.LEVEL
          # switches it to the Act 1 wilderness tiles.

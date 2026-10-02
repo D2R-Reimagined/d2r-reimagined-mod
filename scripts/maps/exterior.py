@@ -145,7 +145,7 @@ def generate(api,plans,presets,runtime,levels):
     for theme_index,theme in enumerate(cfg.THEMES):
         if not theme.get('exterior'):continue
         key=theme['key']; exit_id=0; entry_id=0
-        def clone(source,role=None,warp_slot=None,landing_warp=None):
+        def clone(source,role=None,warp_slot=None,landing_warp=None,keep_files=None):
             nonlocal next_id
             original=stock[CLOSED_PRESETS.get((key,source),source)]
             if any(original[presets.col(c)]!=stock[source][presets.col(c)] for c in ('SizeX','SizeY')):
@@ -153,6 +153,12 @@ def generate(api,plans,presets,runtime,levels):
             row=list(original); target_id=next_id; next_id+=1
             files=int(row[presets.col('Files')] or 0)
             if not files:raise ValueError(f'Exterior preset {source} has no files')
+            if keep_files:
+                # One Vis slot names one lvlwarp. Keep only the leading files
+                # whose warp tile matches it (e.g. a left-facing cave only).
+                if not 0<keep_files<=files:raise ValueError(f'Exterior preset {source} has {files} files')
+                for file_index in range(keep_files+1,files+1):row[presets.col(f'File{file_index}')]='0'
+                files=keep_files;row[presets.col('Files')]=str(files)
             api.set_cells(row,presets,{'Name':f'RMAP Exterior {key} {source}'+(f' {role}' if role else ''),
                                      'Def':str(target_id),'LevelId':'0'})
             for file_index in range(1,files+1):
@@ -189,7 +195,7 @@ def generate(api,plans,presets,runtime,levels):
             for source in range(lo,hi+1):
                 if int(stock[source][presets.col('Files')] or 0)>0:
                     mappings.append((theme_index,source,clone(source)))
-        if theme.get('exit_preset'):exit_id=clone(theme['exit_preset'],'exit',7)
+        if theme.get('exit_preset'):exit_id=clone(theme['exit_preset'],'exit',7,keep_files=theme.get('exit_files'))
         if theme.get('stairs_preset'):
             # Maze bodies: the plugin places one stairs room of each copy
             # after the native maze has grown. River of Flame's stairs room

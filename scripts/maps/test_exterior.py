@@ -102,6 +102,31 @@ class ExteriorContract(unittest.TestCase):
                         found+=1
             self.assertEqual(found,1,path.name)
 
+    def test_warden_exits_are_freestanding_and_match_their_lvlwarp(self):
+        # The plugin spawns the exit in the open field. A cliff/border segment
+        # there ends its HD plateau at the cell edge (Highlands, 2026-10-01),
+        # and a file whose stock warp tile used another lvlwarp gets the wrong
+        # click box and exit walk.
+        presets=gen.Table(gen.EXCEL/'lvlprest.txt');levels=gen.Table(gen.EXCEL/'levels.txt')
+        for theme in cfg.THEMES:
+            if not theme.get('exit_preset'):continue
+            stock=presets.find(presets.col('Def'),str(theme['exit_preset']))
+            self.assertNotRegex(stock[0],r'Cliff|Border',theme['key'])
+            exit=presets.find(presets.col('Name'),f"RMAP Exterior {theme['key']} {theme['exit_preset']} exit")
+            template=levels.find(levels.col('Id'),str(theme['body_template']))
+            # The stock pairing of slot and lvlwarp on this tileset (the
+            # template itself may not link the slot, e.g. Outer Steppes).
+            campaign=[r for r in levels.rows if r[levels.col('LevelType')]==template[levels.col('LevelType')]
+                      and not r[0].startswith(cfg.ROW_TAG)]
+            (slot,warp),=theme['body_exits']
+            self.assertEqual(slot,7)
+            for i in range(1,int(exit[presets.col('Files')])+1):
+                source=stock[presets.col(f'File{i}')].replace(chr(92),'/')
+                data=boss_rooms._stock('global/tiles/'+source).read_bytes()
+                for _,_,s in exterior.warp_markers(data):
+                    stock_warps={int(r[levels.col(f'Warp{s}')]) for r in campaign if int(r[levels.col(f'Vis{s}')] or 0)}
+                    self.assertEqual(stock_warps,{warp},f"{theme['key']} {source} slot {s}")
+
     def test_entry_and_warden_markers_are_distinct(self):
         def slots(data):
             w,h,layers=exterior.wall_layers(data)
@@ -110,10 +135,11 @@ class ExteriorContract(unittest.TestCase):
                     if struct.unpack_from('<I',data,t+4*i)[0]&255 in (10,11)
                     and struct.unpack_from('<I',data,c+4*i)[0]>>20&63<8}
         tiles=gen.REPO/'data/global/tiles/Maps/Exterior'
-        for key,source in [('dunes',388),('highlands',24),('steppes',811)]:
+        for key,source in [('dunes',388),('highlands',52),('steppes',811)]:
             data=(tiles/f'{key}_{source}_1_exit.ds1').read_bytes()
             self.assertEqual(slots(data),{7})
-            self.assertNotIn(7,slots((tiles/f'{key}_{source}_1.ds1').read_bytes()))
+            plain=tiles/f'{key}_{source}_1.ds1'
+            if plain.exists():self.assertNotIn(7,slots(plain.read_bytes()))
         self.assertIn(6,slots((tiles/'travincal_657_1.ds1').read_bytes()))
         for variant in (1,2):
             self.assertEqual(slots((tiles/f'infernal_852_{variant}_entry.ds1').read_bytes()),{6})
