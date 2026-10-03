@@ -255,8 +255,7 @@ def gen_levels(plans: list[dict]) -> Table:
             body[c_type] = str(theme['body_level_type'])
         if exterior:
             width,height=theme['body_size']
-            set_cells(body,t,{'Depend':'0','OffsetX':str(1400+(p['body_id']-226)*40),'OffsetY':'1000',
-                             'SubWaypoint':'-1','SubShrine':'-1'})
+            set_cells(body,t,{'Depend':'0','SubWaypoint':'-1','SubShrine':'-1'})
             for suffix in ('','(N)','(H)'):
                 set_cells(body,t,{'SizeX'+suffix:str(width),'SizeY'+suffix:str(height)})
 
@@ -270,10 +269,57 @@ def gen_levels(plans: list[dict]) -> Table:
         })
         boss[vis[ret_slot]] = str(p["body_id"])
         boss[warp[ret_slot]] = str(ret_warp)
+        for row, (x, y) in ((body, world_offset(p, False)), (boss, world_offset(p, True))):
+            set_cells(row, t, {"OffsetX": str(x), "OffsetY": str(y)})
 
         t.append(body)
         t.append(boss)
+    check_world_layout(t)
     return t
+
+
+def world_offset(p: dict, arena: bool) -> tuple[int, int]:
+    """The map level's own cell in Act 5 (see MAP_WORLD_ORIGIN)."""
+    x0, y0 = cfg.MAP_WORLD_ORIGIN
+    index = (p["body_id"] - cfg.FIRST_LEVEL_ID) // 2
+    body_rows = -(-len(cfg.THEMES) * len(cfg.TIERS) // cfg.MAP_BODY_COLUMNS)
+    if not arena:
+        return (x0 + index % cfg.MAP_BODY_COLUMNS * cfg.MAP_BODY_CELL,
+                y0 + index // cfg.MAP_BODY_COLUMNS * cfg.MAP_BODY_CELL)
+    return (x0 + index % cfg.MAP_ARENA_COLUMNS * cfg.MAP_ARENA_CELL,
+            y0 + body_rows * cfg.MAP_BODY_CELL + index // cfg.MAP_ARENA_COLUMNS * cfg.MAP_ARENA_CELL)
+
+
+def level_rects(t: Table, act: str) -> list[tuple[str, int, int, int, int]]:
+    """(id, x, y, w, h) of every level of `act` with a fixed position. The
+    largest difficulty size counts. Offset -1 levels are placed at run time."""
+    out = []
+    for r in t.rows:
+        if r[t.col("Act")] != act or not r[t.col("Id")].isdigit():
+            continue
+        x, y = int(r[t.col("OffsetX")] or -1), int(r[t.col("OffsetY")] or -1)
+        w = max(int(r[t.col(c)] or 0) for c in ("SizeX", "SizeX(N)", "SizeX(H)"))
+        h = max(int(r[t.col(c)] or 0) for c in ("SizeY", "SizeY(N)", "SizeY(H)"))
+        if x >= 0 and y >= 0 and w > 0 and h > 0:
+            out.append((r[t.col("Id")], x, y, w, h))
+    return out
+
+
+def check_world_layout(t: Table) -> None:
+    """No map level may share coordinates with any other Act 5 level."""
+    ours = {str(p) for p in range(cfg.FIRST_LEVEL_ID, cfg.FIRST_LEVEL_ID + 2 * len(cfg.THEMES) * len(cfg.TIERS))}
+    rects = level_rects(t, "4")
+    placed = {r[0] for r in rects}
+    if missing := ours - placed:
+        raise SystemExit(f"map levels without a fixed world position: {sorted(missing, key=int)}")
+    for i, a in enumerate(rects):
+        for b in rects[i + 1:]:
+            if a[0] not in ours and b[0] not in ours:
+                continue
+            if a[1] < b[1] + b[3] and b[1] < a[1] + a[3] and a[2] < b[2] + b[4] and b[2] < a[2] + a[4]:
+                raise SystemExit(f"levels {a[0]} and {b[0]} overlap in Act 5: {a[1:]} vs {b[1:]}")
+        if a[0] in ours and max(a[1] + a[3], a[2] + a[4]) * 5 > 0xffff:
+            raise SystemExit(f"level {a[0]} lies past 16-bit subtile coordinates")
 
 
 # ---------------------------------------------------------------------------
@@ -884,6 +930,11 @@ def gen_plugin_header(plans: list[dict], path: Path, runtime: dict, write=True) 
     out.append('inline constexpr uint32_t MapBaseAutomapLayers[][2] = { ' + ', '.join(
         '{' + ','.join(map(str, layers)) + '}' for layers in runtime['automap_layers']) + ' };')
     out.append('inline constexpr uint16_t WardenMonsterIds[] = { ' + ', '.join(map(str, runtime['warden_ids'])) + ' };')
+    out.append('inline constexpr uint16_t WardenSuperUniqueIds[] = { ' + ', '.join(map(str, runtime['warden_super_ids'])) + ' };')
+    out.append('// Act 5 tile rectangles {x, y, w, h} of each map body and arena (OffsetX/Y, largest Size).')
+    out.append('struct WorldRect { int32_t x, y, w, h; };')
+    out.append('inline constexpr WorldRect MapWorldRects[][2] = { ' + ', '.join(
+        '{' + ', '.join('{%d,%d,%d,%d}' % tuple(r) for r in pair) + '}' for pair in runtime['world_rects']) + ' };')
     out.append("")
     out.append("}")
     out.append("")
@@ -939,6 +990,13 @@ def main() -> int:
     normal_shamans.generate(sys.modules[__name__], combat[-1], levels, runtime)
     import presentation
     assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1], runtime))
+    check_world_layout(levels)  # again, after the arena and exterior sizes are final
+    # A map reset clears the game's once-per-game superunique bit for the
+    # map's Warden and purges stored units inside the map's rectangles.
+    super_names = [r[rooms[2].col('Superunique')] for r in starter_events.native_rows(rooms[2])]
+    runtime['warden_super_ids'] = [super_names.index(f"rmap_{p['item_code']}_warden") for p in plans]
+    rects = {r[0]: r[1:] for r in level_rects(levels, "4")}
+    runtime['world_rects'] = [[rects[str(p[key])] for key in ('body_id', 'boss_id')] for p in plans]
     tables.extend(combat)
     tables.extend(rooms)
     tables.append(kit_missiles)

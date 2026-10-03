@@ -739,6 +739,17 @@ class MappingContract(unittest.TestCase):
                     for diff in ('', '(N)', '(H)'):
                         self.assertEqual(int(row[monsters.col('Level' + diff)]), 99 + int(row[0].split('_')[2]))
 
+    def test_every_map_level_owns_its_act_5_rectangle(self):
+        # Overlapping levels let a T1 arena's Warden show up in the T5 arena.
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            levels = gen.Table(bank / 'levels.txt')
+            gen.check_world_layout(levels)
+            for p in self.plans:
+                for lid, arena in ((p['body_id'], False), (p['boss_id'], True)):
+                    row = levels.find(levels.col('Id'), str(lid))
+                    self.assertEqual((int(row[levels.col('OffsetX')]), int(row[levels.col('OffsetY')])),
+                                     gen.world_offset(p, arena))
+
     def test_maps_have_independent_combat_population_and_persistent_kills(self):
         for p in self.plans:
             level = self.levels.find(self.levels.col("Id"), str(p["body_id"]))

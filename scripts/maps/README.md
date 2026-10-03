@@ -34,6 +34,15 @@ below); none clones a Labyrinth room any more.
 Every map level is Act 5 regardless of tileset so
 the Harrogath portal and town portals stay in one act.
 
+Every map level also owns its own rectangle of Act 5 (`MAP_WORLD_*` in
+`maps_config.py`). Bodies sit on a 220-tile grid from 400,4300, past the
+Labyrinth, and arenas sit on a 130-tile grid below them. Levels used to copy
+their template's OffsetX/OffsetY, so every tier of a theme overlapped (and
+overlapped a Labyrinth or stock level). The server stores an unloaded room's
+monsters and loot by world position, so a T1 Warden came back inside the T5
+arena. `check_world_layout` refuses any overlap. The plugin header carries the
+rectangles (`MapWorldRects`), because a reset purges stored units inside them.
+
 ### Where the portal lands
 
 The red portal drops the player in a room that owns a warp tile whose Vis

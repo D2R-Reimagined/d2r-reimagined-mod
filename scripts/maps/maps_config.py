@@ -38,6 +38,24 @@ FIRST_PREST_DEF = 1105
 AUTOMAP_LAYER_COUNT = 100
 
 # --------------------------------------------------------------------------
+# World placement
+# --------------------------------------------------------------------------
+# Every level of an act owns its own rectangle of the act's coordinate space
+# (OffsetX/OffsetY/Size, in tiles). Stock D2R never overlaps two of them (the
+# only exception is two Act 1 outdoor levels the engine places at run time).
+# Maps used to copy the template's offset, so every tier of a theme sat on the
+# same rectangle, which in turn sat on a Labyrinth or stock Act 5 level. With a
+# T1 and a T5 arena both loaded in one game, the T5 arena showed two Wardens.
+# Each map level now gets its own cell past the Labyrinth (which ends at
+# y 4137). Unit positions are 16-bit subtiles (5 per tile), so stay well under
+# 13107 tiles. generate_maps.py refuses any Act 5 overlap.
+MAP_WORLD_ORIGIN = (400, 4300)   # top-left of the first body cell
+MAP_BODY_CELL = 220              # bodies are at most 200x200 tiles
+MAP_BODY_COLUMNS = 20
+MAP_ARENA_CELL = 130             # arena templates are up to 120x120 (custom ones shrink to 23x23)
+MAP_ARENA_COLUMNS = 30
+
+# --------------------------------------------------------------------------
 # Tiers
 # --------------------------------------------------------------------------
 # Monster health and damage come from monlvl.txt rows 111-116, which the
