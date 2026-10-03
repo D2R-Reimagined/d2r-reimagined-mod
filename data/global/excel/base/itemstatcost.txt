@@ -35,8 +35,8 @@ armorclass_vs_missile	32		1	16											11	5		8	0	9	0																69	19		Mod
 armorclass_vs_hth	33		1	16											13	7		8	0	8	0																70	19		ModStr6b	ModStr6b										0
 normal_damage_reduction	34		1	10											188	200		6	0	6	0																22	19		ModStr2u	ModStr2u									2	0
 magic_damage_reduction	35		1	10											397	340		6	0	6	0																21	19		ModStr2t	ModStr2t									2	0
-damageresist	36		1	9											152	68		8	0	9	200																22	19		ModStr2uPercent	ModStr2uPercent									2	0
-magicresist	37		1	9											164	68		8	0	9	200																41	19		ModStr1m	ModStr1m									2	0
+damageresist	36		1	9											152	68		8	0	9	200																22	19		ModStr2uPercent	ModStr2uPercent		8	19		hpandpdrtr	hpandpdrtr			2	0
+magicresist	37		1	9											164	68		8	0	9	200																41	19		ModStr1m	ModStr1m		9	19		manaandmagstr	manaandmagstr			2	0
 maxmagicresist	38		1	9											1091	409		5	0	5	0																46	19		ModStr5x	ModStr5x									2	0
 fireresist	39		1	9											43	20		8	0	9	200																36	19		ModStr1j	ModStr1j		2	19		strModAllResistances	strModAllResistances				0
 maxfireresist	40		1	9											584	256		5	0	5	0																42	19		ModStr5u	ModStr5u		5	19		ModStrAllMaxRes	ModStrAllMaxRes				0
@@ -75,8 +75,8 @@ durability	72		1	9														8	0	9	0									1	maxdurability																	
 maxdurability	73		1	9											9	4		8	0	8	0																														0
 hpregen	74														451	410		6	30	6	30																56	19		ModStr2l	ModStr2w									2	0
 item_maxdurability_percent	75		1	7											117	10		7	20	7	20			13			maxdurability										3	19		ModStr2i	ModStr2i										0
-item_maxhp_percent	76		1	16											32093	204		6	10	6	10			11			maxhp										58	19		ModStr2g	ModStr2g										0
-item_maxmana_percent	77		1	16											56452	204		6	10	6	10			11			maxmana										54	19		ModStr2h	ModStr2h										0
+item_maxhp_percent	76		1	16											32093	204		6	10	6	10			11			maxhp										58	19		ModStr2g	ModStr2g		8	19		hpandpdrtr	hpandpdrtr				0
+item_maxmana_percent	77		1	16											56452	204		6	10	6	10			11			maxmana										54	19		ModStr2h	ModStr2h		9	19		manaandmagstr	manaandmagstr				0
 item_attackertakesdamage	78		1	16							1				112	128		7	0	7	0												attackedinmelee	6	damagedbymissile	6	13	19		ModStr1v	ModStr1v									2	0
 item_goldbonus	79		1	12											187	34		9	100	9	100																10	19		ModStr1w	ModStr1w									2	0
 item_magicbonus	80		1	12											577	102		8	100	9	100																8	19		ModStr1x	ModStr1x									2	0
