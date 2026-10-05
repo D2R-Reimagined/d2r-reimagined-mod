@@ -339,13 +339,15 @@ THEMES += [
 # required level.
 MAP_ITEM_LEVEL = {1: 70, 2: 76, 3: 81, 4: 84, 5: 87, 6: 90}
 
-# Supporting currency. These are plain misc items.
+# Supporting currency. These are plain misc items. `asset` names both the
+# inventory sprite (data/hd/global/ui/items/misc/<asset>[1-3][.lowend].sprite)
+# and the ground model (data/hd/items/misc/<asset>.json).
 CURRENCY = [
-    {"code": "mor", "name": "Horadric Orb",
+    {"code": "mor", "name": "Horadric Sextant", "asset": "map/horadric_sextant",
      "desc": "Upgrades a map to the next tier.", "level": 70},
-    {"code": "mws", "name": "Worldstone Shard",
+    {"code": "mws", "name": "Horadric Astrolabe", "asset": "map/horadric_astrolabe",
      "desc": "Corrupts a tier 5 map into tier 6.", "level": 87},
-    {"code": "mrl", "name": "Arcane Relic",
+    {"code": "mrl", "name": "Vizjerei Prism", "asset": "map/vizjerei_prism",
      "desc": "Rerolls the modifiers on a map.", "level": 70},
 ]
 

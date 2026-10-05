@@ -68,7 +68,10 @@ def generate(api, plans, monsters, runtime=None):
     item_path = api.REPO / 'data/hd/items/items.json'
     items = json.loads(item_path.read_text(encoding='utf-8-sig'))
     codes = {code for p in plans for code in (p['item_code'], cfg.expansion_code(p['item_code']))}
+    codes.update(cur['code'] for cur in cfg.CURRENCY)
     items = [entry for entry in items if not codes.intersection(entry)]
+    for cur in cfg.CURRENCY:
+        items.append({cur['code']: {'asset': cur['asset']}})
     for p in plans:
         code = p['item_code']
         items.append({code: {'asset': f'map/map_t{code[-1]}'}})

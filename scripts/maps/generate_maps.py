@@ -587,10 +587,11 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
 # ---------------------------------------------------------------------------
 # cubemain.txt
 #
-# Three recipe families, all plain TXT so they work with no plugin:
+# Four recipe families, all plain TXT so they work with no plugin:
 #   activate  map                     -> Red Portal to that theme+tier
-#   upgrade   map + Horadric Orb      -> the same theme one tier higher
-#   corrupt   T5 map + Worldstone Shard -> T6
+#   upgrade   map + Horadric Sextant  -> the same theme one tier higher
+#   reroll    map + Vizjerei Prism    -> the same map, modifiers rerolled
+#   corrupt   T5 map + Horadric Astrolabe -> T6
 # ---------------------------------------------------------------------------
 
 def gen_cubemain(plans: list[dict]) -> Table:

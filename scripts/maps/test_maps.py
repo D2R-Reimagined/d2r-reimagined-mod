@@ -654,30 +654,35 @@ class MappingContract(unittest.TestCase):
                 alpha = data[43::4]
                 self.assertEqual((min(alpha), max(alpha)), (0, 255))
 
-    def test_horadric_orb_has_dedicated_hd_sprite_and_ground_binding(self):
+    def test_currency_has_dedicated_hd_sprite_and_ground_binding(self):
         entries = json.loads((gen.REPO / 'data/hd/items/items.json').read_text())
         lookup = {code: value for entry in entries for code, value in entry.items()}
-        self.assertEqual(lookup['mor']['asset'], 'powerorbs/horadric_orb')
-        ground = gen.REPO / 'data/hd/items/misc/powerorbs/horadric_orb.json'
-        definition = json.loads(ground.read_text())
-        self.assertTrue(definition['dependencies']['models'])
         itemtypes = gen.Table(gen.EXCEL / 'itemtypes.txt')
         currency = itemtypes.find(itemtypes.col('Code'), 'mcur')
         variants = int(currency[itemtypes.col('VarInvGfx')])
         self.assertEqual(variants, 3)
-        # Runtime requests numbered variants 1..VarInvGfx, including orb1.
-        # Keep the unnumbered fallback and make every variant visually identical.
-        for variant in ('', *(str(i) for i in range(1, variants + 1))):
-            for size, suffix in ((98, ''), (49, '.lowend')):
-                sprite = gen.REPO / f'data/hd/global/ui/items/misc/powerorbs/horadric_orb{variant}{suffix}.sprite'
-                data = sprite.read_bytes()
-                fallback = gen.REPO / f'data/hd/global/ui/items/misc/powerorbs/horadric_orb{suffix}.sprite'
-                self.assertEqual(data, fallback.read_bytes())
-                self.assertEqual(struct.unpack('<4sHH8I', data[:40]),
-                                 (b'SpA1', 31, size, size, size, 0, 1, 0, 0, size*size*4, 4))
-                self.assertEqual(len(data), 40+size*size*4)
-                alpha = data[43::4]
-                self.assertEqual((min(alpha), max(alpha)), (0, 255))
+        for cur in cfg.CURRENCY:
+            asset = cur['asset']
+            self.assertEqual(lookup[cur['code']]['asset'], asset)
+            ground = gen.REPO / f'data/hd/items/misc/{asset}.json'
+            definition = json.loads(ground.read_text())
+            self.assertTrue(definition['dependencies']['models'])
+            # Runtime requests numbered variants 1..VarInvGfx. Keep the
+            # unnumbered fallback and make every variant visually identical.
+            for variant in ('', *(str(i) for i in range(1, variants + 1))):
+                for size, suffix in ((98, ''), (49, '.lowend')):
+                    sprite = gen.REPO / f'data/hd/global/ui/items/misc/{asset}{variant}{suffix}.sprite'
+                    data = sprite.read_bytes()
+                    fallback = gen.REPO / f'data/hd/global/ui/items/misc/{asset}{suffix}.sprite'
+                    self.assertEqual(data, fallback.read_bytes())
+                    # The trailing size/stride words are optional; both forms load.
+                    self.assertEqual(struct.unpack('<4sHH6I', data[:32]),
+                                     (b'SpA1', 31, size, size, size, 0, 1, 0, 0))
+                    self.assertEqual(len(data), 40+size*size*4)
+                    # Supplied art can peak just short of full opacity.
+                    alpha = data[43::4]
+                    self.assertEqual(min(alpha), 0)
+                    self.assertGreaterEqual(max(alpha), 250)
 
     def test_native_rare_quality_pool_does_not_grant_carried_stats(self):
         for kind in ('prefix', 'suffix'):
