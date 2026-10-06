@@ -524,6 +524,9 @@ def gen_misc(plans: list[dict]) -> Table:
              MAP_ITEM_TYPE)
     for cur in cfg.CURRENCY:
         make(cur["code"], cur["name"], cur["code"], cur["level"], MAP_CURRENCY_TYPE)
+        # Usage tooltip under the name, the same way the crafting orbs do it.
+        desc = cfg.currency_desc_key(cur["code"])
+        set_cells(t.rows[-1], t, {"spelldesc": "2", "spelldescstr": desc, "spelldescstr2": desc})
     for p in plans:
         make(cfg.expansion_code(p["item_code"]),
              f"{p['theme']['name']} T{p['tier']} V2", cfg.expansion_code(p["item_code"]),
@@ -767,6 +770,7 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
 
     items = load_strings("item-names.json")
     known = {code for p in plans for code in (p["item_code"], cfg.expansion_code(p["item_code"]))} | {c["code"] for c in cfg.CURRENCY}
+    known.update(cfg.currency_desc_key(c["code"]) for c in cfg.CURRENCY)
     quality_names = {f"{cfg.AFFIX_TAG}_quality_prefix": "Charted",
                      f"{cfg.AFFIX_TAG}_quality_suffix": "of Exploration"}
     known.update(quality_names)
@@ -786,6 +790,11 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
         next_id += 1
     for key, text in quality_names.items():
         items.append(string_entry(next_id, key, text))
+        next_id += 1
+    for cur in cfg.CURRENCY:
+        # Tooltips stack lines bottom-up, so store them in reverse order.
+        items.append(string_entry(next_id, cfg.currency_desc_key(cur["code"]),
+                                  "ÿc4" + "\n".join(reversed(cur["desc"]))))
         next_id += 1
     out["item-names.json"] = items
     monsters = [e for e in load_strings("monsters.json") if not e.get("Key", "").startswith("RMapEvent")]
