@@ -165,6 +165,13 @@ def gen_levels(plans: list[dict]) -> Table:
         siblings = [r for r in t.rows
                     if r[c_type] == body_tpl[c_type] and r[c_drlg] == "1"
                     and not r[c_name].startswith(cfg.ROW_TAG)]
+        # The arena answers with a single return warp. A second exit into it
+        # has no room on the arena side and the client asserts
+        # hDungeonRoomOther as soon as the cursor touches that tile.
+        if len(theme["body_exits"]) != 1:
+            raise SystemExit(
+                f"theme {theme['key']}: body_exits must be exactly one warp; the "
+                f"arena has one return, so another way in crashes the client")
         entry_slot, entry_warp = theme["body_entry"]
         if entry_slot in {slot for slot, _ in theme["body_exits"]}:
             raise SystemExit(

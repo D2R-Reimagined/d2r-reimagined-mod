@@ -94,8 +94,12 @@ MONLVL_FLAT_XP = True
 #
 #   body_template   maze level (DrlgType 1) whose layout and tileset the body
 #                   reuses. lvlmaze.txt must carry a row for it.
-#   body_exits      (Vis slot, lvlwarp id) pairs that become the stairs down
-#                   into the arena. Maze DRLG only places a warp piece when the
+#   body_exits      (Vis slot, lvlwarp id) pair that becomes the stairs down
+#                   into the arena. Exactly one: the arena has a single return
+#                   warp, and a second way in has no room on the arena side,
+#                   which asserts hDungeonRoomOther in the client on mouse-over
+#                   (Frozen Depths, 2026-10-06). Maze DRLG only places a warp
+#                   piece when the
 #                   tileset ships one for that slot, so these are taken from a
 #                   stock level with the same transition, not invented.
 #
@@ -232,10 +236,13 @@ THEMES = [
         "name": "Frozen Depths",
         "body_template": 159,    # Forsaken Labyrinth 21, LevelType 33 maze
         # Ice assigns Prev, then Next, then Down, so the portal lands in the
-        # Prev room. Both ways down lead to the arena: left dead, the Next
-        # room's stairs looked like the arena entrance and could not be
-        # clicked (seen in game, 2026-09-30).
-        "body_exits": [(1, 74), (2, 75)],   # Ice Caves Down stairs, Down Floor
+        # Prev room and the arena keeps the Down floor warp. Next stays dead:
+        # its stairs look like a way down but cannot be clicked. Linking them
+        # into the arena too (2026-09-30) crashed the client on hover with
+        # BC_ASSERT hDungeonRoomOther (DrlgRoom.cpp:765, 2026-10-06): the
+        # arena has one return warp, so the second way in had no room on the
+        # other side. Every exit needs its own return in the destination.
+        "body_exits": [(2, 75)], # Act 5 Ice Caves Down Floor
         "body_entry": (0, 73),   # Act 5 Ice Caves Up: the Prev room's stairs
         # The Warden's glacier hall is purpose-built (arenas.py), 20x20 in the
         # Ice Caves tileset. Level 160 only supplies the row: LevelType 33,

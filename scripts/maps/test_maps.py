@@ -955,6 +955,9 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(boss[self.levels.col('Act')], '4')
             exits = {(i, int(body[warp[i]])) for i in range(8) if body[vis[i]] == str(p['boss_id'])}
             self.assertEqual(exits, set(theme['body_exits']))
+            # One way in per return warp: a second exit into the one-return
+            # arena crashed the client on hover (Frozen Depths, 2026-10-06).
+            self.assertEqual(len(exits), 1)
             # The entry stairs are a live warp that points at the body itself:
             # that is what makes the portal land there instead of at the
             # arena stairs. Nothing else may link out of the body.
