@@ -1,0 +1,108 @@
+{
+  "dependencies": {
+    "particles": [],
+    "models": [
+      {
+        "path": "data/hd/items/misc/charm/charm_small/charm_small.model"
+      }
+    ],
+    "skeletons": [
+      {
+        "path": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+      }
+    ],
+    "animations": [],
+    "textures": [
+      {
+        "path": "data/hd/items/misc/charm/charm_small/misc_charm_small_ALB.texture"
+      },
+      {
+        "path": "data/hd/items/misc/charm/charm_small/misc_charm_small_NRM.texture"
+      },
+      {
+        "path": "data/hd/items/misc/charm/charm_small/misc_charm_small_ORM.texture"
+      }
+    ],
+    "physics": [],
+    "json": [
+      {
+        "path": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json"
+      }
+    ],
+    "variantdata": [],
+    "objecteffects": [],
+    "other": []
+  },
+  "type": "UnitDefinition",
+  "name": "charm_small",
+  "entities": [
+    {
+      "type": "Entity",
+      "name": "entity_root",
+      "id": 713262390,
+      "components": [
+        {
+          "type": "UnitRootComponent",
+          "name": "component_root",
+          "state_machine_filename": "data/hd/items/dropped_items/dropped_items_helms_flip_ne.json",
+          "doNotInheritRotation": false,
+          "rotationOverride": {
+            "x": 0,
+            "y": 0.3826834,
+            "z": 0,
+            "w": 0.9238795
+          },
+          "doNotUseHDHeight": false,
+          "hideAllMeshWhenInOpenedMode": false,
+          "onCreateEventName": "",
+          "animations": []
+        },
+        {
+          "type": "SkeletonDefinitionComponent",
+          "name": "component_skeleton",
+          "filename": "data/hd/items/dropped_items/skeleton/dropped_items.skeleton"
+        },
+        {
+          "type": "TransformDefinitionComponent",
+          "name": "entity_root_TransformDefinition",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": -0.398749083,
+            "z": 0,
+            "w": 0.9170601
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "inheritOnlyPosition": false
+        }
+      ]
+    },
+    {
+      "type": "Entity",
+      "name": "entity_model",
+      "id": 996691434,
+      "components": [
+        {
+          "type": "ModelDefinitionComponent",
+          "name": "component_model_charm_small",
+          "filename": "data/hd/items/misc/charm/charm_small/charm_small.model",
+          "visibleLayers": 1,
+          "lightMask": 19,
+          "shadowMask": 3,
+          "ghostShadows": false,
+          "floorModel": false,
+          "terrainBlendEnableYUpBlend": false,
+          "terrainBlendMode": 1
+        }
+      ]
+    }
+  ]
+}
