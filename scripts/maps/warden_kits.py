@@ -48,17 +48,23 @@ class Kit:
         self.sources[name] = source
 
 
-def layout(api, monsters, boss, ai, slots, aips):
+def layout(api, monsters, boss, ai, slots, aips, speed=None, aidel=None):
     """Give `boss` the AI, exactly the Skill slots in `slots` ({slot: (skill,
     mode, level)}) and aip1-8 for every difficulty (None keeps the row's
     own). The death portal the boss rooms placed is kept in the slot the
-    caller names for it."""
+    caller names for it. `speed` (Velocity, Run) and `aidel` override what
+    the Warden inherited from its population row (maps_config.AI_PROFILES),
+    which already carries the Labyrinth engage distance."""
     cells = {'AI': ai}
     for i in range(1, 9):
         skill, mode, level = slots.get(i, ('', '', ''))
         cells.update({f'Skill{i}': skill, f'Sk{i}mode': mode, f'Sk{i}lvl': str(level)})
     for i, value in enumerate(aips or (), 1):
         cells.update({f'aip{i}{diff}': str(value) for diff in ('', '(N)', '(H)')})
+    if speed:
+        cells.update({'Velocity': str(speed[0]), 'Run': str(speed[1])})
+    if aidel:
+        cells.update({f'aidel{diff}': str(aidel) for diff in ('', '(N)', '(H)')})
     api.set_cells(boss, monsters, cells)
 
 

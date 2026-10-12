@@ -230,6 +230,55 @@ class MappingContract(unittest.TestCase):
                 for mode in modes:
                     self.assertTrue(frames.get(f'{token}{mode}{weapon}'), f'{token}{mode}{weapon} has no action frame')
 
+    def test_map_monsters_fight_like_the_labyrinth(self):
+        # 2026-10-12: map monsters and Wardens "derped out" on stock Hell AI.
+        # Every population row engages from the Labyrinth's distance, carries
+        # its AI profile and never moves slower than its archetype.
+        lookup = {r[self.monsters.col('Id')]: r for r in self.monsters.rows}
+        col = self.monsters.col
+        archetypes = {c for codes in cfg.MAP_MONSTERS.values() for c in codes}
+        archetypes |= {c for c in cfg.EXPANSION_POPULATIONS if c}
+        # Exactly the AIs in use: a new archetype needs a deliberate profile.
+        self.assertEqual(set(cfg.AI_PROFILES), {lookup[c][col('AI')] for c in archetypes})
+        for p in self.plans:
+            rows = [(f"rmap_{p['item_code']}_{i}", source)
+                    for i, source in enumerate(cfg.MAP_MONSTERS[p['theme']['key']])]
+            rows += [(f"rmap_v2_{p['item_code']}_{n}", source)
+                     for n, source in enumerate(cfg.EXPANSION_POPULATIONS) if source]
+            rows.append((f"rmap_{p['item_code']}_boss", cfg.warden_body(p['theme']['key'])))
+            for name, source in rows:
+                row, stock = lookup[name], lookup[source]
+                for diff in ('', '(N)', '(H)'):
+                    self.assertEqual(row[col(f'aidist{diff}')], str(cfg.MAP_AIDIST), name)
+                for stem in ('Velocity', 'Run'):
+                    self.assertGreaterEqual(int(row[col(stem)]), int(stock[col(stem)] or 0), name)
+                if name.endswith('_boss'):
+                    continue  # the Warden kit owns its aip
+                profile = cfg.AI_PROFILES[stock[col('AI')]]
+                for stem, floor in zip(('Velocity', 'Run'), profile['speed']):
+                    self.assertGreaterEqual(int(row[col(stem)]), floor, name)
+                for i in range(1, 9):
+                    expected = profile['aip'].get(i)
+                    for diff in ('', '(N)', '(H)'):
+                        self.assertEqual(row[col(f'aip{i}{diff}')],
+                                         stock[col(f'aip{i}{diff}')] if expected is None else str(expected),
+                                         f'{name} aip{i}{diff}')
+
+    def test_warden_skill_timers_stay_short(self):
+        # The first kits waited 75-375 frames between casts, so Wardens spent
+        # most of a fight walking. Labyrinth bosses wait 20-30. These are the
+        # aip slots D2R's monai.txt documents as delays or intervals.
+        timers = {'Summoner': (4, 5), 'ZakarumPriest': (5,), 'HighPriest': (3,),
+                  'AbyssKnight': (4, 6), 'PinHead': (2, 4), 'CorruptArcher': (3,)}
+        col = self.monsters.col
+        wardens = [r for r in self.monsters.rows
+                   if r[col('Id')].startswith('rmap_') and r[col('Id')].endswith('_boss')]
+        self.assertEqual(len(wardens), len(self.plans))
+        for row in wardens:
+            for i in timers.get(row[col('AI')], ()):
+                for diff in ('', '(N)', '(H)'):
+                    self.assertLessEqual(int(row[col(f'aip{i}{diff}')] or 0), 100, f'{row[0]} aip{i}{diff}')
+
     def test_infernal_warden_is_a_balrog_on_the_vampire_ai(self):
         import infernal
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):

@@ -34,18 +34,20 @@ WRATH = 'rmap_heavens_wrath'
 WRATH_STRIKE = 'rmap_wrath_strike'
 WRATH_BOLT = 'rmap_wrath_bolt'
 
-# Tier: (Heaven's Wrath in the kit, aip4 Wrath chance, skill delay aip3 in frames).
+# Tier: (Heaven's Wrath in the kit, aip4 Wrath chance, skill delay aip3 in
+# frames). The first kit idled 100-75 frames after every skill;
+# labcouncilmember uses 30 (2026-10-12).
 TIERS = {
-    1: (False, 0, 100), 2: (False, 0, 100),
-    3: (True, 30, 90), 4: (True, 30, 90),
-    5: (True, 35, 75), 6: (True, 35, 75),
+    1: (False, 0, 40), 2: (False, 0, 40),
+    3: (True, 30, 35), 4: (True, 30, 35),
+    5: (True, 35, 30), 6: (True, 35, 30),
 }
 JUMPS = '(lvl < 5) ? 3 : 5'   # Judgment chain hits, level = tier
 WRATH_DELAY = 20              # frames before the strike lands (stock 10)
 MELEE_CHANCE = 60      # aip1
 JUDGMENT_CHANCE = 35   # aip2
 RANGED_SKILL = 60      # aip5
-RUN_AWAY = 10          # aip6
+RUN_AWAY = 5           # aip6 (was 10)
 MELEE_SKILL = 30       # aip7
 APPROACH_RANGE = 30    # aip8
 

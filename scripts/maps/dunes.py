@@ -41,17 +41,19 @@ SPRAY_BOLT = 'rmap_static_bolt'
 PULSE = 'rmap_scorch_pulse'
 PULSE_RING = 'rmap_scorch_ring'
 
-# Tier: (spells in the kit, aip2 use-skill chance).
+# Tier: (spells in the kit, aip2 use-skill chance). Raised by 20 toward
+# labvampire's 100 (2026-10-12), as on the Infernal Warden.
 TIERS = {
-    1: ((SUNFALL,), 30), 2: ((SUNFALL,), 30),
-    3: ((SUNFALL, SPRAY), 35), 4: ((SUNFALL, SPRAY), 35),
-    5: ((SUNFALL, SPRAY, PULSE), 40), 6: ((SUNFALL, SPRAY, PULSE), 40),
+    1: ((SUNFALL,), 50), 2: ((SUNFALL,), 50),
+    3: ((SUNFALL, SPRAY), 55), 4: ((SUNFALL, SPRAY), 55),
+    5: ((SUNFALL, SPRAY, PULSE), 60), 6: ((SUNFALL, SPRAY, PULSE), 60),
 }
 SLOTS = {SUNFALL: SUNFALL_SLOT, SPRAY: SPRAY_SLOT, PULSE: PULSE_SLOT}
 SPRAY_BOLTS = '(lvl < 5) ? 4 : 6'   # calc1, level = tier
 MELEE_CHANCE = 80      # aip1
-ACTIVE_RANGE = 24      # aip3, the Infernal Warden's
+ACTIVE_RANGE = 40      # aip3, the Infernal Warden's (labvampire's)
 SPELL_CHANCE = 50      # aip4
+SPEED = (10, 10)       # Velocity/Run; the stock scarab walks at 6
 
 # Lightning damage per hit (HitShift 8, whole), level = tier.
 SUNFALL_DAMAGE = dict(min=120, max=220, per_level=(20, 35))
@@ -97,4 +99,5 @@ def generate(api, plans, kit, monsters):
         slots[DEATH_SLOT] = (warden_kits.death_skill(monsters, boss), 'DT', 1)
         flags = sum(FLAGS[SLOTS[s]] for s in spells)
         warden_kits.layout(api, monsters, boss, AI, slots,
-                           (MELEE_CHANCE, use_skill, ACTIVE_RANGE, SPELL_CHANCE, flags, '', '', ''))
+                           (MELEE_CHANCE, use_skill, ACTIVE_RANGE, SPELL_CHANCE, flags, '', '', ''),
+                           speed=SPEED)

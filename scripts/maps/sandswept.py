@@ -36,17 +36,19 @@ SANDSTORM_DEVIL = 'rmap_sandstorm_devil'
 RUSH = 'SerpentCharge'
 
 # Tier: (Rush in the kit, aip2 use-skill chance). Sandstorm fans three devils
-# from tier 5 (calc1, level = tier).
+# from tier 5 (calc1, level = tier). Raised by 20 toward labvampire's 100
+# (2026-10-12), as on the Infernal Warden. The viper's speed comes from the
+# population row (AI_PROFILES ClawViper, labviper's 10/14).
 TIERS = {
-    1: (False, 30), 2: (False, 30),
-    3: (True, 35), 4: (True, 35),
-    5: (True, 40), 6: (True, 40),
+    1: (False, 50), 2: (False, 50),
+    3: (True, 55), 4: (True, 55),
+    5: (True, 60), 6: (True, 60),
 }
 DEVILS = '(lvl < 5) ? 2 : 3'
 DEVIL_SPEED = 6        # stock 10: slow enough to walk between
 DEVIL_FRAMES = 80      # stock 50
 MELEE_CHANCE = 80      # aip1
-ACTIVE_RANGE = 24      # aip3, the Infernal Warden's
+ACTIVE_RANGE = 40      # aip3, the Infernal Warden's (labvampire's)
 SPELL_CHANCE = 50      # aip4
 
 # Physical damage per devil hit (HitShift 8, whole), level = tier. The stock

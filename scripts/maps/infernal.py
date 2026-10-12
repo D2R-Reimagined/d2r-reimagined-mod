@@ -44,15 +44,18 @@ BRIMSTONE_FIRE = 'rmap_brimstone_fire'
 
 # Tier: (spells in the kit, aip2 use-skill chance). Tiers 1-2 teach Brimstone,
 # 3-4 add Hellfire Bolt, 5-6 add Magma Rift and cast a little more often.
+# labvampire uses a skill on every roll; 30-40 left the Warden walking at
+# players most of the fight, so these were raised by 20 (2026-10-12).
 TIERS = {
-    1: ((BRIMSTONE,), 30), 2: ((BRIMSTONE,), 30),
-    3: ((BRIMSTONE, HELLFIRE), 35), 4: ((BRIMSTONE, HELLFIRE), 35),
-    5: ((BRIMSTONE, HELLFIRE, MAGMA), 40), 6: ((BRIMSTONE, HELLFIRE, MAGMA), 40),
+    1: ((BRIMSTONE,), 50), 2: ((BRIMSTONE,), 50),
+    3: ((BRIMSTONE, HELLFIRE), 55), 4: ((BRIMSTONE, HELLFIRE), 55),
+    5: ((BRIMSTONE, HELLFIRE, MAGMA), 60), 6: ((BRIMSTONE, HELLFIRE, MAGMA), 60),
 }
 SLOTS = {HELLFIRE: HELLFIRE_SLOT, MAGMA: MAGMA_SLOT, BRIMSTONE: BRIMSTONE_SLOT}
 MELEE_CHANCE = 80      # aip1
-ACTIVE_RANGE = 24      # aip3, stock vampire6 value
+ACTIVE_RANGE = 40      # aip3, labvampire's (stock vampire6 24)
 SPELL_CHANCE = 50      # aip4
+SPEED = (14, 16)       # Velocity/Run, labbalrog's
 
 # Fire damage, level = tier. HitShift 8 values are whole life; the ground fire
 # (HitShift 3) and the wall (HitShift 2) deal their value / 32 and / 64 every
@@ -107,4 +110,5 @@ def generate(api, plans, kit, monsters):
         slots[DEATH_SLOT] = (warden_kits.death_skill(monsters, boss), 'DT', 1)
         flags = sum(FLAGS[SLOTS[s]] for s in spells)
         warden_kits.layout(api, monsters, boss, AI, slots,
-                           (MELEE_CHANCE, use_skill, ACTIVE_RANGE, SPELL_CHANCE, flags, '', '', ''))
+                           (MELEE_CHANCE, use_skill, ACTIVE_RANGE, SPELL_CHANCE, flags, '', '', ''),
+                           speed=SPEED)

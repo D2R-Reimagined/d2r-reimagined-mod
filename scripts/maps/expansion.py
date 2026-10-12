@@ -51,6 +51,7 @@ def generate(api, plans, monsters, props, runtime):
                 for kind in ('', 'Champ', 'Unique', 'Quest', 'Desecrated',
                              'DesecratedChamp', 'DesecratedUnique', 'Herald'):
                     row[monsters.col('TreasureClass' + kind + diff)] = endgame.monster_class(p, bool(kind))
+            endgame.apply_ai_profile(api, monsters, row)
             monsters.append(row)
             sources[name] = source
             replaced[population] = index

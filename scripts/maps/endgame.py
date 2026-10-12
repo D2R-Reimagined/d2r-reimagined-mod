@@ -18,6 +18,19 @@ def monster_class(p, elite):
     return elite_class(p) if elite else f"RMap T{p['tier']} Normal"
 
 
+def apply_ai_profile(api, monsters, row):
+    """Give a map population row the Labyrinth-style AI of cfg.AI_PROFILES:
+    the engage distance, the per-AI aip overrides and the speed floors."""
+    profile = cfg.AI_PROFILES[row[monsters.col("AI")]]
+    cells = {}
+    for diff in ("", "(N)", "(H)"):
+        cells[f"aidist{diff}"] = str(cfg.MAP_AIDIST)
+        cells.update({f"aip{i}{diff}": str(value) for i, value in profile["aip"].items()})
+    for col, floor in zip(("Velocity", "Run"), profile["speed"]):
+        cells[col] = str(max(int(row[monsters.col(col)] or 0), floor))
+    api.set_cells(row, monsters, cells)
+
+
 def generate(api, plans, levels):
     Table, set_cells, EXCEL = api.Table, api.set_cells, api.EXCEL
     skills = Table(EXCEL / "skills.txt")
@@ -218,6 +231,7 @@ def generate(api, plans, levels):
                 for kind in ("", "Champ", "Unique", "Quest", "Desecrated",
                              "DesecratedChamp", "DesecratedUnique", "Herald"):
                     row[monsters.col("TreasureClass" + kind + diff)] = monster_class(p, bool(kind))
+            apply_ai_profile(api, monsters, row)
             monsters.append(row)
         body = levels.find(levels.col("Id"), str(p["body_id"]))
         for group in ("mon", "nmon", "umon"):

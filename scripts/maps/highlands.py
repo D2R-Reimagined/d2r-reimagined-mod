@@ -16,7 +16,7 @@ skills from all three slots with the bow shot (A1, action frame 5).
 Both skills clone labMonColdArrow (srvstfunc 4, srvdofunc 8: calc1 arrows,
 the same shoot-missile function as Blight Bolt) and only swap the arrow and
 its damage. Between skills she shoots her normal arrow (MissA1). The fight is
-reaching her through the escort while she backs away. Might, the random
+reaching her through the escort while she holds her ground. Might, the random
 stomp proc and the stun melee are gone. The DT-mode portal sits in Skill8.
 """
 import warden_kits
@@ -38,10 +38,15 @@ TIERS = {
     5: (True, 35), 6: (True, 35),
 }
 VOLLEY_ARROWS = '(lvl < 5) ? 3 : 5'   # calc1, level = tier
-APPROACH = 60          # aip1
-USE_SKILL = 35         # aip2; otherwise her plain arrow
-AI_DELAY = 10          # aip3
-RUN_AWAY = 50          # aip4
+# The first kit approached 60% and ran away 50%, so she spent the fight
+# stepping in and out instead of shooting. labcorruptarcher stands its ground
+# (approach 1, skill 99, run away 10, delay 6); she now holds her spot and
+# volleys, still backing off sometimes when a player is on top of her
+# (2026-10-12).
+APPROACH = 20          # aip1 (was 60)
+USE_SKILL = 60         # aip2; otherwise her plain arrow (was 35)
+AI_DELAY = 6           # aip3, labcorruptarcher's (was 10)
+RUN_AWAY = 10          # aip4, labcorruptarcher's (was 50)
 RUN_RANGE = 15         # aip5
 APPROACH_RANGE = 20    # aip8
 

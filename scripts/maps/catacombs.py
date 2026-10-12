@@ -35,19 +35,24 @@ CURSE = 'Lower Resist'
 
 # Tier: (Plague Pulse interval, Miasma interval or None, curse level or None).
 # Intervals are frames (25 per second). Tiers 1-2 teach the pulse and bolt,
-# 3-4 add Miasma, 5-6 add the curse and trim both cooldowns by about 15%.
+# 3-4 add Miasma, 5-6 add the curse and shorten both timers. The first kit
+# pulsed every 300-215 frames and cast on 70% of turns, so it spent most of
+# the fight walking; labsummoner pulses every 20 frames and always casts.
+# These sit between: every 3.6 s at tier 1, 2.4 s at tier 5 (2026-10-12).
 TIERS = {
-    1: (300, None, None), 2: (300, None, None),
-    3: (250, 225, None), 4: (250, 225, None),
-    5: (215, 190, 1), 6: (215, 190, 2),
+    1: (90, None, None), 2: (90, None, None),
+    3: (75, 75, None), 4: (75, 75, None),
+    5: (60, 60, 1), 6: (60, 60, 2),
 }
 BOLT_FAN_TIER = 4      # Blight Bolt fires three bolts from this tier (level = tier)
-CAST_CHANCE = 70       # aip1
-CURSE_CHANCE = 10      # aip2, only where the curse slot is filled
+CAST_CHANCE = 100      # aip1, labsummoner's
+CURSE_CHANCE = 15      # aip2, only where the curse slot is filled
 PREFER_COLD = 50       # aip3; every skill here is poison, so it only orders slots
-RUN_AWAY_CHANCE = 15   # aip6
+RUN_AWAY_CHANCE = 5    # aip6
 NOVA_RANGE = 10        # aip7; the pulse only reaches about 7 subtiles
 MISSILE_RANGE = 40     # aip8, stock Summoner value
+SPEED = (10, 10)       # Velocity/Run, labsummoner's (the mummy body walks at 5)
+AI_DELAY = 10          # aidel, labsummoner's (stock 13)
 
 # Poison is dealt per frame: with HitShift 4 each point is 1/16 life a frame,
 # so the pulse is 300-375 over 3 s at tier 1 and ~490-560 at tier 6.
@@ -108,4 +113,5 @@ def generate(api, plans, kit, monsters):
             slots[CURSE_SLOT] = (CURSE, CAST, curse_level)
         warden_kits.layout(api, monsters, boss, AI, slots, (
             CAST_CHANCE, CURSE_CHANCE if curse_level else 0, PREFER_COLD, nova_interval,
-            miasma_interval or 0, RUN_AWAY_CHANCE, NOVA_RANGE, MISSILE_RANGE))
+            miasma_interval or 0, RUN_AWAY_CHANCE, NOVA_RANGE, MISSILE_RANGE),
+            speed=SPEED, aidel=AI_DELAY)

@@ -33,19 +33,21 @@ SLAM = 'rmap_seismic_slam'
 WAVE = 'rmap_rift_wave'
 WAVE_MISSILE = 'rmap_rift_wave_m'
 
-# Tier: (Rift Wave in the kit, aip5 slam chance, aip6 wave chance).
+# Tier: (Rift Wave in the kit, aip5 slam chance, aip6 wave chance). Raised by
+# 10 on 2026-10-12 so the Warden uses its kit more than its plain swing.
 TIERS = {
-    1: (False, 20, 0), 2: (False, 20, 0),
-    3: (True, 20, 15), 4: (True, 20, 15),
-    5: (True, 25, 20), 6: (True, 25, 20),
+    1: (False, 30, 0), 2: (False, 30, 0),
+    3: (True, 30, 25), 4: (True, 30, 25),
+    5: (True, 35, 30), 6: (True, 35, 30),
 }
 WAVES = '(lvl < 5) ? 5 : 7'   # calc1, level = tier: five waves, seven from tier 5
 WAVE_SPEED = 12               # stock 20: slow enough to step between
 WAVE_FRAMES = 30              # stock 8: rolls out across the arena
 ACT = 90                      # aip1
-ATTACK_DELAY = 10             # aip2
-APPROACH = 95                 # aip3
-AI_DELAY = 8                  # aip4
+ATTACK_DELAY = 7              # aip2, stock Blunderbore (was 10)
+APPROACH = 100                # aip3
+AI_DELAY = 5                  # aip4, stock Blunderbore (was 8)
+# Speed comes from the population row (AI_PROFILES Skeleton, labcow's 12).
 
 # Physical damage (whole), level = tier.
 SLAM_DAMAGE = dict(min=400, max=600, per_level=(60, 90))

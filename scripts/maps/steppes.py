@@ -31,18 +31,21 @@ SKULL = 'rmap_ash_skull'
 SKULL_MISSILE = 'rmap_ash_skull_m'
 WARD = 'rmap_ash_ward'
 
-# Tier: (ward life % threshold or None, aip6 skull delay in frames).
+# Tier: (ward life % threshold or None, aip6 skull delay in frames). The first
+# kit waited 100-75 frames between skulls; 40-30 matches the skill delays of
+# labcouncilmember and the other Wardens (2026-10-12).
 TIERS = {
-    1: (None, 100), 2: (None, 100),
-    3: (50, 90), 4: (50, 90),
-    5: (60, 75), 6: (60, 75),
+    1: (None, 40), 2: (None, 40),
+    3: (50, 35), 4: (50, 35),
+    5: (60, 30), 6: (60, 30),
 }
 WARD_CHANCE = 5        # aip2, only where the ward is in the kit
 MELEE_CHANCE = 80      # aip3
 MELEE_DELAY = 5        # aip4, stock
 SKULL_RANGE = 20       # aip5 (stock 5 keeps the knight in melee)
-APPROACH = 70          # aip7
-CIRCLE = 20            # aip8
+APPROACH = 100         # aip7 (was 70)
+CIRCLE = 5             # aip8 (was 20)
+SPEED = (10, 14)       # Velocity/Run, laboblivionknight's 10/15 (stock 7)
 
 # Ward pool in life: Param1 + (level - 1) x Param2, level = tier.
 WARD_POOL = (1000, 250)
@@ -74,4 +77,4 @@ def generate(api, plans, kit, monsters):
                  DEATH_SLOT: (warden_kits.death_skill(monsters, boss), 'DT', 1)}
         warden_kits.layout(api, monsters, boss, AI, slots, (
             ward or 0, WARD_CHANCE if ward else 0, MELEE_CHANCE, MELEE_DELAY,
-            SKULL_RANGE, skull_delay, APPROACH, CIRCLE))
+            SKULL_RANGE, skull_delay, APPROACH, CIRCLE), speed=SPEED)

@@ -34,11 +34,13 @@ DIVIDE = 'rmap_burning_divide'
 DIVIDE_MAKER = 'rmap_divide_maker'
 DIVIDE_WALL = 'rmap_divide_wall'
 
-# Tier: (Flame Sentinel in the kit, skill delay aip3 in frames).
+# Tier: (Flame Sentinel in the kit, skill delay aip3 in frames). The first
+# kit idled 100-75 frames (3-4 s) after every skill; labcouncilmember uses 30
+# (2026-10-12).
 TIERS = {
-    1: (False, 100), 2: (False, 100),
-    3: (True, 90), 4: (True, 90),
-    5: (True, 75), 6: (True, 75),
+    1: (False, 40), 2: (False, 40),
+    3: (True, 35), 4: (True, 35),
+    5: (True, 30), 6: (True, 30),
 }
 SENTINEL_MAX = '(lvl < 5) ? 1 : 2'    # petmax, level = tier: one Sentinel, two from tier 5
 SENTINEL_FRAMES = 200                 # 8 s (stock 250)
@@ -47,7 +49,7 @@ MELEE_CHANCE = 60      # aip1
 DIVIDE_CHANCE = 40     # aip2
 SENTINEL_CHANCE = 35   # aip4
 RANGED_SKILL = 60      # aip5
-RUN_AWAY = 20          # aip6
+RUN_AWAY = 5           # aip6 (was 20; it backed out of its own fire fight)
 MELEE_SKILL = 30       # aip7
 APPROACH_RANGE = 30    # aip8, stock
 

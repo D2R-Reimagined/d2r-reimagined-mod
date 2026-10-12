@@ -41,14 +41,16 @@ BLINK = 'MonTeleport'
 
 # Tier: (Blizzard from this tier, Blink interval in frames, Mend).
 # Blink runs at every tier (it only moves her); it comes round faster higher up.
+# The first kit blinked every 375-175 frames; labheirophant blinks every 25.
+# 100-50 keeps her repositioning without blinking every second (2026-10-12).
 TIERS = {
-    1: (False, 375, False), 2: (False, 375, False),
-    3: (True, 250, False), 4: (True, 250, False),
-    5: (True, 175, True), 6: (True, 175, True),
+    1: (False, 100, False), 2: (False, 100, False),
+    3: (True, 75, False), 4: (True, 75, False),
+    5: (True, 50, True), 6: (True, 50, True),
 }
 MELEE_CHANCE = 60      # aip1
-BLIZZARD_CHANCE = 25   # aip2
-ORB_CHANCE = 35        # aip3
+BLIZZARD_CHANCE = 40   # aip2, labheirophant's (was 25)
+ORB_CHANCE = 60        # aip3, labheirophant's (was 35)
 SPLIT = 50             # aip4, Skill4 vs Skill2
 MEND_RANGE = 15        # aip6 where Mend is in the kit (stock Heirophant 40)
 MEND_LEVEL = 1         # ZakarumHeal restores 15 + 5 x level

@@ -561,6 +561,140 @@ MAP_MONSTER_LIMIT = 10
 MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
 
 # --------------------------------------------------------------------------
+# Monster AI
+# --------------------------------------------------------------------------
+# Stock Hell AI is paced for the campaign: monsters circle, wander, back off
+# and pause between skills. The Forsaken Labyrinth rows (lab* in monstats)
+# were hand-tuned to fight instead, and map monsters follow them after
+# reports (2026-10-12) that map monsters and Wardens were not aggressive:
+#
+#   aidist  every map row engages from MAP_AIDIST tiles, the Labyrinth's value
+#           (blank defaults to 35 per the D2R data guide). Wardens inherit it
+#           from the population row they are built on.
+#   aip     per-AI overrides, keyed by the monstats AI and written to every
+#           difficulty. Labyrinth values where a lab row runs the same AI
+#           with the same skills; otherwise set from the parameter meanings in
+#           D2R's monai.txt: approach/attack chances up, circle-walk, wander
+#           and run-away down, AI delays shortened. Unlisted parameters keep
+#           the archetype's own. Warden kits overwrite all eight.
+#   speed   (Velocity, Run) floors. A faster archetype keeps its own speed.
+#           Labyrinth rows move about 1.5-2x stock; these sit at or below.
+#
+# Every AI in MAP_MONSTERS and EXPANSION_POPULATIONS needs an entry (a test
+# enforces it); an empty aip dict deliberately keeps the stock AI.
+MAP_AIDIST = 50
+AI_PROFILES = {
+    # Rebuffed Bone Armor 80% of the time at full life and circled 40%.
+    "AbyssKnight": dict(aip={2: 30, 3: 100, 7: 90, 8: 10}, speed=(10, 10)),
+    # labarach: always attack and approach, never circle or flee when hurt.
+    "Arach": dict(aip={1: 100, 2: 0, 3: 100, 4: 0, 5: 0}, speed=(12, 16)),
+    # Circle walk 35 -> 10, attack 85 -> 100.
+    "Baboon": dict(aip={2: 10, 3: 100}, speed=(10, 14)),
+    # Ran away when hit 20%; attack 85-90 -> 100.
+    "BatDemon": dict(aip={2: 5, 3: 100}, speed=(12, 12)),
+    # labtaint: always in the hurt branch, which always shoots; no circling.
+    "Bighead": dict(aip={1: 100, 2: 0, 3: 100, 4: 100}, speed=(8, 14)),
+    # labmoonlord: always approach, always Frenzy, AI delay 10 -> 5.
+    "BloodLord": dict(aip={2: 100, 3: 100, 4: 5}, speed=(13, 16)),
+    # labsnowyeti: attack instead of circling.
+    "Brute": dict(aip={3: 100}, speed=(10, 12)),
+    # labviper: always attack between charges.
+    "ClawViper": dict(aip={3: 100}, speed=(10, 14)),
+    # cr_archer5 has no skills and ran away 60% of the time (labcorruptarcher 10).
+    "CorruptArcher": dict(aip={4: 10}, speed=(8, 12)),
+    # labcorruptlancer approaches always; the skilled lancers ran 60%.
+    "CorruptLancer": dict(aip={1: 100, 4: 75}, speed=(8, 12)),
+    # labcorruptrogue.
+    "CorruptRogue": dict(aip={1: 100, 3: 100}, speed=(8, 12)),
+    # Approach 90 -> 100, AI delay 10 -> 5.
+    "DoomKnight": dict(aip={3: 100, 4: 5}, speed=(9, 10)),
+    # labfallen: no wandering between commands.
+    "Fallen": dict(aip={1: 100, 2: 0, 3: 100}, speed=(10, 10)),
+    # labfallenshaman: attack instead of circling, fireballs from further.
+    "FallenShaman": dict(aip={3: 100, 5: 30}, speed=(10, 10)),
+    # labflayer: AI delay 8 -> 5, attack loop until 50% life.
+    "Fetish": dict(aip={2: 5, 4: 50}, speed=(12, 14)),
+    # Fled anything within 30; now only point blank.
+    "FetishBlowgun": dict(aip={2: 5}, speed=(12, 12)),
+    # Circle walk 66 -> 10.
+    "FetishShaman": dict(aip={4: 10}, speed=(12, 12)),
+    # labstormcaster: always fights, almost never runs, short ranged delay.
+    "FingerMage": dict(aip={1: 80, 2: 100, 3: 100, 4: 1, 5: 30, 6: 1, 8: 5}, speed=(10, 16)),
+    # Melee/ranged circle walk 85/75 -> 10, AI delay 8 -> 5.
+    "FrogDemon": dict(aip={3: 10, 4: 10, 7: 5}, speed=(12, 12)),
+    # labfrozenterror: always approach (stock walks at 3).
+    "FrozenHorror": dict(aip={1: 100, 2: 100}, speed=(9, 9)),
+    # labgoat.
+    "Goatman": dict(aip={1: 100, 2: 5, 3: 100}, speed=(11, 11)),
+    # labunraveler: raise more, always shoot.
+    "GreaterMummy": dict(aip={2: 60, 4: 100}, speed=(9, 9)),
+    # labcouncilmember: skill delay 75 -> 30.
+    "HighPriest": dict(aip={3: 30}, speed=(10, 12)),
+    # imp5 has no aip at all; labimp casts its skills.
+    "Imp": dict(aip={1: 5, 2: 10, 3: 100, 4: 100}, speed=(12, 12)),
+    # labbalrog: always approach, no circling, Inferno delay 45 -> 15.
+    "Megademon": dict(aip={2: 80, 4: 100, 5: 0, 6: 15}, speed=(13, 16)),
+    # Approach 60 -> 100, AI delay 15 -> 8.
+    "Minion": dict(aip={3: 100, 4: 8}, speed=(10, 12)),
+    # Approach 55 -> 100.
+    "Mosquito": dict(aip={3: 100}, speed=(9, 12)),
+    # labmummy: always approach (stock walks at 3).
+    "Mummy": dict(aip={1: 30, 2: 100}, speed=(7, 7)),
+    # laboblivionknight: always cast and approach, from further.
+    "OblivionKnight": dict(aip={2: 40, 5: 100, 6: 50, 7: 100, 8: 20}, speed=(10, 12)),
+    # Its AI serves its pack (Cry Help, Healing Vortex, Whip); only faster.
+    "Overseer": dict(aip={}, speed=(7, 7)),
+    # labslinger.
+    "PantherJavelin": dict(aip={1: 100, 2: 100, 6: 40}, speed=(10, 15)),
+    # labcat.
+    "PantherWoman": dict(aip={1: 100, 2: 100}, speed=(12, 15)),
+    # Approach 95 -> 100.
+    "PinHead": dict(aip={3: 100}, speed=(10, 10)),
+    # labquilrat.
+    "QuillRat": dict(aip={1: 35}, speed=(8, 8)),
+    # Approach 50 -> 100; stops to eat corpses far less.
+    "Regurgitator": dict(aip={2: 5, 3: 100, 4: 10, 5: 0}, speed=(9, 12)),
+    # Leap 25 -> 50, approach 30 -> 100, circle walk 50 -> 10.
+    "SandLeaper": dict(aip={1: 50, 3: 100, 4: 10}, speed=(11, 11)),
+    # Burrowing egg layers; stock AI.
+    "SandMaggot": dict(aip={}, speed=(4, 4)),
+    # labraider.
+    "SandRaider": dict(aip={1: 15, 2: 5, 4: 100, 5: 5}, speed=(12, 12)),
+    # Stock waits 70 frames between decisions.
+    "Scarab": dict(aip={1: 100, 3: 15}, speed=(9, 9)),
+    # labcow keeps the stock Hell Bovine AI and only runs faster.
+    "Skeleton": dict(aip={}, speed=(12, 12)),
+    # labskelearcher.
+    "SkeletonBow": dict(aip={1: 100, 2: 5, 3: 100, 4: 1, 5: 3}, speed=(9, 9)),
+    # labskelemage*: always cast, approach from further, no circling.
+    "SkeletonMage": dict(aip={1: 100, 2: 30, 3: 40, 5: 20, 6: 100, 7: 0}, speed=(8, 8)),
+    # labsuccubus: cast more, from further, shorter ranged delay.
+    "Succubus": dict(aip={3: 80, 4: 40, 6: 10}, speed=(13, 13)),
+    # Its skill roll's else branch is run away; approach 25 -> 60.
+    "SuccubusWitch": dict(aip={2: 60, 3: 80, 6: 8}, speed=(12, 12)),
+    # Approach 60 -> 100, attack 70 -> 100.
+    "Swarm": dict(aip={1: 100, 2: 6, 3: 100}, speed=(10, 10)),
+    # labthornhulk: Frenzy more, never circle (stock walks at 3).
+    "ThornHulk": dict(aip={2: 15, 3: 0}, speed=(8, 10)),
+    # Toward labvampire: cast more, from further. The aip5 spell bits stay.
+    "Vampire": dict(aip={2: 75, 3: 40}, speed=(12, 12)),
+    # Circle walk 30 -> 10.
+    "VileMother": dict(aip={6: 10}, speed=(9, 9)),
+    # Circle walk 20 -> 5, approach 80 -> 100, AI delay 8 -> 5.
+    "Vulture": dict(aip={2: 5, 4: 5, 5: 100}, speed=(9, 9)),
+    # labgloam/labburningsoul approach 80.
+    "WillOWisp": dict(aip={3: 80}, speed=(17, 17)),
+    # labwraith.
+    "Wraith": dict(aip={3: 100}, speed=(10, 14)),
+    # labheirophant: Blizzard 22 -> 40, teleport every 120 -> 50 frames.
+    "ZakarumPriest": dict(aip={2: 40, 5: 50}, speed=(10, 10)),
+    # labzealot: always attack, hurt state at 30% instead of 50%.
+    "ZakarumZealot": dict(aip={1: 100, 3: 30}, speed=(12, 14)),
+    # labzombie: notices players from further.
+    "Zombie": dict(aip={2: 40}, speed=(5, 10)),
+}
+
+# --------------------------------------------------------------------------
 # Wardens
 # --------------------------------------------------------------------------
 # A Warden is a superunique built on one of the theme's MAP_MONSTERS archetypes
