@@ -87,6 +87,29 @@ def layout(api, monsters, boss, ai, slots, aips, speed=None, aidel=None):
     api.set_cells(boss, monsters, cells)
 
 
+# aip slots D2R's monai.txt documents as a delay or interval (frames), by AI.
+TIMER_AIPS = {'Summoner': (4, 5), 'ZakarumPriest': (5,), 'HighPriest': (3,),
+              'AbyssKnight': (4, 6), 'PinHead': (2, 4), 'CorruptArcher': (3,)}
+
+
+def paced(frames):
+    """A delay or interval in frames at cfg.WARDEN_PACE; blank stays blank."""
+    return str(round(int(frames) / cfg.WARDEN_PACE)) if frames else frames
+
+
+def pace(api, monsters, boss):
+    """Run a finished Warden cfg.WARDEN_PACE faster: movement up, AI decision
+    delay and documented skill timers down. Called once per Warden after its
+    kit, so kit constants stay in their own (unpaced) numbers."""
+    col = monsters.col
+    cells = {stem: str(round(int(boss[col(stem)] or 0) * cfg.WARDEN_PACE)) for stem in ('Velocity', 'Run')}
+    for diff in ('', '(N)', '(H)'):
+        cells[f'aidel{diff}'] = paced(boss[col(f'aidel{diff}')])
+        for i in TIMER_AIPS.get(boss[col('AI')], ()):
+            cells[f'aip{i}{diff}'] = paced(boss[col(f'aip{i}{diff}')])
+    api.set_cells(boss, monsters, cells)
+
+
 def death_skill(monsters, boss):
     return next(boss[monsters.col(f'Skill{i}')] for i in range(1, 9)
                 if boss[monsters.col(f'Sk{i}mode')] == 'DT')
@@ -126,4 +149,6 @@ def generate(api, plans, combat):
     kit = Kit(api, skills, missiles, props)
     for module in KITS:
         module.generate(api, plans, kit, monsters)
+    for plan in plans:
+        pace(api, monsters, monsters.find(monsters.col('Id'), f"rmap_{plan['item_code']}_boss"))
     return missiles, hd_missiles(api, kit.sources)

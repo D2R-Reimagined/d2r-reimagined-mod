@@ -840,7 +840,14 @@ WARDEN_ACCURACY_PER_TIER = 0.1
 # Wardens swing and cast this much faster: a self aura (radius 1) raising
 # attackrate and other_animrate, the two stats monster Frenzy speeds up and Holy
 # Freeze slows down. The item IAS/FCR stats are player breakpoint stats.
-WARDEN_HASTE_PERCENT = 20
+# 56 = the original +20% x WARDEN_PACE.
+WARDEN_HASTE_PERCENT = 56
+# Every Warden runs this much faster than its kit's own numbers after reports
+# that they were "still somewhat slow" (2026-10-12): Velocity/Run x PACE, and
+# aidel plus every aip D2R's monai.txt documents as a delay or interval
+# (warden_kits.TIMER_AIPS) / PACE. Swings and casts speed up through
+# WARDEN_HASTE_PERCENT above. Applied once by warden_kits after every kit.
+WARDEN_PACE = 1.3
 WARDEN_HASTE_SKILL = "rmap_warden_haste"
 WARDEN_HASTE_SLOT = 6
 # Regeneration is a share of max health per frame, so it grew with the health

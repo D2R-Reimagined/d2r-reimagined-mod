@@ -5,6 +5,7 @@ import re
 import generate_maps as gen
 import maps_config as cfg
 import boss_rooms
+import warden_kits
 
 
 def profile_row_name(plan, population, reward, slot):
@@ -189,8 +190,8 @@ class MappingContract(unittest.TestCase):
                 self.assertGreater(catacombs.DEATH_SLOT, 5)
                 self.assertEqual((row[monsters.col('AI')], row[monsters.col('BaseId')]), ('Summoner', 'unraveler1'))
                 for diff in ('', '(N)', '(H)'):
-                    self.assertEqual(row[monsters.col(f'aip4{diff}')], str(nova_interval))
-                    self.assertEqual(row[monsters.col(f'aip5{diff}')], str(miasma_interval or 0))
+                    self.assertEqual(row[monsters.col(f'aip4{diff}')], warden_kits.paced(str(nova_interval)))
+                    self.assertEqual(row[monsters.col(f'aip5{diff}')], warden_kits.paced(str(miasma_interval or 0)))
                     self.assertEqual(row[monsters.col(f'aip2{diff}')], str(catacombs.CURSE_CHANCE if curse else 0))
                 # No theme aura or proc; slot 6 is the shared haste aura.
                 prop = props.find(props.col('Id'), row[0])
@@ -301,16 +302,30 @@ class MappingContract(unittest.TestCase):
         # The first kits waited 75-375 frames between casts, so Wardens spent
         # most of a fight walking. Labyrinth bosses wait 20-30. These are the
         # aip slots D2R's monai.txt documents as delays or intervals.
-        timers = {'Summoner': (4, 5), 'ZakarumPriest': (5,), 'HighPriest': (3,),
-                  'AbyssKnight': (4, 6), 'PinHead': (2, 4), 'CorruptArcher': (3,)}
         col = self.monsters.col
         wardens = [r for r in self.monsters.rows
                    if r[col('Id')].startswith('rmap_') and r[col('Id')].endswith('_boss')]
         self.assertEqual(len(wardens), len(self.plans))
         for row in wardens:
-            for i in timers.get(row[col('AI')], ()):
+            for i in warden_kits.TIMER_AIPS.get(row[col('AI')], ()):
                 for diff in ('', '(N)', '(H)'):
                     self.assertLessEqual(int(row[col(f'aip{i}{diff}')] or 0), 100, f'{row[0]} aip{i}{diff}')
+
+    def test_wardens_run_at_warden_pace(self):
+        # "Still somewhat slow" (2026-10-12): on top of its kit every Warden
+        # moves and decides WARDEN_PACE faster than the population row it is
+        # built on.
+        col = self.monsters.col
+        lookup = {r[col('Id')]: r for r in self.monsters.rows}
+        for p in self.plans:
+            code, theme = p['item_code'], p['theme']['key']
+            boss = lookup[f'rmap_{code}_boss']
+            body = lookup[f"rmap_{code}_{cfg.MAP_MONSTERS[theme].index(cfg.warden_body(theme))}"]
+            for stem in ('Velocity', 'Run'):
+                self.assertGreaterEqual(int(boss[col(stem)]), round(int(body[col(stem)]) * cfg.WARDEN_PACE), boss[0])
+            for diff in ('', '(N)', '(H)'):
+                self.assertLessEqual(int(boss[col(f'aidel{diff}')]),
+                                     round(int(body[col(f'aidel{diff}')]) / cfg.WARDEN_PACE), boss[0])
 
     def test_infernal_warden_is_a_balrog_on_the_vampire_ai(self):
         import infernal
@@ -366,7 +381,7 @@ class MappingContract(unittest.TestCase):
                     expected[frozen.MEND_SLOT] = (frozen.MEND, 'S2', str(frozen.MEND_LEVEL))
                 self.assertEqual(uses, expected, row[0])
                 self.assertEqual(frozen.DEATH_SLOT, 8)
-                self.assertEqual(row[monsters.col('aip5(H)')], str(blink))
+                self.assertEqual(row[monsters.col('aip5(H)')], warden_kits.paced(str(blink)))
                 self.assertEqual(row[monsters.col('aip6(H)')], str(frozen.MEND_RANGE if mend else 0))
                 self.assertEqual(row[monsters.col('El1Dur(H)')], '75')
             # Mend (and so any chance of self-healing) only arrives at tier 5.
@@ -399,7 +414,7 @@ class MappingContract(unittest.TestCase):
                     durance.SENTINEL_SLOT: (durance.SENTINEL if sentinel else durance.DIVIDE, 'S1', str(tier)),
                     durance.DIVIDE_SLOT: (durance.DIVIDE, 'S1', str(tier)),
                     durance.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                self.assertEqual(row[monsters.col('aip3(H)')], str(delay))
+                self.assertEqual(row[monsters.col('aip3(H)')], warden_kits.paced(str(delay)))
                 # Nothing in the Warden's pack heals it any more.
                 for minion in ('minion1', 'minion2'):
                     escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
@@ -433,7 +448,7 @@ class MappingContract(unittest.TestCase):
                     travincal.WRATH_SLOT: (travincal.WRATH, 'S1', str(tier)) if wrath else judgment,
                     travincal.JUDGMENT_SLOT: judgment,
                     travincal.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                self.assertEqual((row[monsters.col('aip3(H)')], row[monsters.col('aip4(H)')]), (str(delay), str(wrath_chance)))
+                self.assertEqual((row[monsters.col('aip3(H)')], row[monsters.col('aip4(H)')]), (warden_kits.paced(str(delay)), str(wrath_chance)))
                 self.assertEqual(row[monsters.col('El1Type')], 'ltng')
                 # Nothing in the pack heals: no Hydra/heal on the Warden, no Heirophants.
                 for minion in ('minion1', 'minion2'):
