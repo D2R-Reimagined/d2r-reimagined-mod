@@ -48,12 +48,14 @@ class ObjectPresets:
     Each object is therefore re-pointed at the Act 5 row of the same class,
     appended (and tagged for regeneration) when Act 5 has none."""
 
-    def __init__(self, api):
-        self.table = api.Table(api.EXCEL / "objpreset.txt")
+    def __init__(self, api, table=None):
+        """table: the one generate() already built, to append to it."""
+        self.table = table or api.Table(api.EXCEL / "objpreset.txt")
         self.api = api
         self.index, self.act, self.cls, self.notes = (
             self.table.col(c) for c in ("Index", "Act", "ObjectClass", "*Notes"))
-        self.table.drop_tagged(self.notes, OBJECT_TAG)
+        if table is None:
+            self.table.drop_tagged(self.notes, OBJECT_TAG)
 
     def object_class(self, act, object_id):
         cls = next((r[self.cls] for r in self.table.rows

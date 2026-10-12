@@ -989,7 +989,8 @@ def main() -> int:
     combat, runtime = endgame.generate(sys.modules[__name__], plans, tables[0])
     rooms, assets = boss_rooms.generate(sys.modules[__name__], plans, tables[0], tables[2], combat[-1])
     import exterior
-    assets.update(exterior.generate(sys.modules[__name__], plans, tables[2], runtime, tables[0]))
+    assets.update(exterior.generate(sys.modules[__name__], plans, tables[2], runtime, tables[0],
+                                    boss_rooms.ObjectPresets(sys.modules[__name__], rooms[3])))
     import treasure
     treasure.generate(sys.modules[__name__], combat[-1], combat[2], rooms[1], runtime)
     import starter_events

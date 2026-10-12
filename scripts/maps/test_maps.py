@@ -264,6 +264,39 @@ class MappingContract(unittest.TestCase):
                                          stock[col(f'aip{i}{diff}')] if expected is None else str(expected),
                                          f'{name} aip{i}{diff}')
 
+    def test_kit_skills_draw_their_own_missiles(self):
+        # The client draws the skill's cltmissile columns. The Highlands
+        # volley kept its source's coldarrow there and fired fire damage that
+        # looked like an ice multishot (2026-10-12). A kit skill whose damage
+        # rides a map-owned missile must draw map-owned missiles too.
+        skills = gen.Table(gen.EXCEL / 'skills.txt')
+        col = skills.col
+        server = ('srvmissile', 'srvmissilea', 'srvmissileb', 'srvmissilec')
+        client = ('cltmissile', 'cltmissilea', 'cltmissileb', 'cltmissilec', 'cltmissiled')
+        for row in skills.rows:
+            if not row[col('skill')].startswith('rmap_'):
+                continue
+            if not any(row[col(c)].startswith('rmap_') for c in server):
+                continue
+            drawn = [row[col(c)] for c in client if row[col(c)]]
+            self.assertTrue(drawn, row[0])
+            for name in drawn:
+                self.assertTrue(name.startswith('rmap_'), f'{row[0]} draws stock {name}')
+
+    def test_every_warden_has_two_skills_from_tier_1_and_three_from_tier_3(self):
+        # A one-spell Warden read as "normal attacks" in game (2026-10-12).
+        col = self.monsters.col
+        kits = {}
+        for p in self.plans:
+            row = self.monsters.find(col('Id'), f"rmap_{p['item_code']}_boss")
+            kits[(p['theme']['key'], p['tier'])] = {
+                row[col(f'Skill{i}')] for i in range(1, 9)
+                if row[col(f'Skill{i}')] and row[col(f'Sk{i}mode')] != 'DT'}
+        for theme in {key for key, _ in kits}:
+            full = len(kits[(theme, 6)])
+            self.assertGreaterEqual(len(kits[(theme, 1)]), 2, theme)
+            self.assertGreaterEqual(len(kits[(theme, 3)]), min(3, full), theme)
+
     def test_warden_skill_timers_stay_short(self):
         # The first kits waited 75-375 frames between casts, so Wardens spent
         # most of a fight walking. Labyrinth bosses wait 20-30. These are the
@@ -290,7 +323,7 @@ class MappingContract(unittest.TestCase):
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
                 expected = {infernal.SLOTS[s]: (s, 'S1', str(tier)) for s in spells}
-                expected[infernal.REPEAT_SLOT] = (infernal.HELLFIRE if tier >= 3 else infernal.BRIMSTONE, 'S1', str(tier))
+                expected[infernal.REPEAT_SLOT] = (infernal.HELLFIRE, 'S1', str(tier))
                 expected[infernal.DEATH_SLOT] = (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')
                 self.assertEqual(uses, expected, row[0])
                 # Like every stock Vampire-AI row, Skill1-4 all hold a real spell,
@@ -301,7 +334,7 @@ class MappingContract(unittest.TestCase):
                 self.assertEqual(row[monsters.col('aip2(H)')], str(use_skill))
                 self.assertEqual(row[monsters.col('minion2')],
                                  f"rmap_mi{tier}_{cfg.MAP_MONSTERS['infernal'].index('imp5')}")
-            self.assertEqual(infernal.TIERS[1][0], (infernal.BRIMSTONE,))
+            self.assertEqual(infernal.TIERS[1][0], (infernal.BRIMSTONE, infernal.HELLFIRE))
             self.assertEqual(skills.find(skills.col('skill'), infernal.HELLFIRE)[skills.col('srvmissile')], infernal.HELLFIRE_BOLT)
             magma = skills.find(skills.col('skill'), infernal.MAGMA)
             self.assertEqual((magma[skills.col('srvmissilea')], magma[skills.col('srvmissileb')]),
@@ -372,7 +405,7 @@ class MappingContract(unittest.TestCase):
                     escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
                     self.assertNotIn('ZakarumHeal', [escort[monsters.col(f'Skill{i}')] for i in range(1, 9)])
                     self.assertNotEqual(escort[monsters.col('AI')], 'HighPriest')
-            self.assertEqual([t for t in range(1, 7) if durance.TIERS[t][0]], [3, 4, 5, 6])
+            self.assertEqual([t for t in range(1, 7) if durance.TIERS[t][0]], [1, 2, 3, 4, 5, 6])
             sentinel = skills.find(skills.col('skill'), durance.SENTINEL)
             self.assertEqual((sentinel[skills.col('summon')], sentinel[skills.col('sumskill1')], sentinel[skills.col('petmax')]),
                              ('hydra1', durance.SENTINEL_SHOT, durance.SENTINEL_MAX))
@@ -437,7 +470,7 @@ class MappingContract(unittest.TestCase):
                 # Skill1-4 all hold a real spell; aip5 bits switch Skill1-3 on.
                 self.assertEqual(row[monsters.col('aip5(H)')], str(1 | (2 if rush else 0)))
                 self.assertEqual(row[monsters.col('aip2(H)')], str(use_skill))
-            self.assertEqual([t for t in range(1, 7) if sandswept.TIERS[t][0]], [3, 4, 5, 6])
+            self.assertEqual([t for t in range(1, 7) if sandswept.TIERS[t][0]], [1, 2, 3, 4, 5, 6])
             storm = skills.find(skills.col('skill'), sandswept.SANDSTORM)
             self.assertEqual((storm[skills.col('srvdofunc')], storm[skills.col('srvmissilea')], storm[skills.col('calc1')]),
                              ('118', sandswept.SANDSTORM_DEVIL, sandswept.DEVILS))
@@ -462,7 +495,7 @@ class MappingContract(unittest.TestCase):
                 self.assertEqual((row[monsters.col('aip5(H)')], row[monsters.col('aip6(H)')]), (str(slam_chance), str(wave_chance)))
                 # No stun melee any more.
                 self.assertNotEqual(row[monsters.col('El1Type')], 'stun')
-            self.assertEqual([t for t in range(1, 7) if worldstone.TIERS[t][0]], [3, 4, 5, 6])
+            self.assertEqual([t for t in range(1, 7) if worldstone.TIERS[t][0]], [1, 2, 3, 4, 5, 6])
             slam = skills.find(skills.col('skill'), worldstone.SLAM)
             self.assertEqual((slam[skills.col('srvdofunc')], slam[skills.col('MinDam')]), ('134', str(worldstone.SLAM_DAMAGE['min'])))
             wave = skills.find(skills.col('skill'), worldstone.WAVE)
@@ -501,55 +534,84 @@ class MappingContract(unittest.TestCase):
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_mh{tier}_boss')
                 self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('CorruptArcher', 'CR'))
-                cinder, cinder_chance = highlands.TIERS[tier]
+                rain, immolation_chance, rain_chance = highlands.TIERS[tier]
                 volley = (highlands.VOLLEY, 'A1', str(tier))
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
                 self.assertEqual(uses, {
-                    highlands.VOLLEY_SLOT: volley, highlands.SPARE_SLOT: volley,
-                    highlands.CINDER_SLOT: (highlands.CINDER, 'A1', str(tier)) if cinder else volley,
+                    highlands.VOLLEY_SLOT: volley,
+                    highlands.IMMOLATION_SLOT: (highlands.IMMOLATION, 'A1', str(tier)),
+                    highlands.RAIN_SLOT: (highlands.RAIN, 'A1', str(tier)) if rain else volley,
                     highlands.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                self.assertEqual((row[monsters.col('aip6(H)')], row[monsters.col('aip7(H)')]), (str(cinder_chance), '0'))
+                self.assertEqual((row[monsters.col('aip6(H)')], row[monsters.col('aip7(H)')]),
+                                 (str(immolation_chance), str(rain_chance)))
+                self.assertEqual(rain_chance > 0, rain)
                 self.assertNotEqual(row[monsters.col('El1Type')], 'stun')
                 # Her escort is melee, so it screens her.
                 for minion in ('minion1', 'minion2'):
                     escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
                     self.assertNotEqual(escort[monsters.col('AI')], 'CorruptArcher')
-            for skill, missile, source in ((highlands.VOLLEY, highlands.VOLLEY_ARROW, 'firearrow'),
-                                           (highlands.CINDER, highlands.CINDER_ARROW, 'explodingarrow')):
-                row = skills.find(skills.col('skill'), skill)
-                self.assertEqual((row[skills.col('srvdofunc')], row[skills.col('srvmissilea')], row[skills.col('EType')]),
-                                 ('8', missile, 'fire'))
-                self.assertEqual(missiles.find(missiles.col('Missile'), missile)[missiles.col('Skill')], skill)
-            self.assertEqual(skills.find(skills.col('skill'), highlands.VOLLEY)[skills.col('calc1')], highlands.VOLLEY_ARROWS)
+            skill = lambda name: skills.find(skills.col('skill'), name)
+            missile = lambda name: missiles.find(missiles.col('Missile'), name)
+            row = skill(highlands.VOLLEY)
+            self.assertEqual((row[skills.col('srvdofunc')], row[skills.col('srvmissilea')], row[skills.col('EType')],
+                              row[skills.col('calc1')]), ('8', highlands.VOLLEY_ARROW, 'fire', highlands.VOLLEY_ARROWS))
+            self.assertEqual(missile(highlands.VOLLEY_ARROW)[missiles.col('Skill')], highlands.VOLLEY)
+            # Immolation: arrow -> meteor center (skill damage) -> drawn burn.
+            row = skill(highlands.IMMOLATION)
+            self.assertEqual((row[skills.col('srvstfunc')], row[skills.col('srvmissile')], row[skills.col('EType')],
+                              row[skills.col('EDmgSymPerCalc')], row[skills.col('charclass')]),
+                             ('4', highlands.IMMOLATION_ARROW, 'fire', '', ''))
+            arrow, center = missile(highlands.IMMOLATION_ARROW), missile(highlands.IMMOLATION_CENTER)
+            self.assertEqual((arrow[missiles.col('Skill')], arrow[missiles.col('HitSubMissile1')]),
+                             (highlands.IMMOLATION, highlands.IMMOLATION_CENTER))
+            self.assertEqual((center[missiles.col('Skill')], center[missiles.col('HitSubMissile1')]),
+                             (highlands.IMMOLATION, highlands.IMMOLATION_FIRE))
+            # Cinder Rain: the armageddon state spawns the skill's control missile;
+            # no stock synergy formula may survive on a monster clone.
+            row = skill(highlands.RAIN)
+            self.assertEqual((row[skills.col('srvdofunc')], row[skills.col('aurastate')], row[skills.col('srvmissilea')],
+                              row[skills.col('auralencalc')], row[skills.col('Param1')]),
+                             ('124', 'armageddon', highlands.RAIN_CONTROL, 'par1', str(highlands.RAIN_FRAMES)))
+            self.assertEqual((row[skills.col('DmgSymPerCalc')], row[skills.col('EDmgSymPerCalc')], row[skills.col('EType')]),
+                             ('', '', 'fire'))
+            control = missile(highlands.RAIN_CONTROL)
+            self.assertEqual((control[missiles.col('Skill')], control[missiles.col('HitSubMissile1')]),
+                             (highlands.RAIN, highlands.RAIN_FIRE))
+            for burn in (highlands.IMMOLATION_FIRE, highlands.RAIN_FIRE):
+                self.assertEqual(missile(burn)[missiles.col('EDmgSymPerCalc')], '', burn)
 
-    def test_steppes_warden_is_an_abyss_knight_that_wards_itself(self):
+    def test_steppes_warden_is_an_abyss_knight_on_the_vampire_ai(self):
         import steppes
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_me{tier}_boss')
-                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('AbyssKnight', 'UM'))
-                ward, skull_delay = steppes.TIERS[tier]
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('Vampire', 'UM'))
+                curse, use_skill = steppes.TIERS[tier]
                 skull = (steppes.SKULL, 'S1', str(tier))
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
+                # Skill1-4 all hold a real spell (the Infernal lesson); the
+                # death portal sits outside them.
                 self.assertEqual(uses, {
-                    steppes.SKULL_SLOT: skull, steppes.SPARE_SLOT: skull,
-                    steppes.WARD_SLOT: (steppes.WARD, 'S1', str(tier)) if ward else skull,
+                    steppes.SKULL_SLOT: skull, steppes.SPIRIT_SLOT: (steppes.SPIRIT, 'S1', str(tier)),
+                    steppes.CURSE_SLOT: (steppes.CURSE, 'S1', str(tier)) if curse else skull,
+                    steppes.REPEAT_SLOT: skull,
                     steppes.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                self.assertEqual((row[monsters.col('aip1(H)')], row[monsters.col('aip2(H)')], row[monsters.col('aip6(H)')]),
-                                 (str(ward or 0), str(steppes.WARD_CHANCE if ward else 0), str(skull_delay)))
+                self.assertEqual((row[monsters.col('aip2(H)')], row[monsters.col('aip5(H)')]),
+                                 (str(use_skill), str(3 | (4 if curse else 0))))
                 # No longer a second Balrog (the Infernal Forgemaster is one).
                 self.assertNotEqual(row[monsters.col('Code')], 'DM')
             self.assertEqual([t for t in range(1, 7) if steppes.TIERS[t][0]], [3, 4, 5, 6])
-            ward = skills.find(skills.col('skill'), steppes.WARD)
-            self.assertEqual((ward[skills.col('auraevent1')], ward[skills.col('auraeventfunc1')], ward[skills.col('aurastat1')]),
-                             ('absorbdamage', '22', 'bonearmor'))
-            self.assertEqual((ward[skills.col('Param1')], ward[skills.col('Param2')]), tuple(map(str, steppes.WARD_POOL)))
             skull = skills.find(skills.col('skill'), steppes.SKULL)
             self.assertEqual((skull[skills.col('srvdofunc')], skull[skills.col('srvmissilea')]), ('148', steppes.SKULL_MISSILE))
+            spirit = missiles.find(missiles.col('Missile'), steppes.SPIRIT_MISSILE)
+            self.assertEqual((spirit[missiles.col('EType')], spirit[missiles.col('Vel')]), ('fire', str(steppes.SPIRIT_SPEED)))
             self.assertEqual(missiles.find(missiles.col('Missile'), steppes.SKULL_MISSILE)[missiles.col('EType')], 'fire')
+            curse = skills.find(skills.col('skill'), steppes.CURSE)
+            self.assertEqual((curse[skills.col('srvdofunc')], curse[skills.col('charclass')], curse[skills.col('monanim')]),
+                             ('30', '', 'S1'))
 
     def test_kit_missiles_never_hit_their_own_side(self):
         # CollideFriend = 1 lets a missile hit the caster and its allies (D2R
@@ -1174,7 +1236,14 @@ class MappingContract(unittest.TestCase):
                 for slot in (2, 3):
                     self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
                 slot = cfg.WARDEN_PROC_SLOT
-                if kit['on_attack'] is None:
+                if p['theme']['key'] == 'steppes':
+                    # The kit procs its own Ember Burst clone (steppes.py).
+                    import steppes
+                    self.assertIsNone(kit['on_attack'])
+                    self.assertEqual((prop[props.col(f'prop{slot}{diff}')], prop[props.col(f'par{slot}{diff}')],
+                                      prop[props.col(f'min{slot}{diff}')], prop[props.col(f'max{slot}{diff}')]),
+                                     ('att-skill', sid(steppes.BURST), str(steppes.BURST_CHANCE[tier]), str(tier)))
+                elif kit['on_attack'] is None:
                     self.assertEqual(prop[props.col(f'prop{slot}{diff}')], '')
                 else:
                     skill, chance, level = kit['on_attack']

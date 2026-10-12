@@ -308,6 +308,11 @@ THEMES += [
          # plateau ends at the cell edge without neighbouring cliffs (seen
          # 2026-10-01). DenEnt.ds1 only: its warp tile is Floor L (lvlwarp 2).
          body_exits=[(7,2)], exit_preset=52, exit_files=1, initializer=0x3fac10,
+         # Outdoor red portals land in the first live-warp room of the room
+         # list, and the exit was the only one. The plugin places this cave
+         # mound (CaveDr, slots 5/6, self-linked by body_entries) as the
+         # arrival, then the exit cells away from it (see entry_preset).
+         entry_preset=51,
          # Purpose-built Fallen war camp in the wilderness (arenas.py). Level
          # 158 only supplies the row and its slot-2 red portal; arenas.LEVEL
          # switches it to the Act 1 wilderness tiles.
@@ -319,7 +324,9 @@ THEMES += [
          # portal; arenas.PRESET adds Kurast's terraces to its Dt1Mask.
          arena_template=148, arena_ds1="custom:travincal", arena_return=(2,83)),
     dict(key="steppes", name="Ashen Steppes", body_template=104, exterior=True,
-         body_size=(80,64), body_entry=(1,69), body_exits=[(7,69)], exit_preset=811,
+         # Outer Steppes has no stock dungeon entrance: entry_preset adds a
+         # mesa entrance as the arrival.
+         body_size=(80,64), body_entry=(1,69), body_exits=[(7,69)], exit_preset=811, entry_preset=811,
          # Purpose-built ruined bastion on the mesa (arenas.py). Level 165 only
          # supplies the row and its slot-0 red portal; arenas.LEVEL switches it
          # to the Mesa tileset.
@@ -746,9 +753,10 @@ WARDENS = {
     # healing Heirophants are gone; Temple Guards replace them.
     "travincal": dict(aura=("Fanaticism",6), on_attack=None,
                       escort=("zealot3","baboon5",3,5), melee=("ltng",90,160,0), drain=None),
-    # The Ashen Knight: steppes.py keeps the Abyss Knight's own AI (Ash Skull,
-    # Ash Ward by tier). Holy Fire and the random Fire Wall proc are gone;
-    # the Warden is no longer a second Balrog, but Balrogs still escort it.
+    # The Ashen Knight: steppes.py runs the Abyss Knight on the Vampire AI
+    # (Ash Skull, Ash Spirit, Ashen Curse by tier) and procs Ember Burst on
+    # its swings. Holy Fire and the random Fire Wall proc are gone; the
+    # Warden is no longer a second Balrog, but Balrogs still escort it.
     "steppes": dict(aura=None, on_attack=None,
                     escort=("megademon1","fingermage1",3,4), melee=("fire",100,180,0), drain=None,
                     body="doomknight2"),

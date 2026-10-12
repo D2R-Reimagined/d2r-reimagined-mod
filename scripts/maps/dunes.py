@@ -11,10 +11,9 @@ Warden showed casting live from a non-SC mode:
     Skill1  flag 1   Sunfall, a lobbed charged ball that bursts into bolts
                      where the target stood (Catapult Charged Ball, the
                      lightning twin of the Catacombs Miasma lob); the signature
-    Skill2  flag 2   Static Spray, a fan of erratic charged bolts (ImpBolt;
-                     tier 3+, repeats Sunfall with the bit off below)
+    Skill2  flag 2   Static Spray, a fan of erratic charged bolts (ImpBolt)
     Skill3  flag 4   Scorch Pulse, a lightning nova around it that punishes
-                     standing close (Storm Pulse; tier 5+, repeats Sunfall
+                     standing close (Storm Pulse; tier 3+, repeats Sunfall
                      with the bit off below)
     Skill4           repeats Sunfall (every stock Vampire row fills Skill4)
 
@@ -42,10 +41,11 @@ PULSE = 'rmap_scorch_pulse'
 PULSE_RING = 'rmap_scorch_ring'
 
 # Tier: (spells in the kit, aip2 use-skill chance). Raised by 20 toward
-# labvampire's 100 (2026-10-12), as on the Infernal Warden.
+# labvampire's 100 (2026-10-12), as on the Infernal Warden. Two spells from
+# tier 1 and three from tier 3: a one-spell Warden reads as "normal attacks".
 TIERS = {
-    1: ((SUNFALL,), 50), 2: ((SUNFALL,), 50),
-    3: ((SUNFALL, SPRAY), 55), 4: ((SUNFALL, SPRAY), 55),
+    1: ((SUNFALL, SPRAY), 50), 2: ((SUNFALL, SPRAY), 50),
+    3: ((SUNFALL, SPRAY, PULSE), 55), 4: ((SUNFALL, SPRAY, PULSE), 55),
     5: ((SUNFALL, SPRAY, PULSE), 60), 6: ((SUNFALL, SPRAY, PULSE), 60),
 }
 SLOTS = {SUNFALL: SUNFALL_SLOT, SPRAY: SPRAY_SLOT, PULSE: PULSE_SLOT}

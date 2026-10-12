@@ -12,7 +12,7 @@ from a non-SC mode:
     Skill1  flag 1   Sandstorm, slow dust devils fanned toward the target
                      (two, three from tier 5); the signature
     Skill2  flag 2   Burrowing Rush, the viper's own SerpentCharge toward the
-                     target (tier 3+; repeats Sandstorm with the bit off below)
+                     target
     Skill3  flag 4   repeats Sandstorm, bit always off
     Skill4           repeats Sandstorm (every stock Vampire row fills Skill4)
 
@@ -38,9 +38,10 @@ RUSH = 'SerpentCharge'
 # Tier: (Rush in the kit, aip2 use-skill chance). Sandstorm fans three devils
 # from tier 5 (calc1, level = tier). Raised by 20 toward labvampire's 100
 # (2026-10-12), as on the Infernal Warden. The viper's speed comes from the
-# population row (AI_PROFILES ClawViper, labviper's 10/14).
+# population row (AI_PROFILES ClawViper, labviper's 10/14). Rush from tier 1:
+# a one-spell Warden reads as "normal attacks" in game.
 TIERS = {
-    1: (False, 50), 2: (False, 50),
+    1: (True, 50), 2: (True, 50),
     3: (True, 55), 4: (True, 55),
     5: (True, 60), 6: (True, 60),
 }

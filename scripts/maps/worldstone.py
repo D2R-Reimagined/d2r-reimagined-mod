@@ -8,8 +8,7 @@ act roll (aip1), with an attack delay (aip2) and an AI delay (aip4):
     Skill1  aip5 %   Seismic Slam, a Siege Beast Stomp around the Warden;
                      the signature
     Skill2  aip6 %   Rift Wave, a slow fan of shockwaves toward the target
-                     with open sectors beside and between them (tier 3+;
-                     repeats Seismic Slam with aip6 = 0 below)
+                     with open sectors beside and between them
 
 Seismic Slam was the Warden's att-skill proc, so the stomp is known to work
 from this body; it keeps the stock A2 cast (action frame 8). Rift Wave is a
@@ -34,9 +33,10 @@ WAVE = 'rmap_rift_wave'
 WAVE_MISSILE = 'rmap_rift_wave_m'
 
 # Tier: (Rift Wave in the kit, aip5 slam chance, aip6 wave chance). Raised by
-# 10 on 2026-10-12 so the Warden uses its kit more than its plain swing.
+# 10 on 2026-10-12 so the Warden uses its kit more than its plain swing. Rift
+# Wave from tier 1: a one-spell Warden reads as "normal attacks" in game.
 TIERS = {
-    1: (False, 30, 0), 2: (False, 30, 0),
+    1: (True, 30, 20), 2: (True, 30, 20),
     3: (True, 30, 25), 4: (True, 30, 25),
     5: (True, 35, 30), 6: (True, 35, 30),
 }
@@ -65,6 +65,9 @@ def generate(api, plans, kit, monsters):
     kit.skill('Siege Beast Stomp', SLAM, {'monanim': SLAM_MODE, **_physical(SLAM_DAMAGE)})
     kit.skill('Dsum_Shockwave', WAVE, {
         'monanim': WAVE_MODE, 'srvmissilea': WAVE_MISSILE, 'srvmissileb': WAVE_MISSILE,
+        # The client must draw the slowed clone, not the stock wave (speed 20,
+        # 8 frames) that would run ahead of the damage.
+        'cltmissilea': WAVE_MISSILE, 'cltmissileb': WAVE_MISSILE,
         'calc1': WAVES, **_physical(WAVE_DAMAGE)})
     kit.missile('dsum_shockwave_m', WAVE_MISSILE, {
         'Skill': WAVE, 'Vel': str(WAVE_SPEED), 'MaxVel': str(WAVE_SPEED), 'Range': str(WAVE_FRAMES)})

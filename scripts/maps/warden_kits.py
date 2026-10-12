@@ -10,6 +10,8 @@ is invisible (the 0.6.0 Plague Pulse).
 import json
 import re
 
+import maps_config as cfg
+
 import catacombs
 import dunes
 import durance
@@ -25,11 +27,12 @@ KITS = (catacombs, infernal, frozen, durance, travincal, sandswept, worldstone, 
 
 
 class Kit:
-    def __init__(self, api, skills, missiles):
-        self.api, self.skills, self.missiles = api, skills, missiles
+    def __init__(self, api, skills, missiles, props):
+        self.api, self.skills, self.missiles, self.props = api, skills, missiles, props
         self.sources = {}  # cloned missile -> stock missile it copies
 
     def skill(self, source, name, values):
+        """Clone `source` as `name`; returns the clone's skill ID."""
         skills = self.skills
         row = list(skills.find(skills.col('skill'), source))
         next_id = max(int(r[skills.col('*Id')]) for r in skills.rows if r[skills.col('*Id')].isdigit()) + 1
@@ -38,6 +41,22 @@ class Kit:
             'mana': '0', 'minmana': '0', 'startmana': '0', 'lvlmana': '0',
             'ItemEffect': '', 'ItemCastSound': '', **values})
         skills.append(row)
+        return next_id
+
+    def proc(self, boss, skill_id, chance, level):
+        """Put an att-skill proc of a kit skill in the Warden's monprop proc
+        slot. WARDENS on_attack procs are written by endgame.py before any
+        kit skill exists, so a kit that procs its own clone writes it here;
+        its WARDENS on_attack stays None and the slot must still be free."""
+        props, slot = self.props, cfg.WARDEN_PROC_SLOT
+        row = props.find(props.col('Id'), boss)
+        for diff in ('', ' (N)', ' (H)'):
+            if row[props.col(f'prop{slot}{diff}')]:
+                raise ValueError(f'{boss}: monprop slot {slot} is taken')
+            self.api.set_cells(row, props, {
+                f'prop{slot}{diff}': 'att-skill', f'chance{slot}{diff}': '100',
+                f'par{slot}{diff}': str(skill_id), f'min{slot}{diff}': str(chance),
+                f'max{slot}{diff}': str(level)})
 
     def missile(self, source, name, values):
         missiles = self.missiles
@@ -101,10 +120,10 @@ def hd_missiles(api, sources):
 def generate(api, plans, combat):
     """Build every kit. Returns the regenerated missiles table and the HD
     missiles.json asset."""
-    skills, monsters = combat[0], combat[-1]
+    skills, props, monsters = combat[0], combat[2], combat[-1]
     missiles = api.Table(api.EXCEL / 'missiles.txt')
     missiles.drop_tagged(missiles.col('Missile'), 'rmap_')
-    kit = Kit(api, skills, missiles)
+    kit = Kit(api, skills, missiles, props)
     for module in KITS:
         module.generate(api, plans, kit, monsters)
     return missiles, hd_missiles(api, kit.sources)

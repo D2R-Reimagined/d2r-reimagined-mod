@@ -68,6 +68,14 @@ two random leaves. Corrupted Durance also gets `body_rooms` because the
 four-room Flayer Dungeon template could not put any distance between the two.
 The self-linked entry stairs are expected to do nothing when clicked.
 
+Outdoor bodies have no maze routine. Their portal lands in the warp piece whose
+grid cell is materialized last. Highlands only had the Warden exit, so players
+arrived at the Sanctum door. `entry_preset` names a stock piece, built from the
+theme's private copy, whose warps all lead back to the body: Highlands uses the
+cave mound 51, and Steppes uses the mesa entrance 811. The plugin places that
+piece first, then puts the exit several cells away on an earlier cell. The
+generator refuses an entry piece with a warp that leads anywhere else.
+
 ### Custom arenas
 
 `custom:<name>` arenas are built by `arenas.py` instead of cloned: one layout
@@ -195,6 +203,14 @@ Travincal fog, leaves and motes finish it. The arena keeps level 148's
 slot-2 red portal (encoded as the old Mephisto-chamber arena did, a hidden
 orientation 11 warp tile) in the south corner, and `arenas.LEVEL` gives it
 Travincal's outdoor ambience (SoundEnv 25).
+
+The way in is the Council building's own stairs (TravN, slot 0, lvlwarp 64).
+That warp is NoInteract: only an OpenWarp object over it makes it usable, and
+stripping campaign objects had removed the stock one, MephistoDoor, so the body
+had no entrance (2026-10-12). `exterior.TRAVINCAL_STAIRS` keeps that object in
+place as UnfoldingStairRight (objects.txt 195), which uses the same art and is
+clickable without the Compelling Orb. Kurast's temple stairs work the same way
+on lvlwarp 61. Click once to unfold the stairs and again to go down.
 
 Sunscar Dunes' sun-scorched ruin (`DUNES`) is an open-air courtyard of the
 Lost City in the Act 2 desert tiles (LevelType 16). It keeps level 138's row

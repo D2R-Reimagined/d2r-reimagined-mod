@@ -6,7 +6,6 @@ skill uses. Stock council members cast Hydra from Skill1 in S1 (action frame
 3), so the slots are proven; only their contents change:
 
     Skill1  aip4 %                 Flame Sentinel, a capped short-lived Hydra
-                                   (tier 3+; repeats Burning Divide below)
     Skill2  aip2 % (aip5 at range, Burning Divide, a firewall through the
             aip7 in melee)         target; the signature
 
@@ -36,9 +35,10 @@ DIVIDE_WALL = 'rmap_divide_wall'
 
 # Tier: (Flame Sentinel in the kit, skill delay aip3 in frames). The first
 # kit idled 100-75 frames (3-4 s) after every skill; labcouncilmember uses 30
-# (2026-10-12).
+# (2026-10-12). Both skills from tier 1: a one-spell Warden reads as "normal
+# attacks" in game; the Sentinel cap and the delay still grow with tier.
 TIERS = {
-    1: (False, 40), 2: (False, 40),
+    1: (True, 40), 2: (True, 40),
     3: (True, 35), 4: (True, 35),
     5: (True, 30), 6: (True, 30),
 }

@@ -4,8 +4,8 @@ The Warden is built on the theme's Balrog (megademon4, WARDENS body) and runs
 the Vampire AI, which D2R's monai.txt documents as melee plus three spells
 switched on by bit flags in aip5 (1 = Skill1, 2 = Skill2, 4 = Skill3):
 
-    Skill1  "Fireball"   Hellfire Bolt, a slow fireball (tiers 3-6)
-    Skill2  "Firewall"   Magma Rift, a firewall through the target (tiers 5-6)
+    Skill1  "Fireball"   Hellfire Bolt, a slow fireball
+    Skill2  "Firewall"   Magma Rift, a firewall through the target (tiers 3-6)
     Skill3  "Meteor"     Brimstone, a meteor with its target circle that leaves
                          burning ground; the signature, from tier 1
 
@@ -42,13 +42,15 @@ BRIMSTONE = 'rmap_brimstone'
 BRIMSTONE_CENTER = 'rmap_brimstone_center'
 BRIMSTONE_FIRE = 'rmap_brimstone_fire'
 
-# Tier: (spells in the kit, aip2 use-skill chance). Tiers 1-2 teach Brimstone,
-# 3-4 add Hellfire Bolt, 5-6 add Magma Rift and cast a little more often.
-# labvampire uses a skill on every roll; 30-40 left the Warden walking at
-# players most of the fight, so these were raised by 20 (2026-10-12).
+# Tier: (spells in the kit, aip2 use-skill chance). Every Warden has two
+# skills from tier 1 and three from tier 3 (2026-10-12; a one-spell Warden
+# reads as "normal attacks"): Brimstone and Hellfire Bolt, then Magma Rift;
+# tiers 5-6 cast more often. labvampire uses a skill on every roll; 30-40
+# left the Warden walking at players most of the fight, so these were raised
+# by 20 (2026-10-12).
 TIERS = {
-    1: ((BRIMSTONE,), 50), 2: ((BRIMSTONE,), 50),
-    3: ((BRIMSTONE, HELLFIRE), 55), 4: ((BRIMSTONE, HELLFIRE), 55),
+    1: ((BRIMSTONE, HELLFIRE), 50), 2: ((BRIMSTONE, HELLFIRE), 50),
+    3: ((BRIMSTONE, HELLFIRE, MAGMA), 55), 4: ((BRIMSTONE, HELLFIRE, MAGMA), 55),
     5: ((BRIMSTONE, HELLFIRE, MAGMA), 60), 6: ((BRIMSTONE, HELLFIRE, MAGMA), 60),
 }
 SLOTS = {HELLFIRE: HELLFIRE_SLOT, MAGMA: MAGMA_SLOT, BRIMSTONE: BRIMSTONE_SLOT}
@@ -76,7 +78,8 @@ def _missile_damage(spec, shift='8'):
 
 def generate(api, plans, kit, monsters):
     # The Vampire fires a Fireball skill's srvmissile, which carries its damage.
-    kit.skill('VampireFireball', HELLFIRE, {'monanim': CAST, 'srvmissile': HELLFIRE_BOLT})
+    kit.skill('VampireFireball', HELLFIRE, {'monanim': CAST, 'srvmissile': HELLFIRE_BOLT,
+                                            'cltmissile': HELLFIRE_BOLT})
     kit.missile('vampirefireball', HELLFIRE_BOLT, _missile_damage(BOLT_DAMAGE))
 
     kit.skill('VampireFirewall', MAGMA, {

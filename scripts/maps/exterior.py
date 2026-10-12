@@ -25,6 +25,28 @@ RED_PORTAL_LANDING = 33
 # same-size solid mesa (including its HD counterpart), not an orphan warp.
 CLOSED_PRESETS = {('dunes',390):398, ('dunes',391):398}
 
+# Travincal's way down is an object, not a tile: lvlwarp 64 is NoInteract, so
+# TravN's slot-0 warp only works under an OpenWarp object. Stock that is
+# MephistoDoor (Act 3 objpreset 111), unselectable until the Compelling Orb is
+# smashed with Khalim's Will. The map copy keeps the stairs where they stand as
+# UnfoldingStairRight (Act 3 objpreset 14, objects.txt 195): the same "sv"
+# stairs, clickable from the start, which is how Kurast's temples open their
+# NoInteract warps (lvlwarp 61). Every other campaign object is still removed.
+TRAVINCAL_STAIRS = dict(source=654, door=(2,111,74,83,0), warps=[(15,17,0)], stairs=14)
+
+def travincal_stairs(data,object_presets):
+    """The TravN object block for a map: the Durance stairs, opened."""
+    spec=TRAVINCAL_STAIRS
+    _,rows,_,_=objects(data)
+    if struct.unpack_from('<I',data,12)[0]!=2 or list(warp_markers(data))!=spec['warps'] \
+            or [r for r in rows if r[:2]==spec['door'][:2]]!=[spec['door']]:
+        raise ValueError('Travincal stairs witness changed')
+    if object_presets.object_class(3,spec['door'][1])!='MephistoDoor' \
+            or object_presets.object_class(3,spec['stairs'])!='UnfoldingStairRight':
+        raise ValueError('Travincal stairs objpreset rows changed')
+    # sanitize stamps the copy Act 5, which moves objects into that namespace.
+    return [(2,object_presets.remap(3,spec['stairs']),*spec['door'][2:])]
+
 def warp_markers(data):
     width,height,layers=wall_layers(data)
     for cells,types in layers:
@@ -107,9 +129,10 @@ def layer_info(data):
 
 def wall_layers(data):return layer_info(data)[:3]
 
-def sanitize(data, *, exit_slot=None, marker=None):
+def sanitize(data, *, exit_slot=None, marker=None, keep=()):
     offset,rows,_,_=objects(data)
-    result=bytearray(data[:offset]+struct.pack('<I',0)+data[offset+4+20*len(rows):])
+    block=struct.pack('<I',len(keep))+b''.join(struct.pack('<5I',*r) for r in keep)
+    result=bytearray(data[:offset]+block+data[offset+4+20*len(rows):])
     struct.pack_into('<I',result,12,4)
     width,height,layers=wall_layers(result)
     if exit_slot is not None:
@@ -137,7 +160,7 @@ def sanitize(data, *, exit_slot=None, marker=None):
         else: raise ValueError(f'Warp marker would overwrite a wall at {x},{y}')
     return bytes(result)
 
-def generate(api,plans,presets,runtime,levels):
+def generate(api,plans,presets,runtime,levels,object_presets):
     assets={}; mappings=[]; layouts=[]
     warps=api.Table(api.EXCEL/'lvlwarp.txt')
     next_id=1+max(int(r[presets.col('Def')] or 0) for r in presets.rows)
@@ -174,7 +197,8 @@ def generate(api,plans,presets,runtime,levels):
                     marker=((wx*5+int(walk[warps.col('ExitWalkX')]))//5,
                             (wy*5+int(walk[warps.col('ExitWalkY')]))//5,RED_PORTAL_LANDING)
                 target=f'Maps/Exterior/{key}_{source}_{file_index}'+(f'_{role}' if role else '')
-                data=sanitize(data,exit_slot=warp_slot,marker=marker)
+                keep=travincal_stairs(data,object_presets) if (key,source,role)==('travincal',TRAVINCAL_STAIRS['source'],None) else ()
+                data=sanitize(data,exit_slot=warp_slot,marker=marker,keep=keep)
                 if key=='travincal' and source==657:data=close_travincal_passage(data)
                 if any(warp_markers(data)):row[presets.col('Scan')]='1'
                 for _,_,slot in warp_markers(data):
@@ -196,6 +220,22 @@ def generate(api,plans,presets,runtime,levels):
                 if int(stock[source][presets.col('Files')] or 0)>0:
                     mappings.append((theme_index,source,clone(source)))
         if theme.get('exit_preset'):exit_id=clone(theme['exit_preset'],'exit',7,keep_files=theme.get('exit_files'))
+        if theme.get('entry_preset'):
+            # Outdoor bodies: a stock piece, built from this theme's private
+            # copy, that the plugin places as the arrival before the exit.
+            # A red portal lands in the first live-warp room of the room
+            # list, so every warp it carries must lead back to the body.
+            entry_id=theme['entry_preset']
+            if not theme.get('exit_preset') or not any(lo<=entry_id<=hi for lo,hi in RANGES[key]):
+                raise ValueError(f'{key}: entry_preset {entry_id} needs an exit_preset and a private copy')
+            row=presets.find(presets.col('Def'),str(dict((s,r) for t,s,r in mappings if t==theme_index)[entry_id]))
+            files=[row[presets.col(f'File{i}')] for i in range(1,int(row[presets.col('Files')])+1)]
+            slots={slot for f in files for _,_,slot in warp_markers(assets[api.REPO/f'data/global/tiles/{f}'])}
+            for p in plans:
+                if p['theme'] is not theme:continue
+                body=levels.find(levels.col('Id'),str(p['body_id']))
+                if not slots or any(int(body[levels.col(f'Vis{s}')] or 0)!=p['body_id'] for s in slots):
+                    raise ValueError(f'{key}: entry_preset {entry_id} warps {sorted(slots)} must link to body {p["body_id"]}')
         if theme.get('stairs_preset'):
             # Maze bodies: the plugin places one stairs room of each copy
             # after the native maze has grown. River of Flame's stairs room
@@ -245,7 +285,8 @@ def maze_presets(plans,presets,levels):
     return swaps
 
 def header(out,runtime):
-    out += ['// entryPreset is set only for maze bodies; there exitPreset is also a stairs room.',
+    out += ['// entryPreset: maze bodies place it and exitPreset as stairs rooms; outdoor',
+            '// bodies place it (a stock ID, built from its private copy) as the arrival, then the exit.',
             'struct ExteriorLayout { uint32_t level, source, type, width, height, x, y; uintptr_t initializer; uint32_t exitPreset, theme, entryPreset; };',
             'inline constexpr ExteriorLayout ExteriorLayouts[] {']
     out += [' {'+', '.join(str(v) for v in r)+'},' for r in runtime['exterior_layouts']]

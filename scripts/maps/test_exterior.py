@@ -32,7 +32,10 @@ class ExteriorContract(unittest.TestCase):
             for i in range(1,int(row['Files'])+1):
                 rel=row[f'File{i}'].replace('\\','/')
                 data=(gen.REPO/'data/global/tiles'/rel).read_bytes()
-                self.assertEqual(exterior.objects(data)[1],[])
+                if (theme,source,variant)==('travincal','654',[]):
+                    (stairs,)=exterior.objects(data)[1]
+                    self.assertEqual(stairs[2:],exterior.TRAVINCAL_STAIRS['door'][2:])
+                else:self.assertEqual(exterior.objects(data)[1],[])
                 self.assertEqual(struct.unpack_from('<I',data,12)[0],4)
                 source_rel=original[table.col(f'File{i}')].replace('\\','/')
                 hd=gen.REPO/'data/hd/env/preset'/(rel[:-4].lower()+'.json')
@@ -85,6 +88,25 @@ class ExteriorContract(unittest.TestCase):
             closed=(gen.REPO/f'data/global/tiles/Maps/Exterior/dunes_{source}_1.ds1').read_bytes()
             self.assertEqual(list(exterior.warp_markers(closed)),[])
 
+    def test_travincal_stairs_open_the_warden_warp(self):
+        # lvlwarp 64 is NoInteract: without an OpenWarp object on TravN's
+        # slot-0 tile the body had no way into the arena (2026-10-12).
+        warps=gen.Table(gen.EXCEL/'lvlwarp.txt');levels=gen.Table(gen.EXCEL/'levels.txt')
+        self.assertEqual(warps.find(warps.col('Id'),'64')[warps.col('NoInteract')],'1')
+        data=(gen.REPO/'data/global/tiles/Maps/Exterior/travincal_654_1.ds1').read_bytes()
+        self.assertEqual(list(exterior.warp_markers(data)),[(15,17,0)])
+        (stairs,)=exterior.objects(data)[1]
+        presets=gen.Table(gen.EXCEL/'objpreset.txt')
+        act5={r[presets.col('Index')]:r[presets.col('ObjectClass')] for r in presets.rows if r[presets.col('Act')]=='5'}
+        self.assertEqual(act5[str(stairs[1])],'UnfoldingStairRight')
+        objects=gen.Table(gen.EXCEL/'objects.txt')
+        row=objects.find(objects.col('Class'),'UnfoldingStairRight')
+        self.assertEqual([row[objects.col(c)] for c in ('Selectable0','OpenWarp','InitFn')],['1','1','0'])
+        for p in gen.plan():
+            if p['theme']['key']!='travincal':continue
+            body=levels.find(levels.col('Id'),str(p['body_id']))
+            self.assertEqual((body[levels.col('Vis0')],body[levels.col('Warp0')]),(str(p['boss_id']),'64'))
+
     def test_synthetic_markers_never_request_missing_dt1_art(self):
         warps=gen.Table(gen.EXCEL/'lvlwarp.txt')
         hidden=warps.find(warps.col('Id'),'83')
@@ -126,6 +148,29 @@ class ExteriorContract(unittest.TestCase):
                 for _,_,s in exterior.warp_markers(data):
                     stock_warps={int(r[levels.col(f'Warp{s}')]) for r in campaign if int(r[levels.col(f'Vis{s}')] or 0)}
                     self.assertEqual(stock_warps,{warp},f"{theme['key']} {source} slot {s}")
+
+    def test_outdoor_arrivals_are_self_linked_and_reach_the_plugin(self):
+        # An outdoor red portal lands in the first live-warp room of the room
+        # list. With the exit as the only one, Highlands portals arrived at the
+        # Warden's door (2026-10-12); the plugin now places entry_preset first.
+        presets=gen.Table(gen.EXCEL/'lvlprest.txt');levels=gen.Table(gen.EXCEL/'levels.txt')
+        header=gen.DEFAULT_PLUGIN_HEADER.read_text(encoding='utf-8')
+        layouts={int(v[0]):int(v[10]) for v in re.findall(r'^ \{(\d+(?:, \d+){10})\},$',header,re.M) for v in [v.split(', ')]}
+        tiles=gen.REPO/'data/global/tiles'
+        themed=[t for t in cfg.THEMES if t.get('entry_preset') and t.get('exterior')]
+        self.assertEqual({t['key'] for t in themed},{'highlands','steppes'})
+        for theme in themed:
+            copy=presets.find(presets.col('Name'),f"RMAP Exterior {theme['key']} {theme['entry_preset']}")
+            files=[copy[presets.col(f'File{i}')] for i in range(1,int(copy[presets.col('Files')])+1)]
+            slots={s for f in files for _,_,s in exterior.warp_markers((tiles/f).read_bytes())}
+            self.assertTrue(slots,theme['key'])
+            for body in levels.rows:
+                if body[0].startswith(f"{cfg.ROW_TAG} {theme['key']} T") and not body[0].endswith('boss'):
+                    body_id=int(body[levels.col('Id')])
+                    self.assertEqual(layouts[body_id],theme['entry_preset'])
+                    for s in slots:
+                        self.assertEqual(int(body[levels.col(f'Vis{s}')]),body_id,f"{theme['key']} slot {s}")
+                        self.assertGreaterEqual(int(body[levels.col(f'Warp{s}')]),0)
 
     def test_entry_and_warden_markers_are_distinct(self):
         def slots(data):

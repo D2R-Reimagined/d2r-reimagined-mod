@@ -7,8 +7,7 @@ the Fanaticism aura, the one Warden aura that buffs the escort rather than
 dealing passive damage. D2R's monai.txt documents the AI as melee plus
 
     Skill1  aip4 %                 Heaven's Wrath, a strike on the target that
-                                   radiates a ring of slow holy bolts (tier 3+;
-                                   repeats Judgment with aip4 = 0 below)
+                                   radiates a ring of slow holy bolts
     Skill2  aip2 % (aip5 at range, Judgment, a chain lightning; the signature
             aip7 in melee)
 
@@ -36,9 +35,10 @@ WRATH_BOLT = 'rmap_wrath_bolt'
 
 # Tier: (Heaven's Wrath in the kit, aip4 Wrath chance, skill delay aip3 in
 # frames). The first kit idled 100-75 frames after every skill;
-# labcouncilmember uses 30 (2026-10-12).
+# labcouncilmember uses 30 (2026-10-12). Both skills from tier 1: a one-spell
+# Warden reads as "normal attacks" in game.
 TIERS = {
-    1: (False, 0, 40), 2: (False, 0, 40),
+    1: (True, 25, 40), 2: (True, 25, 40),
     3: (True, 30, 35), 4: (True, 30, 35),
     5: (True, 35, 30), 6: (True, 35, 30),
 }
@@ -75,7 +75,8 @@ def _missile_damage(spec):
 def generate(api, plans, kit, monsters):
     kit.skill('Chain Lightning', JUDGMENT, {
         'monanim': CAST, 'srvmissilea': JUDGMENT_BOLT, 'srvmissileb': JUDGMENT_BOLT,
-        'srvmissilec': JUDGMENT_BOLT, 'cltmissilea': JUDGMENT_BOLT, 'calc1': JUMPS,
+        'srvmissilec': JUDGMENT_BOLT, 'cltmissilea': JUDGMENT_BOLT, 'cltmissileb': JUDGMENT_BOLT,
+        'cltmissilec': JUDGMENT_BOLT, 'calc1': JUMPS,
         **_skill_damage(JUDGMENT_DAMAGE)})
     kit.missile('chainlightning', JUDGMENT_BOLT, {'Skill': JUDGMENT})
 
