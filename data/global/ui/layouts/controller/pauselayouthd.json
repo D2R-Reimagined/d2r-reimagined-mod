@@ -80,8 +80,32 @@
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "textString": "@SaveAndExit",
                 "onClickMessage": "PausePanelMessage:ExitGame",
+                "navigation": {
+                    "down": { "name": "ModInformation" }
+                },
                 "pointSize": "$MediumLargeFontSize",
                 "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleFEButtonText",
+                "hoveredFrame": 3,
+                "disabledFrame": 2,
+                "sound": "cursor_select"
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "ModInformation",
+            "fields": {
+                "rect": { "x": 564, "y": 1028 },
+                "anchor": { "x": 0.5, "y": 0.5 },
+                "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
+                "textString": "@strModInformation",
+                "onClickMessage": "PanelManager:OpenPanel:modinfo_aa",
+                "navigation": {
+                    "up": { "name": "Exit" }
+                },
+                "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
+                "focusIndicatorOffset": { "x": -3, "y": 0 },
+                "pointSize": "$MediumLargeFontSize",
+                "textColor": "$FontColorOrange",
                 "text/style": "$StyleFEButtonText",
                 "hoveredFrame": 3,
                 "disabledFrame": 2,
