@@ -45,12 +45,14 @@ TIERS = {
 SENTINEL_MAX = '(lvl < 5) ? 1 : 2'    # petmax, level = tier: one Sentinel, two from tier 5
 SENTINEL_FRAMES = 200                 # 8 s (stock 250)
 DIVIDE_FRAMES = 150                   # 6 s of wall (stock countess wall ~40 s)
-MELEE_CHANCE = 60      # aip1
-DIVIDE_CHANCE = 40     # aip2
-SENTINEL_CHANCE = 35   # aip4
-RANGED_SKILL = 60      # aip5
+# Cast chances raised 2026-10-14 (melee 60, Divide 40, Sentinel 35, ranged
+# 60, melee skill 30 before): it spent fights walking into its escort.
+MELEE_CHANCE = 40      # aip1
+DIVIDE_CHANCE = 55     # aip2
+SENTINEL_CHANCE = 45   # aip4
+RANGED_SKILL = 90      # aip5
 RUN_AWAY = 5           # aip6 (was 20; it backed out of its own fire fight)
-MELEE_SKILL = 30       # aip7
+MELEE_SKILL = 60       # aip7
 APPROACH_RANGE = 30    # aip8, stock
 
 # Fire damage, level = tier. Sentinel bolts use HitShift 7 (half); the wall

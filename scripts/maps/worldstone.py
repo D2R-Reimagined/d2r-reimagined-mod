@@ -32,13 +32,14 @@ SLAM = 'rmap_seismic_slam'
 WAVE = 'rmap_rift_wave'
 WAVE_MISSILE = 'rmap_rift_wave_m'
 
-# Tier: (Rift Wave in the kit, aip5 slam chance, aip6 wave chance). Raised by
-# 10 on 2026-10-12 so the Warden uses its kit more than its plain swing. Rift
+# Tier: (Rift Wave in the kit, aip5 slam chance, aip6 wave chance). Raised to
+# 45-50/35-45 on 2026-10-14: at 20-30 the Hell Bovine mostly tried to swing
+# and stood behind its own escort. Rift
 # Wave from tier 1: a one-spell Warden reads as "normal attacks" in game.
 TIERS = {
-    1: (True, 30, 20), 2: (True, 30, 20),
-    3: (True, 30, 25), 4: (True, 30, 25),
-    5: (True, 35, 30), 6: (True, 35, 30),
+    1: (True, 45, 35), 2: (True, 45, 35),
+    3: (True, 45, 40), 4: (True, 45, 40),
+    5: (True, 50, 45), 6: (True, 50, 45),
 }
 WAVES = '(lvl < 5) ? 5 : 7'   # calc1, level = tier: five waves, seven from tier 5
 WAVE_SPEED = 12               # stock 20: slow enough to step between

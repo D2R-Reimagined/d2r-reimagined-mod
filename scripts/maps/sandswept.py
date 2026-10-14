@@ -36,21 +36,21 @@ SANDSTORM_DEVIL = 'rmap_sandstorm_devil'
 RUSH = 'SerpentCharge'
 
 # Tier: (Rush in the kit, aip2 use-skill chance). Sandstorm fans three devils
-# from tier 5 (calc1, level = tier). Raised by 20 toward labvampire's 100
-# (2026-10-12), as on the Infernal Warden. The viper's speed comes from the
+# from tier 5 (calc1, level = tier). aip2/aip4 sit near
+# 100 (see infernal.py). The viper's speed comes from the
 # population row (AI_PROFILES ClawViper, labviper's 10/14). Rush from tier 1:
 # a one-spell Warden reads as "normal attacks" in game.
 TIERS = {
-    1: (True, 50), 2: (True, 50),
-    3: (True, 55), 4: (True, 55),
-    5: (True, 60), 6: (True, 60),
+    1: (True, 85), 2: (True, 85),
+    3: (True, 90), 4: (True, 90),
+    5: (True, 95), 6: (True, 95),
 }
 DEVILS = '(lvl < 5) ? 2 : 3'
 DEVIL_SPEED = 6        # stock 10: slow enough to walk between
 DEVIL_FRAMES = 80      # stock 50
 MELEE_CHANCE = 80      # aip1
 ACTIVE_RANGE = 40      # aip3, the Infernal Warden's (labvampire's)
-SPELL_CHANCE = 50      # aip4
+SPELL_CHANCE = 100     # aip4, labvampire's (was 50)
 
 # Physical damage per devil hit (HitShift 8, whole), level = tier. The stock
 # skill is 500-1000 +500/+1000 a level, which the old tier-scaled proc hit hard.

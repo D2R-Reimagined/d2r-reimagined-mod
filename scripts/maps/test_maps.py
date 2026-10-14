@@ -311,6 +311,27 @@ class MappingContract(unittest.TestCase):
                 for diff in ('', '(N)', '(H)'):
                     self.assertLessEqual(int(row[col(f'aip{i}{diff}')] or 0), 100, f'{row[0]} aip{i}{diff}')
 
+    def test_wardens_cast_at_labyrinth_rates(self):
+        # 2026-10-14: "Wardens seem to not attack you when their spawns are
+        # still alive". On the Vampire AI a cast takes aip2 x aip4; at 55 x 50
+        # the Warden cast on about a quarter of its decisions and otherwise
+        # walked into its own escort. Labyrinth bosses cast on nearly every
+        # roll. These are the cast gates D2R's monai.txt documents per AI.
+        col = self.monsters.col
+        aip = lambda row, i: int(row[col(f'aip{i}(H)')] or 0)
+        gates = {
+            'Vampire': lambda r: aip(r, 2) * aip(r, 4) >= 85 * 100,
+            'HighPriest': lambda r: aip(r, 5) >= 90 and aip(r, 7) >= 60 and aip(r, 1) <= 40,
+            'ZakarumPriest': lambda r: aip(r, 1) <= 35,
+            'PinHead': lambda r: aip(r, 5) + aip(r, 6) >= 80,
+            'CorruptArcher': lambda r: aip(r, 2) >= 90,
+            'Summoner': lambda r: aip(r, 1) == 100,
+        }
+        for p in self.plans:
+            row = self.monsters.find(col('Id'), f"rmap_{p['item_code']}_boss")
+            self.assertIn(row[col('AI')], gates, row[0])
+            self.assertTrue(gates[row[col('AI')]](row), f"{row[0]} {[aip(row, i) for i in range(1, 9)]}")
+
     def test_wardens_run_at_warden_pace(self):
         # "Still somewhat slow" (2026-10-12): on top of its kit every Warden
         # moves and decides WARDEN_PACE faster than the population row it is

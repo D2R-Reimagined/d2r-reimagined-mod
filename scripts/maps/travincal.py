@@ -38,17 +38,19 @@ WRATH_BOLT = 'rmap_wrath_bolt'
 # labcouncilmember uses 30 (2026-10-12). Both skills from tier 1: a one-spell
 # Warden reads as "normal attacks" in game.
 TIERS = {
-    1: (True, 25, 40), 2: (True, 25, 40),
-    3: (True, 30, 35), 4: (True, 30, 35),
-    5: (True, 35, 30), 6: (True, 35, 30),
+    1: (True, 35, 40), 2: (True, 35, 40),
+    3: (True, 40, 35), 4: (True, 40, 35),
+    5: (True, 45, 30), 6: (True, 45, 30),
 }
 JUMPS = '(lvl < 5) ? 3 : 5'   # Judgment chain hits, level = tier
 WRATH_DELAY = 20              # frames before the strike lands (stock 10)
-MELEE_CHANCE = 60      # aip1
-JUDGMENT_CHANCE = 35   # aip2
-RANGED_SKILL = 60      # aip5
+# Cast chances raised 2026-10-14 (melee 60, Judgment 35, ranged 60, melee
+# skill 30, Wrath 25-35 before): it spent fights walking into its escort.
+MELEE_CHANCE = 40      # aip1
+JUDGMENT_CHANCE = 50   # aip2
+RANGED_SKILL = 90      # aip5
 RUN_AWAY = 5           # aip6 (was 10)
-MELEE_SKILL = 30       # aip7
+MELEE_SKILL = 60       # aip7
 APPROACH_RANGE = 30    # aip8
 
 # Lightning damage (whole), level = tier.

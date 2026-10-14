@@ -45,18 +45,19 @@ BRIMSTONE_FIRE = 'rmap_brimstone_fire'
 # Tier: (spells in the kit, aip2 use-skill chance). Every Warden has two
 # skills from tier 1 and three from tier 3 (2026-10-12; a one-spell Warden
 # reads as "normal attacks"): Brimstone and Hellfire Bolt, then Magma Rift;
-# tiers 5-6 cast more often. labvampire uses a skill on every roll; 30-40
-# left the Warden walking at players most of the fight, so these were raised
-# by 20 (2026-10-12).
+# tiers 5-6 cast more often. On this AI a cast needs two rolls, aip2 (use a skill) and aip4 (a spell);
+# at 50-60 x 50 the Warden cast on about a quarter of its decisions and
+# otherwise walked into its own escort, which testers read as a Warden that
+# never attacks while its spawns live (2026-10-14). labvampire uses 100/100.
 TIERS = {
-    1: ((BRIMSTONE, HELLFIRE), 50), 2: ((BRIMSTONE, HELLFIRE), 50),
-    3: ((BRIMSTONE, HELLFIRE, MAGMA), 55), 4: ((BRIMSTONE, HELLFIRE, MAGMA), 55),
-    5: ((BRIMSTONE, HELLFIRE, MAGMA), 60), 6: ((BRIMSTONE, HELLFIRE, MAGMA), 60),
+    1: ((BRIMSTONE, HELLFIRE), 85), 2: ((BRIMSTONE, HELLFIRE), 85),
+    3: ((BRIMSTONE, HELLFIRE, MAGMA), 90), 4: ((BRIMSTONE, HELLFIRE, MAGMA), 90),
+    5: ((BRIMSTONE, HELLFIRE, MAGMA), 95), 6: ((BRIMSTONE, HELLFIRE, MAGMA), 95),
 }
 SLOTS = {HELLFIRE: HELLFIRE_SLOT, MAGMA: MAGMA_SLOT, BRIMSTONE: BRIMSTONE_SLOT}
 MELEE_CHANCE = 80      # aip1
 ACTIVE_RANGE = 40      # aip3, labvampire's (stock vampire6 24)
-SPELL_CHANCE = 50      # aip4
+SPELL_CHANCE = 100     # aip4, labvampire's (was 50)
 SPEED = (14, 16)       # Velocity/Run, labbalrog's
 
 # Fire damage, level = tier. HitShift 8 values are whole life; the ground fire

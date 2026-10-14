@@ -54,9 +54,9 @@ RAIN_TAIL = 'rmap_cinder_tail'
 
 # Tier: (Cinder Rain in the kit, aip6 Immolation chance, aip7 Rain chance).
 TIERS = {
-    1: (False, 30, 0), 2: (False, 30, 0),
-    3: (True, 35, 15), 4: (True, 35, 15),
-    5: (True, 35, 20), 6: (True, 35, 20),
+    1: (False, 35, 0), 2: (False, 35, 0),
+    3: (True, 35, 25), 4: (True, 35, 25),
+    5: (True, 35, 30), 6: (True, 35, 30),
 }
 VOLLEY_ARROWS = '(lvl < 5) ? 5 : 7'   # calc1, level = tier
 RAIN_FRAMES = 150                     # 6 s of meteors (Param1, auralencalc)
@@ -65,7 +65,7 @@ RAIN_RADIUS = 10                      # Param3, aurarangecalc (stock 8)
 # delay 6). The first kit approached 60% and ran away 50%, so she stepped in
 # and out instead of shooting.
 APPROACH = 20          # aip1
-USE_SKILL = 75         # aip2; otherwise her plain arrow
+USE_SKILL = 90         # aip2; otherwise her plain arrow (75 before 2026-10-14)
 AI_DELAY = 6           # aip3, labcorruptarcher's
 RUN_AWAY = 10          # aip4, labcorruptarcher's
 RUN_RANGE = 15         # aip5

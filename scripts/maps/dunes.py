@@ -40,19 +40,19 @@ SPRAY_BOLT = 'rmap_static_bolt'
 PULSE = 'rmap_scorch_pulse'
 PULSE_RING = 'rmap_scorch_ring'
 
-# Tier: (spells in the kit, aip2 use-skill chance). Raised by 20 toward
-# labvampire's 100 (2026-10-12), as on the Infernal Warden. Two spells from
+# Tier: (spells in the kit, aip2 use-skill chance). See infernal.py for why
+# aip2/aip4 sit near 100. Two spells from
 # tier 1 and three from tier 3: a one-spell Warden reads as "normal attacks".
 TIERS = {
-    1: ((SUNFALL, SPRAY), 50), 2: ((SUNFALL, SPRAY), 50),
-    3: ((SUNFALL, SPRAY, PULSE), 55), 4: ((SUNFALL, SPRAY, PULSE), 55),
-    5: ((SUNFALL, SPRAY, PULSE), 60), 6: ((SUNFALL, SPRAY, PULSE), 60),
+    1: ((SUNFALL, SPRAY), 85), 2: ((SUNFALL, SPRAY), 85),
+    3: ((SUNFALL, SPRAY, PULSE), 90), 4: ((SUNFALL, SPRAY, PULSE), 90),
+    5: ((SUNFALL, SPRAY, PULSE), 95), 6: ((SUNFALL, SPRAY, PULSE), 95),
 }
 SLOTS = {SUNFALL: SUNFALL_SLOT, SPRAY: SPRAY_SLOT, PULSE: PULSE_SLOT}
 SPRAY_BOLTS = '(lvl < 5) ? 4 : 6'   # calc1, level = tier
 MELEE_CHANCE = 80      # aip1
 ACTIVE_RANGE = 40      # aip3, the Infernal Warden's (labvampire's)
-SPELL_CHANCE = 50      # aip4
+SPELL_CHANCE = 100     # aip4, labvampire's (was 50)
 SPEED = (10, 10)       # Velocity/Run; the stock scarab walks at 6
 
 # Lightning damage per hit (HitShift 8, whole), level = tier.

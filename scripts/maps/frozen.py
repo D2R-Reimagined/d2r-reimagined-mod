@@ -48,9 +48,9 @@ TIERS = {
     3: (True, 75, False), 4: (True, 75, False),
     5: (True, 50, True), 6: (True, 50, True),
 }
-MELEE_CHANCE = 60      # aip1
-BLIZZARD_CHANCE = 40   # aip2, labheirophant's (was 25)
-ORB_CHANCE = 60        # aip3, labheirophant's (was 35)
+MELEE_CHANCE = 35      # aip1, labheirophant's (was 60)
+BLIZZARD_CHANCE = 50   # aip2 (was 25, then labheirophant's 40)
+ORB_CHANCE = 80        # aip3 (was 35, then labheirophant's 60)
 SPLIT = 50             # aip4, Skill4 vs Skill2
 MEND_RANGE = 15        # aip6 where Mend is in the kit (stock Heirophant 40)
 MEND_LEVEL = 1         # ZakarumHeal restores 15 + 5 x level

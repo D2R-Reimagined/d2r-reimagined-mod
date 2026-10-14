@@ -49,15 +49,15 @@ BURST_RING = 'rmap_ember_burst_ring'
 
 # Tier: (Ashen Curse in the kit, aip2 use-skill chance). Two spells from
 # tier 1 and three from tier 3, like every Warden; the Vampire-AI Wardens'
-# use-skill chances.
+# use-skill chances (aip2/aip4 near 100, see infernal.py).
 TIERS = {
-    1: (False, 50), 2: (False, 50),
-    3: (True, 55), 4: (True, 55),
-    5: (True, 60), 6: (True, 60),
+    1: (False, 85), 2: (False, 85),
+    3: (True, 90), 4: (True, 90),
+    5: (True, 95), 6: (True, 95),
 }
 MELEE_CHANCE = 80      # aip1
 ACTIVE_RANGE = 40      # aip3, labvampire's
-SPELL_CHANCE = 50      # aip4
+SPELL_CHANCE = 100     # aip4, labvampire's (was 50)
 SPEED = (10, 14)       # Velocity/Run, laboblivionknight's 10/15 (stock 7)
 SPIRIT_SPEED = 14      # stock monbonespirit 30: slow enough to outrun
 # Ember Burst proc chance on his swings, by tier; level = tier.
