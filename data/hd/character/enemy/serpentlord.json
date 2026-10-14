@@ -1,0 +1,473 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/serpentlord/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/mephisto/skeleton/mephisto.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/serpentlord/textures/d2rr_serpentlord_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/serpentlord/textures/d2rr_serpentlord_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/serpentlord/textures/d2rr_serpentlord_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/serpentlord/textures/d2rr_serpentlord_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/noise/T_FX_Noise_01.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/serpentlord/serpentlord_state_machine.json"
+            },
+            {
+                "path": "data/hd/missiles/andariel_spell.json"
+            },
+            {
+                "path": "data/hd/missiles/expansion_catapultpoisonbomb.json"
+            },
+            {
+                "path": "data/hd/missiles/poison_nova.json"
+            },
+            {
+                "path": "data/hd/missiles/poison_smoke_puff.json"
+            },
+            {
+                "path": "data/hd/missiles/poison_sparks.json"
+            },
+            {
+                "path": "data/hd/missiles/vfx_poison_twister.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/serpentlord/serpentlord_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "serpentlord",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3796157915,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/serpentlord/serpentlord_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/mephisto/skeleton/mephisto.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/serpentlord/serpentlord_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/andariel_spell.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry2",
+                            "filename": "data/hd/missiles/expansion_catapultpoisonbomb.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry3",
+                            "filename": "data/hd/missiles/poison_nova.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry4",
+                            "filename": "data/hd/missiles/poison_smoke_puff.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry5",
+                            "filename": "data/hd/missiles/poison_sparks.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry6",
+                            "filename": "data/hd/missiles/vfx_poison_twister.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/common/ice_explode.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry2",
+                            "filename": "data/hd/overlays/sorceress/ice_cast_3.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry3",
+                            "filename": "data/hd/overlays/monster/mephisto.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "AimLayersComponent",
+                    "name": "entity_root_AimLayers",
+                    "aimLayers": [
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_0",
+                            "layerName": "Aim_Head",
+                            "yawAnimationState": "HeadAimLayer_Yaw",
+                            "yawOutOfRangeBehavior": 2,
+                            "yawAngleOffset": 0.0,
+                            "pitchAnimationState": "HeadAimLayer_Pitch",
+                            "pitchOutOfRangeBehavior": 2,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 0.15,
+                            "aimTarget": 1
+                        },
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_2",
+                            "layerName": "Aim_Melee",
+                            "yawAnimationState": "",
+                            "yawOutOfRangeBehavior": 2,
+                            "yawAngleOffset": 0.0,
+                            "pitchAnimationState": "MeleeAimLayer",
+                            "pitchOutOfRangeBehavior": 0,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 0.3,
+                            "aimTarget": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "LookAtAnimationControlComponent",
+                    "name": "entity_root_LookAtAnimationControl",
+                    "controlOverrides": [],
+                    "aimLayerName": "Aim_Head",
+                    "blendInTime": 0.25,
+                    "blendOutTime": 0.25
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_root_DeadAnimationSpeedOverride",
+                    "speed": 1.0
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 373291411,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/serpentlord/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_head_maw",
+            "id": 126494093,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_head_maw_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.1,
+                        "z": 0.55
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_head_maw_Attach",
+                    "targetbone": "head"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_head_maw_Light",
+                    "color": {
+                        "x": 0.25,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "power": 6500.0,
+                    "radius": 4.5,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_chest_core",
+            "id": 2232106461,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_chest_core_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.3,
+                        "z": 0.6
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_chest_core_Attach",
+                    "targetbone": "chest"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_chest_core_Light",
+                    "color": {
+                        "x": 0.25,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "power": 5200.0,
+                    "radius": 5.0,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_orbs_left",
+            "id": 3341598460,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_orbs_left_Transform",
+                    "position": {
+                        "x": 0.9,
+                        "y": 0.5,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_orbs_left_Attach",
+                    "targetbone": "L_Clavicle"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_orbs_left_Light",
+                    "color": {
+                        "x": 0.25,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "power": 2600.0,
+                    "radius": 4.0,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_orbs_right",
+            "id": 1125476624,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_orbs_right_Transform",
+                    "position": {
+                        "x": -0.9,
+                        "y": 0.5,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_orbs_right_Attach",
+                    "targetbone": "R_Clavicle"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_orbs_right_Light",
+                    "color": {
+                        "x": 0.25,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "power": 2600.0,
+                    "radius": 4.0,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_abdomen",
+            "id": 8273704,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_abdomen_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": -0.4,
+                        "z": 0.2
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_abdomen_Attach",
+                    "targetbone": "pelvis"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_abdomen_Light",
+                    "color": {
+                        "x": 0.25,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "power": 9000.0,
+                    "radius": 6.5,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        }
+    ]
+}
