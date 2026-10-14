@@ -80,7 +80,15 @@ class MappingContract(unittest.TestCase):
             monsters, stats2, objects, uniques, tcs = [gen.Table(bank / (n + '.txt'))
                 for n in ('monstats', 'monstats2', 'objects', 'superuniques', 'treasureclassex')]
             members = [r for r in monsters.rows if r[0].startswith('rmap_event_')]
-            self.assertEqual(len(members), 5 * len(self.plans) + 12)
+            self.assertEqual(len(members), 5 * len(self.plans) + 13)
+            # The Wandering Gambler: a stationary, unkillable NPC with no native
+            # talk menu and no loot of its own.
+            merchant = monsters.find(monsters.col('Id'), 'rmap_event_merchant')
+            for col, value in (('AI', 'NpcStationary'), ('npc', '1'), ('interact', ''), ('killable', ''),
+                               ('inTown', ''), ('Velocity', '0'), ('Align', '1')):
+                self.assertEqual(merchant[monsters.col(col)], value, col)
+            self.assertGreater(int(merchant[monsters.col('MaxHP(H)')]), 0)
+            self.assertFalse(any(merchant[monsters.col(c)] for c in monsters.header if c.startswith('TreasureClass')))
             for row in members:
                 marker=stats2.find(stats2.col('Id'), row[monsters.col('MonStatsEx')])
                 self.assertEqual(marker[stats2.col('revive')], '0')

@@ -51,6 +51,8 @@ def generate(api, plans, monsters, runtime=None):
         if source not in models:
             raise ValueError(f'No HD monster binding for {source} (used by {name})')
         models[name] = models[source]
+    # Rows with an HD unit of their own rather than another monster's.
+    models.update((runtime or {}).get('hd_units', {}))
     assets = {}
     # Wardens get an enlarged copy of their archetype's model. A kit's own
     # scale gets its own file, since two themes can share a model.

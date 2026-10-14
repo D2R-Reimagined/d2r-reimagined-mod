@@ -3,7 +3,16 @@ import maps_config as cfg
 
 NAMES = {'RMapEventRaider': 'Treasure Raider', 'RMapEventGuard': 'Raider Guard',
          'RMapEventWave': 'Reliquary Guardian', 'RMapEventKeeper': 'Reliquary Keeper',
-         'RMapEventSigil': 'Dark Sigil', 'RMapEventCache': 'Sealed Reliquary'}
+         'RMapEventSigil': 'Dark Sigil', 'RMapEventCache': 'Sealed Reliquary',
+         'RMapEventMerchant': 'Varic the Wandering Gambler'}
+
+# The Wandering Gambler's own HD unit, built by d2rr-models
+# (npcs/wandering_merchant). Until it is installed he wears Gheed's.
+MERCHANT_UNIT = 'rmap_merchant'
+MERCHANT_UNIT_JSON = 'data/hd/character/npc/rmap_merchant.json'
+# Bases the Gambler may offer: armor and weapons in three grades, plus rings
+# and amulets. Grade 3 is jewelry, offered at every tier.
+MERCHANT_JEWELRY = ('rin', 'amu')
 
 
 def native_rows(table):
@@ -57,6 +66,17 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
     for tier in range(1,7):
         raiders.append(monster(f'rmap_event_raider_{tier}', 'fallen5',tier,'RMapEventRaider',f'RMap Event Raiders {tier}',4))
         guards.append(monster(f'rmap_event_guard_{tier}', 'fallen5',tier,'RMapEventGuard','',1.5))
+    # The Wandering Gambler stands still among the map's monsters like Izual's
+    # ghost (NpcStationary, ally, not killable). interact is off: the native
+    # talk menu has nothing to show; the plugin opens his window by proximity.
+    merchant=monster('rmap_event_merchant','gheed',1,'RMapEventMerchant')
+    api.set_cells(monsters.rows[-1],monsters,{'AI':'NpcStationary','Velocity':'0','Run':'0','npc':'1',
+        'interact':'','inventory':'','inTown':'','isSpawn':'','killable':'','Align':'1'})
+    # Town NPCs leave hit points blank; a unit with none is not a valid monster.
+    for col in ('minHP','maxHP','MinHP(N)','MaxHP(N)','MinHP(H)','MaxHP(H)'):
+        monsters.rows[-1][monsters.col(col)]='5000'
+    if (api.REPO / MERCHANT_UNIT_JSON).exists():
+        runtime.setdefault('hd_units',{})['rmap_event_merchant']=MERCHANT_UNIT
     next_hc = 1 + max(int(r[uniques.col('hcIdx')] or 0) for r in uniques.rows)
     for p in plans:
         tier=p['tier']; source=f"rmap_{p['item_code']}_0"
@@ -76,9 +96,39 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
         uniques.append(row)
         next_hc += 1
     runtime['events'] = dict(object_count=len(native_rows(objects)), objects=object_ids, records=records, raiders=raiders,guards=guards,
-        waves=waves,keepers=keepers,challengers=challengers,super_ids=super_ids)
+        waves=waves,keepers=keepers,challengers=challengers,super_ids=super_ids,merchant=merchant,
+        gamble_vendor=api.monster_indices(monsters)['gheed'],merchant_bases=merchant_bases(api),
+        gamble_chances=gamble_chances(api))
     runtime['monster_count']=len(api.monster_indices(monsters));runtime['prop_count']=len(props.rows)
     return objects
+
+def gamble_chances(api):
+    """The vendor gamble quality chances the Gambler uses, per difficulty."""
+    t=api.Table(api.EXCEL/'difficultylevels.txt')
+    return [tuple(int(r[t.col(c)] or 0) for c in ('GambleUnique','GambleSet','GambleRare')) for r in t.rows[:3]]
+
+def merchant_bases(api):
+    """(code, grade) for every spawnable armor/weapon base, and ring/amulet,
+    that an enabled unique or set item uses. Grade 0/1/2 is normal/exceptional/
+    elite by the row's own normcode/ubercode/ultracode; 3 is jewelry. The plugin
+    reads the live unique and set rows for the odds; this only says which bases
+    are worth offering."""
+    used=set()
+    for name,code_col in (('uniqueitems.txt','code'),('setitems.txt','item')):
+        t=api.Table(api.EXCEL/name)
+        for r in t.rows:
+            if (r[t.col('disabled')] or '0')!='1' and (r[t.col('spawnable')] or '0')=='1':
+                used.add(r[t.col(code_col)].strip())
+    bases=[]
+    for name in ('armor.txt','weapons.txt'):
+        t=api.Table(api.EXCEL/name)
+        for r in t.rows:
+            code=r[t.col('code')].strip()
+            if not code or code not in used or r[t.col('spawnable')]!='1' or r[t.col('quest')] not in ('','0'):continue
+            grade=[r[t.col(c)].strip() for c in ('normcode','ubercode','ultracode')]
+            if code in grade:bases.append((code,grade.index(code)))
+    bases+=[(code,3) for code in MERCHANT_JEWELRY if code in used]
+    return bases
 
 def classes(api,t):
     def add(name,picks,items):
@@ -106,3 +156,16 @@ def header(out,runtime):
         out.append('inline constexpr uint16_t '+name+'[] = { '+', '.join(map(str,values))+' };')
     out.append('inline constexpr uint16_t EventKeeperIds[][3] = { '+', '.join('{'+','.join(map(str,x))+'}' for x in e['keepers'])+' };')
     out.append('inline constexpr uint16_t EventObjectCount = '+str(e['object_count'])+';')
+    out.append('inline constexpr uint16_t EventMerchantId = '+str(e['merchant'])+';')
+    out.append('// Gheed: the vendor whose gamble prices the Wandering Gambler charges.')
+    out.append('inline constexpr uint16_t EventGambleVendorId = '+str(e['gamble_vendor'])+';')
+    out.append('// Gamble bases: four-character code (little-endian, space padded) and grade')
+    out.append('// (0 normal, 1 exceptional, 2 elite, 3 ring/amulet).')
+    out.append('struct MerchantBase { uint32_t code; uint8_t grade; };')
+    out.append('// difficultylevels.txt GambleUnique, GambleSet, GambleRare per difficulty (of 100000).')
+    out.append('struct MerchantChance { uint32_t unique, set, rare; };')
+    out.append('inline constexpr MerchantChance MerchantGambleChances[] = { '+', '.join(
+        '{%d,%d,%d}'%c for c in e['gamble_chances'])+' };')
+    def fourcc(code): return int.from_bytes(code.ljust(4).encode('ascii'),'little')
+    out.append('inline constexpr MerchantBase MerchantBases[] = { '+', '.join(
+        '{0x%08X,%d}'%(fourcc(code),grade) for code,grade in e['merchant_bases'])+' };')
