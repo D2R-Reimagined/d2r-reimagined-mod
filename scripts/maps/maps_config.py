@@ -928,6 +928,9 @@ TREASURE_MONSTERS = [
          item="jew", rare=0),
     dict(key="amulet", name="Amulet Collector", source="corruptrogue5", palette=12,
          item="amu", rare=1024),
+    # The mod's own "Gem" TC (gmm..gmo); stock g?? gems are spawnable=0.
+    dict(key="gem", name="Gem Smuggler", source="sandraider5", palette=5,
+         item="Gem", rare=0),
 ]
 TREASURE_DROPS = 6
 TREASURE_DEFAULT_CHANCE = 8  # Combined encounter chance: one per 12.5 maps on average.

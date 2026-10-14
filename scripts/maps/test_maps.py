@@ -692,7 +692,7 @@ class MappingContract(unittest.TestCase):
             ids = list(map(int, re.search(r'TreasureMonsterIds\[\] = \{([^}]+)', header)[1].split(',')))
             self.assertEqual([names[i] for i in ids],
                              [f"rmap_treasure_{tier}_{kind}" for tier in range(1, 7)
-                              for kind in ('jewel', 'amulet')])
+                              for kind in [s['key'] for s in cfg.TREASURE_MONSTERS]])
             body = header.split('PopulationProfiles[][PopulationProfileCount][PopulationSlotCapacity] = {', 1)[1].split('};', 1)[0]
             groups = re.findall(r'\{ ([\d, ]+) \}', body)
             expected = []
