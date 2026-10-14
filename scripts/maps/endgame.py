@@ -313,10 +313,12 @@ def treasure_classes(api, plans, path, runtime):
     for tier in range(1, 7):
         # One bounded bonus attempt on elites only. These tables do not wrap
         # the sustain table and never multiply its chance or the Warden loot.
+        # Gems roll the mod's own "Gem" TC (gmm..gmo); the vanilla gp* gems
+        # are unspawnable in Reimagined and must never drop.
         tc(f"RMap T{tier} Gilded Bonus", 1,
-           [("Gold 1x", 60), ("gpg", 10), ("gpb", 10), ("mor", 2), ("mrl", 2)], 168)
+           [("Gold 1x", 60), ("Gem", 20), ("mor", 2), ("mrl", 2)], 168)
         tc(f"RMap T{tier} Artificer Bonus", 1,
-           [("jew", 20), ("gpg", 10), ("gpb", 10), ("Act 5 (H) Equip C", 44)], 168)
+           [("jew", 20), ("Gem", 20), ("Act 5 (H) Equip C", 44)], 168)
         # No group: these rows must never auto-upgrade into another tier's TC.
         # D2 resolves a TC referenced as an item only if that row was parsed
         # earlier in the file, so Sustain and Loot precede every row that

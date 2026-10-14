@@ -93,7 +93,7 @@ def classes(api,t):
         # guaranteed currency and one guaranteed jewel.
         add(f'RMap Event Raiders {tier}',-7,[(f'RMap T{tier} Loot',4),(f'RMap T{tier} Sustain',1),('RMap Currency',1),('jew',1)])
         add(f'RMap Event Challenger {tier}',-6,[(f'RMap T{tier} Loot',4),(f'RMap T{tier} Sustain',1),('RMap Currency',1)])
-        add(f'RMap Event Crafting {tier}',-6,[('gpg',2),('gpr',2),('jew',1),('mor',1)])
+        add(f'RMap Event Crafting {tier}',-6,[('Gem',4),('jew',1),('mor',1)])
         add(f'RMap Event Equipment {tier}',-6,[(f'RMap T{tier} Loot',6)])
         add(f'RMap Event Maps {tier}',-3,[(f'RMap Tier {min(tier,5)}',1),('RMap Currency',2)])
 

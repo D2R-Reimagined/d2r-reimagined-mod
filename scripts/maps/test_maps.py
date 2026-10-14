@@ -1018,6 +1018,18 @@ class MappingContract(unittest.TestCase):
                     self.assertEqual([drops[f'Item{i}'] for i in range(1, len(cfg.THEMES) + 1)],
                                      [cfg.expansion_code(p['item_code']) for p in self.plans if p['tier'] == tier])
 
+    def test_map_rewards_never_name_vanilla_gems(self):
+        # Reimagined replaces the stock gems (spawnable=0) with its own; every
+        # map gem must come from the mod's "Gem" TC.
+        vanilla = {f'g{q}{c}' for q in 'cfslzp' for c in 'vybgrw'} | {'skc', 'skf', 'sku', 'skl', 'skz'}
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            table = gen.Table(bank / 'treasureclassex.txt')
+            for r in table.rows:
+                row = dict(zip(table.header, r))
+                if row['Treasure Class'].startswith('RMap '):
+                    items = {row[f'Item{i}'] for i in range(1, 11)}
+                    self.assertFalse(items & vanilla, row['Treasure Class'])
+
     def test_expansion_catalog_excludes_fortified_and_on_death_effects(self):
         self.assertEqual([a['key'] for a in cfg.EXPANSION_AFFIXES],
                          ['bovine', 'coven', 'legion', 'frenzy', 'fire_pact', 'cold_pact', 'light_pact', 'gilded', 'artificer'])
