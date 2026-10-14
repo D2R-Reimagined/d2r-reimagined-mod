@@ -161,7 +161,7 @@ def sanitize(data, *, exit_slot=None, marker=None, keep=()):
     return bytes(result)
 
 def generate(api,plans,presets,runtime,levels,object_presets):
-    assets={}; mappings=[]; layouts=[]
+    assets={}; mappings=[]; layouts=[]; warped=set()
     warps=api.Table(api.EXCEL/'lvlwarp.txt')
     next_id=1+max(int(r[presets.col('Def')] or 0) for r in presets.rows)
     stock={int(r[presets.col('Def')]):r for r in presets.rows if r[presets.col('Def')]}
@@ -200,7 +200,7 @@ def generate(api,plans,presets,runtime,levels,object_presets):
                 keep=travincal_stairs(data,object_presets) if (key,source,role)==('travincal',TRAVINCAL_STAIRS['source'],None) else ()
                 data=sanitize(data,exit_slot=warp_slot,marker=marker,keep=keep)
                 if key=='travincal' and source==657:data=close_travincal_passage(data)
-                if any(warp_markers(data)):row[presets.col('Scan')]='1'
+                if any(warp_markers(data)):row[presets.col('Scan')]='1';warped.add(target_id)
                 for _,_,slot in warp_markers(data):
                     for p in plans:
                         if p['theme'] is not theme:continue
@@ -218,7 +218,10 @@ def generate(api,plans,presets,runtime,levels,object_presets):
         for lo,hi in RANGES[key]:
             for source in range(lo,hi+1):
                 if int(stock[source][presets.col('Files')] or 0)>0:
-                    mappings.append((theme_index,source,clone(source)))
+                    # The plugin's arrival placement must know which pieces
+                    # the stock initializer can leave with a live warp.
+                    target=clone(source)
+                    mappings.append((theme_index,source,target,int(target in warped)))
         if theme.get('exit_preset'):exit_id=clone(theme['exit_preset'],'exit',7,keep_files=theme.get('exit_files'))
         if theme.get('entry_preset'):
             # Outdoor bodies: a stock piece, built from this theme's private
@@ -228,7 +231,7 @@ def generate(api,plans,presets,runtime,levels,object_presets):
             entry_id=theme['entry_preset']
             if not theme.get('exit_preset') or not any(lo<=entry_id<=hi for lo,hi in RANGES[key]):
                 raise ValueError(f'{key}: entry_preset {entry_id} needs an exit_preset and a private copy')
-            row=presets.find(presets.col('Def'),str(dict((s,r) for t,s,r in mappings if t==theme_index)[entry_id]))
+            row=presets.find(presets.col('Def'),str(dict((s,r) for t,s,r,_ in mappings if t==theme_index)[entry_id]))
             files=[row[presets.col(f'File{i}')] for i in range(1,int(row[presets.col('Files')])+1)]
             slots={slot for f in files for _,_,slot in warp_markers(assets[api.REPO/f'data/global/tiles/{f}'])}
             for p in plans:
@@ -290,7 +293,9 @@ def header(out,runtime):
             'struct ExteriorLayout { uint32_t level, source, type, width, height, x, y; uintptr_t initializer; uint32_t exitPreset, theme, entryPreset; };',
             'inline constexpr ExteriorLayout ExteriorLayouts[] {']
     out += [' {'+', '.join(str(v) for v in r)+'},' for r in runtime['exterior_layouts']]
-    out += ['};','struct ExteriorPreset { uint32_t theme, source, replacement; };',
+    out += ['};','// warps: the private copy carries a live (self-linked) warp, so a red',
+            '// portal can land on it wherever the stock initializer put it.',
+            'struct ExteriorPreset { uint32_t theme, source, replacement, warps; };',
             'inline constexpr ExteriorPreset ExteriorPresets[] {']
     out += [' {'+', '.join(str(v) for v in r)+'},' for r in runtime['exterior_presets']]
     out += ['};','// Maze bodies whose arrival room needs the other special-room piece.',

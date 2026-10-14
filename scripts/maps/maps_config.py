@@ -776,8 +776,9 @@ WARDENS = {
         "drain": None,
     },
     "kurast": {
-        # The Pyre Hierarch: durance.py keeps the Council's HighPriest AI and
-        # swaps its Hydra/heal for Flame Sentinel and Burning Divide. The Holy
+        # The Pyre Hierarch: durance.py runs the Council Member on the
+        # OblivionKnight AI, which keeps its distance and blinks away while it
+        # casts Pyre Bolt, Burning Divide and Flame Sentinel totems. The Holy
         # Fire aura, firewall proc and healing Council escort are gone; Zealots
         # and Maulers pin you in the fire instead.
         "aura": None,

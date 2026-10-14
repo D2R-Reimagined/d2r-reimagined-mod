@@ -89,7 +89,8 @@ def layout(api, monsters, boss, ai, slots, aips, speed=None, aidel=None):
 
 # aip slots D2R's monai.txt documents as a delay or interval (frames), by AI.
 TIMER_AIPS = {'Summoner': (4, 5), 'ZakarumPriest': (5,), 'HighPriest': (3,),
-              'AbyssKnight': (4, 6), 'PinHead': (2, 4), 'CorruptArcher': (3,)}
+              'AbyssKnight': (4, 6), 'PinHead': (2, 4), 'CorruptArcher': (3,),
+              'OblivionKnight': (3,)}
 
 
 def paced(frames):

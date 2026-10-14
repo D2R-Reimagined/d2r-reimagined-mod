@@ -326,6 +326,8 @@ class MappingContract(unittest.TestCase):
             'PinHead': lambda r: aip(r, 5) + aip(r, 6) >= 80,
             'CorruptArcher': lambda r: aip(r, 2) >= 90,
             'Summoner': lambda r: aip(r, 1) == 100,
+            # Casts on every ranged roll and backs away instead of walking in.
+            'OblivionKnight': lambda r: aip(r, 5) == 100 and aip(r, 1) >= 10 and aip(r, 7) == 0,
         }
         for p in self.plans:
             row = self.monsters.find(col('Id'), f"rmap_{p['item_code']}_boss")
@@ -421,38 +423,50 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(center[missiles.col('SubMissile1')], frozen.BLIZZARD_SHARD)
             self.assertEqual(missiles.find(missiles.col('Missile'), frozen.BLIZZARD_SHARD)[missiles.col('EType')], 'cold')
 
-    def test_durance_warden_controls_the_room_without_healing(self):
+    def test_durance_warden_kites_and_drops_totems_without_healing(self):
+        # 2026-10-14: "boss does no dmg, fire wall on ground does no dmg";
+        # asked for totems and a Warden that teleports and keeps its distance.
         import durance
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             monsters, skills, missiles = [gen.Table(bank / (n + '.txt')) for n in ('monstats', 'skills', 'missiles')]
             for tier in range(1, 7):
                 row = monsters.find(monsters.col('Id'), f'rmap_mk{tier}_boss')
-                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('HighPriest', 'HP'))
-                sentinel, delay = durance.TIERS[tier]
+                self.assertEqual((row[monsters.col('AI')], row[monsters.col('Code')]), ('OblivionKnight', 'HP'))
                 uses = {i: (row[monsters.col(f'Skill{i}')], row[monsters.col(f'Sk{i}mode')], row[monsters.col(f'Sk{i}lvl')])
                         for i in range(1, 9) if row[monsters.col(f'Skill{i}')]}
                 self.assertEqual(uses, {
-                    durance.SENTINEL_SLOT: (durance.SENTINEL if sentinel else durance.DIVIDE, 'S1', str(tier)),
+                    durance.BOLT_SLOT: (durance.BOLT, 'S1', str(tier)),
                     durance.DIVIDE_SLOT: (durance.DIVIDE, 'S1', str(tier)),
+                    durance.BLINK_SLOT: ('Imp Teleport', 'S1', '1'),
+                    durance.SENTINEL_SLOT: (durance.SENTINEL, 'S1', str(tier)),
                     durance.DEATH_SLOT: (boss_rooms.BOSS_DEATH_SKILL, 'DT', '1')}, row[0])
-                self.assertEqual(row[monsters.col('aip3(H)')], warden_kits.paced(str(delay)))
+                self.assertEqual(row[monsters.col('aip3(H)')], warden_kits.paced(str(durance.TIERS[tier])))
+                self.assertEqual(row[monsters.col('aip1(H)')], str(durance.RUN_AWAY_RANGE))
+                self.assertEqual(row[monsters.col('aip6(H)')], str(durance.BLINK_SHARE))
                 # Nothing in the Warden's pack heals it any more.
                 for minion in ('minion1', 'minion2'):
                     escort = monsters.find(monsters.col('Id'), row[monsters.col(minion)])
                     self.assertNotIn('ZakarumHeal', [escort[monsters.col(f'Skill{i}')] for i in range(1, 9)])
                     self.assertNotEqual(escort[monsters.col('AI')], 'HighPriest')
-            self.assertEqual([t for t in range(1, 7) if durance.TIERS[t][0]], [1, 2, 3, 4, 5, 6])
             sentinel = skills.find(skills.col('skill'), durance.SENTINEL)
             self.assertEqual((sentinel[skills.col('summon')], sentinel[skills.col('sumskill1')], sentinel[skills.col('petmax')]),
                              ('hydra1', durance.SENTINEL_SHOT, durance.SENTINEL_MAX))
             self.assertEqual((sentinel[skills.col('charclass')], sentinel[skills.col('passivestat1')], sentinel[skills.col('sumskill2')]), ('', '', ''))
+            self.assertEqual((sentinel[skills.col('HitShift')], sentinel[skills.col('Param1')]), ('8', str(durance.SENTINEL_FRAMES)))
             self.assertEqual(skills.find(skills.col('skill'), durance.SENTINEL_SHOT)[skills.col('srvmissile')], durance.SENTINEL_BOLT)
             self.assertEqual(missiles.find(missiles.col('Missile'), durance.SENTINEL_BOLT)[missiles.col('Skill')], durance.SENTINEL)
+            bolt = skills.find(skills.col('skill'), durance.BOLT)
+            self.assertEqual(bolt[skills.col('srvmissile')], durance.BOLT_MISSILE)
+            self.assertEqual(missiles.find(missiles.col('Missile'), durance.BOLT_MISSILE)[missiles.col('EType')], 'fire')
             divide = skills.find(skills.col('skill'), durance.DIVIDE)
             self.assertEqual((divide[skills.col('srvmissilea')], divide[skills.col('srvmissileb')]), (durance.DIVIDE_MAKER, durance.DIVIDE_WALL))
             self.assertEqual(missiles.find(missiles.col('Missile'), durance.DIVIDE_MAKER)[missiles.col('SubMissile1')], durance.DIVIDE_WALL)
             wall = missiles.find(missiles.col('Missile'), durance.DIVIDE_WALL)
             self.assertEqual((wall[missiles.col('Range')], wall[missiles.col('EType')]), (str(durance.DIVIDE_FRAMES), 'fire'))
+            # The Countess wall the first kit cloned has no server damage
+            # function or collision and burned nobody; the sorceress Fire
+            # Wall and Vampire wall carry both.
+            self.assertEqual((wall[missiles.col('pSrvDmgFunc')], wall[missiles.col('Collision')]), ('3', '1'))
 
     def test_travincal_warden_is_a_lightning_commander(self):
         import travincal
