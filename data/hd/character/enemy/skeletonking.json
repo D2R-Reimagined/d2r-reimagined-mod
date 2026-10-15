@@ -40,58 +40,16 @@
         ],
         "models": [
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/head_hvy.model"
+                "path": "data/hd/character/enemy/skeletonking/base_body.model"
             },
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/larm_hvy.model"
+                "path": "data/hd/character/enemy/skeletonking/head_hvy.model"
             },
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/larm_lit.model"
+                "path": "data/hd/character/enemy/skeletonking/torso_hvy.model"
             },
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/legs_hvy.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/legs_lit.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/rarm_hvy.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/rarm_lit.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/rhand.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/special1_hvy.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/special1_lit.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/special2_hvy.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/special2_lit.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/torso_hvy.model"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/torso_lit.model"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/base_body.model"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/head_lit.model"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/spine.model"
-            },
-            {
-                "path": "data/hd/vfx/meshes/FX_Mesh_boneFrag01.model"
+                "path": "data/hd/character/enemy/skeletonking/legs_hvy.model"
             }
         ],
         "skeletons": [
@@ -102,55 +60,22 @@
         "animations": [],
         "textures": [
             {
-                "path": "data/hd/character/common/common_ktint.texture"
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_alb.texture"
             },
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/textures/reanimatedhorde_armorhvy_alb.texture"
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_ktint.texture"
             },
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/textures/reanimatedhorde_armorhvy_nrm.texture"
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_nrm.texture"
             },
             {
-                "path": "data/hd/character/enemy/reanimatedhorde1/textures/reanimatedhorde_armorhvy_orm.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/textures/reanimatedhorde_armorlit_alb.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/textures/reanimatedhorde_armorlit_nrm.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/reanimatedhorde1/textures/reanimatedhorde_armorlit_orm.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_alb.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_KTINT.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_nrm.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/skeleton1/textures/skeleton_basebody_orm.texture"
-            },
-            {
-                "path": "data/hd/vfx/Library/PopcornFXCore/Materials/DefaultTextures/Distort.texture"
-            },
-            {
-                "path": "data/hd/vfx/textures/common/FX_T_bone_ORM.texture"
-            },
-            {
-                "path": "data/hd/character/enemy/skeletonhaha/textures/reanimatedhorde_armorhvy_alboutout.texture"
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_orm.texture"
             }
         ],
         "physics": [],
         "json": [
             {
                 "path": "data/hd/character/enemy/reanimatedhorde1/reanimatedhorde1_state_machine.json"
-            },
-            {
-                "path": "data/hd/items/weapon/sword/_monsters/reanimated_horde_2hs_sword.json"
             }
         ],
         "variantdata": [
@@ -326,73 +251,13 @@
         },
         {
             "type": "Entity",
-            "name": "entity_rhand",
-            "id": 2224839389,
+            "name": "entity_sk_base_body",
+            "id": 2809213194,
             "components": [
                 {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_rhand",
-                    "part": "rhand",
-                    "variant": "clm"
-                },
-                {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_rhand",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/rhand.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                },
-                {
-                    "type": "UnitAttachmentComponent",
-                    "name": "entity_rhand_UnitAttachment",
-                    "filename": "data/hd/items/weapon/sword/_monsters/reanimated_horde_2hs_sword.json",
-                    "overrideBoneName": "",
-                    "orientTowardBoneName": "",
-                    "attachmentTransform": {
-                        "type": "Transform",
-                        "name": "entity_rhand_UnitAttachment_attachmentTransform",
-                        "translation": {
-                            "x": 0.0,
-                            "y": 0.0,
-                            "z": 0.0
-                        },
-                        "rotation": {
-                            "x": 0.0,
-                            "y": 0.0,
-                            "z": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0,
-                            "z": 1.0
-                        }
-                    },
-                    "attachmentStateMachineFilename": "",
-                    "part": "rhand",
-                    "variant": "clm"
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_head_lit",
-            "id": 1451045717,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_head_lit",
-                    "part": "head",
-                    "variant": "lit"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_head_lit",
-                    "filename": "data/hd/character/enemy/skeleton1/head_lit.model",
+                    "name": "entity_sk_base_body_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/base_body.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
@@ -405,19 +270,13 @@
         },
         {
             "type": "Entity",
-            "name": "entity_head_hvy",
-            "id": 595787677,
+            "name": "entity_sk_head_hvy",
+            "id": 4196264279,
             "components": [
                 {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_head_hvy",
-                    "part": "head",
-                    "variant": "hvy"
-                },
-                {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_head_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/head_hvy.model",
+                    "name": "entity_sk_head_hvy_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/head_hvy.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
@@ -430,19 +289,13 @@
         },
         {
             "type": "Entity",
-            "name": "entity_torso_lit",
-            "id": 3338356113,
+            "name": "entity_sk_torso_hvy",
+            "id": 3221359709,
             "components": [
                 {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_torso_lit",
-                    "part": "torso",
-                    "variant": "lit"
-                },
-                {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_torso_lit",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/torso_lit.model",
+                    "name": "entity_sk_torso_hvy_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/torso_hvy.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
@@ -455,19 +308,13 @@
         },
         {
             "type": "Entity",
-            "name": "entity_torso_hvy",
-            "id": 2449477848,
+            "name": "entity_sk_legs_hvy",
+            "id": 2060341026,
             "components": [
                 {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_torso_hvy",
-                    "part": "torso",
-                    "variant": "hvy"
-                },
-                {
                     "type": "ModelDefinitionComponent",
-                    "name": "component_model_torso_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/torso_hvy.model",
+                    "name": "entity_sk_legs_hvy_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/legs_hvy.model",
                     "visibleLayers": 1,
                     "lightMask": 19,
                     "shadowMask": 3,
@@ -480,334 +327,50 @@
         },
         {
             "type": "Entity",
-            "name": "entity_legs_lit",
-            "id": 4260004064,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_legs_lit",
-                    "part": "legs",
-                    "variant": "lit"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_legs_lit",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/legs_lit.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_legs_hvy",
-            "id": 3710848595,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_legs_hvy",
-                    "part": "legs",
-                    "variant": "hvy"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_legs_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/legs_hvy.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_rarm_lit",
-            "id": 1692461392,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_rarm_lit",
-                    "part": "rarm",
-                    "variant": "lit"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_rarm_lit",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/rarm_lit.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_rarm_hvy",
-            "id": 837137560,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_rarm_hvy",
-                    "part": "rarm",
-                    "variant": "hvy"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_rarm_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/rarm_hvy.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_larm_lit",
-            "id": 2855524762,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_larm_lit",
-                    "part": "larm",
-                    "variant": "lit"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_larm_lit",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/larm_lit.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_larm_hvy",
-            "id": 2306369550,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_larm_hvy",
-                    "part": "larm",
-                    "variant": "hvy"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_larm_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/larm_hvy.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_special1_lit",
-            "id": 189674971,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_special1_lit",
-                    "part": "special1",
-                    "variant": "lit"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_special1_lit",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/special1_lit.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_special1_hvy",
-            "id": 3952264270,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_special1_hvy",
-                    "part": "special1",
-                    "variant": "hvy"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_special1_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/special1_hvy.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_special2_lit",
-            "id": 1594153760,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_special2_lit",
-                    "part": "special2",
-                    "variant": "lit"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_special2_lit",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/special2_lit.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_special2_hvy",
-            "id": 1061776019,
-            "components": [
-                {
-                    "type": "UnitPartComponent",
-                    "name": "component_part_special2_hvy",
-                    "part": "special2",
-                    "variant": "hvy"
-                },
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_special2_hvy",
-                    "filename": "data/hd/character/enemy/reanimatedhorde1/special2_hvy.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_base_body",
-            "id": 1454490754,
-            "components": [
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "entity_base_body_ModelDefinition",
-                    "filename": "data/hd/character/enemy/skeleton1/base_body.model",
-                    "visibleLayers": 1,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_spine",
-            "id": 1868296045,
-            "components": [
-                {
-                    "type": "ModelDefinitionComponent",
-                    "name": "entity_spine_ModelDefinition",
-                    "filename": "data/hd/character/enemy/skeleton1/spine.model",
-                    "visibleLayers": 9,
-                    "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
-                }
-            ]
-        },
-        {
-            "type": "Entity",
-            "name": "entity_model",
-            "id": 3710257997,
+            "name": "entity_light_ember_eyes",
+            "id": 3599235836,
             "components": [
                 {
                     "type": "TransformDefinitionComponent",
-                    "name": "entity_model_TransformDefinition",
+                    "name": "entity_light_ember_eyes_Transform",
                     "position": {
                         "x": 0.0,
-                        "y": 0.1,
-                        "z": 0.0
+                        "y": 0.2,
+                        "z": 0.45
                     },
                     "orientation": {
-                        "x": -0.5,
-                        "y": -0.5,
-                        "z": -0.5,
-                        "w": 0.5
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
                     },
                     "scale": {
-                        "x": 1,
-                        "y": 1,
-                        "z": 1.1
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
                     },
                     "inheritOnlyPosition": false
                 },
                 {
                     "type": "EntityAttachmentDefinitionComponent",
-                    "name": "entity_spectralflames_EntityAttachmentDefinition",
+                    "name": "entity_light_ember_eyes_Attach",
                     "targetbone": "head"
                 },
                 {
-                    "type": "ModelDefinitionComponent",
-                    "name": "component_model_ondals_almighty",
-                    "filename": "data/hd/items/armor/helmet/ondals_almighty/ondals_almighty.model",
-                    "visibleLayers": 1,
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_ember_eyes_Light",
+                    "color": {
+                        "x": 1.0,
+                        "y": 0.35,
+                        "z": 0.08
+                    },
+                    "power": 900.0,
+                    "radius": 2.0,
+                    "attenuation": 16.0,
                     "lightMask": 19,
-                    "shadowMask": 3,
-                    "ghostShadows": false,
-                    "floorModel": false,
-                    "terrainBlendEnableYUpBlend": false,
-                    "terrainBlendMode": 1
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.3
                 }
             ]
         }
