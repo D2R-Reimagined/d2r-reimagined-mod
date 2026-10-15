@@ -81,12 +81,17 @@ class MappingContract(unittest.TestCase):
                 for n in ('monstats', 'monstats2', 'objects', 'superuniques', 'treasureclassex')]
             members = [r for r in monsters.rows if r[0].startswith('rmap_event_')]
             self.assertEqual(len(members), 5 * len(self.plans) + 13)
-            # The Wandering Gambler: a stationary, unkillable NPC with no native
-            # talk menu and no loot of its own.
+            # The Wandering Gambler: a talking NPC set up as labnpc (soft mod only),
+            # standing still, unkillable, and no loot of its own. The native gamble
+            # window needs his inventory and prices with his npc.txt row (Gheed's).
             merchant = monsters.find(monsters.col('Id'), 'rmap_event_merchant')
-            for col, value in (('AI', 'NpcStationary'), ('npc', '1'), ('interact', ''), ('killable', ''),
-                               ('inTown', ''), ('Velocity', '0'), ('Align', '1')):
+            for col, value in (('AI', 'Npc'), ('BaseId', 'rmap_event_merchant'), ('npc', '1'), ('interact', '1'),
+                               ('killable', ''), ('inTown', '1'), ('Velocity', '0'), ('Align', '1'), ('inventory', '1')):
                 self.assertEqual(merchant[monsters.col(col)], value, col)
+            vendors = gen.Table(bank / 'npc.txt')
+            gheed = vendors.find(vendors.col('npc'), 'gheed')
+            price = vendors.find(vendors.col('npc'), 'rmap_event_merchant')
+            self.assertEqual(price[1:], gheed[1:])
             self.assertGreater(int(merchant[monsters.col('MaxHP(H)')]), 0)
             self.assertFalse(any(merchant[monsters.col(c)] for c in monsters.header if c.startswith('TreasureClass')))
             for row in members:

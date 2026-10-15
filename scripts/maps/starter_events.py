@@ -13,6 +13,23 @@ MERCHANT_UNIT_JSON = 'data/hd/character/npc/rmap_merchant.json'
 # Bases the Gambler may offer: armor and weapons in three grades, plus rings
 # and amulets. Grade 3 is jewelry, offered at every tier.
 MERCHANT_JEWELRY = ('rin', 'amu')
+# He talks through D2R's custom NPC tables (customnpcs.txt, as labnpc does):
+# that gives him native hover, click and a greeting dialog. Speaking with him
+# is what opens the plugin's gamble window. His lines are his own gossip
+# table; the string ids are fixed because the table names them, and the
+# generator checks no other string file uses them.
+MERCHANT_GOSSIP_TABLE = 'rmapmerchantgossip'
+MERCHANT_GOSSIP = [
+    (40100, 'RMapEventMerchantGossip0',
+     "Ah, a fellow traveller! Varic, at your service.\n\n"
+     "I deal in chance, friend. Four wares, each wrapped in fortune. "
+     "Pay my price and the dice decide what you take home: a trinket, "
+     "a treasure, or something the songs remember.\n\n"
+     "One purchase only. Fortune rarely knocks twice."),
+    (40101, 'RMapEventMerchantGossip1',
+     "Every ware has its odds, and I hide none of them. Look closely before "
+     "you choose.\n\nThe road is long and I never stay in one place for long."),
+]
 
 
 def native_rows(table):
@@ -66,17 +83,23 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
     for tier in range(1,7):
         raiders.append(monster(f'rmap_event_raider_{tier}', 'fallen5',tier,'RMapEventRaider',f'RMap Event Raiders {tier}',4))
         guards.append(monster(f'rmap_event_guard_{tier}', 'fallen5',tier,'RMapEventGuard','',1.5))
-    # The Wandering Gambler stands still among the map's monsters like Izual's
-    # ghost (NpcStationary, ally, not killable). interact is off: the native
-    # talk menu has nothing to show; the plugin opens his window by proximity.
+    # The Wandering Gambler is a talking NPC set up exactly as the mod's working
+    # custom NPC labnpc (Ord Rekar): his own BaseId, Npc AI, npc/interact/inTown,
+    # always selectable (alSel) and a customnpcs.txt row (merchant_talk). Only
+    # Velocity/Run 0 differ, so he waits where the map put him. The plugin
+    # adds the native Gamble option to his talk menu; that window needs the
+    # NPC to have an inventory (as labnpc and Gheed do), and his gamble prices
+    # come from his npc.txt row (merchant_talk), a copy of Gheed's.
     merchant=monster('rmap_event_merchant','gheed',1,'RMapEventMerchant')
-    api.set_cells(monsters.rows[-1],monsters,{'AI':'NpcStationary','Velocity':'0','Run':'0','npc':'1',
-        'interact':'','inventory':'','inTown':'','isSpawn':'','killable':'','Align':'1'})
+    api.set_cells(monsters.rows[-1],monsters,{'BaseId':'rmap_event_merchant','AI':'Npc','Velocity':'0','Run':'0',
+        'npc':'1','interact':'1','inTown':'1','inventory':'1','isSpawn':'','killable':'','Align':'1'})
+    api.set_cells(stats2.rows[-1],stats2,{'alSel':'1','ResurrectMode':'NU'})
     # Town NPCs leave hit points blank; a unit with none is not a valid monster.
     for col in ('minHP','maxHP','MinHP(N)','MaxHP(N)','MinHP(H)','MaxHP(H)'):
         monsters.rows[-1][monsters.col(col)]='5000'
     if (api.REPO / MERCHANT_UNIT_JSON).exists():
         runtime.setdefault('hd_units',{})['rmap_event_merchant']=MERCHANT_UNIT
+    runtime['extra_tables']=merchant_talk(api)
     next_hc = 1 + max(int(r[uniques.col('hcIdx')] or 0) for r in uniques.rows)
     for p in plans:
         tier=p['tier']; source=f"rmap_{p['item_code']}_0"
@@ -101,6 +124,32 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
         gamble_chances=gamble_chances(api))
     runtime['monster_count']=len(api.monster_indices(monsters));runtime['prop_count']=len(props.rows)
     return objects
+
+def merchant_talk(api):
+    """customnpcs.txt row and gossip table that make the Gambler a native,
+    talkable NPC, mirroring labnpc's row, and his npc.txt row: Gheed's
+    multipliers, which the native gamble window prices his wares with."""
+    npcs=api.Table(api.EXCEL/'customnpcs.txt')
+    npcs.drop_tagged(npcs.col('class'),'rmap_')
+    row=npcs.blank_row()
+    api.set_cells(row,npcs,{'class':'rmap_event_merchant','ShouldTalk':'1','talkAct':'0',
+        'talkFile':MERCHANT_GOSSIP_TABLE,'talkWelcomeGreeting':'1','talkGreetThisTime':'1'})
+    npcs.append(row)
+    vendors=api.Table(api.EXCEL/'npc.txt')
+    vendors.drop_tagged(vendors.col('npc'),'rmap_')
+    gheed=next(r for r in vendors.rows if r[vendors.col('npc')]=='gheed')
+    price=list(gheed); price[vendors.col('npc')]='rmap_event_merchant'
+    vendors.append(price)
+    # Same columns as customgossiptbl.txt: greeting, separator, further line.
+    gossip=api.Table(api.EXCEL/'customgossiptbl.txt')
+    gossip.path=api.EXCEL/(MERCHANT_GOSSIP_TABLE+'.txt')
+    gossip.rows=[]
+    for string_id,last in ((MERCHANT_GOSSIP[0][0],'9'),(0,'0'),(MERCHANT_GOSSIP[1][0],'9')):
+        line=gossip.blank_row()
+        api.set_cells(line,gossip,{'stringId':str(string_id),'filter':'0','filterResultsForDisplay':'1',
+            'questFilter':'7','playerClass':last})
+        gossip.append(line)
+    return [npcs,gossip,vendors]
 
 def gamble_chances(api):
     """The vendor gamble quality chances the Gambler uses, per difficulty."""

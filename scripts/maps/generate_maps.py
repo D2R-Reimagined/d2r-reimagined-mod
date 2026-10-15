@@ -817,6 +817,16 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     import starter_events
     for key, text in starter_events.NAMES.items():
         monsters.append(string_entry(next_id, key, text)); next_id += 1
+    # The Gambler's gossip lines: fixed ids, because his gossip table names them.
+    monsters = [e for e in monsters if not any(e["Key"] == key for _, key, _ in starter_events.MERCHANT_GOSSIP)]
+    taken = {e["id"] for e in monsters}
+    for other in STRINGS.glob("*.json"):
+        if other.name != "monsters.json":
+            taken.update(e.get("id") for e in json.loads(other.read_text(encoding="utf-8-sig")) if isinstance(e, dict))
+    for string_id, key, text in starter_events.MERCHANT_GOSSIP:
+        if string_id in taken:
+            raise SystemExit(f"string id {string_id} for {key} is already used")
+        monsters.append(string_entry(string_id, key, text))
     out["monsters.json"] = monsters
     return out
 
@@ -996,6 +1006,7 @@ def main() -> int:
     import starter_events
     event_objects = starter_events.generate(sys.modules[__name__], plans, combat[-1], combat[2], rooms[1], rooms[2], runtime)
     tables.append(event_objects)
+    tables.extend(runtime.get('extra_tables', []))
     levels=tables[0]
     runtime['automap_layers']=[[int(levels.find(levels.col('Id'), str(p[key]))[levels.col('Layer')])
                               for key in ('body_id','boss_id')] for p in plans]
