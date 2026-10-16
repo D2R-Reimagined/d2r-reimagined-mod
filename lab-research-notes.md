@@ -10,6 +10,89 @@ These are investigation notes only; nothing in the repo has been changed.
 
 ---
 
+## Update 2026-10-16: level 4 automap still has no exit markers
+
+This update is based on the latest pull: automap rows from 3f4264d5, and `towne1.ds1` reworked in 9092c7fb.
+
+### What's fine
+
+- **The automap rows are correct.** "1 Courtyard" `wre` Style 0 and Style 1, Seq 0 → cel 30. They are inside the Courtyard block, tab-separated, with CRLF line endings.
+  - The first-match lookup (`DATATBLS_GetAutomapCellId`) finds them [C].
+- **The exit tiles do resolve to real DT1 tiles.** Every room also loads `Act1/Barracks/Warp.dt1`, plus Blank and InvisWal, on top of the `Dt1Mask` files (`DRLGROOMTILE_LoadDT1FilesForRoom`) [C].
+  - `Warp.dt1` contains invisible, non-blocking `wre` main0 sub0 and main1 sub0 tiles. So level 4's markers get a real tile.
+  - (My earlier worry about "missing tiles" was wrong: courtyard `Dt1Mask 127` doesn't need to cover it.)
+
+### What's different between level 3 and level 4
+
+Level 4's exit markers are **stacked on top of an ordinary wall tile**:
+
+| DS1 | Cell | Layer 0 | Layer 1 |
+|---|---|---|---|
+| `courtn1.ds1` | (1,22) | outer-wall `wr` (ori2 main4 sub1) | exit marker (ori11 main0) |
+| `courtn1.ds1` | (53,22) | outer-wall `wr` (ori2 main4 sub1) | exit marker (ori11 main1) |
+| `courtn2.ds1` | (1,22) | outer-wall `wr` | exit marker (mirrored) |
+| `courtn2.ds1` | (53,22) | outer-wall `wr` | exit marker (mirrored) |
+
+After the 9092c7fb rework, level 3's markers, (50,12) and (27,28), sit on cells with **no other wall tile**. That's when level 3 started working with the same kind of rows.
+
+Across every lab DS1, every exit on a cell by itself is a stair exit, the kind that shows the marker:
+
+- cathy3
+- labyrinth05
+- dungrm slot 1
+- nihl slot 0
+- labyrinth00
+
+Every marker stacked on a wall is one of these:
+
+- level 4
+- the dungrm back exits
+- harem2 entry
+- heart
+- mephcomp
+- nihl forward
+- labyrinth10 slot 2
+
+[I] The mechanism is likely that the client automap keeps one wall cell per tile position, so the layer-0 `wr` wall cell wins and the exit cell is never drawn. The D2Client automap code isn't in D2MOO, so this is inferred from that correlation. Level 4 is the cleanest test, because rows and tiles are both present and only the stacking differs.
+
+### Fix (level 4)
+
+In **both** `courtn1.ds1` and `courtn2.ds1`, make each exit marker the only wall tile in its cell.
+
+- **Recommended:** move the marker from wall layer 1 to wall layer 0 at the same cell, replacing the `wr` outwall piece there.
+  - This is the same pattern as vanilla stairs, which replace a wall segment.
+  - Keeping the same cell keeps the lvlwarp 15 click box aligned with the HD `stairs01` model.
+  - In SD, that one wall piece's art disappears. In HD the json model covers it.
+  - There is no floor north of y=22, so losing the wall's collision shouldn't open a path. Test anyway.
+- **Alternative:** move the marker one tile into the room, to (1,23) and (53,23), which are floor-only cells.
+  - This shifts the click box by one tile relative to the HD stairs.
+  - The lvlwarp offsets would then need re-tuning.
+
+**Keep:** the "1 Courtyard" `wre` rows.
+
+**Cleanup:**
+
+- 3f4264d5 also appended a blank, tab-only row to the end of `automap.txt` and `base/automap.txt`. Remove it.
+- The "1 Monestary" `wrd` rows from 8353f1b5 are unrelated to the lab and can go.
+
+### Same rule likely affects other marker-only exits
+
+These use lvlwarp 83 and are stacked on walls:
+
+- level 7 / level 9 back exits (dungrm)
+- level 10 (both)
+- level 14 forward
+- level 15 entry
+- level 25
+- level 00
+
+Several of them also have no matching automap row yet. If those need markers, they need both:
+
+1. Move the marker off the wall onto its own cell.
+2. Add a `wre`/`wle` row for the level type, e.g. "3 Dungeon" `wle` Style 0, "5 Temple" `wle` Style 1.
+
+---
+
 ## 1. Level 3 (Id 141): no monsters
 
 **Root cause [C].** Population is gated per difficulty:

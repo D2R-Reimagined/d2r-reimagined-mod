@@ -553,7 +553,13 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
     fname = "magicprefix.txt" if kind == "prefix" else "magicsuffix.txt"
     t = Table(EXCEL / fname)
     c_name = t.col("name")
+    # Items save affix ids by row, so the block is rebuilt where it already
+    # sits: hand affixes added after it keep their ids, and so do the maps.
+    start = next((i for i, r in enumerate(t.rows)
+                  if r[c_name].startswith(cfg.AFFIX_TAG)), len(t.rows))
     t.drop_tagged(c_name, cfg.AFFIX_TAG)
+    after = t.rows[start:]
+    t.rows = t.rows[:start]
 
     for a in affixes:
         row = t.blank_row()
@@ -591,6 +597,7 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
         "itype1": MAP_ITEM_TYPE, "multiply": "0", "add": "0",
     })
     t.append(row)
+    t.rows.extend(after)
     return t
 
 

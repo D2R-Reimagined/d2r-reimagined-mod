@@ -1,0 +1,258 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Ichor.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Ichor.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/cydaea/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/arach1/skeleton/arach1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/cydaea/textures/d2rr_cydaea_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cydaea/textures/d2rr_cydaea_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cydaea/textures/d2rr_cydaea_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/cydaea/textures/d2rr_cydaea_orm.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/fluid/T_FX_fluid_blood_spray_02_NRM.texture"
+            },
+            {
+                "path": "data/hd/vfx/textures/fluid/T_FX_fluid_blood_tile_04_NRM.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/cydaea/cydaea_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/cydaea/cydaea_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "cydaea",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3399089852,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/cydaea/cydaea_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/arach1/skeleton/arach1.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/cydaea/cydaea_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {
+                        "type": "AttackVFXTable",
+                        "name": "AttackSuccess_Ichor",
+                        "rules": [
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Ichor_rules_0",
+                                "acceptedHitClasses": 828,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Ichor.particles",
+                                "soundId": "player_impact_gore_ichor_hd2"
+                            },
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Ichor_rules_1",
+                                "acceptedHitClasses": 7362,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Ichor.particles",
+                                "soundId": "player_impact_gore_ichor_hd2"
+                            }
+                        ],
+                        "defaultVfxFile": "",
+                        "defaultSoundId": "player_impact_gore_ichor_hd2"
+                    },
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                },
+                {
+                    "type": "DeadAnimationSpeedOverrideComponent",
+                    "name": "entity_root_DeadAnimationSpeedOverride",
+                    "speed": 1.0
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 3931402313,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/cydaea/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_torso",
+            "id": 2702152347,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_torso_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_torso_Attach",
+                    "targetbone": "head"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_torso_Light",
+                    "color": {
+                        "x": 0.7,
+                        "y": 0.25,
+                        "z": 1.0
+                    },
+                    "power": 5200.0,
+                    "radius": 5.5,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_abdomen",
+            "id": 8273704,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_abdomen_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_abdomen_Attach",
+                    "targetbone": "abdomen_bend_01"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_abdomen_Light",
+                    "color": {
+                        "x": 0.7,
+                        "y": 0.25,
+                        "z": 1.0
+                    },
+                    "power": 3600.0,
+                    "radius": 5.0,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        }
+    ]
+}
