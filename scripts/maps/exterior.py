@@ -250,11 +250,20 @@ def generate(api,plans,presets,runtime,levels,object_presets):
         for p in plans:
             if p['theme'] is not theme:continue
             width,height=theme['body_size']
-            body_type=int(levels.find(levels.col('Id'),str(p['body_id']))[levels.col('LevelType')])
+            body=levels.find(levels.col('Id'),str(p['body_id']))
+            body_type=int(body[levels.col('LevelType')])
             if body_type!=int(theme.get('body_level_type') or levels.find(levels.col('Id'),str(theme['body_template']))[levels.col('LevelType')]):
                 raise ValueError(f"{key}: body {p['body_id']} LevelType {body_type} is not the theme's")
+            # The plugin writes this rectangle when the engine leaves the
+            # level unsized, so it must be the body's own levels.txt cell (the
+            # one check_world_layout and MapWorldRects use). A separate
+            # placement here once put bodies on Crystalline Passage,
+            # Nihlathak's Temple and the Throne of Destruction.
+            x,y=int(body[levels.col('OffsetX')]),int(body[levels.col('OffsetY')])
+            if (x,y)!=api.world_offset(p,False) or x%4 or y%4:
+                raise ValueError(f"{key}: body {p['body_id']} offset {x},{y} is not its 4-aligned world cell")
             layouts.append((p['body_id'],theme['body_template'],body_type,
-                width,height,1400+(p['body_id']-226)*40,1000,theme['initializer'],exit_id,theme_index,entry_id))
+                width,height,x,y,theme['initializer'],exit_id,theme_index,entry_id))
     runtime['exterior_layouts']=layouts;runtime['exterior_presets']=mappings
     runtime['maze_presets']=maze_presets(plans,presets,levels)
     return assets

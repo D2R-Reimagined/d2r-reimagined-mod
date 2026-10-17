@@ -258,4 +258,16 @@ class ExteriorContract(unittest.TestCase):
             else:
                 self.assertGreaterEqual(int(maze.find(maze.col('Level'),str(p['body_id']))[maze.col('Rooms')]),22)
 
+    def test_layout_rectangles_are_the_bodies_own_cells(self):
+        # The plugin writes x,y,width,height into an unsized outdoor level. A
+        # rectangle that differs from levels.txt escapes check_world_layout
+        # and the reset's MapWorldRects, and overlapped stock Act 5 levels.
+        header=(gen.REPO.parent/'d2rl-plugins/plugins/maps/src/map_tables.gen.h').read_text()
+        layouts=header.split('ExteriorLayouts[] {')[1].split('};')[0]
+        rects={r[0]:r[1:] for r in gen.level_rects(gen.Table(gen.EXCEL/'levels.txt'),'4')}
+        rows=[[int(v) for v in m.groups()] for m in re.finditer(r'\{(\d+), \d+, \d+, (\d+), (\d+), (\d+), (\d+),',layouts)]
+        self.assertEqual(len(rows),30)
+        for level,width,height,x,y in rows:
+            self.assertEqual((x,y,width,height),rects[str(level)],level)
+
 if __name__=='__main__':unittest.main()

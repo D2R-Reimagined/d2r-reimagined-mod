@@ -43,6 +43,16 @@ monsters and loot by world position, so a T1 Warden came back inside the T5
 arena. `check_world_layout` refuses any overlap. The plugin header carries the
 rectangles (`MapWorldRects`), because a reset purges stored units inside them.
 
+Outdoor bodies get a third copy: `ExteriorLayouts` x/y, which the plugin writes
+when D2R leaves the level unsized. Until 2026-10-17 `exterior.py` placed these at
+1400+40·n, 1000, so Highlands T2–T4, Travincal T2–T3 and Steppes T3 sat on
+Crystalline Passage, Nihlathak's Temple and the Throne of Destruction. That
+placement was never checked for overlap, and the reset purged the wrong area for
+it. This is a suspected cause of invisible monsters that still attack. The
+layouts now take the body's levels.txt offset (4-aligned, like the stock fixed
+outdoor levels), and `test_exterior.py` compares the two. The plugin logs the
+level's actual position on every "exterior generated" line.
+
 ### Where the portal lands
 
 The red portal drops the player in a room that owns a warp tile whose Vis

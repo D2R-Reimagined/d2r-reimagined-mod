@@ -91,8 +91,9 @@ def generate(api, plans, kit, monsters):
     kit.skill('Decrepify', CURSE, {'monanim': CAST, 'enhanceable': '', 'rightskill': '', 'InTown': ''})
 
     lo, hi = BURST_DAMAGE['per_level']
+    # labFireNova's own monanim is SC, which this body has no animation for.
     burst = kit.skill('labFireNova', BURST, {
-        'srvmissile': BURST_MISSILE, 'cltmissile': BURST_MISSILE,
+        'monanim': CAST, 'srvmissile': BURST_MISSILE, 'cltmissile': BURST_MISSILE,
         'EMin': str(BURST_DAMAGE['min']), 'EMax': str(BURST_DAMAGE['max']),
         **{f'EMinLev{i}': str(lo) for i in range(1, 6)},
         **{f'EMaxLev{i}': str(hi) for i in range(1, 6)}})

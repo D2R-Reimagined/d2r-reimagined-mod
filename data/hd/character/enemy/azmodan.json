@@ -1,0 +1,459 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/azmodan/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/baalcrab/skeleton/baalcrab.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/azmodan/textures/d2rr_azmodan_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/azmodan/textures/d2rr_azmodan_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/azmodan/textures/d2rr_azmodan_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/azmodan/textures/d2rr_azmodan_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/azmodan/textures/d2rr_azmodan_sss.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_fur_HRT.texture"
+            },
+            {
+                "path": "data/hd/character/common/common_hair1_FLOW.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/azmodan/azmodan_state_machine.json"
+            },
+            {
+                "path": "data/hd/missiles/blue_nova_b.json"
+            },
+            {
+                "path": "data/hd/missiles/expansion_baalmissile.json"
+            },
+            {
+                "path": "data/hd/missiles/expansion_baalsummonmissile.json"
+            },
+            {
+                "path": "data/hd/missiles/shaman_fireball_explode_final.json"
+            },
+            {
+                "path": "data/hd/overlays/sorceress/fire_cast_2.json"
+            },
+            {
+                "path": "data/hd/missiles/andariel_spell.json"
+            },
+            {
+                "path": "data/hd/missiles/expansion_catapultpoisonbomb.json"
+            },
+            {
+                "path": "data/hd/missiles/fireball.json"
+            },
+            {
+                "path": "data/hd/missiles/ground_fire_big.json"
+            },
+            {
+                "path": "data/hd/missiles/ground_fire_small.json"
+            },
+            {
+                "path": "data/hd/missiles/poison_sparks.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/azmodan/azmodan_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "azmodan",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 1024136846,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/azmodan/azmodan_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/baalcrab/skeleton/baalcrab.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/azmodan/azmodan_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/shaman_fireball_explode_final.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry2",
+                            "filename": "data/hd/missiles/blue_nova_b.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry3",
+                            "filename": "data/hd/missiles/expansion_baalmissile.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry4",
+                            "filename": "data/hd/missiles/expansion_baalsummonmissile.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry5",
+                            "filename": "data/hd/missiles/andariel_spell.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry6",
+                            "filename": "data/hd/missiles/expansion_catapultpoisonbomb.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry7",
+                            "filename": "data/hd/missiles/fireball.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry8",
+                            "filename": "data/hd/missiles/ground_fire_big.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry9",
+                            "filename": "data/hd/missiles/ground_fire_small.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry10",
+                            "filename": "data/hd/missiles/poison_sparks.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/sorceress/fire_cast_2.json"
+                        }
+                    ],
+                    "minions": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_MinionDefinitionList_Entry1",
+                            "filename": "data/hd/character/enemy/imp1.json"
+                        }
+                    ]
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "baal_IK",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "baal_IK_footIKSetup_0",
+                                "footBoneName": "L_front_Foot",
+                                "kneeBoneName": "L_front_Ankle",
+                                "hipBoneName": "L_front_Calf",
+                                "locationTrackName": "L1_IK_position",
+                                "enabledTrackName": "L1_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "baal_IK_footIKSetup_1",
+                                "footBoneName": "R_front_Foot",
+                                "kneeBoneName": "R_front_Ankle",
+                                "hipBoneName": "R_front_Calf",
+                                "locationTrackName": "R1_IK_position",
+                                "enabledTrackName": "R1_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "baal_IK_footIKSetup_2",
+                                "footBoneName": "L_rear_Foot",
+                                "kneeBoneName": "L_rear_Ankle",
+                                "hipBoneName": "L_rear_Calf",
+                                "locationTrackName": "L2_IK_position",
+                                "enabledTrackName": "L2_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "baal_IK_footIKSetup_3",
+                                "footBoneName": "R_rear_Foot",
+                                "kneeBoneName": "R_rear_Ankle",
+                                "hipBoneName": "R_rear_Calf",
+                                "locationTrackName": "R2_IK_position",
+                                "enabledTrackName": "R2_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "baal_IK_footIKSetup_4",
+                                "footBoneName": "R_front_Ankle",
+                                "kneeBoneName": "R_front_Calf",
+                                "hipBoneName": "R_front_Thigh",
+                                "locationTrackName": "R1_Kneel_position",
+                                "enabledTrackName": "R1_Kneel_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "baal_IK_footIKSetup_5",
+                                "footBoneName": "R_front_Ankle",
+                                "kneeBoneName": "R_front_Calf",
+                                "hipBoneName": "R_front_Thigh",
+                                "locationTrackName": "R1_Kneel_position",
+                                "enabledTrackName": "R1_Kneel_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "LookAtAnimationControlComponent",
+                    "name": "entity_root_LookAtAnimationControl",
+                    "controlOverrides": [],
+                    "aimLayerName": "Aim_Head",
+                    "blendInTime": 0.25,
+                    "blendOutTime": 0.25
+                },
+                {
+                    "type": "AimLayersComponent",
+                    "name": "entity_root_AimLayers",
+                    "aimLayers": [
+                        {
+                            "type": "AimLayerSetup",
+                            "name": "entity_root_AimLayers_aimLayers_0",
+                            "layerName": "Aim_Head",
+                            "yawAnimationState": "HeadAim_Yaw",
+                            "yawOutOfRangeBehavior": 2,
+                            "yawAngleOffset": 0.0,
+                            "pitchAnimationState": "HeadAim_Pitch",
+                            "pitchOutOfRangeBehavior": 0,
+                            "pitchAngleOffset": 0.0,
+                            "aimLocationTrackName": "aim_location",
+                            "aimDampingFactor": 0.15,
+                            "aimTarget": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.3,
+                        "y": 1.3,
+                        "z": 1.3
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 1896237895,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/azmodan/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_face_maw",
+            "id": 2531760919,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_face_maw_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.6
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_face_maw_Attach",
+                    "targetbone": "head"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_face_maw_Light",
+                    "color": {
+                        "x": 1.0,
+                        "y": 0.45,
+                        "z": 0.12
+                    },
+                    "power": 4200.0,
+                    "radius": 4.5,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_belly_maw",
+            "id": 2531701156,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_belly_maw_Transform",
+                    "position": {
+                        "x": -0.6,
+                        "y": 0.0,
+                        "z": 1.4
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_belly_maw_Attach",
+                    "targetbone": "lowerSpine_mid"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_belly_maw_Light",
+                    "color": {
+                        "x": 1.0,
+                        "y": 0.45,
+                        "z": 0.12
+                    },
+                    "power": 5200.0,
+                    "radius": 5.5,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        }
+    ]
+}
