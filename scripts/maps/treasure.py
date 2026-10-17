@@ -5,7 +5,7 @@ import maps_config as cfg
 
 def generate(api, monsters, props, stats2, runtime):
     ids, prop_ids = [], []
-    next_id = len(api.monster_indices(monsters))
+    next_id = api.next_monster_index(monsters)
     for tier in cfg.TIERS:
         for spec in cfg.TREASURE_MONSTERS:
             name = f"rmap_treasure_{tier['tier']}_{spec['key']}"
@@ -23,7 +23,7 @@ def generate(api, monsters, props, stats2, runtime):
             # identity anchor. It has no stats or scripted death effects.
             prop = props.blank_row()
             api.set_cells(prop, props, {'Id': name, '*eol': '0'})
-            prop_ids.append(len(props.rows))
+            prop_ids.append(props.next_index)
             props.append(prop)
             ids.append(next_id)
             api.set_cells(row, monsters, {

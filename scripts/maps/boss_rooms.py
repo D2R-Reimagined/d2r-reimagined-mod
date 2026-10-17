@@ -257,11 +257,11 @@ def escort_count(p):
 def generate(api, plans, levels, presets, monsters):
     places = api.Table(api.EXCEL / "monpreset.txt")
     places.drop_tagged(places.col("Place"), "rmap_")
-    next_slot = sum(r[places.col("Act")] == "5" for r in places.rows)
+    next_slot = sum(r[places.col("Act")] == "5" for r in places.head())
     # The Warden is placed as a superunique so its escort spawns with it.
     uniques = api.Table(api.EXCEL / "superuniques.txt")
     uniques.drop_tagged(uniques.col("Superunique"), "rmap_")
-    next_hc = 1 + max(int(r[uniques.col("hcIdx")] or 0) for r in uniques.rows)
+    next_hc = 1 + max(int(r[uniques.col("hcIdx")] or 0) for r in uniques.head())
     # Map monsters share their source monster's MonStats2 row. A Warden gets
     # its own copy so the automap marker is not inherited by every monster
     # of that archetype in the rest of the game.
@@ -277,7 +277,7 @@ def generate(api, plans, levels, presets, monsters):
         api.set_cells(marker, stats2, {"Id": f"rmap_{code}_boss", "automapCel": BOSS_AUTOMAP_CEL})
         stats2.append(marker)
         api.set_cells(boss, monsters, {
-            "Id": f"rmap_{code}_boss", "*hcIdx": str(len(monsters.rows)),
+            "Id": f"rmap_{code}_boss", "*hcIdx": str(monsters.next_index),
             "MonStatsEx": f"rmap_{code}_boss",
             "MinGrp": "1", "MaxGrp": "1", "boss": "1", "primeevil": "0",
             "NameStr": f"RMapBoss{code}",

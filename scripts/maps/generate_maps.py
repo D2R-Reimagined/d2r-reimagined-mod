@@ -51,6 +51,9 @@ class Table:
         self.header = lines[0].split("\t")
         self.rows = [ln.split("\t") for ln in lines[1:]]
         self.width = len(self.header)
+        # Where append() inserts; None means the end. drop_tagged sets it to
+        # where the generated block sat (see there).
+        self.insert_at: int | None = None
         for i, r in enumerate(self.rows, start=2):
             if len(r) != self.width:
                 raise SystemExit(
@@ -73,16 +76,41 @@ class Table:
                 return r
         raise SystemExit(f"{self.path.name}: no row with {self.header[col]}={value!r}")
 
+    # Rows are referenced by position (level Ids, lvlprest Defs, skill and
+    # missile ids, MonProp and MonPreset slots), so the regenerated block goes
+    # back where it was: hand rows added after it keep their positions, as do
+    # the maps. Appending it at the end instead deleted nothing but shifted
+    # Cydaea's level and Azmodan's arena preset onto the wrong ids.
     def drop_tagged(self, col: int, prefix: str) -> int:
         before = len(self.rows)
+        first = next((i for i, r in enumerate(self.rows) if r[col].startswith(prefix)), None)
         self.rows = [r for r in self.rows if not r[col].startswith(prefix)]
+        if first is not None:
+            self.insert_at = first
         return before - len(self.rows)
+
+    @property
+    def next_index(self) -> int:
+        """The row index the next append() lands at."""
+        return len(self.rows) if self.insert_at is None else min(self.insert_at, len(self.rows))
+
+    def head(self) -> list[list[str]]:
+        """The rows before the insertion point (hand rows after it excluded)."""
+        return self.rows[:self.next_index]
 
     def append(self, row: list[str]) -> None:
         if len(row) != self.width:
             raise SystemExit(
                 f"{self.path.name}: attempted to append {len(row)} cells, need {self.width}")
-        self.rows.append(row)
+        at = self.next_index
+        self.rows.insert(at, row)
+        if self.insert_at is not None:
+            self.insert_at = at + 1
+
+    @property
+    def last(self) -> list[str]:
+        """The row the latest append() inserted."""
+        return self.rows[self.next_index - 1]
 
     def save(self) -> None:
         self.path.write_bytes(self.to_bytes())
@@ -103,6 +131,11 @@ def monster_indices(table: Table) -> dict[str, int]:
     names = (row[table.col('Id')] for row in table.rows)
     return {name: index for index, name in enumerate(
         name for name in names if name.lower() != 'expansion')}
+
+
+def next_monster_index(table: Table) -> int:
+    """The native MonStats ID the next append() receives."""
+    return sum(row[table.col('Id')].lower() != 'expansion' for row in table.head())
 
 
 # ---------------------------------------------------------------------------
@@ -329,6 +362,19 @@ def check_world_layout(t: Table) -> None:
             raise SystemExit(f"level {a[0]} lies past 16-bit subtile coordinates")
 
 
+def check_ascending(t: Table, name: str) -> None:
+    """Level Ids and lvlprest Defs follow row order; a hand row placed in
+    front of the generated block would answer to the wrong id."""
+    col, last = t.col(name), -1
+    for r in t.rows:
+        if not r[col].isdigit():
+            continue
+        if int(r[col]) <= last:
+            raise SystemExit(f"{t.path.name}: {name} {r[col]} ({r[0]}) follows {last}; "
+                             f"hand rows must sit after the generated block")
+        last = int(r[col])
+
+
 # ---------------------------------------------------------------------------
 # lvlmaze.txt / lvlprest.txt
 # ---------------------------------------------------------------------------
@@ -533,7 +579,7 @@ def gen_misc(plans: list[dict]) -> Table:
         make(cur["code"], cur["name"], cur["code"], cur["level"], MAP_CURRENCY_TYPE)
         # Usage tooltip under the name, the same way the crafting orbs do it.
         desc = cfg.currency_desc_key(cur["code"])
-        set_cells(t.rows[-1], t, {"spelldesc": "2", "spelldescstr": desc, "spelldescstr2": desc})
+        set_cells(t.last, t, {"spelldesc": "2", "spelldescstr": desc, "spelldescstr2": desc})
     for p in plans:
         make(cfg.expansion_code(p["item_code"]),
              f"{p['theme']['name']} T{p['tier']} V2", cfg.expansion_code(p["item_code"]),
@@ -553,13 +599,8 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
     fname = "magicprefix.txt" if kind == "prefix" else "magicsuffix.txt"
     t = Table(EXCEL / fname)
     c_name = t.col("name")
-    # Items save affix ids by row, so the block is rebuilt where it already
-    # sits: hand affixes added after it keep their ids, and so do the maps.
-    start = next((i for i, r in enumerate(t.rows)
-                  if r[c_name].startswith(cfg.AFFIX_TAG)), len(t.rows))
+    # Items save affix ids by row; drop_tagged keeps the block where it sits.
     t.drop_tagged(c_name, cfg.AFFIX_TAG)
-    after = t.rows[start:]
-    t.rows = t.rows[:start]
 
     for a in affixes:
         row = t.blank_row()
@@ -597,7 +638,6 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
         "itype1": MAP_ITEM_TYPE, "multiply": "0", "add": "0",
     })
     t.append(row)
-    t.rows.extend(after)
     return t
 
 
@@ -1027,6 +1067,8 @@ def main() -> int:
     import presentation
     assets.update(presentation.generate(sys.modules[__name__], plans, combat[-1], runtime))
     check_world_layout(levels)  # again, after the arena and exterior sizes are final
+    check_ascending(levels, "Id")
+    check_ascending(tables[2], "Def")
     # A map reset clears the game's once-per-game superunique bit for the
     # map's Warden and purges stored units inside the map's rectangles.
     super_names = [r[rooms[2].col('Superunique')] for r in starter_events.native_rows(rooms[2])]

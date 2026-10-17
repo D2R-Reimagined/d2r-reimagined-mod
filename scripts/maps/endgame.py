@@ -60,13 +60,13 @@ def generate(api, plans, levels):
     for name, stats in effects.items():
         key = "rmap_" + name
         state = states.blank_row()
-        set_cells(state, states, {"state": key, "*ID": str(len(states.rows)),
+        set_cells(state, states, {"state": key, "*ID": str(states.next_index),
                                  "aura": "1", "*eol": "0"})
         states.append(state)
         # Generic periodic stat aura. Conviction's enemy filter targets the
         # players fighting the carrier; no inventory item or saved stat exists.
         row = skills.blank_row()
-        sid = len(skills.rows)
+        sid = skills.next_index
         set_cells(row, skills, {
             "skill": key, "*Id": str(sid), "srvdofunc": "65",
             "aurafilter": "42371", "aurastate": key,
@@ -95,10 +95,10 @@ def generate(api, plans, levels):
                 renamed[original] = key if not renamed else f"{key}_target"
                 state = list(states.find(states.col("state"), original))
                 set_cells(state, states, {"state": renamed[original],
-                                          "*ID": str(len(states.rows))})
+                                          "*ID": str(states.next_index)})
                 states.append(state)
             row[skills.col(col)] = renamed[original]
-        set_cells(row, skills, {"skill": key, "*Id": str(len(skills.rows)),
+        set_cells(row, skills, {"skill": key, "*Id": str(skills.next_index),
                                 "charclass": "", "reqskill1": "", "reqskill2": "",
                                 "reqskill3": ""})
         skills.append(row)
@@ -109,11 +109,11 @@ def generate(api, plans, levels):
     # after the clones so the skill IDs the plugin header carries do not move.
     key = cfg.WARDEN_HASTE_SKILL
     state = states.blank_row()
-    set_cells(state, states, {"state": key, "*ID": str(len(states.rows)), "aura": "1", "*eol": "0"})
+    set_cells(state, states, {"state": key, "*ID": str(states.next_index), "aura": "1", "*eol": "0"})
     states.append(state)
     row = skills.blank_row()
     set_cells(row, skills, {
-        "skill": key, "*Id": str(len(skills.rows)), "srvdofunc": "65",
+        "skill": key, "*Id": str(skills.next_index), "srvdofunc": "65",
         "aurafilter": skills.find(skills.col("skill"), "Might")[skills.col("aurafilter")],
         "aurastate": key, "auratargetstate": key, "aurarangecalc": "1",
         "auralencalc": "50", "immediate": "1", "range": "none",
@@ -146,7 +146,7 @@ def generate(api, plans, levels):
 
     # Probe has distinct values in every slot and difficulty. The plugin must
     # verify the complete supported compiled layout before it writes a byte.
-    probe_index = len(props.rows)
+    probe_index = props.next_index
     probe = property_row("rmap_probe", [(skill_ids["fortune"], i) for i in range(1, 7)])
     for d, diff in enumerate(("", " (N)", " (H)")):
         for i in range(1, 7):
@@ -185,11 +185,11 @@ def generate(api, plans, levels):
     prop_indices = []
     warden_prop_indices = []
     for p in plans:
-        idx = len(props.rows)
+        idx = props.next_index
         prop_indices.append(idx)
         props.append(property_row(f"rmap_{p['item_code']}",
                                   [(skill_ids["fortune"], p["tier"] * cfg.MAP_MF_PER_TIER)]))
-        warden_prop_indices.append(len(props.rows))
+        warden_prop_indices.append(props.next_index)
         props.append(warden_property_row(p))
         codes = cfg.MAP_MONSTERS[p["theme"]["key"]]
         if not 0 < len(codes) <= cfg.MAP_MONSTER_LIMIT or len(set(codes)) != len(codes):
@@ -199,7 +199,7 @@ def generate(api, plans, levels):
             row = list(source)
             name = f"rmap_{p['item_code']}_{i}"
             set_cells(row, monsters, {
-                "Id": name, "*hcIdx": str(len(monsters.rows)), "NextInClass": "",
+                "Id": name, "*hcIdx": str(monsters.next_index), "NextInClass": "",
                 "MonProp": f"rmap_{p['item_code']}", "noAura": "0",
                 "noRatio": "0", "boss": "0", "primeevil": "0",
                 "MinGrp": "3", "MaxGrp": "5", "enabled": "1",
@@ -263,7 +263,7 @@ def generate(api, plans, levels):
                     source = monsters.find(monsters.col("Id"), code)
                     row = list(source)
                     api.set_cells(row, monsters, {"Id": f"rmap_e_{code}",
-                        "*hcIdx": str(len(monsters.rows)), "NextInClass": ""})
+                        "*hcIdx": str(monsters.next_index), "NextInClass": ""})
                     for c, heading in enumerate(monsters.header):
                         if heading.startswith("TreasureClass") and heading.endswith("(H)") and row[c]:
                             name = f"RMap Entry {source[monsters.col('*hcIdx')]} {c}"

@@ -163,7 +163,7 @@ def sanitize(data, *, exit_slot=None, marker=None, keep=()):
 def generate(api,plans,presets,runtime,levels,object_presets):
     assets={}; mappings=[]; layouts=[]; warped=set()
     warps=api.Table(api.EXCEL/'lvlwarp.txt')
-    next_id=1+max(int(r[presets.col('Def')] or 0) for r in presets.rows)
+    next_id=1+max(int(r[presets.col('Def')] or 0) for r in presets.head())
     stock={int(r[presets.col('Def')]):r for r in presets.rows if r[presets.col('Def')]}
     for theme_index,theme in enumerate(cfg.THEMES):
         if not theme.get('exterior'):continue

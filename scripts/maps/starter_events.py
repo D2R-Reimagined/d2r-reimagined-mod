@@ -32,9 +32,9 @@ MERCHANT_GOSSIP = [
 ]
 
 
-def native_rows(table):
+def native_rows(table, rows=None):
     # Expansion separators occupy a TXT line but never a compiled record.
-    return [r for r in table.rows if not any(c.strip() == 'Expansion' for c in r)]
+    return [r for r in (table.rows if rows is None else rows) if not any(c.strip() == 'Expansion' for c in r)]
 
 def generate(api, plans, monsters, props, stats2, uniques, runtime):
     objects = api.Table(api.EXCEL / 'objects.txt')
@@ -48,19 +48,19 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
         api.set_cells(row, objects, {'Name': key, 'InitFn': '0', 'OperateFn': '6',
             'Lockable': '0', 'Restore': '0', 'RestoreVirgins': '0', 'Overlay': '1',
             'SizeX': '1', 'SizeY': '1', 'ClientFn': '0', 'SubClass': '0', 'Selectable2': '1'})
-        object_ids.append(len(native_rows(objects))); objects.append(row)
+        object_ids.append(len(native_rows(objects, objects.head()))); objects.append(row)
     models = runtime['expansion_models']
     records = []
     def monster(name, source_name, tier, label, reward='', health=1):
         source = monsters.find(monsters.col('Id'), source_name)
         row = list(source)
         prop = props.blank_row(); api.set_cells(prop, props, {'Id': name, '*eol': '0'})
-        prop_id = len(props.rows); props.append(prop)
+        prop_id = props.next_index; props.append(prop)
         marker = list(stats2.find(stats2.col('Id'), source[monsters.col('MonStatsEx')]))
         api.set_cells(marker, stats2, {'Id': name, 'revive': '0', 'corpseSel': '0',
             'ResurrectMode': '', 'ResurrectSkill': '', 'SpawnUniqueMod': ''})
         stats2.append(marker)
-        api.set_cells(row, monsters, {'Id': name, '*hcIdx': str(len(api.monster_indices(monsters))),
+        api.set_cells(row, monsters, {'Id': name, '*hcIdx': str(api.next_monster_index(monsters)),
             'NextInClass': '', 'MonStatsEx': name, 'MonProp': name, 'NameStr': label,
             'minion1': '', 'minion2': '', 'MinGrp': '1', 'MaxGrp': '1', 'Rarity': '0',
             'PartyMin': '0', 'PartyMax': '0', 'spawn': '', 'placespawn': '0',
@@ -77,7 +77,7 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
             for col in monsters.header:
                 if col.startswith('TreasureClass'): row[monsters.col(col)] = reward
         models[name] = models.get(source_name, source_name)
-        index=len(api.monster_indices(monsters)); monsters.append(row)
+        index=api.next_monster_index(monsters); monsters.append(row)
         records.append((index, prop_id)); return index
     raiders=[]; guards=[]; waves=[]; keepers=[]; challengers=[]; super_ids=[]
     for tier in range(1,7):
@@ -91,16 +91,16 @@ def generate(api, plans, monsters, props, stats2, uniques, runtime):
     # NPC to have an inventory (as labnpc and Gheed do), and his gamble prices
     # come from his npc.txt row (merchant_talk), a copy of Gheed's.
     merchant=monster('rmap_event_merchant','gheed',1,'RMapEventMerchant')
-    api.set_cells(monsters.rows[-1],monsters,{'BaseId':'rmap_event_merchant','AI':'Npc','Velocity':'0','Run':'0',
+    api.set_cells(monsters.last,monsters,{'BaseId':'rmap_event_merchant','AI':'Npc','Velocity':'0','Run':'0',
         'npc':'1','interact':'1','inTown':'1','inventory':'1','isSpawn':'','killable':'','Align':'1'})
-    api.set_cells(stats2.rows[-1],stats2,{'alSel':'1','ResurrectMode':'NU'})
+    api.set_cells(stats2.last,stats2,{'alSel':'1','ResurrectMode':'NU'})
     # Town NPCs leave hit points blank; a unit with none is not a valid monster.
     for col in ('minHP','maxHP','MinHP(N)','MaxHP(N)','MinHP(H)','MaxHP(H)'):
-        monsters.rows[-1][monsters.col(col)]='5000'
+        monsters.last[monsters.col(col)]='5000'
     if (api.REPO / MERCHANT_UNIT_JSON).exists():
         runtime.setdefault('hd_units',{})['rmap_event_merchant']=MERCHANT_UNIT
     runtime['extra_tables']=merchant_talk(api)
-    next_hc = 1 + max(int(r[uniques.col('hcIdx')] or 0) for r in uniques.rows)
+    next_hc = 1 + max(int(r[uniques.col('hcIdx')] or 0) for r in uniques.head())
     for p in plans:
         tier=p['tier']; source=f"rmap_{p['item_code']}_0"
         waves.append(monster(f"rmap_event_wave_{p['item_code']}",source,tier,'RMapEventWave','',0.7))

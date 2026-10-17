@@ -35,7 +35,10 @@ class Kit:
         """Clone `source` as `name`; returns the clone's skill ID."""
         skills = self.skills
         row = list(skills.find(skills.col('skill'), source))
-        next_id = max(int(r[skills.col('*Id')]) for r in skills.rows if r[skills.col('*Id')].isdigit()) + 1
+        # The skill ID is the row index. The *Id column is only a comment and
+        # hand rows (slord_*) carry stale ones, so max(*Id) + 1 pointed every
+        # kit proc past the end of the table.
+        next_id = skills.next_index
         self.api.set_cells(row, skills, {'skill': name, '*Id': str(next_id),
             'charclass': '', 'skilldesc': '', 'reqskill1': '', 'reqlevel': '1',
             'mana': '0', 'minmana': '0', 'startmana': '0', 'lvlmana': '0',
@@ -61,7 +64,7 @@ class Kit:
     def missile(self, source, name, values):
         missiles = self.missiles
         row = list(missiles.find(missiles.col('Missile'), source))
-        next_id = max(int(r[missiles.col('*ID')]) for r in missiles.rows if r[missiles.col('*ID')].isdigit()) + 1
+        next_id = max(int(r[missiles.col('*ID')]) for r in missiles.head() if r[missiles.col('*ID')].isdigit()) + 1
         self.api.set_cells(row, missiles, {'Missile': name, '*ID': str(next_id), **values})
         missiles.append(row)
         self.sources[name] = source

@@ -6,7 +6,11 @@ REPLACEMENTS = {source: source + '_normal' for source in SOURCES}
 
 def remove_generated(monsters):
     names = set(REPLACEMENTS.values()) | {'rmap_normal_' + source for source in SOURCES}
+    first = next((i for i, row in enumerate(monsters.rows) if row[monsters.col('Id')] in names), None)
     monsters.rows = [row for row in monsters.rows if row[monsters.col('Id')] not in names]
+    if first is not None:
+        # Regenerate in place, in front of hand rows added after them (cydaea1).
+        monsters.insert_at = first
 
 
 def generate(api, monsters, levels, runtime):
@@ -16,7 +20,7 @@ def generate(api, monsters, levels, runtime):
     for source, name in replacements.items():
         row = list(monsters.find(monsters.col('Id'), source))
         api.set_cells(row, monsters, {
-            'Id': name, '*hcIdx': str(len(monsters.rows)),
+            'Id': name, '*hcIdx': str(monsters.next_index),
             'NextInClass': '', 'MinGrp': '1', 'MaxGrp': '1',
         })
         monsters.append(row)

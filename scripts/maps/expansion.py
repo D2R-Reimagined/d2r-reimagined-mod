@@ -6,7 +6,7 @@ def generate(api, plans, monsters, props, runtime):
     population_profiles = []
     sources = {}
     compiled_ids = api.monster_indices(monsters)
-    next_id = len(compiled_ids)
+    next_id = api.next_monster_index(monsters)
     import endgame
     for p in plans:
         native = cfg.MAP_MONSTERS[p['theme']['key']]
@@ -71,7 +71,7 @@ def generate(api, plans, monsters, props, runtime):
     codes = ['move2', 'swing2', 'dmg-fire', 'dmg-cold', 'dmg-ltng', 'move2']
     probe = props.blank_row()
     api.set_cells(probe, props, {'Id': 'rmap_expansion_probe', '*eol': '0'})
-    runtime['expansion_probe'] = len(props.rows)
+    runtime['expansion_probe'] = props.next_index
     runtime['expansion_probe_properties'] = []
     for slot, code in enumerate(codes, 1):
         values = (runtime['property_ids'][code], slot, 10 + slot, 20 + slot)
