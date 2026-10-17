@@ -1,0 +1,227 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/nakrul_hd/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/bloodlord1/skeleton/bloodlord1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/nakrul_hd/textures/d2rr_nakrul_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/nakrul_hd/textures/d2rr_nakrul_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/nakrul_hd/textures/d2rr_nakrul_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/nakrul_hd/textures/d2rr_nakrul_orm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/nakrul_hd/textures/d2rr_nakrul_sss.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/bloodlord1/bloodlord1_state_machine.json"
+            },
+            {
+                "path": "data/hd/overlays/monster/monfrenzy.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/bloodlord1/bloodlord1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "bloodlord1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 1502221704,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/bloodlord1/bloodlord1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/bloodlord1/skeleton/bloodlord1.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/bloodlord1/bloodlord1_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/monster/monfrenzy.json"
+                        }
+                    ],
+                    "minions": []
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Outsource_Quad_Biped_B",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Quad_Biped_B_footIKSetup_0",
+                                "footBoneName": "L_leg_04_bind_jnt",
+                                "kneeBoneName": "L_leg_02_bind_jnt",
+                                "hipBoneName": "L_leg_01_bind_jnt",
+                                "locationTrackName": "L_IK_Position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": true,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Outsource_Quad_Biped_B_footIKSetup_1",
+                                "footBoneName": "R_leg_04_bind_jnt",
+                                "kneeBoneName": "R_leg_02_bind_jnt",
+                                "hipBoneName": "R_leg_01_bind_jnt",
+                                "locationTrackName": "R_IK_Position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": true,
+                                "kneeRotationAxis": 0,
+                                "flipKneeRotationAxis": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.05,
+                        "y": 1.05,
+                        "z": 1.05
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_nk_torso",
+            "id": 2544056325,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_nk_torso_Model",
+                    "filename": "data/hd/character/enemy/nakrul_hd/torso.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_eyes",
+            "id": 619118150,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_eyes_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.15,
+                        "z": 0.6
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_eyes_Attach",
+                    "targetbone": "head_bind_jnt"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_eyes_Light",
+                    "color": {
+                        "x": 1.0,
+                        "y": 0.82,
+                        "z": 0.25
+                    },
+                    "power": 900.0,
+                    "radius": 2.4,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.3
+                }
+            ]
+        }
+    ]
+}
