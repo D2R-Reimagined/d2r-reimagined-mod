@@ -1581,24 +1581,24 @@ Lab T3 Base			1					0	Lab Orbs	20	Lab T3 Materials	20	Lab Jewelry	70	Runes 21	20
 Lab T4 Base			1					0	Lab Orbs	20	Lab T4 Materials	20	Lab Jewelry	70	Runes 22	20	Lab Equip	135	Lab Supplies	135																		0
 Lab T5 Base			1					0	Lab Orbs	20	Lab T5 Materials	20	Lab Jewelry	70	Runes 23	20	Lab Equip	135	Lab Supplies	135																		0
 Lab T1 Normal			1					0	Void	5	Lab T1 Base	1																										0
-Lab T1 Champion			-2	850	850	850	1024	0	Lab T1 Normal	2																												0
-Lab T1 Unique			-4	942	942	942	1024	0	Lab T1 Normal	4																												0
+Lab T1 Champion			-2	850	850	850	1024	0	Lab T1 Base	1	Lab T1 Normal	1																										0
+Lab T1 Unique			-4	942	942	942	1024	0	Lab T1 Base	2	Lab T1 Normal	2																										0
 Lab T1 Swarm			1					0	Void	10	Lab T1 Base	1																										0
 Lab T2 Normal			1					0	Void	5	Lab T2 Base	1																										0
-Lab T2 Champion			-2	850	850	850	1024	0	Lab T2 Normal	2																												0
-Lab T2 Unique			-4	942	942	942	1024	0	Lab T2 Normal	4																												0
+Lab T2 Champion			-2	850	850	850	1024	0	Lab T2 Base	1	Lab T2 Normal	1																										0
+Lab T2 Unique			-4	942	942	942	1024	0	Lab T2 Base	2	Lab T2 Normal	2																										0
 Lab T2 Swarm			1					0	Void	10	Lab T2 Base	1																										0
 Lab T3 Normal			1					0	Void	5	Lab T3 Base	1																										0
-Lab T3 Champion			-2	850	850	850	1024	0	Lab T3 Normal	2																												0
-Lab T3 Unique			-4	942	942	942	1024	0	Lab T3 Normal	4																												0
+Lab T3 Champion			-2	850	850	850	1024	0	Lab T3 Base	1	Lab T3 Normal	1																										0
+Lab T3 Unique			-4	942	942	942	1024	0	Lab T3 Base	2	Lab T3 Normal	2																										0
 Lab T3 Swarm			1					0	Void	10	Lab T3 Base	1																										0
 Lab T4 Normal			1					0	Void	5	Lab T4 Base	1																										0
-Lab T4 Champion			-2	850	850	850	1024	0	Lab T4 Normal	2																												0
-Lab T4 Unique			-4	942	942	942	1024	0	Lab T4 Normal	4																												0
+Lab T4 Champion			-2	850	850	850	1024	0	Lab T4 Base	1	Lab T4 Normal	1																										0
+Lab T4 Unique			-4	942	942	942	1024	0	Lab T4 Base	2	Lab T4 Normal	2																										0
 Lab T4 Swarm			1					0	Void	10	Lab T4 Base	1																										0
 Lab T5 Normal			1					0	Void	5	Lab T5 Base	1																										0
-Lab T5 Champion			-2	850	850	850	1024	0	Lab T5 Normal	2																												0
-Lab T5 Unique			-4	942	942	942	1024	0	Lab T5 Normal	4																												0
+Lab T5 Champion			-2	850	850	850	1024	0	Lab T5 Base	1	Lab T5 Normal	1																										0
+Lab T5 Unique			-4	942	942	942	1024	0	Lab T5 Base	2	Lab T5 Normal	2																										0
 Lab T5 Swarm			1					0	Void	10	Lab T5 Base	1																										0
 Lab Boss Runes 35			1					0	r35	1	r34	2																							1			0
 Lab Boss Runes 36			1					0	r36	1	Lab Boss Runes 35	3																							1			0
@@ -1622,3 +1622,38 @@ Lab Boss Diablo Item			6	983	983	1024	1024	0	Void	1	Lab T5 Base	4															
 Lab Boss Diablo Jewel			1	1024				0	jew	1																									1			0
 Lab Boss Diablo Rune Chance			1					0	Lab Boss Runes 39	1																									1			0
 Lab Boss Diablo			-3					0	Lab Boss Diablo Rune Chance	1	Lab Boss Diablo Jewel	1	Lab Boss Diablo Item	1																					1			0
+Lab Class Sor Normal			1					0	ob1	1	ob2	1	ob3	1	ob4	1	ob5	1																				0
+Lab Class Sor Exceptional			1					0	ob6	1	ob7	1	ob8	1	ob9	1	oba	1																				0
+Lab Class Sor Elite			1					0	obb	1	obc	1	obd	1	obe	1	obf	1																				0
+Lab Class Sor Base			1	983	491	1024	1024	0	Lab Class Sor Normal	5	Lab Class Sor Exceptional	5	Lab Class Sor Elite	5																								0
+Lab Class Sor			-3					0	Lab Class Sor Base	2	Lab T1 Unique	1																										0
+Lab Class Bar Normal			1					0	ba1	1	ba2	1	ba3	1	ba4	1	ba5	1																				0
+Lab Class Bar Exceptional			1					0	ba6	1	ba7	1	ba8	1	ba9	1	baa	1																				0
+Lab Class Bar Elite			1					0	bab	1	bac	1	bad	1	bae	1	baf	1																				0
+Lab Class Bar Base			1	983	491	1024	1024	0	Lab Class Bar Normal	5	Lab Class Bar Exceptional	5	Lab Class Bar Elite	5																								0
+Lab Class Bar			-3					0	Lab Class Bar Base	2	Lab T2 Unique	1																										0
+Lab Class Nec Normal			1					0	ne1	1	ne2	1	ne3	1	ne4	1	ne5	1																				0
+Lab Class Nec Exceptional			1					0	ne6	1	ne7	1	ne8	1	ne9	1	nea	1																				0
+Lab Class Nec Elite			1					0	neb	1	neg	1	ned	1	nee	1	nef	1																				0
+Lab Class Nec Base			1	983	491	1024	1024	0	Lab Class Nec Normal	5	Lab Class Nec Exceptional	5	Lab Class Nec Elite	5																								0
+Lab Class Nec			-3					0	Lab Class Nec Base	2	Lab T3 Unique	1																										0
+Lab Class Dru Normal			1					0	dr1	1	dr2	1	dr3	1	dr4	1	dr5	1																				0
+Lab Class Dru Exceptional			1					0	dr6	1	dr7	1	dr8	1	dr9	1	dra	1																				0
+Lab Class Dru Elite			1					0	drb	1	drc	1	drd	1	dre	1	drf	1																				0
+Lab Class Dru Base			1	983	491	1024	1024	0	Lab Class Dru Normal	5	Lab Class Dru Exceptional	5	Lab Class Dru Elite	5																								0
+Lab Class Dru			-3					0	Lab Class Dru Base	2	Lab T4 Unique	1																										0
+Lab Class War Normal			1					0	wa1	1	wa2	1	wa3	1	wa4	1	wa5	1																				0
+Lab Class War Exceptional			1					0	wa6	1	wa7	1	wa8	1	wa9	1	waa	1																				0
+Lab Class War Elite			1					0	wab	1	wac	1	wad	1	wae	1	waf	1																				0
+Lab Class War Base			1	983	491	1024	1024	0	Lab Class War Normal	5	Lab Class War Exceptional	5	Lab Class War Elite	5																								0
+Lab Class War			-3					0	Lab Class War Base	2	Lab T5 Unique	1																										0
+Lab Class Ass Normal			1					0	ktr	1	wrb	1	axf	1	ces	1	clw	1	btl	1	skr	1																0
+Lab Class Ass Exceptional			1					0	9ar	1	9wb	1	9xf	1	9cs	1	9lw	1	9tw	1	9qr	1																0
+Lab Class Ass Elite			1					0	7ar	1	7wb	1	7xf	1	7cs	1	7lw	1	7tw	1	7qr	1																0
+Lab Class Ass Base			1	983	491	1024	1024	0	Lab Class Ass Normal	7	Lab Class Ass Exceptional	7	Lab Class Ass Elite	7																								0
+Lab Class Ass			-3					0	Lab Class Ass Base	2	Lab T1 Unique	1																										0
+Lab Class Pal Normal			1					0	pa1	1	pa2	1	pa3	1	pa4	1	pa5	1																				0
+Lab Class Pal Exceptional			1					0	pa6	1	pa7	1	pa8	1	pa9	1	paa	1																				0
+Lab Class Pal Elite			1					0	pab	1	pac	1	pad	1	pae	1	paf	1																				0
+Lab Class Pal Base			1	983	491	1024	1024	0	Lab Class Pal Normal	5	Lab Class Pal Exceptional	5	Lab Class Pal Elite	5																								0
+Lab Class Pal			-3					0	Lab Class Pal Base	2	Lab T2 Unique	1																										0
