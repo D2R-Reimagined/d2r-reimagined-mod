@@ -209,7 +209,7 @@ def generate(api, plans, levels):
             })
             # Native Hell ratios retain the archetype; tiers raise both physical
             # and elemental attacks. Normal/Nightmare copies are defensive only:
-            # activation is Hell-only. Use the configured tier area levels (100-105).
+            # activation is Hell-only. Use the configured tier area levels (99-104).
             for diff in ("", "(N)", "(H)"):
                 row[monsters.col("Level" + diff)] = str(cfg.MAP_AREA_LEVEL + p["tier"] - 1)
                 for stem in ("MinHP", "MaxHP", "AC", "Exp", "A1MinD", "A1MaxD",

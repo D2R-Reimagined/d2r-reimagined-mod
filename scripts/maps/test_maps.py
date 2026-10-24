@@ -99,7 +99,7 @@ class MappingContract(unittest.TestCase):
                 self.assertEqual(marker[stats2.col('revive')], '0')
                 self.assertEqual(row[monsters.col('deathDmg')], '0')
                 for diff in ('', '(N)', '(H)'):
-                    self.assertIn(int(row[monsters.col('Level'+diff)]), range(100,106))
+                    self.assertIn(int(row[monsters.col('Level'+diff)]), range(cfg.MAP_AREA_LEVEL,cfg.MAP_AREA_LEVEL+6))
                 if row[0].startswith(('rmap_event_wave_', 'rmap_event_guard_')):
                     for col in monsters.header:
                         if col.startswith('TreasureClass'): self.assertEqual(row[monsters.col(col)], '')
@@ -901,7 +901,7 @@ class MappingContract(unittest.TestCase):
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             levels, monsters = gen.Table(bank / 'levels.txt'), gen.Table(bank / 'monstats.txt')
             for p in self.plans:
-                expected = str(99 + p['tier'])
+                expected = str(cfg.MAP_AREA_LEVEL - 1 + p['tier'])
                 for lid in (p['body_id'], p['boss_id']):
                     row = levels.find(levels.col('Id'), str(lid))
                     for col in ('MonLvl', 'MonLvl(N)', 'MonLvl(H)',
@@ -916,7 +916,7 @@ class MappingContract(unittest.TestCase):
             for row in monsters.rows:
                 if row[0].startswith('rmap_treasure_'):
                     for diff in ('', '(N)', '(H)'):
-                        self.assertEqual(int(row[monsters.col('Level' + diff)]), 99 + int(row[0].split('_')[2]))
+                        self.assertEqual(int(row[monsters.col('Level' + diff)]), cfg.MAP_AREA_LEVEL - 1 + int(row[0].split('_')[2]))
 
     def test_every_map_level_owns_its_act_5_rectangle(self):
         # Overlapping levels let a T1 arena's Warden show up in the T5 arena.
@@ -933,7 +933,7 @@ class MappingContract(unittest.TestCase):
         for p in self.plans:
             level = self.levels.find(self.levels.col("Id"), str(p["body_id"]))
             self.assertEqual(level[self.levels.col("SaveMonsters")], "1")
-            self.assertEqual(int(level[self.levels.col("MonLvlEx(H)")]), 99 + p["tier"])
+            self.assertEqual(int(level[self.levels.col("MonLvlEx(H)")]), cfg.MAP_AREA_LEVEL - 1 + p["tier"])
             for i in range(1, int(level[self.levels.col("NumMon")]) + 1):
                 name = level[self.levels.col(f"nmon{i}")]
                 self.assertTrue(name.startswith("rmap_"))

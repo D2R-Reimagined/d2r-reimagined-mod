@@ -565,7 +565,7 @@ MAP_MONSTERS = {
 MAP_KEEP_SPAWN = {"sandmaggot4", "sandmaggot5"}
 # The monster region the native population routine fills has 13 entries.
 MAP_MONSTER_LIMIT = 10
-MAP_AREA_LEVEL = 100  # Tiers 1-6: 100-105, for bodies and Warden arenas.
+MAP_AREA_LEVEL = 99  # Tiers 1-6: 99-104, for bodies and Warden arenas.
 
 # --------------------------------------------------------------------------
 # Monster AI
