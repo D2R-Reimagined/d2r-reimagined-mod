@@ -27,8 +27,8 @@ Sunder Charms			1					2400	PreCrafted Cold Rupture	1	PreCrafted Flame Rift	1	Pre
 Norm TZ Generic			1					114	Corruption Orb	1																									1			0
 NMH Boss			1					114	Socket Orb	1																									1			0
 NM TZ Generic			1					114	Socket Orb	1	Corruption Orb	1																							1			0
-Hell TZ Generic			1					740	Gem Cluster	7	Socket Orb	6	Corruption Orb	6	Pandemonium Keys	4	Renewal Orb	2	Shadow Orb	2															1			0
-Hell TZ Boss			1					750	Gem Cluster	7	Socket Orb	7	Corruption Orb	7	Shadow Orb	2																			1			0
+Hell TZ Generic			1					740	Gem Cluster	7	Socket Orb	6	Corruption Orb	6	Pandemonium Keys	4	Renewal Orb	2	Shadow Orb	1															1			0
+Hell TZ Boss			1					750	Gem Cluster	7	Socket Orb	7	Corruption Orb	7	Shadow Orb	1																			1			0
 Jewelry A			1					25	rin	175	amu	75	jew	50	cm3	50	cm2	50	cm1	50	Jewelry Orbs Single	25																0
 Jewelry B			1					25	rin	175	amu	75	jew	50	cm3	50	cm2	50	cm1	50	Jewelry Orbs Stack	25																0
 Jewelry C			1					25	rin	150	amu	74	jew	74	cm3	49	cm2	49	cm1	49	Jewelry Orbs Stack	30																0
@@ -43,6 +43,7 @@ Normal Potion	12		2					0	Potion 2	1																												0
 Good Potion	12	40	2					0	Potion 3	1																												0
 Super Potion	12	70	2					0	Potion 4	1																												0
 Ammo			1					0	aqv	1	cqv	1																										0
+Socket Pliers			1					0	jwp	4	rup	1																										0
 Runes 1			1					0	s01	3	s02	2																										0
 Runes 2			1					0	s03	3	s04	2	Runes 1	2																								0
 Runes 3			1					0	s05	3	s06	2	Runes 2	5																								0
@@ -60,6 +61,12 @@ Runes 14			1					0	s27	3	s28	2	Runes 13	210																								0
 Runes 15			1					0	s29	3	s30	2	Runes 14	240																								0
 Runes 16			1					0	s31	3	s32	2	Runes 15	260																								0
 Runes 17			1					0	s33	1	Runes 16	280																										0
+Runes 18			1					0	s34	1	Runes 17	99																										0
+Runes 19			1					0	s35	1	Runes 18	99																										0
+Runes 20			1					0	s36	1	Runes 19	99																										0
+Runes 21			1					0	s37	1	Runes 20	99																										0
+Runes 22			1					0	s38	1	Runes 21	149																										0
+Runes 23			1					0	s39	1	Runes 22	199																										0
 Act 1 Terrorize Act Consumable Desecrated	40		1					3170	xa1	5	xa2	3	xa3	2	xa4	2	xa5	1														"cond('Difficulty', hell)"			1		40	0
 Act 2 Terrorize Act Consumable Desecrated	41		1					3170	xa1	3	xa2	5	xa3	2	xa4	1	xa5	2														"cond('Difficulty', hell)"			1		40	0
 Act 3 Terrorize Act Consumable Desecrated	42		1					3170	xa1	1	xa2	2	xa3	5	xa4	3	xa5	2														"cond('Difficulty', hell)"			1		40	0
@@ -1405,7 +1412,7 @@ Baalq Item (N)			7					5	Act 1 (H) Good	4	Act 1 (H) Equip A	30																		
 Baalq Item (H)			7					5	Act 5 (H) Good	4	Act 5 (H) Equip B	30																										0
 Baalq			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item	1																										0
 Baalq (N)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (N)	1																										0
-Baalq (H)			-2	993	993	1024	1024	0	Corruption Orb (Normal)	1	Baalq Item (H)	1																										0
+Baalq (H)			-2	993	993	1024	1024	0	lab	1	Baalq Item (H)	1																										0
 Cow King Item			5					0	Act 1 Uitem C	1	Act 1 Melee B	2																										0
 Cow King Item Desecrated A			5					0	Act 4 Uitem B	3	Act 4 Melee B	6																										0
 Cow King Item Desecrated B			5					0	Act 1 (N) Uitem A	3	Act 1 (N) Melee A	6																										0
@@ -1551,3 +1558,113 @@ Act 4 (H) Herald C	41	87	-9	989	983	1024	1024	0	Sunder Charms	2	Herald Orbs	1	Ac
 Act 5 (H) Herald A	41	90	-9	989	983	1024	1024	0	Sunder Charms	2	Herald Orbs	1	Act 5 (H) Herald Item L	2	Act 5 (H) Herald Item L - 1 Extra	1	Act 5 (H) Herald Item L - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated	1	Super Potion	1																0
 Act 5 (H) Herald B	41	93	-9	989	983	1024	1024	0	Sunder Charms	2	Herald Orbs	1	Act 5 (H) Herald Item M	2	Act 5 (H) Herald Item M - 1 Extra	1	Act 5 (H) Herald Item M - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated	1	Super Potion	1																0
 Act 5 (H) Herald C	41	96	-9	989	983	1024	1024	0	Sunder Charms	2	Herald Orbs	1	Act 5 (H) Herald Item N	2	Act 5 (H) Herald Item N - 1 Extra	1	Act 5 (H) Herald Item N - 2 Extra	1	Act 1 Terrorize Act Consumable Desecrated	1	Super Potion	1																0
+Lab Gold			1					0	gld,mul=1536	1																												0
+Lab Potion			1					0	hp5	5	mp5	5	rvl	2																								0
+Lab Ammo			1					0	aqv	1	cqv	1																										
+Lab Pliers			1					0	jwp	4	rup	1																							1			
+Lab Supplies			1					0	Lab Gold	46	Lab Potion	36	Lab Ammo	36	Lab Pliers	2																						0
+Lab Orbs			1					0	1oe	20	1or	120	1oc	100	1oa	100	1os	160	1ka	150	1oi	150													1			0
+Lab Sunder Charms			1					0	PreCrafted Cold Rupture	1	PreCrafted Flame Rift	1	PreCrafted Crack of the Heavens	1	PreCrafted Rotting Fissure	1	PreCrafted Bone Break	1	PreCrafted Black Cleft	1															1			0
+Lab Charms			1					0	cm1	1	cm2	1	cm3	1																								0
+Lab Jewelry			1					0	Lab Sunder Charms	30	Lab Charms	160	jew	150	rin	170	amu	170																				0
+Lab T1 Materials			1					0	1gc	25	xa1	5	ua1	5	pk1	15																			1			0
+Lab T2 Materials			1					0	1gc	25	xa2	5	ua2	5	pk1	10	pk2	5																	1			0
+Lab T3 Materials			1					0	1gc	25	xa3	5	ua3	5	pk2	15																			1			0
+Lab T4 Materials			1					0	1gc	25	xa4	5	ua4	5	pk2	10	pk3	5																	1			0
+Lab T5 Materials			1					0	1gc	25	xa5	5	ua5	5	pk3	15																			1			0
+Lab Equip Band 1			1					0	weap3	1	armo3	1	weap6	1	armo6	1	weap9	1	armo9	1	weap12	1	armo12	1														0
+Lab Equip Band 2			1					0	weap15	1	armo15	1	weap18	1	armo18	1	weap21	1	armo21	1	weap24	1	armo24	1														0
+Lab Equip Band 3			1					0	weap27	1	armo27	1	weap30	1	armo30	1	weap33	1	armo33	1	weap36	1	armo36	1														0
+Lab Equip Band 4			1					0	weap39	1	armo39	1	weap42	1	armo42	1	weap45	1	armo45	1	weap48	1	armo48	1														0
+Lab Equip Band 5			1					0	weap51	1	armo51	1	weap54	1	armo54	1	weap57	1	armo57	1	weap60	1	armo60	1														0
+Lab Equip Band 6			1					0	weap63	1	armo63	1	weap66	1	armo66	1	weap69	1	armo69	1	weap72	1	armo72	1														0
+Lab Equip Band 7			1					0	weap75	1	armo75	1	weap78	1	armo78	1	weap81	1	armo81	1	weap84	1	armo84	1	weap87	1	armo87	1										0
+Lab Equip			1					0	Lab Equip Band 1	4	Lab Equip Band 2	4	Lab Equip Band 3	4	Lab Equip Band 4	4	Lab Equip Band 5	4	Lab Equip Band 6	4	Lab Equip Band 7	5																0
+Lab T1 Base			1					0	Lab Orbs	20	Lab T1 Materials	20	Lab Jewelry	70	Runes 19	20	Lab Equip	135	Lab Supplies	135																		0
+Lab T2 Base			1					0	Lab Orbs	20	Lab T2 Materials	20	Lab Jewelry	70	Runes 20	20	Lab Equip	135	Lab Supplies	135																		0
+Lab T3 Base			1					0	Lab Orbs	20	Lab T3 Materials	20	Lab Jewelry	70	Runes 21	20	Lab Equip	135	Lab Supplies	135																		0
+Lab T4 Base			1					0	Lab Orbs	20	Lab T4 Materials	20	Lab Jewelry	70	Runes 22	20	Lab Equip	135	Lab Supplies	135																		0
+Lab T5 Base			1					0	Lab Orbs	20	Lab T5 Materials	20	Lab Jewelry	70	Runes 23	20	Lab Equip	135	Lab Supplies	135																		0
+Lab T1 Normal			1					0	Void	5	Lab T1 Base	1																										0
+Lab T1 Champion			-2	850	850	850	1024	0	Lab T1 Base	1	Lab T1 Normal	1																										0
+Lab T1 Unique			-4	942	942	942	1024	0	Lab T1 Base	2	Lab T1 Normal	2																										0
+Lab T1 Swarm			1					0	Void	10	Lab T1 Base	1																										0
+Lab T2 Normal			1					0	Void	5	Lab T2 Base	1																										0
+Lab T2 Champion			-2	850	850	850	1024	0	Lab T2 Base	1	Lab T2 Normal	1																										0
+Lab T2 Unique			-4	942	942	942	1024	0	Lab T2 Base	2	Lab T2 Normal	2																										0
+Lab T2 Swarm			1					0	Void	10	Lab T2 Base	1																										0
+Lab T3 Normal			1					0	Void	5	Lab T3 Base	1																										0
+Lab T3 Champion			-2	850	850	850	1024	0	Lab T3 Base	1	Lab T3 Normal	1																										0
+Lab T3 Unique			-4	942	942	942	1024	0	Lab T3 Base	2	Lab T3 Normal	2																										0
+Lab T3 Swarm			1					0	Void	10	Lab T3 Base	1																										0
+Lab T4 Normal			1					0	Void	5	Lab T4 Base	1																										0
+Lab T4 Champion			-2	850	850	850	1024	0	Lab T4 Base	1	Lab T4 Normal	1																										0
+Lab T4 Unique			-4	942	942	942	1024	0	Lab T4 Base	2	Lab T4 Normal	2																										0
+Lab T4 Swarm			1					0	Void	10	Lab T4 Base	1																										0
+Lab T5 Normal			1					0	Void	5	Lab T5 Base	1																										0
+Lab T5 Champion			-2	850	850	850	1024	0	Lab T5 Base	1	Lab T5 Normal	1																										0
+Lab T5 Unique			-4	942	942	942	1024	0	Lab T5 Base	2	Lab T5 Normal	2																										0
+Lab T5 Swarm			1					0	Void	10	Lab T5 Base	1																										0
+Lab Boss Runes 35			1					0	s35	1	s34	2																							1			0
+Lab Boss Runes 36			1					0	s36	1	Lab Boss Runes 35	3																							1			0
+Lab Boss Runes 37			1					0	s37	1	Lab Boss Runes 36	3																							1			0
+Lab Boss Runes 38			1					0	s38	1	Lab Boss Runes 37	3																							1			0
+Lab Boss Runes 39			1					0	s39	1	Lab Boss Runes 38	3																							1			0
+Lab Boss Maghda Item			6	942	942	1024	1024	0	Void	1	Lab T1 Base	4																										0
+Lab Boss Maghda Rune Chance			1					0	Void	9	Lab Boss Runes 35	1																							1			0
+Lab Boss Maghda			-3					0	Lab Boss Maghda Rune Chance	1	jew	1	Lab Boss Maghda Item	1																					1			0
+Lab Boss Belial Item			6	942	942	1024	1024	0	Void	1	Lab T2 Base	4																										0
+Lab Boss Belial Rune Chance			1					0	Void	4	Lab Boss Runes 36	1																							1			0
+Lab Boss Belial			-3					0	Lab Boss Belial Rune Chance	1	jew	1	Lab Boss Belial Item	1																					1			0
+Lab Boss Nakrul Item			6	983	983	1024	1024	0	Void	1	Lab T3 Base	4																										0
+Lab Boss Nakrul Rune Chance			1					0	Void	7	Lab Boss Runes 37	3																							1			0
+Lab Boss Nakrul			-3					0	Lab Boss Nakrul Rune Chance	1	jew	1	Lab Boss Nakrul Item	1																					1			0
+Lab Boss Skeleton King Item			6	983	983	1024	1024	0	Void	1	Lab T4 Base	4																										0
+Lab Boss Skeleton King Jewel			1			1024		0	jew	1																									1			0
+Lab Boss Skeleton King Rune Chance			1					0	Void	1	Lab Boss Runes 38	1																							1			0
+Lab Boss Skeleton King			-3					0	Lab Boss Skeleton King Rune Chance	1	Lab Boss Skeleton King Jewel	1	Lab Boss Skeleton King Item	1																					1			0
+Lab Boss Diablo Item			6	983	983	1024	1024	0	Void	1	Lab T5 Base	4																										0
+Lab Boss Diablo Jewel			1	1024				0	jew	1																									1			0
+Lab Boss Diablo Rune Chance			1					0	Lab Boss Runes 39	1																									1			0
+Lab Boss Diablo			-3					0	Lab Boss Diablo Rune Chance	1	Lab Boss Diablo Jewel	1	Lab Boss Diablo Item	1																					1			0
+Lab Boss Diablo Extra			-2					0	Relic of the Ancients	1	Lab Boss Diablo Item	1																										
+Lab Class Sor Normal			1					0	ob1	1	ob2	1	ob3	1	ob4	1	ob5	1																				0
+Lab Class Sor Exceptional			1					0	ob6	1	ob7	1	ob8	1	ob9	1	oba	1																				0
+Lab Class Sor Elite			1					0	obb	1	obc	1	obd	1	obe	1	obf	1																				0
+Lab Class Sor Base			1	983	491	1024	1024	0	Lab Class Sor Normal	5	Lab Class Sor Exceptional	5	Lab Class Sor Elite	5																								0
+Lab Class Sor			-3					0	Lab Class Sor Base	2	Lab T1 Unique	1																										0
+Lab Class Bar Normal			1					0	ba1	1	ba2	1	ba3	1	ba4	1	ba5	1																				0
+Lab Class Bar Exceptional			1					0	ba6	1	ba7	1	ba8	1	ba9	1	baa	1																				0
+Lab Class Bar Elite			1					0	bab	1	bac	1	bad	1	bae	1	baf	1																				0
+Lab Class Bar Base			1	983	491	1024	1024	0	Lab Class Bar Normal	5	Lab Class Bar Exceptional	5	Lab Class Bar Elite	5																								0
+Lab Class Bar			-3					0	Lab Class Bar Base	2	Lab T1 Unique	1																										0
+Lab Class Nec Normal			1					0	ne1	1	ne2	1	ne3	1	ne4	1	ne5	1																				0
+Lab Class Nec Exceptional			1					0	ne6	1	ne7	1	ne8	1	ne9	1	nea	1																				0
+Lab Class Nec Elite			1					0	neb	1	neg	1	ned	1	nee	1	nef	1																				0
+Lab Class Nec Base			1	983	491	1024	1024	0	Lab Class Nec Normal	5	Lab Class Nec Exceptional	5	Lab Class Nec Elite	5																								0
+Lab Class Nec			-3					0	Lab Class Nec Base	2	Lab T1 Unique	1																										0
+Lab Class Dru Normal			1					0	dr1	1	dr2	1	dr3	1	dr4	1	dr5	1																				0
+Lab Class Dru Exceptional			1					0	dr6	1	dr7	1	dr8	1	dr9	1	dra	1																				0
+Lab Class Dru Elite			1					0	drb	1	drc	1	drd	1	dre	1	drf	1																				0
+Lab Class Dru Base			1	983	491	1024	1024	0	Lab Class Dru Normal	5	Lab Class Dru Exceptional	5	Lab Class Dru Elite	5																								0
+Lab Class Dru			-3					0	Lab Class Dru Base	2	Lab T1 Unique	1																										0
+Lab Class War Normal			1					0	wa1	1	wa2	1	wa3	1	wa4	1	wa5	1																				0
+Lab Class War Exceptional			1					0	wa6	1	wa7	1	wa8	1	wa9	1	waa	1																				0
+Lab Class War Elite			1					0	wab	1	wac	1	wad	1	wae	1	waf	1																				0
+Lab Class War Base			1	983	491	1024	1024	0	Lab Class War Normal	5	Lab Class War Exceptional	5	Lab Class War Elite	5																								0
+Lab Class War			-3					0	Lab Class War Base	2	Lab T1 Unique	1																										0
+Lab Class Ass Normal			1					0	ktr	1	wrb	1	axf	1	ces	1	clw	1	btl	1	skr	1																0
+Lab Class Ass Exceptional			1					0	9ar	1	9wb	1	9xf	1	9cs	1	9lw	1	9tw	1	9qr	1																0
+Lab Class Ass Elite			1					0	7ar	1	7wb	1	7xf	1	7cs	1	7lw	1	7tw	1	7qr	1																0
+Lab Class Ass Base			1	983	491	1024	1024	0	Lab Class Ass Normal	7	Lab Class Ass Exceptional	7	Lab Class Ass Elite	7																								0
+Lab Class Ass			-3					0	Lab Class Ass Base	2	Lab T1 Unique	1																										0
+Lab Class Pal Normal			1					0	pa1	1	pa2	1	pa3	1	pa4	1	pa5	1																				0
+Lab Class Pal Exceptional			1					0	pa6	1	pa7	1	pa8	1	pa9	1	paa	1																				0
+Lab Class Pal Elite			1					0	pab	1	pac	1	pad	1	pae	1	paf	1																				0
+Lab Class Pal Base			1	983	491	1024	1024	0	Lab Class Pal Normal	5	Lab Class Pal Exceptional	5	Lab Class Pal Elite	5																								0
+Lab Class Pal			-3					0	Lab Class Pal Base	2	Lab T1 Unique	1																										0
+Lab Class Ama Normal			1					0	am1	1	am2	1	am3	1	am4	1	am5	1																				0
+Lab Class Ama Exceptional			1					0	am6	1	am7	1	am8	1	am9	1	ama	1																				0
+Lab Class Ama Elite			1					0	amb	1	amc	1	amd	1	ame	1	amf	1																				0
+Lab Class Ama Base			1	983	491	1024	1024	0	Lab Class Ama Normal	5	Lab Class Ama Exceptional	5	Lab Class Ama Elite	5																								0
+Lab Class Ama			-3					0	Lab Class Ama Base	2	Lab T1 Unique	1																										0
