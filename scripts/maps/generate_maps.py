@@ -651,6 +651,9 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
 #   corrupt   T5 map + Horadric Astrolabe -> T6
 # ---------------------------------------------------------------------------
 
+MAP_QUALITIES = ("mag", "rar")
+
+
 def gen_cubemain(plans: list[dict]) -> Table:
     t = Table(EXCEL / "cubemain.txt")
     c_desc = t.col("description")
@@ -686,16 +689,20 @@ def gen_cubemain(plans: list[dict]) -> Table:
             1,
         ))
 
+    # A bare output code makes the cube roll a fresh quality, so a rare map
+    # could upgrade into a magic one. One row per map quality (itemtypes
+    # allow only magic and rare) keeps it.
+    def keep_quality(desc: str, code: str, material: str, output: str) -> None:
+        for quality in MAP_QUALITIES:
+            t.append(recipe(f"{desc} {quality}", [f'"{code},{quality}"', material],
+                            f'"{output},{quality}"', 2))
+
     for p in plans:
         higher = by_theme_tier.get((p["theme"]["key"], p["tier"] + 1))
         if higher is None or p["tier"] >= 5:
             continue          # tier 6 is corruption-only, never an upgrade
-        t.append(recipe(
-            f"upgrade {p['theme']['key']} T{p['tier']}",
-            [p["item_code"], "mor"],
-            cfg.expansion_code(higher["item_code"]),
-            2,
-        ))
+        keep_quality(f"upgrade {p['theme']['key']} T{p['tier']}", p["item_code"], "mor",
+                     cfg.expansion_code(higher["item_code"]))
 
     for p in plans:
         t.append(recipe(f"reroll {p['theme']['key']} T{p['tier']}",
@@ -705,22 +712,22 @@ def gen_cubemain(plans: list[dict]) -> Table:
         if p["tier"] != 5:
             continue
         corrupted = by_theme_tier[(p["theme"]["key"], 6)]
-        t.append(recipe(
-            f"corrupt {p['theme']['key']}",
-            [p["item_code"], "mws"],
-            cfg.expansion_code(corrupted["item_code"]),
-            2,
-        ))
+        keep_quality(f"corrupt {p['theme']['key']}", p["item_code"], "mws",
+                     cfg.expansion_code(corrupted["item_code"]))
 
     # Alias recipes point at the same levels; item codes carry only roll schema.
     originals = list(t.rows)
     aliases = {p["item_code"]: cfg.expansion_code(p["item_code"]) for p in plans}
     for original in originals:
-        if not original[c_desc].startswith(cfg.CUBE_TAG + " ") or original[c_in[0]] not in aliases:
+        quoted = original[c_in[0]].startswith('"')
+        code, *quality = original[c_in[0]].strip('"').split(",", 1)
+        if not original[c_desc].startswith(cfg.CUBE_TAG + " ") or code not in aliases:
             continue
         row = list(original)
         row[c_desc] += " V2"
-        row[c_in[0]] = aliases[row[c_in[0]]]
+        row[c_in[0]] = ",".join([aliases[code], *quality])
+        if quoted:
+            row[c_in[0]] = f'"{row[c_in[0]]}"'
         t.append(row)
 
     if getattr(cfg, "TEST_RECIPES", False):

@@ -964,7 +964,18 @@ class MappingContract(unittest.TestCase):
             self.assertEqual(r['min diff'], '2')
             self.assertNotIn('test', r['description'])
             if r['description'].startswith('rmap upgrade'):
-                self.assertFalse(r['output'].endswith('6'))
+                self.assertFalse(r['output'].strip('"').split(',')[0].endswith('6'))
+
+    def test_upgrade_and_corrupt_keep_map_quality(self):
+        table = gen.Table(gen.EXCEL / 'cubemain.txt')
+        recipes = [dict(zip(table.header, row)) for row in table.rows
+                   if row[0].startswith(('rmap upgrade', 'rmap corrupt'))]
+        upgradable = sum(p['tier'] <= 5 for p in self.plans)  # T1-T4 upgrade, T5 corrupts
+        self.assertEqual(len(recipes), 2 * len(gen.MAP_QUALITIES) * upgradable)
+        for r in recipes:
+            code, quality = r['input 1'].strip('"').split(',')
+            self.assertIn(quality, gen.MAP_QUALITIES)
+            self.assertEqual(r['output'].strip('"').split(',')[1], quality)
 
     def test_expansion_items_preserve_legacy_activation_and_upgrade_to_new_rolls(self):
         table = gen.Table(gen.EXCEL / 'cubemain.txt')
