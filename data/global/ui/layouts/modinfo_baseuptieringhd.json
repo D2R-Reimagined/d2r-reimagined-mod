@@ -1,6 +1,6 @@
 {
 	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
-	"type": "GameplayOptionsPanel", "name": "modinfo_tab7",
+	"type": "GameplayOptionsPanel", "name": "modinfo_baseuptiering",
     "fields": {
         "priority": 9003,
         "rect": { "x": -865, "y": 400, "width": "$OptionsPanelWidth", "height": 1520 },
@@ -125,7 +125,7 @@
                                 {
                                     "type": "TextBoxWidget", "name": "Upgrading",
                                     "fields": {
-                                        "text": "TBD",
+                                        "text": "Base Uptiering",
                                         "style": "$StyleSettingsTitle"
                                     },
                                     "children": [
@@ -141,33 +141,163 @@
                             ]
                         },
                         {
-                            "type": "TableRowWidget", "name": "Row upgrading",
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringNormalToExceptionalHeaderRow",
                             "children": [
                                 {
-                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringNormalToExceptionalHeaderText",
                                     "fields": {
-                                        "text": "You were correct. IT WAS ME!",
+                                        "text": "Normal -> Exceptional",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringNormalToExceptionalRow",
+                            "fields": {
+                                "rect": {
+                                    "height": 220
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringNormalToExceptionalText",
+                                    "fields": {
+                                        "text": "Rare Armor = RAL + THUL + Amethyst\nSet Armor = TAL + SHAEL + Diamond\nUnique Armor = TAL + SHAEL + Diamond\nRare Weapon = ORT + AMN + Sapphire\nSet Weapon = RAL + SOL + Emerald\nUnique Weapon = RAL + SOL + Emerald",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringExceptionalToEliteHeaderRow",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringExceptionalToEliteHeaderText",
+                                    "fields": {
+                                        "text": "Exceptional -> Elite",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringExceptionalToEliteRow",
+                            "fields": {
+                                "rect": {
+                                    "height": 220
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringExceptionalToEliteText",
+                                    "fields": {
+                                        "text": "Rare Armor = KO + PUL + Amethyst\nSet Armor = KO + LEM + Diamond\nUnique Armor = KO + LEM + Diamond\nRare Weapon = FAL + UM + Sapphire\nSet Weapon = LUM + PUL + Emerald\nUnique Weapon = LUM + PUL + Emerald",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringSpacerRowBeforeHelEl",
+                            "fields": {
+                                "rect": {
+                                    "height": 40
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringSpacerBeforeHelElText",
+                                    "fields": {
+                                        "text": "",
                                         "style": "$StyleSettingsText"
                                     }
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringHelElHeaderRow",
+                            "children": [
                                 {
-                                    "type": "disabled", "name": "Runes",
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringHelElHeaderText",
                                     "fields": {
-                                        "rect": "$OptionsDropDownRect",
-                                        "background/rect": "$OptionsDropDownBackgroundRect",
-                                        "background/leftCapOffset": "$OptionsDropDownLeftCapOffset",
-                                        "background/rightCapOffset": "$OptionsDropDownRightCapOffset",
-                                        "pressedFrame": 1,
-                                        "disabledFrame": 2,
-                                        "hoveredFrame": 3,
-                                        "focusIndicatorFilename": "$OptionsDropDownFocusIndicatorFilename",
-                                        "states": [ "@Windowed", "@Fullscreen" ],
-                                        "onUpdateMessage": "OptionsPanelMessage:SetWindowMode",
-                                        "text/style": "$StyleSettingsCarousel",
-                                        "textColor": "$FontColorLightGold",
-                                        "tooltipString": "@OptionsMenuWindowModeTooltip",
-                                        "tooltipStyle": {
-                                            "showAfterDelay": true
+                                        "text": "Scour Recipe",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringHelElRow",
+                            "fields": {
+                                "rect": {
+                                    "height": 170
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringHelElText",
+                                    "fields": {
+                                        "text": "Armor / Weapon / Shield + EL Rune + HEL Rune = New white base item.\nThe item is regenerated as a new white item, and enchants/corruption are wiped.",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
                                         }
                                     }
                                 }
