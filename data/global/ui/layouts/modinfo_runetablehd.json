@@ -2362,7 +2362,7 @@
                                     {
                                         "type": "TextBoxWidget", "name": "Weapon",
                                         "fields": {
-                                            "text": "+75% Damage to Demons/+30% Enhanced Damage",
+                                            "text": "+75% Damage to Demons & +30% Enhanced Damage",
                                             "style": "$StyleSettingsText",
                                             "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
                                         }
@@ -2370,7 +2370,7 @@
                                     {
                                         "type": "TextBoxWidget", "name": "ArmorHelm",
                                         "fields": {
-                                            "text": "+5% Damage Reduction/+5% Maximum Life",
+                                            "text": "+5% Damage Reduction & +5% Maximum Life",
                                             "style": "$StyleSettingsText",
                                             "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
                                         }
@@ -2378,7 +2378,7 @@
                                     {
                                         "type": "TextBoxWidget", "name": "Shield",
                                         "fields": {
-                                            "text": "+5% Damage Reduction/+5% Maximum Life",
+                                            "text": "+5% Damage Reduction & +5% Maximum Life",
                                             "style": "$StyleSettingsText",
                                             "rect": {"width" : 495, "height": 100, "x":1230, "y":50 }
                                         }
@@ -2419,7 +2419,7 @@
                                     {
                                         "type": "TextBoxWidget", "name": "Weapon",
                                         "fields": {
-                                            "text": "+75% Damage to Undead/+30% Enhanced Damage",
+                                            "text": "+75% Damage to Undead & +30% Enhanced Damage",
                                             "style": "$StyleSettingsText",
                                             "rect": {"width" : 495, "height": 100, "x":240, "y": 50 }
                                         }
@@ -2427,7 +2427,7 @@
                                     {
                                         "type": "TextBoxWidget", "name": "ArmorHelm",
                                         "fields": {
-                                            "text": "+5% Magic Resistance/+5% Maximum Life",
+                                            "text": "+5% Magic Resistance & +5% Maximum Life",
                                             "style": "$StyleSettingsText",
                                             "rect": {"width" : 495, "height": 100, "x":735, "y": 50 }
                                         }
@@ -2435,7 +2435,7 @@
                                     {
                                         "type": "TextBoxWidget", "name": "Shield",
                                         "fields": {
-                                            "text": "+5% Magic Resistance/+5% Maximum Life",
+                                            "text": "+5% Magic Resistance & +5% Maximum Life",
                                             "style": "$StyleSettingsText",
                                             "rect": {"width" : 495, "height": 100, "x":1230, "y":50 }
                                         }
@@ -2478,13 +2478,13 @@
                             {
                                 "type": "TableRowWidget", "name": "Rune Upgrades Content Row",
                                 "fields": {
-                                    "rect": {"height": 520}
+                                    "rect": {"height": 900}
                                 },
                                 "children": [
                                     {
                                         "type": "TextBoxWidget", "name": "Rune Upgrades Content",
                                         "fields": {
-                                            "text": "2 matching runes + Tome of Town Portal = the next rune (El through Zod); the Tome is returned.\n9 matching runes = 3 tiers higher (El to Nef through Ber to Zod).\nA stacked rune (2-100) + Town Portal Tome = next rune + remaining stack (quantity minus 2).\nRune or rune stack + Tome of Identify = previous rune (down to El); stacking/unstacking recipes are El-Zod only. Brak, Zeph, Myr, Grit, Dem, and Hev have no upgrade recipes.",
+                                            "text": "Normal Upgrades:\n2 matching runes + Tome of Town Portal = the next rune (El through Zod); the Tome is returned.\n\nBulk Upgrades:\n9 matching runes = 3 tiers higher (El to Nef through Ber to Zod).\n\nStacked Runes:\nA stacked rune (2-100) + Town Portal Tome = next rune + remaining stack (quantity minus 2).\n\nDowngrades:\nRune or rune stack + Tome of Identify = the previous rune (down to El).\n\nStacking/Unstacking:\nThese recipes apply to El-Zod only.\n\nNewer Runes:\nBrak, Zeph, Myr, Grit, Dem, and Hev have no upgrade recipes.",
                                             "style": {
                                                 "pointSize": 28,
                                                 "spacing": {
@@ -2501,7 +2501,7 @@
                                                     "pipeCharacterBehavior": "handle"
                                                 }
                                             },
-                                            "rect": {"width": 1725, "height": 480, "x": 0, "y": 20}
+                                            "rect": {"width": 1725, "height": 840, "x": 0, "y": 20}
                                         }
                                     }
                                 ]
