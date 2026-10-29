@@ -160,12 +160,17 @@
             {
               "type": "TableRowWidget",
               "name": "ItemEnchantmentsIntroRow",
+              "fields": {
+                "rect": {
+                  "height": 150
+                }
+              },
               "children": [
                 {
                   "type": "TextBoxWidget",
                   "name": "ItemEnchantmentsIntroText",
                   "fields": {
-                    "text": "All weapons, armor and jewelry can be enchanted with various additional stats a certain number of times.",
+                    "text": "One enchant per item. Category names are base items; listed ingredients include exact jewel rarity and distinct Infusion/Conversion Orbs.",
                     "style": "$StyleSettingsText"
                   }
                 }
@@ -176,7 +181,7 @@
               "name": "ItemEnchantmentsMaxRow",
               "fields": {
                 "rect": {
-                  "height": 300
+                  "height": 120
                 }
               },
               "children": [
@@ -184,7 +189,7 @@
                   "type": "TextBoxWidget",
                   "name": "ItemEnchantmentsMaxText",
                   "fields": {
-                    "text": "Maximum enchants by item type:\n2H Weapons = 10\n1H Weapons, Shields, and Chest Armor = 5\nHelms, Gloves, Belts, and Boots = 3\nJewelry = 2\n",
+                    "text": "Enchant limit: 1 enchantment per item, any item type.\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -271,7 +276,7 @@
                   "type": "TextBoxWidget",
                   "name": "AmuletTitleText",
                   "fields": {
-                    "text": "Amulets (2)",
+                    "text": "Amulets",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -292,7 +297,7 @@
               "name": "AmuletContentRow",
               "fields": {
                 "rect": {
-                  "height": 550
+                  "height": 2610
                 }
               },
               "children": [
@@ -300,7 +305,7 @@
                   "type": "TextBoxWidget",
                   "name": "AmuletContentText",
                   "fields": {
-                    "text": "Amulet & Topaz = +12% Magic Find & +25% Gold Find\nAmulet & Diamond & Magic Jewel & Tir-Rune = +5 All Resistances\nAmulet & Sapphire =  +25 Mana & +4 Mana / Kill\nAmulet & Ruby = +25 Life & +4 Life / Kill\nAmulet & Sapphire & Magic Jewel = +2 Random Sorceress Skills\nAmulet & Ruby & Magic Jewel = +2 Random Barbarian Skills\nAmulet & Topaz & Magic Jewel = +2 Random Assassin Skills\nAmulet & Emerald & Magic Jewel = +2 Random Druid Skills\nAmulet & Skull & Magic Jewel = +2 Random Necromancer Skill\nAmulet & Amethyst & Magic Jewel = +2 Random Amazon Skills\nAmulet & Diamond & Magic Jewel = +2 Random Paladin Skills\nAmulet & Chaos Onyx & Magic Jewel = +2 Random Warlock Skills\n",
+                    "text": "Gems (no jewel):\nTopaz = +10% Magic Find & +20% Gold Find\nRuby = +20 Life & +2 Life per Kill\nSapphire = +20 Mana & +2 Mana per Kill\nEmerald = +5 Dexterity & +5 Vitality\nSkull = +5 Energy & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\n\nTir Rune:\nRuby + Tir = +15 Fire Resistance\nSapphire + Tir = +15 Cold Resistance\nTopaz + Tir = +15 Lightning Resistance\nEmerald + Tir = +15 Poison Resistance\nDiamond + Magic Jewel + Tir = +5 All Resistances\n\nMagic Jewel skills:\nTopaz + Magic Jewel = +2 to a random Assassin skill\n  & +2 to Assassin skills\nRuby + Magic Jewel = +2 to a random Barbarian skill\n  & +2 to Barbarian skills\nSapphire + Magic Jewel = +2 to a random Sorceress skill\n  & +2 to Sorceress skills\nEmerald + Magic Jewel = +2 to a random Druid skill\n  & +2 to Druid skills\nSkull + Magic Jewel = +2 to a random Necromancer skill\n  & +2 to Necromancer skills\nAmethyst + Magic Jewel = +2 to a random Amazon skill\n  & +2 to Amazon skills\nDiamond + Magic Jewel = +2 to a random Paladin skill\n  & +2 to Paladin skills\nChaos Onyx + Magic Jewel = +2 to a random Warlock skill\n  & +2 to Warlock skills\n\nMagic Jewel + Shael/Dol:\nEmerald + Shael + Magic Jewel = +10% Attack Speed\nSapphire + Dol + Magic Jewel = +10% Faster Cast Rate\n\nInfusion Orb + Rare Jewel:\nTopaz = +25% Magic Find & +50% Gold Find\nRuby = +40 Life & +4 Life per Kill\nSapphire = +40 Mana & +4 Mana per Kill\nDiamond + Um = +15 All Resistances\n\nInfusion Orb + Magic Jewel + Fal:\nEmerald = +15 Dexterity & +15 Vitality\nAmethyst = +15 Strength & +15 Vitality\nSapphire = +15 Energy & +15 Vitality\n\nInfusion Orb + Unique Jewel (class-locked):\nAmazon = +1 to Amazon skills\nAssassin = +1 to Assassin skills\nBarbarian = +1 to Barbarian skills\nDruid = +1 to Druid skills\nNecromancer = +1 to Necromancer skills\nPaladin = +1 to Paladin skills\nSorceress = +1 to Sorceress skills\nWarlock = +1 to Warlock skills\n\nConversion Orb + Unique Jewel:\nZod = +1 All Skills\nBrak = -5% Enemy Physical Resistance\nZeph = +5% All Elemental Damage\nMyr = -5% Enemy Magic Resistance\nGrit = -5% Enemy Elemental Resistance\nHev = +50% Enhanced Damage & -5% Enemy Physical Resistance\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -309,7 +314,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -329,7 +334,7 @@
                   "type": "TextBoxWidget",
                   "name": "RingTitleText",
                   "fields": {
-                    "text": "Rings (2)",
+                    "text": "Rings",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -350,7 +355,7 @@
               "name": "RingContentRow",
               "fields": {
                 "rect": {
-                  "height": 350
+                  "height": 1350
                 }
               },
               "children": [
@@ -358,7 +363,7 @@
                   "type": "TextBoxWidget",
                   "name": "RingContentText",
                   "fields": {
-                    "text": "Ring & Topaz & Magic Jewel = +10% Magic Find  & +20% Gold Find\nRing & Ruby & Magic Jewel = +20 HP & +2 Life / Kill\nRing & Sapphire & Magic Jewel = +20 Mana & +2 Mana / Kill\nRing & Ruby & Tir-Rune = +10 Fire Resistance\nRing & Sapphire & Tir-Rune = +10 Cold Resistance\nRing & Topaz & Tir-Rune = +10 Lightning Resistance\nRing & Emerald & Tir-Rune = +10 Poison Resistance\n",
+                    "text": "Gems (no jewel):\nTopaz = +10% Magic Find & +20% Gold Find\nRuby = +20 Life & +2 Life per Kill\nSapphire = +20 Mana & +2 Mana per Kill\n\nTir Rune:\nRuby + Tir = +15 Fire Resistance\nSapphire + Tir = +15 Cold Resistance\nTopaz + Tir = +15 Lightning Resistance\nEmerald + Tir = +15 Poison Resistance\n\nMagic Jewel + Shael/Dol:\nEmerald + Shael + Magic Jewel = +10% Attack Speed\nSapphire + Dol + Magic Jewel = +10% Faster Cast Rate\n\nInfusion Orb + Magic Jewel + Amn:\nSkull = +5% Life Steal\nSapphire = +5% Mana Steal\n\nInfusion Orb + Rare Jewel:\nRuby = +40 Life & +4 Life per Kill\nSapphire = +40 Mana & +4 Mana per Kill\nDiamond + Um = +15 All Resistances\nTopaz + Ist = +20% Magic Find & +30% Gold Find\nSapphire + Sur = +5% Maximum Mana & +80% Mana Regeneration\nRuby + Jah = +5% Maximum Life\n\nConversion Orb + Unique Jewel:\nBrak = -3% Enemy Physical Resistance\nZeph = +3% All Elemental Damage\nMyr = -3% Enemy Magic Resistance\nGrit = -3% Enemy Elemental Resistance\nHev = +15% Enhanced Damage & -3% Enemy Physical Resistance\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -367,7 +372,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -387,7 +392,7 @@
                   "type": "TextBoxWidget",
                   "name": "BeltTitleText",
                   "fields": {
-                    "text": "Belts (3)",
+                    "text": "Belts",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -408,7 +413,7 @@
               "name": "BeltContentRow",
               "fields": {
                 "rect": {
-                  "height": 250
+                  "height": 1660
                 }
               },
               "children": [
@@ -416,7 +421,7 @@
                   "type": "TextBoxWidget",
                   "name": "BeltContentText",
                   "fields": {
-                    "text": "Belt & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nBelt & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nBelt & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nBelt & Diamond & Magic Jewel = +2 All Resistances\n",
+                    "text": "Magic Jewel:\nTopaz = +10% Magic Find & +20% Gold Find\nRuby = +20 Life & +2 Life per Kill\nSapphire = +20 Mana & +2 Mana per Kill\nEmerald = +5 Dexterity & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\nSkull = +5 Energy & +5 Vitality\n\nOther Magic Jewel recipes:\nDiamond + Magic Jewel + Tir = +5 All Resistances\nEth + Magic Jewel = +20% Mana Regeneration\n\nInfusion Orb + Magic Jewel:\nEmerald + Shael = +15% Faster Hit Recovery\nSkull + Lum = +40% Mana Regeneration & +10 Energy\nEmerald + Fal = +15 Dexterity & +15 Vitality\nAmethyst + Fal = +15 Strength & +15 Vitality\nSapphire + Fal = +15 Energy & +15 Vitality\n\nInfusion Orb + Rare Jewel:\nRuby = +40 Life & +4 Life per Kill\nSapphire = +40 Mana & +4 Mana per Kill\nDiamond + Um = +15 All Resistances\nTopaz + Ist = +20% Magic Find & +30% Gold Find\nSapphire + Sur = +5% Maximum Mana & +80% Mana Regeneration\nAmethyst + Ber = +5% Damage Reduction\nRuby + Jah = +5% Maximum Life\n\nInfusion Orb + Unique Jewel:\nTopaz + Cham = +20% Magic Find & +40% Gold Find\nAmethyst + Cham = +50 Life & +50 Mana & +50% Enhanced Defense\n\nConversion Orb + Zod + Dem + Unique Jewel (class-locked):\nAmazon = +1 to Amazon skills & +5% Damage Reduction\nAssassin = +1 to Assassin skills & +5% Damage Reduction\nBarbarian = +1 to Barbarian skills & +5% Damage Reduction\nDruid = +1 to Druid skills & +5% Damage Reduction\nNecromancer = +1 to Necromancer skills & +5% Damage Reduction\nPaladin = +1 to Paladin skills & +5% Damage Reduction\nSorceress = +1 to Sorceress skills & +5% Damage Reduction\nWarlock = +1 to Warlock skills & +5% Damage Reduction\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -425,7 +430,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -445,7 +450,7 @@
                   "type": "TextBoxWidget",
                   "name": "BootsTitleText",
                   "fields": {
-                    "text": "Boots (3)",
+                    "text": "Boots",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -466,7 +471,7 @@
               "name": "BootsContentRow",
               "fields": {
                 "rect": {
-                  "height": 280
+                  "height": 1780
                 }
               },
               "children": [
@@ -474,7 +479,7 @@
                   "type": "TextBoxWidget",
                   "name": "BootsContentText",
                   "fields": {
-                    "text": "Boots & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nBoots & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nBoots & Sapphire & Magic Jewel =  +15 Mana & +2 Mana / Kill\nBoots & Nef Rune & Magic Jewel = +5% Faster Run/Walk\nBoots & Diamond & Magic Jewel = +2 All Resistances\n",
+                    "text": "Nef Rune (no jewel) = +10% Faster Run/Walk\n\nMagic Jewel:\nTopaz = +10% Magic Find & +20% Gold Find\nRuby = +20 Life & +2 Life per Kill\nSapphire = +20 Mana & +2 Mana per Kill\nEmerald = +5 Dexterity & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\nSkull = +5 Energy & +5 Vitality\n\nOther Magic Jewel recipes:\nDiamond + Magic Jewel + Tir = +5 All Resistances\nEth + Magic Jewel = +20% Mana Regeneration\n\nInfusion Orb + Magic Jewel:\nEmerald + Shael = +20% Faster Run/Walk\nAmethyst + Shael = +20% Faster Hit Recovery\nSkull + Lum = +40% Mana Regeneration & +10 Energy\nEmerald + Fal = +15 Dexterity & +15 Vitality\nAmethyst + Fal = +15 Strength & +15 Vitality\nSapphire + Fal = +15 Energy & +15 Vitality\n\nInfusion Orb + Rare Jewel:\nRuby = +40 Life & +4 Life per Kill\nSapphire = +40 Mana & +4 Mana per Kill\nDiamond + Um = +15 All Resistances\nTopaz + Ist = +20% Magic Find & +30% Gold Find\nSapphire + Sur = +5% Maximum Mana & +80% Mana Regeneration\nRuby + Jah = +5% Maximum Life\n\nInfusion Orb + Unique Jewel:\nTopaz + Cham = +25% Faster Run/Walk\n  & +25% Magic Find & +50% Gold Find\nAmethyst + Zod = +10% Maximum Mana & +10% Maximum Life\n\nConversion Orb + Zod + Dem + Unique Jewel (class-locked):\nAmazon = +1 to Amazon skills & +5% Damage Reduction\nAssassin = +1 to Assassin skills & +5% Damage Reduction\nBarbarian = +1 to Barbarian skills & +5% Damage Reduction\nDruid = +1 to Druid skills & +5% Damage Reduction\nNecromancer = +1 to Necromancer skills & +5% Damage Reduction\nPaladin = +1 to Paladin skills & +5% Damage Reduction\nSorceress = +1 to Sorceress skills & +5% Damage Reduction\nWarlock = +1 to Warlock skills & +5% Damage Reduction\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -483,7 +488,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -503,7 +508,7 @@
                   "type": "TextBoxWidget",
                   "name": "GlovesTitleText",
                   "fields": {
-                    "text": "Gloves (3)",
+                    "text": "Gloves",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -524,7 +529,7 @@
               "name": "GlovesContentRow",
               "fields": {
                 "rect": {
-                  "height": 250
+                  "height": 1630
                 }
               },
               "children": [
@@ -532,7 +537,7 @@
                   "type": "TextBoxWidget",
                   "name": "GlovesContentText",
                   "fields": {
-                    "text": "Gloves & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nGloves & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nGloves & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nGloves & Diamond & Magic Jewel =  +2 All Resistances\n",
+                    "text": "Magic Jewel:\nTopaz = +10% Magic Find & +20% Gold Find\nRuby = +20 Life & +2 Life per Kill\nSapphire = +20 Mana & +2 Mana per Kill\nEmerald = +5 Dexterity & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\nSkull = +5 Energy & +5 Vitality\n\nOther Magic Jewel recipes:\nDiamond + Magic Jewel + Tir = +5 All Resistances\nEth + Magic Jewel = +20% Mana Regeneration\nEmerald + Magic Jewel + Shael = +10% Attack Speed\nSapphire + Magic Jewel + Dol = +10% Faster Cast Rate\n\nInfusion Orb + Magic Jewel:\nSkull + Lum = +40% Mana Regeneration & +10 Energy\nEmerald + Fal = +15 Dexterity & +15 Vitality\nAmethyst + Fal = +15 Strength & +15 Vitality\nSapphire + Fal = +15 Energy & +15 Vitality\n\nInfusion Orb + Rare Jewel:\nDiamond + Um = +15 All Resistances\nTopaz + Ist = +20% Magic Find & +30% Gold Find\nSapphire + Sur = +5% Maximum Mana & +80% Mana Regeneration\nRuby + Jah = +5% Maximum Life\n\nInfusion Orb + Unique Jewel + Cham:\nSapphire = +15% Deadly Strike\nEmerald = +15% Open Wounds\nDiamond = +15% Pierce\n\nConversion Orb + Zod + Dem + Unique Jewel (class-locked):\nAmazon = +1 to Amazon skills & Indestructible\nAssassin = +1 to Assassin skills & Indestructible\nBarbarian = +1 to Barbarian skills & Indestructible\nDruid = +1 to Druid skills & Indestructible\nNecromancer = +1 to Necromancer skills & Indestructible\nPaladin = +1 to Paladin skills & Indestructible\nSorceress = +1 to Sorceress skills & Indestructible\nWarlock = +1 to Warlock skills & Indestructible\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -541,7 +546,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -561,7 +566,7 @@
                   "type": "TextBoxWidget",
                   "name": "HelmsTitleText",
                   "fields": {
-                    "text": "Helms (3)",
+                    "text": "Helms",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -582,7 +587,7 @@
               "name": "HelmsContentRow",
               "fields": {
                 "rect": {
-                  "height": 250
+                  "height": 2060
                 }
               },
               "children": [
@@ -590,7 +595,7 @@
                   "type": "TextBoxWidget",
                   "name": "HelmsContentText",
                   "fields": {
-                    "text": "Helms & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nHelms & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nHelms & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nHelms & Diamond & Magic Jewel = +2 All Resistances\n",
+                    "text": "Magic Jewel:\nTopaz = +10% Magic Find & +20% Gold Find\nRuby = +20 Life & +2 Life per Kill\nSapphire = +20 Mana & +2 Mana per Kill\nEmerald = +5 Dexterity & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\nSkull = +5 Energy & +5 Vitality\n\nOther Magic Jewel recipes:\nDiamond + Magic Jewel + Tir = +5 All Resistances\nEth + Magic Jewel = +20% Mana Regeneration\n\nInfusion Orb + Magic Jewel:\nAmethyst + Shael = +20% Faster Hit Recovery\nSkull + Lum = +40% Mana Regeneration & +10 Energy\nEmerald + Fal = +15 Dexterity & +15 Vitality\nAmethyst + Fal = +15 Strength & +15 Vitality\nSapphire + Fal = +15 Energy & +15 Vitality\n\nInfusion Orb + Rare Jewel:\nDiamond + Um = +15 All Resistances\nTopaz + Ist = +20% Magic Find & +30% Gold Find\nSapphire + Sur = +5% Maximum Mana & +80% Mana Regeneration\nAmethyst + Ber = +5% Damage Reduction\nRuby + Jah = +5% Maximum Life\nEmerald + Jah = Ignore Target's Defense\n\nInfusion Orb + Orb of Renewal + Rare Jewel:\nGul = +30 Dexterity & +30 Vitality\nVex = +30 Energy & +30 Vitality\nOhm = +30 Strength & +30 Vitality\n\nInfusion Orb + Conversion Orb + Unique Jewel + Cham:\nRuby = +2 Fire Skills\nSapphire = +2 Cold Skills\nTopaz = +2 Lightning Skills\nEmerald = +2 Poison Skills\nDiamond = +2 Magic Skills\n\nInfusion Orb + Conversion Orb + Unique Jewel:\nSkull + Zod = +1 All Skills\n\nConversion Orb + Zod + Dem + Unique Jewel (class-locked):\nAmazon = +2 to Amazon skills & Indestructible\nAssassin = +2 to Assassin skills & Indestructible\nBarbarian = +2 to Barbarian skills & Indestructible\nDruid = +2 to Druid skills & Indestructible\nNecromancer = +2 to Necromancer skills & Indestructible\nPaladin = +2 to Paladin skills & Indestructible\nSorceress = +2 to Sorceress skills & Indestructible\nWarlock = +2 to Warlock skills & Indestructible\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -599,7 +604,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -619,7 +624,7 @@
                   "type": "TextBoxWidget",
                   "name": "ShieldsTitleText",
                   "fields": {
-                    "text": "Shields (5)",
+                    "text": "Shields",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -640,7 +645,7 @@
               "name": "ShieldsContentRow",
               "fields": {
                 "rect": {
-                  "height": 250
+                  "height": 1590
                 }
               },
               "children": [
@@ -648,7 +653,7 @@
                   "type": "TextBoxWidget",
                   "name": "ShieldsContentText",
                   "fields": {
-                    "text": "Shield & Topaz & Magic Jewel = +7% Magic Find & +10% Gold Find\nShield & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nShield & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nShield & Diamond & Magic Jewel = +2 All Resistances\n",
+                    "text": "Magic Jewel:\nTopaz = +10% Magic Find & +20% Gold Find\nEmerald = +5 Dexterity & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\nSkull = +5 Energy & +5 Vitality\n\nTir Rune:\nRuby = +15 Fire Resistance\nSapphire = +15 Cold Resistance\nTopaz = +15 Lightning Resistance\nEmerald = +15 Poison Resistance\nDiamond + Magic Jewel + Tir = +5 All Resistances\n\nOther rune recipes:\nEth + Magic Jewel = +20% Mana Regeneration\nIth + Magic Jewel = +10% Damage Goes to Mana\nSol + Amethyst + Magic Jewel = 5 Physical Damage Reduced\nSol + Chaos Onyx + Magic Jewel = 5 Physical Damage Reduced\n\nInfusion Orb + Magic Jewel:\nSkull + Amn = +100 Thorns\nRuby + Shael = +15% Faster Block Rate\nEmerald + Shael = +20% Faster Hit Recovery\nSkull + Lum = +40% Mana Regeneration & +10 Energy\nEmerald + Fal = +15 Dexterity & +15 Vitality\nAmethyst + Fal = +15 Strength & +15 Vitality\nSapphire + Fal = +15 Energy & +15 Vitality\n\nInfusion Orb + Rare Jewel:\nDiamond + Um = +15 All Resistances\nChaos Onyx + Mal = 10 Magic Damage Reduced\nAmethyst + Mal = 10 Physical Damage Reduced\nTopaz + Ist = +30% Magic Find & +50% Gold Find\n\nInfusion Orb + Unique Jewel:\nDiamond + Zod = +10% Block Chance & +15 All Resistances\n\nConversion Orb + Grit + Zod + Unique Jewel:\n+15% Block Chance, +15% Faster Block Rate & Indestructible\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -657,7 +662,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -677,7 +682,7 @@
                   "type": "TextBoxWidget",
                   "name": "ChestTitleText",
                   "fields": {
-                    "text": "Chest (5)",
+                    "text": "Chest",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -698,7 +703,7 @@
               "name": "ChestContentRow",
               "fields": {
                 "rect": {
-                  "height": 300
+                  "height": 1900
                 }
               },
               "children": [
@@ -706,7 +711,7 @@
                   "type": "TextBoxWidget",
                   "name": "ChestContentText",
                   "fields": {
-                    "text": "Chest & Topaz & Magic Jewel = +15% Magic Find & +30% Gold Find\nChest & Ruby & Magic Jewel = +15 HP & +2 Life / Kill\nChest & Sapphire & Magic Jewel = +15 Mana & +2 Mana / Kill\nChest & Diamond & Magic Jewel = +3 All Resistances\n",
+                    "text": "Magic Jewel:\nTopaz = +10% Magic Find & +20% Gold Find\nEmerald = +5 Dexterity & +5 Vitality\nAmethyst = +5 Strength & +5 Vitality\nSkull = +5 Energy & +5 Vitality\n\nTir Rune:\nRuby = +15 Fire Resistance\nSapphire = +15 Cold Resistance\nTopaz = +15 Lightning Resistance\nEmerald = +15 Poison Resistance\nDiamond + Magic Jewel + Tir = +5 All Resistances\n\nOther rune recipes:\nEth + Magic Jewel = +20% Mana Regeneration\nIth + Magic Jewel = +10% Damage Goes to Mana\nSol + Amethyst + Magic Jewel = 5 Physical Damage Reduced\nSol + Chaos Onyx + Magic Jewel = 5 Physical Damage Reduced\n\nInfusion Orb + Magic Jewel:\nEmerald + Shael = +20% Faster Hit Recovery\nSkull + Lum = +40% Mana Regeneration & +10 Energy\nEmerald + Fal = +15 Dexterity & +15 Vitality\nAmethyst + Fal = +15 Strength & +15 Vitality\nSapphire + Fal = +15 Energy & +15 Vitality\n\nInfusion Orb + Rare Jewel:\nDiamond + Um = +15 All Resistances\nChaos Onyx + Mal = 10 Magic Damage Reduced\nAmethyst + Mal = 10 Physical Damage Reduced\nTopaz + Ist = +30% Magic Find & +50% Gold Find\n\nInfusion Orb + Orb of Renewal + Rare Jewel:\nGul = +30 Dexterity & +30 Vitality\nVex = +30 Energy & +30 Vitality\nOhm = +30 Strength & +30 Vitality\n\nInfusion Orb + Conversion Orb + Rare Jewel:\nSapphire + Sur = +10% Maximum Mana & +80% Mana Regeneration\nDiamond + Ber = +10% Damage Reduction\nRuby + Jah = +10% Maximum Life\n\nInfusion Orb + Unique Jewel:\nAmethyst + Zod = +100% Enhanced Defense & Indestructible\n\nConversion Orb + Grit + Zod + Unique Jewel:\n+1 All Skills, +5% All Attributes & Indestructible\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -715,7 +720,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
@@ -735,7 +740,7 @@
                   "type": "TextBoxWidget",
                   "name": "WeaponsTitleText",
                   "fields": {
-                    "text": "Weapons (5) or 2H (10)",
+                    "text": "Weapons",
                     "style": "$StyleSettingsTitle"
                   },
                   "children": [
@@ -756,7 +761,7 @@
               "name": "WeaponsContentRow",
               "fields": {
                 "rect": {
-                  "height": 400
+                  "height": 2650
                 }
               },
               "children": [
@@ -764,7 +769,7 @@
                   "type": "TextBoxWidget",
                   "name": "WeaponsContentText",
                   "fields": {
-                    "text": "Weapon & Topaz & Magic Jewel = +15% Magic Find  & +30% Gold Find\nWeapon & Ruby & Magic Jewel = +75 Attack Rating\nWeapon & Sapphire & Magic Jewel = +7% Increased Cast Rate\nWeapon & Emerald & Magic Jewel = +7% Increased Attack Speed\nWeapon & Skull & Magic Jewel = +2% Mana Steal & +2% Life Steal\nWeapon & Sol-Rune & Magic Jewel = +6 Min Damage & +10 Max Damage\nWeapon & Infusion Orb & Amethyst & Fal-Rune & Magic Jewel = +15% Enhanced Damage & +15 Attack Rating",
+                    "text": "Magic Jewel:\nTopaz = +15% Magic Find & +30% Gold Find\nAmethyst = +100 Attack Rating\nSapphire = +15% Faster Cast Rate\nEmerald = +15% Increased Attack Speed\nSkull = +4% Mana Steal & +4% Life Steal\nRuby = +4 Life per Kill\nDiamond = +4 Mana per Kill\nSol + Magic Jewel = +15 Minimum & +25 Maximum Damage\n\nInfusion Orb + Magic Jewel:\nAmethyst + Lem = +200 Attack Rating\nAmethyst + Fal = +25% Enhanced Damage & +100 Attack Rating\n\nInfusion Orb + Rare Jewel:\nSapphire + Mal = +25% Faster Cast Rate\nAmethyst + Mal = +25% Increased Attack Speed\nTopaz + Ist = +30% Magic Find & +50% Gold Find\nSkull + Vex = +8% Mana Steal & +8% Life Steal\nEmerald + Ohm = +30 Minimum & +50 Maximum Damage\nDiamond + Lo = +20-200 Elemental Damage\nAmethyst + Cham = +50% Enhanced Damage\n  & +200 Attack Rating\nAmethyst + Cham + Nef = +50% Enhanced Damage,\n  +200 Attack Rating & Knockback\n\nInfusion Orb + Conversion Orb + Zod Rune + Unique Jewel:\nAmethyst = +1 All Skills\nRuby = +5% Fire Skill Damage\n  & -5% Enemy Fire Resistance\nSapphire = +5% Cold Skill Damage\n  & -5% Enemy Cold Resistance\nTopaz = +5% Lightning Skill Damage\n  & -5% Enemy Lightning Resistance\nEmerald = +5% Poison Skill Damage\n  & -5% Enemy Poison Resistance\nChaos Onyx = +5% Magic Skill Damage\n  & -5% Enemy Magic Resistance\nSkull = +50% Enhanced Damage\n  & -5% Enemy Physical Resistance\n  & +200 Attack Rating\n\nShadow Orb + Conversion Orb + Unique Jewel:\nBrak + Dem = +100% Enhanced Damage\n  & -10% Enemy Physical Resistance\n  & +300 Attack Rating\nZeph + Grit = +10% All Elemental Damage\n  & -10% Enemy Elemental Resistance\nMyr + Hev = +10% Magic Damage\n  & -10% Enemy Magic Resistance\n\nArrows/Bolts + Magic Jewel:\nSkull = +4% Mana Steal & +4% Life Steal\nAmethyst = +50 Attack Rating\nEmerald = +10% Increased Attack Speed\nDiamond = +10% Open Wounds\nTopaz = +10% Magic Find & +20% Gold Find\n\nArrows/Bolts + Infusion Orb + Rare Jewel:\nDiamond + Um = +20% Open Wounds & +100 Attack Rating\nTopaz + Ist = +30% Magic Find & +50% Gold Find\nSkull + Vex = +8% Mana Steal & +8% Life Steal\nEmerald + Ohm = +20% Increased Attack Speed\n  & +150 Attack Rating\nAmethyst + Lo = +15% Deadly Strike & +150 Attack Rating\n",
                     "style": {
                       "pointSize": 28,
                       "spacing": {
@@ -773,7 +778,7 @@
                       },
                       "alignment": {
                         "h": "left",
-                        "v": "center"
+                        "v": "top"
                       },
                       "options": {
                         "lineWrap": true,
