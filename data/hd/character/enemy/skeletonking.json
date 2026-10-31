@@ -1,0 +1,378 @@
+{
+    "dependencies": {
+        "particles": [
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_l_back.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_la.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_lfa.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_lhand.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_loop.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_neck.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_r_back.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_ra.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_rhand.particles"
+            },
+            {
+                "path": "data/hd/vfx/particles/character/player/necromancer/fx_necromancer_fe_spectralflames_rhand_light.particles"
+            }
+        ],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/skeletonking/base_body.model"
+            },
+            {
+                "path": "data/hd/character/enemy/skeletonking/head_hvy.model"
+            },
+            {
+                "path": "data/hd/character/enemy/skeletonking/torso_hvy.model"
+            },
+            {
+                "path": "data/hd/character/enemy/skeletonking/legs_hvy.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/reanimatedhorde1/skeleton/reanimatedhorde1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/skeletonking/textures/d2rr_skeletonking_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/reanimatedhorde1/reanimatedhorde1_state_machine.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/reanimatedhorde1/reanimatedhorde1_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "reanimatedhorde1",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3096940438,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/reanimatedhorde1/reanimatedhorde1_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/reanimatedhorde1/skeleton/reanimatedhorde1.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/reanimatedhorde1/reanimatedhorde1_variant.json"
+                },
+                {
+                    "type": "DamageFXComponent",
+                    "name": "entity_root_DamageFX",
+                    "vfxSpawnBones": [],
+                    "attackAttemptVfxOverrides": {},
+                    "disableAttemptVfx": false,
+                    "attackSuccessVfxOverrides": {
+                        "type": "AttackVFXTable",
+                        "name": "AttackSuccess_Bone",
+                        "rules": [
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Bone_rules_0",
+                                "acceptedHitClasses": 828,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Slash_Bone.particles",
+                                "soundId": "player_impact_gore_bone_hd2"
+                            },
+                            {
+                                "type": "AttackVFXRule",
+                                "name": "AttackSuccess_Bone_rules_1",
+                                "acceptedHitClasses": 7362,
+                                "acceptedVictims": 15,
+                                "acceptedBloodTypes": 7,
+                                "vfxFile": "data/hd/vfx/particles/character/hit_react/vfx_AttackSuccess_Point_Bone.particles",
+                                "soundId": "player_impact_gore_bone_hd2"
+                            }
+                        ],
+                        "defaultVfxFile": "",
+                        "defaultSoundId": "player_impact_gore_bone_hd2"
+                    },
+                    "disableSuccessVfx": false,
+                    "attackFailVfxOverrides": {},
+                    "disableFailVfx": false
+                },
+                {
+                    "type": "IKComponent",
+                    "name": "entity_root_IK",
+                    "preset": {
+                        "type": "IKPreset",
+                        "name": "Default_Biped_VV_Flipped",
+                        "footIKSetup": [
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_VV_Flipped_footIKSetup_0",
+                                "footBoneName": "R_Foot",
+                                "kneeBoneName": "R_Calf",
+                                "hipBoneName": "R_Thigh",
+                                "locationTrackName": "R_IK_position",
+                                "enabledTrackName": "R_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            },
+                            {
+                                "type": "FootIKSetup",
+                                "name": "Default_Biped_VV_Flipped_footIKSetup_1",
+                                "footBoneName": "L_Foot",
+                                "kneeBoneName": "L_Calf",
+                                "hipBoneName": "L_Thigh",
+                                "locationTrackName": "L_IK_position",
+                                "enabledTrackName": "L_FKIK",
+                                "hyperExtensionStart": 0.0,
+                                "hyperExtensionScale": 1.0,
+                                "defaultEnabled": false,
+                                "kneeRotationAxis": 2,
+                                "flipKneeRotationAxis": true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "MoveAnimationSelectComponent",
+                    "name": "entity_root_MoveAnimationSelect",
+                    "animationOptions": [
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_0",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 0.0,
+                            "maxMoveSpeed": 3.5,
+                            "baseMoveSpeed": 10,
+                            "animationName": "Walk"
+                        },
+                        {
+                            "type": "MoveAnimationOption",
+                            "name": "entity_root_MoveAnimationSelect_animationOptions_1",
+                            "validForWalk": true,
+                            "validForRun": true,
+                            "validInsideTown": true,
+                            "validOutsideTown": true,
+                            "minMoveSpeed": 3.5,
+                            "maxMoveSpeed": 99.0,
+                            "baseMoveSpeed": 10,
+                            "animationName": "Jog"
+                        }
+                    ],
+                    "defaultAnimationName": "Walk"
+                },
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_root_TransformDefinition",
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "orientation": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                    },
+                    "scale": {
+                        "x": 2.5,
+                        "y": 2.5,
+                        "z": 2.5
+                    },
+                    "inheritOnlyPosition": false
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_sk_base_body",
+            "id": 2809213194,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_sk_base_body_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/base_body.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_sk_head_hvy",
+            "id": 4196264279,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_sk_head_hvy_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/head_hvy.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_sk_torso_hvy",
+            "id": 3221359709,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_sk_torso_hvy_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/torso_hvy.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_sk_legs_hvy",
+            "id": 2060341026,
+            "components": [
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "entity_sk_legs_hvy_Model",
+                    "filename": "data/hd/character/enemy/skeletonking/legs_hvy.model",
+                    "visibleLayers": 1,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_ember_eyes",
+            "id": 3599235836,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_ember_eyes_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.2,
+                        "z": 0.45
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_ember_eyes_Attach",
+                    "targetbone": "head"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_ember_eyes_Light",
+                    "color": {
+                        "x": 1.0,
+                        "y": 0.35,
+                        "z": 0.08
+                    },
+                    "power": 900.0,
+                    "radius": 2.0,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.3
+                }
+            ]
+        }
+    ]
+}

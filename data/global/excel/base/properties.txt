@@ -281,7 +281,7 @@ dmg-mag/lvl	277	1	17	item_magic_damagemax_perlevel																												+#
 pierce-mag	278	1	1	passive_mag_pierce																												-#% to Enemy Fire Resistance		Min %	Max %		0
 pierce-dmg	279	1	1	passive_dmg_pierce																												-#% to Enemy Lightning Resistance		Min %	Max %		0
 affix-rand	280	1	25																													Add random affix from property	Index of property to use	Min Value for affix	Max Value for affix		0
-extra-skill-dmg%-rand	281	1	1	passive_fire_mastery			1	passive_ltng_mastery			1	passive_cold_mastery			1	passive_pois_mastery			1	passive_mag_mastery			7	dmg%								used to with affix-rand to roll a random stat					0
+extra-skill-dmg%-rand	281	1	1	passive_fire_mastery			1	passive_ltng_mastery			1	passive_cold_mastery			1	passive_pois_mastery			1	passive_mag_mastery			7	damagepercent								used to with affix-rand to roll a random stat					0
 war-tab-rand	282	1	10	item_addskill_tab		21	10	item_addskill_tab		22	10	item_addskill_tab		23																							0
 extra-mag	283	1	1	passive_mag_mastery																												+#% to Magic Skill Damage		Min %	Max %		0
 str%	284	1	1	item_strength_percent																																	0
@@ -367,7 +367,7 @@ res-pois-len/lvl	363	1	17	item_poisonlengthresist_perlvl																								
 res-pois-len/vit	364	1	17	item_poisonlengthresist_pervit																																none	0
 res-curse/lvl	365	1	17	curse_resistance_perlvl																																	0
 res-curse/enr	366	1	17	curse_resistance_perenr																																	0
-res-curse-len	367	1	1	curse_resistance_length			1	curse_resistance																													0
+res-curse-len	367	1	1	curse_resistance																												#% Curse Length Reduced					0
 mana-kill/lvl	368	1	17	item_manaafterkill_perlvl																																none	0
 mana-kill/enr	369	1	17	item_manaafterkill_perenr																																none	0
 balance/dex	370	1	17	item_fasterhitrecovery_perdex																													(8ths)				0
@@ -433,4 +433,10 @@ extra_skelewarriors	429	1	1	extra_skelewarriors																												+# to
 extra_skelemages	430	1	1	extra_skelemages																												+# to Max Skeletal Mages		min	max	none	0
 extra_grizzly_bears	431	1	1	extra_grizzly_bears																												+# to Max Grizzly Bears		min	max	none	0
 force_single_grizzly	432	1	1	force_single_grizzly																												Max Grizzly Bears Capped to 1		1	1	none	0
-pierce-immunity-all	433	1	1	item_pierce_cold_immunity			1	item_pierce_fire_immunity			1	item_pierce_light_immunity			1	item_pierce_poison_immunity			1	item_pierce_damage_immunity			1	item_pierce_magic_immunity												sunder all	0
+pierce-immunity-all	433	1	1	item_pierce_cold_immunity			3	item_pierce_fire_immunity			3	item_pierce_light_immunity			3	item_pierce_poison_immunity			3	item_pierce_damage_immunity			3	item_pierce_magic_immunity												sunder all	0
+lab_kill_display	434	1	17	lab_kill_display																																0	
+dae	435	1	1	passive_dodge			3	passive_avoid			3	passive_evade																								passive dodge/avoid/evade all	0
+stats%	436	1	1	item_strength_percent			3	item_dexterity_percent			3	item_vitality_percent			3	item_energy_percent																				all stats%	0
+abs-all%	437	1	1	item_absorbfire_percent			3	item_absorblight_percent			3	item_absorbcold_percent			3	item_absorbmagic_percent																				absorb all ele%	0
+extra_stbounce	438	1	1	extra_stbounce																												+# to Max Shield Throw hits		min	max	none	0
+droponly	439	1	1	item_drop_only																														1	1	none	0

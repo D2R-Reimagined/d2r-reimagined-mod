@@ -1,0 +1,312 @@
+{
+	/* Upon filename change UPDATE all "PanelManager", "GameplayOptionsPanel", "SettingsPanel" entries to filename without the "hd" ending */
+	"type": "GameplayOptionsPanel", "name": "modinfo_baseuptiering",
+    "fields": {
+        "priority": 9003,
+        "rect": { "x": -865, "y": 400, "width": "$OptionsPanelWidth", "height": 1520 },
+        "anchor": { "x": 0.5 },
+        "applySettingsImmediately": false
+    },
+    "children": [
+        {
+                // Native OptionsPanel seeds the first focusable descendant of this accepted row.
+                "type": "TableWidget", "name": "OptionsTable",
+                "fields": {
+                    "rect": { "width": "$OptionsPanelWidth", "height": 1520 },
+                    "columns": [
+                        { "width": "$OptionsPanelWidth", "alignment": { "h": "left", "v": "top" } }
+                    ],
+                    "rowHeight": 1520,
+                    "cellPadding": { "left": 0, "top": 0, "right": 0, "bottom": 0 }
+                },
+                "children": [
+                    {
+                        "type": "TableRowWidget", "name": "ModInformationControlsRow",
+                        "children": [
+                            {
+                                "type": "Widget", "name": "ModInformationControls",
+                                "fields": {
+                                    "rect": { "width": "$OptionsPanelWidth", "height": 1520 }
+                                },
+                                "children": [
+                                    {
+                                        "type": "ImageWidget", "name": "ScrollBarBackground",
+                                        "fields": {
+                                            "rect": "$OptionsScrollBarBackgroundRect",
+                                            "anchor": { "x": 1.0 },
+                                            "filename": "PauseMenu\\VerticalScroll"
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "ScrollControllerWidget", "name": "ScrollController",
+                                                "fields": {
+                                                    "rect": "$OptionsScrollBarRect",
+                                                    "anchor": { "x": 1.0 },
+                                                    "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                                                    "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                                                    "barFilepath": "PauseMenu\\VerticalIndicator",
+                                                    "viewName": "ScrollView",
+                                                    "wheelScrollSound": "cursor_scroll_hd",
+                                                    "buttonScrollSound": "cursor_scroll_hd",
+                                                        "buttonScrollAmount": 90,
+                                                        "focusIndicatorVisible": true,
+                                                        "navigation": {
+                                                            "left": { "name": "ColorBlindCalibration" },
+                                                            "down": { "name": "ColorBlindCalibration" }
+                                                        }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        // Keep the actual Close button fixed below the information viewport.
+                                        "type": "TableWidget", "name": "CloseTable",
+                                        "fields": {
+                                            "anchor": { "x": 0.5, "y": 0 },
+                                            "rect": { "x": -250, "y": 1400 },
+                                            "columns": [
+                                                { "width": 500, "alignment": { "h": "center", "v": "center" } }
+                                            ],
+                                            "rowHeight": 120,
+                                            "cellPadding": { "left": 0, "right": 0 }
+                                        },
+                                        "children": [
+                                            {
+                                                "type": "TableRowWidget", "name": "ModInformationCloseRow",
+                                                "children": [
+                                                    {
+                                                        // This registered name admits the enclosing controls row; the scrollbar comes first for focus.
+                                                        "type": "ButtonWidget", "name": "ColorBlindCalibration",
+                                                        "fields": {
+                                                            "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                                                            "onClickMessage": "PanelManager:ClosePanel:modinfo_aa",
+                                                            "textString": "@strClose",
+                                                            "hoveredFrame": 3,
+                                                            "text/style": "$StyleFEButtonText",
+                                                            "pointSize": "$MediumLargeFontSize",
+                                                            "textColor": "$LightButtonTextColor",
+                                                            "disabledFrame": 2,
+                                                            "tooltipString": "@strClose",
+                                                            "sound": "cursor_close_window_hd",
+                                                            "acceptsEscKeyEverywhere": true,
+                                                            "focusIndicatorFilename": "Controller/HoverImages/FrontEndButtonMed",
+                                                            "navigation": {
+                                                                "up": { "name": "ScrollController" }
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+        {
+            "type": "ScrollViewWidget", "name": "ScrollView",
+            "fields": {
+                "rect": { "width": "$OptionsPanelWidth", "height": "$OptionsPanelHeight" },
+                "scrollControllerName": "ScrollController"
+            },
+            "children": [
+                {
+                    "type": "TableWidget", "name": "InformationTable",
+                    "fields": {
+                        "columns": [ "$OptionsTableColumn1", "$OptionsTableColumn2" ],
+                        "rowHeight": "$OptionsTableRowHeight"
+                    },
+                    "children": [
+                        {
+                            "type": "TableRowWidget", "name": "Upgrading",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget", "name": "Upgrading",
+                                    "fields": {
+                                        "text": "Base Uptiering",
+                                        "style": "$StyleSettingsTitle"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "ImageWidget", "name": "Divider",
+                                            "fields": {
+                                                "rect": "$OptionsDividerRect",
+                                                "filename": "PauseMenu\\Divider"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringNormalToExceptionalHeaderRow",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringNormalToExceptionalHeaderText",
+                                    "fields": {
+                                        "text": "Normal -> Exceptional",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringNormalToExceptionalRow",
+                            "fields": {
+                                "rect": {
+                                    "height": 220
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringNormalToExceptionalText",
+                                    "fields": {
+                                        "text": "Rare Armor = RAL + THUL + Amethyst\nSet Armor = TAL + SHAEL + Diamond\nUnique Armor = TAL + SHAEL + Diamond\nRare Weapon = ORT + AMN + Sapphire\nSet Weapon = RAL + SOL + Emerald\nUnique Weapon = RAL + SOL + Emerald",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringExceptionalToEliteHeaderRow",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringExceptionalToEliteHeaderText",
+                                    "fields": {
+                                        "text": "Exceptional -> Elite",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringExceptionalToEliteRow",
+                            "fields": {
+                                "rect": {
+                                    "height": 220
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringExceptionalToEliteText",
+                                    "fields": {
+                                        "text": "Rare Armor = KO + PUL + Amethyst\nSet Armor = KO + LEM + Diamond\nUnique Armor = KO + LEM + Diamond\nRare Weapon = FAL + UM + Sapphire\nSet Weapon = LUM + PUL + Emerald\nUnique Weapon = LUM + PUL + Emerald",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringSpacerRowBeforeHelEl",
+                            "fields": {
+                                "rect": {
+                                    "height": 40
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringSpacerBeforeHelElText",
+                                    "fields": {
+                                        "text": "",
+                                        "style": "$StyleSettingsText"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringHelElHeaderRow",
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringHelElHeaderText",
+                                    "fields": {
+                                        "text": "Scour Recipe",
+                                        "style": "$StyleSettingsTitle"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableRowWidget",
+                            "name": "BaseUptieringHelElRow",
+                            "fields": {
+                                "rect": {
+                                    "height": 170
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "TextBoxWidget",
+                                    "name": "BaseUptieringHelElText",
+                                    "fields": {
+                                        "text": "Armor / Weapon / Shield + EL Rune + HEL Rune = New white base item.\nThe item is regenerated as a new white item, and enchants/corruption are wiped.",
+                                        "style": {
+                                            "pointSize": 28,
+                                            "spacing": {
+                                                "leading": 0.95,
+                                                "kerning": 0.95
+                                            },
+                                            "alignment": {
+                                                "h": "left",
+                                                "v": "center"
+                                            },
+                                            "options": {
+                                                "lineWrap": true,
+                                                "newlineHandling": "standard",
+                                                "pipeCharacterBehavior": "handle"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+}

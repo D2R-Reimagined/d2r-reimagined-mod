@@ -1,0 +1,245 @@
+{
+    "dependencies": {
+        "particles": [],
+        "models": [
+            {
+                "path": "data/hd/character/enemy/maghda/torso.model"
+            }
+        ],
+        "skeletons": [
+            {
+                "path": "data/hd/character/enemy/succubuswitch1/skeleton/succubuswitch1.skeleton"
+            }
+        ],
+        "animations": [],
+        "textures": [
+            {
+                "path": "data/hd/character/enemy/maghda/textures/d2rr_maghda_alb.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/maghda/textures/d2rr_maghda_ktint.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/maghda/textures/d2rr_maghda_nrm.texture"
+            },
+            {
+                "path": "data/hd/character/enemy/maghda/textures/d2rr_maghda_orm.texture"
+            }
+        ],
+        "physics": [],
+        "json": [
+            {
+                "path": "data/hd/character/enemy/maghda/maghda_state_machine.json"
+            },
+            {
+                "path": "data/hd/missiles/expansion_impmissile_01.json"
+            },
+            {
+                "path": "data/hd/missiles/teethexplode.json"
+            },
+            {
+                "path": "data/hd/overlays/common/curseamplifydamage.json"
+            },
+            {
+                "path": "data/hd/overlays/common/curseweaken.json"
+            }
+        ],
+        "variantdata": [
+            {
+                "path": "data/hd/character/enemy/maghda/maghda_variant.json"
+            }
+        ],
+        "objecteffects": [],
+        "other": []
+    },
+    "type": "UnitDefinition",
+    "name": "maghda",
+    "entities": [
+        {
+            "type": "Entity",
+            "name": "entity_root",
+            "id": 3601808349,
+            "components": [
+                {
+                    "type": "UnitRootComponent",
+                    "name": "component_root",
+                    "state_machine_filename": "data/hd/character/enemy/maghda/maghda_state_machine.json",
+                    "doNotInheritRotation": false,
+                    "rotationOverride": {
+                        "x": 0.0,
+                        "y": 0.3826834,
+                        "z": 0.0,
+                        "w": 0.9238795
+                    },
+                    "doNotUseHDHeight": false,
+                    "hideAllMeshWhenInOpenedMode": false,
+                    "onCreateEventName": "",
+                    "animations": []
+                },
+                {
+                    "type": "SkeletonDefinitionComponent",
+                    "name": "component_skeleton",
+                    "filename": "data/hd/character/enemy/succubuswitch1/skeleton/succubuswitch1.skeleton",
+                    "enableWeaponAttachInertialization": false
+                },
+                {
+                    "type": "VariantDefinitionComponent",
+                    "name": "component_variant",
+                    "filename": "data/hd/character/enemy/maghda/maghda_variant.json"
+                },
+                {
+                    "type": "DefinitionPreloadComponent",
+                    "name": "Root_DefinitionPreloadComponent",
+                    "missiles": [
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry1",
+                            "filename": "data/hd/missiles/teethexplode.json"
+                        },
+                        {
+                            "type": "UnitDefinitionListEntry",
+                            "name": "Root_UnitDefinitionList_Entry2",
+                            "filename": "data/hd/missiles/expansion_impmissile_01.json"
+                        }
+                    ],
+                    "overlays": [
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry1",
+                            "filename": "data/hd/overlays/common/curseweaken.json"
+                        },
+                        {
+                            "type": "OverlayDefinitionListEntry",
+                            "name": "Root_OverlayDefinitionList_Entry2",
+                            "filename": "data/hd/overlays/common/curseamplifydamage.json"
+                        }
+                    ],
+                    "minions": []
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_torso",
+            "id": 4134251882,
+            "components": [
+                {
+                    "type": "UnitPartComponent",
+                    "name": "component_part_torso",
+                    "part": "torso",
+                    "variant": "lit"
+                },
+                {
+                    "type": "ModelDefinitionComponent",
+                    "name": "component_model_torso",
+                    "filename": "data/hd/character/enemy/maghda/torso.model",
+                    "visibleLayers": 9,
+                    "lightMask": 19,
+                    "shadowMask": 3,
+                    "ghostShadows": false,
+                    "floorModel": false,
+                    "terrainBlendEnableYUpBlend": false,
+                    "terrainBlendMode": 1
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_aura_chest",
+            "id": 4207496709,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_aura_chest_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.45
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_aura_chest_Attach",
+                    "targetbone": "spine_03_M_JNT"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_aura_chest_Light",
+                    "color": {
+                        "x": 0.62,
+                        "y": 0.22,
+                        "z": 1.0
+                    },
+                    "power": 2600.0,
+                    "radius": 4.5,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Entity",
+            "name": "entity_light_aura_head",
+            "id": 4051649245,
+            "components": [
+                {
+                    "type": "TransformDefinitionComponent",
+                    "name": "entity_light_aura_head_Transform",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.25,
+                        "z": 0.4
+                    },
+                    "orientation": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "w": 1.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
+                    },
+                    "inheritOnlyPosition": false
+                },
+                {
+                    "type": "EntityAttachmentDefinitionComponent",
+                    "name": "entity_light_aura_head_Attach",
+                    "targetbone": "head_M_JNT"
+                },
+                {
+                    "type": "PointLightDefinitionComponent",
+                    "name": "entity_light_aura_head_Light",
+                    "color": {
+                        "x": 0.62,
+                        "y": 0.22,
+                        "z": 1.0
+                    },
+                    "power": 1200.0,
+                    "radius": 3.0,
+                    "attenuation": 16.0,
+                    "lightMask": 19,
+                    "isLocalLight": true,
+                    "diffuseContribution": 1.0,
+                    "specularContribution": 0.35
+                }
+            ]
+        }
+    ]
+}
