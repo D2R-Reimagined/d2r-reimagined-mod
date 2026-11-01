@@ -14,8 +14,12 @@ rem not printed: the output is only new, updated and removed files.
 rem
 rem The launcher's <name>_launcher_clean copies are excluded from the mirror
 rem and removed separately below, so they do not flood the output as "extra".
+rem
+rem global\.DISABLE_DEBUG is not in the repo but is excluded too, so the mirror
+rem never deletes it: it turns D2RLoader's debug mode off, and a ladder bundle
+rem packed from this install must carry it.
 robocopy "%SOURCE%" "%DEST%" /MIR /NP /NDL /NJH /NJS /R:2 /W:2 ^
-    /XD "*_launcher_clean" /XF "*_launcher_clean.json"
+    /XD "*_launcher_clean" /XF "*_launcher_clean.json" ".DISABLE_DEBUG"
 
 echo.
 if errorlevel 8 goto :failed
