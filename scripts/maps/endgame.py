@@ -5,6 +5,7 @@ Uses the same table helpers as the layout generator. No Labyrinth row is edited.
 from __future__ import annotations
 
 import maps_config as cfg
+import update_map_boss_quality
 
 
 def elite_class(p):
@@ -353,6 +354,9 @@ def treasure_classes(api, plans, path, runtime):
         tc(f"RMap T{tier} Boss", -6,
            [(f"RMap T{tier} Loot", 4), (f"RMap Tier {min(tier, 5)}", 1),
             ("RMap Currency", 1)])
+    # Set the tier's Unique/Set modifiers and retain this bank's act boss
+    # Rare/Magic modifiers. Blank fields use ordinary monster quality.
+    update_map_boss_quality.apply_boss_quality(t.header, t.rows)
     # Event rewards nest Loot, Sustain, Currency and Tier rows, so they must
     # follow every one of them. Live 0.8.4 emitted them first: the loader
     # asserted "Couldn't parse treasure class item" on RMap T1 Loot and the

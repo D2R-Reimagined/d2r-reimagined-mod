@@ -22,6 +22,30 @@ checkout. `--check` compares every generated table, bank copy, localization,
 boss DS1 and plugin header without writing. Test recipes default to disabled;
 set `TEST_RECIPES` locally when needed, then regenerate before release.
 
+Map Warden `Unique` and `Set` modifiers are both 850 for T1/T2/T3, 900 for T4,
+941 for T5, and 993 for T6. `Rare` and `Magic` retain each bank's Hell act boss
+values: Andariel (`Andarielq (H)`) for T1/T2, Duriel for T3, Mephisto for T4/T5,
+and Baal for T6. The other three use their regular `(H)` rows. These are quality
+modifiers, not percentages or a guarantee of six equipment drops. Normal and
+elite map treasure classes keep their own quality.
+
+To update only those four fields on the six map boss rows in **both**
+`data/global/excel/treasureclassex.txt` and
+`data/global/excel/base/treasureclassex.txt`, run this standalone script from
+the mod root (Python 3.9+; no third-party packages or plugin checkout needed):
+
+```
+python scripts/maps/update_map_boss_quality.py --root .
+python scripts/maps/update_map_boss_quality.py --root . --check
+python -m unittest discover -s scripts/maps -p test_map_boss_quality.py -v
+```
+
+A downloaded copy works with `python update_map_boss_quality.py --root
+"C:\path\to\d2r-reimagined-mod"`. It validates both banks before writing,
+preserves their separate loot chains and file formatting, and is safe to rerun.
+The full generator calls the same quality-copy function, so regeneration keeps
+the fix. Do not mirror one treasure-class file over the other.
+
 ## Themes and layouts
 
 Each theme in `maps_config.py` names a maze body template, the Vis slot(s)
