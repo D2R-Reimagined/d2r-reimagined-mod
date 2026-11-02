@@ -644,10 +644,11 @@ def gen_affixes(kind: str, affixes: list[dict]) -> Table:
 # ---------------------------------------------------------------------------
 # cubemain.txt
 #
-# Four recipe families, all plain TXT so they work with no plugin:
+# Five recipe families, all plain TXT so they work with no plugin:
 #   activate  map                     -> Red Portal to that theme+tier
 #   upgrade   map + Horadric Sextant  -> the same theme one tier higher
 #   reroll    map + Vizjerei Prism    -> the same map, modifiers rerolled
+#   infuse    magic map + Orb of Infusion -> the same map as a rare
 #   corrupt   T5 map + Horadric Astrolabe -> T6
 # ---------------------------------------------------------------------------
 
@@ -707,6 +708,12 @@ def gen_cubemain(plans: list[dict]) -> Table:
     for p in plans:
         t.append(recipe(f"reroll {p['theme']['key']} T{p['tier']}",
                         [p["item_code"], "mrl"], cfg.expansion_code(p["item_code"]), 2))
+
+    # Magic -> rare only; the rare rolls fresh modifiers like a reroll does.
+    for p in plans:
+        t.append(recipe(f"infuse {p['theme']['key']} T{p['tier']}",
+                        [f'"{p["item_code"]},mag"', "ooi"],
+                        f'"{cfg.expansion_code(p["item_code"])},rar"', 2))
 
     for p in plans:
         if p["tier"] != 5:

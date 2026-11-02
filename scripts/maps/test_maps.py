@@ -977,6 +977,17 @@ class MappingContract(unittest.TestCase):
             self.assertIn(quality, gen.MAP_QUALITIES)
             self.assertEqual(r['output'].strip('"').split(',')[1], quality)
 
+    def test_infusion_turns_magic_maps_rare(self):
+        table = gen.Table(gen.EXCEL / 'cubemain.txt')
+        recipes = [dict(zip(table.header, row)) for row in table.rows if row[0].startswith('rmap infuse')]
+        self.assertEqual(len(recipes), 2 * len(self.plans))  # legacy + V2 input
+        for p in self.plans:
+            for code in (p['item_code'], cfg.expansion_code(p['item_code'])):
+                matches = [r for r in recipes if r['input 1'] == f'"{code},mag"']
+                self.assertEqual(len(matches), 1)
+                self.assertEqual(matches[0]['input 2'], 'ooi')
+                self.assertEqual(matches[0]['output'], f'"{cfg.expansion_code(p["item_code"])},rar"')
+
     def test_expansion_items_preserve_legacy_activation_and_upgrade_to_new_rolls(self):
         table = gen.Table(gen.EXCEL / 'cubemain.txt')
         recipes = [dict(zip(table.header, row)) for row in table.rows if row[0].startswith('rmap ')]
