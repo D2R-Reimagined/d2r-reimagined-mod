@@ -956,6 +956,25 @@ class MappingContract(unittest.TestCase):
                 for col in ('TreasureClass', 'TreasureClass(N)'):
                     self.assertFalse(row[self.monsters.col(col)].startswith('RMap'))
 
+    def test_entry_drop_keeps_nodrop_when_forced_and_regenerated(self):
+        import endgame
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            path = bank / 'treasureclassex.txt'
+            table = gen.Table(path)
+            entry = table.find(table.col('Treasure Class'), 'RMap Entry')
+            for field, value in {'noAlwaysSpawn': '1', 'Picks': '1', 'NoDrop': '249',
+                                 'Item1': 'RMap Tier 1', 'Prob1': '1'}.items():
+                self.assertEqual(entry[table.col(field)], value, f'{bank}: {field}')
+            # Exercise the production TC generator without writing other map
+            # assets. Preserve the campaign wrapper names and original TCs.
+            wrappers = [(row[table.col('Treasure Class')], row[table.col('Item1')])
+                        for row in table.rows
+                        if row[table.col('Treasure Class')].startswith('RMap Entry ')]
+            self.assertTrue(wrappers)
+            regenerated = endgame.treasure_classes(gen, self.plans, path,
+                                                   {'entry_classes': wrappers})
+            self.assertEqual(regenerated.to_bytes(), path.read_bytes())
+
     def test_recipes_are_hell_only_and_tier_six_cannot_be_upgraded(self):
         table = gen.Table(gen.EXCEL / 'cubemain.txt')
         recipes = [dict(zip(table.header, row)) for row in table.rows if row[0].startswith('rmap ')]

@@ -285,10 +285,11 @@ def treasure_classes(api, plans, path, runtime):
     import treasure
     treasure.classes(api, t)
 
-    def tc(name, picks, drops, nodrop=0):
+    def tc(name, picks, drops, nodrop=0, *, no_always_spawn=False):
         row = t.blank_row()
         api.set_cells(row, t, {"Treasure Class": name, "Picks": str(picks),
-                              "NoDrop": str(nodrop), "*eol": "0"})
+                              "NoDrop": str(nodrop),
+                              "noAlwaysSpawn": "1" if no_always_spawn else "", "*eol": "0"})
         for i, (item, weight) in enumerate(drops, 1):
             api.set_cells(row, t, {f"Item{i}": item, f"Prob{i}": str(weight)})
         t.append(row)
@@ -296,7 +297,8 @@ def treasure_classes(api, plans, path, runtime):
     for tier in range(1, 6):
         tc(f"RMap Tier {tier}", 1, [(cfg.expansion_code(p["item_code"]), 1) for p in plans if p["tier"] == tier])
     tc("RMap Currency", 1, [("mor", 5), ("mrl", 4), ("mws", 1)])
-    tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249)
+    # Find Item and other forced drops must retain the entry map's NoDrop roll.
+    tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249, no_always_spawn=True)
     # Remove only the previous generated entry slot, if this is an upgrade
     # from the early shared-TC implementation.
     for row in t.rows:
