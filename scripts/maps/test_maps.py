@@ -957,13 +957,13 @@ class MappingContract(unittest.TestCase):
                 for col in ('TreasureClass', 'TreasureClass(N)'):
                     self.assertFalse(row[self.monsters.col(col)].startswith('RMap'))
 
-    def test_map_drop_flags_match_raw_item_rows_after_regeneration(self):
+    def test_map_drop_flags_protect_rolls_and_raw_items_after_regeneration(self):
         import endgame
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             path = bank / 'treasureclassex.txt'
             table = gen.Table(path)
             entry = table.find(table.col('Treasure Class'), 'RMap Entry')
-            for field, value in {'noAlwaysSpawn': '', 'Picks': '1', 'NoDrop': '249',
+            for field, value in {'noAlwaysSpawn': '1', 'Picks': '1', 'NoDrop': '249',
                                  'Item1': 'RMap Tier 1', 'Prob1': '1'}.items():
                 self.assertEqual(entry[table.col(field)], value, f'{bank}: {field}')
             # Exercise the production TC generator without writing other map
@@ -977,7 +977,12 @@ class MappingContract(unittest.TestCase):
             for name in ('RMap Tier 1', 'RMap Currency', 'RMap T1 Gilded Bonus',
                          'RMap Event Crafting 1'):
                 self.assertEqual(table.find(key, name)[flag], '1', f'{bank}: {name}')
-            for name in ('RMap T1 Loot', 'RMap T1 Sustain', 'RMap T1 Normal',
+            for tier in range(1, 7):
+                for name in (f'RMap T{tier} Sustain', f'RMap Event Sustain {tier}'):
+                    row = table.find(key, name)
+                    self.assertEqual(row[flag], '1', f'{bank}: {name}')
+                    self.assertGreater(int(row[table.col('NoDrop')]), 0)
+            for name in ('RMap T1 Loot', 'RMap T1 Normal',
                          'RMap T1 Boss', wrappers[0][0]):
                 self.assertEqual(table.find(key, name)[flag], '', f'{bank}: {name}')
             regenerated = endgame.treasure_classes(gen, self.plans, path,

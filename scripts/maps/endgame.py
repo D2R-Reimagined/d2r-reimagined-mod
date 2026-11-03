@@ -301,10 +301,11 @@ def treasure_classes(api, plans, path, runtime):
     import treasure
     treasure.classes(api, t)
 
-    def tc(name, picks, drops, nodrop=0, *, quality=None):
+    def tc(name, picks, drops, nodrop=0, *, quality=None, preserve_nodrop=False):
         row = t.blank_row()
         api.set_cells(row, t, {"Treasure Class": name, "Picks": str(picks),
                               "NoDrop": str(nodrop),
+                              "noAlwaysSpawn": "1" if preserve_nodrop else "",
                               "*eol": "0"})
         for i, (item, weight) in enumerate(drops, 1):
             api.set_cells(row, t, {f"Item{i}": item, f"Prob{i}": str(weight)})
@@ -315,7 +316,8 @@ def treasure_classes(api, plans, path, runtime):
     for tier in range(1, 6):
         tc(f"RMap Tier {tier}", 1, [(cfg.expansion_code(p["item_code"]), 1) for p in plans if p["tier"] == tier])
     tc("RMap Currency", 1, [("mor", 5), ("mrl", 4), ("mws", 1)])
-    tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249)
+    # Find Item must respect NoDrop on the row that makes the chance roll.
+    tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249, preserve_nodrop=True)
     # Remove only the previous generated entry slot, if this is an upgrade
     # from the early shared-TC implementation.
     for row in t.rows:
@@ -349,11 +351,11 @@ def treasure_classes(api, plans, path, runtime):
         sustain = ([(f"RMap Tier {min(tier, 5)}", 4), ("RMap Currency", 5)]
                    + ([(f"RMap Tier {tier+1}", 1)] if tier < 5 else []))
         tc(f"RMap Event Sustain {tier}", 1, sustain,
-           1000 - sum(weight for _, weight in sustain))
+           1000 - sum(weight for _, weight in sustain), preserve_nodrop=True)
         sustain = [(item, weight * (3 if item == "RMap Currency" else 4))
                    for item, weight in sustain]
         tc(f"RMap T{tier} Sustain", 1, sustain,
-           4000 - sum(weight for _, weight in sustain))
+           4000 - sum(weight for _, weight in sustain), preserve_nodrop=True)
         tc(f"RMap T{tier} Loot", 1,
            [("Act 5 (H) Equip C", 25), ("Act 5 (H) Good", 5),
             ("Gold 1x", 8), ("Super Potion", 4)], max(0, 42 - tier * 6))
