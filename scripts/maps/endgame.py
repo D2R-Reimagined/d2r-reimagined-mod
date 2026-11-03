@@ -279,6 +279,21 @@ def generate(api, plans, levels):
     return [skills, states, props, monsters], metadata
 
 
+def protect_map_drops(table, plans):
+    """Preserve forced-drop rolls on rows that award raw map items."""
+    codes = {code for plan in plans
+             for code in (plan["item_code"], cfg.expansion_code(plan["item_code"]))}
+    codes.update(currency["code"] for currency in cfg.CURRENCY)
+    name = table.col("Treasure Class")
+    flag = table.col("noAlwaysSpawn")
+    slots = [(table.col(f"Item{i}"), table.col(f"Prob{i}")) for i in range(1, 11)]
+    for row in table.rows:
+        # Infusion orbs also appear in shared campaign jewelry tables.
+        targets = codes | {"ooi", "1oi"} if row[name].startswith("RMap ") else codes
+        if any(row[item] in targets and int(row[weight] or 0) > 0 for item, weight in slots):
+            row[flag] = "1"
+
+
 def treasure_classes(api, plans, path, runtime):
     t = api.Table(path)
     key = t.col("Treasure Class")
@@ -286,11 +301,11 @@ def treasure_classes(api, plans, path, runtime):
     import treasure
     treasure.classes(api, t)
 
-    def tc(name, picks, drops, nodrop=0, *, no_always_spawn=False):
+    def tc(name, picks, drops, nodrop=0):
         row = t.blank_row()
         api.set_cells(row, t, {"Treasure Class": name, "Picks": str(picks),
                               "NoDrop": str(nodrop),
-                              "noAlwaysSpawn": "1" if no_always_spawn else "", "*eol": "0"})
+                              "*eol": "0"})
         for i, (item, weight) in enumerate(drops, 1):
             api.set_cells(row, t, {f"Item{i}": item, f"Prob{i}": str(weight)})
         t.append(row)
@@ -298,8 +313,7 @@ def treasure_classes(api, plans, path, runtime):
     for tier in range(1, 6):
         tc(f"RMap Tier {tier}", 1, [(cfg.expansion_code(p["item_code"]), 1) for p in plans if p["tier"] == tier])
     tc("RMap Currency", 1, [("mor", 5), ("mrl", 4), ("mws", 1)])
-    # Find Item and other forced drops must retain the entry map's NoDrop roll.
-    tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249, no_always_spawn=True)
+    tc("RMap Entry", 1, [("RMap Tier 1", 1)], 249)
     # Remove only the previous generated entry slot, if this is an upgrade
     # from the early shared-TC implementation.
     for row in t.rows:
@@ -363,4 +377,5 @@ def treasure_classes(api, plans, path, runtime):
     # Treasure Raider bearer dropped only its jewel slot.
     import starter_events
     starter_events.classes(api, t)
+    protect_map_drops(t, plans)
     return t
