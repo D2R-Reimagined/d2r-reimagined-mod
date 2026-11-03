@@ -992,7 +992,8 @@ class MappingContract(unittest.TestCase):
     def test_recipes_are_hell_only_and_tier_six_cannot_be_upgraded(self):
         table = gen.Table(gen.EXCEL / 'cubemain.txt')
         recipes = [dict(zip(table.header, row)) for row in table.rows if row[0].startswith('rmap ')]
-        self.assertEqual(sum(r['description'].startswith('rmap reroll') for r in recipes), 2 * len(self.plans))
+        self.assertEqual(sum(r['description'].startswith('rmap reroll') for r in recipes),
+                         2 * len(gen.MAP_QUALITIES) * len(self.plans))
         for r in recipes:
             self.assertEqual(r['min diff'], '2')
             self.assertNotIn('test', r['description'])
@@ -1035,9 +1036,11 @@ class MappingContract(unittest.TestCase):
                 matches = [r for r in recipes if r['input 1'] == code and r['numinputs'] == '1']
                 self.assertEqual(len(matches), 1)
                 self.assertEqual(matches[0]['output'], f'"Red Portal,lvl={p["body_id"]},qty=1"')
-                rerolls = [r for r in recipes if r['input 1'] == code and r['input 2'] == 'mrl']
-                self.assertEqual(len(rerolls), 1)
-                self.assertEqual(rerolls[0]['output'], cfg.expansion_code(p['item_code']))
+                for quality in gen.MAP_QUALITIES:
+                    rerolls = [r for r in recipes if r['input 1'] == f'"{code},{quality}"'
+                               and r['input 2'] == 'mrl']
+                    self.assertEqual(len(rerolls), 1)
+                    self.assertEqual(rerolls[0]['output'], f'"{cfg.expansion_code(p["item_code"])},{quality}"')
 
     def test_population_profiles_preserve_native_slots_stats_and_models(self):
         monsters = self.monsters
