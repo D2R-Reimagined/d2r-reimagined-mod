@@ -301,13 +301,15 @@ def treasure_classes(api, plans, path, runtime):
     import treasure
     treasure.classes(api, t)
 
-    def tc(name, picks, drops, nodrop=0):
+    def tc(name, picks, drops, nodrop=0, *, quality=None):
         row = t.blank_row()
         api.set_cells(row, t, {"Treasure Class": name, "Picks": str(picks),
                               "NoDrop": str(nodrop),
                               "*eol": "0"})
         for i, (item, weight) in enumerate(drops, 1):
             api.set_cells(row, t, {f"Item{i}": item, f"Prob{i}": str(weight)})
+        if quality is not None:
+            api.set_cells(row, t, quality)
         t.append(row)
 
     for tier in range(1, 6):
@@ -327,13 +329,14 @@ def treasure_classes(api, plans, path, runtime):
     for name, original in runtime["entry_classes"]:
         t.find(key, original)  # bank-specific reference must exist
         tc(name, -2, [(original, 1), ("RMap Entry", 1)])
+    elite_quality = {"Unique": "512", "Set": "654", "Rare": "972", "Magic": "1024"}
     for tier in range(1, 7):
         # One bounded bonus attempt on elites only. These tables do not wrap
         # the sustain table and never multiply its chance or the Warden loot.
         # Gems roll the mod's own "Gem" TC (gmm..gmo); the vanilla gp* gems
         # are unspawnable in Reimagined and must never drop.
         tc(f"RMap T{tier} Gilded Bonus", 1,
-           [("Gold 1x", 60), ("Gem", 20), ("mor", 2), ("mrl", 2)], 168)
+           [("Gold 1x", 120), ("Gem", 40), ("mor", 3), ("mrl", 3)], 338)
         tc(f"RMap T{tier} Artificer Bonus", 1,
            [("jew", 20), ("Gem", 20), ("Act 5 (H) Equip C", 44)], 168)
         # No group: these rows must never auto-upgrade into another tier's TC.
@@ -341,11 +344,16 @@ def treasure_classes(api, plans, path, runtime):
         # earlier in the file, so Sustain and Loot precede every row that
         # nests them; the loader asserts "Couldn't parse treasure class item"
         # and leaves the slot empty otherwise.
-        # Out of 1000: map weights halved from 8/2, currency unchanged.
+        # Events retain the original sustain odds. Scale the ordinary roll
+        # to 4000 so currency can fall by exactly 25% with integer weights.
         sustain = ([(f"RMap Tier {min(tier, 5)}", 4), ("RMap Currency", 5)]
                    + ([(f"RMap Tier {tier+1}", 1)] if tier < 5 else []))
-        tc(f"RMap T{tier} Sustain", 1, sustain,
+        tc(f"RMap Event Sustain {tier}", 1, sustain,
            1000 - sum(weight for _, weight in sustain))
+        sustain = [(item, weight * (3 if item == "RMap Currency" else 4))
+                   for item, weight in sustain]
+        tc(f"RMap T{tier} Sustain", 1, sustain,
+           4000 - sum(weight for _, weight in sustain))
         tc(f"RMap T{tier} Loot", 1,
            [("Act 5 (H) Equip C", 25), ("Act 5 (H) Good", 5),
             ("Gold 1x", 8), ("Super Potion", 4)], max(0, 42 - tier * 6))
@@ -354,7 +362,7 @@ def treasure_classes(api, plans, path, runtime):
         tc(f"RMap T{tier} Normal", -2,
            [(f"RMap T{tier} Loot", 1), (f"RMap T{tier} Sustain", 1)])
         tc(f"RMap T{tier} Elite", -4,
-           [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1)])
+           [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1)], quality=elite_quality)
         # Per-map elite tables. Negative picks drop entries in order, each
         # Prob times, until |Picks| drops: at -4 the third entry is never
         # reached, so the baseline equals RMap T<n> Elite. For a Gilded or
@@ -364,7 +372,7 @@ def treasure_classes(api, plans, path, runtime):
             if p["tier"] == tier:
                 tc(elite_class(p), -4,
                    [(f"RMap T{tier} Loot", 3), (f"RMap T{tier} Sustain", 1),
-                    (f"RMap T{tier} Gilded Bonus", 1)])
+                    (f"RMap T{tier} Gilded Bonus", 1)], quality=elite_quality)
         tc(f"RMap T{tier} Boss", -6,
            [(f"RMap T{tier} Loot", 4), (f"RMap Tier {min(tier, 5)}", 1),
             ("RMap Currency", 1)])

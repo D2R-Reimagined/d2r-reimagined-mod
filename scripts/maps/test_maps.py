@@ -135,11 +135,12 @@ class MappingContract(unittest.TestCase):
                     self.assertEqual(tc[tcs.col('NoDrop')],'0')
                     self.assertLess(int(tc[tcs.col('Picks')]),0)
                 tc=tcs.find(tcs.col('Treasure Class'),f'RMap Event Challenger {tier}')
+                self.assertEqual(tc[tcs.col('Item2')], f'RMap Event Sustain {tier}')
                 self.assertEqual(tc[tcs.col('Item3')],'RMap Currency')
                 self.assertEqual(tc[tcs.col('Prob3')],'1')
                 tc=tcs.find(tcs.col('Treasure Class'),f'RMap Event Raiders {tier}')
                 self.assertEqual([tc[tcs.col(f'Item{i}')] for i in range(1,5)],
-                                 [f'RMap T{tier} Loot',f'RMap T{tier} Sustain','RMap Currency','jew'])
+                                 [f'RMap T{tier} Loot',f'RMap Event Sustain {tier}','RMap Currency','jew'])
             # A nested treasure class only resolves if its row was parsed earlier
             # in the file; the loader otherwise asserts and leaves the slot empty.
             key=tcs.col('Treasure Class')
