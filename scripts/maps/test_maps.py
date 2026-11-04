@@ -898,6 +898,39 @@ class MappingContract(unittest.TestCase):
         cls.props = gen.Table(gen.EXCEL / "monprop.txt")
         cls.uniques = gen.Table(gen.EXCEL / "superuniques.txt")
 
+    def test_map_level_flags_override_campaign_templates(self):
+        from unittest.mock import patch
+        templates = gen.Table(gen.EXCEL / 'levels.txt')
+        source_ids = {str(p['theme'][key]) for p in self.plans
+                      for key in ('body_template', 'arena_template')}
+        for row in templates.rows:
+            if row[templates.col('Id')] in source_ids:
+                row[templates.col('Teleport')] = '2'
+                row[templates.col('MonWndr')] = '1'
+        with patch.object(gen, 'Table', return_value=templates):
+            generated = gen.gen_levels(self.plans)
+        for p in self.plans:
+            for role in ('body_id', 'boss_id'):
+                row = generated.find(generated.col('Id'), str(p[role]))
+                self.assertEqual(row[generated.col('Teleport')], '1', row[0])
+                self.assertEqual(row[generated.col('MonWndr')], '0', row[0])
+        # Only map copies receive the override; borrowed campaign rows stay intact.
+        for lid in source_ids:
+            row = generated.find(generated.col('Id'), lid)
+            self.assertEqual(row[generated.col('Teleport')], '2', lid)
+            self.assertEqual(row[generated.col('MonWndr')], '1', lid)
+
+    def test_map_level_flags_in_both_generated_banks(self):
+        expected_ids = {str(p[key]) for p in self.plans for key in ('body_id', 'boss_id')}
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            levels = gen.Table(bank / 'levels.txt')
+            maps = [row for row in levels.rows
+                    if row[levels.col('Name')].startswith(cfg.ROW_TAG)]
+            self.assertEqual({row[levels.col('Id')] for row in maps}, expected_ids)
+            for row in maps:
+                self.assertEqual(row[levels.col('Teleport')], '1', f'{bank}: {row[0]}')
+                self.assertEqual(row[levels.col('MonWndr')], '0', f'{bank}: {row[0]}')
+
     def test_area_levels_cover_bodies_bosses_and_all_monster_variants(self):
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             levels, monsters = gen.Table(bank / 'levels.txt'), gen.Table(bank / 'monstats.txt')

@@ -258,6 +258,9 @@ def gen_levels(plans: list[dict]) -> Table:
                 # null tile outside the visible rooms, even while standing
                 # inside a map. Keep authored perimeter tiles, as Act 5 does.
                 "DrawEdges": "0",
+                # Do not inherit campaign teleport restrictions or roaming spawns.
+                "Teleport": "1",
+                "MonWndr": "0",
                 "Waypoint": "255",
                 "SaveMonsters": "1",
                 "QuestFlag": "",
