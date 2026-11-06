@@ -2,8 +2,8 @@
     "type": "BankPanel", "name": "BankExpansionLayout",
     "fields": {
         "priority": 0,
-        "anchor": "$LeftPanelAnchor",
-        "rect": { "x": -1535, "y": -502, "width": 0, "height": 0 },
+        "anchor": { "x": 0.0, "y": 0.397 },
+        "rect": { "x": 15, "y": -502, "width": 0, "height": 0 },
         "backgroundFile": [
             "Controller/Panel/Stash/V2/StashPanelBG_Edit",
             "Controller/Panel/Stash/V2/StashPanelBG_Edit",
@@ -16,7 +16,7 @@
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
             "fields": {
-                "rect": "$PanelClickCatcherRect"
+                "rect": { "x": 0, "y": -150, "width": 2050, "height": 1705 }
             }
         },
         {
@@ -43,7 +43,7 @@
                 "tabPadding": "$PanelTabPadding",
                 "onSwitchTabMessage": "BankPanelMessage:SelectTab",
                 "tabLeftIndicatorPosition": "$HalfPanelLeftTabButtonPromptPosition",
-                "tabRightIndicatorPosition": { "x": 1035, "y": -2 },
+                "tabRightIndicatorPosition": { "x": 1003, "y": -2 },
                 "focusOnMouseOver": true,
                 "notificationIconTemplate": {
                     "filename": "Controller/Panel/Stash/V2/AdditionalStash/StashNotification"
@@ -135,13 +135,14 @@
                         {
                             "type": "Widget", "name": "StashNavigation",
                             "fields": {
-                                "rect": { "x": 1160, "y": -55, "width": 457, "height": 93 }
+                                "rect": { "x": 1145, "y": -55, "width": 430, "height": 93 }
                             },
                             "children": [
                                 {
                                     "type": "ButtonLegendWidget", "name": "StashLeftArrow",
                                     "fields": {
-                                        "rect": { "x": 25, "y": 13, "width": 64, "height": 64 },
+                                        "rect": { "x": 15, "y": 13, "width": 64, "height": 64 },
+                                        "text": { "style": { "fontColor": "$FontColorWhite", "pointSize": "$SmallFontSize", "spacing": { "kerning": 0.6 } } },
                                         "presets": [
                                             {
                                                 "action": "cycleLeft"
@@ -153,7 +154,7 @@
                                     "type": "TextBoxWidget", "name": "CurrentSharedStashText",
                                     "fields": {
                                         "text": "@SharedStashPage",
-                                        "rect": {  "x": 91, "y": 13, "width": 326, "height": 64 },
+                                        "rect": {  "x": 88, "y": 13, "width": 185, "height": 64 },
                                         "style": {
                                             "fontColor": "$PanelTitleColor",
                                             "pointSize": "$MediumFontSize",
@@ -166,7 +167,8 @@
                                 {
                                     "type": "ButtonLegendWidget", "name": "StashRightArrow",
                                     "fields": {
-                                        "rect": { "x": 411, "y": 13, "width": 64, "height": 64 },
+                                        "rect": { "x": 280, "y": 13, "width": 64, "height": 64 },
+                                        "text": { "style": { "fontColor": "$FontColorWhite", "pointSize": "$SmallFontSize", "spacing": { "kerning": 0.6 } } },
                                         "presets": [
                                             {
                                                 "action": "cycleRight"
