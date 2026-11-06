@@ -235,6 +235,8 @@ THEMES = [
         "key": "frozen",
         "name": "Frozen Depths",
         "body_template": 159,    # Forsaken Labyrinth 21, LevelType 33 maze
+        # Pinned so Labyrinth floor tuning doesn't resize this map.
+        "body_rooms": (12, 18, 36),
         # Ice assigns Prev, then Next, then Down, so the portal lands in the
         # Prev room and the arena keeps the Down floor warp. Next stays dead:
         # its stairs look like a way down but cannot be clicked. Linking them
@@ -256,6 +258,8 @@ THEMES = [
         "key": "worldstone",
         "name": "Worldstone Keep",
         "body_template": 164,    # Forsaken Labyrinth 24, LevelType 34 maze
+        # Pinned so Labyrinth floor tuning doesn't resize this map.
+        "body_rooms": (12, 18, 48),
         "body_exits": [(1, 82)], # Act 5 Baal Temple Down
         # Baal Temple makes the origin room the Prev room: level centre.
         "body_entry": (0, 81),   # Act 5 Baal Temple Up
