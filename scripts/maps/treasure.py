@@ -67,6 +67,17 @@ def generate(api, monsters, props, stats2, runtime):
 
 def classes(api, table):
     for spec in cfg.TREASURE_MONSTERS:
+        # A weighted payout rolls a pool once per drop. D2 resolves a nested
+        # class only if its row was parsed earlier, so the pool comes first.
+        if 'pool' in spec:
+            pool = table.blank_row()
+            api.set_cells(pool, table, {
+                'Treasure Class': spec['item'], 'Picks': '1', 'NoDrop': '0',
+                'noAlwaysSpawn': '1', '*eol': '0',
+            })
+            for i, (item, weight) in enumerate(spec['pool'], 1):
+                api.set_cells(pool, table, {f'Item{i}': item, f'Prob{i}': str(weight)})
+            table.append(pool)
         row = table.blank_row()
         api.set_cells(row, table, {
             'Treasure Class': 'RMap Treasure ' + spec['key'],

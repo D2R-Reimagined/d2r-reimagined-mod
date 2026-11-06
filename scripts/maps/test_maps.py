@@ -789,6 +789,27 @@ class MappingContract(unittest.TestCase):
                 self.assertFalse(any(row[table.col('Treasure Class')] == other[table.col(f'Item{i}')]
                                      for other in table.rows for i in range(1, 11)))
 
+    def test_orb_thief_rolls_tiered_pool_in_both_banks(self):
+        spec = next(s for s in cfg.TREASURE_MONSTERS if s['key'] == 'orb')
+        weights = dict(spec['pool'])
+        common = [weights[n] for n in ('Corruption Orb', 'Infusion Orb', 'Socket Orb')]
+        rare = [weights[n] for n in ('Assemblage Orb', 'Conversion Orb')]
+        very_rare = [weights[n] for n in ('Shadow Orb', 'Renewal Orb')]
+        self.assertGreater(min(common), max(rare))
+        self.assertGreater(min(rare), max(very_rare))
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            table = gen.Table(bank / 'treasureclassex.txt')
+            names = [row[table.col('Treasure Class')] for row in table.rows]
+            pool = table.find(table.col('Treasure Class'), spec['item'])
+            self.assertEqual(pool[table.col('Picks')], '1')
+            self.assertEqual(pool[table.col('NoDrop')], '0')
+            self.assertEqual([(pool[table.col(f'Item{i}')], int(pool[table.col(f'Prob{i}')]))
+                              for i in range(1, len(spec['pool']) + 1)], spec['pool'])
+            # Nested classes only resolve if their rows were parsed earlier.
+            self.assertLess(names.index(spec['item']), names.index('RMap Treasure orb'))
+            for orb in weights:
+                self.assertLess(names.index(orb), names.index(spec['item']))
+
     def test_map_quality_matches_rare_capable_misc_items(self):
         for bank in (gen.EXCEL, gen.EXCEL / 'base'):
             types = gen.Table(bank / 'itemtypes.txt')

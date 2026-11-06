@@ -932,6 +932,13 @@ TREASURE_MONSTERS = [
     # The mod's own "Gem" TC (gmm..gmo); stock g?? gems are spawnable=0.
     dict(key="gem", name="Gem Smuggler", source="sandraider5", palette=5,
          item="Gem", rare=0),
+    # Six rolls of a weighted pool. The entries are the orb wrapper classes, so
+    # each bank drops its own form (base/ drops the stacks).
+    dict(key="orb", name="Orb Thief", source="zealot5", palette=4,
+         item="RMap Orb Pool", rare=0,
+         pool=[("Corruption Orb", 30), ("Infusion Orb", 30), ("Socket Orb", 30),
+               ("Assemblage Orb", 6), ("Conversion Orb", 6),
+               ("Shadow Orb", 1), ("Renewal Orb", 1)]),
 ]
 TREASURE_DROPS = 6
 TREASURE_DEFAULT_CHANCE = 8  # Combined encounter chance: one per 12.5 maps on average.
