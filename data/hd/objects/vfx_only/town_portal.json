@@ -1,0 +1,210 @@
+{
+  "dependencies": {
+    "particles": [
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_town_portal_chronicle.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_town_portal_NewStuff.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_violet.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_green.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_red.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_teal.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_gold.particles"
+      },
+      {
+        "path": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_rainbow.particles"
+      }
+    ],
+    "models": [
+      {
+        "path": "data/hd/objects/vfx_only/town_portal/model/head.model"
+      },
+      {
+        "path": "data/hd/objects/vfx_only/town_portal/model/torso.model"
+      },
+      {
+        "path": "data/hd/vfx/meshes/fx_mesh_portalSphere_convex_long_hole_vertexalpha_smaller_redux_2.model"
+      },
+      {
+        "path": "data/hd/vfx/meshes/fx_mesh_townportal_lip_crawl_v4.model"
+      }
+    ],
+    "skeletons": [
+      {
+        "path": "data/hd/objects/vfx_only/town_portal/skeleton/town_portal.skeleton"
+      }
+    ],
+    "animations": [],
+    "textures": [
+      {
+        "path": "data/hd/vfx/textures/default/Default_AlphaMap.texture"
+      },
+      {
+        "path": "data/hd/vfx/textures/gradient/T_FX_linearGradient_test_v1.texture"
+      }
+    ],
+    "physics": [],
+    "json": [
+      {
+        "path": "data/hd/objects/vfx_only/town_portal/town_portal_state_machine.json"
+      }
+    ],
+    "variantdata": [],
+    "objecteffects": [],
+    "other": []
+  },
+  "type": "UnitDefinition",
+  "name": "town_portal",
+  "entities": [
+    {
+      "type": "Entity",
+      "name": "entity_root",
+      "id": 3907628484,
+      "components": [
+        {
+          "type": "UnitRootComponent",
+          "name": "component_root",
+          "state_machine_filename": "data/hd/objects/vfx_only/town_portal/town_portal_state_machine.json",
+          "doNotInheritRotation": false,
+          "rotationOverride": {
+            "x": 0.0,
+            "y": 0.3826834,
+            "z": 0.0,
+            "w": 0.9238795
+          },
+          "doNotUseHDHeight": false,
+          "hideAllMeshWhenInOpenedMode": false,
+          "onCreateEventName": "",
+          "animations": []
+        },
+        {
+          "type": "SkeletonDefinitionComponent",
+          "name": "component_skeleton",
+          "filename": "data/hd/objects/vfx_only/town_portal/skeleton/town_portal.skeleton",
+          "enableWeaponAttachInertialization": false
+        },
+        {
+          "type": "VfxDefinitionComponent",
+          "name": "entity_root_VfxDefinition",
+          "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_town_portal_NewStuff.particles",
+          "hardKillOnDestroy": false
+        },
+        {
+          "type": "VfxVariantComponent",
+          "name": "entity_root_VfxVariant",
+          "vfx": [
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_0",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_town_portal_NewStuff.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_1",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_town_portal_chronicle.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_2",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_violet.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_3",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_green.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_4",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_red.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_5",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_teal.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_6",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_gold.particles",
+              "hardKillOnDestroy": false
+            },
+            {
+              "type": "VfxDefinitionComponent",
+              "name": "entity_root_VfxVariant_vfx_7",
+              "filename": "data/hd/vfx/particles/objects/vfx_only/town_portal/vfx_supporter_portal_rainbow.particles",
+              "hardKillOnDestroy": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Entity",
+      "name": "entity_head",
+      "id": 3358473271,
+      "components": [
+        {
+          "type": "UnitPartComponent",
+          "name": "component_part_head",
+          "part": "head",
+          "variant": "lit"
+        },
+        {
+          "type": "ModelDefinitionComponent",
+          "name": "component_model_head",
+          "filename": "data/hd/objects/vfx_only/town_portal/model/head.model",
+          "visibleLayers": 1,
+          "lightMask": 19,
+          "shadowMask": 3,
+          "ghostShadows": false,
+          "floorModel": false,
+          "terrainBlendEnableYUpBlend": false,
+          "terrainBlendMode": 1
+        }
+      ]
+    },
+    {
+      "type": "Entity",
+      "name": "entity_torso",
+      "id": 468050556,
+      "components": [
+        {
+          "type": "UnitPartComponent",
+          "name": "component_part_torso",
+          "part": "torso",
+          "variant": "lit"
+        },
+        {
+          "type": "ModelDefinitionComponent",
+          "name": "component_model_torso",
+          "filename": "data/hd/objects/vfx_only/town_portal/model/torso.model",
+          "visibleLayers": 1,
+          "lightMask": 19,
+          "shadowMask": 3,
+          "ghostShadows": false,
+          "floorModel": false,
+          "terrainBlendEnableYUpBlend": false,
+          "terrainBlendMode": 1
+        }
+      ]
+    }
+  ]
+}
