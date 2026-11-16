@@ -112,7 +112,11 @@
                         "rect": { "x": 90, "y": 26 },
                         "cellCount": { "x": 16, "y": 13 },
                         "cellSize": "$ItemCellSize",
-                        "gemSocketFilename": "PANEL\\gemsocket"
+                        "gemSocketFilename": "PANEL\\gemsocket",
+                        "navigation": {
+                            "right": { "panelBoundary": true },
+                            "down": { "name": "gold_withdraw" }
+                        }
                     },
                     "children": [
                         {
@@ -287,7 +291,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "gpr",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1553, "y":  50 },
-						"itemCode": "gpr"
+						"itemCode": "gpr",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
 								{
@@ -392,7 +399,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "gpb",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1553, "y":  154 },
-						"itemCode": "gpb"
+						"itemCode": "gpb",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
 				{
@@ -427,7 +437,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "skz",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1033, "y":  258 },
-						"itemCode": "skz"
+						"itemCode": "skz",
+                        "navigation": {
+                            "right": { "name": "jwp" }
+                        }
                     }
                 },
                 {
@@ -540,7 +553,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "1gc",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1449, "y": 386 },
-						"itemCode": "1gc"
+						"itemCode": "1gc",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
                 {
@@ -554,7 +570,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "rup",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1449, "y": 282 },
-						"itemCode": "rup"
+						"itemCode": "rup",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 }
             ]
@@ -615,7 +634,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "ua5",
                     "fields": {
                         "rect": { "width": 98, "height": 196, "x": 1364, "y": 54 },
-						"itemCode": "ua5"
+						"itemCode": "ua5",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
                 {
@@ -671,7 +693,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "xa5",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1364, "y": 282 },
-						"itemCode": "xa5"
+						"itemCode": "xa5",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
                 {
@@ -713,7 +738,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "xpp",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1364, "y": 386 },
-						"itemCode": "xpp"
+						"itemCode": "xpp",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
                 {
@@ -830,7 +858,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "r13",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1450, "y": 114 },
-						"itemCode": "r13"
+						"itemCode": "r13",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },
 				{
@@ -921,7 +952,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "r26",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1450, "y": 218 },
-						"itemCode": "r26"
+						"itemCode": "r26",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 },	
                 {
@@ -1012,7 +1046,10 @@
                     "type": "AdvancedStashSlotWidget", "name": "r39",
                     "fields": {
                         "rect": { "width": 98, "height": 98, "x": 1450, "y": 322 },
-						"itemCode": "r39"
+						"itemCode": "r39",
+                        "navigation": {
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 }																																																								
             ]
@@ -1029,7 +1066,11 @@
 						"rect": { "x": 222, "y": 598 },
 						"cellCount": { "x": 12, "y": 8 },
 						"cellSize": "$ItemCellSize",
-						"gemSocketFilename": "PANEL\\gemsocket"
+						"gemSocketFilename": "PANEL\\gemsocket",
+						"navigation": {
+							"right": { "name": "convert" },
+							"down": { "name": "withdraw_button" }
+						}
 					},
 					"children": [
 						{
@@ -1053,7 +1094,11 @@
 						"filename": "PANEL\\Horadric_Cube\\TransmuteButton",
 						"tooltipString": "@strUiMenu2",
 						"hoveredFrame": 2,
-						"onClickMessage": "BankPanelMessage:Convert"
+						"onClickMessage": "BankPanelMessage:Convert",
+						"navigation": {
+							"left": { "name": "horadriccube_grid" },
+							"right": { "panelBoundary": true }
+						}
 					}
 				},
 				{
@@ -1066,13 +1111,17 @@
                 {
                     "type": "ButtonWidget", "name": "withdraw_button",
                     "fields": {
-                        "rect": { "x": 398, "y": 1276 },
+                        "rect": { "x": 398, "y": 1418 },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall",
                         "textString": "@AdvancedStashWithdraw",
                         "pointSize": "$MediumFontSize",
                         "textColor": "$LightButtonTextColor",
                         "tooltipString": "@AdvancedStashWithdrawTooltip",
-                        "onClickMessage": "BankPanelMessage:WithdrawStash"
+                        "onClickMessage": "BankPanelMessage:WithdrawStash",
+                        "navigation": {
+                            "up": { "name": "horadriccube_grid" },
+                            "right": { "panelBoundary": true }
+                        }
                     }
                 }
 			]

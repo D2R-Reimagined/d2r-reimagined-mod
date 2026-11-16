@@ -4,7 +4,8 @@
     "fields": {
         "anchor": { "x": 0.5 },
         "rect": "$PauseLayoutRect",
-        "fitToParent": false
+        "fitToParent": false,
+        "defaultWidget": "Exit"
     },
     "children": [
         {
@@ -22,6 +23,9 @@
                 "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
                 "textString": "@minipanelmessage",
                 "onClickMessage": "PanelManager:OpenPanel:MessageLogPanel",
+                "navigation": {
+                    "down": { "name": "Settings" }
+                },
                 "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "pointSize": "$MediumLargeFontSize",
@@ -39,9 +43,12 @@
                 "anchor": { "x": 0.5, "y":0.5 },
                 "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
                 "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
+                "navigation": {
+                    "up": { "name": "MessageLog" },
+                    "down": { "name": "Help" }
+                },
                 "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
-                "pointSize": "$MediumLargeFontSize",
                 "textString": "@OptionsHD",
                 "pointSize": "$MediumLargeFontSize",
                 "textColor": "$LightButtonTextColor",
@@ -59,6 +66,10 @@
                 "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
                 "textString": "@minipanelHelp",
                 "onClickMessage": "PausePanelMessage:OpenHelp",
+                "navigation": {
+                    "up": { "name": "Settings" },
+                    "down": { "name": "Exit" }
+                },
                 "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "pointSize": "$MediumLargeFontSize",
@@ -79,6 +90,10 @@
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "textString": "@SaveAndExit",
                 "onClickMessage": "PausePanelMessage:ExitGame",
+                "navigation": {
+                    "up": { "name": "Help" },
+                    "down": { "name": "LootFilter" }
+                },
                 "pointSize": "$MediumLargeFontSize",
                 "textColor": "$LightButtonTextColor",
                 "text/style": "$StyleFEButtonText",
@@ -95,6 +110,10 @@
                 "filename": "Controller/Panel/EscapeMenu/EscapeOptions_Button",
                 "textString": "@LootFilter",
                 "onClickMessage": "PausePanelMessage:OpenLootFilter",
+                "navigation": {
+                    "up": { "name": "Exit" },
+                    "down": { "name": "Chronicle" }
+                },
                 "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
                 "focusIndicatorOffset": { "x": -3, "y": 0 },
                 "pointSize": "$MediumLargeFontSize",
@@ -114,6 +133,7 @@
                 "textString": "@Chronicle",
                 "onClickMessage": "PanelManager:OpenPanel:ChroniclePanel",
                 "navigation": {
+                    "up": { "name": "LootFilter" },
                     "down": { "name": "ModInformation" }
                 },
                 "focusIndicatorFilename": "Controller/HoverImages/EscapeOptionsButton_Hover",
