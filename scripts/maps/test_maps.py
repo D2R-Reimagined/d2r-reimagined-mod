@@ -151,6 +151,34 @@ class MappingContract(unittest.TestCase):
                     if item.startswith('RMap '): self.assertIn(item,defined,f"{row[key]} Item{i}")
                 defined.add(row[key])
 
+    # Hand monprop rows store skill ids as numbers. A row inserted ahead of
+    # the rmap_ block moves every skill after it, so these drift silently:
+    # Azmodan's phase death-skills and haste aura were written against
+    # ace14354 and pointed at other azm_/rmap_ skills from 10-24 to 11-20.
+    HAND_SKILL_LINKS = {
+        'azmodan_prop1': {'1': 'azm_molt1', '3': 'rmap_warden_haste'},
+        'azmodan_prop2': {'1': 'azm_molt2', '3': 'rmap_warden_haste'},
+        'azmodan_prop3': {'3': 'rmap_warden_haste'},
+        'councilauraprop': {'2': 'councilAura'},
+        'demonauraprop': {'2': 'demonAura'},
+        'demonspawners': {'1': 'labDiabloFreeze'},
+        'magdhaswarm_monprop': {'3': 'labswarm'},
+        'labdiablo_prop': {'4': 'labdiabloloot', '5': 'diabloAura'},
+    }
+
+    def test_hand_monprop_skill_ids_name_their_skills(self):
+        for bank in (gen.EXCEL, gen.EXCEL / 'base'):
+            skills, props = gen.Table(bank / 'skills.txt'), gen.Table(bank / 'monprop.txt')
+            names = [row[skills.col('skill')] for row in skills.rows]
+            for prop_row, slots in self.HAND_SKILL_LINKS.items():
+                row = props.find(props.col('Id'), prop_row)
+                for slot, skill in slots.items():
+                    pars = [row[props.col(f'par{slot}{d}')] for d in ('', ' (N)', ' (H)')
+                            if row[props.col(f'prop{slot}{d}')]]
+                    self.assertTrue(pars, f'{prop_row} slot {slot} is empty')
+                    for par in pars:
+                        self.assertEqual(names[int(par)], skill, f'{bank.name} {prop_row} par{slot}={par}')
+
     def test_catacombs_warden_casts_its_kit_from_the_summoner_slots(self):
         import catacombs
         kit = {catacombs.NOVA, catacombs.BOLT, catacombs.MIASMA}
