@@ -32,7 +32,7 @@ class MapBossQuality(unittest.TestCase):
                             if r[0].startswith('RMap Entry ')]
                 regenerated = endgame.treasure_classes(
                     gen, gen.plan(), path, {'entry_classes': wrappers})
-                self.assertEqual(regenerated.to_bytes(), path.read_bytes())
+                self.assertEqual(regenerated.to_bytes(), gen.native_bytes(path))
 
     def test_local_script_updates_both_banks_without_copying_other_cells(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -77,6 +77,12 @@ class MapBossQuality(unittest.TestCase):
                 regenerated = endgame.treasure_classes(
                     gen, gen.plan(), path, {'entry_classes': wrappers})
                 self.assertEqual(regenerated.to_bytes(), path.read_bytes())
+
+    @unittest.skipUnless((gen.REPO / 'source/tables').is_dir(), 'not a Mod Studio project')
+    def test_local_script_checks_the_studio_project(self):
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            self.assertEqual(quality.main(['--root', str(gen.REPO), '--check']), 0)
+        self.assertIn('global/excel/base/treasureclassex.txt: matches', out.getvalue())
 
     def test_invalid_second_bank_leaves_first_bank_untouched(self):
         with tempfile.TemporaryDirectory() as folder:

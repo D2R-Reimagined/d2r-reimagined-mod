@@ -1069,7 +1069,7 @@ class MappingContract(unittest.TestCase):
                 self.assertEqual(table.find(key, name)[flag], '', f'{bank}: {name}')
             regenerated = endgame.treasure_classes(gen, self.plans, path,
                                                    {'entry_classes': wrappers})
-            self.assertEqual(regenerated.to_bytes(), path.read_bytes())
+            self.assertEqual(regenerated.to_bytes(), gen.native_bytes(path))
 
     def test_recipes_are_hell_only_and_tier_six_cannot_be_upgraded(self):
         table = gen.Table(gen.EXCEL / 'cubemain.txt')

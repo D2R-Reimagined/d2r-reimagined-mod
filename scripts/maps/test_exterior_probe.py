@@ -24,11 +24,11 @@ class ExteriorProbeContract(unittest.TestCase):
                     table=gen.Table(source);key=table.col('Id' if name=='levels' else 'Level')
                     table.rows=[r for r in table.rows if not r[key].isdigit() or int(r[key])<=225]
                     target.write_bytes(table.to_bytes())
-                else:shutil.copyfile(source,target)
+                else:target.write_bytes(gen.native_bytes(source))
         for name in ('levels.json','item-names.json'):
             rel=Path('local/lng/strings')/name
             (cls.root/rel).parent.mkdir(parents=True,exist_ok=True)
-            shutil.copyfile(gen.REPO/'data'/rel,cls.root/rel)
+            (cls.root/rel).write_bytes(gen.native_bytes(gen.REPO/'data'/rel))
         cls.outputs=probe.table_outputs(cls.root)
 
     def table(self, bank, name):
