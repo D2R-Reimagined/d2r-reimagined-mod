@@ -32,6 +32,7 @@ source/**/*.json.
 from __future__ import annotations
 
 import hashlib
+import difflib
 import json
 import os
 import re
@@ -377,21 +378,51 @@ def _order_targets(base_file: _TableFile, targets: list[str]) -> list[str]:
     return sorted(targets)
 
 
+def _edited_in_place(old_cells: list[tuple], new_cells: list[tuple]) -> dict[int, int]:
+    """New row index -> old row index for rows edited where they stand.
+
+    Rows are aligned in order; inside a changed block of the same length every row is an
+    edit of the row it replaces, otherwise rows pair only when their first cell (the row's
+    name) is the same. Inserted rows pair with nothing.
+    """
+    out: dict[int, int] = {}
+    matcher = difflib.SequenceMatcher(None, old_cells, new_cells, autojunk=False)
+    for op, i1, i2, j1, j2 in matcher.get_opcodes():
+        if op != 'replace':
+            continue
+        if i2 - i1 == j2 - j1:
+            out.update(zip(range(j1, j2), range(i1, i2)))
+            continue
+        free = list(range(i1, i2))
+        for j in range(j1, j2):
+            i = next((i for i in free if old_cells[i][:1] == new_cells[j][:1]), None)
+            if i is not None:
+                free.remove(i)
+                out[j] = i
+    return out
+
+
 def _rebuild_table(template: _TableFile, name: str, targets: list[str], rows: list[list[str]], old_records: list[dict]) -> dict:
     keys = template.keys
     by_cells: dict[tuple, list[str]] = {}
+    old_cells = []
     for r in old_records:
         n = r.get('columnCount', len(keys))
         cells = tuple(r['fields'].get(k, '') for k in keys[:n])
+        old_cells.append(cells)
         by_cells.setdefault(cells, [])
         if r['sourceId'] not in by_cells[cells]:
             by_cells[cells].append(r['sourceId'])
+    # An edited row keeps its id (Studio's identity for imported rows, and what profile rules name).
+    edited = _edited_in_place(old_cells, [tuple(r) for r in rows]) if old_records else {}
     used: set[str] = set()
     records = []
     occurrences: dict[tuple, int] = {}
     for i, row in enumerate(rows):
         cells = tuple(row)
         sid = next((s for s in by_cells.get(cells, []) if s not in used), None)
+        if sid is None and i in edited and old_records[edited[i]]['sourceId'] not in used:
+            sid = old_records[edited[i]]['sourceId']
         if sid is None:
             k = occurrences.get(cells, 0)
             occurrences[cells] = k + 1

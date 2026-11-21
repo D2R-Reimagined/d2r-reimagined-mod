@@ -132,7 +132,9 @@ def hd_missiles(api, sources):
     path = api.REPO / 'data/hd/missiles/missiles.json'
     text = path.read_bytes().decode('utf-8')
     bindings = json.loads(text.lstrip('﻿'))
-    lines = [l for l in text.split('\r\n') if not l.strip().startswith('"rmap_')]
+    # Keep the file's own line endings: it is stored with LF, but older CRLF checkouts still exist.
+    newline = '\r\n' if '\r\n' in text else '\n'
+    lines = [l for l in text.split(newline) if not l.strip().startswith('"rmap_')]
     added = []
     for name, source in sources.items():
         key = hd_key(source)
@@ -141,7 +143,7 @@ def hd_missiles(api, sources):
         added.append(f'    {json.dumps(name)}: {json.dumps(bindings[key])},')
     anchor = next(i for i, l in enumerate(lines) if l.strip().startswith('"poisonnova":'))
     lines[anchor + 1:anchor + 1] = added
-    return path, '\r\n'.join(lines).encode('utf-8')
+    return path, newline.join(lines).encode('utf-8')
 
 
 def generate(api, plans, combat):
