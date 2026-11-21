@@ -1,0 +1,20 @@
+{
+    "schemaVersion": 1,
+    "id": "d2rl",
+    "stringMode": "full",
+    "tableOverrides": [],
+    "assetOverrides": [
+        {
+            "scope": "mod",
+            "source": "d2rloader/patches/Baal Waves.json",
+            "target": "d2rloader/patches/Baal Waves.json",
+            "reason": "Mod-owned D2RLoader memory patch; only the loader can apply it (RVAs: see the patch file)."
+        },
+        {
+            "scope": "mod",
+            "source": "d2rloader/patches/Telekinesis.json",
+            "target": "d2rloader/patches/Telekinesis.json",
+            "reason": "Mod-owned D2RLoader memory patch; only the loader can apply it (RVAs: see the patch file)."
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"name": "Baal Waves Ignore Hydras",
+	"description": "Prevents Hydra summons from counting as living monsters in Baal's throne-room wave scan.",
+	"d2rl": {
+		"multiplayer": {
+			"id": "baal-waves-ignore-hydras",
+			"role": "host"
+		}
+	},
+	"patches": [
+		{
+			"description": "Exclude monster class IDs 351-353 from Baal's active-monster count.",
+			"op": "bytes",
+			"rva": "0x00597DC4",
+			"expected": "85 C0 75 2B FF 43 34 33 C0 3B 73 18 7D 06 48 89 3B 89 73 18",
+			"bytes": "09 C0 75 2B 8B 57 04 81 EA 5F 01 00 00 83 FA 03 83 5B 34 FF"
+		}
+	]
+}

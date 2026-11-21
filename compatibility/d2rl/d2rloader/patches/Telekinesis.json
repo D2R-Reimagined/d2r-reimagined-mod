@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "name": "Improved Telekinesis",
+  "description": "Allow Telekinesis to pickup any item at a increased distance.",
+  "patches": [
+	{
+		"description": "Allow Telekinesis to pick up every normally pickupable item.",
+		"op": "nop",
+		"rva": "0x0055493D",
+		"size": 2,
+		"expected": "74 3C"
+	},
+	{
+		"description": "Increase Telekinesis item-pickup distance from 50 to 100.",
+		"op": "write-u32",
+		"rva": "0x0055495D",
+		"value": 100,
+		"expected": "32 00 00 00"
+	}
+  ]
+}
