@@ -1,0 +1,15 @@
+# Mod Studio source: stored and checked out with LF on every platform, which is what
+# Mod Studio and scripts/studio/studio_tables.py write.
+source/**/*.json text eol=lf
+compatibility/**/*.json text eol=lf
+mod-project.json text eol=lf
+
+# Written by scripts/maps/generate_maps.py with LF, and already stored with LF. Without
+# this, a CRLF checkout makes `generate_maps.py --check` and test_each_arena_ships_its_hd_preset
+# report them as stale on line endings alone.
+data/hd/env/preset/maps/** text eol=lf
+data/hd/character/enemy/rmap_*.json text eol=lf
+data/hd/character/monsters.json text eol=lf
+data/hd/items/items.json text eol=lf
+data/hd/missiles/missiles.json text eol=lf
+data/hd/items/misc/map/*.json text eol=lf
