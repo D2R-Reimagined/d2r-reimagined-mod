@@ -18,7 +18,10 @@ Want to be apart of this mission? Join our Discord Server https://discord.gg/9zZ
 
 ## Available Tools
 This repository contains a number of tools that can be used to help develop the mod. These tools are located in the `scripts` directory.
-These tools include the ability to compare key entries for strings between two files, copying english names to other languages, and copying the files from this git repository into your d2r install directory.
+These tools include the ability to compare key entries for strings between two files, copying english names to other languages.
+
+### Mod Studio project and the two builds
+The tables and strings are a [Mod Studio](https://github.com/D2R-Reimagined/reimagined-d2r-mod-studio) project (`source/`), built into two deployments from one source: the D2RLoader build (`mods/Reimagined`) and a soft mod for plain D2R (`mods/ReimaginedSoft`). `scripts/studio/deploy.ps1` builds and installs either one. See [scripts/studio/README.md](scripts/studio/README.md).
 
 ### Launcher
 A beta launcher for this mod can be found here [https://github.com/D2R-Reimagined/reimagined-launcher](https://github.com/D2R-Reimagined/reimagined-launcher)
