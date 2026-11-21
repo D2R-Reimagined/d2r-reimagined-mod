@@ -18,12 +18,13 @@ game has always read. Each row has a `sourceId` that profile rules refer to.
 
 | Profile | For | Deploys to | Differences |
 |---|---|---|---|
-| `d2rl` | D2RLoader (ladder, plugins) | `mods/Reimagined` | adds the mod's D2RLoader memory patches (`compatibility/d2rl/d2rloader/patches`) |
+| `d2rl` | D2RLoader (ladder, plugins) | `mods/Reimagined` | none: the shared source as is |
 | `standard` | plain D2R, no loader | `mods/ReimaginedSoft` | own name and savepath (`ReimaginedSoft/`); exterior map themes switched off (`compatibility/standard/maps-soft/`: one rule set per table, written by the maps generator; Studio will not edit the cells they own) |
 
-The D2RLoader build's plugins, `d2rloader/config/*`, `metadata.json` and the ladder's
-`.DISABLE_DEBUG` marker still come from d2rl-plugins (`scripts/package-ladder-bundle.ps1`)
-and the launcher, as before. Plain D2R lacks everything the loader and plugins add (game
+Neither build ships anything under `d2rloader/`. The D2RLoader build's plugins, memory
+patches, `d2rloader/config/*`, `metadata.json` and the ladder's `.DISABLE_DEBUG` marker
+come from their own projects (d2rl-plugins' `scripts/package-ladder-bundle.ps1`) and the
+launcher, as before. Plain D2R lacks everything the loader and plugins add (game
 rules in d2rloader.toml, the memory patches, every plugin fix), so the soft mod plays
 like the mod without them.
 

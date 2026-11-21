@@ -4,9 +4,6 @@ source/**/*.json text eol=lf
 compatibility/**/*.json text eol=lf
 mod-project.json text eol=lf
 
-# D2RLoader patch files ship byte for byte as they are.
-compatibility/d2rl/d2rloader/** -text
-
 # Written by scripts/maps/generate_maps.py with LF, and already stored with LF. Without
 # this, a CRLF checkout makes `generate_maps.py --check` and test_each_arena_ships_its_hd_preset
 # report them as stale on line endings alone.

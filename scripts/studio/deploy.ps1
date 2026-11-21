@@ -12,9 +12,8 @@
          removes files the build no longer has. Like copy-files.bat it leaves
          global\.DISABLE_DEBUG and the launcher's *_launcher_clean snapshots out of the
          mirror, then deletes the snapshots so the launcher re-snapshots fresh data.
-      3. Copies the profile's own d2rloader\ files (d2rl: the mod's memory patches). It never
-         deletes anything under d2rloader\: plugins, configs and logs there belong to
-         d2rl-plugins, the launcher and the players.
+      It never touches d2rloader\: plugins, memory patches, configs and logs there come from
+      other projects, the launcher and the players.
 
     The archive is named after the deploy folder (-Mod), so the soft mod installs as
     mods\ReimaginedSoft\ReimaginedSoft.mpq; its profile also gives it its own savepath.
@@ -61,11 +60,10 @@ $wanted = [System.Collections.Generic.HashSet[string]]::new([System.StringCompar
 foreach ($file in $build.Files) {
     $source = Join-Path $output $file.Path
     $relative = $file.Path
-    if ($relative.StartsWith("$project.mpq/", [System.StringComparison]::OrdinalIgnoreCase)) {
-        $relative = $archive + $relative.Substring($project.Length + 4)
-    } elseif (-not $relative.StartsWith('d2rloader/', [System.StringComparison]::OrdinalIgnoreCase)) {
+    if (-not $relative.StartsWith("$project.mpq/", [System.StringComparison]::OrdinalIgnoreCase)) {
         throw "Unexpected build output path: $($file.Path)"
     }
+    $relative = $archive + $relative.Substring($project.Length + 4)
     if (Test-Kept $relative) { continue }
     [void]$wanted.Add($relative)
     $target = Join-Path $dest ($relative -replace '/', '\')
