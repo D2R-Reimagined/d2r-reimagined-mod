@@ -11,9 +11,10 @@ referenced by position):
   - every treasure class entry that drops an exterior map drops the paired
     interior map of the same tier instead, same weight, so totals are unchanged
 
-Each rule is one file under compatibility/standard/maps-soft/, the format Mod
-Studio applies at build time (one record per file, cells with expect/value). They
-name rows by Studio sourceId, so they are regenerated after every generator run.
+The rules live in compatibility/standard/maps-soft/, one Mod Studio rule set per
+table ({"generator", "rules": [...]}, each rule one record with expect/value cells).
+They name rows by Studio sourceId, so they are regenerated after every generator run,
+and Studio refuses to edit the cells they own.
 """
 from __future__ import annotations
 
@@ -23,8 +24,8 @@ import maps_config as cfg
 
 PROFILE = Path("compatibility") / "standard"
 FOLDER = "maps-soft"
-REASON = ("Soft-mod build (no D2RLoader): exterior map themes need d2rl-maps.dll; "
-          "written by scripts/maps/generate_maps.py")
+GENERATOR = "scripts/maps/generate_maps.py"
+REASON = "Soft-mod build (no D2RLoader): exterior map themes need d2rl-maps.dll"
 CUBE = "global/excel/cubemain.txt"
 TREASURE = ("global/excel/treasureclassex.txt", "global/excel/base/treasureclassex.txt")
 
@@ -49,13 +50,12 @@ def interior_partners(plans: list[dict]) -> dict[str, str]:
     return out
 
 
-def rules(project, plans: list[dict]) -> dict[str, dict]:
-    """File name (relative to the profile folder) -> rule, from the saved Studio tables."""
-    out: dict[str, dict] = {}
+def rules(project, plans: list[dict]) -> list[dict]:
+    """Every rule, in table then row order, from the saved Studio tables."""
+    out: list[dict] = []
 
     def add(table: str, source_id: str, changes: dict) -> None:
-        out[f"{FOLDER}/{table}-{source_id}.json"] = {
-            "table": table, "record": source_id, "reason": REASON, "changes": changes}
+        out.append({"table": table, "record": source_id, "reason": REASON, "changes": changes})
 
     header, _ = project.read_table(CUBE)
     desc, enabled = header.index("description"), header.index("enabled")
@@ -78,10 +78,18 @@ def rules(project, plans: list[dict]) -> dict[str, dict]:
     return out
 
 
+def rule_sets(all_rules: list[dict]) -> dict[str, dict]:
+    """File name (relative to the profile folder) -> the rule set for one table."""
+    out: dict[str, dict] = {}
+    for rule in all_rules:
+        out.setdefault(f"{FOLDER}/{rule['table']}.json", {"generator": GENERATOR, "rules": []})["rules"].append(rule)
+    return out
+
+
 def write(project, repo: Path, plans: list[dict], dumps, check: bool = False) -> list[Path]:
-    """Write the rule files and list them in the profile; return what is (or would be) changed."""
+    """Write the rule sets and list them in the profile; return what is (or would be) changed."""
     profile_dir = repo / PROFILE
-    wanted = {name: dumps(rule) for name, rule in rules(project, plans).items()}
+    wanted = {name: dumps(rule_set) for name, rule_set in rule_sets(rules(project, plans)).items()}
     changed: list[Path] = []
     folder = profile_dir / FOLDER
     present = {f"{FOLDER}/{p.name}": p for p in folder.glob("*.json")} if folder.is_dir() else {}

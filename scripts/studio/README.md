@@ -19,7 +19,7 @@ game has always read. Each row has a `sourceId` that profile rules refer to.
 | Profile | For | Deploys to | Differences |
 |---|---|---|---|
 | `d2rl` | D2RLoader (ladder, plugins) | `mods/Reimagined` | adds the mod's D2RLoader memory patches (`compatibility/d2rl/d2rloader/patches`) |
-| `standard` | plain D2R, no loader | `mods/ReimaginedSoft` | own name and savepath (`ReimaginedSoft/`); exterior map themes switched off (`compatibility/standard/maps-soft/`, written by the maps generator) |
+| `standard` | plain D2R, no loader | `mods/ReimaginedSoft` | own name and savepath (`ReimaginedSoft/`); exterior map themes switched off (`compatibility/standard/maps-soft/`: one rule set per table, written by the maps generator; Studio will not edit the cells they own) |
 
 The D2RLoader build's plugins, `d2rloader/config/*`, `metadata.json` and the ladder's
 `.DISABLE_DEBUG` marker still come from d2rl-plugins (`scripts/package-ladder-bundle.ps1`)
