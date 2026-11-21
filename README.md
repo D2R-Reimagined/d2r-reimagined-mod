@@ -1,4 +1,13 @@
 # d2r-reimagined-mod
+
+> [!IMPORTANT]
+> **Tables and strings are now edited with [Reimagined D2R Mod Studio](https://github.com/D2R-Reimagined/reimagined-d2r-mod-studio).**
+> The excel tables (`data/global/excel/*.txt`) and string catalogs (`data/local/lng/strings/*.json`) are no longer kept as game files. They live in `source/tables` and `source/strings` as Mod Studio source, and Mod Studio builds the game files from them.
+>
+> - Open this repository's folder in Mod Studio to edit tables and strings, and to build or deploy the mod.
+> - Don't add `.txt` tables or string `.json` files under `data/`: they are not part of the source any more, and a build ignores them.
+> - Have a branch or pull request from before the change? Bring it over with `scripts/studio/sync_from_txt.py` (see [Merging a branch that still has TXT files](scripts/studio/README.md#day-to-day)), or ask on Discord and we'll convert it for you.
+
 The source code for the Diablo II Mod Reimagined.
 
 Found on nexus mods here: https://www.nexusmods.com/diablo2resurrected/mods/503
@@ -12,7 +21,7 @@ Want to be apart of this mission? Join our Discord Server https://discord.gg/9zZ
 
 ## Contributing
 1) Fork the mod
-2) Do your changes in your forked repository
+2) Do your changes in your forked repository. Edit tables and strings with [Mod Studio](https://github.com/D2R-Reimagined/reimagined-d2r-mod-studio), not as `.txt`/`.json` files (see the note at the top).
 3) Open up a pull request targeting the `next` branch.
 4) Reach out to me on discord (collin.h) to discuss your changes.
 
