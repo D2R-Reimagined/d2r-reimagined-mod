@@ -21,18 +21,18 @@
 
         },
         {
+            "type": "ControllerCursorBoundsWidget", "name": "ControllerCursorBounds",
+            "fields": {
+                "fitToParent": true,
+            },
+        },
+        {
             "type": "Widget", "name": "Anchor",
             "fields": {
                 "anchor": { "x": 0.5, "y": -0.5 },
                 "rect": {"x":-1920, "y":1080, "width": 3840, "height": 1960 }
             },
             "children": [
-				{
-					"type": "ControllerCursorBoundsWidget", "name": "ControllerCursorBounds",
-					"fields": {
-						"fitToParent": true,
-					},
-				},
                 {
                     "type": "ImageWidget", "name": "Background",
                     "fields": {
