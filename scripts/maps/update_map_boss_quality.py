@@ -7,6 +7,8 @@ Standalone, standard library only. From the mod root:
 
 A downloaded copy can be run with --root pointing at the mod directory that
 contains data/global/excel. No plugin checkout or stock map assets are needed.
+When --root is a Mod Studio project (source/tables), the Studio tables are
+updated instead, through the project's scripts/studio/studio_tables.py.
 """
 from __future__ import annotations
 
@@ -81,6 +83,30 @@ def updated_bytes(path: Path) -> tuple[bytes, int]:
     return result.encode('utf-8'), changed
 
 
+def studio_main(root: Path, check: bool) -> int:
+    """The same update for a Mod Studio project (tables under source/tables)."""
+    import sys
+    sys.path.insert(0, str(root / 'scripts/studio'))
+    from studio_tables import StudioProject
+    project = StudioProject(root)
+    results = []
+    # Validate and prepare BOTH banks before writing either.
+    for target in ('global/excel/treasureclassex.txt', 'global/excel/base/treasureclassex.txt'):
+        header, rows = project.read_table(target)
+        for line, row in enumerate(rows, 2):
+            if len(row) != len(header):
+                raise ValueError(f'{target}: line {line} has {len(row)} cells; expected {len(header)}')
+        changed = apply_boss_quality(header, rows)
+        project.write_table(target, header, rows)
+        results.append((target, changed))
+    if not check:
+        project.flush()
+    for target, changed in results:
+        status = 'needs update' if check and changed else 'updated' if changed else 'matches'
+        print(f'{target}: {status} ({changed} quality fields)')
+    return int(check and any(changed for _, changed in results))
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -88,6 +114,8 @@ def main(argv=None) -> int:
                         help='mod directory containing data/global/excel (default: current directory)')
     parser.add_argument('--check', action='store_true', help='report differences without writing')
     args = parser.parse_args(argv)
+    if (args.root / 'source/tables').is_dir():
+        return studio_main(args.root, args.check)
     excel = args.root / 'data/global/excel'
     # Validate and prepare BOTH banks before writing either file.
     pending = [(path, *updated_bytes(path)) for path in

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the Reimagined mapping system rows into data/global/excel/*.txt.
+"""Generate the Reimagined mapping system rows into the mod's excel tables.
 
 Idempotent: every row this writes is tagged, and each run removes the previous
 tagged rows before appending fresh ones. Run it again after editing
@@ -8,9 +8,11 @@ maps_config.py rather than hand-editing the game files.
     python scripts/maps/generate_maps.py            # write
     python scripts/maps/generate_maps.py --check    # validate only, no writes
 
-After a successful run, mirror excel/ into excel/base/ the usual way:
-
-    data/global/excel/a_copy_excel_base.bat
+Tables are addressed by their game path (data/global/excel/levels.txt). In a
+Mod Studio project (source/tables present) those paths are read from and
+written to the Studio files through scripts/studio/studio_tables.py, and both
+banks (excel/ and excel/base/) are written by this script. Without one, the
+native TXT and string JSON files are read and written directly.
 """
 
 from __future__ import annotations
@@ -30,6 +32,47 @@ REPO = Path(__file__).resolve().parents[2]
 EXCEL = REPO / "data" / "global" / "excel"
 STRINGS = REPO / "data" / "local" / "lng" / "strings"
 
+sys.path.insert(0, str(REPO / "scripts" / "studio"))
+from studio_tables import StudioProject  # noqa: E402
+
+# The Mod Studio project holding EXCEL/STRINGS, or None for a native TXT tree.
+# One instance per process, so a table saved earlier in a run is what later
+# reads see, exactly as if it had been written to disk.
+_STUDIO: StudioProject | None = None
+
+
+def studio() -> StudioProject | None:
+    global _STUDIO
+    if _STUDIO is None and (REPO / "source" / "tables").is_dir():
+        _STUDIO = StudioProject(REPO)
+    return _STUDIO
+
+
+def studio_target(path: Path) -> str | None:
+    """The Studio target for a path under this repo's data/, or None to use the file."""
+    project = studio()
+    if project is None:
+        return None
+    try:
+        relative = Path(path).resolve().relative_to((REPO / "data").resolve()).as_posix()
+    except ValueError:
+        return None
+    if relative.lower().startswith("global/excel/") and project.has_table(relative):
+        return relative
+    if relative.lower().startswith("local/lng/strings/") and project.has_catalog(relative):
+        return relative
+    return None
+
+
+def native_bytes(path: Path) -> bytes:
+    """What the game file at `path` holds (for a Studio project: what the build emits)."""
+    target = studio_target(path)
+    if target is None:
+        return Path(path).read_bytes()
+    if target.lower().startswith("local/lng/strings/"):
+        return string_bytes(Path(target).name, studio().read_strings(target))
+    return studio().native_bytes(target)
+
 
 # ---------------------------------------------------------------------------
 # TSV helpers. These files are CRLF, no BOM, and every row must carry exactly
@@ -39,7 +82,7 @@ STRINGS = REPO / "data" / "local" / "lng" / "strings"
 class Table:
     def __init__(self, path: Path):
         self.path = path
-        raw = path.read_bytes()
+        raw = native_bytes(path)
         if raw.startswith(b"\xef\xbb\xbf"):
             raise SystemExit(f"{path.name}: unexpected BOM")
         text = raw.decode("utf-8")
@@ -112,8 +155,14 @@ class Table:
         """The row the latest append() inserted."""
         return self.rows[self.next_index - 1]
 
-    def save(self) -> None:
-        self.path.write_bytes(self.to_bytes())
+    def save(self, path: Path | None = None) -> None:
+        """Write to this table's path, or to another bank of the same table."""
+        path = path or self.path
+        target = studio_target(path)
+        if target is None:
+            path.write_bytes(self.to_bytes())
+        else:
+            studio().write_table(target, self.header, self.rows)
 
     def to_bytes(self) -> bytes:
         out = [self.header] + self.rows
@@ -781,13 +830,37 @@ _STRING_TAILS: dict[str, str] = {}
 
 
 def load_strings(name: str) -> list[dict]:
+    target = studio_target(STRINGS / name)
+    if target is not None:
+        return studio().read_strings(target)
     raw = (STRINGS / name).read_bytes().decode("utf-8-sig")
     _STRING_TAILS[name] = raw[raw.rindex("]") + 1:]
     return json.loads(raw)
 
 
 def save_strings(name: str, data: list[dict]) -> None:
-    (STRINGS / name).write_bytes(string_bytes(name, data))
+    target = studio_target(STRINGS / name)
+    if target is not None:
+        studio().write_strings(target, data)
+    else:
+        (STRINGS / name).write_bytes(string_bytes(name, data))
+
+
+def strings_current(name: str, data: list[dict]) -> bool:
+    """Whether the catalog already holds `data` (for --check)."""
+    target = studio_target(STRINGS / name)
+    if target is not None:
+        return studio().read_strings(target) == data
+    path = STRINGS / name
+    return path.exists() and path.read_bytes() == string_bytes(name, data)
+
+
+def string_catalogs() -> dict[str, list[dict]]:
+    """Every catalog by file name, for id collision checks."""
+    project = studio()
+    if project is not None:
+        return {Path(t).name: project.read_strings(t) for t in project.catalog_targets()}
+    return {p.name: json.loads(p.read_text(encoding="utf-8-sig")) for p in STRINGS.glob("*.json")}
 
 
 def string_bytes(name: str, data: list[dict]) -> bytes:
@@ -795,7 +868,7 @@ def string_bytes(name: str, data: list[dict]) -> bytes:
     # CRLF throughout, and whatever tail the file already had.
     text = json.dumps(data, indent=4, ensure_ascii=False)
     text = text.replace("\r\n", "\n").replace("\n", "\r\n")
-    return (text + _STRING_TAILS[name]).encode("utf-8")
+    return (text + _STRING_TAILS.get(name, "\r\n")).encode("utf-8")
 
 
 LANGS = ["enUS", "zhTW", "deDE", "esES", "frFR", "itIT", "koKR", "plPL",
@@ -884,9 +957,9 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     # The Gambler's gossip lines: fixed ids, because his gossip table names them.
     monsters = [e for e in monsters if not any(e["Key"] == key for _, key, _ in starter_events.MERCHANT_GOSSIP)]
     taken = {e["id"] for e in monsters}
-    for other in STRINGS.glob("*.json"):
-        if other.name != "monsters.json":
-            taken.update(e.get("id") for e in json.loads(other.read_text(encoding="utf-8-sig")) if isinstance(e, dict))
+    for name, entries in string_catalogs().items():
+        if name != "monsters.json":
+            taken.update(e.get("id") for e in entries if isinstance(e, dict))
     for string_id, key, text in starter_events.MERCHANT_GOSSIP:
         if string_id in taken:
             raise SystemExit(f"string id {string_id} for {key} is already used")
@@ -1116,9 +1189,19 @@ def main() -> int:
         expected = {t.path: t.to_bytes() for t in tables}
         expected.update({EXCEL / "base" / t.path.name: t.to_bytes() for t in tables
                          if t.path.parent == EXCEL and t.path.name != "treasureclassex.txt"})
-        expected.update({STRINGS / n: string_bytes(n, d) for n, d in strings.items()})
         expected.update(assets)
-        stale = [str(p) for p, data in expected.items() if not p.exists() or p.read_bytes() != data]
+
+        def current(p: Path) -> bytes | None:
+            if studio_target(p) is not None:
+                return native_bytes(p)
+            return p.read_bytes() if p.exists() else None
+
+        stale = [str(p) for p, data in expected.items() if current(p) != data]
+        stale += [str(STRINGS / n) for n, d in strings.items() if not strings_current(n, d)]
+        if studio() is not None:
+            import soft_mod
+            from studio_tables import dumps
+            stale += [str(p) for p in soft_mod.write(studio(), REPO, plans, dumps, check=True)]
         header = gen_plugin_header(plans, args.plugin_header, runtime, write=False)
         if not args.plugin_header.exists() or args.plugin_header.read_text(encoding="utf-8") != header:
             stale.append(str(args.plugin_header))
@@ -1131,11 +1214,20 @@ def main() -> int:
     for t in tables:
         t.save()
         if t.path.parent == EXCEL and t.path.name != "treasureclassex.txt":
-            (EXCEL / "base" / t.path.name).write_bytes(t.path.read_bytes())
+            t.save(EXCEL / "base" / t.path.name)
         print(f"wrote {t.path.relative_to(REPO)} ({len(t.rows)} rows)")
     for name, data in strings.items():
         save_strings(name, data)
         print(f"wrote {(STRINGS / name).relative_to(REPO)} ({len(data)} entries)")
+    if studio() is not None:
+        changed = studio().flush()
+        print(f"Mod Studio: {len(changed)} source file(s) changed"
+              + "".join(f"\n  {p.relative_to(REPO)}" for p in changed))
+        # Rules name rows by sourceId, so they follow the tables just written.
+        import soft_mod
+        from studio_tables import dumps
+        rules = soft_mod.write(studio(), REPO, plans, dumps)
+        print(f"soft-mod profile rules: {len(rules)} file(s) changed")
     for path, data in assets.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
