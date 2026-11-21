@@ -1,0 +1,81 @@
+{
+    "schema": {
+        "schemaVersion": 1,
+        "name": "customnpcs",
+        "targets": [
+            "global/excel/base/customnpcs.txt",
+            "global/excel/customnpcs.txt"
+        ],
+        "identityColumns": [],
+        "columns": [
+            {
+                "key": "class",
+                "header": "class"
+            },
+            {
+                "key": "ShouldTalk",
+                "header": "ShouldTalk"
+            },
+            {
+                "key": "talkAct",
+                "header": "talkAct"
+            },
+            {
+                "key": "talkFile",
+                "header": "talkFile"
+            },
+            {
+                "key": "talkPlayerRead",
+                "header": "talkPlayerRead"
+            },
+            {
+                "key": "talkWelcomeGreeting",
+                "header": "talkWelcomeGreeting"
+            },
+            {
+                "key": "talkTransporter",
+                "header": "talkTransporter"
+            },
+            {
+                "key": "talkNoIntro",
+                "header": "talkNoIntro"
+            },
+            {
+                "key": "talkGreetThisTime",
+                "header": "talkGreetThisTime"
+            }
+        ],
+        "bom": false,
+        "newline": "\r\n",
+        "finalNewline": true,
+        "protectedRows": 2
+    },
+    "records": [
+        {
+            "sourceId": "row-00000",
+            "order": 0,
+            "columnCount": 9,
+            "fields": {
+                "class": "labnpc",
+                "ShouldTalk": "1",
+                "talkAct": "0",
+                "talkFile": "customgossiptbl",
+                "talkWelcomeGreeting": "1",
+                "talkGreetThisTime": "1"
+            }
+        },
+        {
+            "sourceId": "row-00001",
+            "order": 1,
+            "columnCount": 9,
+            "fields": {
+                "class": "rmap_event_merchant",
+                "ShouldTalk": "1",
+                "talkAct": "0",
+                "talkFile": "rmapmerchantgossip",
+                "talkWelcomeGreeting": "1",
+                "talkGreetThisTime": "1"
+            }
+        }
+    ]
+}
