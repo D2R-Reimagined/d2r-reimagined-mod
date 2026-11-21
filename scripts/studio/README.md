@@ -19,7 +19,7 @@ game has always read. Each row has a `sourceId` that profile rules refer to.
 | Profile | For | Deploys to | Differences |
 |---|---|---|---|
 | `d2rl` | D2RLoader (ladder, plugins) | `mods/Reimagined` | none: the shared source as is |
-| `standard` | plain D2R, no loader | `mods/ReimaginedSoft` | own name and savepath (`ReimaginedSoft/`); exterior map themes switched off (`compatibility/standard/maps-soft/`: one rule set per table, written by the maps generator; Studio will not edit the cells they own) |
+| `standard` | plain D2R, no loader | `mods/ReimaginedSoft` | own name and savepath (`ReimaginedSoft/`); no maps: the maps cube recipes are removed (`compatibility/standard/maps-soft/cubemain.json`) and the maps strings ship empty (their compact translations in `source/strings`), both written by the maps generator |
 
 Neither build ships anything under `d2rloader/`. The D2RLoader build's plugins, memory
 patches, `d2rloader/config/*`, `metadata.json` and the ladder's `.DISABLE_DEBUG` marker
@@ -27,6 +27,27 @@ come from their own projects (d2rl-plugins' `scripts/package-ladder-bundle.ps1`)
 launcher, as before. Plain D2R lacks everything the loader and plugins add (game
 rules in d2rloader.toml, the memory patches, every plugin fix), so the soft mod plays
 like the mod without them.
+
+Maps cannot work without `d2rl-maps.dll` (a player's first map only comes from the plugin), so
+the soft mod leaves out what it can of them. Most maps rows stay as unused data: the mod's own
+rows after them (Azmodan, Cydaea) are referenced by position, so a profile may only remove a
+table's last rows (`"remove": true` rules), and the map treasure classes, states and Wardens are
+still named by the rows that stay. See `scripts/maps/soft_mod.py`.
+
+### String size (soft mod only)
+
+Plain D2R crashes once the combined text of all its string catalogs passes a fixed size, Russian
+first (Cyrillic is two bytes per character). D2RLoader lifts the limit. `string_budget.py` adds up
+what a build hands the game per locale (the plain game's catalogs with the build's swapped in):
+
+```powershell
+python scripts\studio\string_budget.py               # the soft-mod build, from source/strings
+python scripts\studio\string_budget.py --mode full   # the D2RLoader build
+```
+
+It needs the plain game's `local/lng/strings` (`--game-strings`, `D2R_GAME_STRINGS`, or
+`..ase-files\data\data\local\lng\strings`). The limit goes in `string_budget.json`
+(`maxBytes`, null until measured in game); `deploy.ps1 -Profile standard` stops when a build is over it.
 
 ## Day to day
 
@@ -53,5 +74,5 @@ like the mod without them.
 
 - `studio_tables.py`: read/write Studio tables and catalogs by game path, in native shapes
   (keeps row ids, splits/merges banks, writes Studio's exact JSON format).
-- `deploy.ps1`, `sync_from_txt.py`: above.
-- `test_studio_tables.py`, `test_sync_from_txt.py`: their tests.
+- `deploy.ps1`, `sync_from_txt.py`, `string_budget.py`: above.
+- `test_studio_tables.py`, `test_sync_from_txt.py`, `test_string_budget.py`: their tests.

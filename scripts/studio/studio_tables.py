@@ -211,6 +211,10 @@ class StudioProject:
     def catalog_targets(self) -> list[str]:
         return sorted(_load(p)['schema']['target'] for p in self._catalogs.values())
 
+    def catalog_file(self, target: str) -> Path:
+        """The source/strings file holding this catalog."""
+        return self._catalogs[target.lower()]
+
     # -- tables ----------------------------------------------------------------
     def read_table(self, target: str) -> tuple[list[str], list[list[str]]]:
         key = target.lower()

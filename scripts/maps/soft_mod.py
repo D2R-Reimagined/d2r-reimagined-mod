@@ -1,23 +1,33 @@
-"""Mod Studio profile rules that keep maps working in the soft-mod build.
+"""The soft-mod (standard profile) build: the mod without maps.
 
 The `standard` profile (compatibility/standard) is the mod for plain D2R, with no
-D2RLoader. Interior map themes work there as baseline maps. Exterior themes do not:
-only d2rl-maps.dll reroutes outdoor level generation, and their Red Portal levels
-pass 255, which the engine's one-byte cube output level cannot hold.
+D2RLoader. Maps do not work there at all. A player's first map only ever comes from
+d2rl-maps.dll: no treasure class, monster or cube recipe outside the maps leads in,
+and every maps recipe takes a map or map currency. So that build leaves out what it
+can of the maps, and nothing else changes:
 
-So for that profile only, and without moving or deleting any row (rows are
-referenced by position):
-  - every cube recipe of an exterior theme is disabled (enabled 1 -> 0)
-  - every treasure class entry that drops an exterior map drops the paired
-    interior map of the same tier instead, same weight, so totals are unchanged
+  - Every maps cube recipe (rmap activate/upgrade/reroll/infuse/corrupt) is removed.
+    They are the last rows of cubemain, so no other row moves, and the activate rows
+    point at levels past 255, which a cube output's one-byte level cannot hold.
+  - Every string the generator writes ships empty: its compact (standard-mode)
+    translation is "" in every locale. Plain D2R crashes once the strings' combined
+    size passes its limit (Russian first), and these are never shown without the
+    plugin. The keys stay, so no row is left naming a missing string.
 
-The rules live in compatibility/standard/maps-soft/, one Mod Studio rule set per
-table ({"generator", "rules": [...]}, each rule one record with expect/value cells).
-They name rows by Studio sourceId, so they are regenerated after every generator run,
-and Studio refuses to edit the cells they own.
+The other maps rows stay as dead data. Most cannot leave without moving the mod's own
+rows that follow them (Azmodan and Cydaea in levels, skills, monprop, monstats,
+monstats2, lvlprest, missiles and monpreset: rows are referenced by position), and the
+map treasure classes, states, Wardens and items are still named by those rows.
+
+The cube rules are a Mod Studio rule set, compatibility/standard/maps-soft/cubemain.json;
+the compact translations sit on the generator's own entries in source/strings. Both are
+rewritten after every generator run, so change them here, not in Studio.
 """
 from __future__ import annotations
 
+import hashlib
+import json
+import re
 from pathlib import Path
 
 import maps_config as cfg
@@ -25,57 +35,20 @@ import maps_config as cfg
 PROFILE = Path("compatibility") / "standard"
 FOLDER = "maps-soft"
 GENERATOR = "scripts/maps/generate_maps.py"
-REASON = "Soft-mod build (no D2RLoader): exterior map themes need d2rl-maps.dll"
+REASON = "Soft-mod build (no D2RLoader): maps need d2rl-maps.dll"
 CUBE = "global/excel/cubemain.txt"
-TREASURE = ("global/excel/treasureclassex.txt", "global/excel/base/treasureclassex.txt")
+# Same pattern Mod Studio checks: a compact translation must keep the full text's placeholders.
+_PLACEHOLDER = re.compile(r"%%|%(?:\d+\$)?[-+#0 ]*(?:\d+|\*)?(?:\.(?:\d+|\*))?[hlL]*[diuoxXfFeEgGaAcspn]")
 
 
-def exterior_keys() -> list[str]:
-    return [t["key"] for t in cfg.THEMES if t.get("exterior")]
-
-
-def interior_partners(plans: list[dict]) -> dict[str, str]:
-    """Exterior map code -> interior map code of the paired theme, same tier."""
-    interior = [t["key"] for t in cfg.THEMES if not t.get("exterior")]
-    by_key_tier = {(p["theme"]["key"], p["tier"]): p for p in plans}
-    out = {}
-    for i, key in enumerate(exterior_keys()):
-        partner = interior[i % len(interior)]
-        for p in plans:
-            if p["theme"]["key"] != key:
-                continue
-            q = by_key_tier[(partner, p["tier"])]
-            out[p["item_code"]] = q["item_code"]
-            out[cfg.expansion_code(p["item_code"])] = cfg.expansion_code(q["item_code"])
-    return out
-
-
-def rules(project, plans: list[dict]) -> list[dict]:
-    """Every rule, in table then row order, from the saved Studio tables."""
-    out: list[dict] = []
-
-    def add(table: str, source_id: str, changes: dict) -> None:
-        out.append({"table": table, "record": source_id, "reason": REASON, "changes": changes})
-
+def rules(project) -> list[dict]:
+    """A remove rule for every maps cube recipe, in row order."""
     header, _ = project.read_table(CUBE)
-    desc, enabled = header.index("description"), header.index("enabled")
-    keys = set(exterior_keys())
-    for source_id, row in project.read_records(CUBE):
-        words = row[desc].split()
-        if len(words) >= 3 and words[0] == cfg.CUBE_TAG and words[2] in keys:
-            if row[enabled] != "0":
-                add(project.table_name(CUBE), source_id, {"enabled": {"expect": row[enabled], "value": "0"}})
-
-    partners = interior_partners(plans)
-    for target in TREASURE:
-        header, _ = project.read_table(target)
-        items = [(f"Item{i}", header.index(f"Item{i}")) for i in range(1, 11)]
-        for source_id, row in project.read_records(target):
-            changes = {name: {"expect": row[c], "value": partners[row[c]]}
-                       for name, c in items if c < len(row) and row[c] in partners}
-            if changes:
-                add(project.table_name(target), source_id, changes)
-    return out
+    desc = header.index("description")
+    table = project.table_name(CUBE)
+    return [{"table": table, "record": source_id, "reason": REASON, "remove": True}
+            for source_id, row in project.read_records(CUBE)
+            if row[desc].split()[:1] == [cfg.CUBE_TAG]]
 
 
 def rule_sets(all_rules: list[dict]) -> dict[str, dict]:
@@ -86,27 +59,52 @@ def rule_sets(all_rules: list[dict]) -> dict[str, dict]:
     return out
 
 
-def write(project, repo: Path, plans: list[dict], dumps, check: bool = False) -> list[Path]:
-    """Write the rule sets and list them in the profile; return what is (or would be) changed."""
+def _sha256(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def compact_catalogs(project, string_keys: dict[str, set[str]], dumps) -> dict[Path, str]:
+    """Catalog file -> its text with every generator-written entry's compact translations set to ""."""
+    out: dict[Path, str] = {}
+    for name, keys in sorted(string_keys.items()):
+        path = project.catalog_file(f"local/lng/strings/{name}")
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        locales = doc["schema"]["locales"]
+        for record in doc["records"]:
+            if record["Key"] not in keys:
+                continue
+            full = record.get("translations", {})
+            # A locale whose text has placeholders keeps it: Studio requires the compact text to carry them too.
+            empty = [loc for loc in locales if not [m for m in _PLACEHOLDER.findall(full.get(loc) or "") if m != "%%"]]
+            record["standardTranslations"] = {loc: "" for loc in empty}
+            record["standardReviewedAgainst"] = {loc: _sha256(full.get(loc) or "") for loc in empty}
+        out[path] = dumps(doc)
+    return out
+
+
+def write(project, repo: Path, dumps, string_keys: dict[str, set[str]], check: bool = False) -> list[Path]:
+    """Write the rule sets, list them in the profile and empty the maps strings; return what is (or would be) changed."""
     profile_dir = repo / PROFILE
-    wanted = {name: dumps(rule_set) for name, rule_set in rule_sets(rules(project, plans)).items()}
+    wanted = {name: dumps(rule_set) for name, rule_set in rule_sets(rules(project)).items()}
     changed: list[Path] = []
-    folder = profile_dir / FOLDER
-    present = {f"{FOLDER}/{p.name}": p for p in folder.glob("*.json")} if folder.is_dir() else {}
-    for name, text in wanted.items():
-        path = profile_dir / name
+
+    def put(path: Path, text: str) -> None:
         if not path.exists() or path.read_bytes().decode("utf-8").replace("\r\n", "\n") != text:
             changed.append(path)
             if not check:
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_bytes(text.encode("utf-8"))
+
+    folder = profile_dir / FOLDER
+    present = {f"{FOLDER}/{p.name}": p for p in folder.glob("*.json")} if folder.is_dir() else {}
+    for name, text in wanted.items():
+        put(profile_dir / name, text)
     for name, path in present.items():
         if name not in wanted:
             changed.append(path)
             if not check:
                 path.unlink()
     profile_path = profile_dir / "profile.json"
-    import json
     profile = json.loads(profile_path.read_text(encoding="utf-8-sig"))
     others = [x for x in profile.get("tableOverrides", []) if not x.startswith(FOLDER + "/")]
     listed = others + sorted(wanted)
@@ -115,4 +113,6 @@ def write(project, repo: Path, plans: list[dict], dumps, check: bool = False) ->
         changed.append(profile_path)
         if not check:
             profile_path.write_bytes(dumps(profile).encode("utf-8"))
+    for path, text in compact_catalogs(project, string_keys, dumps).items():
+        put(path, text)
     return changed

@@ -882,11 +882,38 @@ def string_entry(next_id: int, key: str, text: str) -> dict:
     return entry
 
 
+def item_string_keys(plans: list[dict]) -> set[str]:
+    """The item-names.json keys gen_strings writes: map items, currency and their texts."""
+    known = {code for p in plans for code in (p["item_code"], cfg.expansion_code(p["item_code"]))} | {c["code"] for c in cfg.CURRENCY}
+    known.update(cfg.currency_desc_key(c["code"]) for c in cfg.CURRENCY)
+    known.update((f"{cfg.AFFIX_TAG}_quality_prefix", f"{cfg.AFFIX_TAG}_quality_suffix"))
+    return known
+
+
+def generated_string(name: str, key: str, item_keys: set[str]) -> bool:
+    """Whether gen_strings owns a catalog entry: it drops and rewrites these on every run."""
+    if name == "levels.json":
+        return key.startswith("RMap")
+    if name == "item-names.json":
+        return key in item_keys
+    if name == "monsters.json":
+        return key.startswith(("RMapEvent", "RMapBoss", "RMapTreasure"))
+    return False
+
+
+def generated_string_keys(plans: list[dict]) -> dict[str, set[str]]:
+    """Per catalog, the keys of the generator's own entries as the catalogs stand now."""
+    item_keys = item_string_keys(plans)
+    return {name: {e["Key"] for e in entries if generated_string(name, e.get("Key", ""), item_keys)}
+            for name, entries in string_catalogs().items()
+            if name in ("levels.json", "item-names.json", "monsters.json")}
+
+
 def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     out = {}
 
     levels = load_strings("levels.json")
-    levels = [e for e in levels if not str(e.get("Key", "")).startswith("RMap")]  # noqa: E501
+    levels = [e for e in levels if not generated_string("levels.json", str(e.get("Key", "")), set())]
     next_id = max((int(e["id"]) for e in levels), default=0) + 1
     join = chr(10) if cfg.LEVEL_NAME_TWO_LINE else " ("
     tail = "" if cfg.LEVEL_NAME_TWO_LINE else ")"
@@ -913,12 +940,10 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
     out["levels.json"] = levels
 
     items = load_strings("item-names.json")
-    known = {code for p in plans for code in (p["item_code"], cfg.expansion_code(p["item_code"]))} | {c["code"] for c in cfg.CURRENCY}
-    known.update(cfg.currency_desc_key(c["code"]) for c in cfg.CURRENCY)
+    known = item_string_keys(plans)
     quality_names = {f"{cfg.AFFIX_TAG}_quality_prefix": "Charted",
                      f"{cfg.AFFIX_TAG}_quality_suffix": "of Exploration"}
-    known.update(quality_names)
-    items = [e for e in items if e.get("Key") not in known]
+    items = [e for e in items if not generated_string("item-names.json", e.get("Key", ""), known)]
     next_id = max((int(e["id"]) for e in items), default=0) + 1
     for p in plans:
         items.append(string_entry(
@@ -941,8 +966,7 @@ def gen_strings(plans: list[dict]) -> dict[str, list[dict]]:
                                   "ÿc4" + "\n".join(reversed(cur["desc"]))))
         next_id += 1
     out["item-names.json"] = items
-    monsters = [e for e in load_strings("monsters.json") if not e.get("Key", "").startswith("RMapEvent")]
-    monsters = [e for e in monsters if not str(e.get("Key", "")).startswith(("RMapBoss", "RMapTreasure"))]
+    monsters = [e for e in load_strings("monsters.json") if not generated_string("monsters.json", str(e.get("Key", "")), set())]
     next_id = max(int(e["id"]) for e in monsters) + 1
     for p in plans:
         monsters.append(string_entry(next_id, f"RMapBoss{p['item_code']}",
@@ -1201,7 +1225,7 @@ def main() -> int:
         if studio() is not None:
             import soft_mod
             from studio_tables import dumps
-            stale += [str(p) for p in soft_mod.write(studio(), REPO, plans, dumps, check=True)]
+            stale += [str(p) for p in soft_mod.write(studio(), REPO, dumps, generated_string_keys(plans), check=True)]
         header = gen_plugin_header(plans, args.plugin_header, runtime, write=False)
         if not args.plugin_header.exists() or args.plugin_header.read_text(encoding="utf-8") != header:
             stale.append(str(args.plugin_header))
@@ -1226,8 +1250,8 @@ def main() -> int:
         # Rules name rows by sourceId, so they follow the tables just written.
         import soft_mod
         from studio_tables import dumps
-        rules = soft_mod.write(studio(), REPO, plans, dumps)
-        print(f"soft-mod profile rules: {len(rules)} file(s) changed")
+        rules = soft_mod.write(studio(), REPO, dumps, generated_string_keys(plans))
+        print(f"soft-mod build (rules and empty maps strings): {len(rules)} file(s) changed")
     for path, data in assets.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)

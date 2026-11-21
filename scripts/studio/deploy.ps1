@@ -18,6 +18,10 @@
     The archive is named after the deploy folder (-Mod), so the soft mod installs as
     mods\ReimaginedSoft\ReimaginedSoft.mpq; its profile also gives it its own savepath.
 
+    For the standard profile it first runs string_budget.py on the built strings: plain D2R
+    crashes once its strings' combined size passes a limit (Russian first). It stops when
+    string_budget.json sets a limit and the build is over it (-SkipStringCheck goes ahead).
+
     Run:  powershell -ExecutionPolicy Bypass -File scripts\studio\deploy.ps1 [-Profile standard]
 #>
 param(
@@ -28,6 +32,7 @@ param(
     [string]$Mod = '',
     [string]$Cli = $env:MOD_STUDIO_CLI,
     [switch]$SkipBuild,
+    [switch]$SkipStringCheck,
     [switch]$WhatIf
 )
 $ErrorActionPreference = 'Stop'
@@ -46,6 +51,16 @@ if (-not $SkipBuild) {
 $build = Get-Content (Join-Path $repo '.studio\builds\current\build.json') -Raw | ConvertFrom-Json
 if ($build.Profile -ne $BuildProfile) { throw "The current build is profile '$($build.Profile)', not '$BuildProfile'. Run without -SkipBuild." }
 $output = $build.Output
+
+if ($BuildProfile -eq 'standard' -and -not $SkipStringCheck) {
+    $python = Get-Command python -ErrorAction SilentlyContinue
+    if (-not $python) { Write-Warning 'python not found: string size check skipped.' }
+    else {
+        & $python.Source (Join-Path $PSScriptRoot 'string_budget.py') --output (Join-Path $output "$project.mpq\data\local\lng\strings")
+        if ($LASTEXITCODE -eq 1) { throw 'The build is over plain D2R''s string limit (see above). Pass -SkipStringCheck to deploy it anyway.' }
+        if ($LASTEXITCODE -ne 0) { Write-Warning 'String size check could not run (see above).' }
+    }
+}
 
 $dest = Join-Path $GameDir "mods\$Mod"
 $archive = "$Mod.mpq"
