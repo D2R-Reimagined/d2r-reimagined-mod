@@ -2,14 +2,14 @@
     "type": "BankPanel", "name": "BankOriginalLayout",
     "fields": {
         "priority": 0,
-        "anchor": "$LeftPanelAnchor",
-        "rect": { "x": -1535, "y": -502, "width": 0, "height": 0 },
+        "anchor": { "x": 0.0, "y": 0.397 },
+        "rect": { "x": 20, "y": -502, "width": 0, "height": 0 },
     },
     "children": [
         {
             "type": "ClickCatcherWidget", "name": "click_catcher",
             "fields": {
-                "rect": "$PanelClickCatcherRect"
+                "rect": { "x": 0, "y": -150, "width": 2050, "height": 1705 }
             }
         },
         {
@@ -48,7 +48,11 @@
                 "filename": "PANEL\\GoldButton",
                 "hoveredFrame": 3,
                 "tooltipString": "@strGoldWithdraw",
-                "onClickMessage": "BankPanelMessage:Withdraw"
+                "onClickMessage": "BankPanelMessage:Withdraw",
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                    "up": { "name": "grid" }
+                }
             }
         },
         {
@@ -68,7 +72,11 @@
                 "rect": { "x": 94, "y": 25 },
                 "cellCount": { "x": 16, "y": 13 },
                 "cellSize": "$ItemCellSize",
-                "gemSocketFilename": "PANEL\\gemsocket"
+                "gemSocketFilename": "PANEL\\gemsocket",
+                "navigation": {
+                    "right": { "panelBoundary": true },
+                    "down": { "name": "gold_withdraw" }
+                }
             }
         },
         {
