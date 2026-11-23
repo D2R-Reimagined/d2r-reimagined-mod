@@ -401,7 +401,7 @@ def _rebuild_table(template: _TableFile, name: str, targets: list[str], rows: li
                 sid = 'gen-' + _digest(name, '\t'.join(row), str(k))
         used.add(sid)
         fields = {k: v for k, v in zip(keys, row) if v != ''}
-        records.append({'sourceId': sid, 'order': i, 'columnCount': len(row), 'fields': fields})
+        records.append({'sourceId': sid, 'columnCount': len(row), 'fields': fields})
     schema = dict(template.schema)
     schema['name'] = name
     schema['targets'] = targets
@@ -417,7 +417,7 @@ def _rebuild_catalog(doc: dict, entries: list[dict]) -> dict:
     for r in doc['records']:
         old.setdefault((r['id'], r['Key']), []).append(r)
     records = []
-    for i, e in enumerate(entries):
+    for e in entries:
         prev_list = old.get((e['id'], e['Key']))
         prev = prev_list.pop(0) if prev_list else None
         translations = {}
@@ -434,7 +434,6 @@ def _rebuild_catalog(doc: dict, entries: list[dict]) -> dict:
             rec['sourceId'] = prev['sourceId']
         elif prev is None:
             rec['sourceId'] = 'str-' + _digest(doc['schema']['target'], str(e['id']), e['Key'])
-        rec['order'] = i
         rec['id'] = e['id']
         rec['Key'] = e['Key']
         rec['translations'] = translations
