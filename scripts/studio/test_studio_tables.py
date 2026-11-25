@@ -24,7 +24,7 @@ def _table(name, targets, header, rows):
             'bom': False, 'newline': '\r\n', 'finalNewline': True,
         },
         'records': [
-            {'sourceId': f'row-{i:05d}', 'order': i, 'columnCount': len(r),
+            {'sourceId': f'row-{i:05d}', 'columnCount': len(r),
              'fields': {h: v for h, v in zip(header, r) if v}}
             for i, r in enumerate(rows)
         ],
@@ -37,9 +37,9 @@ def _catalog(target, entries, locales=('enUS', 'deDE')):
                    'locales': list(locales), 'bom': False, 'newline': '\r\n',
                    'finalNewline': True, 'indent': 4},
         'records': [
-            {'order': i, 'id': e['id'], 'Key': e['Key'],
+            {'id': e['id'], 'Key': e['Key'],
              'translations': {l: e[l] for l in locales if l in e}}
-            for i, e in enumerate(entries)
+            for e in entries
         ],
     }
 
@@ -97,7 +97,7 @@ class TableTests(Fixture):
         self.assertEqual(ids[0], 'row-00000')
         self.assertTrue(ids[1].startswith('gen-'))
         self.assertEqual(ids[2:], ['row-00001', 'row-00002'])
-        self.assertEqual([r['order'] for r in self.load('source/tables/levels.json')['records']], [0, 1, 2, 3])
+        self.assertFalse(any('order' in r for r in self.load('source/tables/levels.json')['records']))
 
     def test_new_ids_are_deterministic(self):
         rows = self.rows + [['dup', '7', ''], ['dup', '7', '']]
