@@ -197,5 +197,42 @@ class ProjectRoundTrip(unittest.TestCase):
             self.assertEqual(dumps(json.loads(raw)), raw, f.name)
 
 
+class EditedRowsKeepTheirIds(unittest.TestCase):
+    def setUp(self):
+        self.root = Path(tempfile.mkdtemp(prefix='studio-ids-'))
+        rows = [['alpha', '0', '1'], ['beta', '1', '2'], ['gamma', '2', '3']]
+        (self.root / 'source' / 'tables').mkdir(parents=True)
+        (self.root / 'source' / 'tables' / 'levels.json').write_text(
+            dumps(_table('levels', ['global/excel/levels.txt'], ['Name', 'Id', 'Value'], rows)), encoding='utf-8')
+
+    def tearDown(self):
+        shutil.rmtree(self.root, ignore_errors=True)
+
+    def ids(self):
+        return [r['sourceId'] for r in json.loads((self.root / 'source/tables/levels.json').read_text(encoding='utf-8'))['records']]
+
+    def write(self, rows):
+        p = StudioProject(self.root)
+        p.write_table('global/excel/levels.txt', ['Name', 'Id', 'Value'], rows)
+        p.flush()
+
+    def test_an_edited_row_keeps_its_id(self):
+        before = self.ids()
+        self.write([['alpha', '0', '1'], ['beta', '1', '20'], ['gamma', '2', '30']])
+        self.assertEqual(self.ids(), before)
+
+    def test_an_inserted_row_gets_a_new_id_and_edits_around_it_keep_theirs(self):
+        before = self.ids()
+        self.write([['alpha', '0', '10'], ['new', '9', '9'], ['beta', '1', '2'], ['gamma', '2', '30']])
+        after = self.ids()
+        self.assertEqual([after[0], after[2], after[3]], before)
+        self.assertNotIn(after[1], before)
+
+    def test_a_removed_row_takes_its_id_with_it(self):
+        before = self.ids()
+        self.write([['alpha', '0', '1'], ['gamma', '2', '3']])
+        self.assertEqual(self.ids(), [before[0], before[2]])
+
+
 if __name__ == '__main__':
     unittest.main()
