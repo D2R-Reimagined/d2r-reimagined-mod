@@ -1,0 +1,769 @@
+{
+    "schema": {
+        "schemaVersion": 1,
+        "name": "monumod",
+        "targets": [
+            "global/excel/base/monumod.txt",
+            "global/excel/monumod.txt"
+        ],
+        "identityColumns": [],
+        "columns": [
+            {
+                "key": "uniquemod",
+                "header": "uniquemod"
+            },
+            {
+                "key": "id",
+                "header": "id"
+            },
+            {
+                "key": "enabled",
+                "header": "enabled"
+            },
+            {
+                "key": "version",
+                "header": "version"
+            },
+            {
+                "key": "xfer",
+                "header": "xfer"
+            },
+            {
+                "key": "champion",
+                "header": "champion"
+            },
+            {
+                "key": "fPick",
+                "header": "fPick"
+            },
+            {
+                "key": "exclude1",
+                "header": "exclude1"
+            },
+            {
+                "key": "exclude2",
+                "header": "exclude2"
+            },
+            {
+                "key": "cpick",
+                "header": "cpick"
+            },
+            {
+                "key": "cpick (N)",
+                "header": "cpick (N)"
+            },
+            {
+                "key": "cpick (H)",
+                "header": "cpick (H)"
+            },
+            {
+                "key": "upick",
+                "header": "upick"
+            },
+            {
+                "key": "upick (N)",
+                "header": "upick (N)"
+            },
+            {
+                "key": "upick (H)",
+                "header": "upick (H)"
+            },
+            {
+                "key": "constants",
+                "header": "constants"
+            },
+            {
+                "key": "*constant desc",
+                "header": "*constant desc"
+            },
+            {
+                "key": "*eol",
+                "header": "*eol"
+            }
+        ],
+        "bom": false,
+        "newline": "\r\n",
+        "finalNewline": true,
+        "protectedRows": 45
+    },
+    "records": [
+        {
+            "sourceId": "row-00000",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "none",
+                "id": "0",
+                "enabled": "0",
+                "version": "0",
+                "xfer": "1",
+                "constants": "20",
+                "*constant desc": "Champion chance to spawn instead of Unique",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00001",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "rndname",
+                "id": "1",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "100",
+                "*constant desc": "Minion of Unique HP % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00002",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "hpmultiply",
+                "id": "2",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "75",
+                "*constant desc": "Minion of Unique HP % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00003",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "light",
+                "id": "3",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "50",
+                "*constant desc": "Minion of Unique HP % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00004",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "leveladd",
+                "id": "4",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "200",
+                "*constant desc": "Champion HP % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00005",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "strong",
+                "id": "5",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "150",
+                "*constant desc": "Champion HP % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00006",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "fast",
+                "id": "6",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "fPick": "3",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "100",
+                "*constant desc": "Champion HP % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00007",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "curse",
+                "id": "7",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "300",
+                "*constant desc": "Unique HP % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00008",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "resist",
+                "id": "8",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "200",
+                "*constant desc": "Unique HP % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00009",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "fire",
+                "id": "9",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "100",
+                "*constant desc": "Unique HP % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00010",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "poisondead",
+                "id": "10",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "75",
+                "*constant desc": "Champion Attack Rating % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00011",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "durieldead",
+                "id": "11",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "100",
+                "*constant desc": "Champion Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00012",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "bloodraven",
+                "id": "12",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "50",
+                "*constant desc": "Minion of Unique Attack Rating % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00013",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "rage",
+                "id": "13",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "100",
+                "*constant desc": "Unique Attack Rating % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00014",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "spcdamage",
+                "id": "14",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "75",
+                "*constant desc": "Minion of Unique Damage % Bonus (strong)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00015",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "partydead",
+                "id": "15",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "150",
+                "*constant desc": "Unique Damage % Bonus (strong)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00016",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "champion",
+                "id": "16",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "champion": "1",
+                "cpick": "1",
+                "cpick (N)": "1",
+                "cpick (H)": "1",
+                "constants": "0",
+                "*constant desc": "Minion of Unique Elemental Min Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00017",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "lightning",
+                "id": "17",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "exclude1": "sandleaper",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "33",
+                "*constant desc": "Minion of Unique Elemental Min Damage % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00018",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "cold",
+                "id": "18",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "33",
+                "*constant desc": "Minion of Unique Elemental Min Damage % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00019",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "hireable",
+                "id": "19",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "0",
+                "*constant desc": "Minion of Unique Elemental Max Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00020",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "scarab",
+                "id": "20",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "50",
+                "*constant desc": "Minion of Unique Elemental Max Damage % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00021",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "killself",
+                "id": "21",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "50",
+                "*constant desc": "Minion of Unique Elemental Max Damage % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00022",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "questcomplete",
+                "id": "22",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "33",
+                "*constant desc": "Champion Elemental Min Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00023",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "poisonhit",
+                "id": "23",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "33",
+                "*constant desc": "Champion Elemental Min Damage % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00024",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "thief",
+                "id": "24",
+                "enabled": "0",
+                "version": "0",
+                "xfer": "1",
+                "constants": "33",
+                "*constant desc": "Champion Elemental Min Damage % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00025",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "manahit",
+                "id": "25",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "50",
+                "*constant desc": "Champion Elemental Max Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00026",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "teleport",
+                "id": "26",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "fPick": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "50",
+                "*constant desc": "Champion Elemental Max Damage % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00027",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "spectralhit",
+                "id": "27",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "50",
+                "*constant desc": "Champion Elemental Max Damage % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00028",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "stoneskin",
+                "id": "28",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "66",
+                "*constant desc": "Unique Elemental Min Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00029",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "multishot",
+                "id": "29",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "1",
+                "fPick": "2",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "66",
+                "*constant desc": "Unique Elemental Min Damage % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00030",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "aura",
+                "id": "30",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "exclude1": "ltswarmnone",
+                "exclude2": "ltswarmdemon",
+                "upick": "6",
+                "upick (N)": "6",
+                "upick (H)": "6",
+                "constants": "66",
+                "*constant desc": "Unique Elemental Min Damage % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00031",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "goboom",
+                "id": "31",
+                "enabled": "1",
+                "version": "0",
+                "xfer": "0",
+                "constants": "100",
+                "*constant desc": "Unique Elemental Max Damage % Bonus",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00032",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "firespike_explode",
+                "id": "32",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "constants": "100",
+                "*constant desc": "Unique Elemental Max Damage % Bonus (Nightmare)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00033",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "suicideminion_explode",
+                "id": "33",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "constants": "100",
+                "*constant desc": "Unique Elemental Max Damage % Bonus (Hell)",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00034",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "ai_after_death",
+                "id": "34",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "constants": "75",
+                "*constant desc": "Proc chance for the curse mod",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00035",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "shatter_on_death",
+                "id": "35",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "constants": "5",
+                "*constant desc": "Alternate proc chance for the curse mod",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00036",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "ghostly",
+                "id": "36",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "1",
+                "champion": "1",
+                "cpick": "1",
+                "cpick (N)": "1",
+                "cpick (H)": "1",
+                "constants": "737",
+                "*constant desc": "Herald Spawner Missile index",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00037",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "fanatic",
+                "id": "37",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "1",
+                "champion": "1",
+                "cpick": "1",
+                "cpick (N)": "1",
+                "cpick (H)": "1",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00038",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "possessed",
+                "id": "38",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "1",
+                "champion": "1",
+                "cpick": "1",
+                "cpick (N)": "1",
+                "cpick (H)": "1",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00039",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "berserk",
+                "id": "39",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "1",
+                "champion": "1",
+                "cpick": "1",
+                "cpick (N)": "1",
+                "cpick (H)": "1",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00040",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "worms_on_death",
+                "id": "40",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00041",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "always_run_ai",
+                "id": "41",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00042",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "lightningdeath",
+                "id": "42",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00043",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "thinkonce_on_death",
+                "id": "43",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "1",
+                "*eol": "0"
+            }
+        },
+        {
+            "sourceId": "row-00044",
+            "columnCount": 18,
+            "fields": {
+                "uniquemod": "hidedead",
+                "id": "44",
+                "enabled": "1",
+                "version": "100",
+                "xfer": "0",
+                "*eol": "0"
+            }
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "schema": {
+        "schemaVersion": 1,
+        "name": "customgossiptbl",
+        "targets": [
+            "global/excel/base/customgossiptbl.txt",
+            "global/excel/customgossiptbl.txt"
+        ],
+        "identityColumns": [],
+        "columns": [
+            {
+                "key": "stringId",
+                "header": "stringId"
+            },
+            {
+                "key": "filter",
+                "header": "filter"
+            },
+            {
+                "key": "filterResultsForDisplay",
+                "header": "filterResultsForDisplay"
+            },
+            {
+                "key": "questFilter",
+                "header": "questFilter"
+            },
+            {
+                "key": "playerClass",
+                "header": "playerClass"
+            }
+        ],
+        "bom": false,
+        "newline": "\r\n",
+        "finalNewline": true,
+        "protectedRows": 3
+    },
+    "records": [
+        {
+            "sourceId": "row-00000",
+            "columnCount": 5,
+            "fields": {
+                "stringId": "40000",
+                "filter": "0",
+                "filterResultsForDisplay": "1",
+                "questFilter": "7",
+                "playerClass": "9"
+            }
+        },
+        {
+            "sourceId": "row-00001",
+            "columnCount": 5,
+            "fields": {
+                "stringId": "0",
+                "filter": "0",
+                "filterResultsForDisplay": "1",
+                "questFilter": "7",
+                "playerClass": "0"
+            }
+        },
+        {
+            "sourceId": "row-00002",
+            "columnCount": 5,
+            "fields": {
+                "stringId": "40001",
+                "filter": "0",
+                "filterResultsForDisplay": "1",
+                "questFilter": "7",
+                "playerClass": "9"
+            }
+        }
+    ]
+}
