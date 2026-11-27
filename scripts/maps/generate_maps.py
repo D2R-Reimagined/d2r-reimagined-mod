@@ -629,9 +629,16 @@ def gen_misc(plans: list[dict]) -> Table:
              MAP_ITEM_TYPE)
     for cur in cfg.CURRENCY:
         make(cur["code"], cur["name"], cur["code"], cur["level"], MAP_CURRENCY_TYPE)
-        # Usage tooltip under the name, the same way the crafting orbs do it.
+        # Usage tooltip under the name, the same way the crafting orbs do it,
+        # and AdvancedStashStackable so the Maps tab can host 1x1 Materials-style
+        # stacking slots respecting the loader's materials storage limit.
         desc = cfg.currency_desc_key(cur["code"])
-        set_cells(t.last, t, {"spelldesc": "2", "spelldescstr": desc, "spelldescstr2": desc})
+        set_cells(t.last, t, {
+            "spelldesc": "2",
+            "spelldescstr": desc,
+            "spelldescstr2": desc,
+            "AdvancedStashStackable": "1",
+        })
     for p in plans:
         make(cfg.expansion_code(p["item_code"]),
              f"{p['theme']['name']} T{p['tier']} V2", cfg.expansion_code(p["item_code"]),
