@@ -1,0 +1,205 @@
+{
+    "basedOn": "LobbyBackgroundPanelHD.json",
+    "type": "LobbyBackgroundPanel", "name": "LobbyBackgroundPanel",
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "FlatBackground"
+        },
+        {
+            "type": "ImageWidget", "name": "FullLobbyBackground"
+        },
+        {
+            "type": "ImageWidget", "name": "BottomPanelBackgroundSmall"
+        },
+        {
+            "type": "Widget", "name": "LeftPanel",
+            "children": [
+                {
+                    "type": "ImageWidget", "name": "LeftPanelBackground"
+                },
+                {
+                    "type": "ImageWidget", "name": "BottomLeftPanelBackground"
+                },
+                {
+                    "type": "ButtonWidget", "name": "LargeLeftArrow",
+                    "fields": {
+                        "focusIndicatorFilename": "Controller/HoverImages/LargeArrowL_Hover",
+                        "navigation": {
+                            "up": { "panelBoundary": true },
+                            "down": { "name": "SmallLeftArrow" },
+                            "right": { "name": "LargeRightArrow" }
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "SmallLeftArrow",
+                    "fields": {
+                        "focusIndicatorFilename": "Controller/HoverImages/SmallArrowL_Hover",
+                        "navigation": {
+                            "up": { "name": "LargeLeftArrow" },
+                            "right": { "name": "SmallRightArrow" }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Widget", "name": "RightPanel",
+            "children": [
+                {
+                    "type": "ImageWidget", "name": "RightPanelBackground"
+                },
+                {
+                    "type": "TabBarWidget", "name": "LobbyTabs"
+                },
+                {
+                    "type": "ButtonWidget", "name": "ExitLobby",
+                    "fields": {
+                        "focusIndicatorFilename": "Controller/HoverImages/LobbyButton_Hover",
+                        "navigation": {
+                            "up": { "panelBoundary": true },
+                            "down": { "name": "LargeRightArrow" },
+                            "left": { "name": "ChatGem" }
+                        }
+                    }
+                },
+                {
+                    "type": "ImageWidget", "name": "BottomRightPanelBackground"
+                },
+                {
+                    "type": "ButtonWidget", "name": "LargeRightArrow",
+                    "fields": {
+                        "focusIndicatorFilename": "Controller/HoverImages/LargeArrowR_Hover",
+                        "navigation": {
+                            "up": { "name": "ExitLobby" },
+                            "down": { "name": "SmallRightArrow" },
+                            "left": { "name": "LargeLeftArrow" }
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "SmallRightArrow",
+                    "fields": {
+                        "focusIndicatorFilename": "Controller/HoverImages/SmallArrowR_Hover",
+                        "navigation": {
+                            "up": { "name": "LargeRightArrow" },
+                            "left": { "name": "SmallLeftArrow" }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Widget", "name": "CenterPanel",
+            "children": [
+                {
+                    "type": "ImageWidget", "name": "BottomPanelBackground"
+                },
+                {
+                    "type": "ImageWidget", "name": "CenterPanelBackground"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "FullGlow"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "Logo"
+                },
+                {
+                    "type": "ImageWidget", "name": "ResurrectedText"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlames"
+                },
+                {
+                    "type": "ImageWidget", "name": "ReimaginedText"
+                },
+                {
+                    "type": "AnimatedImageWidget", "name": "BottomFlamesRI"
+                },
+                {
+                    "type": "TextBoxWidget", "name": "Name"
+                },
+                {
+                    "type": "TextBoxWidget", "name": "Level&Class"
+                },
+                {
+                    "type": "ToggleButtonWidget", "name": "ChatGem",
+                    "fields": {
+                        "focusIndicatorFilename": "Controller/HoverImages/ChatGem_Hover",
+                        "focusIndicatorOffset": { "x": 2, "y": 1 },
+                        "navigation": {
+                            "left": { "panelBoundary": true },
+                            "right": { "name": "ExitLobby" }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Camera3DWidget", "name": "MainCaptureCamera"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "MainCharacterCapture"
+        },
+        {
+            "type": "ImageWidget", "name": "MainFigurine"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture1"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture2"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture3"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture4"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture5"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture6"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture7"
+        },
+        {
+            "type": "PlayerLoaderWidget", "name": "CharacterCapture8"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine1"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine2"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine3"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine4"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine5"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine6"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine7"
+        },
+        {
+            "type": "ImageWidget", "name": "Figurine8"
+        },
+        {
+            "type": "TextBoxWidget", "name": "NameTemplate"
+        },
+        {
+            "type": "AnimatedImageWidget", "name": "MutedTemplate"
+        },
+        {
+            "type": "FocusableWidget", "name": "ClickAreaTemplate"
+        }
+    ]
+}
